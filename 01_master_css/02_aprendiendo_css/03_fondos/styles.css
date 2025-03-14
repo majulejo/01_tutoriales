@@ -1,0 +1,58 @@
+<<<<<<< HEAD
+body {
+    background-color: #84e4e79a;
+    background-image: url(../../imgenes_master/patron4.avif); /* de fondo la imagen que le pongamos*/
+    background-repeat: repeat-x; /* Se repite la imagen de fondo en el eje-X  */
+    background-repeat: repeat-x; /* Se repite la imagen de fondo en el eje-Y  */
+    background-repeat: no-repeat; /* Evita que se repita, no te repite la imagen de fondo  */
+    background-size: 100%;  /* hace que ocupe la imagen todo el ancho  */
+    color: rgb(0, 0, 0);
+    background-attachment: fixed; /* la imagen del fondo se queda fixed y se mueve todo el contenido */
+    background-position: left bottom; /*Posiciona la imagen a la izquierda y abajo */
+
+
+}
+h2 { 
+    background-image: url(../../imgenes_master/patron1.png);
+    color: red;
+    background-color: aliceblue;
+    border: 5px solid blueviolet;
+}
+
+.caja {
+    border: 4px solid yellowgreen;
+    padding: 10px;
+    color: rgb(53, 48, 48);
+    background-color: aquamarine;
+    background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='60' height='30' patternTransform='scale(1) rotate(20)'><rect x='0' y='0' width='100%' height='100%' fill='%231a1aaaff'/><path d='M1-6.5v13h28v-13H1zm15 15v13h28v-13H16zm-15 15v13h28v-13H1z'  stroke-width='1' stroke='none' fill='%23f6ad55ff'/><path d='M31-6.5v13h28v-13H31zm-45 15v13h28v-13h-28zm60 0v13h28v-13H46zm-15 15v13h28v-13H31z'  stroke-width='1' stroke='none' fill='%23cddc39ff'/></pattern></defs><rect width='800%' height='800%' transform='translate(-64,0)' fill='url(%23a)'/></svg>");
+    height: 80px;
+=======
+body {
+    background-color: #84e4e79a;
+    background-image: url(../../imgenes_master/patron4.avif); /* de fondo la imagen que le pongamos*/
+    background-repeat: repeat-x; /* Se repite la imagen de fondo en el eje-X  */
+    background-repeat: repeat-x; /* Se repite la imagen de fondo en el eje-Y  */
+    background-repeat: no-repeat; /* Evita que se repita, no te repite la imagen de fondo  */
+    background-size: 100%;  /* hace que ocupe la imagen todo el ancho  */
+    color: rgb(0, 0, 0);
+    background-attachment: fixed; /* la imagen del fondo se queda fixed y se mueve todo el contenido */
+    background-position: left bottom; /*Posiciona la imagen a la izquierda y abajo */
+
+
+}
+h2 { 
+    background-image: url(../../imgenes_master/patron1.png);
+    color: red;
+    background-color: aliceblue;
+    border: 5px solid blueviolet;
+}
+
+.caja {
+    border: 4px solid yellowgreen;
+    padding: 10px;
+    color: rgb(53, 48, 48);
+    background-color: aquamarine;
+    background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='60' height='30' patternTransform='scale(1) rotate(20)'><rect x='0' y='0' width='100%' height='100%' fill='%231a1aaaff'/><path d='M1-6.5v13h28v-13H1zm15 15v13h28v-13H16zm-15 15v13h28v-13H1z'  stroke-width='1' stroke='none' fill='%23f6ad55ff'/><path d='M31-6.5v13h28v-13H31zm-45 15v13h28v-13h-28zm60 0v13h28v-13H46zm-15 15v13h28v-13H31z'  stroke-width='1' stroke='none' fill='%23cddc39ff'/></pattern></defs><rect width='800%' height='800%' transform='translate(-64,0)' fill='url(%23a)'/></svg>");
+    height: 80px;
+>>>>>>> a81cce33d5d6b5790f7e9ff68a4a4c46f5579861
+}

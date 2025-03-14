@@ -1,0 +1,306 @@
+<<<<<<< HEAD
+/*
+Ejercicio Completo con html y css
+1. Crear un documeto html y vincularlo con css
+2. Crear una estructura html con un CONTENEDOR GENERAL, CABECERA, BARRA LATERAL, SECCIÓN DE CONTENIDO PRINCIPAL, ELEMENTOS DENTRO DEL CONTENEDOR PRINCIPAL Y FOOTER.
+3. Todo el contenido debe estar dentro del contenedor general y su ancho será de 1200px y estar centrado.
+4. header debe ocupar el 100%y tener un texto grande centrado.
+5. Menú debe tener los elementos uno al lado del otro.
+6. El contenido principal debe tener un ancho del 70%.
+El contenido dentro del contenedor principal debe ser una cuadrícula de 4 lineas de 2 cajas.
+La barra lateral debe tener un ancho del 30%.
+El footer debe tener un ancho del 100% del div que lo contiene y estar abajo del todo.   */
+
+*  {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: Geneva, Verdana, sans-serif;
+}
+body {
+	background-color: rgb(199, 236, 199);
+}
+#general {
+    max-width: 1200px;
+    border: 2px solid black;
+    margin: 0 auto;
+    margin-top: 30px;
+    background-color: #ccc;
+
+}
+header {
+    width: 100%;
+    height: 100px;
+    background-color: rgb(154, 172, 172);
+    border-bottom: 3px solid black;
+    text-align: center;
+    padding: 20px 0;
+    line-height: 90px;
+}
+.clearfix {
+    float: none;
+    clear: both;
+}
+#menu {
+    background-color: rgb(223, 227, 231);
+}
+#menu ul li {
+    /*display: inline-block;*/
+    display: block;
+    float: left;
+    border-left: 2px solid #e0c422;
+}
+#menu ul li a {
+    display: block;
+    color: #444;
+    padding: 15px;
+
+}
+#menu ul li:hover {
+    background-color: rgba(69, 170, 170, 0.281);
+    cursor: pointer;
+}
+#menu ul li:hover a{
+    color: #fff;
+}
+
+#contenido {
+    float: left;
+    width: 70%;
+    background-color: rgb(189, 189, 192);
+}
+#contenido >h2 {
+    text-align: center;
+    color: blue;
+    padding: 15px;
+    border-bottom: 1px solid red;
+	text-shadow: 1px 1px 2px black;
+}
+
+#contenido .caja {
+    background-color: #ccc;
+	color: #444;
+    border: 1px solid gray;
+    width: 40%;
+    height: 100px;
+    float: left;
+    margin: 20px;
+    margin-left: 45px;
+	text-align:center;
+	line-height:90px;
+	text-transform: uppercase;
+	box-shadow: 5px 5px 15px grey;
+	border-radius: 15px 3px 8px 64px;
+	/*border-radius: 50%;*/
+}
+.sombra-interior {
+	box-shadow: 5px 5px 15px black inset !important;
+}
+
+#sidebar {
+    float: left;
+    width: 30%;
+    background-color: rgb(113, 226, 113);
+    min-height: 500px;
+	max-height: 600px;
+    text-align: center;
+	overflow-Y: scroll;
+}
+
+#footer {
+    width: 100%;
+    background-color: #eee;
+    color: #ccc;
+    text-align: center;
+    height: 50px;
+    line-height: 40px;
+    font-size: 16px;
+	border-top: 1px solid #ccc;
+}
+.libre {
+	position: absolute;
+	top:50px;
+	left:150px;
+	background-color: #800;
+	color: #fff;
+    border: 1px solid #000;
+    width: 300px;
+    height: 80px;
+	font-size: 10px;
+}
+.libre1 {    
+    z-index: 20;
+}
+
+.libre2 {
+    background-color: green;
+    top:70px;
+    left:350px;
+    z-index: 10;
+    text-align: right;
+}
+.fija {
+    background-color: yellowgreen;
+    position: fixed;
+    top:50%;
+    right:0px;
+    color: #000;
+    border: 1px solid #000;
+    width: 150px;
+    height: 80px;
+    font-size: 8px;
+    padding: 10px;
+=======
+/*
+Ejercicio Completo con html y css
+1. Crear un documeto html y vincularlo con css
+2. Crear una estructura html con un CONTENEDOR GENERAL, CABECERA, BARRA LATERAL, SECCIÓN DE CONTENIDO PRINCIPAL, ELEMENTOS DENTRO DEL CONTENEDOR PRINCIPAL Y FOOTER.
+3. Todo el contenido debe estar dentro del contenedor general y su ancho será de 1200px y estar centrado.
+4. header debe ocupar el 100%y tener un texto grande centrado.
+5. Menú debe tener los elementos uno al lado del otro.
+6. El contenido principal debe tener un ancho del 70%.
+El contenido dentro del contenedor principal debe ser una cuadrícula de 4 lineas de 2 cajas.
+La barra lateral debe tener un ancho del 30%.
+El footer debe tener un ancho del 100% del div que lo contiene y estar abajo del todo.   */
+
+*  {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: Geneva, Verdana, sans-serif;
+}
+body {
+	background-color: rgb(199, 236, 199);
+}
+#general {
+    max-width: 1200px;
+    border: 2px solid black;
+    margin: 0 auto;
+    margin-top: 30px;
+    background-color: #ccc;
+
+}
+header {
+    width: 100%;
+    height: 100px;
+    background-color: rgb(154, 172, 172);
+    border-bottom: 3px solid black;
+    text-align: center;
+    padding: 20px 0;
+    line-height: 90px;
+}
+.clearfix {
+    float: none;
+    clear: both;
+}
+#menu {
+    background-color: rgb(223, 227, 231);
+}
+#menu ul li {
+    /*display: inline-block;*/
+    display: block;
+    float: left;
+    border-left: 2px solid #e0c422;
+}
+#menu ul li a {
+    display: block;
+    color: #444;
+    padding: 15px;
+
+}
+#menu ul li:hover {
+    background-color: rgba(69, 170, 170, 0.281);
+    cursor: pointer;
+}
+#menu ul li:hover a{
+    color: #fff;
+}
+
+#contenido {
+    float: left;
+    width: 70%;
+    background-color: rgb(189, 189, 192);
+}
+#contenido >h2 {
+    text-align: center;
+    color: blue;
+    padding: 15px;
+    border-bottom: 1px solid red;
+	text-shadow: 1px 1px 2px black;
+}
+
+#contenido .caja {
+    background-color: #ccc;
+	color: #444;
+    border: 1px solid gray;
+    width: 40%;
+    height: 100px;
+    float: left;
+    margin: 20px;
+    margin-left: 45px;
+	text-align:center;
+	line-height:90px;
+	text-transform: uppercase;
+	box-shadow: 5px 5px 15px grey;
+	border-radius: 15px 3px 8px 64px;
+	/*border-radius: 50%;*/
+}
+.sombra-interior {
+	box-shadow: 5px 5px 15px black inset !important;
+}
+
+#sidebar {
+    float: left;
+    width: 30%;
+    background-color: rgb(113, 226, 113);
+    min-height: 500px;
+	max-height: 600px;
+    text-align: center;
+	overflow-Y: scroll;
+}
+
+#footer {
+    width: 100%;
+    background-color: #eee;
+    color: #ccc;
+    text-align: center;
+    height: 50px;
+    line-height: 40px;
+    font-size: 16px;
+	border-top: 1px solid #ccc;
+}
+.libre {
+	position: absolute;
+	top:50px;
+	left:150px;
+	background-color: #800;
+	color: #fff;
+    border: 1px solid #000;
+    width: 300px;
+    height: 80px;
+	font-size: 10px;
+}
+.libre1 {    
+    z-index: 20;
+}
+
+.libre2 {
+    background-color: green;
+    top:70px;
+    left:350px;
+    z-index: 10;
+    text-align: right;
+}
+.fija {
+    background-color: yellowgreen;
+    position: fixed;
+    top:50%;
+    right:0px;
+    color: #000;
+    border: 1px solid #000;
+    width: 150px;
+    height: 80px;
+    font-size: 8px;
+    padding: 10px;
+>>>>>>> a81cce33d5d6b5790f7e9ff68a4a4c46f5579861
+}

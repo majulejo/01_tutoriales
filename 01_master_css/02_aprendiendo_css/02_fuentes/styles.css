@@ -1,0 +1,106 @@
+<<<<<<< HEAD
+/*Crear una fuente en css  */
+
+@font-face {
+    font-family: MontserratFuenteCustom;
+    src: url(fonts/Montserrat/montserrat-Regular.ttf);
+}
+
+
+
+
+body {
+    background-color: rgb(243, 218, 185);
+}
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-family: "Mansalva", sans-serif;
+    text-transform: uppercase;
+    font-size: 45px;
+    font-weight: 500;
+
+    /*  Colores  */
+    ;
+    /*  Colores  Del sistema*/
+    color: MediumOrchid;  
+    /*  Colores  Hexadecimales*/
+    color: #BA55D3;    
+    /*  Colores  RGB*/
+    color: rgb(186, 85, 211);    
+    /*  Colores  RGBA*/
+    color: rgba(12, 104, 73, 0.4);
+
+
+}
+
+h3 {
+    font-family: MontserratFuenteCustom,'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+    font-weight: 100;
+
+/*  Colores  Hexadecimales*/
+    color: #23c460;
+}
+
+p {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+
+    /*  Colores  RGB*/
+
+    color: rgb(9, 95, 129)
+=======
+/*Crear una fuente en css  */
+
+@font-face {
+    font-family: MontserratFuenteCustom;
+    src: url(fonts/Montserrat/montserrat-Regular.ttf);
+}
+
+
+
+
+body {
+    background-color: rgb(243, 218, 185);
+}
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-family: "Mansalva", sans-serif;
+    text-transform: uppercase;
+    font-size: 45px;
+    font-weight: 500;
+
+    /*  Colores  */
+    ;
+    /*  Colores  Del sistema*/
+    color: MediumOrchid;  
+    /*  Colores  Hexadecimales*/
+    color: #BA55D3;    
+    /*  Colores  RGB*/
+    color: rgb(186, 85, 211);    
+    /*  Colores  RGBA*/
+    color: rgba(12, 104, 73, 0.4);
+
+
+}
+
+h3 {
+    font-family: MontserratFuenteCustom,'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+    font-weight: 100;
+
+/*  Colores  Hexadecimales*/
+    color: #23c460;
+}
+
+p {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+
+    /*  Colores  RGB*/
+
+    color: rgb(9, 95, 129)
+>>>>>>> a81cce33d5d6b5790f7e9ff68a4a4c46f5579861
+}

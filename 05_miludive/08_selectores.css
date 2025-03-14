@@ -1,0 +1,34 @@
+body {
+    background-color: #bef7f7;
+    font-size: 16px;
+}
+h1 {color: #fd9103;
+}
+.description .bold {
+    color: blueviolet;
+}
+.secondary .bold {
+    color: #c20693;
+}
+ul >li {
+color: #fd9103;
+}
+article p {
+    color: blue;
+}
+article > p {
+background-color: #fd9103;
+}
+/*ARTICLE22*/
+p {
+    color: blue;
+}
+p ~ span {
+    color: red;
+}
+p + span {
+    color: rgb(21, 107, 0);
+}
+button + button {
+    background-color: #fd9103;
+}

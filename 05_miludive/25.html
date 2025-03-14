@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="25_grid_con_flex.css">
+</head>
+<body>
+    <div  class="titulo">
+      <header>      <h1>Explicación de los cambios realizados: </h1>
+      </header>
+    
+      <ol>
+        <li>
+          <h4>Estructura general con Flexbox: </h4>
+          <ul>
+            <li>El &lt;body&gt; utiliza display: flex con flex-direction: column para organizar los elementos (el texto &lt;h4&gt; y el contenedor .container) en una columna vertical.;</li>
+            <li><strong>align-items: center</strong>  asegura que ambos elementos estén centrados horizontalmente.</li>
+            <li><strong>justify-content: center</strong> centra todo el contenido verticalmente en la pantalla.</li>
+          </ul>
+        </li>
+        <li><h4>Texto explicativo (&lt;h4&gt):</h4>
+          <ul>
+            <li>El texto está centrado usando <strong>text-align: center.</strong>
+            </li>
+            <li>Se agrega un margen inferior <strong>(margin-bottom: 20px) </strong>para separarlo visualmente del contenedor.
+            </li>
+          </ul>
+        </li>
+        <li><h4>Contenedor de la cuadrícula:</h4>
+          <ul>
+            <li>El contenedor <strong>.container</strong> sigue siendo una cuadrícula de 3x3 con líneas divisorias discontinuas, como en el ejemplo anterior.
+            </li>
+          </ul>
+        </li>
+      </ol>
+      <h2>Resultado esperado:</h2>
+        <ul>
+          <li>El contenedor se divide claramente en una cuadrícula de 3x3 con líneas divisorias discontinuas.</li>
+          <li>Puedes mover los elementos dentro de las celdas utilizando grid-column y grid-row, pero las líneas divisorias permanecerán fijas y visibles.</li>
+        </ul>
+        
+  <div class="container">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+  </div>
+</div>
+</body>
+</html>

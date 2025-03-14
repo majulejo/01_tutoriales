@@ -1,0 +1,91 @@
+
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #ccc7c7;
+    }
+header h1 {
+  padding: 30px;
+  margin: 0 auto;
+  color: blue;
+}
+    .titulo {
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+    }
+    h2 {
+      margin-top: 0px;
+      color: #6644aa;
+      margin-left: 60px;    
+}
+    .container {
+      margin: 0 auto;
+      background-color: lightsalmon;
+      border: 3px solid black;
+      border-radius: 10px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      width: 300px;
+      height: 300px;
+      gap: 0;
+      position: relative;
+    }
+
+    /* Dibujamos líneas divisorias dentro del contenedor */
+    .container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border: 2px dashed black;
+      border-radius: 10px;
+
+      /* Líneas horizontales */
+      background-image: 
+        linear-gradient(to right, black 2px, transparent 2px),
+        linear-gradient(to right, black 2px, transparent 2px),
+        linear-gradient(to bottom, black 2px, transparent 2px),
+        linear-gradient(to bottom, black 2px, transparent 2px);
+
+      /* Posicionamiento de las líneas */
+      background-size: 100% 33.3%, 100% 33.3%, 33.3% 100%, 33.3% 100%;
+      background-position: 0 33.3%, 0 66.6%, 33.3% 0, 66.6% 0;
+      background-repeat: no-repeat;
+    }
+
+    /* Estilo base para los elementos dentro de las celdas */
+    .container div {
+      background-color: #b7e967;
+      border: 2px solid black;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+    }
+
+    /* Estilos específicos para cada celda */
+    .container div:first-child {
+      background-color: #6644aa;
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+    }
+
+    .container div:nth-child(2) {
+      background-color: #cc77aa;
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+    }
+
+    .container div:last-child {
+      background-color: #88bbaa;
+      grid-column: 3 / 4;
+      grid-row: 3 / 4;
+    }

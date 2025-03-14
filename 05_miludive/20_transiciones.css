@@ -1,0 +1,77 @@
+body {
+    background-color: #bef7f7;
+    display: grid;
+    place-content: center;
+    min-height: 50vh;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 12px;
+
+}
+h1 {
+    color: #f00303;
+    margin-bottom: 30px;
+}
+
+.pulser {
+    margin: 25px;
+    width: 50px;
+    height: 50px;
+    background-color: #1f5226;
+    border-radius: 50%;
+    position: relative;
+    /*transition-property: all;se animaría todo*/
+    transition-property: scale; /*se animaría solo scale*/
+    transition-duration: 2s; /*tiempo que tarda en hacerse la transicion, se pone en el estado inicial*/
+    transition-timing-function: ease;
+    transition-delay: 1s;    /*tiempo que tarda en empezar la transición  */
+
+    transition-property:  background-color,scale; /*se animaría background y scale*/
+    /*transition-timing-function: steps(5); se animaría en 5 pasos*/
+    /*transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); se animaría en 5 pasos*/
+    opacity: 0;
+}
+.pulser-especial {
+    background-color: #695f5f;
+    opacity: .5;
+    transition: /* forma corta del transition  */
+        background-color 300ms linear, 
+        scale 1s ease-in-out,  
+        box-shadow 1s ease 1s;
+        /*transition-property: scale; 
+    transition-duration: 1s; 
+    transition-timing-function: ease-in-out;
+    transition-delay: 1s; */
+    
+}
+.pulser-especial:hover {
+    scale: 2;
+    background-color: #1f2452;
+    box-shadow: 0 0 10px black;
+    opacity: 1;
+    transition-duration: 2s;/*consigue que al estar en pulsar la duration más pequeña, tiene dos velocidades una paa ponerse en hover y otra para volver*/
+}
+@media (prefers-reduced-motion: reduce) {  /*  accesibilidad: reduce o quita  */
+    .pulser {
+        transition: none;
+    }
+}
+section {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+}
+section:hover .pulser {
+    background-color: #07f3b8;
+    opacity: 1;
+}
+.pulser:first-child {
+    transition-delay:0s;
+    background-color: #f00303;
+}
+.pulser:nth-child(2) {
+    transition-delay: 300ms;
+}
+.pulser:nth-child(3) {
+    transition-delay: 600ms;
+}

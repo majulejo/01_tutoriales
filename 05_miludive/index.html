@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><!--CODIFICACIÓN-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--el ancho de la página es el ancho del dispositivo-->
+    <title>Curso de html de Midudev</title>
+    <link rel="shortcut icon" href="img/vk4.jpg" type="image/x-icon">
+    <meta name="description" content="Portafolio de 🐞 con el que se está aprndiendo html" >
+    
+    <!--OPEN GRAPH-->
+    <meta property="og:title" content="Portafolio de 🐞 con el que se está aprndiendo html" >
+
+    <meta property="og:description" content="Portafolio de 🐞 y el resto de la información" >
+    <meta property="og:image" content="esta es la imagen del vikingo gordo" >
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header>
+        <h1>Portafolio 🐞</h1>
+        <nav>
+            <a class="link" href="#experiencia">Experiencia</a>   <!--enlaces internos-->
+            <a class="link" href="#proyectos">Proyectos</a>   <!--enlaces internos-->
+            <a class="link" href="#faq">Preguntas frecuentes</a>   <!--enlaces internos-->
+            <a class="link" href="http://jolejuma.es/balance" target="_blank" rel="noreferrer">Balances</a>  <!--enlaces externos-->
+        </nav>
+        <button id="show">Ver más información</button>
+        <dialog  id="dialog">
+            <h5 >¿Se puede abrir una modal así?</h5>
+            <p>Es totalmente nativo</p>
+            <button id="hide">cerrar modal</button>
+        </dialog>
+    <script>
+        window.show.addEventListener('click', () => {
+            window.dialog.showModal()
+        })
+        window.hide.addEventListener('click', () => {
+            window.dialog.close()
+        })
+    </script>
+    </header>
+    <main>        
+
+    <p class="description">LLevo más de 20 años queriendo <strong>aprender html y css</strong> pero no había tenido el tiempo suficiente ni la motivación para ello.</p>
+<!--AQUI TU COMENTARIO-->
+<audio autoplay muted src="https://soundcloud.com/musicarelajanteofficial/sets/trance-de-la-naturaleza?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" width="300" height="500">Video</audio>
+
+<video autoplay muted poster="../../jolejuma/07_imagenes_ejercicios/vk2.png" src="../../jolejuma/06_videos/transform_traslate.mp4" width="300" height="500">Video</video>
+
+    <h2 id="experiencia">Experiencia</h2>
+    <ul>
+        <li class="list-item"> Uci H.Clínico San Cecilio--1996</li>
+        <li class="list-item">Uci H. Infanta Margarita--2003</li>
+        <li class="list-item">Urgencias H. Infanta Margarita--2007 </li>
+        <li class="list-item">Uci H. Infanta Margarita--2023</li>
+    </ul>
+    <ol type="a" reversed>
+        <li class="list-item"> Uci H.Clínico San Cecilio--1996</li>
+        <li class="list-item">Uci H. Infanta Margarita--2003</li>
+        <li class="list-item">Urgencias H. Infanta Margarita--2007 </li>
+        <li class="list-item">Uci H. Infanta Margarita--2023</li>
+    </ol>
+    <ol type="1" reversed start="14">
+        <li class="list-item"> Uci H.Clínico San Cecilio--1996</li>
+        <li class="list-item">Uci H. Infanta Margarita--2003</li>
+        <li value="7" class="list-item">Urgencias H. Infanta Margarita--2007 </li>
+        <li class="list-item">Uci H. Infanta Margarita--2023</li>
+    </ol>
+    <article>
+        <p>Primer P dentro de <strong>article</strong> es negro y los de fuera son rojos.  </p><span>Pueba de p dentro de <strong>article</strong>, este es el primer p.</span>
+        <p>Segundo P dentro de <strong>article</strong> es negro y los de fuera son rojos.</p> <span>Prueba de p dentro de <strong>article</strong>, este es el segundo p.</span>
+    </article>
+    <p>Tercer P dentro de <strong>article</strong> es negro y los de fuera son rojos.</p> <br> <span>Prueba de p dentro de <strong>article</strong>, este es el  p que está fuera de article y que tiene delante un &lt;br&gt que hace que no se cumplan las propiedades del (p + span {
+        background-color: purple;
+    })</span><br>
+
+<a download href="../../jolejuma/07_imagenes_ejercicios/vk4.jpg">
+    <img 
+    id="photo-image"
+    width="200"    
+    height="200"
+    title="Barriga gorda"   
+    alt="esto es una imagen del vikingo barriga gorda" srcset=""
+    src="../../jolejuma/07_imagenes_ejercicios/vk4.jpg" 
+    ></a>
+    
+<h2 id="proyectos">Proyectos realizados</h2>
+
+<aside>
+    <header>
+        <h3>Mis tecnologías favoritas</h3>
+    </header>
+        <ol>    
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JAVASCRIPT</li>
+            <li>PYTHON</li>
+        </ol>
+</aside>
+    <button>PULSA --AQUI</button>    
+<section>
+        <article>
+            <header>
+                <h4>Sitio Web Corporativo</h4>
+            </header>
+            <p>Preparando para la realización de páginas web de uso doméstico y la elaboración de diferentes botones para aplicaciones</p>
+            <footer><small>Tecnologías utilizadas:Html, js,css y python</small></footer>
+            <footer><small>El uso de small es para información secundaria.</small></footer>
+    </article>
+    </section>
+
+    <article>
+        <header>
+            <h4>Aplicación Web de E-commerce</h4>
+        </header>
+        
+        <div>Creación de plataforma de comercio electrónico para una tienda local</div>
+        <div>Tecnologías utilizadas: React, Node.js, MongoDB</div>
+    </article>
+    <div>
+        <div>Aplicación Móvil de rastreo de Fitness</div>
+        <div>Desarrollo de una aplicación para el control del viento por la mañana</div>
+    </div>
+
+    <!--SECTION CON FORM-->
+    <section>
+        <h2>🏷️Formulario de contacto con label 🏷️</h2>
+    <form method="post" action="">
+        <fieldset>
+            <legend>Información Personal</legend>
+
+            <label >Nombre:
+                <input type="text"  name="name" placeholder="José Antonio">
+            </label>
+            
+                <label for="lastname">Apellido:</label>
+                    <input type="text" id="lastname"  name="lastname" placeholder="Márquez">
+
+        </fieldset>
+    </form>
+    </section>
+    <!--DETAILS Y SUMMARY-->
+
+<section>
+            <h2 id="faq">Preguntas frecuentes</h2>
+        <details open>
+            <summary>¿Que estudios tienes</summary>
+            <p>Estudié enfermería en la facultad de ciencias de la salud de Granada desde el 1992 al 1995</p>
+        </details>
+
+        <details>
+            <summary>¿Cuales son tus hobbies?</summary>
+            <p>Me gusta la cacería y los deportes al aire libre.</p>
+        </details>
+        <details>
+            <summary>¿Que estás haciendo en la actualidad?</summary>
+        <p>Estoy realizando varios cursos de html y css y la idea es seguir formándome en javascript</p>
+        </details>
+    </section>
+    <!--SECTION CON FORM-->
+    <section>
+        <h2>🕵️‍♂️Formulario de contacto con div🕵️‍♂️</h2>
+    <form method="post" action="">
+        <fieldset>
+            <legend>Información Personal</legend>
+        <div>
+            <label >Nombre:📢
+                <input type="text"  name="name" placeholder="José Antonio" required>
+            </label>
+        </div>
+            <label>Telefono:📢
+                <input type="tel" name="telefono" placeholder="+34444124578" pattern="^\+34\d{9}$" title="El número de teléfono debe comenzar con +34 y seguir con 9 dígitos." required>            
+            </label>
+            <label>Email:📢
+                <input type="email" name="email" placeholder="prueba@prueba.net" title="Por favor introduzca un email con el siguiente formato: ejemplo@ejemplo.com" required>            </label>        
+        </fieldset>
+
+        <fieldset>
+            <legend>Información Personal</legend>
+        <div>
+            <label >Nombre:📢
+                <input type="text"  name="name" placeholder="José Antonio" required>
+            </label>
+        </div>
+            <label>Telefono:📢
+                <input type="tel" name="telefono" placeholder="+34444124578" pattern="^\+34\d{9}$" title="El número de teléfono debe comenzar con +34 y seguir con 9 dígitos." required>            
+            </label>
+            <label>Email:📢
+                <input type="email" name="email" placeholder="prueba@prueba.net" title="Por favor introduzca un email con el siguiente formato: ejemplo@ejemplo.com" required>            </label>        
+        </fieldset>
+
+        <fieldset>
+            <legend>🤙Otra información🤙</legend>
+        <div>
+            <label for="why">🔒porque quieres contactar</label>
+            <select name="why" id="why">
+                <option value="1">Trabajo</option>
+                <option value="2">Entretenimiento</option>
+                <option value="3">Más información</option>
+            </select>
+            </div>
+
+            <div>
+                <label for="terms">¿Aceptas los términos?</label>
+                <input type="checkbox" id="terms" name="terms" required>
+            </div>   
+            <div>
+                <datalist id="languages">
+                    <option value="Javascript"></option>
+                    <option value="Python"></option>
+                    <option value="Java"></option>
+                    <option value="CSS"></option>
+                </datalist>
+                <label >¡Con que lenguaje quieres que te ayude</label>
+                <input list="languages" name="languages">
+            </div>         
+        </fieldset>
+        <input type="submit" value="Pulsa para enviar" name="" id="">
+        <button type="submit">Enviar información</button>
+        <button>Enviar datos</button>
+    </form>
+    </section>
+    
+    
+</main>📢
+<footer>
+    Copyright @ Esto es una prueba de footer
+</footer>
+        
+<a href="mailto:jolejujma@yahoo.es">Envía un correo</a>
+<a href="tel:+34606422191">LLamar por teléfono</a>
+<a href="whatsapp://send?text=Hola joven">Enviar whatsapp</a>
+
+        </section>
+    
+</body>
+</html>

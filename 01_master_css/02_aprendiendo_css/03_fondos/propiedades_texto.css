@@ -1,0 +1,54 @@
+<<<<<<< HEAD
+body {
+    background-color: #d9e8e99a;    
+    color: rgb(0, 0, 0); 
+    text-indent: 30px;  /*te pone una distancia del borde a la primera linea del párrafo  */
+    /*word-spacing: 10px;  espacio entre palabra y palabra  
+    letter-spacing: 15px;  espacio entre letra y letra   */
+}
+h2 { 
+    color: red;
+    background-color: aliceblue;
+    border: 5px solid blueviolet;
+}
+
+.caja_header {
+    border: 4px solid yellowgreen;
+    padding: 10px;
+    color: rgb(53, 48, 48);
+    background-color: rgb(54, 247, 48);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    /*  line-height: 150px;   Distancia entre lineas  */
+    text-transform: capitalize;  /*   Modificar a mayusculas o minusculas el texto o cada palabra con la primera en mayuscula*/
+    text-decoration: underline;  /*permite poner lineas encima, debajo o en medio  */
+    vertical-align: bottom;  /* alinea el texto arriba  */
+
+=======
+body {
+    background-color: #d9e8e99a;    
+    color: rgb(0, 0, 0); 
+    text-indent: 30px;  /*te pone una distancia del borde a la primera linea del párrafo  */
+    /*word-spacing: 10px;  espacio entre palabra y palabra  
+    letter-spacing: 15px;  espacio entre letra y letra   */
+}
+h2 { 
+    color: red;
+    background-color: aliceblue;
+    border: 5px solid blueviolet;
+}
+
+.caja_header {
+    border: 4px solid yellowgreen;
+    padding: 10px;
+    color: rgb(53, 48, 48);
+    background-color: rgb(54, 247, 48);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    /*  line-height: 150px;   Distancia entre lineas  */
+    text-transform: capitalize;  /*   Modificar a mayusculas o minusculas el texto o cada palabra con la primera en mayuscula*/
+    text-decoration: underline;  /*permite poner lineas encima, debajo o en medio  */
+    vertical-align: bottom;  /* alinea el texto arriba  */
+
+>>>>>>> a81cce33d5d6b5790f7e9ff68a4a4c46f5579861
+}

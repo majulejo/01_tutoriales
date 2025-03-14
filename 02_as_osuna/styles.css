@@ -1,0 +1,167 @@
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.circle-container {
+    position: relative; /* Necesario para posicionar los boxes en relación a este contenedor */
+    width: 0px; /* Diámetro del círculo imaginario (2 * 100px) */
+    height: 240px;
+    font-size: 1.4rem;
+    color: #085c00;
+    font-weight: bold;
+    border: none;
+    margin: 0 auto;
+
+}
+/* Estilos para el círculo */
+.circle-container::before {
+    content: ""; /* Necesario para mostrar el pseudo-elemento */
+    position: absolute;
+    top: 150px;
+    left: 0px;
+    transform: translate(-50%, -50%); /* Centra el círculo */
+    width: 340px; /* Ajusta el tamaño del círculo */
+    height: 340px; /* Ajusta el tamaño del círculo */
+    border: 6px solid black; /* Borde negro */
+    border-radius: 50%; /* Hace que sea un círculo */
+    box-sizing: border-box; /* Incluye el borde en el tamaño */
+    background-color: #ffffff;
+
+}
+/* Segundo círculo */
+.circle-container::after {
+    content: "";
+    position: absolute;
+    top: 150px;
+    left: 0px;
+    transform: translate(-50%, -50%);
+    width: 240px; /* Ajusta el tamaño del segundo círculo */
+    height: 240px; /* Ajusta el tamaño del segundo círculo */
+    border: 6px solid rgb(0, 0, 0); /* Borde rojo (puedes cambiar el color) */
+    border-radius: 50%;
+    box-sizing: border-box;
+    background-color: #ffffff;
+}
+/* Texto superpuesto */
+.publica100 {
+    position: absolute;
+    top: 60%; /* Centrar verticalmente */
+    left: 50%; /* Centrar horizontalmente */
+    transform: translate(-50%, -50%); /* Ajustar el centro */
+    color: #ffffff;
+    font-size: 12px;
+    z-index: 110; /* Asegura que el texto esté por encima de la imagen */
+    background-color: transparent; /* Fondo semitransparente */
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Estilo para los párrafos dentro del texto */
+.publica100 p {
+    margin: 0;
+    width: 100px;
+}
+
+/* Imagen dentro del círculo */
+.circle-container img {
+    position: absolute;
+    top: 0px; /* Centrar verticalmente */
+    left: 0px; /* Centrar horizontalmente */
+    transform: translate(-50%, -50%); /* Ajustar el centro */
+    width: 150px; /* Tamaño de la imagen */
+    height: 150px; /* Tamaño de la imagen */
+    object-fit: cover; /* Ajustar la imagen al contenedor */
+    z-index: 100;
+}
+
+.circle-container img {
+    top: 150px; /* Mover ligeramente hacia abajo */
+    left: 0px; /* Mover ligeramente hacia la derecha */
+}
+
+/*.inner-circle {
+    position: absolute;
+    top: 135px;
+    left: 0px;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 400px;
+    border: 12px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    box-sizing: border-box;
+}*/
+
+.box {/*letras*/
+    position: absolute; /* Permite posicionar los boxes de forma absoluta */
+    width: 30px; /* Ajusta el ancho según tus necesidades */
+    height: 30px; /* Ajusta la altura según tus necesidades */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    transform-origin: 0 150px; /* Punto de rotación: 0px a la derecha y 100px hacia abajo */
+
+}
+
+.box p {
+    margin: 0;
+}
+/* Clase especial para espacios controlados */
+        .spacer {
+            visibility: hidden;
+        }
+
+/* Calculamos el ángulo de rotación para cada box */
+.box:first-child {rotate: 0deg}
+.box:nth-child(2) {rotate: 8deg}
+.box:nth-child(3) {rotate: 16deg}
+.box:nth-child(4) {rotate: 24deg}
+.box:nth-child(5) {rotate: 32deg}
+.box:nth-child(6) {rotate: 40deg}
+.box:nth-child(7) {rotate: 48deg}
+.box:nth-child(8) {rotate: 56deg}
+.box:nth-child(9) {rotate: 64deg}
+.box:nth-child(10) {rotate: 72deg}
+.box:nth-child(11) {rotate: 80deg}
+.box:nth-child(12) {rotate: 88deg}
+.box:nth-child(13) {rotate: 96deg}
+.box:nth-child(14) {rotate: 104deg}
+.box:nth-child(15) {rotate: 112deg}
+.box:nth-child(16) {rotate: 120deg}
+.box:nth-child(17) {rotate: 128deg}
+.box:nth-child(18) {rotate: 136deg}
+.box:nth-child(19) {rotate: 144deg}
+.box:nth-child(20) {rotate: 152deg}
+.box:nth-child(21) {rotate: 160deg}
+.box:nth-child(22) {rotate: 168deg}
+.box:nth-child(23) {rotate: 176deg}
+.box:nth-child(24) {rotate: 184deg}
+.box:nth-child(25) {rotate: 192deg}
+.box:nth-child(26) {rotate: 200deg}
+.box:nth-child(27) {rotate: 208deg}
+.box:nth-child(28) {rotate: 216deg}
+.box:nth-child(29) {rotate: 224deg}
+.box:nth-child(30) {rotate: 232deg}
+.box:nth-child(31) {rotate: 240deg}
+.box:nth-child(32) {rotate: 248deg}
+.box:nth-child(33) {rotate: 256deg}
+.box:nth-child(34) {rotate: 264deg}
+.box:nth-child(35) {rotate: 272deg}
+.box:nth-child(36) {rotate: 280deg}
+.box:nth-child(37) {rotate: 288deg}
+.box:nth-child(38) {rotate: 296deg}
+.box:nth-child(39) {rotate: 304deg}
+.box:nth-child(40) {rotate: 312deg}
+.box:nth-child(41) {rotate: 320deg}
+.box:nth-child(42) {rotate: 328deg}
+.box:nth-child(43) {rotate: 336deg}
+.box:nth-child(44) {rotate: 344deg}
+.box:nth-child(45) {rotate: 352deg}
+.box:nth-child(46) {rotate: 360deg}
