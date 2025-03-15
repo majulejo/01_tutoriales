@@ -42,6 +42,11 @@ body {
     font-family: 'WebSymbolsRegular';
 }
 
+.clearfix {
+    float: none;
+    clear: both;
+}
+
 /*   CABECERA   */
 
 #header {
@@ -191,7 +196,11 @@ aside h3 {
     height: 45px;
     line-height: 49px;
     background-image: url(../img/pxgray.png);
-    box-shadow: 0px 1px 0px #393d3f, 1px 2px 0px #393d3f,2px 3px 0px #393d3f, 3px 4px 0px #393d3f;
+    box-shadow: 
+    0px 1px 0px #393d3f, 
+    1px 2px 0px #393d3f,
+    2px 3px 0px #393d3f, 
+    3px 4px 0px #393d3f;
     font-size: 30px;
     font-family: 'BebasNeue';
     font-weight: normal;
@@ -308,6 +317,7 @@ font-size: 15px;
 font-family: 'TrebuchetMS';
 font-weight: lighter;
 margin-left: 17px;
+margin-bottom: 20px;
 transition: all 300ms;
 }
 
@@ -316,4 +326,108 @@ transition: all 300ms;
 #login input[type="button"]:hover,
 #login button:hover {
     box-shadow: 0px 0px 3px gray
+}
+
+#login a {
+    display: block;
+    font-size: 14px;
+    text-decoration: none;
+    margin-left: 18px;
+    color: #555;
+    margin-left: 18px;
+}
+
+#login a:hover {
+    text-decoration: underline;  
+    color: #2f78bc 
+}
+
+#social{
+    height: 190px;
+}
+
+#social a {
+    display: block;
+    color: #353535;
+    text-decoration: none;
+    font-size: 30px;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/*ARTICULOS*/
+#articles {
+    width: 860px;
+    float: left;
+}
+
+#articles h2 {
+    display: block;
+    width: 100%;
+    height: 75px;
+    line-height: 75px;
+    text-align: center;
+    font-family: 'BebasNeue';
+    font-size: 40px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    background: url(../img/pxgray.png), #fff;
+    box-shadow: 
+    0px 1px 0px #393d3f, 
+    1px 2px 0px #393d3f,
+    2px 3px 0px #393d3f, 
+    3px 4px 0px #393d3f;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+#articles article {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    margin: 40px auto;
+    padding: 10px;
+    font-family: 'TrebuchetMS';
+    background-color: #fff;
+    color: #000;
+    box-shadow: 1px 1px 2px #ddd;
+}
+
+#articles article h4{
+    display: block;
+    font-size: 23px;
+    margin:3px;
+}
+
+#articles article h4 a {
+    color: #00538C;
+    text-decoration: none;
+}
+
+#articles article h4 a:hover {
+    text-decoration: underline;
+}
+
+#articles .data {
+    float: right;
+    background-color: #393d3f;
+    color: #fff;
+    height: 30px;
+    line-height: 30px; 
+    margin:-10px;   
+    padding: 4px;
+    font-size: 13px;
+    border-radius: 0px 0px 0px 5px;
+}
+
+#articles .data span {
+    margin: 6px;
+}
+
+#articles article p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 15px;
 }
