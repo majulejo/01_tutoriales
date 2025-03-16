@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emblem - Auto generate circular text</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+            background: #FFFCEC;
+            font-family: 'Arial';
+        }
+
+        .emblem {
+            position: absolute;
+	left: 0;
+	right: 0;
+  top: 25vh;
+	margin: 0 auto;
+	width: 50vh;
+	height: 50vh;
+	border-radius: 50%;
+  font-weight: bold;
+	color:  #003A6F;
+	animation: spinZ 20s linear infinite;
+	text-align: center;
+        }
+
+        .emblem span {
+            position: absolute;
+		display: inline-block;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		text-transform: uppercase;
+		font-size: 5vh;
+		transition: all .5s cubic-bezier(0,0,0,1);
+	}
+
+
+        @keyframes spinZ {
+            from {
+                transform: rotateZ(360deg);
+            }
+            to {
+                transform: rotateZ(0deg);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="emblem">George*Hastings*</div>
+
+
+    <script>
+        function createCircularText(text, selector, radius) {
+            let container = document.querySelector(selector);
+            container.innerHTML = '';
+
+            let totalChars = text.length;
+            let angleStep = 360 / totalChars;
+
+            for (let i = 0; i < totalChars; i++) {
+                let span = document.createElement('span');
+                span.textContent = text[i];
+
+                let angle = i * angleStep;
+                let x = radius * Math.cos(angle * (Math.PI / 180));
+                let y = radius * Math.sin(angle * (Math.PI / 180));
+
+                // Las letras mantienen su orientación vertical
+                span.style.transform = `translate(${x}px, ${y}px) rotate(${-angle}deg)`;
+
+                container.appendChild(span);
+            }
+        }
+
+        createCircularText("George*Hastings*", ".emblem", 0);
+    </script>
+
+</body>
+</html>
