@@ -183,6 +183,39 @@
         font-size: 25px;
     }  
 }
+
+@media (max-width: 564px) {
+    #banner h1 {
+        font-size: 20px;
+    }
+    #cards {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .card {
+        width: 16.5%;
+    }
+    .card .icon {
+        font-size: 35px;
+    }
+    #articles .data {
+        float: none;
+        margin: 0px;
+        border-radius: 0px;
+    }
+    #articles h2 {
+        font-size: 40px;
+    }
+    #footer img {
+        width: 65%;
+        margin: 10px auto;
+    }
+    #footer #browsers img {
+        width: 13%;
+        margin: 10px auto;
+    }
+}
+
 @media (max-width: 475px) {
     #logo {
         float: left;
@@ -191,6 +224,9 @@
         width: 100%;
         height: 275px;
         padding: 10px;
+    }
+    #banner h1 {
+        font-size: 18px;
     }
     #menu {
         clear: both;
@@ -215,7 +251,7 @@
         height: 85px;
     }
     #banner h1 {
-        font-size: 23px;
+        font-size: 18px;
     }
     #lateral input[type="text"] {
         width: 85%;
