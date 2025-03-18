@@ -1,0 +1,204 @@
+//VARIABLES
+
+$fuente-tipica: sans-serif, Helvetica, Arial;
+$color-fondo: #ccc;
+$color-letra: red;
+$color-cajas: rgb(229, 225, 160);
+$caja2: #40f99a;
+$timo: #4d9ba8;
+$pimienta: #21428154;
+
+//USO DE LAS VARIABLES
+
+:root {
+    --color-h2: #27a008;
+    --color-h3: #887d87;
+    --color-h4: #7a05f3;
+}
+
+body {
+    background-color: $color-fondo;
+}
+
+h1 {
+    color: $color-letra;
+    font-family: $fuente-tipica;
+}
+
+h2 {
+    color: var(--color-h2);
+}
+
+h3 {
+    color: var(--color-h3);
+}
+
+h4 {
+    color: var(--color-h4);
+}
+//Anidación
+.caja {
+    border: 2px solid #000;
+    width: 500px;
+    margin: 0px auto;
+    text-align: center;
+    background-color: $color-cajas;
+    padding: 10px;
+
+    h1 {
+        color: blue;
+    }
+
+    p {
+        color: green;
+    }
+
+    .info {
+        font-size: 20px;
+
+        .autor {
+            color: $color-cajas;
+            font-size: 12px;
+            text-align: right;
+            font-weight: bold;
+            float: right;
+        }
+    }
+}
+//  Anidación 
+.caja2 {
+    border: 5px dashed $timo;
+    width: 400px;
+    height: 150px;
+    margin: 0px auto;
+    text-align: right;
+    background-color: whitesmoke;
+    padding: 10px;
+    margin-top: 15px;
+    .pintura {
+        color: $pimienta;
+    }
+
+    .parrafo {
+        color: $color-letra;
+    }
+
+    .info2 {
+        font-size: 20px;
+        color: $color-letra;
+
+        #autor2 {
+            color: black;
+            font-size: 12px;
+            text-align: right;
+            font-weight: bold;
+            float: left;
+        }
+    }
+}
+
+//Mixins / Barra funciones
+//conjunto de instrucciones que se van a ejecutar cuando se llame a ese mixin
+@mixin crearBordes($border_color, $size-border, $radius-size, $shadow-color){
+    border: $size-border solid $border_color;
+    border-radius: $radius-size;
+    box-shadow: 0px 0px $radius-size $shadow-color;
+}
+.caja2 {
+    @include crearBordes(yellow, 4px, 15px, blue);
+}
+.listado {
+    @include crearBordes(pink, 9px, 30px, orange);
+}
+
+//Herencia
+%alert-normal {
+    color: white;
+    background-color: red;
+    @include crearBordes(yellow, 4px, 15px, blue);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    text-align: center;
+    margin: 20px;
+}
+.alert {
+    @extend %alert-normal;
+}
+.alert-danger {
+    @extend %alert-normal;
+    background-color: orange;
+    color: blueviolet;
+    border-color: springgreen;
+
+}
+.alert-succes {
+    @extend %alert-normal;
+    background-color: green;
+    color: darkred;
+    border-color: rgb(17, 0, 255);
+}
+%probando_id {
+    color: rgb(233, 15, 15);
+    background-color: rgb(131, 218, 124);
+    @include crearBordes(rgb(68, 65, 65), 9px, 30px, orange);
+    padding: 20px;
+    border-radius: 50%;
+    font-size: 20px;
+    text-align: center;
+    margin: 20px
+}
+#prueba {
+    @extend %probando_id;
+}
+
+//Operadores
+h1 {
+    font-size: (20px + 5px - 1px)*2.3;
+}
+.clearfix {
+    clear: both;
+}
+$tamañocaja: 1100px;
+$caja: 200px;
+
+.variascajas2 {
+    width: $tamañocaja;
+    clear: both;
+    margin: 30px auto;
+    border: 2px solid black;
+    padding: 10px;
+}
+
+.caja2 {
+    width: $caja / $tamañocaja * 100%; // Calcula el porcentaje correctamente
+    float: left;
+    margin: 15px 50px;
+}
+
+//Condicionales - if
+h1 {
+    @if $color-fondo == #ccc {
+        color: rgb(0, 0, 0);
+    } @else if $color-fondo == #000{
+        color: lightsalmon;
+    }@else {
+        color: rgb(255, 255, 255);
+    }
+}
+
+//For
+$contador: 1;
+@for $contador from 1 through 5 {
+    .listado ul li:nth-child(#{$contador}) {
+        color: rgb(0, 0, 0);
+        background-color: rgb(255, 255, 255);
+        padding: 10px;
+        margin: 10px;
+        border: 2px solid black;
+        font-size: $contador * 5px + 10px;
+    }
+}
+//Each
+
+//While

@@ -1,0 +1,33 @@
+//Variables
+@bgcolor: lightblue;
+@fuente: Arial;
+@b: body;
+
+@{b} {
+    background-color: @bgcolor;
+}
+
+h1 {
+    font-family: @fuente;
+    color: red;
+}
+
+//Anidación
+.informacion {
+    ul {
+        background-color: silver;
+        li{
+            color: rgb(194, 46, 46);
+            font-size: 18px;
+        }
+    }
+}
+
+//Mixins
+.sombras() {
+    box-shadow: 0px 0px 10px black;
+    text-shadow: 0px 0px 5px black;
+}
+.informacion {
+    .sombras();
+}

@@ -1,0 +1,18 @@
+body {
+  background-color: lightblue;
+}
+h1 {
+  font-family: Arial;
+  color: red;
+}
+.informacion ul {
+  background-color: silver;
+}
+.informacion ul li {
+  color: #c22e2e;
+  font-size: 18px;
+}
+.informacion {
+  box-shadow: 0px 0px 10px black;
+  text-shadow: 0px 0px 5px black;
+}
