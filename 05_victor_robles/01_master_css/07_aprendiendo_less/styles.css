@@ -13,6 +13,22 @@ h1 {
   font-size: 18px;
 }
 .informacion {
-  box-shadow: 0px 0px 10px black;
+  box-shadow: 30px -30px 12px yellow;
   text-shadow: 0px 0px 5px black;
+}
+h1 {
+  font-size: 37px;
+}
+h1 {
+  color: blue;
+  color: black;
+}
+.informacion {
+  border: 2px solid black;
+  height: 900px;
+  height: 950px;
+  height: 500px;
+  height: 350px;
+  height: 275px;
+  height: 230px;
 }

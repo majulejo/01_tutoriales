@@ -24,10 +24,36 @@ h1 {
 }
 
 //Mixins
+@X: 30px ;
+@Y: -30px;
+@blur: 12px;
+@color: yellow;
 .sombras() {
-    box-shadow: 0px 0px 10px black;
+    box-shadow: @X @Y @blur @color;
     text-shadow: 0px 0px 5px black;
 }
 .informacion {
     .sombras();
+}
+// Operadores
+h1 {
+    font-size: 30px + 7px;
+}
+//Mixins condicionales
+.textoNegro (@value) when (@value=true) {
+    color: black;
+}
+h1 {
+    color: blue;
+    .textoNegro(true);
+}
+//Bucles
+.loop(@cont) when (@cont > 0) {
+    .loop((@cont - 1));
+    height:((900px /@cont) + 50px)
+}
+.informacion {
+    border: 2px solid black;
+    height: 900px;
+    .loop(5);
 }
