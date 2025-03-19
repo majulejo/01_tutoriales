@@ -1,0 +1,64 @@
+body {
+    background-color: rgb(211, 240, 158);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+}
+
+#layout {
+    display: flex;
+    /*flex-direction: row;
+    flex-wrap: wrap;*/
+    flex-flow: row wrap;
+    height: 600px;
+
+    /*alinear en el eje de la caja*/
+    justify-content: start;  /*mueve los elementos al principio*/
+    justify-content: center;  /*mueve los elementos al centro*/
+    justify-content: end;  /*mueve los elementos al final*/
+    justify-content: space-around;/*distribuye el contenido dejando espacios entre medias*/
+    justify-content: space-between;/*Pone un elemento al principio, otro al final y distribuye el resto de los elementos dejando espacios entre medias */
+    justify-content: space-evenly;/*distribuye todo el espacio libre entre los elementos de la misma manera.*/
+
+    /*alinear en el cross-axis de la caja*/
+    align-items: baseline;
+    align-items: start;
+    align-items: center;
+    align-items: end;
+    align-items: start;
+
+
+
+    border: 3px solid black;
+    padding: 5px;
+}
+.caja {
+
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(10, 109, 109);
+    padding: 20px;
+    border: 3px solid rgb(206, 201, 201);
+    margin: 10px;
+    background-color: rgb(9, 196, 243);
+}
+
+.red {
+    
+    align-self: flex-start;
+    background-color: rgba(255, 0, 0, 0.8);
+
+}
+.green {
+margin-top: 11%;    
+background-color: rgba(0, 128, 0, 0.8);
+}
+.blue {
+    align-self: center;
+    background-color: rgba(0, 0, 255, 0.8);
+}
+.orange {
+    align-self: end;
+
+    background-color: rgba(255, 166, 0, 0.6);
+}

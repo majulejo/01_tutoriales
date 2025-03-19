@@ -1,3 +1,13 @@
+:root {
+    --rojo: red;
+    --verde: #080;
+    --azul: #7b7be6;
+    --naranja: #f58f09;
+    --borde: yellow;
+    --texto: lightblue;
+    --fuente:  Verdana, Geneva, Tahoma, sans-serif;
+    --tamaño: 30px;
+}
 body {
     background-color: rgb(211, 240, 158);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -16,29 +26,27 @@ body {
     font-size: 20px;
     font-weight: bold;
     text-align: center;
-    color: rgb(10, 109, 109);
+    color: var(--texto);
     padding: 20px;
-    border: 3px solid rgb(206, 201, 201);
+    border: 3px solid var(--borde);
     margin: 10px;
-    background-color: rgb(9, 196, 243);
 }
 
 .red {
-    flex-grow: 1;
+    background-color: var(--rojo);
     flex-basis: calc((100% / 3) - 68px);
-
-    background-color: rgba(255, 0, 0, 0.8);
-
+    font-family: var(--fuente);
+    font-size: var(--tamaño);
 }
 .green {
-    background-color: rgba(0, 128, 0, 0.8);
+    background-color: var(--verde) ;
     flex-basis: calc((100% / 3) - 68px);
 }
 .blue {
-    background-color: rgba(0, 0, 255, 0.8);
+    background-color:  var(--azul);
     flex-basis: calc((100% / 3) - 68px);
 }
 .orange {
-    background-color: rgba(255, 166, 0, 0.6);
+    background-color: var(--naranja);
     flex-basis: 100%;
 }
