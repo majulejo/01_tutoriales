@@ -4,24 +4,17 @@ body {
 }
 
 .layout {
-    width: 1200px;
-    height: 400px;
+    width: 80%;
+    min-height: 400px;
     margin: 0 auto;
 
     /*Definir el grid-layout*/
     display: grid;
-    /*diferentes medidas de cajas.*/
-    grid-template-columns: 35% 18% 25% 50%;
-    grid-template-columns: repeat(4, calc(25% - 10px));
-    grid-template-columns: repeat(2, calc(25% - 10px)) 18% 32%;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-columns: repeat(2, 1fr);
+    /*diferentes medidas de cajas.*/    
+    grid-template-columns: repeat(3, 1fr);
     /*crear o definir las filas*/
-    grid-template-rows: 1fr 4fr 2fr;
-    grid-template-rows: 1fr 4fr 300px;
-    grid-template-rows: repeat(2, 1fr) 3fr;
-
-
+    
+    grid-template-rows: repeat(2, 1fr) 3fr repeat(2, 1fr);
 
 
     /*Espacio entre elementos grid*/
@@ -33,27 +26,55 @@ body {
 .layout .caja{
     font-size: 20px;
     font-weight: bold;
-    color: #fff;
+    color: #464444;
     padding: 20px;
     border: 4px solid #222;
     background-color: gray;
     font-size: 16px;
 }
 .layout .red {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row: 1 / 2;
+
     background-color: red;
 }
 .layout .green {
+    grid-column: 1 / 2;
+    grid-row: 2 / 6;
+
     background-color: green;
 }
 .layout .blue {
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
+
     background-color: blue;
 }
 .layout .pink {
+    grid-column:  2/ 3 ;
+
+    grid-row-start: 3;
+    grid-row-end: 5;
+
     background-color: pink;
 }
 .layout .orange {
+    grid-column: 3 / 4 ;
+    grid-row: 3 / 5 ;
+
     background-color: orange;
 }
 .layout .lightblue {
+    grid-column: 2 / 5 ;
+    grid-row: 5 / 5;
+
     background-color: lightblue;
+}
+.layout .yellow {
+
+    background-color: yellow;
+}
+.layout .lightgreen {
+    background-color: lightgreen;
 }
