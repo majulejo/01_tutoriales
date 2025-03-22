@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/020_imgenes_master/ccc.png" type="image/x-icon">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="007_ocultar_mostrar_vista_responsive.css">
+    <title></title>07_ocultar_mostrar_vista_responsive Aprendiendo Bootstrap con Victor Robles Web</title>
+</head>
+
+<body>
+    <!--
+    <div class="mi-web w-75 m-auto p-5 border border-danger">
+        <h1>Aprendiendo Bootstrap con Victor Robles Web</h1>
+    <h2>Bienvenido a las clases de este framework para Css</h2>
+    <h3>w-75 m-auto p-5 border border-danger</h3>
+    <h3>width:75% margin: auto borde de color rojo</h3>
+    <button class="btn btn-success">Soy un botón</button>
+    </div>-->
+
+    <div class="container-fluid border-danger">
+        <div class="row">
+
+            <header id="header" class="col-12 bg-primary text-white p-2 ps-4">
+                <h1> 07_ocultar_mostrar_vista_responsive Aprendiendo Bootstrap con Victor Robles Web</h1>
+            </header>
+
+            <nav id="menu" class="col-12 bg-secondary text-white d-none  d-sm-none d-md-block"><!--d-block muestra el menu en todos los casos y d-none va ocultando-->
+                <ul class="row w-50"> <!--hay que añadir el media query-->
+                    <li class="col-xs-12 col-sm-12 col-md">Inicio</li>
+                    <li class="col-xs-12 col-sm-12 col-md">Página 1</li>
+                    <li class="col-xs-12 col-sm-12 col-md">Página 2</li>
+                    <li class="col-xs-12 col-sm-12 col-md">Página 3</li>
+                    <li class="col-xs-12 col-sm-12 col-md">Contacto</li>
+                </ul>
+            </nav>
+
+            <section id="content" class="col-12">
+                <div class="row">
+                    <section id="products" class="col-12 col-sm-12 col-md-9 border">
+                        <h2>Productos</h2>
+                        <hr>
+                        <div class="items ">
+                            <div class="row ">
+                                <div class="item col col-lg col-md-12 col sm-12 bg-primary ">producto </div>
+                                <div class="item col col-lg  col-md-6  col sm-6  bg-warning ">producto </div>
+                                <div class="item col col-lg  col-md-6  col sm-6  bg-secondary ">producto </div>
+                            </div>
+                            <div class="row mt-1">
+                                <div class="item  col bg-primary m-2">producto </div>
+                                <div class="item  col bg-warning m-2">producto </div>
+                                <div class="item  col bg-secondary m-2">producto </div>
+
+
+                            </div>
+                            <div class="row mt-1">
+                                <div class="item  col bg-secondary m-2">producto </div>
+                                <div class="item  col bg-warning m-2">producto </div>
+                                <div class="item  col bg-info m-2">producto </div>
+
+
+                            </div>
+                            <div class="row mt-1 justify-content-evenly" style="background-color: brown;">
+                                <div class="item  col-3 bg-secondary m-2">producto </div>
+                                <div class="item  col-3 bg-warning m-2">producto </div>
+                                <div class="item  col-3 bg-secondary m-2">producto </div>
+                            </div>
+                            <div class="row mt-1">
+                                <div class="item  col-3 bg-warning">producto </div>
+                                <div class="item  col-2 bg-secondary offset-1">producto </div>
+                                <div class="item  col-2 bg-info offset-1">producto </div>
+                                <div class="item  col-2 bg-primary offset-1">producto </div>
+                            </div>
+
+                        </div>
+                    </section>
+                    <aside id="aside" class="col-3 border d-none  d-sm-none d-md-block">
+                        <h2>Barra Lateral</h2>
+
+                        <div class="lateral row bg-danger align-items-end" >
+                            <div class="col-4 bg-primary order-3">
+                                Elemento 1
+                            </div>
+                            <div class="col-4 bg-warning order-1 ">
+                                Elemento 2
+                            </div>
+                            <div class="col-4 bg-success order-2 ">
+                                Elemento 3
+
+                            </div>
+
+                        </div>
+                        
+                    </aside>
+                </div>
+            </section>
+
+
+            <footer class="col-lg-12 bg-info">
+                Master en Css con Victor Robles Web &copy;
+            </footer>
+        </div>
+    </div>
+    <script type="text/javascript" src="jquery/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

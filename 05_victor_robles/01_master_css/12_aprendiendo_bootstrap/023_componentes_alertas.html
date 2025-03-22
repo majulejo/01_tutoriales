@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/020_imgenes_master/ccc.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><!--Usar GOOGLE ICONS-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet"><!--Usar FontAwesome u otra biblioteca de íconos-->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <title>023_componentes_alertas</title>
+    <style>
+        .btn-close span.material-icons {
+            font-size: 1rem; /* Ajusta el tamaño del ícono */
+            line-height: 1; /* Centra verticalmente */
+        }
+        .btn-close i.fas {
+        font-size: 1rem; /* Ajusta el tamaño del ícono */
+        line-height: 1; /* Centra verticalmente */
+    }
+    .btn-close::after {
+        content: none; /* Elimina el ícono predeterminado de Bootstrap */
+    }
+    .btn-close {
+        font-size: 1rem; /* Ajusta el tamaño del emoticono */
+        line-height: 1; /* Centra verticalmente */
+    }
+    </style>
+</head>
+
+<body>
+    <h1 class="bg-danger text-center mt-5">023_componentes_alertas</h1>
+    <!-- primary secondary success danger warning info light dark -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 mt-3">
+                <div class="alert alert-success">
+                    <strong>Increible!!</strong> Te has registrado correctamente.
+                </div>
+            </div>
+            <div class="col-md-8 mt-3">
+                <div class="alert alert-warning alert-dismissible">
+                    <strong>Increible!!</strong> Te has registrado correctamente y puedes borrar la alerta en el botón.
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                    </button>
+                </div>
+            </div>
+
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>EMOTICONO!!</strong> Aquí puedes usar cualquier símbolo o emoticono y puedes borrar la alerta.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                    😊 <!-- Aquí puedes usar cualquier símbolo o emoticono -->
+                </button>
+            </div>
+
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>GOOGLE ICONS!!</strong> Te has registrado correctamente y puedes borrar la alerta.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                    <span class="material-icons">delete</span> <!-- Ícono de Material Icons -->
+                </button>
+            </div>
+
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>FontAwesome!!</strong> Te has registrado correctamente y puedes borrar la alerta.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                    <i class="fa-regular fa-circle-down"></i> <!-- Ícono de FontAwesome -->
+                </button>
+            </div>
+
+
+        </div>
+        <div class="row">
+
+            <header class="col-md-12   mt-4">
+                <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">DOCUMENTACION</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Link</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        Dropdown
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                                </li>
+                                <li class="nav-item">
+                                    <form class="d-flex" role="search">
+                                        <input class="form-control mx-2 me-2" type="search" placeholder="Search" aria-label="Search">
+                                        <button class="btn btn-outline-success" type="submit">Search</button>
+                                    </form>
+                                </li>
+                            </ul>                            
+                            <ul class="navbar-nav  mb-2 mb-lg-0">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        José Antonio Márquez
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="https://jolejuma.es/balance" target="_blank">Balance</a></li>
+                                        <li><a class="dropdown-item" href="https://jolejuma.es/antiinfecciosos" target="_blank">Antiinfecciosos</a></li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"></script>
+        <script type="text/javascript" src="jquery/jquery-3.7.1.min.js"></script>
+        <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
