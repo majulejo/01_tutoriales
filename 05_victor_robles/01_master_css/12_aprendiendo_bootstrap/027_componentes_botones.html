@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/020_imgenes_master/ccc.png" type="image/x-icon">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <title>027_componentes_botones Aprendiendo Bootstrap con Victor Robles Web</title>
+    <style>
+        /* Contenedor personalizado con ancho del 90% y centrado */
+        .button-container {
+            width: 90%;
+            margin: 0 auto;
+            /* Centra el contenedor horizontalmente */
+        }
+    </style>
+
+</head>
+<!-- primary secondary success danger warning info light dark -->
+
+<body>
+
+    <h1 class="colores bg-info">027_componentes_botones</h1>
+    <!-- primary secondary success danger warning info light dark -->
+    <!-- ANIMALES -->
+    <div class="container">
+        <div class="row">
+            <!-- Tarjeta 1 -->
+            <div class="col-md-4 mt-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://cdn.pixabay.com/photo/2023/06/28/12/32/chameleon-8094345_640.jpg"
+                        class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h3 class="card-title">Tarjeta Numerada</h3>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                            of the card's content.</p>
+                        <a href="#" class="btn btn-success">ENTRAR</a>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 2 -->
+            <div class="col-md-4 mt-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://cdn.pixabay.com/photo/2016/10/07/13/00/bighorn-1721514_640.jpg"
+                        class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h3 class="card-title">Tarjeta Numerada</h3>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                            of the card's content.</p>
+                        <a href="#" class="btn btn-primary">ENTRAR</a>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 3 -->
+            <div class="col-md-4 mt-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://cdn.pixabay.com/photo/2018/05/24/17/35/parrots-3427188_640.jpg"
+                        class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h3 class="card-title">Tarjeta Numerada</h3>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                            of the card's content.</p>
+                        <a href="#" class="btn btn-secondary">ENTRAR</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Repite las tarjetas según sea necesario -->
+        </div>
+    </div>
+
+    <!-- DIBUJOS -->
+
+
+    <div class="card-group">
+        <!-- DIBUJO 1 -->
+        <div class="card">
+            <img src="https://media.istockphoto.com/id/1371360235/es/vector/conjunto-de-personajes-de-mascotas-de-dibujos-animados-retro.jpg?s=612x612&w=0&k=20&c=hMtCv8p-jA63W40Txy1usKjJJCPenXRyPWYzeNosndk="
+                class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                    content. This content is a little bit longer.</p>
+                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                <a href="#" class="btn btn-info">SALIR</a>
+
+            </div>
+        </div>
+        <!-- DIBUJO 2 -->
+        <div class="card">
+            <img src="https://i.pinimg.com/236x/65/bb/e4/65bbe42741a3eed37d6f5b993bffd3a3.jpg" class="card-img-top"
+                alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                <a href="#" class="btn btn-danger">SALIR</a>
+
+            </div>
+        </div>
+        <!-- DIBUJO 3 -->
+        <div class="card">
+            <img src="https://i.pinimg.com/236x/a0/43/e6/a043e6005b9e053e663a3640f490c971.jpg" class="card-img-top"
+                alt="...">
+            <div class="card-body">
+                <h5 class="card-title">DIBUJO 3</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                    content. </p>
+                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                <a href="#" class="btn btn-warning">SALIR</a>
+
+            </div>
+        </div>
+    </div>
+    <!-- primary secondary success danger warning info light dark -->
+    <div class="button-container border w-90 text-center">
+        <hr>
+        <h5>Base class</h5>
+        <button type="button" class="btn">Base class</button>
+        <h5>Variants </h5>
+        <button type="button" class="btn btn-primary">Primary</button>
+        <button type="button" class="btn btn-secondary">Secondary</button>
+        <button type="button" class="btn btn-success">Success</button>
+        <button type="button" class="btn btn-danger">Danger</button>
+        <button type="button" class="btn btn-warning">Warning</button>
+        <button type="button" class="btn btn-info">Info</button>
+        <button type="button" class="btn btn-light">Light</button>
+        <button type="button" class="btn btn-dark">Dark</button>
+        <button type="button" class="btn btn-link">Link</button>
+        <h4>Disable text wrapping </h4>
+        <h5>Button tags</h5>
+        <a class="btn btn-primary" href="#" role="button">Link</a>
+        <button class="btn btn-primary" type="submit">Button</button>
+        <input class="btn btn-primary" type="button" value="Input">
+        <input class="btn btn-primary" type="submit" value="Submit">
+        <input class="btn btn-primary" type="reset" value="Reset">
+        <h5>Outline buttons</h5>
+        <button type="button" class="btn btn-outline-primary">Primary</button>
+        <button type="button" class="btn btn-outline-secondary">Secondary</button>
+        <button type="button" class="btn btn-outline-success">Success</button>
+        <button type="button" class="btn btn-outline-danger">Danger</button>
+        <button type="button" class="btn btn-outline-warning">Warning</button>
+        <button type="button" class="btn btn-outline-info">Info</button>
+        <button type="button" class="btn btn-outline-light">Light</button>
+        <button type="button" class="btn btn-outline-dark">Dark</button>
+        <h5>Sizes </h5>
+        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+        <button type="button" class="btn btn-secondary btn-lg">Large button</button>
+        <hr>
+        <button type="button" class="btn btn-primary btn-sm">Small button</button>
+        <button type="button" class="btn btn-secondary btn-sm">Small button</button>
+        <hr>
+        <button type="button" class="btn btn-primary"
+            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+            Custom button
+        </button>
+        <h5>Disabled state </h5>
+        <button type="button" class="btn btn-primary" disabled>Primary button</button>
+        <button type="button" class="btn btn-secondary" disabled>Button</button>
+        <button type="button" class="btn btn-outline-primary" disabled>Primary button</button>
+        <button type="button" class="btn btn-outline-secondary" disabled>Button</button>
+        <h5>Disabled buttons using <a> should not include the href attribute.</h5>
+        <a class="btn btn-primary disabled" role="button" aria-disabled="true">Primary link</a>
+        <a class="btn btn-secondary disabled" role="button" aria-disabled="true">Link</a>
+        <h5>Link functionality caveat </h5>
+        <a href="#" class="btn btn-primary disabled" tabindex="-1" role="button" aria-disabled="true">Primary link</a>
+        <a href="#" class="btn btn-secondary disabled" tabindex="-1" role="button" aria-disabled="true">Link</a>
+        <h5>Block buttons</h5>
+        <div class="d-grid gap-2">
+            <button class="btn btn-primary" type="button">Button</button>
+            <button class="btn btn-primary" type="button">Button</button>
+        </div>
+        <h6>Here we create a responsive variation</h6>
+        <div class="d-grid gap-2 d-md-block">
+            <button class="btn btn-primary" type="button">Button</button>
+            <button class="btn btn-primary" type="button">Button</button>
+        </div>
+        <H6>You can adjust the width of your block buttons with grid column width classes. For example, for a half-width
+            “block button”, use .col-6. Center it horizontally with .mx-auto, too.</H6>
+        <div class="d-grid gap-2 col-6 mx-auto">
+            <button class="btn btn-primary" type="button">Button</button>
+            <button class="btn btn-primary" type="button">Button</button>
+        </div>
+        <H6>Additional utilities can be used to adjust the alignment of buttons when horizontal. </H6>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <button class="btn btn-primary me-md-2" type="button">Button</button>
+            <button class="btn btn-primary" type="button">Button</button>
+        </div>
+        <h4>Button plugin</h4>
+        <h6>The button plugin allows you to create simple on/off toggle buttons.</h6>
+        <h5>Toggle states</h5>
+        <p class="d-inline-flex gap-1">
+            <button type="button" class="btn" data-bs-toggle="button">Toggle button</button>
+            <button type="button" class="btn active" data-bs-toggle="button" aria-pressed="true">Active toggle
+                button</button>
+            <button type="button" class="btn" disabled data-bs-toggle="button">Disabled toggle button</button>
+        </p>
+        <p class="d-inline-flex gap-1">
+            <button type="button" class="btn btn-primary" data-bs-toggle="button">Toggle button</button>
+            <button type="button" class="btn btn-primary active" data-bs-toggle="button" aria-pressed="true">Active
+                toggle button</button>
+            <button type="button" class="btn btn-primary" disabled data-bs-toggle="button">Disabled toggle
+                button</button>
+        </p>
+        <hr>
+        <p class="d-inline-flex gap-1">
+            <a href="#" class="btn" role="button" data-bs-toggle="button">Toggle link</a>
+            <a href="#" class="btn active" role="button" data-bs-toggle="button" aria-pressed="true">Active toggle
+                link</a>
+            <a class="btn disabled" aria-disabled="true" role="button" data-bs-toggle="button">Disabled toggle link</a>
+        </p>
+        <p class="d-inline-flex gap-1">
+            <a href="#" class="btn btn-primary" role="button" data-bs-toggle="button">Toggle link</a>
+            <a href="#" class="btn btn-primary active" role="button" data-bs-toggle="button" aria-pressed="true">Active
+                toggle link</a>
+            <a class="btn btn-primary disabled" aria-disabled="true" role="button" data-bs-toggle="button">Disabled
+                toggle link</a>
+        </p>
+
+        <h2>Button group</h2>
+        <h5>Basic example</h5>
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-primary">Left</button>
+            <button type="button" class="btn btn-primary">Middle</button>
+            <button type="button" class="btn btn-primary">Right</button>
+        </div>
+        <h6>These classes can also be added to groups of links, as an alternative to the .nav navigation components.
+
+        </h6>
+        <div class="btn-group">
+            <a href="#" class="btn btn-primary active" aria-current="page">Active link</a>
+            <a href="#" class="btn btn-primary">Link</a>
+            <a href="#" class="btn btn-primary">Link</a>
+        </div>
+        <h5>Mixed styles</h5>
+        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+            <button type="button" class="btn btn-danger">Left</button>
+            <button type="button" class="btn btn-warning">Middle</button>
+            <button type="button" class="btn btn-success">Right</button>
+        </div>
+        <h5>Outlined styles </h5>
+        <div class="btn-group" role="group" aria-label="Basic outlined example">
+            <button type="button" class="btn btn-outline-primary">Left</button>
+            <button type="button" class="btn btn-outline-primary">Middle</button>
+            <button type="button" class="btn btn-outline-primary">Right</button>
+        </div>
+        <h5>Checkbox and radio button groups</h5>
+        <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+            <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+            <label class="btn btn-outline-primary" for="btncheck1">Checkbox 1</label>
+
+            <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+            <label class="btn btn-outline-primary" for="btncheck2">Checkbox 2</label>
+
+            <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+            <label class="btn btn-outline-primary" for="btncheck3">Checkbox 3</label>
+        </div>
+        <h5>otros</h5>
+        <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+            <label class="btn btn-outline-primary" for="btnradio1">Radio 1</label>
+
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+            <label class="btn btn-outline-primary" for="btnradio2">Radio 2</label>
+
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+            <label class="btn btn-outline-primary" for="btnradio3">Radio 3</label>
+        </div>
+        <h5>Button toolbar</h5>
+        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+            <div class="btn-group me-2" role="group" aria-label="First group">
+                <button type="button" class="btn btn-primary">1</button>
+                <button type="button" class="btn btn-primary">2</button>
+                <button type="button" class="btn btn-primary">3</button>
+                <button type="button" class="btn btn-primary">4</button>
+            </div>
+            <div class="btn-group me-2" role="group" aria-label="Second group">
+                <button type="button" class="btn btn-secondary">5</button>
+                <button type="button" class="btn btn-secondary">6</button>
+                <button type="button" class="btn btn-secondary">7</button>
+            </div>
+            <div class="btn-group" role="group" aria-label="Third group">
+                <button type="button" class="btn btn-info">8</button>
+            </div>
+        </div>
+        <h5>otros</h5>
+        <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
+            <div class="btn-group me-2" role="group" aria-label="First group">
+                <button type="button" class="btn btn-outline-secondary">1</button>
+                <button type="button" class="btn btn-outline-secondary">2</button>
+                <button type="button" class="btn btn-outline-secondary">3</button>
+                <button type="button" class="btn btn-outline-secondary">4</button>
+            </div>
+            <div class="input-group">
+                <div class="input-group-text" id="btnGroupAddon">@</div>
+                <input type="text" class="form-control" placeholder="Input group example"
+                    aria-label="Input group example" aria-describedby="btnGroupAddon">
+            </div>
+        </div>
+
+        <div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Toolbar with button groups">
+            <div class="btn-group" role="group" aria-label="First group">
+                <button type="button" class="btn btn-outline-secondary">1</button>
+                <button type="button" class="btn btn-outline-secondary">2</button>
+                <button type="button" class="btn btn-outline-secondary">3</button>
+                <button type="button" class="btn btn-outline-secondary">4</button>
+            </div>
+            <div class="input-group">
+                <div class="input-group-text" id="btnGroupAddon2">@</div>
+                <input type="text" class="form-control" placeholder="Input group example"
+                    aria-label="Input group example" aria-describedby="btnGroupAddon2">
+            </div>
+        </div>
+        <h5>Sizing </h5>
+        <div class="btn-group btn-group-lg" role="group" aria-label="Large button group">
+            <button type="button" class="btn btn-outline-primary">Left</button>
+            <button type="button" class="btn btn-outline-primary">Middle</button>
+            <button type="button" class="btn btn-outline-primary">Right</button>
+        </div>
+        <br>
+        <div class="btn-group" role="group" aria-label="Default button group">
+            <button type="button" class="btn btn-outline-primary">Left</button>
+            <button type="button" class="btn btn-outline-primary">Middle</button>
+            <button type="button" class="btn btn-outline-primary">Right</button>
+        </div>
+        <br>
+        <div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
+            <button type="button" class="btn btn-outline-primary">Left</button>
+            <button type="button" class="btn btn-outline-primary">Middle</button>
+            <button type="button" class="btn btn-outline-primary">Right</button>
+        </div>
+        <h5>Nesting </h5>
+        <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+            <button type="button" class="btn btn-primary">1</button>
+            <button type="button" class="btn btn-primary">2</button>
+
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Dropdown
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                    <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                </ul>
+            </div>
+        </div>
+        <h5>Vertical variation</h5>
+        <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+            <button type="button" class="btn btn-primary">Button</button>
+            <button type="button" class="btn btn-primary">Button</button>
+            <button type="button" class="btn btn-primary">Button</button>
+            <button type="button" class="btn btn-primary">Button</button>
+        </div>
+        <h5>otros</h5>
+        <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+            <button type="button" class="btn btn-primary">Button</button>
+            <button type="button" class="btn btn-primary">Button</button>
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Dropdown
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                    <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                </ul>
+            </div>
+            <div class="btn-group dropstart" role="group">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Dropdown
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                    <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                </ul>
+            </div>
+            <div class="btn-group dropend" role="group">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Dropdown
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                    <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                </ul>
+            </div>
+            <div class="btn-group dropup" role="group">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Dropdown
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                    <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                </ul>
+            </div>
+        </div>
+        <h5>otros</h5>
+        <div class="btn-group-vertical" role="group" aria-label="Vertical radio toggle button group">
+            <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio1" autocomplete="off" checked>
+            <label class="btn btn-outline-danger" for="vbtn-radio1">Radio 1</label>
+            <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio2" autocomplete="off">
+            <label class="btn btn-outline-danger" for="vbtn-radio2">Radio 2</label>
+            <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio3" autocomplete="off">
+            <label class="btn btn-outline-danger" for="vbtn-radio3">Radio 3</label>
+        </div>
+
+        <h2>Close button</h2>
+        <h5>Example </h5>
+        <button type="button" class="btn-close" aria-label="Close"></button>
+        <h5>Disabled state</h5>
+        <button type="button" class="btn-close" disabled aria-label="Close"></button>
+        <h5>Dark variant</h5>
+        <div data-bs-theme="dark">
+            <button type="button" class="btn-close" aria-label="Close"></button>
+            <button type="button" class="btn-close" disabled aria-label="Close"></button>
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script type="text/javascript" src="jquery/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
