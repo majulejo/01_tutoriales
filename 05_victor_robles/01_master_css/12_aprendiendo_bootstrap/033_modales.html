@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12 Modales en Cuadrícula</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Estilos opcionales para las celdas */
+        .grid-cell {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .grid-cell button {
+            margin-top: 10px;
+        }
+
+        /*Inicio celda 12 grid*/
+        /* Estilos para las columnas */
+        .modal-body .row>div {
+            border: 1px solid #ccc;
+            padding: 10px;
+            background-color: #f9f9f9;
+            margin-bottom: 10px;
+        }
+
+        /* Alternar colores para mayor claridad */
+        .modal-body .row>div:nth-child(odd) {
+            background-color: #e9ecef;
+        }
+
+        /*Final celda 12 grid*/
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Ejemplo de 12 Ventanas Modales</h1>
+        <div class="row">
+            <!-- Fila 1 -->
+            <div class="col-md-3 grid-cell">
+                <h5>Celda 1</h5>
+                <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modal1">
+                    Abrir Modal 1
+                </button>
+                <!-- Aquí va el código del Modal 1 -->
+                <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modal1Label">Modal 1</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                Contenido del Modal 1.
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Final de Modal 1 (incluido) -->
+            </div>
+                            <!-- primary secondary success danger warning info light dark -->
+
+            <!-------------------------------------------------------------------------------------------------------------->
+            <div class="col-md-3 grid-cell">
+                <h5>Celda 2</h5>
+                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modal2">
+                    Abrir Modal 2
+                </button>
+                <!-- Ejemplo de Modal 2 (incluido) -->
+    <div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal2Label">Modal 2</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Este es el contenido del Modal 2.</p>
+                    <a href="https://getbootstrap.com/docs/5.3/components/modal/" target="_blank">Bootstrap Modal
+                        Docs</a>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+                    <!-- Final de Modal 2 (incluido) -->
+
+            </div>
+            <!-------------------------------------------------------------------------------------------------------------->
+            <div class="col-md-3 grid-cell">
+                <h5>Celda 3</h5>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal3">
+                    Abrir Modal 3
+                </button>
+                <!-- Aquí va el código del Modal 3 -->
+            </div>
+            <!-------------------------------------------------------------------------------------------------------------->
+            <div class="col-md-3 grid-cell">
+                <h5>Celda 4</h5>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal4">
+                    Abrir Modal 4
+                </button>
+                <!-- Aquí va el código del Modal 4 -->
+            </div>
+        </div>
+        <!-------------------------------------------------------------------------------------------------------------->
+        <!-------------------------------------------------------------------------------------------------------------->
+        <div class="row mt-4">
+            <!-- Fila 2 -->
+            <div class="col-md-3 grid-cell">
+                <h5>Celda 5</h5>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal5">
+                    Abrir Modal 5
+                </button>
+                <!-- Aquí va el código del Modal 5 -->
+            </div>
+            <!-------------------------------------------------------------------------------------------------------------->
+            <div class="col-md-3 grid-cell">
+                <h5>Celda 6</h5>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal6">
+                    Abrir Modal 6
+                </button>
+                <!-- Aquí va el código del Modal 6 -->
+            </div>
+            <!-------------------------------------------------------------------------------------------------------------->
+            <div class="col-md-3 grid-cell">
+                <h5>Celda 7</h5>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal7">
+                    Abrir Modal 7
+                </button>
+                <!-- Aquí va el código del Modal 7 -->
+            </div>
+            <!-------------------------------------------------------------------------------------------------------------->
+            <div class="col-md-3 grid-cell">
+                <h5>Celda 8</h5>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal8">
+                    Abrir Modal 8
+                </button>
+                <!-- Aquí va el código del Modal 8 -->
+            </div>
+        </div>
+        <!-------------------------------------------------------------------------------------------------------------->
+        <!-------------------------------------------------------------------------------------------------------------->
+        <div class="row mt-4">
+            <!-- Fila 3 -->
+            <div class="col-md-3 grid-cell">
+                <h5>Celda 9</h5>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal9">
+                    Abrir Modal 9
+                </button>
+                <!-- Aquí va el código del Modal 9 -->
+            </div>
+            <!-------------------------------------------------------------------------------------------------------------->
+            <div class="col-md-3 grid-cell">
+                <h5>Celda 10</h5>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal10">
+                    Abrir Modal 10
+                </button>
+                <!-- Aquí va el código del Modal 10 -->
+            </div>
+            <!-------------------------------------------------------------------------------------------------------------->
+            <div class="col-md-3 grid-cell">
+                <h5>Celda 11</h5>
+
+                <!-- Aquí va el código del Modal 11 -->
+                <!-- Botón para abrir el modal -->
+                <button type="button" class="btn btn-info" data-bs-toggle="modal"
+                    data-bs-target="#tooltipsPopoverModal">
+                    Abrir Modal Tooltips
+                </button>
+
+                <!-- Estructura del modal -->
+                <div class="modal fade" id="tooltipsPopoverModal" tabindex="-1"
+                    aria-labelledby="tooltipsPopoverModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="tooltipsPopoverModalLabel">Tooltips and Popovers</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <h2 class="fs-5">Popover in a modal</h2>
+                                <p>Este <button class="btn btn-success" data-bs-toggle="popover"
+                                        title="Botón personalizado"
+                                        data-bs-content="Popover body content is set in this attribute.">BOTÓN</button>
+                                    activa una ventana emergente al hacer clic.</p>
+                                <hr>
+                                <h2 class="fs-5">Información sobre herramientas en un modal</h2>
+                                <p><a href="https://jolejuma.es/antiinfecciosos/" target="_blank"
+                                        data-bs-toggle="tooltip" title="Antiinfecciosos">Este enlace</a> y <a
+                                        href="https://jolejuma.es/balance/" target="_blank" data-bs-toggle="tooltip"
+                                        title="Balance">este link</a> tiene información sobre herramientas al pasar el
+                                    cursor.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Final del código del Modal 11 -->
+            </div>
+            <!-------------------------------------------------------------------------------------------------------------->
+            <div class="col-md-3 grid-cell">
+                <h5>Celda 12</h5>
+
+                <!-- Aquí va el código del Modal 12 -->
+                <!-- Botón para abrir el modal -->
+                <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#gridModal">
+                    Abrir Modal Grid
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="gridModal" tabindex="-1" aria-labelledby="gridModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="gridModalLabel">Modal con Cuadrícula</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-md-4">Columna 1</div>
+                                        <div class="col-md-4 ms-auto">Columna 2 (alineada a la derecha)</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3 ms-auto">Columna 3 (alineada a la derecha)</div>
+                                        <div class="col-md-2 ms-auto">Columna 4 (alineada a la derecha)</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 ms-auto">Columna 5 (alineada a la derecha)</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-9">
+                                            Nivel 1: Contenido principal
+                                            <div class="row">
+                                                <div class="col-8 col-sm-6">
+                                                    Nivel 2: Columna izquierda
+                                                </div>
+                                                <div class="col-4 col-sm-6">
+                                                    Nivel 2: Columna derecha
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- Fin del código del Modal 12 -->
+
+            </div>
+        </div>
+    </div>
+    <!-------------------------------------------------------------------------------------------------------------->
+
+    <!-------------------------------------------------------------------------------------------------------------->
+    
+    <!-------------------------------------------------------------------------------------------------------------->
+    <!-------------------------------------------------------------------------------------------------------------->
+    <!-------------------------------------------------------------------------------------------------------------->
+    <!-- Scripts de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Activar tooltips y popovers -->
+    <script>
+        // Activar tooltips
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+
+        // Activar popovers
+        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+            return new bootstrap.Popover(popoverTriggerEl);
+        });
+    </script>
+</body>
+
+</html>
