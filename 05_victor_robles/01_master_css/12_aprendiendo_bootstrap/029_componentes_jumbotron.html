@@ -149,6 +149,16 @@ Además, los íconos predeterminados de Bootstrap están definidos como imágene
             transform: rotate(180deg);
             /* Girar la flecha */
         }
+        /*ventana modal*/
+        #cerrar-ventana {
+            background-color: #008000a9;
+            border: 2px solid #008000;
+
+        }
+        #cerrar-ventana-info {
+            background-color: rgba(255, 2, 2, 0.42);
+            border: 2px solid red;
+        }
     </style>
 </head>
 
@@ -206,33 +216,7 @@ Además, los íconos predeterminados de Bootstrap están definidos como imágene
                 </div>
                 <!--FINAL SLIDER MASTER-->
             </div>
-            <!-- inicio modal -->
-            <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                Launch static backdrop modal
-            </button>
-
-            <!-- Modal -->
-            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-                aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            ...
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Understood</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- final modal -->
-
+            
 
 
 
@@ -245,14 +229,13 @@ Además, los íconos predeterminados de Bootstrap están definidos como imágene
             <div class="col-md-4">
                 <div class="bg-light p-4 rounded my-5 text-center">
                     <h1 class="display-6">Bienvenido a mi web.</h1>
-                    <p class="lead"><strong>Opción 1: </strong>Usar text-center<br>
+                    <p class="lead">
+                        <strong>Opción 1: </strong>Usar text-center<br>
                         La forma más sencilla de centrar el botón horizontalmente es aplicar la clase
                         <strong>text-center</strong> al contenedor que envuelve el botón. Esto funciona porque
                         text-center centra todo el contenido en línea (como texto o botones) dentro del contenedor. <br>
                         <strong>Explicación:</strong><br>
-
-                        &#8226; La clase text-center se aplica al &lt;div&gt; que contiene todo el contenido (bg-light
-                        p-4 rounded my-5).<br>
+                        &#8226; La clase text-center se aplica al &lt;div&gt; que contiene todo el contenido (bg-light p-4 rounded my-5).<br>
                         &#8226; Esto centrará automáticamente el botón, ya que el botón es parte del contenido en línea
                         del contenedor.
                     </p>
@@ -360,6 +343,33 @@ Además, los íconos predeterminados de Bootstrap están definidos como imágene
             <!--FINAL JUMBOTRON 3-->
 
         </div>
+        <!-- inicio modal -->
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                Pulsa para información.
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="staticBackdropLabel">¿Has realizado el curso completo?</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Para realizar el curso completo debes de acceder a la página web que hay en la descripción.
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" id="cerrar-ventana" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar ventana modal.</button>
+                            <button type="button" id="cerrar-ventana-info" class="btn btn-primary">Al cerrar la ventana, manifiestas que estás informado.</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- final modal -->
+
     </div>
 
     <script type="text/javascript" src="jquery/jquery-3.7.1.min.js"></script>

@@ -5,8 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="04_ordenar_elementos.css">
-    <title>04_ordenar_elementos Aprendiendo Bootstrap con Victor Robles Web</title>
+    <link rel="stylesheet" href="03_alineacion_vertical.css">
+    <title>03_alineacion_vertical Aprendiendo Bootstrap con Victor Robles Web</title>
+    <style>
+        #menu {
+            height: 50px;
+        }
+        #menu ul {
+            text-decoration: none;
+            list-style: none;
+            line-height: 50px;
+        }
+        .item {
+            height: 150px;
+        }
+        footer {
+            height: 50px;line-height: 50px;
+            text-align: center;
+        }
+        .lateral {
+            height: 250px;
+        }
+        .lateral > div{
+            height: calc(250px / 3);
+        }
+        </style>
 </head>
 
 <body>
@@ -23,7 +46,7 @@
         <div class="row">
 
             <header id="header" class="col-12 bg-primary text-white p-2 ps-4">
-                <h1> 04_ordenar_elementos Aprendiendo Bootstrap con Victor Robles Web</h1>
+                <h1> 03_alineacion_vertical Aprendiendo Bootstrap con Victor Robles Web</h1>
             </header>
 
             <nav id="menu" class="col-12 bg-secondary text-white">
@@ -65,13 +88,13 @@
                         <h2>Barra Lateral</h2>
 
                         <div class="lateral row bg-danger align-items-end" >
-                            <div class="col-4 bg-primary order-3">
+                            <div class="col-4 bg-primary align-self-start">
                                 Elemento 1
                             </div>
-                            <div class="col-4 bg-warning order-1 ">
+                            <div class="col-4 bg-warning align-self-center">
                                 Elemento 2
                             </div>
-                            <div class="col-4 bg-success order-2 ">
+                            <div class="col-4 bg-success align-self-end">
                                 Elemento 3
 
                             </div>

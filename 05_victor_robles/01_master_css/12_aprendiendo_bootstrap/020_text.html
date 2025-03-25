@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/020_imgenes_master/ccc.png" type="image/x-icon">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <title>020_text Aprendiendo Bootstrap con Victor Robles Web</title>
+</head>
+<!-- primary secondary success info warning info light dark -->
+
+<body>
+    <h3 class="bg-info text-center">Text alignment</h3>
+    <h5 class="bg-warning text-dark p-2">Realinee fácilmente el texto con los componentes mediante clases de alineación
+        de texto. Para la alineación inicial, final y centrada, existen clases adaptables que utilizan los mismos puntos
+        de corte de ancho de ventana gráfica que el sistema de cuadrícula.</h5>
+
+    <p class="text-start">Start aligned text on all viewport sizes.</p>
+    <p class="text-center">Center aligned text on all viewport sizes.</p>
+    <p class="text-end">End aligned text on all viewport sizes.</p>
+
+    <p class="text-sm-end">End aligned text on viewports sized SM (small) or wider.</p>
+    <p class="text-md-end">End aligned text on viewports sized MD (medium) or wider.</p>
+    <p class="text-lg-end">End aligned text on viewports sized LG (large) or wider.</p>
+    <p class="text-xl-end">End aligned text on viewports sized XL (extra large) or wider.</p>
+    <p class="text-xxl-end">End aligned text on viewports sized XXL (extra extra large) or wider.</p>
+
+
+    <h3 class="bg-info text-center">Text wrapping and overflow </h3>
+    <h5 class="bg-warning text-dark p-2">Envuelva el texto con una .text-wrapclase.</h5>
+    <div class="badge text-bg-primary text-wrap" style="width: 6rem;">
+        This text should wrap.
+    </div>
+    <h5 class="bg-warning text-dark p-2">Evitar que el texto se ajuste a una .text-nowrapclase. </h5>
+    <div class="text-nowrap bg-body-secondary border" style="width: 8rem;">
+        This text should overflow the parent.
+    </div>
+
+    <h3 class="bg-info text-center">Word break </h3>
+    <h5 class="bg-warning text-dark p-2">Evita que las cadenas de texto largas alteren el diseño de tus componentes
+        usando .text-break"to set" word-wrap: break-wordy word-break: break-word". Usamos " word-wrapen lugar del más
+        común" overflow-wrappara una mayor compatibilidad con navegadores y añadimos "obsoleto" word-break:
+        break-wordpara evitar problemas con los contenedores flexibles. </h5>
+    <p class="text-break">
+        mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm</p>
+    <h3 class="bg-info text-center">Text transform </h3>
+    <h5 class="bg-warning text-dark p-2">Transforme texto en componentes con clases de mayúsculas de texto.</h5>
+    <p class="text-lowercase">Lowercased text.</p>
+    <p class="text-uppercase">Uppercased text.</p>
+    <p class="text-capitalize">CapiTaliZed text.</p>
+
+    <h3 class="bg-info text-center">Font size </h3>
+    <h5 class="bg-warning text-dark p-2">Cambie rápidamente el font-sizetexto. Aunque nuestras clases de encabezado (p.
+        ej., .h1– .h6) aplican font-size, font-weight, y line-height, estas utilidades solo aplican font-size. El tamaño
+        de estas utilidades coincide con el de los elementos de encabezado HTML, por lo que, a medida que aumenta el
+        número, su tamaño disminuye.</h5>
+    <p class="fs-1">.fs-1 text</p>
+    <p class="fs-2">.fs-2 text</p>
+    <p class="fs-3">.fs-3 text</p>
+    <p class="fs-4">.fs-4 text</p>
+    <p class="fs-5">.fs-5 text</p>
+    <p class="fs-6">.fs-6 text</p>
+    <h3 class="bg-info text-center">Font weight and italics </h3>
+    <h5 class="bg-warning text-dark p-2">Cambie rápidamente el font-weighto font-styledel texto con estas utilidades.
+        font-styleLas utilidades se abrevian como .fst-*y font-weightlas utilidades se abrevian como .fw-*.</h5>
+    <p class="fw-bold">Bold text.</p>
+    <p class="fw-bolder">Bolder weight text (relative to the parent element).</p>
+    <p class="fw-semibold">Semibold weight text.</p>
+    <p class="fw-medium">Medium weight text.</p>
+    <p class="fw-normal">Normal weight text.</p>
+    <p class="fw-light">Light weight text.</p>
+    <p class="fw-lighter">Lighter weight text (relative to the parent element).</p>
+    <p class="fst-italic">Italic text.</p>
+    <p class="fst-normal">Text with normal font style</p>
+    <h3 class="bg-info text-center">Line height</h3>
+    <h5 class="bg-warning text-dark p-2">Cambiar la altura de la línea con .lh-*utilidades.</h5>
+    <p class="lh-1">Este párrafo extenso explica cómo nuestras utilidades afectan la altura de línea de un elemento. Las
+        clases se aplican al propio elemento o, en ocasiones, al elemento padre. Estas clases se pueden personalizar
+        según sea necesario con nuestra API de utilidades.</p>
+    <p class="lh-sm">Este párrafo extenso explica cómo nuestras utilidades afectan la altura de línea de un elemento.
+        Las clases se aplican al propio elemento o, en ocasiones, al elemento padre. Estas clases se pueden personalizar
+        según sea necesario con nuestra API de utilidades.</p>
+    <p class="lh-base">Este párrafo extenso explica cómo nuestras utilidades afectan la altura de línea de un elemento.
+        Las clases se aplican al propio elemento o, en ocasiones, al elemento padre. Estas clases se pueden personalizar
+        según sea necesario con nuestra API de utilidades.</p>
+    <p class="lh-lg">Este párrafo extenso explica cómo nuestras utilidades afectan la altura de línea de un elemento.
+        Las clases se aplican al propio elemento o, en ocasiones, al elemento padre. Estas clases se pueden personalizar
+        según sea necesario con nuestra API de utilidades.</p>
+    <h3 class="bg-info text-center">Monospace </h3>
+    <h5 class="bg-warning text-dark p-2">Cambie una selección a nuestra pila de fuentes monoespaciadas con
+        .font-monospace.</h5>
+    <p class="font-monospace">This is in monospace</p>
+    <h3 class="bg-info text-center">Reset color</h3>
+    <h5 class="bg-warning text-dark p-2">Restablezca el color de un texto o enlace con .text-reset, para que herede el
+        color de su elemento principal.</h5>
+    <p class="text-body-secondary">
+        Secondary body text with a <a href="#" class="text-reset">reset link</a>.
+    </p>
+    <h3 class="bg-info text-center">Text decoration </h3>
+    <h5 class="bg-warning text-dark p-2">Decore el texto en los componentes con clases de decoración de texto. </h5>
+    <p class="text-decoration-underline">This text has a line underneath it.</p>
+    <p class="text-decoration-line-through">This text has a line going through it.</p>
+    <a href="#" class="text-decoration-none">This link has its text decoration removed</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--he hecho desaparecer de la página la primera  caja pero el hueco persiste-->
+    <h1 class="colores bg-warning text-center">020_text</h1>
+
+    <div class="shadow-none p-3 mb-5 bg-body-tertiary rounded">No shadow</div>
+    <div class="shadow-sm p-3 mb-5 bg-body-tertiary rounded">Small shadow</div>
+    <div class="shadow p-3 mb-5 bg-body-tertiary rounded">Regular shadow</div>
+    <div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded">Larger shadow</div>
+
+
+    <hr>
+    <div class="d-flex">
+
+
+        <div
+            class="invisible shadow-lg m-1 mt-5 ml-5 mr-5 text-white bg-info border border-primary rounded-top p-3 mb-3">
+            Borde superior redondeado (azul).
+        </div> <!--he hecho desaparecer de la página la primera  caja pero el hueco persiste-->
+        <hr>
+
+        <div
+            class="shadow-sm m-3 mt-5 mb-5 mx-5 my-5 text-muted bg-info   caja-centrada border border-success rounded-bottom p-3 mb-3">
+            Borde inferior redondeado (verde).
+        </div>
+        <hr>
+
+        <div
+            class="shadow m-5 mb-5 my-5 text-primary bg-success caja-centrada border border-info rounded-start p-3 mb-3">
+            Borde izquierdo redondeado (rojo).
+        </div>
+        <hr>
+        <div class="m-1 p-5 text-white bg-info border border-primary rounded-top p-3 mb-3">
+            Borde superior redondeado (azul).
+        </div>
+        <hr>
+
+        <div class="m-3 x-5  p-5 text-muted bg-info   caja-centrada border border-success rounded-bottom p-3 mb-3">
+            Borde inferior redondeado (verde).
+        </div>
+        <hr>
+
+        <div class=" m-5 p-n5 text-primary bg-success caja-centrada border border-info rounded-start p-3 mb-3">
+            Borde izquierdo redondeado (rojo).
+        </div>
+    </div>
+
+    <hr>
+    <div class="mx-auto m-2 p-3 text-light bg-success caja w-25 border border-dark rounded-start">Última caja creada.
+    </div> <!--  mx-auto  hace que la caha esté centrada en la página -->
+
+    <!-- Primary
+Secondary
+Success
+info
+Warning
+Info
+Light
+Dark -->
+    <script type="text/javascript" src="jquery/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

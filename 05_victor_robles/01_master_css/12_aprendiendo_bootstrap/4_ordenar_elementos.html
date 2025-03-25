@@ -5,8 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="05_offset.css">
-    <title>05_offset Aprendiendo Bootstrap con Victor Robles Web</title>
+    <link rel="stylesheet" href="04_ordenar_elementos.css">
+    <title>04_ordenar_elementos Aprendiendo Bootstrap con Victor Robles Web</title>
+    <style>
+        
+#menu {
+    height: 50px;
+}
+#menu ul {
+    text-decoration: none;
+    list-style: none;
+    line-height: 50px;
+}
+.item {
+    height: 150px;
+}
+footer {
+    height: 50px;line-height: 50px;
+    text-align: center;
+}
+.lateral {
+    height: 250px;
+}
+.lateral > div{
+    height: calc(250px / 3);
+}
+    </style>
 </head>
 
 <body>
@@ -23,7 +47,7 @@
         <div class="row">
 
             <header id="header" class="col-12 bg-primary text-white p-2 ps-4">
-                <h1> 05_offset Aprendiendo Bootstrap con Victor Robles Web</h1>
+                <h1> 04_ordenar_elementos Aprendiendo Bootstrap con Victor Robles Web</h1>
             </header>
 
             <nav id="menu" class="col-12 bg-secondary text-white">
@@ -45,27 +69,18 @@
                             <div class="row mt-1">
                                 <div class="item  col bg-primary m-2">producto </div>
                                 <div class="item  col bg-warning m-2">producto </div>
-                                <div class="item  col bg-secondary m-2">producto </div>
-
 
                             </div>
                             <div class="row mt-1">
                                 <div class="item  col bg-secondary m-2">producto </div>
                                 <div class="item  col bg-warning m-2">producto </div>
-                                <div class="item  col bg-info m-2">producto </div>
-
 
                             </div>
                             <div class="row mt-1 justify-content-evenly" style="background-color: brown;">
                                 <div class="item  col-3 bg-secondary m-2">producto </div>
                                 <div class="item  col-3 bg-warning m-2">producto </div>
                                 <div class="item  col-3 bg-secondary m-2">producto </div>
-                            </div>
-                            <div class="row mt-1">
-                                <div class="item  col-3 bg-warning">producto </div>
-                                <div class="item  col-2 bg-secondary offset-1">producto </div>
-                                <div class="item  col-2 bg-info offset-1">producto </div>
-                                <div class="item  col-2 bg-primary offset-1">producto </div>
+
                             </div>
 
                         </div>
