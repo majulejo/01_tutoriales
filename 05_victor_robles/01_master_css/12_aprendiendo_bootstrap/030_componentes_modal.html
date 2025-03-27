@@ -211,7 +211,12 @@ Además, los íconos predeterminados de Bootstrap están definidos como imágene
                 <!--FINAL SLIDER MASTER-->
             </div>
             <div class="col-md-4">
+
+
                 <!-- primary secondary success danger warning info light dark -->
+
+
+
                 <!-- inicio modal -->
                 <!-- Button trigger modal -->
                 <button type="button" class="btn btn-success mt-3" data-bs-toggle="modal"
@@ -237,7 +242,7 @@ Además, los íconos predeterminados de Bootstrap están definidos como imágene
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar
                                     Ventana</button>
-                                <button type="button" class="btn btn-light"><a
+                                <button type="button" class="btn btn-warning"><a
                                         href="https://getbootstrap.com/docs/5.3/components/modal/"
                                         target="_blank">Bootstrap Modal</a></button>
                             </div>
@@ -249,29 +254,31 @@ Además, los íconos predeterminados de Bootstrap están definidos como imágene
             </div>
             <!-- Modal components -->
             <div class="container">
-                <div class="row">
+                <div class="row bg-warning">
                     <!-- Tarjeta 1 -->
-                    <div class="col-md-2 mt-3">
-                        <h2>Modal components </h2>
-                        <!-- Button trigger modal -->
+                    <div class="col-md-4 my-3">
+                        <h2>1- Modal components </h2>
+                        <!-- Button trigger components -->
                         <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal"> Launch demo modal
+                            data-bs-target="#exampleModal"> Lanzar ejemplo de modalcomponents
                         </button>
-                        <div class="modal" tabindex="-1">
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title">Modal title</h5>
+                                        <h5 class="modal-title">components Modal title</h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                             aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                        <p>Modal body text goes here.</p>
+                                        <p>Modal components body text goes here.</p>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-bs-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar
+                                            components</button>
+                                        <button type="button" class="btn btn-primary">Guardar cambios de
+                                            components</button>
                                     </div>
                                 </div>
                             </div>
@@ -279,31 +286,31 @@ Además, los íconos predeterminados de Bootstrap están definidos como imágene
                     </div>
 
                     <!-- Tarjeta 2 -->
-                    <div class="col-md-2 mt-3">
-                        <h2 class="bg-success">Live Demo</h2>
-                        <!-- Button trigger modal -->
+                    <div class="col-md-4 my-3">
+                        <h2>2- Live Demo</h2>
+                        <!-- Button trigger modal Live Demo-->
                         <button type="button" class="btn btn-primary" data-bs-toggle="modal"
                             data-bs-target="#exampleModal">
-                            Launch demo modal
+                            Launch demo modalbbbb
                         </button>
 
-                        <!-- Modal -->
+                        <!-- Modal Live Demo-->
                         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                             aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Live demo Modal title</h1>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                             aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                        ...
+                                        Live demo contenido informativo
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-bs-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar
+                                            live demo</button>
+                                        <button type="button" class="btn btn-primary">Guardar cambios live demo</button>
                                     </div>
                                 </div>
                             </div>
@@ -311,130 +318,696 @@ Además, los íconos predeterminados de Bootstrap están definidos como imágene
                     </div>
 
                     <!-- Tarjeta 3 -->
-                    <div class="col-md-2 mt-3">
-                        <h2 class="bg-primary">Static backdrop </h2>
-                        <!-- Button trigger modal -->
+                    <div class="col-md-4 my-3">
+                        <h2>3- Static backdrop/Fondo estático </h2>
+                        <!-- Button trigger modal Static backdrop-->
                         <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                            data-bs-target="#staticBackdrop">
-                            Launch static backdrop modal
+                            data-bs-target="#staticBackdrop_estatico">
+                            Launch static backdrop modal/Fondo estático
                         </button>
 
-                        <!-- Modal -->
-                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
-                            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <!-- Modal Static backdrop-->
+                        <div class="modal fade" id="staticBackdrop_estatico" data-bs-backdrop="static"
+                            data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdrop_estaticoLabel"
+                            aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                                        <h1 class="modal-title fs-5" id="staticBackdrop_estaticoLabel">Modal
+                                            title_estatico</h1>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                             aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                        ...
+                                        Cuando el fondo está configurado como estático, el modal no se cerrará al hacer
+                                        clic fuera de él. Haz clic en el botón de abajo para probarlo.
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary"
-                                            data-bs-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-primary">Understood</button>
+                                            data-bs-dismiss="modal">Close_estatico</button>
+                                        <button type="button" class="btn btn-primary">Understood_estatico</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- Tarjeta 4 -->
-                    <div class="col-md-2 mt-3">
-                        <h2 class="bg-secondary">Scrolling long content</h2>
-                        <!-- Scrollable modal -->
-                        <!-- Button trigger modal -->
+                </div>
+
+                <div class="row bg-info my-3">
+
+                    <!-- Tarjeta 4: Modal con Desplazamiento Vertical -->
+                    <div class="col-md-6 my-3">
+                        <h2>4- Modal con Desplazamiento por Contenido Largo</h2>
+                        <!-- Botón para lanzar el modal -->
                         <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                            data-bs-target="#staticBackdrop">
-                            Launch static backdrop modal
+                            data-bs-target="#scrollableModal">
+                            Abrir Modal con Scroll
                         </button>
 
-                        <!-- Modal -->
-                        <div class="modal-dialog modal-dialog-scrollable">
-                            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
-                                data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
-                                aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            ...
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary"
-                                                data-bs-dismiss="modal">Close</button>
-                                            <button type="button" class="btn btn-primary">Understood</button>
-                                        </div>
+                        <!-- Modal con Desplazamiento Vertical -->
+                        <div class="modal fade" id="scrollableModal" tabindex="-1"
+                            aria-labelledby="scrollableModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-scrollable">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="scrollableModalLabel">Título del Modal con Scroll
+                                        </h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <!-- Contenido largo -->
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+                                            tempor
+                                            incididunt ut labore et dolore magna aliqua.
+                                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                            aliquip ex ea commodo consequat.
+                                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                                            eu
+                                            fugiat nulla pariatur.
+                                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                                            deserunt mollit anim id est laborum.
+                                        </p>
+                                        <p>
+                                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                            doloremque laudantium, totam rem aperiam,
+                                            eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+                                            dicta sunt explicabo.
+                                            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+                                            sed
+                                            quia consequuntur magni dolores eos
+                                            qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem
+                                            ipsum quia dolor sit amet, consectetur,
+                                            adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et
+                                            dolore magnam aliquam quaerat voluptatem.
+                                        </p>
+                                        <p>
+                                            At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+                                            praesentium voluptatum deleniti atque corrupti
+                                            quos dolores et quas molestias excepturi sint occaecati cupiditate non
+                                            provident, similique sunt in culpa.
+                                            Qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et
+                                            harum
+                                            quidem rerum facilis est et expedita distinctio.
+                                            Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit
+                                            quo
+                                            minus id quod maxime placeat facere possimus.
+                                            Omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem
+                                            quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet.
+                                        </p>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+                                            tempor
+                                            incididunt ut labore et dolore magna aliqua.
+                                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                            aliquip ex ea commodo consequat.
+                                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                                            eu
+                                            fugiat nulla pariatur.
+                                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                                            deserunt mollit anim id est laborum.
+                                        </p>
+                                        <p>
+                                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                            doloremque laudantium, totam rem aperiam,
+                                            eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+                                            dicta sunt explicabo.
+                                            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+                                            sed
+                                            quia consequuntur magni dolores eos
+                                            qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem
+                                            ipsum quia dolor sit amet, consectetur,
+                                            adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et
+                                            dolore magnam aliquam quaerat voluptatem.
+                                        </p>
+                                        <p>
+                                            At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+                                            praesentium voluptatum deleniti atque corrupti
+                                            quos dolores et quas molestias excepturi sint occaecati cupiditate non
+                                            provident, similique sunt in culpa.
+                                            Qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et
+                                            harum
+                                            quidem rerum facilis est et expedita distinctio.
+                                            Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit
+                                            quo
+                                            minus id quod maxime placeat facere possimus.
+                                            Omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem
+                                            quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet.
+                                        </p>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+                                            tempor
+                                            incididunt ut labore et dolore magna aliqua.
+                                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                            aliquip ex ea commodo consequat.
+                                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                                            eu
+                                            fugiat nulla pariatur.
+                                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                                            deserunt mollit anim id est laborum.
+                                        </p>
+                                        <p>
+                                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                            doloremque laudantium, totam rem aperiam,
+                                            eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+                                            dicta sunt explicabo.
+                                            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+                                            sed
+                                            quia consequuntur magni dolores eos
+                                            qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem
+                                            ipsum quia dolor sit amet, consectetur,
+                                            adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et
+                                            dolore magnam aliquam quaerat voluptatem.
+                                        </p>
+                                        <p>
+                                            At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+                                            praesentium voluptatum deleniti atque corrupti
+                                            quos dolores et quas molestias excepturi sint occaecati cupiditate non
+                                            provident, similique sunt in culpa.
+                                            Qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et
+                                            harum
+                                            quidem rerum facilis est et expedita distinctio.
+                                            Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit
+                                            quo
+                                            minus id quod maxime placeat facere possimus.
+                                            Omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem
+                                            quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet.
+                                        </p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Cerrar</button>
+                                        <button type="button" class="btn btn-primary">Guardar Cambios</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- Tarjeta 5 -->
-                    <div class="col-md-2 mt-3">
-                        <h2 class="info">Vertically centered</h2>
-                        <!-- Vertically centered modal -->
-                        <div class="modal-dialog modal-dialog-centered">
-                            ...
-                        </div>
 
-                        <!-- Vertically centered scrollable modal -->
-                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                            ...
+
+                    <!-- Tarjeta 5: Modal sin Desplazamiento Vertical -->
+                    <div class="col-md-6 my-3">
+                        <h2>5- Modal sin Desplazamiento</h2>
+                        <!-- Botón para lanzar el modal -->
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#nonScrollableModal">
+                            Abrir Modal sin Scroll
+                        </button>
+
+                        <!-- Modal sin Desplazamiento Vertical -->
+                        <div class="modal fade" id="nonScrollableModal" tabindex="-1"
+                            aria-labelledby="nonScrollableModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="nonScrollableModalLabel">Título del Modal sin Scroll
+                                        </h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <!-- Contenido largo -->
+                                        <p>
+                                            Este es un ejemplo de un modal sin desplazamiento vertical. El contenido es
+                                            lo
+                                            suficientemente corto como para ajustarse dentro del modal sin necesidad de
+                                            scroll.
+                                        </p>
+                                        <p>
+                                            Este es un ejemplo de un modal sin desplazamiento vertical. El contenido es
+                                            lo
+                                            suficientemente corto como para ajustarse dentro del modal sin necesidad de
+                                            scroll.
+                                        </p>
+                                        <p>
+                                            Este es un ejemplo de un modal sin desplazamiento vertical. El contenido es
+                                            lo
+                                            suficientemente corto como para ajustarse dentro del modal sin necesidad de
+                                            scroll.
+                                        </p>
+                                        <p>
+                                            Este es un ejemplo de un modal sin desplazamiento vertical. El contenido es
+                                            lo
+                                            suficientemente corto como para ajustarse dentro del modal sin necesidad de
+                                            scroll.
+                                        </p>
+                                        <p>
+                                            Este es un ejemplo de un modal sin desplazamiento vertical. El contenido es
+                                            lo
+                                            suficientemente corto como para ajustarse dentro del modal sin necesidad de
+                                            scroll.
+                                        </p>
+                                        <p>
+                                            Este es un ejemplo de un modal sin desplazamiento vertical. El contenido es
+                                            lo
+                                            suficientemente corto como para ajustarse dentro del modal sin necesidad de
+                                            scroll.
+                                        </p>
+                                        <p>
+                                            Este es un ejemplo de un modal sin desplazamiento vertical. El contenido es
+                                            lo
+                                            suficientemente corto como para ajustarse dentro del modal sin necesidad de
+                                            scroll.
+                                        </p>
+                                        <p>
+                                            Este es un ejemplo de un modal sin desplazamiento vertical. El contenido es
+                                            lo
+                                            suficientemente corto como para ajustarse dentro del modal sin necesidad de
+                                            scroll.
+                                        </p>
+                                        <p>
+                                            Este es un ejemplo de un modal sin desplazamiento vertical. El contenido es
+                                            lo
+                                            suficientemente corto como para ajustarse dentro del modal sin necesidad de
+                                            scroll.
+                                        </p>
+                                        <p>
+                                            Este es un ejemplo de un modal sin desplazamiento vertical. El contenido es
+                                            lo
+                                            suficientemente corto como para ajustarse dentro del modal sin necesidad de
+                                            scroll.
+                                        </p>
+                                        <p>
+                                            Este es un ejemplo de un modal sin desplazamiento vertical. El contenido es
+                                            lo
+                                            suficientemente corto como para ajustarse dentro del modal sin necesidad de
+                                            scroll.
+                                        </p>
+                                        <p>
+                                            Este es un ejemplo de un modal sin desplazamiento vertical. El contenido es
+                                            lo
+                                            suficientemente corto como para ajustarse dentro del modal sin necesidad de
+                                            scroll.
+                                        </p>
+                                        <p>
+                                            Este es un ejemplo de un modal sin desplazamiento vertical. El contenido es
+                                            lo
+                                            suficientemente corto como para ajustarse dentro del modal sin necesidad de
+                                            scroll.
+                                        </p>
+                                        <p>
+                                            Este es un ejemplo de un modal sin desplazamiento vertical. El contenido es
+                                            lo
+                                            suficientemente corto como para ajustarse dentro del modal sin necesidad de
+                                            scroll.
+                                        </p>
+                                        <p>
+                                            Este es un ejemplo de un modal sin desplazamiento vertical. El contenido es
+                                            lo
+                                            suficientemente corto como para ajustarse dentro del modal sin necesidad de
+                                            scroll.
+                                        </p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Cerrar</button>
+                                        <button type="button" class="btn btn-primary">Guardar Cambios</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <!-- Tarjeta 6 -->
+
+                </div>
+
+
+
+                <!-- INICIO CENTRADO VERTICALMENTE -->
+                <div class="row bg-secondary my-3">
+
+                    <!-- Tarjeta 6: CENTRADO VERTICALMENTE Modal con Desplazamiento Vertical -->
+                    <div class="col-md-6 my-3">
+                        <h2>6- Modal con Centrado vertical</h2>
+                        <!-- Botón para lanzar el modal -->
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#scrollableModal_centrado_vertical">
+                            Abrir Centrado Vertical con Scroll
+                        </button>
+
+                        <!-- Modal con Desplazamiento Vertical -->
+                        <div class="modal fade" id="scrollableModal_centrado_vertical" tabindex="-1"
+                            aria-labelledby="scrollableModal_centrado_verticalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="scrollableModal_centrado_verticalLabel">Título del
+                                            Modal con Scroll
+                                        </h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <!-- Contenido largo -->
+
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+                                            tempor
+                                            incididunt ut labore et dolore magna aliqua.
+                                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                            aliquip ex ea commodo consequat.
+                                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                                            eu
+                                            fugiat nulla pariatur.
+                                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                                            deserunt mollit anim id est laborum.
+                                        </p>
+                                        <p>
+                                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                            doloremque laudantium, totam rem aperiam,
+                                            eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+                                            dicta sunt explicabo.
+                                            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+                                            sed
+                                            quia consequuntur magni dolores eos
+                                            qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem
+                                            ipsum quia dolor sit amet, consectetur,
+                                            adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et
+                                            dolore magnam aliquam quaerat voluptatem.
+                                        </p>
+                                        <p>
+                                            At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+                                            praesentium voluptatum deleniti atque corrupti
+                                            quos dolores et quas molestias excepturi sint occaecati cupiditate non
+                                            provident, similique sunt in culpa.
+                                            Qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et
+                                            harum
+                                            quidem rerum facilis est et expedita distinctio.
+                                            Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit
+                                            quo
+                                            minus id quod maxime placeat facere possimus.
+                                            Omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem
+                                            quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet.
+                                        </p>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+                                            tempor
+                                            incididunt ut labore et dolore magna aliqua.
+                                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                            aliquip ex ea commodo consequat.
+                                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                                            eu
+                                            fugiat nulla pariatur.
+                                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                                            deserunt mollit anim id est laborum.
+                                        </p>
+                                        <p>
+                                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                            doloremque laudantium, totam rem aperiam,
+                                            eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+                                            dicta sunt explicabo.
+                                            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+                                            sed
+                                            quia consequuntur magni dolores eos
+                                            qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem
+                                            ipsum quia dolor sit amet, consectetur,
+                                            adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et
+                                            dolore magnam aliquam quaerat voluptatem.
+                                        </p>
+                                        <p>
+                                            At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+                                            praesentium voluptatum deleniti atque corrupti
+                                            quos dolores et quas molestias excepturi sint occaecati cupiditate non
+                                            provident, similique sunt in culpa.
+                                            Qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et
+                                            harum
+                                            quidem rerum facilis est et expedita distinctio.
+                                            Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit
+                                            quo
+                                            minus id quod maxime placeat facere possimus.
+                                            Omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem
+                                            quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet.
+                                        </p>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+                                            tempor
+                                            incididunt ut labore et dolore magna aliqua.
+                                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                            aliquip ex ea commodo consequat.
+                                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                                            eu
+                                            fugiat nulla pariatur.
+                                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                                            deserunt mollit anim id est laborum.
+                                        </p>
+                                        <p>
+                                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                            doloremque laudantium, totam rem aperiam,
+                                            eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+                                            dicta sunt explicabo.
+                                            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+                                            sed
+                                            quia consequuntur magni dolores eos
+                                            qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem
+                                            ipsum quia dolor sit amet, consectetur,
+                                            adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et
+                                            dolore magnam aliquam quaerat voluptatem.
+                                        </p>
+                                        <p>
+                                            At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+                                            praesentium voluptatum deleniti atque corrupti
+                                            quos dolores et quas molestias excepturi sint occaecati cupiditate non
+                                            provident, similique sunt in culpa.
+                                            Qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et
+                                            harum
+                                            quidem rerum facilis est et expedita distinctio.
+                                            Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit
+                                            quo
+                                            minus id quod maxime placeat facere possimus.
+                                            Omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem
+                                            quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet.
+                                        </p>
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Cerrar</button>
+                                        <button type="button" class="btn btn-primary">Guardar Cambios</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Tarjeta 7: CENTRADO VERTICALMENTE  Modal sin Desplazamiento Vertical -->
+                    <div class="col-md-6 my-3">
+                        <h2>7- Centrado Vertical Modal sin Desplazamiento</h2>
+                        <!-- Botón para lanzar el modal -->
+                        <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                            data-bs-target="#nonScrollableModal_centrado_vertical">
+                            Abrir Centrado Vertical sin Scroll
+                        </button>
+
+                        <!-- CENTRADO VERTICALMENTE Modal sin Desplazamiento Vertical -->
+                        <div class="modal fade" id="nonScrollableModal_centrado_vertical" tabindex="-1"
+                            aria-labelledby="nonScrollableModal_centrado_verticalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="nonScrollableModal_centrado_verticalLabel">Centrado
+                                            Vertical Título del Modal sin Scroll
+                                        </h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <!-- Contenido largo -->
+                                        <p>
+                                            Este es un ejemplo de un modal sin desplazamiento vertical. El contenido es
+                                            lo
+                                            suficientemente corto como para ajustarse dentro del modal sin necesidad de
+                                            scroll.
+                                        </p>
+                                        <p>
+                                            Este es un ejemplo de un modal sin desplazamiento vertical. El contenido es
+                                            lo
+                                            suficientemente corto como para ajustarse dentro del modal sin necesidad de
+                                            scroll.
+                                        </p>
+                                        <p>
+                                            Este es un ejemplo de un modal sin desplazamiento vertical. El contenido es
+                                            lo
+                                            suficientemente corto como para ajustarse dentro del modal sin necesidad de
+                                            scroll.
+                                        </p>
+                                        <p>
+                                            Este es un ejemplo de un modal sin desplazamiento vertical. El contenido es
+                                            lo
+                                            suficientemente corto como para ajustarse dentro del modal sin necesidad de
+                                            scroll.
+                                        </p>
+                                        <p>
+                                            Este es un ejemplo de un modal sin desplazamiento vertical. El contenido es
+                                            lo
+                                            suficientemente corto como para ajustarse dentro del modal sin necesidad de
+                                            scroll.
+                                        </p>
+                                        <p>
+                                            Este es un ejemplo de un modal sin desplazamiento vertical. El contenido es
+                                            lo
+                                            suficientemente corto como para ajustarse dentro del modal sin necesidad de
+                                            scroll.
+                                        </p>
+                                        <p>
+                                            Este es un ejemplo de un modal sin desplazamiento vertical. El contenido es
+                                            lo
+                                            suficientemente corto como para ajustarse dentro del modal sin necesidad de
+                                            scroll.
+                                        </p>
+                                        <p>
+                                            Este es un ejemplo de un modal sin desplazamiento vertical. El contenido es
+                                            lo
+                                            suficientemente corto como para ajustarse dentro del modal sin necesidad de
+                                            scroll.
+                                        </p>
+                                        <p>
+                                            Este es un ejemplo de un modal sin desplazamiento vertical. El contenido es
+                                            lo
+                                            suficientemente corto como para ajustarse dentro del modal sin necesidad de
+                                            scroll.
+                                        </p>
+                                        <p>
+                                            Este es un ejemplo de un modal sin desplazamiento vertical. El contenido es
+                                            lo
+                                            suficientemente corto como para ajustarse dentro del modal sin necesidad de
+                                            scroll.
+                                        </p>
+                                        <p>
+                                            Este es un ejemplo de un modal sin desplazamiento vertical. El contenido es
+                                            lo
+                                            suficientemente corto como para ajustarse dentro del modal sin necesidad de
+                                            scroll.
+                                        </p>
+                                        <p>
+                                            Este es un ejemplo de un modal sin desplazamiento vertical. El contenido es
+                                            lo
+                                            suficientemente corto como para ajustarse dentro del modal sin necesidad de
+                                            scroll.
+                                        </p>
+                                        <p>
+                                            Este es un ejemplo de un modal sin desplazamiento vertical. El contenido es
+                                            lo
+                                            suficientemente corto como para ajustarse dentro del modal sin necesidad de
+                                            scroll.
+                                        </p>
+                                        <p>
+                                            Este es un ejemplo de un modal sin desplazamiento vertical. El contenido es
+                                            lo
+                                            suficientemente corto como para ajustarse dentro del modal sin necesidad de
+                                            scroll.
+                                        </p>
+                                        <p>
+                                            Este es un ejemplo de un modal sin desplazamiento vertical. El contenido es
+                                            lo
+                                            suficientemente corto como para ajustarse dentro del modal sin necesidad de
+                                            scroll.
+                                        </p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar
+                                            Centrado vertical</button>
+                                        <button type="button" class="btn btn-primary">Guardar Cambios Centrado
+                                            vertical</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!-- FIN CENTRADO VERTICALMENTE -->
+                <!-- 8 INICIO 8 Tooltips and popovers -->
+
+
+                <div class="row">
+                    <h2 class="bg-success">8 Tooltips and popovers</h2>
                     <div class="col-md-2 mt-3">
-                        <h2 class="dark">Tooltips and popovers</h2>
                         <div class="modal-body">
                             <h2 class="fs-5">Popover in a modal</h2>
-                            <p>This <button class="btn btn-secondary" data-bs-toggle="popover" title="Popover title"
-                                    data-bs-content="Popover body content is set in this attribute.">button</button>
-                                triggers a popover on click.</p>
+                            <p>Este <button class="btn btn-secondary" data-bs-toggle="popover" title="Popover title"
+                                    data-bs-content="Popover body content is set in this attribute.">BOTÓN</button>
+                                activa una ventana emergente al hacer clic.</p>
                             <hr>
-                            <h2 class="fs-5">Tooltips in a modal</h2>
-                            <p><a href="#" data-bs-toggle="tooltip" title="Tooltip">This link</a> and <a href="#"
-                                    data-bs-toggle="tooltip" title="Tooltip">that link</a> have tooltips on hover.</p>
+                            <h2 class="fs-5">Información sobre herramientas en un modal</h2>
+                            <p><a href="https://victorroblesweb.es/" target="_blank" data-bs-toggle="tooltip"
+                                    title="Tooltip">Este enlace</a> y <a href="https://victorroblesweb.es/"
+                                    target="_blank" data-bs-toggle="tooltip" title="Tooltip">este link</a> tiene
+                                información sobre
+                                herramientas al pasar el cursor.</p>
                         </div>
                     </div>
-
                 </div>
-            </div>
 
+                <!-- 8 FINAL 8 Tooltips and popovers -->
 
-
-            <div class="row">
-                <h2 class="bg-success">Usando grid</h2>
-                <div class="col-md-2 mt-3">
-                    <div class="modal-body">
-                        <div class="container-fluid">
-                            <div class="row">
-                                <div class="col-md-4">.col-md-4</div>
-                                <div class="col-md-4 ms-auto">.col-md-4 .ms-auto</div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-3 ms-auto">.col-md-3 .ms-auto</div>
-                                <div class="col-md-2 ms-auto">.col-md-2 .ms-auto</div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6 ms-auto">.col-md-6 .ms-auto</div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-9">
-                                    Level 1: .col-sm-9
-                                    <div class="row">
-                                        <div class="col-8 col-sm-6">
-                                            Level 2: .col-8 .col-sm-6
+                <!-- 9-INICIO USANDO GRID -->
+                <div class="row ">
+                    <div class="col-md-6 my-3">
+                        <h2>9- Usando Grid</h2>
+                        <!-- Botón para lanzar el modal -->
+                        <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                            data-bs-target="#using_grid">
+                            Abrir Usando Grid
+                        </button>
+                        <!-- USANDO GRID -->
+                        <div class="modal fade" id="using_grid" tabindex="-1" aria-labelledby="using_gridLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="using_gridLabel">Usando Grid dentro de la tarjeta
+                                        </h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="container-fluid">
+                                            <div class="row ">
+                                                <div class="col-md-4 pt-3 pb-5 "
+                                                    style="background-color: #EAE0FE; border: 1px solid #b997fc;">
+                                                    .col-md-4</div>
+                                                <div class="col-md-4 ms-auto "
+                                                    style="background-color: #EAE0FE; border: 1px solid #b997fc;">
+                                                    .col-md-4 .ms-auto</div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-3 ms-auto mt-3 pt-3 pb-2 "
+                                                    style="background-color: #EAE0FE; border: 1px solid #b997fc;">
+                                                    .col-md-3 .ms-auto</div>
+                                                <div class="col-md-2 ms-auto mt-3 pt-3 pb-2 "
+                                                    style="background-color: #EAE0FE; border: 1px solid #b997fc;">
+                                                    .col-md-2 .ms-auto</div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6 ms-auto mt-3 pt-3 pb-2 "
+                                                    style="background-color: #EAE0FE; border: 1px solid #b997fc;">
+                                                    .col-md-6 .ms-auto</div>
+                                            </div>
+                                            <div class="row ">
+                                                <div class="col-sm-9  mt-3 pt-2 pb-2"
+                                                    style="background-color: #EAE0FE; border: 1px solid #b997fc;">
+                                                    Level 1: .col-sm-9
+                                                    <div class="row">
+                                                        <div class="col-8 col-sm-6 "
+                                                            style="background-color:  #D8C6FD; border: 1px solid #B997FC;">
+                                                            Level 2: .col-8 .col-sm-6
+                                                        </div>
+                                                        <div class="col-4 col-sm-6 "
+                                                            style="background-color:  #D8C6FD; border: 1px solid #b997fc;">
+                                                            Level 2: .col-4 .col-sm-6
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="col-4 col-sm-6">
-                                            Level 2: .col-4 .col-sm-6
-                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar
+                                            Grid</button>
+                                        <button type="button" class="btn btn-primary">Grid Cambios </button>
                                     </div>
                                 </div>
                             </div>
@@ -442,181 +1015,130 @@ Además, los íconos predeterminados de Bootstrap están definidos como imágene
                     </div>
                 </div>
 
-            </div>
+                <!-- FINAL  USANDO GRID -->
+                <!-- INICIO 10  Varying modal content/Contenido modal variable -->
+                 
 
 
-
-
-
-            <div class="row">
-                <h2 class="bg-success">Tooltips and popovers</h2>
-                <div class="col-md-2 mt-3">
-                    <div class="modal-body">
-                        <h2 class="fs-5">Popover in a modal</h2>
-                        <p>Este <button class="btn btn-secondary" data-bs-toggle="popover" title="Popover title"
-                                data-bs-content="Popover body content is set in this attribute.">BOTÓN</button>
-                            activa una ventana emergente al hacer clic.</p>
-                        <hr>
-                        <h2 class="fs-5">Información sobre herramientas en un modal</h2>
-                        <p><a href="https://victorroblesweb.es/" target="_blank" data-bs-toggle="tooltip"
-                                title="Tooltip">Este enlace</a> y <a href="https://victorroblesweb.es/" target="_blank"
-                                data-bs-toggle="tooltip" title="Tooltip">este link</a> tiene información sobre
-                            herramientas al pasar el cursor.</p>
-                    </div>
-                </div>
-            </div>
-
-
-
-
-
-
-
-
-            <div class="row">
-                <h2 class="bg-success">Using the grid</h2>
-                <div class="col-md-2 mt-3">
-                    <div class="modal-body">
-                        <div class="container-fluid">
-                            <div class="row">
-                                <div class="col-md-4 bg-primary">.col-md-4</div>
-                                <div class="col-md-4 ms-auto bg-secondary">.col-md-4 .ms-auto</div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-3 ms-auto bg-warning">.col-md-3 .ms-auto</div>
-                                <div class="col-md-2 ms-auto bg-success p-3">.col-md-2 .ms-auto</div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6 ms-auto bg-info">.col-md-6 .ms-auto</div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-9 bg-dark text-white">
-                                    Level 1: .col-sm-9
-                                    <div class="row">
-                                        <div class="col-8 col-sm-6 bg-light">
-                                            Level 2: .col-8 .col-sm-6
-                                        </div>
-                                        <div class="col-4 col-sm-6 bg-danger">
-                                            Level 2: .col-4 .col-sm-6
-                                        </div>
+                <div class="row">
+                    <h2 class="bg-success">Varying modal content</h2>
+                    <div class="col-md-2 mt-3">
+                        <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal" data-bs-whatever="@mdo">Open modal for
+                            @mdo</button>
+                        <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal" data-bs-whatever="@fat">Open modal for
+                            @fat</button>
+                        <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Open
+                            modal for
+                            @getbootstrap</button>
+                        <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">New
+                                            message</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body ">
+                                        <form>
+                                            <div class="mb-3 ">
+                                                <label for="recipient-name" class="col-form-label">Recipient:</label>
+                                                <input type="text" class="form-control" id="recipient-name">
+                                            </div>
+                                            <div class="mb-3 ">
+                                                <label for="message-text" class="col-form-label">Message:</label>
+                                                <textarea class="form-control" id="message-text"></textarea>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer ">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Send
+                                            message</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+
+
+
+                <!-- FINAL 10 Varying modal content/ Contenido modal variable -->
 
 
 
 
-            <div class="row">
-                <h2 class="bg-success">Varying modal content</h2>
-                <div class="col-md-2 mt-3">
-                    <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal"
-                        data-bs-target="#exampleModal" data-bs-whatever="@mdo">Open modal for @mdo</button>
-                    <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal"
-                        data-bs-target="#exampleModal" data-bs-whatever="@fat">Open modal for @fat</button>
-                    <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal"
-                        data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Open modal for
-                        @getbootstrap</button>
 
-                    <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                        aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="exampleModalLabel">New message</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body ">
-                                    <form>
-                                        <div class="mb-3 ">
-                                            <label for="recipient-name" class="col-form-label">Recipient:</label>
-                                            <input type="text" class="form-control" id="recipient-name">
-                                        </div>
-                                        <div class="mb-3 ">
-                                            <label for="message-text" class="col-form-label">Message:</label>
-                                            <textarea class="form-control" id="message-text"></textarea>
-                                        </div>
-                                    </form>
-                                </div>
-                                <div class="modal-footer ">
-                                    <button type="button" class="btn btn-secondary"
-                                        data-bs-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Send message</button>
+
+
+                <div class="row">
+                    <h2 class="bg-info">Toggle between modals</h2>
+                    <div class="col-md-2 mt-3">
+                        <div class="modal fade" id="exampleModalToggle" aria-hidden="true"
+                            aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalToggleLabel">
+                                            Modal 1</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Show a second modal and hide this one with the button below.
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button class="btn btn-primary" data-bs-target="#exampleModalToggle2"
+                                            data-bs-toggle="modal">Open second modal</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <div class="modal fade" id="exampleModalToggle2" aria-hidden="true"
+                            aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">
+                                            Modal 2</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Hide this modal and show the first with the button below.
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button class="btn btn-primary" data-bs-target="#exampleModalToggle"
+                                            data-bs-toggle="modal">Back to first</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Open
+                            first modal</button>
                     </div>
                 </div>
-            </div>
 
-
-
-
-            <div class="row">
-                <h2 class="bg-info">Toggle between modals</h2>
-                <div class="col-md-2 mt-3">
-                    <div class="modal fade" id="exampleModalToggle" aria-hidden="true"
-                        aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-                        <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Modal 1</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    Show a second modal and hide this one with the button below.
-                                </div>
-                                <div class="modal-footer">
-                                    <button class="btn btn-primary" data-bs-target="#exampleModalToggle2"
-                                        data-bs-toggle="modal">Open second modal</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal fade" id="exampleModalToggle2" aria-hidden="true"
-                        aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
-                        <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Modal 2</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    Hide this modal and show the first with the button below.
-                                </div>
-                                <div class="modal-footer">
-                                    <button class="btn btn-primary" data-bs-target="#exampleModalToggle"
-                                        data-bs-toggle="modal">Back to first</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Open
-                        first modal</button>
-                </div>
 
             </div>
-
-
         </div>
-    </div>
 
-    <script type="text/javascript" src="jquery/jquery-3.7.1.min.js"></script>
-    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $("#slider_master").carousel({
-                interval: 2000
+        <script type="text/javascript" src="jquery/jquery-3.7.1.min.js"></script>
+        <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $("#slider_master").carousel({
+                    interval: 2000
+                });
             });
-        });
-    </script>
-    <!-- <script>
+        </script>
+        <!-- <script>
         $(document).ready(function () {
             alert("hola")
             });
