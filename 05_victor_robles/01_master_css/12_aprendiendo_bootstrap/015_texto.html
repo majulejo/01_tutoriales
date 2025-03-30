@@ -15,6 +15,7 @@
 <body>
     <h1 class="colores bg-warning text-center display-1  ">015_textos</h1>
    <!-- primary secondary success danger warning info light dark -->
+<h2 class="text-warning text-center"> <a href="https://getbootstrap.com/docs/5.3/utilities/text/" target="_blank" class="text-danger">Probando enlace en h2</a></h2>
 <!-- inicio enlaces centrados -->
 <a href="https://getbootstrap.com/docs/5.3/utilities/text/" target="_blank" >Textos</a>
 <a href="https://getbootstrap.com/docs/5.3/utilities/text/" target="_blank" class="d-block mx-auto" style="width: 200px;">Textos</a>
@@ -61,26 +62,47 @@
 
     <h2 class="text-center text-uppercase">BOOTSTRAP EJEMPLOS alinear texto</h2>
     <h3 class="text-center"><strong>text-center</strong> Texto alineado al centro </h3>
-    <p><span class="text-danger text-start"><strong>text-start</strong> </span> texto alineado a la izquierda o start en todos los tamaños del viewport  </p>
-    <p><span class="text-danger text-center"><strong>text-center</strong></span> Texto alineado al centro en todos los tamaños del viewport</p>
-    <p><span class="text-danger text-end"><strong>text-end</strong></span>  texto alineado a la derecha en todos los tamaños del viewport</p>
-    <p><span class="text-danger text-sm-end"><strong>SM </strong></span>Texto alineado final en ventanas gráficas de tamaño pequeño (SM) o más anchas.</p>
-    <p><span class="text-danger text-md-end"><strong>MD </strong></span>Texto alineado final en ventanas gráficas de tamaño MD (mediano) o más ancho.</p>
-    <p><span class="text-danger text-lg-end"><strong>LG </strong></span>Texto alineado final en ventanas gráficas de tamaño LG (grande) o más ancho.</p>
-    <p><span class="text-danger text-xl-end"><strong>XL </strong></span>Texto alineado final en ventanas gráficas de tamaño XL (extra grande) o más ancho.</p>
-    <p><span class="text-danger text-xxl-end"><strong>XXL </strong></span>Texto alineado final en ventanas gráficas de tamaño XXL (extra extra grande) o más ancho.</p>
+    <p class="text-start"><span class="text-danger"><strong>text-start</strong> </span> texto alineado a la izquierda o start en todos los tamaños del viewport  </p>
+    <p class="text-center"><span class="text-danger text-center"><strong>text-center</strong></span> Texto alineado al centro en todos los tamaños del viewport</p>
+    <p class="text-end"><span class="text-danger"><strong>text-end</strong></span>  texto alineado a la derecha en todos los tamaños del viewport</p>
+    <p class="text-sm-end"><span class="text-danger "><strong>SM </strong></span>Texto alineado final en ventanas gráficas de tamaño pequeño (SM) o más anchas.</p>
+    <p class="text-md-end"><span class="text-danger"><strong>MD </strong></span>Texto alineado final en ventanas gráficas de tamaño MD (mediano) o más ancho.</p>
+    <p class="text-lg-end"><span class="text-danger"><strong>LG </strong></span>Texto alineado final en ventanas gráficas de tamaño LG (grande) o más ancho.</p>
+    <p class="text-xl-end"><span class="text-danger"><strong>XL </strong></span>Texto alineado final en ventanas gráficas de tamaño XL (extra grande) o más ancho.</p>
+    <p class="text-xxl-end"><span class="text-danger"><strong>XXL </strong></span>Texto alineado final en ventanas gráficas de tamaño XXL (extra extra grande) o más ancho.</p>
+    <div class="row border rounded m-3 p-3 " style="background-color:lightblue;">
+        <p>Tenga en cuenta que no ofrecemos clases de utilidad para texto justificado. Si bien el texto justificado puede ser más atractivo estéticamente, hace que el espaciado entre palabras sea más aleatorio y, por lo tanto, más difícil de leer.</p>
+    </div>
     <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
     <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
     <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
     
     <!-- Text wrapping and overflow /Ajuste y desbordamiento de texto -->
     <h3 class="text-info">Text wrapping and overflow /Ajuste y desbordamiento de texto</h3>
-    <div class="badge text-bg-primary text-wrap mb-3" style="width: 6rem;">
-        This text should wrap.
+        <p class="my-3">Envuelva el texto con una clase <span class=" text-danger">text-wrap</span>.</p>
+    <div class="row border rounded m-3 p-3 bg-">
+
+	<div class="badge text-bg-primary text-wrap" style="width: 6rem;">
+  This text should wrap.
+</div>
+	<hr>
+    <div class="badge text-bg-primary text-wrap" style="width: 6rem;">
+  This text should wrap.
+</div>
+	    </div>
+		<p class="my-3">Evitar que el texto se ajuste a una clase. <span class=" text-danger">.text-nowrap</span>.</p>
+    <div class="row border rounded m-3 p-3 bg-">
+
+	<div class="badge text-bg-primary text-wrap mb-3" style="width: 6rem;">
+        Este texto debe desbordar al padre.
+
     </div>
+	<hr>
     <div class="text-nowrap bg-body-secondary border my-3" style="width: 8rem;">
         This text should overflow the parent.
     </div>
+	    </div>
+
     <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
     <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
     <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
