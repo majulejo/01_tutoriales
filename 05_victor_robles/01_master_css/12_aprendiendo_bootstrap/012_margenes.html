@@ -19,8 +19,6 @@
     <p class="fs-3 p-5">Bootstrap incluye una amplia gama de clases de utilidad de márgenes, relleno y espacios con
         capacidad de respuesta abreviada para modificar la apariencia de un elemento.</p>
     <div class="d-flex">
-
-
         <div class="m-1 mt-5 ml-5 mr-5 text-white bg-danger border border-primary rounded-top p-3 mb-3">
             Borde superior redondeado (azul).
         </div>
@@ -52,13 +50,13 @@
     </div>
 
     <hr>
+    <!-- ultima caja creada -->
     <div class="mx-auto m-2 p-3 text-light bg-success caja w-25 border border-dark rounded-start">
         Última caja creada.
     </div> <!--  mx-auto  hace que la caja esté centrada en la página -->
     <hr>
 
     <!-- Centered element -->
-
     <div class="mx-auto p-2 bg-warning border border-dark" style="width: 200px;">
         Centered element
     </div>
@@ -247,7 +245,6 @@
         </h5>
         <div class="container border bg-primary m-2 p-2 rounded">
             <div class="row">
-
                 <div class="bg-light p-3 col-6 border rounded">Grid item 1</div>
                 <div class="bg-light p-3 col-6 border rounded">Grid item 2</div>
                 <div class="bg-light p-3 col-6 border rounded">Grid item 3</div>
@@ -259,7 +256,7 @@
     <h5 class="bg-warning text-center">Estructura 2 (usando CSS Grid correctamente):
 
     </h5>
-
+<div class="container">
     <div class="container border bg-light m-2 p-2 rounded">
         <div class="d-grid gap-2" style="grid-template-columns: 1fr 1fr;">
             <div class="bg-info p-2  border">Grid item 1</div>
@@ -390,8 +387,7 @@
             &lt;div style="display: flex; flex-wrap: wrap;"&gt;<br>
         </p>
         <div style="display: flex; flex-wrap: wrap;">
-            <div
-                style="width: 50%; padding: 1rem; border: 1px solid #ccc; border-radius: 0.25rem; background-color: #f8f9fa;">
+            <div style="width: 50%; padding: 1rem; border: 1px solid #ccc; border-radius: 0.25rem; background-color: #f8f9fa;">
                 <h5>Flexbox CSS - Caja 1</h5>
                 <p>&lt;div
                     style="width: 50%;<br> padding: 1rem;<br> border: 1px solid #ccc; <br> border-radius:
@@ -402,8 +398,7 @@
                     &lt;/div&gt;<br> <br>
                 </p>
             </div>
-            <div
-                style="width: 50%; padding: 1rem; border: 1px solid #ccc; border-radius: 0.25rem; background-color: #f8f9fa;">
+            <div style="width: 50%; padding: 1rem; border: 1px solid #ccc; border-radius: 0.25rem; background-color: #f8f9fa;">
                 <h5>Flexbox CSS - Caja 2</h5>
                 <p>&lt;div
                     style="width: 50%;<br> padding: 1rem;<br> border: 1px solid #ccc; <br> border-radius:
@@ -414,8 +409,7 @@
                     &lt;/div&gt;<br>
                 </p>
             </div>
-            <div
-                style="width: 50%; padding: 1rem; border: 1px solid #ccc; border-radius: 0.25rem; background-color: #f8f9fa;">
+            <div style="width: 50%; padding: 1rem; border: 1px solid #ccc; border-radius: 0.25rem; background-color: #f8f9fa;">
                 <h5>Flexbox CSS - Caja 3</h5>
                 <p>
                     &lt;div
@@ -427,8 +421,7 @@
                     &lt;/div&gt;<br>
                 </p>
             </div>
-            <div
-                style="width: 50%; padding: 1rem; border: 1px solid #ccc; border-radius: 0.25rem; background-color: #f8f9fa;">
+            <div style="width: 50%; padding: 1rem; border: 1px solid #ccc; border-radius: 0.25rem; background-color: #f8f9fa;">
                 <h5>Flexbox CSS - Caja 4</h5>
                 <p> &lt;div
                     style="width: 50%;<br> padding: 1rem;<br> border: 1px solid #ccc;<br> border-radius:
@@ -562,29 +555,25 @@
         <h3 class="text-center">3. display: flex con estilos CSS personalizados</h3>
         <code>&lt;div style="display: flex; flex-wrap: wrap;"&gt;</code>
         <div style="display: flex; flex-wrap: wrap;">
-            <div
-                style="width: 50%; padding: 1rem; border: 1px solid #ccc; border-radius: 0.25rem; background-color: #f8f9fa;">
+            <div style="width: 50%; padding: 1rem; border: 1px solid #ccc; border-radius: 0.25rem; background-color: #f8f9fa;">
                 <h5>Flexbox CSS - Caja 1</h5>
                 <code>&lt;div style="..."&gt;</code>
                 <p>Contenido de la Caja 1.</p>
                 <code>&lt;/div&gt;</code>
             </div>
-            <div
-                style="width: 50%; padding: 1rem; border: 1px solid #ccc; border-radius: 0.25rem; background-color: #f8f9fa;">
+            <div style="width: 50%; padding: 1rem; border: 1px solid #ccc; border-radius: 0.25rem; background-color: #f8f9fa;">
                 <h5>Flexbox CSS - Caja 2</h5>
                 <code>&lt;div style="..."&gt;</code>
                 <p>Contenido de la Caja 2.</p>
                 <code>&lt;/div&gt;</code>
             </div>
-            <div
-                style="width: 50%; padding: 1rem; border: 1px solid #ccc; border-radius: 0.25rem; background-color: #f8f9fa;">
+            <div style="width: 50%; padding: 1rem; border: 1px solid #ccc; border-radius: 0.25rem; background-color: #f8f9fa;">
                 <h5>Flexbox CSS - Caja 3</h5>
                 <code>&lt;div style="..."&gt;</code>
                 <p>Contenido de la Caja 3.</p>
                 <code>&lt;/div&gt;</code>
             </div>
-            <div
-                style="width: 50%; padding: 1rem; border: 1px solid #ccc; border-radius: 0.25rem; background-color: #f8f9fa;">
+            <div style="width: 50%; padding: 1rem; border: 1px solid #ccc; border-radius: 0.25rem; background-color: #f8f9fa;">
                 <h5>Flexbox CSS - Caja 4</h5>
                 <code>&lt;div style="..."&gt;</code>
                 <p>Contenido de la Caja 4.</p>
@@ -624,28 +613,208 @@
             </div>
         </div>
     </div>
-<p class="mx-3">La compatibilidad incluye opciones adaptables para todos los puntos de interrupción de la cuadrícula de Bootstrap, así como seis tamaños del <span class="text-danger">$spacers</span> mapa <span class="text-danger">( 0– 5) </span>. No hay ninguna <span class="text-danger">.gap-auto</span> clase de utilidad, ya que es prácticamente igual que <span class="text-danger"> .gap-0</span>.</p>
+    <p class="mx-3">La compatibilidad incluye opciones adaptables para todos los puntos de interrupción de la cuadrícula de Bootstrap, así como seis tamaños del <span class="text-danger">$spacers</span> mapa <span class="text-danger">( 0– 5) </span>. No hay ninguna <span class="text-danger">.gap-auto</span> clase de utilidad, ya que es prácticamente igual que <span class="text-danger"> .gap-0</span>.</p>
+</div>
+    <!-- row-gap -->
+    <h3 class="text-primary ms-5 my-2">row-gap</h3>
+    <p class=" mx-3"><span class="text-danger">row-gap</span> Establece el espacio vertical entre los elementos secundarios en el contenedor especificado.</p>
+    <div class="row mx-3  p-5 py-5">
+        <div class="d-grid gap-0 row-gap-5 border" style="grid-template-columns: 1fr 1fr; grid-template-rows: auto auto; background-color: yellow;">
+            <div class="p-2 border">Grid item 1</div>
+            <div class="p-2 border">Grid item 2</div>
+            <div class="p-2 border">Grid item 3</div>
+            <div class="p-2 border">Grid item 4</div>
+        </div>
+    </div>
+    <!-- column-gap -->
+    <h3 class="text-primary ms-5 my-2">column-gap</h3>
+    <p class=" mx-3"><span class="text-danger">column-gap</span>  Establece el espacio horizontal entre los elementos secundarios en el contenedor especificado.</p>
+            <div class="row mx-3  p-3">
+                <div class="container border bg-secondary m-2 p-2 rounded">
+                    <div class="d-grid gap-0 column-gap-5 border" style="grid-template-columns: 1fr 1fr; grid-template-rows: auto auto; background-color: lightcoral;">
+                        <div class="p-2 g-col-6 border">Grid item 1</div>
+                        <div class="p-2 g-col-6 border">Grid item 2</div>
+                        <div class="p-2 g-col-6 border">Grid item 3</div>
+                        <div class="p-2 g-col-6 border">Grid item 4</div>
+                    </div>
+                </div>
+            </div>
+<!-- CSS -->
+            <h3 class="text-primary ms-5 my-2">CSS</h3>
+            <h5 class="text-primary ms-5 my-2 text-decoration-underline">Sass maps</h5>
+            <p class="mx-3">Las utilidades de espaciado se declaran a través del mapa Sass y luego se generan con nuestra API de utilidades. </p>
+            <div class="border bg-light mx-3  rounded">
+                <a href="https://github.com/twbs/bootstrap/blob/v5.3.3/scss/_variables.scss" class=" text-dark mx-3 m-5" target="_blank" >scss/variables.scss</a>
+                <hr>   
+        <pre class=" mb-0 pb-0"> 
+        $spacer: 1rem; 
+        $spacers: (
+            0: 0, 
+            1: $spacer * .25, 
+            2: $spacer * .5, 
+            3: $spacer, 
+            4: $spacer * 1.5, 
+            5: $spacer * 3, 
+        );
+        </pre>
+        </div>
+        <h5 class="text-primary ms-5 my-2 text-decoration-underline">Sass utilities API </h5>
+        <p class="mx-3">Las utilidades de espaciado se declaran a través del mapa Sass y luego se generan con nuestra  API de utilidades. </p>
+        <div class="border bg-light mx-3 rounded">
+            <a href="https://github.com/twbs/bootstrap/blob/v5.3.3/scss/_utilities.scss" class=" text-success mx-3 m-5" target="_blank">scss/_utilities.scss</a>
+            <pre class="mb-0 pb-0">
+                    "margin": (
+                        responsive: true,
+                        property: margin,
+                        class: m,
+                        values: map-merge($spacers, (auto: auto))
+                    ),
+                    "margin-x": (
+                        responsive: true,
+                        property: margin-right margin-left,
+                        class: mx,
+                        values: map-merge($spacers, (auto: auto))
+                    ),
+                    "margin-y": (
+                        responsive: true,
+                        property: margin-top margin-bottom,
+                        class: my,
+                        values: map-merge($spacers, (auto: auto))
+                    ),
+                    "margin-top": (
+                        responsive: true,
+                        property: margin-top,
+                        class: mt,
+                        values: map-merge($spacers, (auto: auto))
+                    ),
+                    "margin-end": (
+                        responsive: true,
+                        property: margin-right,
+                        class: me,
+                        values: map-merge($spacers, (auto: auto))
+                    ),
+                    "margin-bottom": (
+                        responsive: true,
+                        property: margin-bottom,
+                        class: mb,
+                        values: map-merge($spacers, (auto: auto))
+                    ),
+                    "margin-start": (
+                        responsive: true,
+                        property: margin-left,
+                        class: ms,
+                        values: map-merge($spacers, (auto: auto))
+                    ),
+                    // Negative margin utilities
+                    "negative-margin": (
+                        responsive: true,
+                        property: margin,
+                        class: m,
+                        values: $negative-spacers
+                    ),
+                    "negative-margin-x": (
+                        responsive: true,
+                        property: margin-right margin-left,
+                        class: mx,
+                        values: $negative-spacers
+                     ,
+                    "negative-margin-y": (
+                        responsive: true,
+                        property: margin-top margin-bottom,
+                        class: my,
+                        values: $negative-spacers
+                    ),
+                    "negative-margin-top": (
+                        responsive: true,
+                        property: margin-top,
+                        class: mt,
+                        values: $negative-spacers
+                    ),
+                    "negative-margin-end": (
+                        responsive: true,
+                        property: margin-right,
+                        class: me,
+                        values: $negative-spacers
+                    ),
+                    "negative-margin-bottom": (
+                        responsive: true,
+                        property: margin-bottom,
+                        class: mb,
+                        values: $negative-spacers
+                    ),
+                    "negative-margin-start": (
+                        responsive: true,
+                        property: margin-left,
+                        class: ms,
+                        values: $negative-spacers
+                    ),
+                      // Padding utilities
+                    "padding": (
+                        responsive: true,
+                        property: padding,
+                        class: p,
+                        values: $spacers
+                    ),
+                    "padding-x": (
+                        responsive: true,
+                        property: padding-right padding-left,
+                        class: px,
+                        values: $spacers
+                    ),
+                    "padding-y": (
+                        responsive: true,
+                        property: padding-top padding-bottom,
+                        class: py,
+                        values: $spacers
+                    ),
+                    "padding-top": (
+                        responsive: true,
+                        property: padding-top,
+                        class: pt,
+                        values: $spacers
+                    ),
+                    "padding-end": (
+                        responsive: true,
+                        property: padding-right,
+                        class: pe,
+                        values: $spacers
+                    ),
+                    "padding-bottom": (
+                        responsive: true,
+                        property: padding-bottom,
+                        class: pb,
+                        values: $spacers
+                    ),
+                    "padding-start": (
+                        responsive: true,
+                        property: padding-left,
+                        class: ps,
+                        values: $spacers
+                    ),
+                      // Gap utility
+                    "gap": (
+                        responsive: true,
+                        property: gap,
+                        class: gap,
+                        values: $spacers
+                    ),
+                    "row-gap": (
+                        responsive: true,
+                        property: row-gap,
+                        class: row-gap,
+                        values: $spacers
+                    ),
+                    "column-gap": (
+                    responsive: true,
+                        property: column-gap,
+                        class: column-gap,
+                        values: $spacers
+                    ),
+                </pre>
+        </div>
 
-<h3 class="text-primary ms-5 my-2">row-gap</h3>
-<p class=" mx-3"><span class="text-danger">row-gap</span> Establece el espacio vertical entre los elementos secundarios en el contenedor especificado.</p>
-<div class="grid gap-0 row-gap-3" style="grid-template-columns: 1fr 1fr; grid-template-rows: auto auto;">
-    <div class="p-2">Grid item 1</div>
-    <div class="p-2">Grid item 2</div>
-    <div class="p-2">Grid item 3</div>
-    <div class="p-2">Grid item 4</div>
-</div>
-<h3 class="text-primary ms-5 my-2">column-gap</h3>
-<p class=" mx-3"><span class="text-danger">column-gap</span>  Establece el espacio horizontal entre los elementos secundarios en el contenedor especificado.</p>
-<div class="container border bg-secondary m-2 p-2 rounded">
-    <div class="grid gap-0 column-gap-3">
-    <div class="p-2 g-col-6">Grid item 1</div>
-    <div class="p-2 g-col-6">Grid item 2</div>
-    <div class="p-2 g-col-6">Grid item 3</div>
-    <div class="p-2 g-col-6">Grid item 4</div>
-</div>
-</div>
 
-    <!-- primary secondary  success  danger  warning info light  dark -->
+        <!-- primary secondary  success  danger  warning info light  dark -->
 
     </div>
     <script type="text/javascript" src="jquery/jquery-3.7.1.min.js"></script>
