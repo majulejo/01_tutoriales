@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/020_imgenes_master/ccc.png" type="image/x-icon">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">    
+
     <title>015_textos Aprendiendo Bootstrap con Victor Robles Web</title>
 </head>
 <!-- primary secondary success danger warning info light dark -->
@@ -13,27 +15,45 @@
 <body>
     <h1 class="colores bg-warning text-center display-1  ">015_textos</h1>
    <!-- primary secondary success danger warning info light dark -->
+<!-- inicio enlaces centrados -->
+<a href="https://getbootstrap.com/docs/5.3/utilities/text/" target="_blank" >Textos</a>
+<a href="https://getbootstrap.com/docs/5.3/utilities/text/" target="_blank" class="d-block mx-auto" style="width: 200px;">Textos</a>
+<div class="text-center"><a href="https://getbootstrap.com/docs/5.3/utilities/text/" target="_blank">Textos</a>  </div>
+  <div class="d-flex justify-content-center"><a href="#">Enlace centrado</a></div>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-auto">
+        <a href="#">Enlace centrado</a>
+      </div>
+    </div>
+  </div>
+  <!-- final enlaces centrados -->
 
-<a href="https://getbootstrap.com/docs/5.3/utilities/text/" target="_blank">Textos</a>
     <div class="caja bg-dark w-100" style="height: 10px;"></div>
-
+    <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+    <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+    <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+    
     <!-- Primary secondary success  danger  warning  info  light  dark -->
-     <div class="container p-3">
+    <div class="container p-3">
     <h2 class="text-center display-1">TEXTO</h2>
     <p class="display-6">Documentación y ejemplos de utilidades de texto comunes para controlar la alineación, el ajuste, el peso y más.</p>
-    <P class="display-1">display-1 Esto es un texto con tamaño display-1 </P> <!-- Con display aumentamos el tamaño de la fuente -->
-    <P class="display-2">Esto es un texto con tamaño display-2</P> <!-- Con display aumentamos el tamaño de la fuente -->
-    <P class="display-3">Esto es un texto con tamaño display-3</P> <!-- Con display aumentamos el tamaño de la fuente -->
-    <P class="display-4">Esto es un texto con tamaño display-4</P> <!-- Con display aumentamos el tamaño de la fuente -->
-    <P class="display fw-bold fst-italic">fw-bold fst-italic Esto es un texto en negrita y en itálica</P>
+    <P class="display-1"><span class="text-danger">display-1 </span>Esto es un texto con tamaño display-1 </P> <!-- Con display aumentamos el tamaño de la fuente -->
+    <P class="display-2"><span class="text-danger">display-2 </span>Esto es un texto con tamaño display-2</P> <!-- Con display aumentamos el tamaño de la fuente -->
+    <P class="display-3"><span class="text-danger">display-3 </span>Esto es un texto con tamaño display-3</P> <!-- Con display aumentamos el tamaño de la fuente -->
+    <P class="display-4"><span class="text-danger">display-4 </span>Esto es un texto con tamaño display-4</P> <!-- Con display aumentamos el tamaño de la fuente -->
+    <P class="display fw-bold fst-italic"><span class="text-danger">fw-bold fst-italic </span> Esto es un texto en negrita y en itálica</P>
     <!-- Con display aumentamos el tamaño de la fuente -->
-    <P class="display fw-bold fst-italic small">fw-bold fst-italic Esto es un texto en negrita y en itálica</P>
-    <P class="display fw-bold fst-italic text-uppercase">fw-bold fst-italic text-uppercase Esto es un texto en negrita y en itálica</P>
-    <P class="display fw-bold fst-italic text-lowercase">fw-bold fst-italic text-lowercase  Esto es un texto en negrita y en itálica</P>
+    <P class="display fw-bold fst-italic small"><span class="text-danger">fw-bold fst-italic small</span>  Esto es un texto en negrita y en itálica tamaño pequeño</P>
+    <P class="display fw-bold fst-italic text-uppercase"><span class="text-danger">fw-bold fst-italic text-uppercase </span> Esto es un texto en negrita y en itálica</P>
+    <P class="display fw-bold fst-italic text-lowercase"><span class="text-danger">fw-bold fst-italic text-lowercase  </span>Esto es un texto en negrita y en itálica</P>
 </div>
 <hr><hr>
 <div class="container p-3">
-
+    <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+    <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+    <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+    
 <!-- Alineación del texto -->
 <h3 class="text-info">Text alignment/Alineación del texto</h3>
 <p>Realinee fácilmente el texto con los componentes mediante clases de alineación de texto. Para la alineación inicial, final y centrada, existen clases adaptables que utilizan los mismos puntos de corte de ancho de ventana gráfica que el sistema de cuadrícula.</p>
@@ -41,16 +61,18 @@
 
     <h2 class="text-center text-uppercase">BOOTSTRAP EJEMPLOS alinear texto</h2>
     <h3 class="text-center"><strong>text-center</strong> Texto alineado al centro </h3>
-    <p class="text-start"><strong>text-start</strong>  texto alineado a la izquierda o start en todos los tamaños del viewport  </p>
-    <p class="text-center"><strong>text-center</strong> Texto alineado al centro en todos los tamaños del viewport</p>
-    <p class="text-end"><strong>text-end</strong>  texto alineado a la derecha en todos los tamaños del viewport</p>
-
-    <p class="text-sm-end">End aligned text on viewports sized SM (small) or wider.</p>
-    <p class="text-md-end">End aligned text on viewports sized MD (medium) or wider.</p>
-    <p class="text-lg-end">End aligned text on viewports sized LG (large) or wider.</p>
-    <p class="text-xl-end">End aligned text on viewports sized XL (extra large) or wider.</p>
-    <p class="text-xxl-end">End aligned text on viewports sized XXL (extra extra large) or wider.</p>
-
+    <p><span class="text-danger text-start"><strong>text-start</strong> </span> texto alineado a la izquierda o start en todos los tamaños del viewport  </p>
+    <p><span class="text-danger text-center"><strong>text-center</strong></span> Texto alineado al centro en todos los tamaños del viewport</p>
+    <p><span class="text-danger text-end"><strong>text-end</strong></span>  texto alineado a la derecha en todos los tamaños del viewport</p>
+    <p><span class="text-danger text-sm-end"><strong>SM </strong></span>Texto alineado final en ventanas gráficas de tamaño pequeño (SM) o más anchas.</p>
+    <p><span class="text-danger text-md-end"><strong>MD </strong></span>Texto alineado final en ventanas gráficas de tamaño MD (mediano) o más ancho.</p>
+    <p><span class="text-danger text-lg-end"><strong>LG </strong></span>Texto alineado final en ventanas gráficas de tamaño LG (grande) o más ancho.</p>
+    <p><span class="text-danger text-xl-end"><strong>XL </strong></span>Texto alineado final en ventanas gráficas de tamaño XL (extra grande) o más ancho.</p>
+    <p><span class="text-danger text-xxl-end"><strong>XXL </strong></span>Texto alineado final en ventanas gráficas de tamaño XXL (extra extra grande) o más ancho.</p>
+    <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+    <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+    <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+    
     <!-- Text wrapping and overflow /Ajuste y desbordamiento de texto -->
     <h3 class="text-info">Text wrapping and overflow /Ajuste y desbordamiento de texto</h3>
     <div class="badge text-bg-primary text-wrap mb-3" style="width: 6rem;">
@@ -59,19 +81,28 @@
     <div class="text-nowrap bg-body-secondary border my-3" style="width: 8rem;">
         This text should overflow the parent.
     </div>
-
+    <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+    <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+    <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+    
     <!-- Word break /Salto de palabra -->
     <h3 class="text-info">Word break /Salto de palabra</h3>
     <p class="text-break">
         mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm</p>
-
+        <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+        <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+        <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+        
         <!-- Text transform /Transformación de texto -->
         <h3 class="text-info">Text transform /Transformación de texto</h3>
         <p class="text-lowercase">Lowercased text.</p>
     <p class="text-uppercase">Uppercased text.</p>
     <p class="text-capitalize">CapiTaliZed text.</p>
 
-
+    <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+    <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+    <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+    
     <h3 class="text-info">Font size /Tamaño de Fuente</h3>
     
     <p class="fs-1 "><strong>fs-1</strong> Con fs- cambiamos el tamaño del texto.</p>
@@ -80,7 +111,10 @@
     <p class="fs-4 "><strong>fs-4</strong> Con fs- cambiamos el tamaño del texto.</p>
     <p class="fs-5 "><strong>fs-5</strong> Con fs- cambiamos el tamaño del texto.</p>
     <p class="fs-6 "><strong>fs-6</strong> Con fs- cambiamos el tamaño del texto.</p>
-
+    <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+    <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+    <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+    
     <!-- Font weight and italics/Peso de fuente y cursiva -->
     <h3 class="text-info">Font weight and italics/Peso de fuente y cursiva</h3>
     <p>Cambie rápidamente el font-weighto font-styledel texto con estas utilidades. font-styleLas utilidades se abrevian como .fst-*y font-weightlas utilidades se abrevian como .fw-*.</p>
@@ -93,24 +127,36 @@
     <p class="fw-lighter">Lighter weight text (relative to the parent element).</p>
     <p class="fst-italic">Italic text.</p>
     <p class="fst-normal">Text with normal font style</p>
-
+    <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+    <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+    <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+    
     <h3 class="text-info">Line height/Altura de línea </h3>
     <p class="lh-1">This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>
     <p class="lh-sm">This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>
     <p class="lh-base">This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>
     <p class="lh-lg">This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>
-
+    <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+    <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+    <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+    
 
     <!-- Monospace/Monoespaciado -->
     <h3 class="text-info">Monospace/Monoespaciado</h3>
 Monospace</h3>
 <p class="font-monospace">This is in monospace</p>
+<hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+<div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+<hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
 
 
 <!-- Reset Color/Restablecer color -->
 <h3 class="text-info">Reset Color/Restablecer color</h3>
 <p class="text-body-secondary"> Secondary body text with a <a href="#" class="text-reset">reset link</a>.
 </p>
+<hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+<div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+<hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
 
 <!-- Text decoration/ Decoración del texto -->
 <h3 class="text-info">Text decoration/ Decoración del texto</h3>
