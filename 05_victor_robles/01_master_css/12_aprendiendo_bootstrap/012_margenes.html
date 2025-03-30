@@ -628,13 +628,12 @@
 
 <h3 class="text-primary ms-5 my-2">row-gap</h3>
 <p class=" mx-3"><span class="text-danger">row-gap</span> Establece el espacio vertical entre los elementos secundarios en el contenedor especificado.</p>
-<div class="grid gap-0 row-gap-3 grid-cols-2">
+<div class="grid gap-0 row-gap-3" style="grid-template-columns: 1fr 1fr; grid-template-rows: auto auto;">
     <div class="p-2">Grid item 1</div>
     <div class="p-2">Grid item 2</div>
     <div class="p-2">Grid item 3</div>
     <div class="p-2">Grid item 4</div>
-  </div>
-
+</div>
 <h3 class="text-primary ms-5 my-2">column-gap</h3>
 <p class=" mx-3"><span class="text-danger">column-gap</span>  Establece el espacio horizontal entre los elementos secundarios en el contenedor especificado.</p>
 <div class="container border bg-secondary m-2 p-2 rounded">
@@ -643,7 +642,7 @@
     <div class="p-2 g-col-6">Grid item 2</div>
     <div class="p-2 g-col-6">Grid item 3</div>
     <div class="p-2 g-col-6">Grid item 4</div>
-  </div>
+</div>
 </div>
 
     <!-- primary secondary  success  danger  warning info light  dark -->
