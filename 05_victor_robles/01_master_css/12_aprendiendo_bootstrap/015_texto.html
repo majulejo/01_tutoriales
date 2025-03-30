@@ -11,43 +11,16 @@
 <!-- primary secondary success danger warning info light dark -->
 
 <body>
-    <h1 class="colores bg-warning">015_textos</h1>
-    <hr>
-    <div class="d-flex">
-        <div class=" shadow-lg m-1 mt-5 ml-5 mr-5 text-white bg-danger border border-primary rounded-top p-3 mb-3">
-            Borde superior redondeado (azul).
-        </div>
-        <div
-            class="shadow-sm m-3 mt-5 mb-5 mx-5 my-5 text-muted bg-info   caja-centrada border border-success rounded-bottom p-3 mb-3">
-            Borde inferior redondeado (verde).
-        </div>
-        <div
-            class="shadow m-5 mb-5 my-5 text-primary bg-success caja-centrada border border-danger rounded-start p-3 mb-3">
-            Borde izquierdo redondeado (rojo).
-        </div>
-        <div class="m-1 p-5 text-white bg-danger border border-primary rounded-top p-3 mb-3">
-            Borde superior redondeado (azul).
-        </div>
-        <div class="m-3 x-5  p-5 text-muted bg-info   caja-centrada border border-success rounded-bottom p-3 mb-3">
-            Borde inferior redondeado (verde).
-        </div>
-        <div class=" m-5 p-n5 text-primary bg-success caja-centrada border border-danger rounded-start p-3 mb-3">
-            Borde izquierdo redondeado (rojo).
-        </div>
-    </div>
+    <h1 class="colores bg-warning text-center display-1  ">015_textos</h1>
+   <!-- primary secondary success danger warning info light dark -->
 
-    <hr>
-    <div class="mx-auto m-2 p-3 text-light bg-success caja w-25 border border-dark rounded-start">Última caja creada.
-    </div> <!--  mx-auto  hace que la caha esté centrada en la página -->
-
-    <!-- primary secondary success danger warning info light dark -->
-
-    <h6>Aquí acaban las cajas y empieza el texto</h6>
-
+<a href="https://getbootstrap.com/docs/5.3/utilities/text/" target="_blank">Textos</a>
     <div class="caja bg-dark w-100" style="height: 10px;"></div>
 
     <!-- Primary secondary success  danger  warning  info  light  dark -->
-    <h2 class="text-center">TEXTO</h2>
+     <div class="container p-3">
+    <h2 class="text-center display-1">TEXTO</h2>
+    <p class="display-6">Documentación y ejemplos de utilidades de texto comunes para controlar la alineación, el ajuste, el peso y más.</p>
     <P class="display-1">display-1 Esto es un texto con tamaño display-1 </P> <!-- Con display aumentamos el tamaño de la fuente -->
     <P class="display-2">Esto es un texto con tamaño display-2</P> <!-- Con display aumentamos el tamaño de la fuente -->
     <P class="display-3">Esto es un texto con tamaño display-3</P> <!-- Con display aumentamos el tamaño de la fuente -->
@@ -57,9 +30,13 @@
     <P class="display fw-bold fst-italic small">fw-bold fst-italic Esto es un texto en negrita y en itálica</P>
     <P class="display fw-bold fst-italic text-uppercase">fw-bold fst-italic text-uppercase Esto es un texto en negrita y en itálica</P>
     <P class="display fw-bold fst-italic text-lowercase">fw-bold fst-italic text-lowercase  Esto es un texto en negrita y en itálica</P>
-
+</div>
 <hr><hr>
-<div class="caja bg-dark w-100" style="height: 10px;"></div>
+<div class="container p-3">
+
+<!-- Alineación del texto -->
+<h3 class="text-info">Text alignment/Alineación del texto</h3>
+<p>Realinee fácilmente el texto con los componentes mediante clases de alineación de texto. Para la alineación inicial, final y centrada, existen clases adaptables que utilizan los mismos puntos de corte de ancho de ventana gráfica que el sistema de cuadrícula.</p>
 <!-- primary secondary success danger warning info light dark -->
 
     <h2 class="text-center text-uppercase">BOOTSTRAP EJEMPLOS alinear texto</h2>
@@ -74,8 +51,8 @@
     <p class="text-xl-end">End aligned text on viewports sized XL (extra large) or wider.</p>
     <p class="text-xxl-end">End aligned text on viewports sized XXL (extra extra large) or wider.</p>
 
-
-    <h3 class="text-center bg-primary">Text wrapping and overflow </h3>
+    <!-- Text wrapping and overflow /Ajuste y desbordamiento de texto -->
+    <h3 class="text-info">Text wrapping and overflow /Ajuste y desbordamiento de texto</h3>
     <div class="badge text-bg-primary text-wrap mb-3" style="width: 6rem;">
         This text should wrap.
     </div>
@@ -83,18 +60,20 @@
         This text should overflow the parent.
     </div>
 
-
-    <h3 class="text-center bg-danger">Word break </h3>
+    <!-- Word break /Salto de palabra -->
+    <h3 class="text-info">Word break /Salto de palabra</h3>
     <p class="text-break">
         mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm</p>
 
-    <h3 class="text-center bg-success">Text transform </h3>
-    <p class="text-lowercase">Lowercased text.</p>
+        <!-- Text transform /Transformación de texto -->
+        <h3 class="text-info">Text transform /Transformación de texto</h3>
+        <p class="text-lowercase">Lowercased text.</p>
     <p class="text-uppercase">Uppercased text.</p>
     <p class="text-capitalize">CapiTaliZed text.</p>
 
 
-    <h3 class="text-center bg-warning">Font size </h3>
+    <h3 class="text-info">Font size /Tamaño de Fuente</h3>
+    
     <p class="fs-1 "><strong>fs-1</strong> Con fs- cambiamos el tamaño del texto.</p>
     <p class="fs-2 "><strong>fs-2</strong> Con fs- cambiamos el tamaño del texto.</p>
     <p class="fs-3 "><strong>fs-3</strong> Con fs- cambiamos el tamaño del texto.</p>
@@ -102,8 +81,9 @@
     <p class="fs-5 "><strong>fs-5</strong> Con fs- cambiamos el tamaño del texto.</p>
     <p class="fs-6 "><strong>fs-6</strong> Con fs- cambiamos el tamaño del texto.</p>
 
-
-    <h3 class="text-center bg-info">Font weight and italics</h3>
+    <!-- Font weight and italics/Peso de fuente y cursiva -->
+    <h3 class="text-info">Font weight and italics/Peso de fuente y cursiva</h3>
+    <p>Cambie rápidamente el font-weighto font-styledel texto con estas utilidades. font-styleLas utilidades se abrevian como .fst-*y font-weightlas utilidades se abrevian como .fw-*.</p>
     <p class="fw-bold">Bold text.</p>
     <p class="fw-bolder">Bolder weight text (relative to the parent element).</p>
     <p class="fw-semibold">Semibold weight text.</p>
@@ -114,29 +94,218 @@
     <p class="fst-italic">Italic text.</p>
     <p class="fst-normal">Text with normal font style</p>
 
-    <h3 class="text-center bg-info">Line height </h3>
+    <h3 class="text-info">Line height/Altura de línea </h3>
     <p class="lh-1">This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>
     <p class="lh-sm">This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>
     <p class="lh-base">This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>
     <p class="lh-lg">This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>
 
-<h3 class="text-center bg-warning">Monospace</h3>
+
+    <!-- Monospace/Monoespaciado -->
+    <h3 class="text-info">Monospace/Monoespaciado</h3>
+Monospace</h3>
 <p class="font-monospace">This is in monospace</p>
 
-<h3 class="text-center bg-primary">Reset Color</h3>
+
+<!-- Reset Color/Restablecer color -->
+<h3 class="text-info">Reset Color/Restablecer color</h3>
 <p class="text-body-secondary"> Secondary body text with a <a href="#" class="text-reset">reset link</a>.
 </p>
 
-<h3 class="text-center bg-body-secondary">Text decoration</h3>
-<p class="text-decoration-underline">This text has a line underneath it.</p>
-<p class="text-decoration-line-through">This text has a line going through it.</p>
-<a href="#" class="text-decoration-none">This link has its text decoration removed</a>
+<!-- Text decoration/ Decoración del texto -->
+<h3 class="text-info">Text decoration/ Decoración del texto</h3>
+<div class="row bg-light m-3 p-3">
+    <p>Decore el texto en los componentes con clases de decoración de texto.</p>
+    <hr>
+<p class="text-decoration-underline">Este texto tiene una linea debajo.</p>
+&lt;p class="text-decoration-underline"&gt;Este texto tiene una linea debajo.&lt;/p&gt; <br> <hr>
+<p class="text-decoration-line-through">Este texto tiene una linea que lo atraviesa.</p>
+&lt;p class="text-decoration-line-through"&gt;Este texto tiene una linea que lo atraviesa.&lt;/p&gt; <br><hr>
+<p><a href="#" class="text-decoration-none">A este enlace se le ha quitado la decoración.</a></p>
+&lt;a href="#" class="text-decoration-none"&gt;A este enlace se le ha quitado la decoración.&lt;/a&gt; <br><hr class="bg-danger"><hr class="bg-danger">
+
+<a href="#" >A este enlace no se le ha quitado la decoración.</a>
+&lt;a href="#" class="text-decoration-none"&gt;A este enlace no se le ha quitado la decoración.&lt;/a&gt; <br><hr>
+
+</div>
+<hr style="background-color: blue;">
+<hr style="background-color: blue;">
+<hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+<div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+<hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+<hr class="bg-primary">
+<hr class="bg-secondary">
+<hr class="bg-success">
+<hr class="bg-danger">
+<hr class="bg-warning">
+<hr class="bg-info">
+<hr class="bg-light">
+<hr class="bg-dark">
+<hr class="bg-body-secondary">
+<hr class="bg-body-tertiary">
+
+<!--------------------- CSS ------------------------------->
+<h3 class="text-primary ms-5 my-2">CSS</h3>
+<h5 class="text-primary ms-5 my-2 text-decoration-underline">Sass Variables/Variables de Sass </h5>
+<p class="mx-3">Variables Sass relacionadas con el tipo y la fuente predeterminados:
+
+</p>
+<div class="border bg-light mx-3  rounded">
+    <a href="https://github.com/twbs/bootstrap/blob/v5.3.3/scss/_variables.scss" class=" text-dark mx-3 m-5" target="_blank" >scss/variables.scss</a>
+    <hr>   
+<pre class=" mb-0 pb-0"> 
+    // stylelint-disable value-keyword-case
+    $font-family-sans-serif:      system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    // stylelint-enable value-keyword-case
+    $font-family-base:            var(--#{$prefix}font-sans-serif);
+    $font-family-code:            var(--#{$prefix}font-monospace);
+    
+    // $font-size-root affects the value of `rem`, which is used for as well font sizes, paddings, and margins
+    // $font-size-base affects the font size of the body text
+    $font-size-root:              null;
+    $font-size-base:              1rem; // Assumes the browser default, typically `16px`
+    $font-size-sm:                $font-size-base * .875;
+    $font-size-lg:                $font-size-base * 1.25;
+    
+    $font-weight-lighter:         lighter;
+    $font-weight-light:           300;
+    $font-weight-normal:          400;
+    $font-weight-medium:          500;
+    $font-weight-semibold:        600;
+    $font-weight-bold:            700;
+    $font-weight-bolder:          bolder;
+    
+    $font-weight-base:            $font-weight-normal;
+    
+    $line-height-base:            1.5;
+    $line-height-sm:              1.25;
+    $line-height-lg:              2;
+    
+    $h1-font-size:                $font-size-base * 2.5;
+    $h2-font-size:                $font-size-base * 2;
+    $h3-font-size:                $font-size-base * 1.75;
+    $h4-font-size:                $font-size-base * 1.5;
+    $h5-font-size:                $font-size-base * 1.25;
+    $h6-font-size:                $font-size-base;
+</pre>
+</div>
+<h5 class="text-primary ms-5 my-2 text-decoration-underline">Sass maps/Mapas de Sass </h5>
+<p class="mx-3">Las utilidades de tamaño de fuente se generan a partir de este mapa, en combinación con nuestra API de utilidades. </p>
+<div class="border bg-light mx-3 rounded">
+<a href="https://github.com/twbs/bootstrap/blob/v5.3.3/scss/_variables.scss" class=" text-success mx-3 m-5" target="_blank">scss/_utilities.scss</a>
+<pre class="mb-0 pb-0">
+    $font-sizes: (
+        1: $h1-font-size,
+        2: $h2-font-size,
+        3: $h3-font-size,
+        4: $h4-font-size,
+        5: $h5-font-size,
+        6: $h6-font-size
+    );
+    </pre>
+</div>
+<div class="border bg-light mx-3 my-3 rounded">
+    <a href="https://github.com/twbs/bootstrap/blob/v5.3.3/scss/_maps.scss" class=" text-success mx-3 m-5" target="_blank">scss/_maps.scss</a>
+    <pre class="mb-0 pb-0">
+        $theme-colors-text: (
+            "primary": $primary-text-emphasis,
+            "secondary": $secondary-text-emphasis,
+            "success": $success-text-emphasis,
+            "info": $info-text-emphasis,
+            "warning": $warning-text-emphasis,
+            "danger": $danger-text-emphasis,
+            "light": $light-text-emphasis,
+            "dark": $dark-text-emphasis,
+        );
+        </pre>
+    </div>
+    <h5 class="text-primary ms-5 my-2 text-decoration-underline">    Sass utilities API/API de utilidades de Sass </h5>
+<p class="mx-3">Las utilidades de fuentes y texto se declaran en nuestra API de utilidades en [Nombre del archivo] <span class="text-danger">scss/_utilities.scss.</span>  <a href="https://getbootstrap.com/docs/5.3/utilities/api/#using-the-api">Aprenda a usar la API de utilidades.</a> </p>
+    <div class="border bg-light mx-3 my-3 rounded">
+        <a href="https://github.com/twbs/bootstrap/blob/v5.3.3/scss/_utilities.scss" class=" text-success mx-3 m-5" target="_blank">scss/_utilitiess.scss</a>
+        <pre class="mb-0 pb-0">
+            "font-family": (
+    property: font-family,
+    class: font,
+    values: (monospace: var(--#{$prefix}font-monospace))
+),
+"font-size": (
+    rfs: true,
+    property: font-size,
+    class: fs,
+    values: $font-sizes
+),
+"font-style": (
+    property: font-style,
+    class: fst,
+    values: italic normal
+),
+"font-weight": (
+    property: font-weight,
+    class: fw,
+        values: (
+    lighter: $font-weight-lighter,
+    light: $font-weight-light,
+    normal: $font-weight-normal,
+    medium: $font-weight-medium,
+    semibold: $font-weight-semibold,
+    bold: $font-weight-bold,
+    bolder: $font-weight-bolder
+    )
+),
+"line-height": (
+    property: line-height,
+    class: lh,
+    values: (
+    1: 1,
+    sm: $line-height-sm,
+    base: $line-height-base,
+    lg: $line-height-lg,
+    )
+),
+"text-align": (
+    responsive: true,
+    property: text-align,
+    class: text,
+    values: (
+    start: left,
+    end: right,
+    center: center,
+    )
+),
+"text-decoration": (
+    property: text-decoration,
+    values: none underline line-through
+),
+"text-transform": (
+    property: text-transform,
+    class: text,
+    values: lowercase uppercase capitalize
+),
+"white-space": (
+    property: white-space,
+    class: text,
+    values: (
+    wrap: normal,
+    nowrap: nowrap,
+    )
+),
+"word-wrap": (
+    property: word-wrap word-break,
+    class: text,
+    values: (break: break-word),
+    rtl: false
+),
+            </pre>
+        </div>
 
 
 
 
 
 
+</div>
 
     <script type="text/javascript" src="jquery/jquery-3.7.1.min.js"></script>
     <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
