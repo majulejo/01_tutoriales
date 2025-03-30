@@ -5,168 +5,650 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/020_imgenes_master/ccc.png" type="image/x-icon">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <title>012_margenes_internos_externos Aprendiendo Bootstrap con Victor Robles Web</title>
 </head>
-<!-- Primary
-Secondary
-Success
-Danger
-Warning
-Info
-Light
-Dark -->
+<!-- primary secondary  success  danger  warning info light  dark -->
+
 <body>
 
-    <h1 class="colores bg-success">012_margenes_internos_externos</h1>
+    <h1 class="colores bg-success text-center my-3">012_margenes_internos_externos</h1>
+    <h1 class="colores bg-primary text-center my-3">Espaciado</h1>
+    <p class="fs-3 p-5">Bootstrap incluye una amplia gama de clases de utilidad de márgenes, relleno y espacios con
+        capacidad de respuesta abreviada para modificar la apariencia de un elemento.</p>
     <div class="d-flex">
 
 
-    <div class="m-1 mt-5 ml-5 mr-5 text-white bg-danger border border-primary rounded-top p-3 mb-3">
-    Borde superior redondeado (azul).
-</div>
-<hr>
+        <div class="m-1 mt-5 ml-5 mr-5 text-white bg-danger border border-primary rounded-top p-3 mb-3">
+            Borde superior redondeado (azul).
+        </div>
+        <hr>
 
-<div class="m-3 mt-5 mb-5 mx-5 my-5 text-muted bg-info   caja-centrada border border-success rounded-bottom p-3 mb-3">
-    Borde inferior redondeado (verde).
-</div>
-<hr>
+        <div
+            class="m-3 mt-5 mb-5 mx-5 my-5 text-muted bg-info   caja-centrada border border-success rounded-bottom p-3 mb-3">
+            Borde inferior redondeado (verde).
+        </div>
+        <hr>
 
-<div class=" m-5 mb-5 my-5 text-primary bg-success caja-centrada border border-danger rounded-start p-3 mb-3">
-    Borde izquierdo redondeado (rojo).
-</div>
-<hr>
-<div class="m-1 p-5 text-white bg-danger border border-primary rounded-top p-3 mb-3">
-    Borde superior redondeado (azul).
-</div>
-<hr>
+        <div class=" m-5 mb-5 my-5 text-primary bg-success caja-centrada border border-danger rounded-start p-3 mb-3">
+            Borde izquierdo redondeado (rojo).
+        </div>
+        <hr>
+        <div class="m-1 p-5 text-white bg-danger border border-primary rounded-top p-3 mb-3">
+            Borde superior redondeado (azul).
+        </div>
+        <hr>
 
-<div class="m-3 x-5  p-5 text-muted bg-info   caja-centrada border border-success rounded-bottom p-3 mb-3">
-    Borde inferior redondeado (verde).
-</div>
-<hr>
+        <div class="m-3 x-5  p-5 text-muted bg-info   caja-centrada border border-success rounded-bottom p-3 mb-3">
+            Borde inferior redondeado (verde).
+        </div>
+        <hr>
 
-<div class=" m-5 p-n5 text-primary bg-success caja-centrada border border-danger rounded-start p-3 mb-3">
-    Borde izquierdo redondeado (rojo).
-</div>
-</div>
+        <div class=" m-5 p-n5 text-primary bg-success caja-centrada border border-danger rounded-start p-3 mb-3">
+            Borde izquierdo redondeado (rojo).
+        </div>
+    </div>
 
-<hr>
+    <hr>
     <div class="mx-auto m-2 p-3 text-light bg-success caja w-25 border border-dark rounded-start">
         Última caja creada.
-    </div>     <!--  mx-auto  hace que la caha esté centrada en la página -->
-    <div class="row">
-        <h3 class="text-primary">Margin and padding</h3>
-<p>Assign responsive-friendly margin or padding values to an element or a subset of its sides with shorthand classes. Includes support for individual properties, all properties, and vertical and horizontal properties. Classes are built from a default Sass map ranging from .25rem to 3rem.</p>
+    </div> <!--  mx-auto  hace que la caja esté centrada en la página -->
+    <hr>
+
+    <!-- Centered element -->
+
+    <div class="mx-auto p-2 bg-warning border border-dark" style="width: 200px;">
+        Centered element
     </div>
-    <p>
-        Icons
-        About
-        Overview
-        Team
-        Brand
-        License
-        Translations
-        Migration
-        Spacing
-        Bootstrap includes a wide range of shorthand responsive margin, padding, and gap utility classes to modify an element’s appearance.
-        
-         ads via Carbon Monitor K8s Applications Effortlessly. Get 100% Kubernetes production visibility
-        ads via Carbon
-        On this page
-        Margin and padding
-        Notation
-        Examples
-        Horizontal centering
-        Negative margin
-        Gap
-        row-gap
-        column-gap
-        CSS
-        Sass maps
-        Sass utilities API
-        Margin and padding 
-        Assign responsive-friendly margin or padding values to an element or a subset of its sides with shorthand classes. Includes support for individual properties, all properties, and vertical and horizontal properties. Classes are built from a default Sass map ranging from .25rem to 3rem.
-        
-        Using the CSS Grid layout module? Consider using the gap utility instead.
-        Notation 
-        Spacing utilities that apply to all breakpoints, from xs to xxl, have no breakpoint abbreviation in them. This is because those classes are applied from min-width: 0 and up, and thus are not bound by a media query. The remaining breakpoints, however, do include a breakpoint abbreviation.
-        
-        The classes are named using the format {property}{sides}-{size} for xs and {property}{sides}-{breakpoint}-{size} for sm, md, lg, xl, and xxl.
-        
-        Where property is one of:
-        
-        m - for classes that set margin
-        p - for classes that set padding
-        Where sides is one of:
-        
-        t - for classes that set margin-top or padding-top
-        b - for classes that set margin-bottom or padding-bottom
-        s - (start) for classes that set margin-left or padding-left in LTR, margin-right or padding-right in RTL
-        e - (end) for classes that set margin-right or padding-right in LTR, margin-left or padding-left in RTL
-        x - for classes that set both *-left and *-right
-        y - for classes that set both *-top and *-bottom
-        blank - for classes that set a margin or padding on all 4 sides of the element
-        Where size is one of:
-        
-        0 - for classes that eliminate the margin or padding by setting it to 0
-        1 - (by default) for classes that set the margin or padding to $spacer * .25
-        2 - (by default) for classes that set the margin or padding to $spacer * .5
-        3 - (by default) for classes that set the margin or padding to $spacer
-        4 - (by default) for classes that set the margin or padding to $spacer * 1.5
-        5 - (by default) for classes that set the margin or padding to $spacer * 3
-        auto - for classes that set the margin to auto
-        (You can add more sizes by adding entries to the $spacers Sass map variable.)</p>
+    <hr>
 
-        <h3>Horizontal centering</h3>
-        <p>
-              
-Additionally, Bootstrap also includes an .mx-auto class for horizontally centering fixed-width block level content—that is, content that has display: block and a width set—by setting the horizontal margins to auto.
-
-Centered element
-
-<div class="mx-auto p-2" style="width: 200px;">
-  Centered element
-</div>
+    <!-- MARGIN Y PADDING -->
+    <div class="container">
+        <h3 class="text-primary ms-2">Margin and padding</h3>
+        <p class=" ms-1">Asigna valores o adaptables <strong class="text-uppercase">margin </strong>o <strong
+                class="text-uppercase"> padding </strong>a un elemento o a un subconjunto de sus lados con clases
+            abreviadas. Incluye compatibilidad con propiedades individuales, todas las propiedades y propiedades
+            verticales y horizontales. Las clases se construyen a partir de un mapa Sass predeterminado que va desde
+            <strong>.25rem </strong>hasta <strong>3rem </strong>.
         </p>
-        <h3>>Negative margin </h3>
-        <p>  
-            In CSS, margin properties can utilize negative values (padding cannot). These negative margins are disabled by default, but can be enabled in Sass by setting $enable-negative-margins: true.
-            
-            The syntax is nearly the same as the default, positive margin utilities, but with the addition of n before the requested size. Here’s an example class that’s the opposite of .mt-1:
-            
-            
-            .mt-n1 {
-              margin-top: -0.25rem !important;
-            }</p>
-            <h3>Gap</h3>
-            <p> 
-                When using display: grid or display: flex, you can make use of gap utilities on the parent element. This can save on having to add margin utilities to individual children of a grid or flex container. Gap utilities are responsive by default, and are generated via our utilities API, based on the $spacers Sass map.
-                
-                Grid item 1
-                Grid item 2
-                Grid item 3
-                Grid item 4
-                HTML
-                
-                
-                <div class="grid gap-3">
-                  <div class="p-2 g-col-6">Grid item 1</div>
-                  <div class="p-2 g-col-6">Grid item 2</div>
-                  <div class="p-2 g-col-6">Grid item 3</div>
-                  <div class="p-2 g-col-6">Grid item 4</div>
-                </div>
-                Support includes responsive options for all of Bootstrap’s grid breakpoints, as well as six sizes from the $spacers map (0–5). There is no .gap-auto utility class as it’s effectively the same as .gap-0.</p>
+        <p class="border bg-info p-3 m-3">
+            <strong>¿Usas el módulo de diseño CSS Grid? </strong>Considera usar la utilidad <a href="#gap"> gap.</a>
+        </p>
+        <h3 class="text-primary ms-2">Notación</h3>
+        <p class="ms-1">
+            Las utilidades de espaciado que se aplican a todos los puntos de interrupción, desde xshasta xxl, no
+            incluyen abreviatura. Esto se debe a que estas clases se aplican desde min-width: 0y hacia arriba, por lo
+            que no están vinculadas por una consulta de medios. Sin embargo, los puntos de interrupción restantes sí
+            incluyen una abreviatura. </p>
+        <p class="ms-1">
+            Las clases se nombran utilizando el formato <span class="text-danger">{property}{sides}-{size}</span> para
+            xs y <span class="text-danger">{property}{sides}-{breakpoint}-{size}</span>para sm, md, lg, xl, y xxl. </p>
+        <p class="ms-1">Cuando la propiedad es una de las siguientes:</p>
+        <p class="ms-4">&#8226; <span class="text-danger">m-</span> para clases que establecen <span
+                class="text-danger">margin</span>.</p>
+        <p class="ms-4">&#8226; <span class="text-danger">p-</span> para clases que establecen <span
+                class="text-danger">padding</span>.</p>
 
-<!-- Primary
-Secondary
-Success
-Danger
-Warning
-Info
-Light
-Dark -->
+        <p class="ms-1">Donde lados es uno de:</p>
+        <p class="ms-4">&#8226; <span class="text-danger">t-</span> (top)para clases que establecen <span
+                class="text-danger">margin-top</span> o <span class="text-danger">padding-top</span>.</p>
+        <p class="ms-4">&#8226; <span class="text-danger">b-</span> (bottom)para clases que establecen <span
+                class="text-danger">margin-bottom</span> o <span class="text-danger">padding-bottom</span>.</p>
+        <p class="ms-4">&#8226; <span class="text-danger">s-</span> (inicio)para clases que establecen <span
+                class="text-danger">margin-left</span> o <span class="text-danger">padding-left</span> LTR <span
+                class="text-danger">margin-right</span> o <span class="text-danger">padding-right </span>en RTL.</p>
+        <p class="ms-4">&#8226; <span class="text-danger">e-</span> (inicio)para clases que establecen <span
+                class="text-danger">margin-right</span> o <span class="text-danger">padding-right</span> LTR <span
+                class="text-danger">margin-left</span> o <span class="text-danger">padding-left </span>en RTL.</p>
+        <p class="ms-4">&#8226; <span class="text-danger">x-</span> para clases que establecen <span
+                class="text-danger">margin</span>.</p>
+        <p class="ms-4">&#8226; <span class="text-danger">y-</span> para clases que establecen <span
+                class="text-danger">margin</span>.</p>
+        <p class="ms-4">&#8226; <span class="text-danger">en blanco-</span> para clases que establecen <span
+                class="text-danger">margin </span> o <span class="text-danger">padding </span> en los cuatro elementos.
+        </p>
+
+        <p class="ms-1">Donde el tamaño es uno de los siguientes:</p>
+        <p class="ms-4">&#8226; <span class="text-danger">0-</span> para clases que eliminan el <span
+                class="text-danger">margin</span> o <span class="text-danger">padding </span>configurándolo en <span
+                class="text-danger">0 </span>. </p>
+        <p class="ms-4">&#8226; <span class="text-danger">1-</span> para clases que establecen el <span
+                class="text-danger">margin</span> o <span class="text-danger">padding </span>configurándolo en <span
+                class="text-danger">$spacer * .25</span>. </p>
+        <p class="ms-4">&#8226; <span class="text-danger">2-</span> para clases que establecen el <span
+                class="text-danger">margin</span> o <span class="text-danger">padding </span>configurándolo en <span
+                class="text-danger">$spacer * .5</span>. </p>
+        <p class="ms-4">&#8226; <span class="text-danger">3-</span> para clases que establecen el <span
+                class="text-danger">margin</span> o <span class="text-danger">padding </span>configurándolo en <span
+                class="text-danger">$spacer * 1</span>. </p>
+        <p class="ms-4">&#8226; <span class="text-danger">4-</span> para clases que establecen el <span
+                class="text-danger">margin</span> o <span class="text-danger">padding </span>configurándolo en <span
+                class="text-danger">$spacer * 1.5</span>. </p>
+        <p class="ms-4">&#8226; <span class="text-danger">5-</span> para clases que establecen el <span
+                class="text-danger">margin</span> o <span class="text-danger">padding </span>configurándolo en <span
+                class="text-danger">$spacer * 3</span>. </p>
+        <p class="ms-4">&#8226; <span class="text-danger">auto-</span> para clases que configuran el <span
+                class="text-danger">margin</span> o <span class="text-danger">padding </span> en automático. </p>
+        <p class="ms-1">(Puede agregar más tamaños agregando entradas a la variable <span class="text-danger">$spacer
+            </span> en el mapa Sass)</p>
+
+        <h3 class="text-primary ms-2">Ejemplos</h3>
+        <p class="ms-1">A continuación se muestran unos ejemplos representativos de estas clases:</p>
+
+        <div class="bg-light p-3 border rounded">
+            <p class="bg-light p-3 border rounded">
+                .mt-0 {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;margin-top: 0 !important;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+            </p>
+            <p class="bg-light p-3 border rounded">
+                .ms-1 {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;margin-left: ($spacer * .25) !important;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+            </p>
+            <p class="bg-light p-3 border rounded">
+                .px-2 {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;padding-left: ($spacer * .5) !important;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;padding-right: ($spacer * .5) !important;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+            </p>
+            <p class="bg-light p-3 border rounded">
+                .p-3 {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;padding: $spacer !important;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+            </p>
+        </div>
+        <hr>
+        <div class="container my-3">
+            <pre class="bg-info px-3 rounded mb-0 ">
+                    <h5 class="text-center border rounded py-2" >Ejemplo usando &lt;pre&gt;</h5>
+
+                <pre class="bg-light p-3 rounded mb-0">
+            .mt-0 {
+                margin-top: 0 !important;
+            }
+                </code>
+
+            <pre class="bg-light p-3 rounded mb-0">
+            .ms-1 {
+                margin-left: ($spacer * .25) !important;
+            }
+                </code>
+
+            <pre class="bg-light p-3 rounded mb-0">
+            .px-2 {
+                padding-left: ($spacer * .5) !important;
+                padding-right: ($spacer * .5) !important;
+            }
+                </code>
+
+            <pre class="bg-light p-3 rounded mb-2">
+            .p-3 {
+                padding: $spacer !important;
+            }
+                </code>
+            </code>
+        </div>
+
+        <hr>
+        <h3 class="text-primary ms-2">Horizontal centering/ Centrado horizontal</h3>
+
+        <p class=" ms-3"> Además, Bootstrap también incluye una clase <span class="text-danger">.mx-auto</span> para
+            centrar horizontalmente el contenido que tiene <span class="text-danger">display: block </span> y un <span
+                class="text-danger">width </span> , estableciendo los márgenes horizontales con <span
+                class="text-danger">auto </span> .</p>
+        <div class=" p-3 border rounded" style="background-color: #edf3e1;">
+            <p class="bg-light p-3 border rounded">
+                &lt;div class="mx-auto p-2" style="width: 250px;"&gt;
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Centered element
+                <br>
+                &lt;&#47;div&gt;
+                <br>
+            </p>
+            <div class="mx-auto p-2 bg-light p-3 border rounded" style="width: 250px;">
+                Centered element
+            </div>
+        </div>
+        <hr>
+
+        <h3 class="text-primary ms-2 my-2">Negative margin/Margen Negativo </h3>
+        <p class=" ms-3">
+            En CSS, las propiedades de <span class="text-danger">margin </span>pueden usar valores negativos ( <span
+                class="text-danger">padding</span> no se pueden). Estos márgenes negativos están deshabilitados por
+            defecto , pero se pueden habilitar en <span class="text-danger">Sass</span> configurando [Nombre del
+            elemento] <span class="text-danger">$enable-negative-margins: true</span>. <br>
+            La sintaxis es prácticamente la misma que la de las utilidades de margen positivo predeterminadas, pero con
+            la adición de <span class="text-danger">n </span> antes del tamaño solicitado. Aquí hay una clase de ejemplo
+            que es lo opuesto a .mt-1:</p>
+
+        <div class="container my-3">
+            <pre class="bg-info px-3 rounded mb-0 ">
+                <h5 class="text-center border rounded py-2" >Margen Negativo.</h5>
+            <pre class="bg-light p-3 rounded mb-0">        
+            .mt-n1 {
+                margin-top: -0.25rem !important;
+            }
+            </code>
+            </code>
+        </div>
+        <h3 id="gap" class="text-primary ms-2 my-2">Gap</h3>
+        <p class=" ms-3">
+            Al usar <span class="text-danger">display: grid </span>o <span class="text-danger">display: flex</span>,
+            puede usar de la utilidades de <span class="text-danger">gap</span> en el elemento padre. Esto le ahorra
+            tener que agregar utilidades de margen a elementos secundarios individuales de una cuadrícula o contenedor
+            flexible. Las utilidades de Gap son adaptables por defecto y se generan a través de nuestra API de
+            utilidades, basada en el <span class="text-wrap">$spacers</span> mapa de Sass. </p>
+        <!-- inicio -->
+        <h5 class="bg-warning text-center">Estructura 1 (usando el sistema de filas de Bootstrap):
+
+        </h5>
+        <div class="container border bg-primary m-2 p-2 rounded">
+            <div class="row">
+
+                <div class="bg-light p-3 col-6 border rounded">Grid item 1</div>
+                <div class="bg-light p-3 col-6 border rounded">Grid item 2</div>
+                <div class="bg-light p-3 col-6 border rounded">Grid item 3</div>
+                <div class="bg-light p-3 col-6 border rounded">Grid item 4</div>
+            </div>
+        </div>
+    </div>
+    <!-- fin -->
+    <h5 class="bg-warning text-center">Estructura 2 (usando CSS Grid correctamente):
+
+    </h5>
+
+    <div class="container border bg-light m-2 p-2 rounded">
+        <div class="d-grid gap-2" style="grid-template-columns: 1fr 1fr;">
+            <div class="bg-info p-2  border">Grid item 1</div>
+            <div class="bg-info p-2  border">Grid item 2</div>
+            <div class="bg-info p-2  border">Grid item 3</div>
+            <div class="bg-info p-2  border">Grid item 4</div>
+        </div>
+    </div>
+    <!-- fin -->
+    <!-- inicio -->
+    <h5 class="bg-warning text-center">Opcional, usando g-col-
+
+    </h5>
+
+    <div class="container border bg-light m-2 p-2 rounded">
+        <div class="d-grid gap-2" style="grid-template-columns: 1fr 1fr;">
+            <div class="bg-info p-2 g-col-6 border">Grid item 1</div>
+            <div class="bg-info p-2 g-col-6 border">Grid item 2</div>
+        </div>
+        <div class="d-grid gap-2" style="grid-template-columns: 1fr 1fr;">
+            <div class="bg-info p-2 g-col-6 border">Grid item 3</div>
+            <div class="bg-info p-2 g-col-6 border">Grid item 4</div>
+        </div>
+    </div>
+    <!-- fin -->
+    <!-- 1. display: flex con clases de utilidad de Bootstrap (d-flex) -->
+    <div class="container border bg-info m-2 p-2 rounded">
+        <div class="d-flex flex-wrap">
+
+            <h3 class="text-center">1. display: flex con clases de utilidad de Bootstrap (d-flex)</h3>
+    <code>
+        &lt;div class="container border bg-light m-2 p-2 rounded"&gt; 
+        &lt;div class="d-flex flex-wrap"&gt; 
+        &lt;h3 class="text-center"&gt;1. display: flex con clases de utilidad de Bootstrap
+        (d-flex)&lt;/h3&gt;
+    </code>
+            <div class="bg-light p-3 border rounded w-50">
+                <h5>Flexbox - Caja 1</h5>
+                <code>
+            &lt;div class="bg-light p-3 border rounded w-50"&gt; 
+            &lt;h5&gt;Flexbox - Caja 1&lt;/h5&gt; 
+            &lt;p&gt;Contenido de la Caja 1.&lt;/p&gt; 
+            &lt;/div&gt;
+        </code>
+            </div>
+            <div class="bg-light p-3 border rounded w-50">
+                <h5>Flexbox - Caja 2</h5>
+                <code>
+            &lt;div class="bg-light p-3 border rounded w-50"&gt; 
+            &lt;h5&gt;Flexbox - Caja 2&lt;/h5&gt; 
+            &lt;p&gt;Contenido de la Caja 2.&lt;/p&gt; 
+            &lt;/div&gt;
+        </code>
+            </div>
+            <div class="bg-light p-3 border rounded w-50">
+                <h5>Flexbox - Caja 3</h5>
+                <code>
+            &lt;div class="bg-light p-3 border rounded w-50"&gt; 
+            &lt;h5&gt;Flexbox - Caja 3&lt;/h5&gt; 
+            &lt;p&gt;Contenido de la Caja 3.&lt;/p&gt; 
+            &lt;/div&gt;
+        </code>
+            </div>
+            <div class="bg-light p-3 border rounded w-50">
+                <h5>Flexbox - Caja 4</h5>
+                <code>
+            &lt;div class="bg-light p-3 border rounded w-50"&gt; 
+            &lt;h5&gt;Flexbox - Caja 4&lt;/h5&gt; 
+            &lt;p&gt;Contenido de la Caja 4.&lt;/p&gt; 
+            &lt;/div&gt; 
+            &lt;/div&gt; 
+            &lt;/div&gt;
+        </code>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. display: grid con clases de utilidad de Bootstrap (d-grid) -->
+    <div class="container border bg-success m-2 p-2 rounded">
+
+        <h3 class="text-center">2. display: grid con clases de utilidad de Bootstrap (d-grid)</h3>
+        <code class="text-dark">
+            &lt;div class="container border bg-light m-2 p-2 rounded"&gt; 
+            &lt;h3 class="text-center"&gt;2. display: grid con clases de utilidad de Bootstrap (d-grid)&lt;/h3&gt;
+            &lt;div class="d-grid gap-2" style="grid-template-columns: 1fr 1fr;"&gt;
+
+        </code>
+        <div class="d-grid gap-2" style="grid-template-columns: 1fr 1fr;">
+            <div class="bg-light p-3 border rounded">
+                <h5>Grid - Caja 1</h5>
+                <code>
+                    &lt;div class="bg-light p-3 border rounded"&gt;<br>
+                    &lt;h5&gt;Grid - Caja 1&lt;/h5&gt;<br>
+                    &lt;p&gt;Contenido de la Caja 1.&lt;/p&gt;<br>
+                    &lt;/div&gt;
+                </code>
+            </div>
+            <div class="bg-light p-3 border rounded">
+                <h5>Grid - Caja 2</h5>
+                <p>&lt;div class="bg-light p-3 border rounded"&gt;<br>
+                    &lt;h5&gt;Grid - Caja 2&lt;/h5&gt;<br>
+                    &lt;p&gt;Contenido de la Caja 2.&lt;/p&gt;<br>
+                    &lt;/div&gt;
+                </p>
+            </div>
+            <div class="bg-light p-3 border rounded">
+                <h5>Grid - Caja 3</h5>
+                <p>&lt;div class="bg-light p-3 border rounded"&gt;<br>
+                    &lt;h5&gt;Grid - Caja 3&lt;/h5&gt;<br>
+                    &lt;p&gt;Contenido de la Caja 3.&lt;/p&gt;<br>
+                    &lt;/div&gt;
+                </p>
+            </div>
+            <div class="bg-light p-3 border rounded">
+                <h5>Grid - Caja 4</h5>
+                <p>&lt;div class="bg-light p-3 border rounded"&gt;<br>
+                    &lt;h5&gt;Grid - Caja 4&lt;/h5&gt;<br>
+                    &lt;p&gt;Contenido de la Caja 4.&lt;/p&gt;<br>
+                    &lt;/div&gt;</p>
+            </div>
+        </div>
+    </div>
+    <!-- 3. display: flex con estilos CSS personalizados -->
+    <div class="container border bg-info m-2 p-2 rounded">
+        <h3 class="text-center">3. display: flex con estilos CSS personalizados</h3>
+        <p> &lt;div class="container border bg-light m-2 p-2 rounded"&gt;<br>
+            &lt;h3 class="text-center"&gt;3. display: flex con estilos CSS personalizados&lt;/h3&gt;<br>
+            &lt;div style="display: flex; flex-wrap: wrap;"&gt;<br>
+        </p>
+        <div style="display: flex; flex-wrap: wrap;">
+            <div
+                style="width: 50%; padding: 1rem; border: 1px solid #ccc; border-radius: 0.25rem; background-color: #f8f9fa;">
+                <h5>Flexbox CSS - Caja 1</h5>
+                <p>&lt;div
+                    style="width: 50%;<br> padding: 1rem;<br> border: 1px solid #ccc; <br> border-radius:
+                    0.25rem;<br>
+                    background-color: #f8f9fa;"&gt;<br>
+                    &lt;h5&gt;Flexbox CSS - Caja 1&lt;/h5&gt;<br>
+                    &lt;p&gt;Contenido de la Caja 1.&lt;/p&gt;<br>
+                    &lt;/div&gt;<br> <br>
+                </p>
+            </div>
+            <div
+                style="width: 50%; padding: 1rem; border: 1px solid #ccc; border-radius: 0.25rem; background-color: #f8f9fa;">
+                <h5>Flexbox CSS - Caja 2</h5>
+                <p>&lt;div
+                    style="width: 50%;<br> padding: 1rem;<br> border: 1px solid #ccc; <br> border-radius:
+                    0.25rem;<br>
+                    background-color: #f8f9fa;"&gt;<br>
+                    &lt;h5&gt;Flexbox CSS - Caja 2&lt;/h5&gt;<br>
+                    &lt;p&gt;Contenido de la Caja 2.&lt;/p&gt;<br>
+                    &lt;/div&gt;<br>
+                </p>
+            </div>
+            <div
+                style="width: 50%; padding: 1rem; border: 1px solid #ccc; border-radius: 0.25rem; background-color: #f8f9fa;">
+                <h5>Flexbox CSS - Caja 3</h5>
+                <p>
+                    &lt;div
+                    style="width: 50%;<br> padding: 1rem;<br> border: 1px solid #ccc; <br> border-radius:
+                    0.25rem;<br>
+                    background-color: #f8f9fa;"&gt;
+                    &lt;h5&gt;Flexbox CSS - Caja 3&lt;/h5&gt;<br>
+                    &lt;p&gt;Contenido de la Caja 3.&lt;/p&gt;<br>
+                    &lt;/div&gt;<br>
+                </p>
+            </div>
+            <div
+                style="width: 50%; padding: 1rem; border: 1px solid #ccc; border-radius: 0.25rem; background-color: #f8f9fa;">
+                <h5>Flexbox CSS - Caja 4</h5>
+                <p> &lt;div
+                    style="width: 50%;<br> padding: 1rem;<br> border: 1px solid #ccc;<br> border-radius:
+                    0.25rem;<br>
+                    background-color: #f8f9fa;"&gt;<br>
+                    &lt;h5&gt;Flexbox CSS - Caja 4&lt;/h5&gt;<br>
+                    &lt;p&gt;Contenido de la Caja 4.&lt;/p&gt;<br>
+                    &lt;/div&gt;<br>
+                    &lt;/div&gt;<br>
+                    &lt;/div&gt;
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- 4. display: grid con estilos CSS personalizados -->
+    <div class="container border bg-success m-2 p-2 rounded">
+        <h3 class="text-center">4. display: grid con estilos CSS personalizados</h3>
+        <p>&lt;div class="container border bg-light m-2 p-2 rounded"&gt;<br>
+            &lt;h3 class="text-center"&gt;4. display: grid con estilos CSS personalizados&lt;/h3&gt;<br>
+            &lt;div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;"&gt;<br>
+        </p>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;">
+            <div style="padding: 1rem; border: 1px solid #ccc; border-radius: 0.25rem; background-color: #f8f9fa;">
+                <h5>Grid CSS - Caja 1</h5>
+                <p> &lt;div style="padding: 1rem; border: 1px solid #ccc; border-radius: 0.25rem; background-color:
+                    #f8f9fa;"&gt;<br>
+                    &lt;h5&gt;Grid CSS - Caja 1&lt;/h5&gt;<br>
+                    &lt;p&gt;Contenido de la Caja 1.&lt;/p&gt;<br>
+                    &lt;/div&gt;
+                </p>
+            </div>
+            <div style="padding: 1rem; border: 1px solid #ccc; border-radius: 0.25rem; background-color: #f8f9fa;">
+                <h5>Grid CSS - Caja 2</h5>
+                <p>&lt;div style="padding: 1rem; border: 1px solid #ccc; border-radius: 0.25rem; background-color:
+                    #f8f9fa;"&gt;<br>
+                    &lt;h5&gt;Grid CSS - Caja 2&lt;/h5&gt;<br>
+                    &lt;p&gt;Contenido de la Caja 2.&lt;/p&gt;<br>
+                    &lt;/div&gt;
+                </p>
+            </div>
+            <div style="padding: 1rem; border: 1px solid #ccc; border-radius: 0.25rem; background-color: #f8f9fa;">
+                <h5>Grid CSS - Caja 3</h5>
+                <p>&lt;div style="padding: 1rem; border: 1px solid #ccc; border-radius: 0.25rem; background-color:
+                    #f8f9fa;"&gt;<br>
+                    &lt;h5&gt;Grid CSS - Caja 3&lt;/h5&gt;<br>
+                    &lt;p&gt;Contenido de la Caja 3.&lt;/p&gt;<br>
+                    &lt;/div&gt;
+                </p>
+            </div>
+            <div style="padding: 1rem; border: 1px solid #ccc; border-radius: 0.25rem; background-color: #f8f9fa;">
+                <h5>Grid CSS - Caja 4</h5>
+                <p> &lt;div style="padding: 1rem; border: 1px solid #ccc; border-radius: 0.25rem; background-color:
+                    #f8f9fa;"&gt;<br>
+                    &lt;h5&gt;Grid CSS - Caja 4&lt;/h5&gt;<br>
+                    &lt;p&gt;Contenido de la Caja 4.&lt;/p&gt;<br>
+                    &lt;/div&gt;<br>
+                    &lt;/div&gt;<br>
+                    &lt;/div&gt;<br>
+
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- uno sugerido -->
+
+    <div class="container border bg-warning m-2 p-2 rounded">
+        <h3 class="text-center">1. display: flex con clases de utilidad de Bootstrap (d-flex)</h3>
+        <code>&lt;div class="d-flex flex-wrap"&gt;</code>
+        <div class="d-flex flex-wrap">
+            <div class="bg-light p-3 border rounded w-50">
+                <h5>Flexbox - Caja 1</h5>
+                <code>&lt;div class="bg-light p-3 border rounded w-50"&gt;</code>
+                <p>Contenido de la Caja 1.</p>
+                <code>&lt;/div&gt;</code>
+            </div>
+            <div class="bg-light p-3 border rounded w-50">
+                <h5>Flexbox - Caja 2</h5>
+                <code>&lt;div class="bg-light p-3 border rounded w-50"&gt;</code>
+                <p>Contenido de la Caja 2.</p>
+                <code>&lt;/div&gt;</code>
+            </div>
+            <div class="bg-light p-3 border rounded w-50">
+                <h5>Flexbox - Caja 3</h5>
+                <code>&lt;div class="bg-light p-3 border rounded w-50"&gt;</code>
+                <p>Contenido de la Caja 3.</p>
+                <code>&lt;/div&gt;</code>
+            </div>
+            <div class="bg-light p-3 border rounded w-50">
+                <h5>Flexbox - Caja 4</h5>
+                <code>&lt;div class="bg-light p-3 border rounded w-50"&gt;</code>
+                <p>Contenido de la Caja 4.</p>
+                <code>&lt;/div&gt;</code>
+            </div>
+        </div>
+    </div>
+    <!-- dos sugerido -->
+
+    <div class="container border bg-danger m-2 p-2 rounded">
+        <h3 class="text-center">2. display: grid con clases de utilidad de Bootstrap (d-grid)</h3>
+        <code>&lt;div class="d-grid gap-2" style="grid-template-columns: 1fr 1fr;"&gt;</code>
+        <div class="d-grid gap-2" style="grid-template-columns: 1fr 1fr;">
+            <div class="bg-light p-3 border rounded">
+                <h5>Grid - Caja 1</h5>
+                <code>&lt;div class="bg-light p-3 border rounded"&gt;</code>
+                <p>Contenido de la Caja 1.</p>
+                <code>&lt;/div&gt;</code>
+            </div>
+            <div class="bg-light p-3 border rounded">
+                <h5>Grid - Caja 2</h5>
+                <code>&lt;div class="bg-light p-3 border rounded"&gt;</code>
+                <p>Contenido de la Caja 2.</p>
+                <code>&lt;/div&gt;</code>
+            </div>
+            <div class="bg-light p-3 border rounded">
+                <h5>Grid - Caja 3</h5>
+                <code>&lt;div class="bg-light p-3 border rounded"&gt;</code>
+                <p>Contenido de la Caja 3.</p>
+                <code>&lt;/div&gt;</code>
+            </div>
+            <div class="bg-light p-3 border rounded">
+                <h5>Grid - Caja 4</h5>
+                <code>&lt;div class="bg-light p-3 border rounded"&gt;</code>
+                <p>Contenido de la Caja 4.</p>
+                <code>&lt;/div&gt;</code>
+            </div>
+        </div>
+    </div>
+    <!-- tres sugerido -->
+
+    <div class="container border bg-warning m-2 p-2 rounded">
+        <h3 class="text-center">3. display: flex con estilos CSS personalizados</h3>
+        <code>&lt;div style="display: flex; flex-wrap: wrap;"&gt;</code>
+        <div style="display: flex; flex-wrap: wrap;">
+            <div
+                style="width: 50%; padding: 1rem; border: 1px solid #ccc; border-radius: 0.25rem; background-color: #f8f9fa;">
+                <h5>Flexbox CSS - Caja 1</h5>
+                <code>&lt;div style="..."&gt;</code>
+                <p>Contenido de la Caja 1.</p>
+                <code>&lt;/div&gt;</code>
+            </div>
+            <div
+                style="width: 50%; padding: 1rem; border: 1px solid #ccc; border-radius: 0.25rem; background-color: #f8f9fa;">
+                <h5>Flexbox CSS - Caja 2</h5>
+                <code>&lt;div style="..."&gt;</code>
+                <p>Contenido de la Caja 2.</p>
+                <code>&lt;/div&gt;</code>
+            </div>
+            <div
+                style="width: 50%; padding: 1rem; border: 1px solid #ccc; border-radius: 0.25rem; background-color: #f8f9fa;">
+                <h5>Flexbox CSS - Caja 3</h5>
+                <code>&lt;div style="..."&gt;</code>
+                <p>Contenido de la Caja 3.</p>
+                <code>&lt;/div&gt;</code>
+            </div>
+            <div
+                style="width: 50%; padding: 1rem; border: 1px solid #ccc; border-radius: 0.25rem; background-color: #f8f9fa;">
+                <h5>Flexbox CSS - Caja 4</h5>
+                <code>&lt;div style="..."&gt;</code>
+                <p>Contenido de la Caja 4.</p>
+                <code>&lt;/div&gt;</code>
+            </div>
+        </div>
+    </div>
+    <!-- cuatro sugerido -->
+
+    <div class="container border bg-danger m-2 p-2 rounded">
+        <h3 class="text-center">4. display: grid con estilos CSS personalizados</h3>
+        <code>&lt;div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;"&gt;</code>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;">
+            <div style="padding: 1rem; border: 1px solid #ccc; border-radius: 0.25rem; background-color: #f8f9fa;">
+                <h5>Grid CSS - Caja 1</h5>
+                <code>&lt;div style="..."&gt;</code>
+                <p>Contenido de la Caja 1.</p>
+                <code>&lt;/div&gt;</code>
+            </div>
+            <div style="padding: 1rem; border: 1px solid #ccc; border-radius: 0.25rem; background-color: #f8f9fa;">
+                <h5>Grid CSS - Caja 2</h5>
+                <code>&lt;div style="..."&gt;</code>
+                <p>Contenido de la Caja 2.</p>
+                <code>&lt;/div&gt;</code>
+            </div>
+            <div style="padding: 1rem; border: 1px solid #ccc; border-radius: 0.25rem; background-color: #f8f9fa;">
+                <h5>Grid CSS - Caja 3</h5>
+                <code>&lt;div style="..."&gt;</code>
+                <p>Contenido de la Caja 3.</p>
+                <code>&lt;/div&gt;</code>
+            </div>
+            <div style="padding: 1rem; border: 1px solid #ccc; border-radius: 0.25rem; background-color: #f8f9fa;">
+                <h5>Grid CSS - Caja 4</h5>
+                <code>&lt;div style="..."&gt;</code>
+                <p>Contenido de la Caja 4.</p>
+                <code>&lt;/div&gt;</code>
+            </div>
+        </div>
+    </div>
+<p class="mx-3">La compatibilidad incluye opciones adaptables para todos los puntos de interrupción de la cuadrícula de Bootstrap, así como seis tamaños del <span class="text-danger">$spacers</span> mapa <span class="text-danger">( 0– 5) </span>. No hay ninguna <span class="text-danger">.gap-auto</span> clase de utilidad, ya que es prácticamente igual que <span class="text-danger"> .gap-0</span>.</p>
+
+<h3 class="text-primary ms-5 my-2">row-gap</h3>
+<p class=" mx-3"><span class="text-danger">row-gap</span> Establece el espacio vertical entre los elementos secundarios en el contenedor especificado.</p>
+<div class="grid gap-0 row-gap-3 grid-cols-2">
+    <div class="p-2">Grid item 1</div>
+    <div class="p-2">Grid item 2</div>
+    <div class="p-2">Grid item 3</div>
+    <div class="p-2">Grid item 4</div>
+  </div>
+
+<h3 class="text-primary ms-5 my-2">column-gap</h3>
+<p class=" mx-3"><span class="text-danger">column-gap</span>  Establece el espacio horizontal entre los elementos secundarios en el contenedor especificado.</p>
+<div class="container border bg-secondary m-2 p-2 rounded">
+    <div class="grid gap-0 column-gap-3">
+    <div class="p-2 g-col-6">Grid item 1</div>
+    <div class="p-2 g-col-6">Grid item 2</div>
+    <div class="p-2 g-col-6">Grid item 3</div>
+    <div class="p-2 g-col-6">Grid item 4</div>
+  </div>
+</div>
+
+    <!-- primary secondary  success  danger  warning info light  dark -->
+
+    </div>
     <script type="text/javascript" src="jquery/jquery-3.7.1.min.js"></script>
     <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 
