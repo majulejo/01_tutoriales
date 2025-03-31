@@ -43,6 +43,46 @@
         <h2 class="text-center display-1">TEXTO</h2>
         <p class="display-6">Documentación y ejemplos de utilidades de texto comunes para controlar la alineación, el
             ajuste, el peso y más.</p>
+        <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+        <h4>En esta página:</h4>
+        <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+
+        <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+
+        <ul>
+            <li><a href="#alignment">Text alignment/Alineación del texto</a>
+            </li>
+            <li><a href="#wrapping">Text wrapping and overflow /Ajuste y desbordamiento de texto</a>
+            </li>
+            <li><a href="#Word">Word break /Salto de palabra</a>
+            </li>
+            <li><a href="#transform">Text transform /Transformación de texto</a>
+            </li>
+            <li><a href="#size">Font size /Tamaño de Fuente</a>
+            </li>
+            <li><a href="#weight">Font weight and italics/Peso de fuente y cursiva</a>
+            </li>
+            <li><a href="#height">Line height/Altura de línea </a>
+            </li>
+            <li><a href="#Monospace">Monospace/Monoespaciado</a>
+            </li>
+            <li><a href="#reset">Reset Color/Restablecer color</a>
+            </li>
+            <li><a href="#decoration">Text decoration/ Decoración del texto</a>
+            </li>
+            <li class="list-unstyled">
+                <h4>Css</h4>
+                <ul>
+                    <li><a href="#Variables">Sass Variables/Variables de Sass</a>
+                    </li>
+                    <li><a href="#maps">Sass maps/Mapas de Sass </a>
+                    </li>
+                    <li><a href="#utilities">Sass utilities API/API de utilidades de Sass </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <!-- display -->
         <P class="display-1"><span class="text-danger">display-1 </span>Esto es un texto con tamaño display-1 </P>
         <!-- Con display aumentamos el tamaño de la fuente -->
         <P class="display-2"><span class="text-danger">display-2 </span>Esto es un texto con tamaño display-2</P>
@@ -69,7 +109,7 @@
         <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
 
         <!-- Alineación del texto -->
-        <h3 class="text-info">Text alignment/Alineación del texto</h3>
+        <h3 id="alignment" class="text-info">Text alignment/Alineación del texto</h3>
         <p>Realinee fácilmente el texto con los componentes mediante clases de alineación de texto. Para la alineación
             inicial, final y centrada, existen clases adaptables que utilizan los mismos puntos de corte de ancho de
             ventana gráfica que el sistema de cuadrícula.</p>
@@ -103,7 +143,7 @@
         <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
 
         <!-- Text wrapping and overflow /Ajuste y desbordamiento de texto -->
-        <h3 class="text-info">Text wrapping and overflow /Ajuste y desbordamiento de texto</h3>
+        <h3 id="wrapping" class="text-info">Text wrapping and overflow /Ajuste y desbordamiento de texto</h3>
 
         <p class="m-1">Envuelva el texto con una clase <span class=" text-danger">text-wrap</span>.</p>
         <div class="row border rounded m-3 p-3 bg-">
@@ -136,7 +176,7 @@
         <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
 
         <!-- Word break /Salto de palabra -->
-        <h3 class="text-info">Word break /Salto de palabra</h3>
+        <h3 id="Word" class="text-info">Word break /Salto de palabra</h3>
         <p>Evita que las cadenas de texto largas alteren el diseño de tus componentes usando <span
                 class="text-danger">.text-break</span> "to set" <span class="text-danger">word-wrap</span>: <span
                 class="text-danger">break-word</span> y <span class="text-danger">word-break</span>: <span
@@ -170,7 +210,7 @@
         <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
 
         <!-- Text transform /Transformación de texto -->
-        <h3 class="text-info">Text transform /Transformación de texto</h3>
+        <h3 id="transform" class="text-info">Text transform /Transformación de texto</h3>
         <div class="row border rounded m-3 p-3 bg-">
             <p class="text-lowercase">Lowercased text.</p>
             <p class="text-uppercase">Uppercased text.</p>
@@ -193,8 +233,9 @@
         <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
         <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
 
-        <h3 class="text-info">Font size /Tamaño de Fuente</h3>
 
+        <!-- Font size /Tamaño de Fuente -->
+        <h3 id="size" class="text-info">Font size /Tamaño de Fuente</h3>
 
         <div class="row border rounded m-3 p-3 bg-">
             <p class="fs-1 "><strong>fs-1</strong> Con fs-1 cambiamos el tamaño del texto.</p>
@@ -225,7 +266,7 @@
         <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
 
         <!-- Font weight and italics/Peso de fuente y cursiva -->
-        <h3 class="text-info">Font weight and italics/Peso de fuente y cursiva</h3>
+        <h3 id="weight" class="text-info">Font weight and italics/Peso de fuente y cursiva</h3>
         <p>Cambie rápidamente el <span class="text-danger"> font-weight</span> o <span class="text-danger"> font-style
             </span>del texto con estas utilidades. <span class="text-danger"> font-style </span>Las utilidades se
             abrevian como <span class="text-danger"> .fst-* </span>y <span class="text-danger"> font-weight
@@ -261,7 +302,8 @@
         <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
         <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
 
-        <h3 class="text-info">Line height/Altura de línea </h3>
+        <!-- Line height/Altura de línea -->
+        <h3 id="height" class="text-info">Line height/Altura de línea </h3>
 
         <p>Cambiar la altura de la línea con utilidades.<span class="text-danger"> .lh-*</span>.</p>
 
@@ -298,7 +340,7 @@
 
 
         <!-- Monospace/Monoespaciado -->
-        <h3 class="text-info">Monospace/Monoespaciado</h3>
+        <h3 id="Monospace" class="text-info">Monospace/Monoespaciado</h3>
 
         <p>Cambie una selección a nuestra pila de fuentes monoespaciadas con <span class="text-danger">
                 .font-monospace.</span>.</p>
@@ -321,7 +363,7 @@
 
 
         <!-- Reset Color/Restablecer color -->
-        <h3 class="text-info">Reset Color/Restablecer color</h3>
+        <h3 id="reset" class="text-info">Reset Color/Restablecer color</h3>
         <p>Restablezca el color de un texto o enlace con <span class="text-danger"> .text-reset</span>, para que herede
             el color de su elemento principal. .</p>
 
@@ -344,44 +386,49 @@
         <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
 
         <!-- Text decoration/ Decoración del texto -->
-        <h3 class="text-info">Text decoration/ Decoración del texto</h3>
+
+        <h3 id="decoration" class="text-info">Text decoration/ Decoración del texto</h3>
         <div class="row bg-light m-3 p-3">
             <p>Decore el texto en los componentes con clases de decoración de texto.</p>
             <hr>
 
             <div class="row border rounded m-3 p-3 bg-">
-                <p class="text-decoration-underline">Este texto tiene una linea debajo.</p>
-                <p class="text-decoration-line-through">Este texto tiene una linea que lo atraviesa.</p>
-                <p><a href="#" class="text-decoration-none">A este enlace se le ha quitado la decoración.</a></p>
-                <p> <a href="#">A este enlace no se le ha quitado la decoración.</a></p>
+                    <h4>Css</h4>
+                    <ul>
+                        <li class="text-decoration-underline">Este texto tiene una linea debajo con <span class="text-danger">class="text-decoration-underline"</span> 
+                        </li>
+                        <li class="text-decoration-line-through">Este texto tiene una linea que lo atraviesa con <span class="text-danger">class="text-decoration-line-through"</span> 
+                        </li>
+                        <li class="text-decoration-none">A este enlace se le ha quitado la decoración con <span class="text-danger">class="text-decoration-none"</span> 
+                        </li>
+                        <li ><a href="#" class="text-decoration-none">A este enlace se le ha quitado la decoración con <span class="text-danger">class="text-decoration-none"</span></a></li>
+                        <li class="list-unstyled">Este texto se le ha eliminado el punto del listado con <span class="text-danger">class="list-unstyled"</span> </li>
+                    </ul>
+                
                 <hr>
                 <p>HTML</p>
                 <hr>
                 <pre>
-     &lt;p class="text-decoration-underline"&gt;Este texto tiene una linea debajo.&lt;/p&gt;
-     &lt;p class="text-decoration-line-through"&gt;Este texto tiene una linea que lo atraviesa.&lt;/p&gt;
-     &lt;a href="#" class="text-decoration-none"&gt;A este enlace se le ha quitado la decoración.&lt;/a&gt; 
-     &lt;a href="#" class="text-decoration-none"&gt;A este enlace no se le ha quitado la decoración.&lt;/a&gt;
+    &lt;p class="text-decoration-underline"&gt;Este texto tiene una linea debajo.&lt;/p&gt;
+    &lt;p class="text-decoration-line-through"&gt;Este texto tiene una linea que lo atraviesa.&lt;/p&gt;
+    &lt;a href="#" class="text-decoration-none"&gt;A este enlace se le ha quitado la decoración.&lt;/a&gt; 
+    &lt;a href="#" class="text-decoration-none"&gt;A este enlace no se le ha quitado la decoración.&lt;/a&gt;
     </pre>
             </div>
 
-            <hr class="bg-danger">
-            <hr class="bg-danger">
-
-            <br>
-            <hr>
+            
 
         </div>
-        <hr style="background-color: blue;">
-        <hr style="background-color: blue;">
+
         <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
         <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
         <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
-        
+
 
         <!--------------------- CSS ------------------------------->
         <h3 class="text-primary ms-5 my-2">CSS</h3>
-        <h5 class="text-primary ms-5 my-2 text-decoration-underline">Sass Variables/Variables de Sass </h5>
+        <h5 id="Variables" class="text-primary ms-5 my-2 text-decoration-underline">Sass Variables/Variables de Sass
+        </h5>
         <p class="mx-3">Variables Sass relacionadas con el tipo y la fuente predeterminados:
 
         </p>
@@ -426,7 +473,7 @@
     $h6-font-size:                $font-size-base;
 </pre>
         </div>
-        <h5 class="text-primary ms-5 my-2 text-decoration-underline">Sass maps/Mapas de Sass </h5>
+        <h5 id="maps" class="text-primary ms-5 my-2 text-decoration-underline">Sass maps/Mapas de Sass </h5>
         <p class="mx-3">Las utilidades de tamaño de fuente se generan a partir de este mapa, en combinación con nuestra
             API de utilidades. </p>
         <div class="border bg-light mx-3 rounded">
@@ -459,7 +506,8 @@
         );
         </pre>
         </div>
-        <h5 class="text-primary ms-5 my-2 text-decoration-underline"> Sass utilities API/API de utilidades de Sass </h5>
+        <h5 id="utilities" class="text-primary ms-5 my-2 text-decoration-underline"> Sass utilities API/API de
+            utilidades de Sass </h5>
         <p class="mx-3">Las utilidades de fuentes y texto se declaran en nuestra API de utilidades en [Nombre del
             archivo] <span class="text-danger">scss/_utilities.scss.</span> <a
                 href="https://getbootstrap.com/docs/5.3/utilities/api/#using-the-api">Aprenda a usar la API de
