@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>018_color de Bootstrap v5.3.2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Definir la variable --bs-success-rgb */
+        :root {
+          --bs-success-rgb: 25, 135, 84; /* RGB para el color verde éxito (#198754) */
+        }
+        
+    </style>
+</head>
+<body>
+    <h1 class="colores bg-info text-center display-1  py-3">018_color</h1>
+    <!-- primary secondary success danger warning info light dark -->
+    <h2 class="text-warning text-center"> <a href="https://getbootstrap.com/docs/5.3/utilities/colors/"
+            target="_blank" class="text-danger">COLORS</a></h2>
+    <div class="container mt-4">
+
+        <p class="display-6">Transmita el significado a través de <span class="text-danger fw-bolder">color </span> con un puñado de clases de servicios públicos de color. <br> Incluye apoyo para los vínculos de estilo con los estados flotantes, también.</p>
+
+            <div class="row border  m-3 p-3 " style="background-color:rgb(186, 241, 198);">
+                <p><span class="fw-bolder">Consejo de accesibilidad: </span> Usar el color para añadir significado sólo proporciona una indicación visual, que no será transmitida a los usuarios de tecnologías de asistencia como lectores de pantalla. Por favor, asegúrese de que el significado es obvio por el contenido en sí (por ejemplo, el texto visible con un <a href="https://getbootstrap.com/docs/5.3/getting-started/accessibility/#color-contrast" target="_blank ">suficiente contraste de color</a> ) o que se incluya mediante medios alternativos, como texto adicional oculto en la clase
+                    <span class="text-danger">.visually-hidden </span>. 
+                </p>
+            </div>
+
+        <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+        <h4>En esta página:</h4>
+        <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+
+        <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+
+        <ul>
+            <li><a href="#text_color">Colores de texto</a>
+            </li>
+            <li><a href="#opacity">Opacity / Opacidad</a>
+            </li>
+            <li><a href="#example">Example/ Ejemplo</a>
+            </li>
+            <li><a href="#specificity">Specificity/ Especificidad</a>
+            </li>
+            <li class="list-unstyled">
+                <h4>Css</h4>
+                <ul>
+                    <li><a href="#Variables">Sass Variables/Variables de Sass</a>
+                    </li>
+                    <li><a href="#maps">Sass maps/Mapas de Sass </a>
+                    </li>
+                    <li><a href="#utilities">Sass utilities API/API de utilidades de Sass </a>
+                    </li>
+                    <li><a href="#mixins">Sass mixins / Mezclas de Sass </a>
+                    </li>
+                    <li><a href="#api">Sass utilities API/ API de utilidades de Sass</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+        <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+
+        <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+    </div>
+    <!-- --------------------------------------------------------------- -->
+    <!-- Colores de Texto -->
+
+    <div class="container mt-4">
+        <h3 id="text_color" class="text-info">Colors/ Colores</h3>
+        <p>Colorizar el texto con utilidades en color. Si desea colorear enlaces, puede utilizar el <a href="https://getbootstrap.com/docs/5.3/helpers/colored-links/">.link-*clases de ayudantes </a>  que tienen <span class="text-danger"> :hover </span>y estados <span class="text-danger"> :focus </span>.</p>
+        
+        <div class="row border  m-3 p-3 " style="background-color:rgb(193, 232, 240);">
+                <p>as utilidades de color, como <span class="text-danger">.text-* </span>las generadas a partir de nuestro mapa Sass original, <span class="text-danger">$theme-colors </span>aún no responden a los modos de color; sin embargo, cualquier  utilidad <span class="text-danger">.text-*-emphasis </span>sí lo hará. Esto se solucionará en la versión 6.
+                </p>
+        </div>
+            <div class="row border rounded m-3 p-3 bg-">
+            <p class="text-primary">.text-primary</p>
+<p class="text-primary-emphasis">.text-primary-emphasis</p>
+<p class="text-secondary">.text-secondary</p>
+<p class="text-secondary-emphasis">.text-secondary-emphasis</p>
+<p class="text-success">.text-success</p>
+<p class="text-success-emphasis">.text-success-emphasis</p>
+<p class="text-danger">.text-danger</p>
+<p class="text-danger-emphasis">.text-danger-emphasis</p>
+<p class="text-warning bg-dark">.text-warning</p>
+<p class="text-warning-emphasis">.text-warning-emphasis</p>
+<p class="text-info bg-dark">.text-info</p>
+<p class="text-info-emphasis">.text-info-emphasis</p>
+<p class="text-light bg-dark">.text-light</p>
+<p class="text-light-emphasis">.text-light-emphasis</p>
+<p class="text-dark bg-white">.text-dark</p>
+<p class="text-dark-emphasis">.text-dark-emphasis</p>
+
+<p class="text-body">.text-body</p>
+<p class="text-body-emphasis">.text-body-emphasis</p>
+<p class="text-body-secondary">.text-body-secondary</p>
+<p class="text-body-tertiary">.text-body-tertiary</p>
+
+<p class="text-black bg-white">.text-black</p>
+<p class="text-white bg-dark">.text-white</p>
+<p class="text-black-50 bg-white">.text-black-50</p>
+<p class="text-white-50 bg-dark">.text-white-50</p>
+<hr>
+            <p>HTML</p>
+            <hr>
+<pre>
+    &lt;p class="<span class="text-danger">text-primary"</span>.text-primary&lt;/p&gt;
+    &lt;p class="<span class="text-danger">text-primary-emphasis"</span>.text-primary-emphasis&lt;/p&gt;
+    &lt;p class="<span class="text-danger">text-secondary"</span>.text-secondary&lt;/p&gt;
+    &lt;p class="<span class="text-danger">text-secondary-emphasis"</span>.text-secondary-emphasis&lt;/p&gt;
+    &lt;p class="<span class="text-danger">text-success"</span>.text-success&lt;/p&gt;
+    &lt;p class="<span class="text-danger">text-success-emphasis"</span>.text-success-emphasis&lt;/p&gt;
+    &lt;p class="<span class="text-danger">text-danger"</span>.text-danger&lt;/p&gt;
+    &lt;p class="<span class="text-danger">text-danger-emphasis"</span>.text-danger-emphasis&lt;/p&gt;
+    &lt;p class="<span class="text-danger">text-warning bg-dark"</span>.text-warning&lt;/p&gt;
+    &lt;p class="<span class="text-danger">text-warning-emphasis"</span>.text-warning-emphasis&lt;/p&gt;
+    &lt;p class="<span class="text-danger">text-info bg-dark"</span>.text-info&lt;/p&gt;
+    &lt;p class="<span class="text-danger">text-info-emphasis"</span>.text-info-emphasis&lt;/p&gt;
+    &lt;p class="<span class="text-danger">text-light bg-dark"</span>.text-light&lt;/p&gt;
+    &lt;p class="<span class="text-danger">text-light-emphasis"</span>.text-light-emphasis&lt;/p&gt;
+    &lt;p class="<span class="text-danger">text-dark bg-white"</span>.text-dark&lt;/p&gt;
+    &lt;p class="<span class="text-danger">text-dark-emphasis"</span>.text-dark-emphasis&lt;/p&gt;
+
+    &lt;p class="<span class="text-danger">text-body"</span>.text-body&lt;/p&gt;
+    &lt;p class="<span class="text-danger">text-body-emphasis"</span>.text-body-emphasis&lt;/p&gt;
+    &lt;p class="<span class="text-danger">text-body-secondary"</span>.text-body-secondary&lt;/p&gt;
+    &lt;p class="<span class="text-danger">text-body-tertiary"</span>.text-body-tertiary&lt;/p&gt;
+
+    &lt;p class="<span class="text-danger">text-black bg-white"</span>.text-black&lt;/p&gt;
+    &lt;p class="<span class="text-danger">text-white bg-dark"</span>.text-white&lt;/p&gt;
+    &lt;p class="<span class="text-danger">text-black-50 bg-white"</span>.text-black-50&lt;/p&gt;
+    &lt;p class="<span class="text-danger">text-white-50 bg-dark"</span>.text-white-50&lt;/p&gt;      
+</pre>
+</div>
+<div class="row border  m-3 p-3 " style="background-color:#ecf0b3;">
+    <p><span class="fw-bolder">Obsolescencia: </span> Con la incorporación de utilidades y variables CSS para utilidades de texto <span class="text-danger">.text-opacity-* </span>,<span class="text-danger">.text-black-50 </span> estas herramientas <span class="text-danger">.text-white-50 </span>quedaron obsoletas a partir de la versión 5.1.0. Se eliminarán en la versión 6.0.0.</p>
+</div>
+<div class="row border  m-3 p-3 " style="background-color:#ecf0b3;">
+    <p><span class="fw-bolder">Obsolescencia: </span> Con la incorporación de los colores y variables de tema ampliados, la  utilidad <span class="text-danger">.text-muted </span> ha quedado obsoleta a partir de la v5.3.0. Su valor predeterminado también se ha reasignado a la nueva  variable CSS <span class="text-danger">--bs-secondary-color </span> para una mejor compatibilidad con los modos de color. Se eliminará en la v6.0.0.</p>
+    </p>
+</div>
+        <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+        <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+        <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+
+
+
+
+<!-- Opacity /Opacidad -->
+<h3 id="opacity" class="text-info">Opacity /Opacidad</h3>
+
+<!-- inicio agregado caja inferior -->
+<small class="d-inline-flex mb-3 px-2 py-1 fw-semibold text-success-emphasis bg-success-subtle border border-success-subtle rounded-2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Agregado en v5.1.0</font></font></small>
+<!-- fin agregado caja inferior -->
+
+<p>
+    A partir de la versión 5.1.0, las utilidades de <span class="text-danger">color de texto </span>se generan con Sass mediante variables CSS. Esto permite cambios de color en tiempo real sin compilación y cambios dinámicos de transparencia alfa.
+.</p>
+<h5 class="fw-bolder">¿Como funciona?</h5>
+<p>Consideremos nuestra utilidad predeterminada <span class="text-danger">.text-primary </span>.</p>
+<div class="row border rounded m-3 p-3 bg-">
+    
+<pre>
+    .text-primary {
+        --bs-text-opacity: 1;
+        color: rgba(var(--bs-primary-rgb), var(--bs-text-opacity)) !important;
+    }
+</pre>
+</div>
+<p>Usamos una versión RGB de nuestra variable CSS <span class="text-danger">--bs-primary </span>
+(con el valor <span class="text-danger">13, 110, 253 </span>
+) y adjuntamos una segunda variable CSS, <span class="text-danger">--bs-text-opacity </span>
+, para la transparencia alfa (con un valor predeterminado <span class="text-danger">1 </span>
+gracias a una variable CSS local). Esto significa que, al usar <span class="text-danger">.text-primary </span>
+`now`, el valor calculado del <span class="text-danger">color </span>es <span class="text-danger">
+    rgba(13, 110, 253, 1) </span>. La variable CSS local dentro de cada <span class="text-danger"> .text-* </span>
+clase evita problemas de herencia, por lo que las instancias anidadas de las utilidades no modifican automáticamente la transparencia alfa.</p>
+<div class="row border rounded m-3 p-3 bg-">
+    <div class="row">
+        <body class="p-4">
+            <div class="container">
+                <!-- Ejemplo con opacidad personalizada  -->
+                <div class="container mt-2">
+                    <h4 class="text-success mb-4 text-decoration-underline">Opacidad de Texto en Bootstrap</h4>
+                    <p class="text-primary text-opacity-25">Texto con opacidad del 25%</p>
+                    <p class="text-primary text-opacity-50">Texto con opacidad del 50%</p>
+                    <p class="text-primary text-opacity-75">Texto con opacidad del 75%</p>
+                    <p class="text-primary text-opacity-100">Texto con opacidad del 100%</p>
+                </div>
+                <hr>
+                <!-- Ejemplo Combinando Colores y Opacidad -->
+                <div class="container mt-2">
+                    <h4 class="text-success mb-4 text-decoration-underline">Combinando Colores y Opacidad</h4>
+                    <p class="text-danger text-opacity-25">Texto rojo con opacidad del 25%</p>
+                    <p class="text-success text-opacity-50">Texto verde con opacidad del 50%</p>
+                    <p class="text-warning text-opacity-75">Texto amarillo con opacidad del 75%</p>
+                    <p class="text-info text-opacity-100">Texto azul claro con opacidad del 100%</p>
+                </div>
+                <hr>
+
+                <!-- Ejemplo Uso en Componentes para ver la transparencia -->
+                <div class="container mt-2">
+                    <h4 class="text-success mb-4 text-decoration-underline">Uso en Componentes</h4>
+
+                    <h1 class="text-dark text-opacity-50">Encabezado con Opacidad del 50%</h1>
+                    <button class="btn btn-primary text-white text-opacity-75">Botón con Opacidad</button>
+                </div>
+
+                <hr>
+
+                <!-- Ejemplo Opacidad en Fondosa -->
+                <div class="container mt-2">
+                    <h4 class="text-success mb-4 text-decoration-underline">Opacidad en Fondos</h4>
+                    <div class="bg-primary bg-opacity-25 p-3 my-2 text-white">Fondo con opacidad del 25%</div>
+                    <div class="bg-success bg-opacity-50 p-3 my-2 text-white">Fondo con opacidad del 50%</div>
+                </div>
+            </div>
+        </body>
+    </div>
+    <hr>
+    <p>HTML</p>
+    <hr>
+<pre>
+&lt;div class="container mt-2"&gt;
+    &lt;h4 class="text-success mb-4 text-decoration-underline"&gt;Combinando Colores y Opacidad&lt;/h4&gt;
+    &lt;p class="text-danger text-opacity-25"&gt;Texto rojo con opacidad del 25%&lt;/p&gt;
+    &lt;p class="text-success text-opacity-50"&gt;Texto verde con opacidad del 50%&lt;/p&gt;
+    &lt;p class="text-warning text-opacity-75"&gt;Texto amarillo con opacidad del 75%&lt;/p&gt;
+    &lt;p class="text-info text-opacity-100"&gt;Texto azul claro con opacidad del 100%&lt;/p&gt;
+&lt;/div&gt;
+    &lt;hr&gt;
+
+&lt;!-- Ejemplo Uso en Componentes para ver la transparencia --&gt;
+&lt;div class="container mt-2"&gt;
+    &lt;h4 class="text-success mb-4 text-decoration-underline"&gt;Uso en Componentes&lt;/h4&gt;
+    &lt;h1 class="text-dark text-opacity-50"&gt;Encabezado con Opacidad del 50%&lt;/h1&gt;
+    &lt;button class="btn btn-primary text-white text-opacity-75"&gt;Botón con Opacidad&lt;/button&gt;
+&lt;/div&gt;
+    &lt;hr&gt;
+&lt;!-- Ejemplo Opacidad en Fondosa --&gt;
+&lt;div class="container mt-2"&gt;
+    &lt;h4 class="text-success mb-4 text-decoration-underline"&gt;Opacidad en Fondos&lt;/h4&gt;
+    &lt;div class="bg-primary bg-opacity-25 p-3 my-2 text-white"&gt;Fondo con opacidad del 25%&lt;/div&gt;
+    &lt;div class="bg-success bg-opacity-50 p-3 my-2 text-white"&gt;Fondo con opacidad del 50%&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+</div>
+<hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+<div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+<hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+
+
+<!-- Example  / Ejemplo -->
+<h3 id="example" class="text-info">Example / Ejemplo</h3>
+<p>Para cambiar esa opacidad, anule <span class="text-danger">--bs-text-opacity </span>mediante estilos personalizados o estilos en línea.</p>
+<div class="row border rounded m-3 p-3 bg-">
+    <div class="text-primary">Este es el texto principal predeterminado</div>
+<div class="text-primary" style="--bs-text-opacity: .5;">Este es el texto principal con una opacidad del 50 %</div>
+    <hr>
+    <p>HTML</p>
+    <hr>
+    <pre>
+&lt;div class="bg-success p-2 text-white"&gt;Este es el fondo predeterminado para bg-success. &lt;/div&gt;
+&lt;div class="bg-success p-2" <span class="text-danger">style="--bs-bg-opacity: .5;"</span>
+&gt;Este es el fondo para bg-success. con una opacidad del 50%  &lt;/div&gt;
+</pre>
+</div>
+<p>O elija entre cualquiera de las utilidades:<span class="text-danger"> .text-opacity</span>.</p>
+<div class="row border rounded m-3 p-3 bg-">
+    <div class="text-primary">Este es el texto principal predeterminado</div>
+    <div class="text-primary text-opacity-75">Este es un texto primario con una opacidad del 75%</div>
+    <div class="text-primary text-opacity-50">Este es un texto primario con una opacidad del 50%.</div>
+    <div class="text-primary text-opacity-25">Este es un texto primario con una opacidad del 25%.</div>
+    <hr>
+    <p>HTML</p>
+    <hr>
+    <pre>
+&lt;div class=<span class="text-danger">"text-primary"</span>&gt;Este es el bg-success por defecto.&lt;/div&gt;
+&lt;div class=<span class="text-danger">"text-primary text-opacity-75"</span>&gt;Este es un texto primario con una opacidad del 75%&lt;/div&gt;
+&lt;div class=<span class="text-danger">"text-primary text-poacity-50"</span>&gt;Este es un texto primario con una opacidad del 50%&lt;/div&gt;
+&lt;div class=<span class="text-danger">"text-primary text-opacity-25"</span>&gt;Este es un texto primario con una opacidad del 25%&lt;/div&gt;
+</pre>
+</div>
+
+<span class="text-danger"></span>
+
+<hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+<div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+<hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+
+
+    <!-- Specificity/ Especificidad -->
+<h3 id="specificity" class="text-info">Specificity/ Especificidad</h3>
+<p>A veces, las clases contextuales no se pueden aplicar debido a la especificidad de otro selector. En algunos casos, una solución alternativa suficiente es encapsular el contenido del elemento en uno <span class="text-danger">&lt;div&gt; </span>o más elementos semánticos con la clase deseada.</p>
+
+<hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+<div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+<hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+
+
+<!--------------------- CSS ------------------------------->
+<h3 class="text-primary ms-5 my-2">CSS</h3>
+<p>Además de la siguiente funcionalidad de Sass, considere leer acerca de <a href="https://getbootstrap.com/docs/5.3/customize/css-variables/">nuestras propiedades personalizadas CSS</a>  incluidas (también conocidas como variables CSS) para colores y más.</p>
+<h5 id="Variables" class="text-primary ms-5 my-2 text-decoration-underline">Sass Variables/Variables de Sass
+</h5>
+<p class="mx-3">La mayoría de las utilidades de <span class="text-danger">color</span> se generan a partir de nuestros colores temáticos, reasignados desde nuestras variables de paleta de colores genéricas.</p>
+<div class="border bg-light mx-3  rounded">
+    <a href="https://github.com/twbs/bootstrap/blob/v5.3.3/scss/_variables.scss" class=" text-success mx-3 m-5"
+        target="_blank">scss/variables.scss</a>
+    <hr>
+    <pre class=" mb-2 pb-2">
+    <span class="text-danger">$blue:  </span>  #0d6efd;
+    <span class="text-danger">$indigo:</span>  #6610f2;
+    <span class="text-danger">$purple:</span>  #6f42c1;
+    <span class="text-danger">$pink:  </span>  #d63384;
+    <span class="text-danger">$red:   </span>  #dc3545;
+    <span class="text-danger">$orange:</span>  #fd7e14;
+    <span class="text-danger">$yellow:</span>  #ffc107;
+    <span class="text-danger">$green: </span>  #198754;
+    <span class="text-danger">$teal:  </span>  #20c997;
+    <span class="text-danger">$cyan:  </span>  #0dcaf0;
+</pre>
+</div>
+<div class="border bg-light mx-3 my-2 rounded">
+    <a href="https://github.com/twbs/bootstrap/blob/v5.3.3/scss/_variables.scss" class=" text-success mx-3 m-5"
+        target="_blank">scss/variables.scss</a>
+    <hr>
+    <pre class=" mb-2 pb-2">
+    <span class="text-danger">$primary:   $blue;</span>
+    <span class="text-danger">$secondary: $gray-600;</span>
+    <span class="text-danger">$success:   $green;</span>
+    <span class="text-danger">$info:      $cyan;</span>
+    <span class="text-danger">$warning:   $yellow;</span>
+    <span class="text-danger">$danger:    $red;</span>
+    <span class="text-danger">$light:     $gray-100;</span>
+    <span class="text-danger">$dark:      $gray-900;</span>
+    </pre>
+</div>
+<p class="mx-3">Los colores en escala de grises también están disponibles, pero solo se utiliza un subconjunto para generar utilidades.</p>
+<div class="border bg-light mx-3 my-2 rounded">
+    <a href="https://github.com/twbs/bootstrap/blob/v5.3.3/scss/_variables.scss" class=" text-success mx-3 m-5"
+        target="_blank">scss/_variables.scss</a>
+    <hr>
+    <pre class=" mb-2 pb-2">
+        <span class="text-danger">$white:   </span>  #fff;
+        <span class="text-danger">$gray-100:</span>  #f8f9fa;
+        <span class="text-danger">$gray-200:</span>  #e9ecef;
+        <span class="text-danger">$gray-300:</span>  #dee2e6;
+        <span class="text-danger">$gray-400:</span>  #ced4da;
+        <span class="text-danger">$gray-500:</span>  #adb5bd;
+        <span class="text-danger">$gray-600:</span>  #6c757d;
+        <span class="text-danger">$gray-700:</span>  #495057;
+        <span class="text-danger">$gray-800:</span>  #343a40;
+        <span class="text-danger">$gray-900:</span>  #212529;
+        <span class="text-danger">$black:   </span>  #000;    </pre>
+</div>
+<div class="border bg-light mx-3 my-2 rounded">
+    <a href="https://github.com/twbs/bootstrap/blob/v5.3.3/scss/_maps.scss" class=" text-success mx-3 m-5"
+        target="_blank">scss/_maps.scss</a>
+    <hr>
+    <pre class=" mb-2 pb-2">
+        <span class="text-danger">$theme-colors-text: (</span>        
+        "primary": <span class="text-danger">$primary-text-emphasis,</span>          
+        "secondary":<span class="text-danger"> $secondary-text-emphasis,</span>
+        "success": <span class="text-danger">$success-text-emphasis,</span>
+        "info":<span class="text-danger"> $info-text-emphasis,</span>
+        "warning":<span class="text-danger"> $warning-text-emphasis,</span> 
+        "danger":<span class="text-danger"> $danger-text-emphasis,</span>   
+        "light":<span class="text-danger"> $light-text-emphasis,</span>  
+        "dark":<span class="text-danger"> $dark-text-emphasis,</span>  
+        );
+    </pre>
+</div>
+<p>Variables para configurar colores en las utilidades de  <span class="text-danger">.text-*-emphasis </span>  en modo claro y oscuro:</p>
+<div class="border bg-light mx-3 my-2 rounded">
+    <a href="https://github.com/twbs/bootstrap/blob/v5.3.3/scss/_variables.scss" class=" text-success mx-3 m-5"
+        target="_blank">scss/variables-dark.scss</a>
+    <hr>
+    <pre class=" mb-2 pb-2">
+    <span class="text-danger">$primary-text-emphasis,</span>   shade-color(<span class="text-danger">$primary, 60%); </span> 
+    <span class="text-danger">$secondary-text-emphasis,</span> shade-color(<span class="text-danger">$secondary, 60%);</span>
+    <span class="text-danger">$success-text-emphasis,</span>   shade-color(<span class="text-danger">$success, 60%);</span>
+    <span class="text-danger">$info-text-emphasis,</span>      shade-color(<span class="text-danger">$info, 60%);</span>
+    <span class="text-danger">$warning-text-emphasis,</span>   shade-color(<span class="text-danger"></span>$warning, 60%);</span>
+    <span class="text-danger">$danger-text-emphasis,</span>    shade-color(<span class="text-danger">$danger, 60%);</span>
+    <span class="text-danger">$light-text-emphasis,</span>     shade-color(<span class="text-danger">$light, 60%);</span>
+    <span class="text-danger">$dark-text-emphasis,</span>      shade-color(<span class="text-danger">$dark, 60%);
+    <span class="text-danger">$light-text-emphasis-dark:       $gray-700;</span>
+    <span class="text-danger">$dark-text-emphasis-dark:        $gray-700;</span>
+</pre>
+</div>
+<div class="border bg-light mx-3 my-2 rounded">
+    <a href="https://github.com/twbs/bootstrap/blob/v5.3.3/scss/_variables-dark.scss" class=" text-success mx-3 m-5"
+        target="_blank">scss/variables-dark.scss</a>
+    <hr>
+    <pre class=" mb-2 pb-2">
+    <span class="text-danger">$primary-bg-subtle-dark:   </span>         tint-color(<span class="text-danger">$primary, 40%);</span>
+    <span class="text-danger">$secondary-bg-subtle-dark: </span>         tint-color(<span class="text-danger">$secondary, 40%);</span>
+    <span class="text-danger">$success-bg-subtle-dark:   </span>         tint-color(<span class="text-danger">$success, 40%);</span>
+    <span class="text-danger">$info-bg-subtle-dark:      </span>         tint-color(<span class="text-danger">$info, 40%);</span>
+    <span class="text-danger">$warning-bg-subtle-dark:   </span>         tint-color(<span class="text-danger">$warning, 40%);</span>
+    <span class="text-danger">$danger-bg-subtle-dark:    </span>         tint-color(<span class="text-danger">$danger, 40%);</span>
+    <span class="text-danger">$light-bg-subtle-dark:             $gray-100;</span> 
+    <span class="text-danger">$dark-bg-subtle-dark:              $gray-300;</span>
+    </pre>
+</div>
+
+
+<!-- Sass maps/Mapas de Sass -->
+<h5 id="maps" class="text-primary ms-5 my-4 text-decoration-underline">Sass maps/Mapas de Sass </h5>
+<p class="mx-3">Luego, los colores del tema se colocan en un mapa Sass para que podamos recorrerlos para generar nuestras utilidades, modificadores de componentes y más.</p>
+<div class="border bg-light mx-3 rounded">
+    <a href="https://github.com/twbs/bootstrap/blob/v5.3.3/scss/_variables.scss" class=" text-success mx-3 m-5"
+        target="_blank">scss/_variables.scss</a>
+        <hr>
+<pre class=" mb-2 pb-2">
+    <span class="text-danger">$theme-colors: (</span>
+        "primary":    <span class="text-danger">$primary,</span>
+        "secondary":  <span class="text-danger">$secondary,</span>
+        "success":    <span class="text-danger">$success,</span>
+        "info":       <span class="text-danger">$info,</span>
+        "warning":    <span class="text-danger">$warning,</span>
+        "danger":     <span class="text-danger">$danger,</span>
+        "light":      <span class="text-danger">$light,</span>
+        "dark":       <span class="text-danger">$dark</span>
+    );
+</pre>
+</div>
+<p>Los colores en escala de grises también están disponibles como mapa Sass. <span class="fw-bolder">Este mapa no se utiliza para generar utilidades.</span></p>
+<div class="border bg-light mx-3 my-3 rounded">
+    <a href="https://github.com/twbs/bootstrap/blob/v5.3.3/scss/_variables.scss" class=" text-success mx-3 m-5"
+        target="_blank">scss/_variables.scss</a>
+        <hr>
+        <pre class=" mb-2 pb-2">
+    <span class="text-danger">$grays: (</span>
+        "100": <span class="text-danger">$gray-100</span>,
+        "200": <span class="text-danger">$gray-200</span>,
+        "300": <span class="text-danger">$gray-300</span>,
+        "400": <span class="text-danger">$gray-400</span>,
+        "500": <span class="text-danger">$gray-500</span>,
+        "600": <span class="text-danger">$gray-600</span>,
+        "700": <span class="text-danger">$gray-700</span>,
+        "800": <span class="text-danger">$gray-800</span>,
+        "900": <span class="text-danger">$gray-900</span>
+        );
+    </pre>
+</div>
+<p>Los colores RGB se generan a partir de un mapa Sass independiente:</p>
+<div class="border bg-light mx-3 my-3 rounded">
+    <a href="https://github.com/twbs/bootstrap/blob/v5.3.3/scss/_maps.scss" class=" text-success mx-3 m-5"
+        target="_blank">scss/_maps.scss</a>
+        <hr>
+        <pre class=" mb-2 pb-2">
+    $theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
+        </pre>
+</div>
+<p>Las opacidades del color de fondo se basan en esto con su propio mapa que es consumido por la API de utilidades:</p>
+<div class="border bg-light mx-3 my-3 rounded">
+    <a href="https://github.com/twbs/bootstrap/blob/v5.3.3/scss/_maps.scss" class=" text-success mx-3 m-5"
+        target="_blank">scss/_maps.scss</a>
+        <hr>
+        <pre class=" mb-2 pb-2">
+    <span class="text-danger"> $utilities-bg</span>: map-merge(
+        <span class="text-danger"> $utilities-colors</span>,
+        (
+            "black": to-rgb(<span class="text-danger"> $black)</span>,
+            "white": to-rgb(<span class="text-danger"> $white)</span>,
+            "body": to-rgb(<span class="text-danger"> $body-bg)</span>
+        )
+    );
+    <span class="text-danger"> $utilities-bg-colors</span>: map-loop(<span class="text-danger"> $utilities-bg</span>, <span class="text-danger"> rgba-css-var</span>, "$key", "bg");
+      
+    <span class="text-danger"> $utilities-bg-subtle</span>: (
+        "primary-subtle": var(--#{<span class="text-danger"> $prefix}primary-bg-subtle</span>),
+        "secondary-subtle": var(--#{<span class="text-danger"> $prefix}secondary-bg-subtle)</span>,
+        "success-subtle": var(--#{<span class="text-danger"> $prefix}success-bg-subtle</span>),
+        "info-subtle": var(--#{<span class="text-danger"> $prefix}info-bg-subtle</span>),
+        "warning-subtle": var(--#{<span class="text-danger"> $prefix}warning-bg-subtle</span>),
+        "danger-subtle": var(--#{<span class="text-danger"> $prefix}danger-bg-subtle</span>),
+        "light-subtle": var(--#{<span class="text-danger"> $prefix}light-bg-subtle</span>),
+        "dark-subtle": var(--#{<span class="text-danger"> $prefix}dark-bg-subtle</span>)
+    );       
+</pre>
+</div>
+<p>Los colores de fondo del modo de color también están disponibles como un mapa de Sass</p>
+<div class="border bg-light mx-3 my-3 rounded">
+    <a href="https://github.com/twbs/bootstrap/blob/v5.3.3/scss/_maps.scss" class=" text-success mx-3 m-5"
+        target="_blank">scss/_maps.scss</a>
+        <hr>
+        <pre class=" mb-2 pb-2">
+    <span class="text-danger">$theme-colors-bg-subtle</span>: (
+        "primary": <span class="text-danger">$primary-text-subtle,</span>
+        "secondary": <span class="text-danger">$secondary-text-subtle,</span>
+        "success": <span class="text-danger">$success-text-subtle,</span>
+        "info": <span class="text-danger">$info-text-subtle,</span>
+        "warning": <span class="text-danger">$warning-text-subtle,</span>
+        "danger": <span class="text-danger">$danger-text-subtle,</span>
+        "light": <span class="text-danger">$light-text-subtle,</span>
+        "dark": <span class="text-danger">$dark-text-subtle,</span>
+      );
+            </pre>
+</div>
+<div class="border bg-light mx-3 my-3 rounded">
+    <a href="https://github.com/twbs/bootstrap/blob/v5.3.3/scss/_maps.scss" class=" text-success mx-3 m-5"
+        target="_blank">scss/_maps.scss</a>
+        <hr>
+        <pre class=" mb-2 pb-2">
+    <span class="text-danger">$theme-colors-bg-subtle-dark</span>: (
+        "primary": <span class="text-danger">$primary-text-subtle-dark,</span>
+        "secondary": <span class="text-danger">$secondary-text-subtle-dark,</span>
+        "success": <span class="text-danger">$success-text-subtle-dark,</span>
+        "info": <span class="text-danger">$info-text-subtle-dark,</span>
+        "warning": <span class="text-danger">$warning-text-subtle-dark,</span>
+        "danger": <span class="text-danger">$danger-text-subtle-dark,</span>
+        "light": <span class="text-danger">$light-text-subtle-dark,</span>
+        "dark": <span class="text-danger">$dark-text-subtle-dark,</span>
+      );    
+    </pre>
+</div>
+
+
+<!-- ------------------------------------------------------------ -->
+ <!-- Sass utilities API/API de   utilidades de Sass -->
+<h5 id="utilities" class="text-primary ms-5 my-2 text-decoration-underline"> Sass utilities API/API de
+    utilidades de Sass </h5>
+<p class="mx-3">Las utilidades de color se declaran en nuestra API de utilidades en [nombre del archivo  <span class="text-danger">scss/_utilities.scss.</span> <a
+        href="https://getbootstrap.com/docs/5.3/utilities/api/#using-the-api">Aprenda a usar la API de
+        utilidades.</a> </p>
+<div class="border bg-light mx-3 my-3   rounded">
+    <a href="https://github.com/twbs/bootstrap/blob/v5.3.3/scss/_utilities.scss" class=" text-success  m-3 p-3"
+        target="_blank">scss/_utilitiess.scss</a>
+        <hr>
+
+        <pre class=" mb-2 pb-2">
+            "color": (
+            <span class="text-danger">property: color,
+            class: text,
+            local-vars:</span> (
+              "text-opacity": <span class="text-danger">1</span>
+            ),
+            <span class="text-danger">values: map-merge(
+              $utilities-text-colors,</span>
+              (
+    "muted": <span class="text-danger">   var(--#{$prefix}secondary-color),</span> // deprecated
+    "black-50": <span class="text-danger">   rgba($black, .5),</span> // deprecated
+    "white-50": <span class="text-danger">  rgba($white, .5),</span> // deprecated
+    "body-secondary": <span class="text-danger">    var(--#{$prefix}secondary-color),</span>
+    "body-tertiary": <span class="text-danger"><   var(--#{$prefix}tertiary-color),</span>
+    "body-emphasis": <span class="text-danger"> var(--#{$prefix}emphasis-color),</span>
+    "reset": <span class="text-danger">   inherit,</span>
+              )
+            )
+          ),
+          "text-opacity": (
+            <span class="text-danger">css-var: true,
+            class: text-opacity,
+            values:</span> (
+              <span class="text-danger">25:</span> .25,
+              <span class="text-danger">50:</span> .5,
+              <span class="text-danger">75: </span>.75,
+              <span class="text-danger">100:</span> 1
+            )
+          ),
+          "text-color": (
+            <span class="text-danger">property: color,
+            class: text,
+            values: $utilities-text-emphasis-colors</span>
+          ),
+    </pre>
+</div>
+
+    </div>
+    <footer class="bd-footer py-4 py-md-5 mt-5 bg-body-tertiary">
+        <div class="container py-4 py-md-5 px-4 px-md-3 text-body-secondary">
+          <div class="row">
+            <div class="col-lg-3 mb-3">
+              <a class="d-inline-flex align-items-center mb-2 text-body-emphasis text-decoration-none" href="/" aria-label="Oreja">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="d-block me-2" viewBox="0 0 118 94" role="img"><title>Bootstrap</title><path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z" fill="currentColor"></path></svg>
+                <span class="fs-5"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Oreja</font></font></span>
+              </a>
+              <ul class="list-unstyled small">
+                <li class="mb-2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Diseñado y construido con todo el amor del mundo por el </font></font><a href="/docs/5.3/about/team/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">equipo de Bootstrap</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> con la ayuda de </font></font><a href="https://github.com/twbs/bootstrap/graphs/contributors"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">nuestros colaboradores</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> .</font></font></li>
+                <li class="mb-2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Código bajo licencia </font></font><a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">MIT</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> , docs </font></font><a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CC BY 3.0</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> .</font></font></li>
+                <li class="mb-2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Actualmente v5.3.3.</font></font></li>
+              </ul>
+            </div>
+            <div class="col-6 col-lg-2 offset-lg-1 mb-3">
+              <h5><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Campo de golf</font></font></h5>
+              <ul class="list-unstyled">
+                <li class="mb-2"><a href="https://getbootstrap.com/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Hogar</font></font></a></li>
+                <li class="mb-2"><a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/" target="_blank"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Documentos</font></font></a></li>
+                <li class="mb-2"><a href="https://getbootstrap.com/docs/5.3/examples/" target="_blank"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ejemplos</font></font></a></li>
+                <li class="mb-2"><a href="https://icons.getbootstrap.com/" target="_blank"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Iconos</font></font></a></li>
+                <li class="mb-2"><a href="https://themes.getbootstrap.com/" target="_blank"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Temas</font></font></a></li>
+                <li class="mb-2"><a href="https://blog.getbootstrap.com/" target="_blank"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Blog</font></font></a></li>
+                <li class="mb-2"><a href="https://cottonbureau.com/people/bootstrap" target="_blank" rel="noopener"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tienda de artículos promocionales</font></font></a></li>
+              </ul>
+            </div>
+            <div class="col-6 col-lg-2 mb-3">
+              <h5><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Guías</font></font></h5>
+              <ul class="list-unstyled">
+                <li class="mb-2"><a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/" target="_blank"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Empezando</font></font></a></li>
+                <li class="mb-2"><a href="https://getbootstrap.com/docs/5.3/examples/starter-template/" target="_blank"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Plantilla de inicio</font></font></a></li>
+                <li class="mb-2"><a href="https://getbootstrap.com//docs/5.3/getting-started/webpack/" target="_blank"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Paquete web</font></font></a></li>
+                <li class="mb-2"><a href="https://getbootstrap.com//docs/5.3/getting-started/parcel/" target="_blank"> <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Parcela</font></font></a></li>
+                <li class="mb-2"><a href="https://getbootstrap.com//docs/5.3/getting-started/vite/" target="_blank"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Vite</font></font></a></li>
+              </ul>
+            </div>
+            <div class="col-6 col-lg-2 mb-3">
+              <h5><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Proyectos</font></font></h5>
+              <ul class="list-unstyled">
+                <li class="mb-2"><a href="https://github.com/twbs/bootstrap" target="_blank" rel="noopener"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Bootstrap 5</font></font></a></li>
+                <li class="mb-2"><a href="https://github.com/twbs/bootstrap/tree/v4-dev" target="_blank" rel="noopener"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Bootstrap 4</font></font></a></li>
+                <li class="mb-2"><a href="https://github.com/twbs/icons" target="_blank" rel="noopener"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Iconos</font></font></a></li>
+                <li class="mb-2"><a href="https://github.com/twbs/rfs" target="_blank" rel="noopener"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">RFS</font></font></a></li>
+                <li class="mb-2"><a href="https://github.com/twbs/examples/" target="_blank" rel="noopener"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ejemplos de repositorio</font></font></a></li>
+              </ul>
+            </div>
+            <div class="col-6 col-lg-2 mb-3">
+              <h5><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Comunidad</font></font></h5>
+              <ul class="list-unstyled">
+                <li class="mb-2"><a href="https://github.com/twbs/bootstrap/issues" target="_blank" rel="noopener"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Asuntos</font></font></a></li>
+                <li class="mb-2"><a href="https://github.com/twbs/bootstrap/discussions" target="_blank" rel="noopener"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Discusiones</font></font></a></li>
+                <li class="mb-2"><a href="https://github.com/sponsors/twbs" target="_blank" rel="noopener"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">patrocinadores corporativos</font></font></a></li>
+                <li class="mb-2"><a href="https://opencollective.com/bootstrap" target="_blank" rel="noopener"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Colectivo Abierto</font></font></a></li>
+                <li class="mb-2"><a href="https://stackoverflow.com/questions/tagged/bootstrap-5" target="_blank" rel="noopener"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Desbordamiento de pila</font></font></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
