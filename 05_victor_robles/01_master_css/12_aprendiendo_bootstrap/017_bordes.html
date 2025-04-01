@@ -1,107 +1,1047 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <title>Bordes</title>
+    <title>017_bordes</title>
 </head>
+
 <body>
-    
 
-    
-    <h1 class="colores bg-success text-center my-3">017_bordes</h1>
-    <h1 class="colores bg-primary text-center my-3">Espaciado</h1>
-    <a href="https://getbootstrap.com/docs/5.3/utilities/borders/">bordes</a>
+
+
+    <h1 class="colores bg-info text-center display-1  py-3">017_bordes</h1>
+    <h2 class="fw-bolder text-secondary text-center my-3"><a href="https://getbootstrap.com/docs/5.3/utilities/borders/"
+            target="_blank" class=" text-secondary">Bordes</a></h2>
+
     <div class="d-flex">
-
-
-        <div class="m-1 mt-5 ml-5 mr-5 text-white bg-danger border border-primary rounded-top p-3 mb-3">
+        <div class=" my-3 mx-2 text-white bg-danger border border-primary rounded-top p-3 mb-3">
             Borde superior redondeado (azul).
         </div>
         <hr>
-
-        <div
-            class="m-3 mt-5 mb-5 mx-5 my-5 text-muted bg-info   caja-centrada border border-success rounded-bottom p-3 mb-3">
+        <div class="my-3 mx-2 text-muted bg-info   caja-centrada border border-success rounded-bottom p-3 mb-3">
             Borde inferior redondeado (verde).
         </div>
         <hr>
 
-        <div class=" m-5 mb-5 my-5 text-primary bg-success caja-centrada border border-danger rounded-start p-3 mb-3">
+        <div class=" my-3 mx-2 text-dark bg-success caja-centrada border border-danger rounded-start p-3 mb-3">
             Borde izquierdo redondeado (rojo).
         </div>
         <hr>
-        <div class="m-1 p-5 text-white bg-danger border border-primary rounded-top p-3 mb-3">
+        <div class="my-3 mx-2 text-white bg-danger border border-primary rounded-top p-3 mb-3">
             Borde superior redondeado (azul).
         </div>
         <hr>
 
-        <div class="m-3 x-5  p-5 text-muted bg-info   caja-centrada border border-success rounded-bottom p-3 mb-3">
+        <div class="my-3 mx-2 text-muted bg-info   caja-centrada border border-success rounded-bottom p-3 mb-3">
             Borde inferior redondeado (verde).
         </div>
         <hr>
 
-        <div class=" m-5 p-n5 text-primary bg-success caja-centrada border border-danger rounded-start p-3 mb-3">
+        <div class=" my-3 mx-2 text-primary bg-light caja-centrada border border-danger rounded-start p-3 mb-3">
             Borde izquierdo redondeado (rojo).
         </div>
     </div>
 
     <hr>
-    <div class="mx-auto m-2 p-3 text-light bg-success caja w-25 border border-dark rounded-start">
+    <div class="mx-auto m-2 p-3 text-danger bg-light caja w-25 border border-dark rounded-start">
         Última caja creada.
     </div> <!--  mx-auto  hace que la caja esté centrada en la página -->
     <hr>
 
     <!-- Centered element -->
 
-    <div class="mx-auto p-2 bg-warning border border-dark" style="width: 200px;">
+    <div class="mx-auto p-2 bg-warning border border-dark text-center" style="width: 200px;">
         Centered element
     </div>
-    <hr>
-    <h2 class="mt-4">Bordes de Colores</h2>
-    <div class="border border-primary p-2">Borde primario border border-primary p-2</div>
-    <div class="border border-secondary p-2">Borde secundario border border-secondary p-2</div>
-    <div class="border border-success p-2">Borde de éxito border border-success p-2</div>
-    <div class="border border-danger p-2">Borde de peligro border border-danger p-2</div>
-    <div class="border border-warning p-2">Borde de advertencia border border-warning p-2</div>
-    <div class="border border-info p-2">Borde informativo border border-info p-2</div>
-    <div class="border border-light p-2">Borde claro border border-light p-2</div>
-    <div class="border border-dark p-2">Borde oscuro border border-dark p-2</div>
-    <!-- Text transform /Transformación de texto -->
-    <h3 id="transform" class="text-info">Text transform /Transformación de texto</h3>
-    <div class="row border rounded m-3 p-3 bg-">
-        <p class="text-lowercase">Lowercased text.</p>
-        <p class="text-uppercase">Uppercased text.</p>
-        <p class="text-capitalize">CapiTaliZed text.</p>
+    <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+    <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+
+    <!-- CONTENIDO DE LA PAGINA -->
+    <div class="container mt-4">
+        <h2 class="text-center display-1">BORDES</h2>
+        <p class="display-6">Usa las utilidades de borde para aplicar estilo rápidamente al borde y al radio del borde
+            de un elemento. <br> Ideal para imágenes, botones o cualquier otro elemento.</p>
+        <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+        <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+
+        <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+        <h4>En esta página:</h4>
+        <ul>
+            <li><a href="#Border">Border</a>
+            </li>
+            <li><a href="#Additive ">Additive / Aditivo</a>
+            </li>
+            <li><a href="#Subtractive ">Subtractive / Sustractivo</a>
+            </li>
+            <li><a href="#Color">Color / Color</a>
+            </li>
+            <li><a href="#Opacity ">Opacity / Opacidad </a>
+            </li>
+            <li><a href="#example">Example/ Ejemplo</a>
+            </li>
+            <li><a href="#width">Width/ Ancho</a>
+            </li>
+            <li><a href="#radius">Radius/ Radio</a>
+            </li>
+            <li><a href="#sizes">sizes/ Tallas</a>
+            </li>
+            <li><a href="#buttom">Colored Buttons/ Botones de Colores</a>
+            </li>
+            <li class="list-unstyled">
+                <h4>Css</h4>
+                <ul>
+                    <li><a href="#Variables">Variables/Variables</a>
+                    </li>
+                    <li><a href="#Variables">Sass Variables/Variables de Sass</a>
+                    </li>
+                    <li><a href="#maps">Sass maps/Mapas de Sass </a>
+                    </li>
+                    <li><a href="#mixins">Sass mixins / Mezclas de Sass </a>
+                    </li>
+                    <li><a href="#api">Sass utilities API/ API de utilidades de Sass</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+    <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+    <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+    <div class="container mt-4">
+
+        <h2 class="mt-4">Bordes de Colores</h2>
+        <div class="border border-primary p-2">Borde primario border border-primary p-2</div>
+        <div class="border border-secondary p-2">Borde secundario border border-secondary p-2</div>
+        <div class="border border-success p-2">Borde de éxito border border-success p-2</div>
+        <div class="border border-danger p-2">Borde de peligro border border-danger p-2</div>
+        <div class="border border-warning p-2">Borde de advertencia border border-warning p-2</div>
+        <div class="border border-info p-2">Borde informativo border border-info p-2</div>
+        <div class="border border-light p-2">Borde claro border border-light p-2</div>
+        <div class="border border-dark p-2">Borde oscuro border border-dark p-2</div>
+    </div>
+    <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+    <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+    <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+
+    <!-- -------------------------------------------------------- -->
+    <!-- Border /Borde -->
+    <div class="container mt-4">
+        <h3 id="Border" class="text-info">Border / Borde</h3>
+        <p>Usa las utilidades de bordes para añadir o eliminar los bordes de un elemento. Elige entre todos los bordes o
+            uno a la vez.</p>
+
+        <!-- Additive /Aditivo -->
+
+        <h3 id="Additive " class="text-info">Additive / Aditivo</h3>
+        <p>Agregar bordes a elementos personalizados:</p>
+        <div class="row border rounded m-3 p-3 bg-">
+
+            <div class="border bg-light m-2" style="width:75px; height: 75px;"></div>
+            <div class="border-top bg-light m-2" style="width:75px; height: 75px;"></div>
+            <div class="border-end bg-light m-2" style="width:75px; height: 75px;"></div>
+            <div class="border-bottom bg-light m-2" style="width:75px; height: 75px;"></div>
+            <div class="border-start bg-light m-2" style="width:75px; height: 75px;"></div>
+
+
+
+            <hr>
+            <p>HTML</p>
+            <hr>
+            <pre>
+    &lt;div class="<span class="text-danger">border</span> bg-light m-2" style="width:75px; height: 75px;"&gt;&lt;/div&gt;
+    &lt;div class="<span class="text-danger">border-top</span> bg-light m-2" style="width:75px; height: 75px;"&gt;&lt;/div&gt;
+    &lt;div class="<span class="text-danger">border-end</span> bg-light m-2" style="width:75px; height: 75px;"&gt;&lt;/div&gt;
+    &lt;div class="<span class="text-danger">border-bottom</span> bg-light m-2" style="width:75px; height: 75px;"&gt;&lt;/div&gt;
+    &lt;div class="<span class="text-danger">border-start</span> bg-light m-2" style="width:75px; height: 75px;"&gt;&lt;/div&gt;
+    
+</pre>
+        </div>
+    </div>
+    <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+    <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+    <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+
+    <!-- -------------------------------------------------------- -->
+
+    <!-- Subtractive  /Sustractivo -->
+    <div class="container mt-4">
+        <h3 id="Subtractive " class="text-info">Subtractive /Sustractivo</h3>
+        <p>O eliminar los bordes:
+
+        </p>
+        <div class="row border rounded m-3 p-3 ">
+
+            <div class="border border-0 bg-light m-2" style="width:75px; height: 75px;"></div>
+            <div class="border border-top-0 bg-light m-2" style="width:75px; height: 75px;"></div>
+            <div class="border border-end-0 bg-light m-2" style="width:75px; height: 75px;"></div>
+            <div class="border border-bottom-0 bg-light m-2" style="width:75px; height: 75px;"></div>
+            <div class="border border-start-0 bg-light m-2" style="width:75px; height: 75px;"></div>
+
+            <hr>
+            <p>HTML</p>
+            <hr>
+            <pre>
+&lt;div class="<span class="text-danger">border border-0</span> bg-light m-2" style="width:75px; height: 75px;"&gt;&lt;/div&gt;
+&lt;div class="<span class="text-danger">border border-top-0</span> bg-light m-2" style="width:75px; height: 75px;"&gt;&lt;/div&gt;
+&lt;div class="<span class="text-danger">border border-end-0 </span> bg-light m-2" style="width:75px; height: 75px;"&gt;&lt;/div&gt;
+&lt;div class="<span class="text-danger">border border-bottom-0</span> bg-light m-2" style="width:75px; height: 75px;"&gt;&lt;/div&gt;
+&lt;div class="<span class="text-danger">border border-start-0 </span> bg-light m-2" style="width:75px; height: 75px;"&gt;&lt;/div&gt;
+
+    </pre>
+        </div>
+
+    </div>
+    <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+    <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+    <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+
+    <!-- Color /Color -->
+    <div class="container mt-4">
+        <h3 id="Color" class="text-info">Color /Color</h3>
+        <div class="row border rounded m-3 p-3 " style="background-color:lightblue;">
+            <p>Las utilidades de borde, como <span class="text-danger">.border-*</span>las generadas a partir de nuestro mapa Sass original, <span class="text-danger">$theme-colors</span> aún no responden a los modos de color; sin embargo, cualquier <span class="text-danger">.border-*-subtle </span>utilidad sí lo hará. Esto se solucionará en la versión 6.</p>
+        </div>
+        <div class="row border rounded m-3 p-3 ">
+            <div class="border border-primary m-2" style="width:75px; height: 75px;"></div>
+            <div class="border border-primary-subtle m-2" style="width:75px; height: 75px;"></div>
+            <div class="border border-secondary m-2" style="width:75px; height: 75px;"></div>
+            <div class="border border-secondary-subtle m-2" style="width:75px; height: 75px;"></div>
+            <div class="border border-success m-2" style="width:75px; height: 75px;"></div>
+            <div class="border border-success-subtle m-2" style="width:75px; height: 75px;"></div>
+            <div class="border border-danger m-2" style="width:75px; height: 75px;"></div>
+            <div class="border border-danger-subtle m-2" style="width:75px; height: 75px;"></div>
+            <div class="border border-warning m-2" style="width:75px; height: 75px;"></div>
+            <div class="border border-warning-subtle m-2" style="width:75px; height: 75px;"></div>
+            <div class="border border-info m-2" style="width:75px; height: 75px;"></div>
+            <div class="border border-info-subtle m-2" style="width:75px; height: 75px;"></div>
+            <div class="border border-light m-2" style="width:75px; height: 75px;"></div>
+            <div class="border border-light-subtle m-2" style="width:75px; height: 75px;"></div>
+            <div class="border border-dark m-2" style="width:75px; height: 75px;"></div>
+            <div class="border border-dark-subtle m-2" style="width:75px; height: 75px;"></div>
+            <div class="border border-black m-2" style="width:75px; height: 75px;"></div>
+            <div class="border border-white m-2" style="width:75px; height: 75px;"></div>
+                <hr>
+            <p>HTML</p>
+            <hr>
+            <pre>
+&lt;div class="<span class="text-danger">border border-primary </span> m-2" style="width:75px; height: 75px;"&gt;&lt;/div&gt;
+&lt;div class="<span class="text-danger">border border-primary-subtle </span> m-2" style="width:75px; height: 75px;"&gt;&lt;/div&gt;
+&lt;div class="<span class="text-danger">border border-secondary </span> m-2" style="width:75px; height: 75px;"&gt;&lt;/div&gt;
+&lt;div class="<span class="text-danger">border border-secondary-subtle </span> m-2" style="width:75px; height: 75px;"&gt;&lt;/div&gt;
+&lt;div class="<span class="text-danger">border border-success </span> m-2" style="width:75px; height: 75px;"&gt;&lt;/div&gt;
+&lt;div class="<span class="text-danger">border border-success-subtle </span> m-2" style="width:75px; height: 75px;"&gt;&lt;/div&gt;
+&lt;div class="<span class="text-danger">border border-danger </span> m-2" style="width:75px; height: 75px;"&gt;&lt;/div&gt;
+&lt;div class="<span class="text-danger">border border-danger-subtle </span> m-2" style="width:75px; height: 75px;"&gt;&lt;/div&gt;
+&lt;div class="<span class="text-danger">border border-warning </span> m-2" style="width:75px; height: 75px;"&gt;&lt;/div&gt;
+&lt;div class="<span class="text-danger">border border-warning-subtle </span> m-2" style="width:75px; height: 75px;"&gt;&lt;/div&gt;
+&lt;div class="<span class="text-danger">border border-info </span> m-2" style="width:75px; height: 75px;"&gt;&lt;/div&gt;
+&lt;div class="<span class="text-danger">border border-info-subtle </span> m-2" style="width:75px; height: 75px;"&gt;&lt;/div&gt;
+&lt;div class="<span class="text-danger">border border-light </span> m-2" style="width:75px; height: 75px;"&gt;&lt;/div&gt;
+&lt;div class="<span class="text-danger">border border-light-subtle </span> m-2" style="width:75px; height: 75px;"&gt;&lt;/div&gt;
+&lt;div class="<span class="text-danger">border border-dark </span> m-2" style="width:75px; height: 75px;"&gt;&lt;/div&gt;
+&lt;div class="<span class="text-danger">border border-dark-subtle </span> m-2" style="width:75px; height: 75px;"&gt;&lt;/div&gt;
+&lt;div class="<span class="text-danger">border border-black </span> m-2" style="width:75px; height: 75px;"&gt;&lt;/div&gt;
+&lt;div class="<span class="text-danger">border border-white </span> m-2" style="width:75px; height: 75px;"&gt;&lt;/div&gt;
+</pre>
+        </div>
+        <p>O modificar el valor predeterminado border-colorde un componente:</p>
+    </div>
+    <!-- ********************************************************************** -->
+
+<!-- Color /Color -->
+<div class="container mt-4">
+    
+    <div class="row border rounded m-3 p-3 ">
+        <div class="mb-4">
+            <label for="exampleFormControlInput1" class="form-label">Email address</label>
+            <input type="email" class="form-control border-success" id="exampleFormControlInput1" placeholder="name@example.com">
+        </div>
+        <div class="h4 pb-2 mb-4 text-danger border-bottom border-danger">Rumbo peligroso        </div>
+        <div class="h5 pb-2 mb-4 text-danger border-bottom border-danger">Rumbo peligroso        </div>
+        <div class="h6 pb-2 mb-4 text-danger border-bottom border-danger">Rumbo peligroso        </div>
+        <div class="p-3 bg-info bg-opacity-10 border border-info border-start-0 rounded-end">Cambiar el color y el ancho del borde</div>
         <hr>
         <p>HTML</p>
         <hr>
         <pre>
-&lt;p class="text-lowercase"&gt;Texto en minuscula&lt;/p&gt;
-&lt;p class="text-uppercase"&gt;Texto en mayuscula&lt;/p&gt;
-&lt;p class="text-capitalize"&gt;Texto con la primera letra en mayuscula&lt;/p&gt;
+    &lt;div class="mb-4"&gt;
+    &lt;label for="exampleFormControlInput1" class="form-label"&gt;Email address&lt;/label&gt;
+    &lt;input type="email" class="form-control border-success" id="exampleFormControlInput1" placeholder="name@example.com"&gt;
+    &lt;/div&gt;
+        
+    &lt;div class="h4 pb-2 mb-4 text-danger border-bottom border-danger"&gt;
+    Rumbo peligroso    
+    &lt;/div&gt;
+    &lt;div class="h5 pb-2 mb-4 text-danger border-bottom border-danger"&gt;
+    Rumbo peligroso    
+    &lt;/div&gt;
+    &lt;div class="h6 pb-2 mb-4 text-danger border-bottom border-danger"&gt;
+    Rumbo peligroso    
+    &lt;/div&gt;        
+    &lt;div class="p-3 bg-info bg-opacity-10 border border-info border-start-0 rounded-end"&gt;
+    Changing border color and width
+    &lt;/div&gt;        
+        </pre>
+    </div>
+</div>
+<!-- ---------------------------------------------------------------------------- -->
+<hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+    <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+    <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+
+    <!-- Opacity /Opacidad -->
+    <div class="container mt-4">
+
+<h3 id="opacity" class="text-info">Opacity /Opacidad</h3>
+<p>
+    Las utilidades de Bootstrap <span class="text-danger">border-{color}  </span> se generan con Sass mediante variables CSS. Esto permite cambios de color en tiempo real sin compilación y cambios dinámicos de transparencia alfa.
+.</p>
+<h5 class="fw-bolder">¿Como funciona?</h5>
+<p>Consideremos nuestra utilidad predeterminada <span class="text-danger">.bg-success</span>.</p>
+<div class="row border rounded m-3 p-3 " style="background-color:#ecf4f7;">
+    <p>.border-success {
+        --bs-border-opacity: 1;
+        border-color: rgba(var(--bs-success-rgb), var(--bs-border-opacity)) !important;
+      }</p>
+</div>
+<p>Usamos una versión RGB de nuestra variable CSS <span class="text-danger">--bs-success </span>
+    (con el valor <span class="text-danger">25, 135, 84 </span>
+    ) y adjuntamos una segunda variable CSS, <span class="text-danger">--bs-border-opacity </span>
+    , para la transparencia alfa (con un valor predeterminado <span class="text-danger">1 </span>
+    gracias a una variable CSS local). Esto significa que, al usar <span class="text-danger">.border-success </span> `now`, el <span class="text-danger">color</span> valor calculado es <span class="text-danger">
+        rgba(25, 135, 84, 1) </span>. La variable CSS local dentro de cada 
+    clase <span class="text-danger"> .border-* </span>evita problemas de herencia, por lo que las instancias anidadas de las utilidades no modifican automáticamente la transparencia alfa.</p>
+<div class="row border rounded m-3 p-3 bg-">
+    <p class="bg-success text-white" style="--bs-bg-opacity: 0.5;">
+        Fondo verde con opacidad al 50%
+      </p>
+      <hr>
+    <p class="text-white" style="--bs-bg-opacity: 0.5; background-color: rgba(var(--bs-success-rgb), var(--bs-bg-opacity));">
+     Fondo verde con opacidad al 50%
+   </p>
+   <p>En el &lt;head&gt; hemos definido el color <span class="text-danger">    --bs-success-rgb: 25, 135, 84;  </span>
+dentro del root.</p>
+    <pre class="fw-bolder">
+    &lt;style&gt; 
+        /* Definir la variable --bs-success-rgb */
+        :root {
+            --bs-success-rgb: 25, 135, 84; /* RGB para el color verde éxito (#198754) */
+        }
+    &lt;/style&gt;
+    </pre>
+<hr>
+<pre>
+    .bg-success {
+        --bs-bg-opacity: 1;
+        background-color: rgba(var(--bs-success-rgb), var(--bs-bg-opacity)) !important;
+    }
+</pre>
+</div>
+<p>Usamos una versión RGB de nuestra variable CSS <span class="text-danger">--bs-success </span>
+(con el valor <span class="text-danger">25, 135, 84 </span>
+) y adjuntamos una segunda variable CSS, <span class="text-danger">--bs-bg-opacity </span>
+, para la transparencia alfa (con un valor predeterminado <span class="text-danger">1 </span>
+gracias a una variable CSS local). Esto significa que, al usar <span class="text-danger">.bg-success </span>
+`now`, el <span class="text-danger">color</span>
+valor calculado es <span class="text-danger">
+    rgba(25, 135, 84, 1) </span>. La variable CSS local dentro de cada <span class="text-danger"> .bg-* </span>
+clase evita problemas de herencia, por lo que las instancias anidadas de las utilidades no modifican automáticamente la transparencia alfa.</p>
+<div class="row border rounded m-3 p-3 bg-">
+    <div class="row">
+        <body class="p-4">
+            <div class="container">
+                <!-- Ejemplo sin opacidad -->
+                <div class="p-3 mb-3 bg-success text-white">
+                Sin opacidad (.bg-success)
+                </div>
+          
+              <!-- Ejemplo con opacidad personalizada -->
+            <div class="p-3 mb-3 bg-success custom-opacity text-white" style="--bs-bg-opacity: 0.5; /* Opacidad al 50% */
+" >Con opacidad personalizada (.custom-opacity)
+            </div>
+          
+            <!-- Ejemplo sobre un fondo para ver la transparencia -->
+            <div class="background-box" style="background-color: #f8f9fa;
+                height: 100px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 1px solid #dee2e6;" >
+                <div class="p-3 bg-success custom-opacity text-white" style="--bs-bg-opacity: 0.5; /* Opacidad al 50% */
+" >Sobre un fondo claro
+                </div>
+            </div>
+            </div>
+        </body>
+    </div>
+    <hr>
+    <p>HTML</p>
+    <hr>
+<pre>
+    .bg-success {
+        --bs-bg-opacity: 1;
+        background-color: rgba(var(--bs-success-rgb), var(--bs-bg-opacity)) !important;
+      }
+</pre>
+</div>
+    </div>
+
+<hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+<div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+<hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+
+<!-- --------------------------------------------------------------------------------- -->
+<!-- Example  / Ejemplo -->
+<div class="container mt-4">
+
+<h3 id="example" class="text-info">Example / Ejemplo</h3>
+<p>Para cambiar esa opacidad, anule <span class="text-danger">--bs-border-opacity </span>mediante estilos personalizados o estilos en línea.</p>
+<div class="row border rounded m-3 p-3 bg-">
+    <div class="border border-success p-2 mb-2">Este es el borde de éxito predeterminado</div>
+<div class="border border-success p-2" style="--bs-border-opacity: .5;">Este es un borde de éxito con opacidad del 50 %</div>
+    <hr>
+    <p>HTML</p>
+    <hr>
+    <pre>
+&lt;div class="bg-success p-2 text-white"&gt;Este es el fondo predeterminado para bg-success. &lt;/div&gt;
+&lt;div class="bg-success p-2" <span class="text-danger">style="--bs-bg-opacity: .5;"</span>
+&gt;Este es el fondo para bg-success. con una opacidad del 50%  &lt;/div&gt;
+</pre>
+</div>
+<p>O elija entre cualquiera de lasutilidades:<span class="text-danger"> .bg-opacity</span>.</p>
+<div class="row border rounded m-3 p-3 bg-">
+    <div class="border border-success p-2 mb-2">Este es el borde success predeterminado.</div>
+    <div class="border border-success p-2 mb-2 border-opacity-75">Este es el borde success con una opacidad del 75%.</div>
+    <div class="border border-success p-2 mb-2 border-opacity-50">Este es el borde success con una opacidad del 50%.</div>
+    <div class="border border-success p-2 mb-2 border-opacity-25">Este es el borde success con una opacidad del 25%.</div>
+    <div class="border border-success p-2 border-opacity-10">Este es el borde success con una opacidad del 10%.</div>
+<hr>
+    <p>HTML</p>
+    <hr>
+    <pre>
+&lt;div class="border border-success p-2 mb-2"&gt;Este es el borde success predeterminado.&lt;/div&gt;
+&lt;div class="border border-success p-2 mb-2 &lt;span class="text-danger"&gt;border-opacity-75"&lt;/span&gt;Este es el borde success con una opacidad del 75 %.&lt;/div&gt;
+&lt;div class="border border-success p-2 mb-2 &lt;span class="text-danger"&gt;border-opacity-50"&lt;/span&gt;Este es el borde success con una opacidad del 50%&lt;/div&gt;
+&lt;div class="border border-success p-2 mb-2 &lt;span class="text-danger"&gt;border-opacity-25"&lt;/span&gt;Este es el borde success con una opacidad del 25%&lt;/div&gt;
+&lt;div class="border border-success p-2 &lt;span class="text-danger"&gt;border-opacity-10"&lt;/span&gt;Este es el borde success con una opacidad del 10%&lt;/div&gt;
+    </pre>
+</div>
+</div>
+<span class="text-danger"></span>
+
+<hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+<div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+<hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+
+<!-- --------------------------------------------------------------------------------- -->
+<!-- Width  / Ancho -->
+<div class="container mt-4">
+
+    <h3 id="width" class="text-info">Width / Ancho</h3>
+    
+    <div class="row border rounded m-3 p-3 bg-">
+        <div class="border border-2 bg-light m-2" style="width:75px; height: 75px;"></div>
+        <div class="border border-3 bg-light m-2" style="width:75px; height: 75px;"></div>
+        <div class="border border-4 bg-light m-2" style="width:75px; height: 75px;"></div>
+        <div class="border border-5 bg-light m-2" style="width:75px; height: 75px;"></div>        
+        <hr>
+        <p>HTML</p>
+        <hr>
+        <pre>
+&lt;div class=" <span class="text-danger">border border-2 "</span> bg-light m-2" style="width:75px; height: 75px;"&gt;&lt;/div&gt;
+&lt;div class=" <span class="text-danger">border border-3 "</span> bg-light m-2" style="width:75px; height: 75px;"&gt;&lt;/div&gt;
+&lt;div class=" <span class="text-danger">border border-4 "</span> bg-light m-2" style="width:75px; height: 75px;"&gt;&lt;/div&gt;
+&lt;div class=" <span class="text-danger">border border-5 "</span> bg-light m-2" style="width:75px; height: 75px;"&gt;&lt;/div&gt;
+</pre>
+    </div>
+    
+    </div>
+    <span class="text-danger"></span>
+    <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+    <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+    <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+
+    <!-- --------------------------------------------------------------------------------- -->
+<!-- Radius  / Radio -->
+<div class="container mt-4">
+
+    <h3 id="radius" class="text-info">Radius/ Radio</h3>
+    <p>Agregue clases a un elemento para redondear fácilmente sus esquinas.</p>
+    <div class="row border rounded m-3 p-3 bg-">
+        <img src="https://cdn.pixabay.com/photo/2023/06/28/12/32/chameleon-8094345_640.jpg?" class="rounded" alt="..." style="width:200px;">
+            <img src="https://place-hold.it/250x180" class="rounded-top" alt="..." style="width:200px;"> 
+            <img src="https://cdn.pixabay.com/photo/2016/10/07/13/00/bighorn-1721514_640.jpg?" class="rounded-end" alt="..." style="width:200px;">
+            <img src="https://cdn.pixabay.com/photo/2018/05/24/17/35/parrots-3427188_640.jpg?" class="rounded-bottom" alt="..." style="width:200px;">
+            <img src="https://cdn.pixabay.com/photo/2016/10/07/13/00/bighorn-1721514_640.jpg?" class="rounded-start" alt="..."style="width:200px;">
+            <img src="https://cdn.pixabay.com/photo/2016/10/07/13/00/bighorn-1721514_640.jpg?" class="rounded-circle" alt="..." style="width:200px;">
+            <img src="https://cdn.pixabay.com/photo/2023/06/28/12/32/chameleon-8094345_640.jpg?" class="rounded-pill" alt="..." style="width:200px;">
+        <hr>
+        <p>HTML</p>
+        <hr>
+        <pre>
+ &lt;img src="https://cdn.pixabay.com/photo/2023/06/28/12/32/chameleon-8094345_640.jpg?" class=<span class="text-danger">"rounded</span>" alt="..." style="width:200px;"&gt;
+ &lt;img src="https://place-hold.it/250x180" class=<span class="text-danger">"rounded-top</span>" alt="..."       style="width:200px;"&gt; 
+ &lt;img src="https://cdn.pixabay.com/photo/2016/10/07/13/00/bighorn-1721514_640.jpg?" class=<span class="text-danger">"rounded-end</span>" alt="..." style="width:200px;"&gt;
+ &lt;img src="https://cdn.pixabay.com/photo/2018/05/24/17/35/parrots-3427188_640.jpg?" class=<span class="text-danger">"rounded-bottom</span>" alt="..." style="width:200px;"&gt;
+ &lt;img src="https://cdn.pixabay.com/photo/2016/10/07/13/00/bighorn-1721514_640.jpg?" class=<span class="text-danger">"rounded-start</span>" alt="..."style="width:200px;"&gt;
+ &lt;img src="https://cdn.pixabay.com/photo/2016/10/07/13/00/bighorn-1721514_640.jpg?" class=<span class="text-danger">"rounded-circle</span>" alt="..." style="width:200px;"&gt;
+ &lt;img src="https://cdn.pixabay.com/photo/2023/06/28/12/32/chameleon-8094345_640.jpg?" class=<span class="text-danger">"rounded-pill</span>" alt="..." style="width:200px;"&gt;
+ </pre>
+    </div>
+    
+    </div>
+    <span class="text-danger"></span>
+    <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+    <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+    <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+    <!-- --------------------------------------------------------------------------------- -->
+<!-- Sizes  / Tallas -->
+<div class="container mt-4">
+
+    <h3 id="sizes" class="text-info">Sizes/ Tallas</h3>
+    <p>Utilice las clases de escalado para esquinas redondeadas más grandes o más pequeñas. Los tamaños varían de <span class="text-danger">5 </span> a <span class="text-danger">5 </span> y se pueden configurar modificando la API de utilidades. </p>
+    <div class="row border rounded m-3 p-3 bg-">
+        <div class="container mt-5">
+
+    <!-- Imágenes con diferentes niveles de redondeo -->
+            <img src="https://cdn.pixabay.com/photo/2023/06/28/12/32/chameleon-8094345_640.jpg?" class="rounded-0" alt="..." style="width:200px; margin: 10px;">
+            
+            <img src="https://cdn.pixabay.com/photo/2016/10/07/13/00/bighorn-1721514_640.jpg?" class="rounded-1" alt="..." style="width:200px; margin: 10px;">
+            <img src="https://cdn.pixabay.com/photo/2018/05/24/17/35/parrots-3427188_640.jpg?" class="rounded-2" alt="..." style="width:200px; margin: 10px;">
+            <img src="https://cdn.pixabay.com/photo/2016/10/07/13/00/bighorn-1721514_640.jpg?" class="rounded-3" alt="..." style="width:200px; margin: 10px;">
+            <img src="https://cdn.pixabay.com/photo/2016/10/07/13/00/bighorn-1721514_640.jpg?" class="rounded-4" alt="..." style="width:200px; margin: 10px;">
+            <img src="https://cdn.pixabay.com/photo/2023/06/28/12/32/chameleon-8094345_640.jpg?" class="rounded-5" alt="..." style="width:200px; margin: 10px;">
+        </div>
+
+        <hr>
+        <p>HTML</p>
+        <hr>
+        <pre>
+ &lt;img src="https://cdn.pixabay.com/photo/2023/06/28/12/32/chameleon-8094345_640.jpg?" class=<span class="text-danger">"rounded-0</span>" alt="..." style="width:200px;"&gt;
+ &lt;img src="https://place-hold.it/250x180" class=<span class="text-danger">"rounded-1</span>" alt="..."       style="width:200px;"&gt; 
+ &lt;img src="https://cdn.pixabay.com/photo/2016/10/07/13/00/bighorn-1721514_640.jpg?" class=<span class="text-danger">"rounded-2</span>" alt="..." style="width:200px;"&gt;
+ &lt;img src="https://cdn.pixabay.com/photo/2018/05/24/17/35/parrots-3427188_640.jpg?" class=<span class="text-danger">"rounded-3</span>" alt="..." style="width:200px;"&gt;
+ &lt;img src="https://cdn.pixabay.com/photo/2016/10/07/13/00/bighorn-1721514_640.jpg?" class=<span class="text-danger">"rounded-4</span>" alt="..."style="width:200px;"&gt;
+ &lt;img src="https://cdn.pixabay.com/photo/2016/10/07/13/00/bighorn-1721514_640.jpg?" class=<span class="text-danger">"rounded-5</span>" alt="..." style="width:200px;"&gt;
+
 </pre>
     </div>
 
-    <p>Tenga en cuenta que <span class="text-danger">.text-capitalize</span> solo cambia la primera letra de cada
-        palabra, sin afectar las demás letras.</p>
+    <div class="row border rounded m-3 p-3 bg-">
+        <div class="container mt-5">
 
+    <!-- Imágenes con diferentes niveles de redondeo -->
+            <img src="https://cdn.pixabay.com/photo/2016/10/07/13/00/bighorn-1721514_640.jpg?" class="rounded-bottom-1" alt="..." style="width:200px; margin: 10px;">
+            <img src="https://cdn.pixabay.com/photo/2018/05/24/17/35/parrots-3427188_640.jpg?" class="rounded-start-2" alt="..." style="width:200px; margin: 10px;">
+            <img src="https://cdn.pixabay.com/photo/2016/10/07/13/00/bighorn-1721514_640.jpg?" class="rounded-end-circle" alt="..." style="width:200px; margin: 10px;">
+            <img src="https://cdn.pixabay.com/photo/2016/10/07/13/00/bighorn-1721514_640.jpg?" class="rounded-start-pill" alt="..." style="width:200px; margin: 10px;">
+            <img src="https://cdn.pixabay.com/photo/2023/06/28/12/32/chameleon-8094345_640.jpg?" class="rounded-5 rounded-top-0 " alt="..." style="width:200px; margin: 10px;">
+        </div>
 
+        <hr>
+        <p>HTML</p>
+        <hr>
+        <pre>
+ &lt;img src="https://place-hold.it/250x180" class=<span class="text-danger">"rounded-bottom-1</span>" alt="..."       style="width:200px;"&gt; 
+ &lt;img src="https://cdn.pixabay.com/photo/2016/10/07/13/00/bighorn-1721514_640.jpg?" class=<span class="text-danger">"rounded-start-2</span>" alt="..." style="width:200px;"&gt;
+ &lt;img src="https://cdn.pixabay.com/photo/2018/05/24/17/35/parrots-3427188_640.jpg?" class=<span class="text-danger">"rounded-end-circle</span>" alt="..." style="width:200px;"&gt;
+ &lt;img src="https://cdn.pixabay.com/photo/2016/10/07/13/00/bighorn-1721514_640.jpg?" class=<span class="text-danger">"rounded-start-pill</span>" alt="..."style="width:200px;"&gt;
+ &lt;img src="https://cdn.pixabay.com/photo/2016/10/07/13/00/bighorn-1721514_640.jpg?" class=<span class="text-danger">"rounded-5 rounded-top-0 </span>" alt="..." style="width:200px;"&gt;
+
+</pre>
+    </div>
+    </div>
+    <span class="text-danger"></span>
+    <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+    <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+    <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+    <!-- --------------------------------------------------------------------------------- -->
+<!-- Colored Buttons/ Botones de Colores -->
+<div class="container mt-4">
+
+    <h3 id="buttom" class="text-info">Colored Buttons/ Botones de Colores</h3>
+    <div class="row border rounded m-3 p-3 bg-">
+        <button type="button" class="btn btn-primary my-2">Primario btn btn-primary</button>
+        <button type="button" class="btn btn-secondary my-2">Secundario btn btn-secondary</button>
+        <button type="button" class="btn btn-success my-2">Éxito btn btn-success</button>
+        <button type="button" class="btn btn-danger my-2">Peligro btn btn-danger</button>
+        <button type="button" class="btn btn-warning my-2">Advertencia btn btn-warning</button>
+        <button type="button" class="btn btn-info my-2" >Información btn btn-info</button>
+        <button type="button" class="btn btn-light my-2">Claro btn btn-light</button>
+        <button type="button" class="btn btn-dark my-2">Oscuro btn btn-dark</button>
+        <hr>
+        <p>HTML</p>
+        <hr>
+        <pre>
+            <span class="text-danger"></span>
+&lt;button type="button" <span class="text-danger">class="btn btn-primary my-2"</span>&gt;Primario btn btn-primary &lt;/button&gt;
+&lt;button type="button" <span class="text-danger">class="btn btn-secondary my-2"</span>&gt;Secundario btn btn-secondary&lt;/button&gt;
+&lt;button type="button" <span class="text-danger">class="btn btn-success my-2"</span>&gt;Éxito btn btn-success &lt;/button&gt;
+&lt;button type="button" <span class="text-danger">class="btn btn-danger my-2"</span>&gt;Peligro btn btn-danger &lt;/button&gt;
+&lt;button type="button" <span class="text-danger">class="btn btn-warning my-2"</span>&gt;Advertencia btn btn-warning &lt;/button&gt;
+&lt;button type="button" <span class="text-danger">class="btn btn-info my-2"</span> ggt;Información btn btn-info &lt;/button&gt;
+&lt;button type="button" <span class="text-danger">class="btn btn-light my-2"</span>&gt;Claro btn btn-light &lt;/button&gt;
+&lt;button type="button" <span class="text-danger">class="btn btn-dark my-2"</span>&gt;Oscuro btn btn-dark&lt;/button&gt;
+            </pre>
+    </div>
+    </div>
+    <span class="text-danger"></span>
     <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
     <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
     <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
 
 
     
-    <h2 class="mt-4">Botones con Colores</h2>
-    <button type="button" class="btn btn-primary">Primario btn btn-primary</button>
-    <button type="button" class="btn btn-secondary">Secundario btn btn-secondary</button>
-    <button type="button" class="btn btn-success">Éxito btn btn-success</button>
-    <button type="button" class="btn btn-danger">Peligro btn btn-danger</button>
-    <button type="button" class="btn btn-warning">Advertencia btn btn-warning</button>
-    <button type="button" class="btn btn-info">Información btn btn-info</button>
-    <button type="button" class="btn btn-light">Claro btn btn-light</button>
-    <button type="button" class="btn btn-dark">Oscuro btn btn-dark</button>
+    <!-- Bootstrap JS (opcional) -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<!--------------------- CSS ------------------------------->
+<h3 class="text-primary ms-5 my-2">CSS</h3>
+<h5 id="Variables" class="text-primary ms-5 my-2 text-decoration-underline">Variables/Variables de Sass
+</h5>
+
+<div class="border bg-light mx-3  rounded">
+    <a href="https://github.com/twbs/bootstrap/blob/v5.3.3/scss/_root.scss" class=" text-success mx-3 m-5"
+        target="_blank">scss/root.scss</a>
+    <hr>
+    <pre class=" mb-2 pb-2">
+    --#{$prefix}border-width: #{<span class="text-danger">$border-width};</span>
+--#{$prefix}border-style: #{<span class="text-danger">$border-style};</span>
+--#{$prefix}border-color: #{<span class="text-danger">$border-color};</span>
+--#{$prefix}border-color-translucent: #{<span class="text-danger">$border-color-translucent};</span>
+
+--#{$prefix}border-radius: #{<span class="text-danger">$border-radius};</span>
+--#{$prefix}border-radius-sm: #{<span class="text-danger">$border-radius-sm};</span>
+--#{$prefix}border-radius-lg: #{<span class="text-danger">$border-radius-lg};</span>
+--#{$prefix}border-radius-xl: #{<span class="text-danger">$border-radius-xl};</span>
+--#{$prefix}border-radius-xxl: #{<span class="text-danger">$border-radius-xxl};</span>
+--#{$prefix}border-radius-2xl: var(--#{<span class="text-danger">$prefix}border-radius-xxl);</span> // Deprecated in v5.3.0 for consistency
+--#{$prefix}border-radius-pill: #{<span class="text-danger">$border-radius-pill};</span>
+</pre>
+</div>    
+<!-- Sass Variables/Variables de Sass -->
+<h5 id="Variables" class="text-primary ms-5 my-2 text-decoration-underline">Sass Variables/Variables de Sass
+</h5>
+
+
+<div class="border bg-light mx-3 my-2 rounded">
+    <a href="https://github.com/twbs/bootstrap/blob/v5.3.3/scss/_variables.scss" class=" text-success mx-3 m-5"
+        target="_blank">scss/variables.scss</a>
+    <hr>
+    <pre class=" mb-2 pb-2">
+        <span class="text-danger">$border-width: </span>               1px;
+        <span class="text-danger">$border-widths: </span>(
+          1: 1px,
+          2: 2px,
+          3: 3px,
+          4: 4px,
+          5: 5px
+        );
+        <span class="text-danger">$border-style:                solid;</span>
+        <span class="text-danger">$border-color:                $gray-300;</span>
+        <span class="text-danger">$border-color-translucent: </span>   rgba(<span class="text-danger">$black,</span> .175);
+    </pre>
+</div>
+<div class="border bg-light mx-3 my-2 rounded">
+    <a href="https://github.com/twbs/bootstrap/blob/v5.3.3/scss/_variables.scss" class=" text-success mx-3 m-5"
+        target="_blank">scss/variables.scss</a>
+    <hr>
+    <pre class=" mb-2 pb-2">
+    <span class="text-danger">$border-radius: </span>              .375rem;
+    <span class="text-danger">$border-radius-sm:</span>            .25rem;
+    <span class="text-danger">$border-radius-lg: </span>           .5rem;
+    <span class="text-danger">$border-radius-xl:  </span>          1rem;
+    <span class="text-danger">$border-radius-xxl: </span>          2rem;
+    <span class="text-danger">$border-radius-pill: </span>         50rem;
+    </pre>
+</div>
+<p>Variables para configurar <span class="text-danger">border-color </span>en <span class="text-danger">.border-*-subtle</span> utilidades en modo claro y oscuro:
+
+</p>
+<div class="border bg-light mx-3 my-2 rounded">
+    <a href="https://github.com/twbs/bootstrap/blob/v5.3.3/scss/_variables.scss" class=" text-success mx-3 m-5"
+        target="_blank">scss/variables.scss</a>
+    <hr>
+    <pre class=" mb-2 pb-2">
+    <span class="text-danger">$primary-border-subtle:</span> tint-color(<span class="text-danger">$primary,</span> 60%);
+    <span class="text-danger">$secondary-border-subtle: </span>tint-color(<span class="text-danger">$secondary,</span> 60%);
+    <span class="text-danger">$success-border-subtle:   </span>tint-color(<span class="text-danger">$success,</span> 60%);
+    <span class="text-danger">$info-border-subtle:      </span>tint-color(<span class="text-danger">$info,</span> 60%);
+    <span class="text-danger">$warning-border-subtle:   </span>tint-color(<span class="text-danger">$warning,</span> 60%);
+    <span class="text-danger">$danger-border-subtle:    </span>tint-color(<span class="text-danger">$danger,</span>60%);
+    <span class="text-danger">$light-border-subtle:     $gray-200;</span>
+    <span class="text-danger">$dark-border-subtle:      $gray-500;</span>
+    </pre>
+</div>
+<span class="text-danger"></span>
+
+<div class="border bg-light mx-3 my-2 rounded">
+    <a href="https://github.com/twbs/bootstrap/blob/v5.3.3/scss/_variables.scss" class=" text-success mx-3 m-5"
+        target="_blank">scss/variables-dark.scss</a>
+    <hr>
+    <pre class=" mb-2 pb-2">
+    <span class="text-danger">$primary-border-subtle-dark:</span> shade-color(<span class="text-danger">$primary,</span> 40%);
+    <span class="text-danger">$secondary-border-subtle-dark: </span>shade-color(<span class="text-danger">$secondary,</span> 40%);
+    <span class="text-danger">$success-border-subtle-dark:   </span>shade-color(<span class="text-danger">$success,</span> 40%);
+    <span class="text-danger">$info-border-subtle-dark:      </span>shade-color(<span class="text-danger">$info,</span> 40%);
+    <span class="text-danger">$warning-border-subtle-dark:   </span>shade-color(<span class="text-danger">$warning,</span> 40%);
+    <span class="text-danger">$danger-border-subtle-dark:    </span>shade-color(<span class="text-danger">$danger,</span>40%);
+    <span class="text-danger">$light-border-subtle-dark:     $gray-700;</span>
+    <span class="text-danger">$dark-border-subtle-dark:      $gray-800;</span>
+    </pre>
+</div>
+
+
+<!-- Sass maps/Mapas de Sass -->
+<h5 id="maps" class="text-primary ms-5 my-4 text-decoration-underline">Sass maps/Mapas de Sass </h5>
+<p class="mx-3">Los colores de borde adaptables del modo de color también están disponibles como un mapa Sass:
+
+</p>
+<div class="border bg-light mx-3 rounded">
+    <a href="https://github.com/twbs/bootstrap/blob/v5.3.3/scss/_maps.scss" class=" text-success mx-3 m-5"
+        target="_blank">scss/_maps.scss</a>
+        <hr>
+<pre class=" mb-2 pb-2">
+    <span class="text-danger">$theme-colors-border-subtle: (</span> 
+    "$primary":<span class="text-danger">$primary-border-subtle:</span>,
+    "$secondary":<span class="text-danger">$secondary-border-subtle: </span>,
+    "$success":<span class="text-danger">$success-border-subtle:</span>,
+    "$info":<span class="text-danger">$info-border-subtle:</span>,
+    "$warning":<span class="text-danger">$warning-border-subtle:</span>,
+    "$danger":<span class="text-danger">$danger-border-subtle:</span>,
+    "$light":<span class="text-danger">$light-border-subtle</span>,
+    "$primary":<span class="text-danger">$dark-border-subtle</span>,
+    );
+</pre>
+</div>     <span class="text-danger"></span>
+
+<div class="border bg-light mx-3 my-3 rounded">
+    <a href="https://github.com/twbs/bootstrap/blob/v5.3.3/scss/_maps.scss" class=" text-success mx-3 m-5"
+        target="_blank">scss/_maps.scss</a>
+        <hr>
+        <pre class=" mb-2 pb-2">
+            <span class="text-danger">$theme-colors-border-subtle-dark:(</span> 
+            "$primary":<span class="text-danger">$primary-border-subtle-dark</span>,
+            "$secondary":<span class="text-danger">$secondary-border-subtle-dark</span>,
+            "$success":<span class="text-danger">$success-border-subtle-dark</span>,
+            "$info":<span class="text-danger">$info-border-subtle-dark</span>,
+            "$warning":<span class="text-danger">$warning-border-subtle-dark</span>,
+            "$danger":<span class="text-danger">$danger-border-subtle-dark</span>,
+            "$light":<span class="text-danger">$light-border-subtle-dark</span>,
+            "$primary":<span class="text-danger">$dark-border-subtle-dark</span>,
+            );
+    </pre>
+</div>
+<!-- ---------------------------------------- -->
+ <!--  Sass mixins  /Mezclas de Sass-->
+<h5 id="mixins" class="text-primary ms-5 my-2 text-decoration-underline"> Sass mixins  /Mezclas de Sass </h5>
+<div class="border bg-light mx-3 my-3 rounded">
+    <a href="https://github.com/twbs/bootstrap/blob/v5.3.3/scss/mixins/_border-radius.scss" class=" text-success mx-3 m-5"
+        target="_blank">scss/mixins/_border-radius.scss</a>
+        <hr>
+        <pre class=" mb-2 pb-2">
+    <span class="text-danger">@mixin</span> border-radius<span class="text-danger"> ($radius: $border-radius, $fallback-border-radius: false) </span>{
+        <span class="text-danger">@if $enable-rounded {</span>
+          border-radius: valid-radius<span class="text-danger"> ($radius);</span>
+        }
+        <span class="text-danger"> @else if $fallback-border-radius != false {</span>
+          border-radius: <span class="text-danger"> $fallback-border-radius;</span>
+        }
+      }
+      
+      <span class="text-danger">@mixin</span> border-top-radius<span class="text-danger"> ($radius: $border-radius) {
+        @if $enable-rounded {</span>
+          border-top-left-radius: valid-radius<span class="text-danger"> ($radius);</span></span>
+          border-top-right-radius: valid-radius<span class="text-danger"> ($radius);</span></span>
+        }
+      }
+      
+      <span class="text-danger">@mixin</span> border-end-radius<span class="text-danger"> ($radius: $border-radius) {
+        @if $enable-rounded {</span>
+          border-top-right-radius: valid-radius<span class="text-danger"> ($radius);</span>
+          border-bottom-right-radius: valid-radius<span class="text-danger"> ($radius);</span>
+        }
+      }
+      
+      <span class="text-danger">@mixin</span> border-bottom-radius<span class="text-danger">  ($radius: $border-radius) </span>{
+        @if $enable-rounded </span>{
+          border-bottom-right-radius: valid-radius<span class="text-danger"> ($radius);</span>
+          border-bottom-left-radius: valid-radius<span class="text-danger">($radius);</span>
+        }
+      }
+      
+      <span class="text-danger">@mixin</span> border-start-radius<span class="text-danger"> ($radius: $border-radius) {
+        @if $enable-rounded {</span>
+          border-top-left-radius: valid-radius<span class="text-danger"> ($radius);</span>
+          border-bottom-left-radius: valid-radius(<span class="text-danger"> $radius);</span>
+        }
+      }
+      
+      <span class="text-danger">@mixin</span> border-top-start-radius($radius: $border-radius) {
+        @if $enable-rounded {</span></span>
+          border-top-left-radius: valid-radius<span class="text-danger"> ($radius);</span></span>
+        }
+      }
+      
+      <span class="text-danger">@mixin</span> border-top-end-radius<span class="text-danger"> ($radius: $border-radius) {
+        @if $enable-rounded {</span></span>
+          border-top-right-radius: valid-radius<span class="text-danger"> ($radius);</span></span>
+        }
+      }
+      
+      <span class="text-danger">@mixin</span> border-bottom-end-radius<span class="text-danger"> ($radius: $border-radius) {
+        @if $enable-rounded {</span>
+          border-bottom-right-radius: valid-radius<span class="text-danger"> ($radius);</span>
+        }
+      }
+      
+      <span class="text-danger">@mixin</span> border-bottom-start-radius<span class="text-danger"> ($radius: $border-radius) {
+        @if $enable-rounded {</span>
+          border-bottom-left-radius: valid-radius<span class="text-danger"> ($radius);</span>
+        }
+      }
+</pre>      
+        <span class="text-danger">       </span>
+</div>
+
+<!-- ------------------------------------------------------------ -->
+ <!-- Sass utilities API/API de   utilidades de Sass -->
+<h5 id="utilities" class="text-primary ms-5 my-2 text-decoration-underline"> Sass utilities API/API de
+    utilidades de Sass </h5>
+<p class="mx-3">Las utilidades de borde se declaran en nuestra API de utilidades en [nombre del archivo]  <span class="text-danger">scss/_utilities.scss.</span> <a
+        href="https://getbootstrap.com/docs/5.3/utilities/api/#using-the-api">Aprenda a usar la API de
+        utilidades.</a> </p>
+<div class="border bg-light mx-3 my-3   rounded">
+    <a href="https://github.com/twbs/bootstrap/blob/v5.3.3/scss/_utilities.scss" class=" text-success  m-3 p-3"
+        target="_blank">scss/_utilities.scss</a>
+        <hr>
+
+            <pre class=" mb-2 pb-2">
+                "border": (
+      property: border,
+      values: (
+        null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
+        0: 0,
+      )
+    ),
+    "border-top": (
+      property: border-top,
+      values: (
+        null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
+        0: 0,
+      )
+    ),
+    "border-end": (
+      property: border-right,
+      class: border-end,
+      values: (
+        null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
+        0: 0,
+      )
+    ),
+    "border-bottom": (
+      property: border-bottom,
+      values: (
+        null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
+        0: 0,
+      )
+    ),
+    "border-start": (
+      property: border-left,
+      class: border-start,
+      values: (
+        null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
+        0: 0,
+      )
+    ),
+    "border-color": (
+      property: border-color,
+      class: border,
+      local-vars: (
+        "border-opacity": 1
+      ),
+      values: $utilities-border-colors
+    ),
+    "subtle-border-color": (
+      property: border-color,
+      class: border,
+      values: $utilities-border-subtle
+    ),
+    "border-width": (
+      property: border-width,
+      class: border,
+      values: $border-widths
+    ),
+    "border-opacity": (
+      css-var: true,
+      class: border-opacity,
+      values: (
+        10: .1,
+        25: .25,
+        50: .5,
+        75: .75,
+        100: 1
+      )
+    ),</pre>
+</div>
+
+    </div>
+    
+<div class="border bg-light mx-3 my-3 rounded">
+    <a href="https://github.com/twbs/bootstrap/blob/v5.3.3/scss/_utilities.scss" class=" text-success mx-3 m-5"
+        target="_blank">scss/_utilities.scss</a>
+        <hr>
+<pre class=" mb-2 pb-2">
+    "rounded": (
+        property: border-radius,
+        class: rounded,
+        values: (
+          null: var(--#{$prefix}border-radius),
+          0: 0,
+          1: var(--#{$prefix}border-radius-sm),
+          2: var(--#{$prefix}border-radius),
+          3: var(--#{$prefix}border-radius-lg),
+          4: var(--#{$prefix}border-radius-xl),
+          5: var(--#{$prefix}border-radius-xxl),
+          circle: 50%,
+          pill: var(--#{$prefix}border-radius-pill)
+        )
+      ),
+      "rounded-top": (
+        property: border-top-left-radius border-top-right-radius,
+        class: rounded-top,
+        values: (
+          null: var(--#{$prefix}border-radius),
+          0: 0,
+          1: var(--#{$prefix}border-radius-sm),
+          2: var(--#{$prefix}border-radius),
+          3: var(--#{$prefix}border-radius-lg),
+          4: var(--#{$prefix}border-radius-xl),
+          5: var(--#{$prefix}border-radius-xxl),
+          circle: 50%,
+          pill: var(--#{$prefix}border-radius-pill)
+        )
+      ),
+      "rounded-end": (
+        property: border-top-right-radius border-bottom-right-radius,
+        class: rounded-end,
+        values: (
+          null: var(--#{$prefix}border-radius),
+          0: 0,
+          1: var(--#{$prefix}border-radius-sm),
+          2: var(--#{$prefix}border-radius),
+          3: var(--#{$prefix}border-radius-lg),
+          4: var(--#{$prefix}border-radius-xl),
+          5: var(--#{$prefix}border-radius-xxl),
+          circle: 50%,
+          pill: var(--#{$prefix}border-radius-pill)
+        )
+      ),
+      "rounded-bottom": (
+        property: border-bottom-right-radius border-bottom-left-radius,
+        class: rounded-bottom,
+        values: (
+          null: var(--#{$prefix}border-radius),
+          0: 0,
+          1: var(--#{$prefix}border-radius-sm),
+          2: var(--#{$prefix}border-radius),
+          3: var(--#{$prefix}border-radius-lg),
+          4: var(--#{$prefix}border-radius-xl),
+          5: var(--#{$prefix}border-radius-xxl),
+          circle: 50%,
+          pill: var(--#{$prefix}border-radius-pill)
+        )
+      ),
+      "rounded-start": (
+        property: border-bottom-left-radius border-top-left-radius,
+        class: rounded-start,
+        values: (
+          null: var(--#{$prefix}border-radius),
+          0: 0,
+          1: var(--#{$prefix}border-radius-sm),
+          2: var(--#{$prefix}border-radius),
+          3: var(--#{$prefix}border-radius-lg),
+          4: var(--#{$prefix}border-radius-xl),
+          5: var(--#{$prefix}border-radius-xxl),
+          circle: 50%,
+          pill: var(--#{$prefix}border-radius-pill)
+        )
+      ),
+</pre>
+</div>
+    <!-- ------------------------------------------------------- -->
+    <!-- ------------------------------------------------------- -->
+
+            <!-- ------------------------------------------------------- -->
+
+    <!-- ------------------FOOTER------------------ -->
+    <footer class="bd-footer py-4 py-md-5 mt-5 bg-body-tertiary">
+        <div class="container py-4 py-md-5 px-4 px-md-3 text-body-secondary">
+          <div class="row">
+            <div class="col-lg-3 mb-3">
+              <a class="d-inline-flex align-items-center mb-2 text-body-emphasis text-decoration-none" href="/" aria-label="Oreja">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="d-block me-2" viewBox="0 0 118 94" role="img"><title>Bootstrap</title><path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z" fill="currentColor"></path></svg>
+                <span class="fs-5"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Oreja</font></font></span>
+              </a>
+              <ul class="list-unstyled small">
+                <li class="mb-2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Diseñado y construido con todo el amor del mundo por el </font></font><a href="/docs/5.3/about/team/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">equipo de Bootstrap</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> con la ayuda de </font></font><a href="https://github.com/twbs/bootstrap/graphs/contributors"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">nuestros colaboradores</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> .</font></font></li>
+                <li class="mb-2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Código bajo licencia </font></font><a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">MIT</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> , docs </font></font><a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CC BY 3.0</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> .</font></font></li>
+                <li class="mb-2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Actualmente v5.3.3.</font></font></li>
+              </ul>
+            </div>
+            <div class="col-6 col-lg-2 offset-lg-1 mb-3">
+              <h5><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Campo de golf</font></font></h5>
+              <ul class="list-unstyled">
+                <li class="mb-2"><a href="https://getbootstrap.com/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Hogar</font></font></a></li>
+                <li class="mb-2"><a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/" target="_blank"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Documentos</font></font></a></li>
+                <li class="mb-2"><a href="https://getbootstrap.com/docs/5.3/examples/" target="_blank"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ejemplos</font></font></a></li>
+                <li class="mb-2"><a href="https://icons.getbootstrap.com/" target="_blank"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Iconos</font></font></a></li>
+                <li class="mb-2"><a href="https://themes.getbootstrap.com/" target="_blank"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Temas</font></font></a></li>
+                <li class="mb-2"><a href="https://blog.getbootstrap.com/" target="_blank"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Blog</font></font></a></li>
+                <li class="mb-2"><a href="https://cottonbureau.com/people/bootstrap" target="_blank" rel="noopener"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tienda de artículos promocionales</font></font></a></li>
+              </ul>
+            </div>
+            <div class="col-6 col-lg-2 mb-3">
+              <h5><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Guías</font></font></h5>
+              <ul class="list-unstyled">
+                <li class="mb-2"><a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/" target="_blank"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Empezando</font></font></a></li>
+                <li class="mb-2"><a href="https://getbootstrap.com/docs/5.3/examples/starter-template/" target="_blank"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Plantilla de inicio</font></font></a></li>
+                <li class="mb-2"><a href="https://getbootstrap.com//docs/5.3/getting-started/webpack/" target="_blank"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Paquete web</font></font></a></li>
+                <li class="mb-2"><a href="https://getbootstrap.com//docs/5.3/getting-started/parcel/" target="_blank"> <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Parcela</font></font></a></li>
+                <li class="mb-2"><a href="https://getbootstrap.com//docs/5.3/getting-started/vite/" target="_blank"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Vite</font></font></a></li>
+              </ul>
+            </div>
+            <div class="col-6 col-lg-2 mb-3">
+              <h5><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Proyectos</font></font></h5>
+              <ul class="list-unstyled">
+                <li class="mb-2"><a href="https://github.com/twbs/bootstrap" target="_blank" rel="noopener"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Bootstrap 5</font></font></a></li>
+                <li class="mb-2"><a href="https://github.com/twbs/bootstrap/tree/v4-dev" target="_blank" rel="noopener"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Bootstrap 4</font></font></a></li>
+                <li class="mb-2"><a href="https://github.com/twbs/icons" target="_blank" rel="noopener"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Iconos</font></font></a></li>
+                <li class="mb-2"><a href="https://github.com/twbs/rfs" target="_blank" rel="noopener"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">RFS</font></font></a></li>
+                <li class="mb-2"><a href="https://github.com/twbs/examples/" target="_blank" rel="noopener"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ejemplos de repositorio</font></font></a></li>
+              </ul>
+            </div>
+            <div class="col-6 col-lg-2 mb-3">
+              <h5><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Comunidad</font></font></h5>
+              <ul class="list-unstyled">
+                <li class="mb-2"><a href="https://github.com/twbs/bootstrap/issues" target="_blank" rel="noopener"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Asuntos</font></font></a></li>
+                <li class="mb-2"><a href="https://github.com/twbs/bootstrap/discussions" target="_blank" rel="noopener"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Discusiones</font></font></a></li>
+                <li class="mb-2"><a href="https://github.com/sponsors/twbs" target="_blank" rel="noopener"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">patrocinadores corporativos</font></font></a></li>
+                <li class="mb-2"><a href="https://opencollective.com/bootstrap" target="_blank" rel="noopener"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Colectivo Abierto</font></font></a></li>
+                <li class="mb-2"><a href="https://stackoverflow.com/questions/tagged/bootstrap-5" target="_blank" rel="noopener"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Desbordamiento de pila</font></font></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
