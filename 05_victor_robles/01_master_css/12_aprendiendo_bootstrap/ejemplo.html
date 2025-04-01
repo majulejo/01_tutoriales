@@ -3,21 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bootstrap Rounded Corners</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Test Collapse</title>
 </head>
 <body>
-    <div class="container mt-5">
-        <!-- Imágenes con diferentes niveles de redondeo -->
-        <img src="https://cdn.pixabay.com/photo/2023/06/28/12/32/chameleon-8094345_640.jpg?" class="rounded-0" alt="..." style="width:200px; margin: 10px;">
-        
-        <img src="https://cdn.pixabay.com/photo/2016/10/07/13/00/bighorn-1721514_640.jpg?" class="rounded-1" alt="..." style="width:200px; margin: 10px;">
-        <img src="https://cdn.pixabay.com/photo/2018/05/24/17/35/parrots-3427188_640.jpg?" class="rounded-2" alt="..." style="width:200px; margin: 10px;">
-        <img src="https://cdn.pixabay.com/photo/2016/10/07/13/00/bighorn-1721514_640.jpg?" class="rounded-3" alt="..." style="width:200px; margin: 10px;">
-        <img src="https://cdn.pixabay.com/photo/2016/10/07/13/00/bighorn-1721514_640.jpg?" class="rounded-4" alt="..." style="width:200px; margin: 10px;">
-        <img src="https://cdn.pixabay.com/photo/2023/06/28/12/32/chameleon-8094345_640.jpg?" class="rounded-5" alt="..." style="width:200px; margin: 10px;">
+    <!-- Botón para activar el collapse -->
+    <a class="btn btn-success mt-3" data-bs-toggle="collapse" href="#informacion" role="button">
+        Mostrar Toda La Información
+    </a>
+    <!-- Contenido colapsable -->
+    <div class="collapse" id="informacion">
+        <div class="card card-body">
+            Esta es la información oculta.
+            <button class="btn btn-danger" data-bs-dismiss="collapse">
+                Cerrar Información
+            </button>
+        </div>
     </div>
 
-    <!-- Bootstrap JS (opcional) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

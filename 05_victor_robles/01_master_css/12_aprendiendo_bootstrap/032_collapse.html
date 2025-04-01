@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/020_imgenes_master/ccc.png" type="image/x-icon">
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <title>031_componentes_pagination</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">    <title>032_collapse</title>
     <style>
         /* Contenedor personalizado con ancho del 90% y centrado */
         .custom-container {
@@ -157,7 +156,7 @@ Además, los íconos predeterminados de Bootstrap están definidos como imágene
 
     <!-- primary secondary success danger warning info light dark -->
 
-    <h1 class="bg-warning text-black text-center mt-5">031_componentes_pagination</h1>
+    <h1 class="bg-warning text-black text-center mt-5">032_collapse</h1>
     <!-- Contenedor principal -->
     <div class="custom-container">
         <div class="row">
@@ -210,6 +209,24 @@ Además, los íconos predeterminados de Bootstrap están definidos como imágene
                 </div>
                 <!--FINAL SLIDER MASTER-->
             </div>
+            <div class="col-md-3 mt-3 ms-3 bg-light">
+
+<!---------------INICIO--- COLLAPSE-------------- -->
+<!-- Botón para activar el collapse -->
+<a class="btn btn-info mt-2 text-center " data-bs-toggle="collapse" href="#informacion" role="button">
+    Mostrar Collapse
+</a>
+
+<!-- Contenido colapsable -->
+<div class="collapse" id="informacion">
+    <div class="card card-body bg-dark text-white text-center mt-2">
+        Esta es la información oculta del collapse.
+    </div>
+</div>
+
+
+<!---------------FINAL-- --COLLAPSE-------------- -->
+            </div>
             <!--Inicio de  pagination -->
 
             <nav aria-label="pagination" class="m-3">
@@ -222,6 +239,7 @@ Además, los íconos predeterminados de Bootstrap están definidos como imágene
                     <li class="page-item"><a href="#" class="page-link">&raquo;</a></li>
                 </ul>
             </nav>
+
             <h3 class="bg-danger text-center">Overview</h3>
             <h3 class="bg-danger text-center">Descripción general</h3>
             <h6>
@@ -377,6 +395,7 @@ Además, los íconos predeterminados de Bootstrap están definidos como imágene
 
 
             <!-- final pagination -->
+             
 
             <div class="col-md-4">
                 <!-- primary secondary success danger warning info light dark -->
@@ -411,6 +430,10 @@ Además, los íconos predeterminados de Bootstrap están definidos como imágene
                             </div>
                         </div>
                     </div>
+
+
+
+
                 </div>
                 <!-- final modal -->
 
@@ -775,8 +798,8 @@ Además, los íconos predeterminados de Bootstrap están definidos como imágene
         </div>
     </div>
 
-    <script type="text/javascript" src="jquery/jquery-3.7.1.min.js"></script>
-    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         $(document).ready(function () {
             $("#slider_master").carousel({

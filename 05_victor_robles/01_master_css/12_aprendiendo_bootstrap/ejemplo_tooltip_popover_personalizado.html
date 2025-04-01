@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalización de Tooltips y Popovers</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Estilos personalizados -->
+    <style>
+        /* Personalización de tooltips */
+        .tooltip-inner {
+            background-color: #ff5733; /* Color de fondo */
+            color: #ffffff; /* Color del texto */
+            font-family: 'Arial', sans-serif; /* Fuente */
+            font-size: 14px; /* Tamaño del texto */
+            padding: 8px 12px; /* Espaciado interno */
+            border-radius: 6px; /* Bordes redondeados */
+        }
+
+        .bs-tooltip-top .tooltip-arrow::before,
+        .bs-tooltip-bottom .tooltip-arrow::before,
+        .bs-tooltip-start .tooltip-arrow::before,
+        .bs-tooltip-end .tooltip-arrow::before {
+            border-color: #ff5733; /* Color de la flecha */
+        }
+
+        /* Personalización de popovers */
+        .popover {
+            background-color: #2ecc71; /* Color de fondo */
+            color: #ffffff; /* Color del texto */
+            font-family: 'Georgia', serif; /* Fuente */
+            font-size: 14px; /* Tamaño del texto */
+            border: none; /* Sin borde */
+            border-radius: 8px; /* Bordes redondeados */
+        }
+
+        .popover-header {
+            background-color: #27ae60; /* Color de fondo del encabezado */
+            color: #ffffff; /* Color del texto */
+            font-weight: bold; /* Negrita */
+            border-bottom: 1px solid #27ae60; /* Borde inferior */
+        }
+
+        .popover-body {
+            background-color: #2ecc71; /* Color de fondo */
+            color: #ffffff; /* Color del texto */
+            padding: 12px; /* Espaciado interno */
+        }
+
+        .bs-popover-top .popover-arrow::before,
+        .bs-popover-bottom .popover-arrow::before,
+        .bs-popover-start .popover-arrow::before,
+        .bs-popover-end .popover-arrow::before {
+            border-color: #2ecc71; /* Color de la flecha */
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Personalización de Tooltips y Popovers</h1>
+
+        <!-- Ejemplo de Tooltip -->
+        <div class="mb-4 text-center">
+            <button type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="Este es un tooltip personalizado">
+                Hover para ver el Tooltip
+            </button>
+        </div>
+
+        <!-- Ejemplo de Popover -->
+        <div class="mb-4 text-center">
+            <button type="button" class="btn btn-secondary" data-bs-toggle="popover" data-bs-placement="right" title="Título del Popover" data-bs-content="Este es un popover personalizado">
+                Click para ver el Popover
+            </button>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS (incluye Popper.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Inicialización de Tooltips y Popovers -->
+    <script>
+        // Inicializar todos los tooltips
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+
+        // Inicializar todos los popovers
+        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+            return new bootstrap.Popover(popoverTriggerEl);
+        });
+    </script>
+</body>
+</html>
