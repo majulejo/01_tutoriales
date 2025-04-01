@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambios Bootstrap 4 a Bootstrap 5</title>
+    <!-- Incluimos Bootstrap 5 desde un CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .table-bordered td,
+        .table-bordered th {
+            border: 1px solid #ddd !important;
+        }
+
+        .section-title {
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .note {
+            font-size: 14px;
+            color: #6c757d;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center text-primary mb-5">Cambios más Importantes de Bootstrap 4 a Bootstrap 5</h1>
+
+        <!-- SECCIÓN UTILIDADES -->
+        <div class="section-title">Utilidades</div>
+        <table class="table table-bordered">
+            <thead class="table-dark">
+                <tr>
+                    <th>Bootstrap 4</th>
+                    <th>Bootstrap 5</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>pl-5, pr-5</code></td>
+                    <td><code>ps-5, pe-5</code></td>
+                </tr>
+                <tr>
+                    <td><code>rounded-left, rounded-right</code></td>
+                    <td><code>rounded-start, rounded-end</code></td>
+                </tr>
+                <tr>
+                    <td><code>float-left, float-right</code></td>
+                    <td><code>float-start, float-end</code></td>
+                </tr>
+                <tr>
+                    <td><code>ml-5, mr-5</code></td>
+                    <td><code>ms-5, me-5</code></td>
+                </tr>
+                <tr>
+                    <td><code>font-weight-bold</code></td>
+                    <td><code>fw-bold</code></td>
+                </tr>
+                <tr>
+                    <td><code>font-weight-light</code></td>
+                    <td><code>fw-light</code></td>
+                </tr>
+                <tr>
+                    <td><code>font-italic</code></td>
+                    <td><code>fst-italic</code></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- SECCIÓN NAVBAR -->
+        <div class="section-title">Navbar</div>
+        <table class="table table-bordered">
+            <thead class="table-dark">
+                <tr>
+                    <th>Bootstrap 4</th>
+                    <th>Bootstrap 5</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>data-toggle</code></td>
+                    <td><code>data-bs-toggle</code></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- SECCIÓN ALERTAS -->
+        <div class="section-title">Alertas</div>
+        <table class="table table-bordered">
+            <thead class="table-dark">
+                <tr>
+                    <th>Bootstrap 4</th>
+                    <th>Bootstrap 5</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>data-dismiss</code></td>
+                    <td><code>data-bs-dismiss</code></td>
+                </tr>
+                <tr>
+                    <td><code>close</code></td>
+                    <td><code>btn-close (añade ya la cruz)</code></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- SECCIÓN BADGE -->
+        <div class="section-title">Badge</div>
+        <table class="table table-bordered">
+            <thead class="table-dark">
+                <tr>
+                    <th>Bootstrap 4</th>
+                    <th>Bootstrap 5</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>badge-success</code></td>
+                    <td><code>bg-success</code></td>
+                </tr>
+                <tr>
+                    <td><code>badge-pill</code></td>
+                    <td><code>rounded-pill</code></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- SECCIÓN SLIDER -->
+        <div class="section-title">Slider</div>
+        <table class="table table-bordered">
+            <thead class="table-dark">
+                <tr>
+                    <th>Bootstrap 4</th>
+                    <th>Bootstrap 5</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>data-slide</code></td>
+                    <td><code>data-bs-slide</code></td>
+                </tr>
+                <tr>
+                    <td><code>sr-only</code></td>
+                    <td><code>visually-hidden</code></td>
+                </tr>
+                <tr>
+                    <td><code>data-slide-to</code></td>
+                    <td><code>data-bs-slide-to</code></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- SECCIÓN JUMBOTRON -->
+        <div class="section-title">Jumbotron</div>
+        <table class="table table-bordered">
+            <thead class="table-dark">
+                <tr>
+                    <th>Bootstrap 4</th>
+                    <th>Bootstrap 5</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>jumbotron</code></td>
+                    <td>No disponible en Bootstrap 5. CSS personalizado:</td>
+                </tr>
+            </tbody>
+        </table>
+        <pre class="note">
+.jumbotron {
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  background-color: #e9ecef;
+  border-radius: .3rem;
+}
+    </pre>
+
+        <!-- SECCIÓN MODAL -->
+        <div class="section-title">Modal</div>
+        <table class="table table-bordered">
+            <thead class="table-dark">
+                <tr>
+                    <th>Bootstrap 4</th>
+                    <th>Bootstrap 5</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>data-target</code></td>
+                    <td><code>data-bs-target</code></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- SECCIÓN TOOLTIP -->
+        <div class="section-title">Tooltip</div>
+        <table class="table table-bordered">
+            <thead class="table-dark">
+                <tr>
+                    <th>Bootstrap 4</th>
+                    <th>Bootstrap 5</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>data-placement</code></td>
+                    <td><code>data-bs-placement</code></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- SECCIÓN POPOVER -->
+        <div class="section-title">Popover</div>
+        <table class="table table-bordered">
+            <thead class="table-dark">
+                <tr>
+                    <th>Bootstrap 4</th>
+                    <th>Bootstrap 5</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>data-container</code></td>
+                    <td><code>data-bs-container</code></td>
+                </tr>
+                <tr>
+                    <td><code>data-content</code></td>
+                    <td><code>data-bs-content</code></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- SECCIÓN FORMULARIOS -->
+        <div class="section-title">Formularios</div>
+        <table class="table table-bordered">
+            <thead class="table-dark">
+                <tr>
+                    <th>Bootstrap 4</th>
+                    <th>Bootstrap 5</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>form-group</code></td>
+                    <td><code>mb-3</code></td>
+                </tr>
+                <tr>
+                    <td>No disponible</td>
+                    <td>Añadir a los labels: <code>form-label</code></td>
+                </tr>
+                <tr>
+                    <td><code>input-group-prepend</code></td>
+                    <td>No disponible en Bootstrap 5. Ahora solo hace falta esto: 
+    <pre>
+    &lt;div class="form-group mb-3"&gt;
+        &lt;label for="email" class="form-label"&gt;Email&lt;/label&gt;
+        &lt;input type="email" id="email" name="email" class="form-control" placeholder="basilio@email.com"&gt;
+    &lt;/div&gt;
+    </pre> 
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- SECCIÓN TABLAS -->
+        <div class="section-title">Tablas</div>
+        <table class="table table-bordered">
+            <thead class="table-dark">
+                <tr>
+                    <th>Bootstrap 4</th>
+                    <th>Bootstrap 5</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>thead-dark</code></td>
+                    <td><code>table-dark</code></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Incluimos el JavaScript de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

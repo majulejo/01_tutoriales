@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/020_imgenes_master/ccc.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">    
+    <title>036_formularios</title>
+    <style>
+        /* Contenedor personalizado con ancho del 90% y centrado */
+        .custom-container {
+            width: 90%;
+            margin: 0 auto;
+            /* Centra el contenedor horizontalmente */
+        }
+
+        .carousel-inner {
+            max-width: 900px;
+            max-height: 450px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .carousel-inner img {
+            height: 450px;
+        }
+
+        .imagen-slider {
+            object-fit: cover;
+        }
+
+        .separador {
+            height: 50px;
+            background-color: rgb(242, 236, 80);
+            /* O el color que desees */
+        }
+
+        /*cambiar el tamaño y color de  carousel-control-prev-icon y carousel-control-next-icon */
+        #carouselProbandoTexto .carousel-control-prev,
+        #carouselProbandoTexto .carousel-control-next {
+            top: 50%;
+            /* Centrar verticalmente */
+            transform: translateY(-50%);
+            /* Ajustar el centrado vertical */
+            width: 3rem;
+            /* Ajustar el ancho de los controles */
+            height: 3rem;
+            /* Ajustar la altura de los controles */
+            background-color: rgba(0, 0, 0, 0.5);
+            /* Color de fondo semi-transparente */
+        }
+
+        #carouselProbandoTexto .carousel-control-prev {
+            left: 1rem;
+            /* Ajustar la posición horizontal */
+        }
+
+        #carouselProbandoTexto .carousel-control-next {
+            right: 1rem;
+            /* Ajustar la posición horizontal */
+        }
+
+        #carouselProbandoTexto .carousel-control-prev span,
+        #carouselProbandoTexto .carousel-control-next span {
+            color: rgb(245, 6, 6);
+            /* Cambiar el color de los símbolos de flecha */
+            font-size: 3rem;
+            /* Cambiar el tamaño de los símbolos de flecha */
+        }
+
+        #carouselProbandoTexto .carousel-control-prev span::before {
+            content: "\2190";
+            /* Flecha izquierda (←) */
+        }
+
+        #carouselProbandoTexto .carousel-control-next span::before {
+            content: "\2192";
+            /* Flecha derecha (→) */
+        }
+
+        /*slider_master*/
+        /*Los controles de navegación (carousel-control-prev y carousel-control-next) tienen las siguientes clases:
+
+.carousel-control-prev-icon y .carousel-control-next-icon: Son los íconos de flechas.
+.carousel-control-prev y .carousel-control-next: Son los contenedores de los botones.
+Además, los íconos predeterminados de Bootstrap están definidos como imágenes SVG en CSS, por lo que necesitarás sobrescribirlos si deseas cambiar la forma o el diseño.*/
+        #slider_master {
+            max-height: 450px;
+            overflow: hidden;
+        }
+
+        #slider_master img {
+            height: 450px;
+        }
+
+
+        /* Estilo general para los botones */
+        /* Estilo general para los botones */
+        #slider_master .carousel-control-prev,
+        #slider_master .carousel-control-next {
+            width: 50px;
+            /* Ancho del botón */
+            height: 50px;
+            /* Alto del botón */
+            background-color: rgba(0, 0, 0, 0.5);
+            /* Color de fondo */
+            border-radius: 50%;
+            /* Forma circular */
+            transition: background-color 0.3s ease;
+            /* Transición suave */
+        }
+
+        /* Cambiar el color al pasar el mouse */
+        #slider_master .carousel-control-prev:hover,
+        #slider_master .carousel-control-next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Eliminar máscaras y estilos predeterminados de Bootstrap */
+        #slider_master .carousel-control-prev-icon,
+        #slider_master .carousel-control-next-icon {
+            background-size: 20px 20px;
+            /* Tamaño del ícono */
+            background-image: none;
+            /* Eliminar el ícono predeterminado */
+            mask: none;
+            /* Eliminar máscara predeterminada */
+        }
+
+        /* Agregar contenido personalizado para los íconos */
+        #slider_master .carousel-control-prev-icon::before,
+        #slider_master .carousel-control-next-icon::before {
+            content: '';
+            /* Contenido vacío */
+            display: inline-block;
+            width: 20px;
+            /* Ancho del ícono */
+            height: 20px;
+            /* Alto del ícono */
+            background-color: white;
+            /* Color del ícono */
+            clip-path: polygon(0% 50%, 100% 0%, 100% 100%);
+            /* Flecha triangular */
+        }
+
+        /* Rotar la flecha para el botón "siguiente" */
+        #slider_master .carousel-control-next-icon::before {
+            transform: rotate(180deg);
+            /* Girar la flecha */
+        }
+    </style>
+</head>
+
+<body> <!-- primary secondary success danger warning info light dark -->
+
+
+    <!-- primary secondary success danger warning info light dark -->
+
+    <h1 class="bg-danger text-white text-center p-5">036_formularios</h1>
+    <!-- Contenedor principal -->
+    <div class="custom-container">
+        <div class="row">
+            <!-- Inicio del contenedor de 8 columnas de la izquierda de la pantalla -->
+            <div class="col-md-8 mt-3 bg-info ">
+                <!-- inicio del nav -->
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="#">Inicio</a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="#">Desarrollo Web</a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="#">Componentes de Bootstrap</a>
+                        </li>
+                    </ol>
+                </nav>
+                <!-- final del nav -->
+                <!--INICIO SLIDER MASTER-->
+                <h2 class="text-center">Master Slider</h2>
+                <div id="slider_master" class="carousel slidemt-3 mb-5" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100"
+                                src="https://cdn.pixabay.com/photo/2023/06/28/12/32/chameleon-8094345_640.jpg?text=PRIMERA"
+                                alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100"
+                                src="https://cdn.pixabay.com/photo/2016/10/07/13/00/bighorn-1721514_640.jpg?text=SEGUNDA"
+                                alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100"
+                                src="https://cdn.pixabay.com/photo/2018/05/24/17/35/parrots-3427188_640.jpg?text=TERCERA"
+                                alt="...">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#slider_master" role="button" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                        <span class="sr-only">Anterior</span>
+                    </a>
+
+                    <a class="carousel-control-next" href="#slider_master" role="button" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                        <span class="sr-only">Siguiente</span>
+                    </a>
+                </div>
+                <!--FINAL SLIDER MASTER-->
+            </div>
+            <div class="col-md-3 mt-3 ms-3 bg-light">
+
+<!---------------INICIO--- COLLAPSE-------------- -->
+<!-- Botón para activar el collapse -->
+<a class="btn btn-info mt-2 text-center " data-bs-toggle="collapse" href="#informacion" role="button">
+    Mostrar Collapse
+</a>
+
+<!-- Contenido colapsable -->
+<div class="collapse" id="informacion">
+    <div class="card card-body bg-dark text-white text-center mt-2">
+        Esta es la información oculta del collapse.
+    </div>
+</div>
+<!---------------FINAL-- --COLLAPSE-------------- -->
+<!---------------INICIO-- --BARRA PROGRESO-------------- -->
+
+<div class="progress mt-2">
+    <div class="progress-bar bg-info w-10" role="progressbar">
+        10%
+    </div>
+</div><div class="progress mt-2">
+    <div class="progress-bar bg-danger w-25" role="progressbar">
+        25%
+    </div>
+</div>
+<div class="progress mt-2">
+    <div id="barra-progreso" class="progress-bar bg-secondary w-0" role="progressbar">
+        0%
+    </div>
+</div>
+<div class="progress mt-2">
+    <div class="progress-bar bg-success w-75" role="progressbar">
+        75%
+    </div>
+</div>
+<div class="progress mt-2">
+    <div class="progress-bar bg-dark text-white w-90" role="progressbar">
+        90%
+    </div>
+</div>
+<div class="progress mt-2">
+    <div class="progress-bar bg-warning w-100 h-25" role="progressbar">
+        100%
+    </div>
+</div>
+<script>
+    var contador = 0;
+    setInterval(function(){
+        if(contador < 100){
+            contador++;
+        var barra = document.querySelector("#barra-progreso");
+        barra.style.width = contador + '%';
+        barra.innerHTML = contador + '%';
+        }
+        
+    } , 1000);
+        //alert(contador);
+       
+</script>
+<!---------------FINAL-- --BARRA PROGRESO-------------- -->
+
+<!-------------------------- INICIO TOOLTIPS------------------------ -->
+<button type="button" class="btn-tool btn btn-danger mt-3" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Si das click, sacarás una alerta debajo." >ALERTA</button>
+<button type="button" class="btn-tool btn btn-light mt-3" data-bs-toggle="tooltip" data-bs-placement="left" title="Si das click, sacarás una alerta a la left." >ALERTA-2</button>
+<button type="button" class="btn-tool btn btn-warning mt-3" data-bs-toggle="tooltip" data-bs-placement="right" title="Si das click, sacarás una alerta a la right." >ALERTA-3</button>
+
+<!-- botones nuevos -->
+<button type="button" class="btn btn-secondary m-2" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top">
+    Tooltip on top
+  </button>
+  <button type="button" class="btn btn-secondary m-2" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Tooltip on right">
+    Tooltip on right
+  </button>
+  <button type="button" class="btn btn-secondary m-2" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Tooltip on bottom">
+    Tooltip on bottom
+  </button>
+  <button type="button" class="btn btn-secondary m-2" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Tooltip on left">
+    Tooltip on left
+  </button>
+<!-- Al final de la página en el script hemos añadido con la clase btn-tool  una acción -->
+
+<!-------------------------- FIN TOOLTIPS------------------------ -->
+<!-------------------------- INICIO POPOVER------------------------ -->
+
+<button type="button" class="btn-pop btn btn-success mt-3" data-bs-toggle="popover" data-bs-container="body" data-bs-placement="left" data-bs-title="Si das click, verás el popover a la derecha.">POPOVER-4</button>
+<button type="button" class="btn btn-lg btn-danger mt-3" data-bs-toggle="popover" data-bs-placement="left" data-bs-title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
+</div>
+
+<!-------------------- INICIO   FORMULARIO ------------------->
+<div class="row col-md-6 mt-3 pb-2 mx-1 bg-info">
+    <h3 class="text-center text-white">Formulario-1</h3>
+    <form>
+        <!-- Nombre -->
+        <div class="form-group mb-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Basilio">
+        </div>
+
+        <!-- Género -->
+        <div class="form-group mb-3">
+            <label for="genero" class="form-label">Género</label>
+            <select id="genero" name="genero" class="form-select">
+                <option value="masculino">Masculino</option>
+                <option value="femenino">Femenino</option>
+            </select>
+        </div>
+
+        <!-- Email -->
+        <div class="form-group mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" id="email" name="email" class="form-control" placeholder="basilio@email.com">
+        </div>
+
+        <!-- Contraseña -->
+        <div class="form-group mb-3">
+            <label for="password" class="form-label">Contraseña</label>
+            <input type="password" id="password" name="password" class="form-control" placeholder="123456">
+        </div>
+
+        <!-- Botón de envío -->
+        <button type="submit" class="btn btn-success w-100">ENVIAR</button>
+    </form>
+</div>
+<!-------------------- FINAL   FORMULARIO -------------------->
+<!-------------------- INICIO   FORMULARIO-2 ------------------->
+<div class="row col-md-6 mt-3 pb-2 bg-light">
+    <h3 class="text-center">Formulario-2</h3>
+    <form>
+        <!-- Nombre -->
+        <div class="form-group mb-3">
+            <div class="input-group">
+                <span class="input-group-text">Nombre</span>
+                <input type="text" name="nombre" class="form-control" placeholder="Basilio">
+            </div>
+        </div>
+
+        <!-- Género -->
+        <div class="form-group mb-3">
+            <label for="genero-2" class="form-label">Género</label>
+            <select id="genero-2" name="genero" class="form-select">
+                <option value="masculino">Masculino</option>
+                <option value="femenino">Femenino</option>
+            </select>
+        </div>
+
+        <!-- Email -->
+        <div class="form-group mb-3">
+            <label for="email-2" class="form-label">Email</label>
+            <input type="email" id="email-2" name="email" class="form-control" placeholder="basilio@email.com">
+        </div>
+
+        <!-- Contraseña -->
+        <div class="form-group mb-3">
+            <label for="password-2" class="form-label">Contraseña</label>
+            <input type="password" id="password-2" name="password" class="form-control" placeholder="123456">
+        </div>
+
+        <!-- Botón de envío -->
+        <button type="submit" class="btn btn-success w-100">ENVIAR</button>
+    </form>
+</div>
+    <!-------------------- FINAL   FORMULARIO-2  -------------------->
+
+
+
+            <!--Inicio de  pagination -->
+
+            <nav aria-label="pagination" class="m-3">
+                <ul class="pagination">
+                    <li class="page-item"><a href="#" class="page-link">&laquo;</a></li>
+                    <li class="page-item"><a href="#" class="page-link">1</a></li>
+                    <li class="page-item"><a href="#" class="page-link">2</a></li>
+                    <li class="page-item"><a href="#" class="page-link">3</a></li>
+                    <li class="page-item"><a href="#" class="page-link">4</a></li>
+                    <li class="page-item"><a href="#" class="page-link">&raquo;</a></li>
+                </ul>
+            </nav>
+
+            <h3 class="bg-danger text-center">Overview</h3>
+            <h3 class="bg-danger text-center">Descripción general</h3>
+            <h6>
+                Utilizamos un gran bloque de enlaces conectados para nuestra paginación, lo que hace que los enlaces sean difíciles de perder y fácilmente escalables, a la vez que ofrecemos amplias áreas de acceso. La paginación se construye con elementos HTML de lista para que los lectores de pantalla puedan anunciar la   cantidad de enlaces disponibles. Utilice un <nav>elemento de envoltura para identificarla como una   sección de navegación para los lectores de pantalla y otras tecnologías de asistencia. <br>
+
+                    Además, como las páginas probablemente tengan más de una sección de navegación, es recomendable
+                    proporcionar una descripción aria-labelpara que <nav>refleje su propósito. Por ejemplo, si el  componente de paginación se utiliza para navegar entre un conjunto de resultados de búsqueda,  una etiqueta adecuada podría ser aria-label="Search results pages".</h6>
+            <nav aria-label="Page navigation example" class="m-3">
+                <ul class="pagination">
+                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
+            </nav>
+            <h3 class="bg-danger text-center">Working with icons</h3>
+            <h6>¿Desea usar un icono o símbolo en lugar de texto para algunos enlaces de paginación? Asegúrese de que
+                arialos atributos y la .sr-onlyutilidad sean compatibles con lectores de pantalla.</h6>
+            <nav aria-label="Page navigation example" class="m-3">
+                <ul class="pagination">
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <h3 class="bg-danger text-center">Disabled and active states 1</h3>
+            <h6>Los enlaces de paginación se pueden personalizar según las circunstancias. Úselos .disabledpara enlaces
+                que no se pueden hacer clic y .activepara indicar la página actual.
+
+                Aunque la .disabledclase suele intentarpointer-events: none deshabilitar la función de enlace de s, esta
+                propiedad CSS aún no está estandarizada y no tiene en cuenta la navegación con el teclado. Por lo tanto,
+                siempre se recomienda agregar enlaces deshabilitados y usar JavaScript personalizado para deshabilitar
+                completamente su funcionalidad.<a>tabindex="-1"</h6>
+            <nav aria-label="Disabled and active states 1" class="m-3">
+                <ul class="pagination">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1">Previous</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item active">
+                        <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                    </li>
+                </ul>
+            </nav>
+            <h3 class="bg-danger text-center">Disabled and active states 2</h3>
+            <h6>Opcionalmente, puede cambiar los anclajes activos o deshabilitados por <span>, u omitir el ancla en el
+                    caso de las flechas anterior/siguiente, para eliminar la funcionalidad de clic y evitar el foco del
+                    teclado mientras se conservan los estilos deseados.
+
+            </h6>
+            <nav aria-label="Disabled and active states 2" class="m-3">
+                <ul class="pagination">
+                    <li class="page-item disabled">
+                        <span class="page-link">Previous</span>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item active">
+                        <span class="page-link">
+                            2
+                            <span class="sr-only">(current)</span>
+                        </span>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <h3 class="bg-danger text-center">Sizing 1</h3>
+            <h6>¿Te gustaría tener una paginación más grande o más pequeña? Agrega .pagination-lgo .pagination-smpara tamaños adicionales.   lg
+
+            </h6>
+            <nav aria-label="Sizing 1">
+                <ul class="pagination pagination-lg" class="m-3">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1">1</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                </ul>
+            </nav>
+            <h3 class="bg-danger text-center">Sizing 2</h3>
+            <h6>¿Te gustaría tener una paginación más grande o más pequeña? Agrega .pagination-lgo .pagination-smpara tamaños adicionales. sn
+
+            </h6>
+            <nav aria-label="Sizing 2" class="m-3">
+                <ul class="pagination pagination-sm">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1">1</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                </ul>
+            </nav>
+
+            <h3 class="bg-danger text-center">Alignment 1</h3>
+            <h6>Cambie la alineación de los componentes de paginación con las utilidades de flexbox .
+<br>                &lt;ul class="pagination justify-content-center"&gt;
+
+            </h6>
+            <nav aria-label="Page navigation example" class="m-3">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1">Previous</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                    </li>
+                </ul>
+            </nav>
+            <h3 class="bg-danger text-center">Alignment 2</h3>
+            <h6>Cambie la alineación de los componentes de paginación con las utilidades de flexbox .
+<br>              &lt;ul class="pagination justify-content-end"&gt;
+
+            </h6>
+            <nav aria-label="Page navigation example" class="m-3">
+                <ul class="pagination justify-content-end">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1">Previous</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                    </li>
+                </ul>
+            </nav>
+            <h3 class="bg-dark text-center text-white fs-5">final pagination</h3>
+
+
+
+
+            <!-- final pagination -->
+             
+
+            <div class="col-md-4">
+                <!-- primary secondary success danger warning info light dark -->
+                <!-- inicio modal -->
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-success mt-3" data-bs-toggle="modal"
+                    data-bs-target="#staticBackdrop">
+                    Mostrar Información
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Ventana Informativa</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                Esta ventana está dedicada a recordar cosas para el usuario. <a
+                                    href="https://getbootstrap.com/docs/5.3/components/modal/" target="_blank">Bootstrap
+                                    Modal</a>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar
+                                    Ventana</button>
+                                <button type="button" class="btn btn-light"><a
+                                        href="https://getbootstrap.com/docs/5.3/components/modal/"
+                                        target="_blank">Bootstrap Modal</a></button>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+                <!-- final modal -->
+
+            </div>
+            <!-- Modal components -->
+            <div class="container">
+                <div class="row">
+                    <!-- Tarjeta 1 -->
+                    <div class="col-md-2 mt-3">
+                        <h2>Modal components </h2>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal"> Launch demo modal
+                        </button>
+                        <div class="modal" tabindex="-1">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">Modal title</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Modal body text goes here.</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 2 -->
+                    <div class="col-md-2 mt-3">
+                        <h2 class="bg-success">Live Demo</h2>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            Launch demo modal
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        ...
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 3 -->
+                    <div class="col-md-2 mt-3">
+                        <h2 class="bg-primary">Static backdrop </h2>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop">
+                            Launch static backdrop modal
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        ...
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Understood</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Tarjeta 4 -->
+                    <div class="col-md-2 mt-3">
+                        <h2 class="bg-secondary">Scrolling long content</h2>
+                        <!-- Scrollable modal -->
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop">
+                            Launch static backdrop modal
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal-dialog modal-dialog-scrollable">
+                            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            ...
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Understood</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Tarjeta 5 -->
+                    <div class="col-md-2 mt-3">
+                        <h2 class="bg-info">Vertically centered</h2>
+                        <!-- Vertically centered modal -->
+                        <div class="modal-dialog modal-dialog-centered">
+                            ...
+                        </div>
+
+                        <!-- Vertically centered scrollable modal -->
+                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                            ...
+                        </div>
+                    </div>
+                    <!-- Tarjeta 6 -->
+                    <div class="col-md-2 mt-3">
+                        <h2 class="bg-dark">Tooltips and popovers</h2>
+                        <div class="modal-body">
+                            <h2 class="fs-5">Popover in a modal</h2>
+                            <p>This <button class="btn btn-secondary" data-bs-toggle="popover" title="Popover title"
+                                    data-bs-content="Popover body content is set in this attribute.">button</button>
+                                triggers a popover on click.</p>
+                            <hr>
+                            <h2 class="fs-5">Tooltips in a modal</h2>
+                            <p><a href="#" data-bs-toggle="tooltip" title="Tooltip">This link</a> and <a href="#"
+                                    data-bs-toggle="tooltip" title="Tooltip">that link</a> have tooltips on hover.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+            <div class="row">
+                <h2 class="bg-success">Usando grid</h2>
+                <div class="col-md-2 mt-3">
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-4">.col-md-4</div>
+                                <div class="col-md-4 ms-auto">.col-md-4 .ms-auto</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3 ms-auto">.col-md-3 .ms-auto</div>
+                                <div class="col-md-2 ms-auto">.col-md-2 .ms-auto</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 ms-auto">.col-md-6 .ms-auto</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-9">
+                                    Level 1: .col-sm-9
+                                    <div class="row">
+                                        <div class="col-8 col-sm-6">
+                                            Level 2: .col-8 .col-sm-6
+                                        </div>
+                                        <div class="col-4 col-sm-6">
+                                            Level 2: .col-4 .col-sm-6
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+
+            <div class="row">
+                <h2 class="bg-success">Tooltips and popovers</h2>
+                <div class="col-md-2 mt-3">
+                    <div class="modal-body">
+                        <h2 class="fs-5">Popover in a modal</h2>
+                        <p>Este <button class="btn btn-secondary" data-bs-toggle="popover" title="Popover title"
+                                data-bs-content="Popover body content is set in this attribute.">BOTÓN</button>
+                            activa una ventana emergente al hacer clic.</p>
+                        <hr>
+                        <h2 class="fs-5">Información sobre herramientas en un modal</h2>
+                        <p><a href="https://victorroblesweb.es/" target="_blank" data-bs-toggle="tooltip"
+                                title="Tooltip">Este enlace</a> y <a href="https://victorroblesweb.es/" target="_blank"
+                                data-bs-toggle="tooltip" title="Tooltip">este link</a> tiene información sobre
+                            herramientas al pasar el cursor.</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+            <div class="row">
+                <h2 class="bg-success">Using the grid</h2>
+                <div class="col-md-2 mt-3">
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-4 bg-primary">.col-md-4</div>
+                                <div class="col-md-4 ms-auto bg-secondary">.col-md-4 .ms-auto</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3 ms-auto bg-warning">.col-md-3 .ms-auto</div>
+                                <div class="col-md-2 ms-auto bg-success p-3">.col-md-2 .ms-auto</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 ms-auto bg-info">.col-md-6 .ms-auto</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-9 bg-dark text-white">
+                                    Level 1: .col-sm-9
+                                    <div class="row">
+                                        <div class="col-8 col-sm-6 bg-light">
+                                            Level 2: .col-8 .col-sm-6
+                                        </div>
+                                        <div class="col-4 col-sm-6 bg-danger">
+                                            Level 2: .col-4 .col-sm-6
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="row">
+                <h2 class="bg-success">Varying modal content</h2>
+                <div class="col-md-2 mt-3">
+                    <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal" data-bs-whatever="@mdo">Open modal for @mdo</button>
+                    <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal" data-bs-whatever="@fat">Open modal for @fat</button>
+                    <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Open modal for
+                        @getbootstrap</button>
+
+                    <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">New message</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body ">
+                                    <form>
+                                        <div class="mb-3 ">
+                                            <label for="recipient-name" class="col-form-label">Recipient:</label>
+                                            <input type="text" class="form-control" id="recipient-name">
+                                        </div>
+                                        <div class="mb-3 ">
+                                            <label for="message-text" class="col-form-label">Message:</label>
+                                            <textarea class="form-control" id="message-text"></textarea>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer ">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Send message</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="row">
+                <h2 class="bg-info">Toggle between modals</h2>
+                <div class="col-md-2 mt-3">
+                    <div class="modal fade" id="exampleModalToggle" aria-hidden="true"
+                        aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Modal 1</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    Show a second modal and hide this one with the button below.
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="btn btn-primary" data-bs-target="#exampleModalToggle2"
+                                        data-bs-toggle="modal">Open second modal</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="exampleModalToggle2" aria-hidden="true"
+                        aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Modal 2</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    Hide this modal and show the first with the button below.
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="btn btn-primary" data-bs-target="#exampleModalToggle"
+                                        data-bs-toggle="modal">Back to first</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Open
+                        first modal</button>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+<script type="text/javascript" scr="jquery/jquery-3.7.1.min.js"></script>
+<script type="text/javascript" scr="jquery/popper.min.js"></script>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- tooltip -->
+    
+    <!-- <script>
+        $(document).ready(function () {
+            alert("hola")
+            });
+        
+    </script>  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Inicializa los tooltips
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    </script>
+    <script>
+        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+            return new bootstrap.Popover(popoverTriggerEl);
+        });
+    </script>
+</body>
+
+</html>
