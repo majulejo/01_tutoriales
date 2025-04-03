@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01_display_utilities</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <style>
+        /* Definir la variable --bs-success-rgb */
+        :root {
+            --bs-success-rgb: 25, 135, 84;
+            /* RGB para el color verde éxito (#198754) */
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="colores bg-warning text-center display-1  py-3">01_display_utilities</h1>
+    <!-- primary secondary success danger warning info light dark -->
+    <h2 class="text-warning text-center"><a href="https://getbootstrap.com/docs/5.3/utilities/display/" target="_blank"
+        class="text-danger text-uppercase text-decoration-none">01 display utilities</a></h2>
+    <div class="container mt-4">
+
+        <p class="display-6">La API de utilidad es una herramienta basada en Sass para generar clases de utilidad.</p>
+        <br>
+
+        <!-- INICIO DEL INDICE -->
+
+        <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+        <h4>En esta página:</h4>
+        <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+
+        <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+
+        <ul>
+            <li><a href="#utilities">Mapa de Utilities.</a>
+            </li>
+            <li><a href="#property">Property / Propiedad
+                </a>
+            </li>
+            <li><a href="#values">Values/ Valores</a>
+            </li>
+            <li><a href="#class">Class/ Clase</a>
+            </li>
+            <li><a href="#css_variable">CSS variable utilities/ Utilidades de variables CSS</a>
+            </li>
+            <li><a href="#local_css_variables">Local CSS variables/ Variables CSS locales</a>
+            </li>
+            <li><a href="#states">States/ Estados</a>
+            </li>
+            <li><a href="#responsive">Responsive/ Sensible</a>
+            </li>
+            <li><a href="#print">Print/ Imprimir</a>
+            </li>
+            <li><a href="#override ">Override utilities / Anular utilidades</a>
+            </li>
+            <li><a href="#add_utilities">Add utilities/ Agregar utilidades
+                </a>
+            </li>
+            <li><a href="#modify_utilities">Modify utilities/ Modificar utilidades
+                </a>
+            </li>
+            <li><a href="#enable_responsive">Enable responsive/ Habilitar la capacidad de respuesta
+                </a>
+            </li>
+            <li><a href="#rename_utilities">Rename utilities/ Cambiar el nombre de las utilidades
+                </a>
+            </li>
+            <li><a href="#remove_utilities">Remove utilities/ Eliminar utilidades
+                </a>
+            </li>
+            <li><a href="#addremovemodify">Add, remove, modify/ Agregar, eliminar, modificar
+                </a>
+            </li>
+            <li><a href="#remove_utility_rtl">Remove utility in RTL/ Eliminar utilidad en RTL
+                </a>
+            </li>
+        </ul>
+        <!-- FIN DEL INDICE -->
+        <p>Las utilidades de Bootstrap se generan con nuestra API de utilidades y pueden usarse para modificar o ampliar
+            nuestro conjunto predeterminado de clases de utilidad mediante Sass. Nuestra API de utilidades se basa en
+            una serie de mapas y funciones de Sass para generar familias de clases con diversas opciones. Si no está
+            familiarizado con los mapas de Sass, consulte la <a href="https://sass-lang.com/documentation/values/maps/"
+                target="_blank ">documentación oficial de Sass </a>para comenzar. <br>
+            <br>
+            El mapa de <span class="text-danger">$utilities </span>contiene todas nuestras utilidades y posteriormente
+            se fusiona con su mapa de <span class="text-danger">$utilities </span>personalizado, si lo tiene. El mapa de
+            utilidades contiene una lista de grupos de utilidades con claves que aceptan las siguientes opciones:
+        </p>
+    </div>
+    <!-- white  / blanco-->
+        <!-- <h3 id="example" class="text-info">white / blanco</h3>
+        <div class="row border rounded m-3 p-3 bg-">
+
+            <pre>
+            white / blanco
+            </pre>
+        </div>
+
+
+        <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+        <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+        <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;"> -->
+
+
+    <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+    <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+    <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+
+    <!-- tablas 1-->
+    <div class="row col-md-12 m-2 p-3 bg-light rounded">
+        <table class="table table-striped table-bordered border-secondary table table-hover">
+            <thead class="table-dark">
+                <th colspan="4" id="utilities" class="text-center table-warning fw-bold  ">MAPA DE UTILITIES</th>
+                <tr class="text-center">
+                    <th>Opción</th>
+                    <th>Tipo</th>
+                    <th>Valor Predeterminado</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#property.">property.</a></td>
+                    <td><strong>Requerido</strong></td>
+                    <td>--</td>
+                    <td>Nombre de la propiedad, que puede ser una cadena o una matriz de cadenas (por ejemplo, rellenos
+                        o márgenes horizontales).</td>
+                </tr>
+                <tr>
+                    <td><a href="#values">values</a></td>
+                    <td><strong>Requerido</strong></td>
+                    <td>30</td>
+                    <td>30</td>
+
+                </tr>
+                <tr>
+                    <td><a href="#class">class</a></td>
+                    <td>Opcional</td>
+                    <td>30</td>
+                    <td>40</td>
+                </tr>
+                <tr>
+                    <td><a href="#css-var">css-var</a></td>
+                    <td>Opcional</td>
+                    <td>nulo</td>
+                    <td>Nombre de la clase generada. Si no se proporciona y <span class="text-danger">property </span>es
+                        un array de cadenas, <span class="text-danger">class </span>se usará el primer elemento del
+                        <span class="text-danger">property </span>array por defecto. Si no se proporciona y <span
+                            class="text-danger">property </span> es una cadena, <span
+                            class="text-danger">values</span>se usan las claves para los <span
+                            class="text-danger">class</span>nombres.
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="#css-var">css-var</a></td>
+                    <td>Opcional</td>
+                    <td><span class="text-danger">false</span></td>
+                    <td>Booleano para generar variables CSS en lugar de reglas CSS.</td>
+                </tr>
+                <tr>
+                    <td><a href="#css-variable-name">css-variable-name</a></td>
+                    <td>Opcional</td>
+                    <td>nulo</td>
+                    <td>Nombre personalizado sin prefijo para la variable CSS dentro del conjunto de reglas.</td>
+
+                </tr>
+                <tr>
+                    <td><a href="#local-vars">local-vars</a></td>
+                    <td>Opcional</td>
+                    <td>nulo</td>
+                    <td>Mapa de variables CSS locales para generar además de las reglas CSS.</td>
+                </tr>
+                <tr>
+                    <td><a href="#state">state</a></td>
+                    <td>Opcional</td>
+                    <td>nulo</td>
+                    <td>Lista de variantes de pseudoclase (por ejemplo, <span class="text-danger">:hover </span> o <span
+                            class="text-danger">:focus </span>) para generar.
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="#responsive">responsive</a></td>
+                    <td>Opcional</td>
+                    <td><span class="text-danger">false</span></td>
+                    <td>Valor booleano que indica si se deben generar clases responsivas.
+                    </td>
+                </tr>
+                <tr>
+                    <td><span class="text-danger">rfs</span></td>
+                    <td>Opcional</td>
+                    <td><span class="text-danger">flse</span></td>
+                    <td>Booleano para habilitar <a href="https://getbootstrap.com/docs/5.3/getting-started/rfs/">el
+                            reescalado de fluidos con RFS .</a>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td><a href="#print">print</a></td>
+                    <td>Opcional</td>
+                    <td><span class="text-danger">false</span></td>
+                    <td>Valor booleano que indica si es necesario generar clases de impresión.
+                    </td>
+                </tr>
+                <tr>
+                    <td>rtl</td>
+                    <td>Opcional</td>
+                    <td>true</td>
+                    <td>Valor booleano que indica si la utilidad debe mantenerse en RTL.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- FIN DE LA TABLA -->
+    <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+    <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+    <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+
+    <!-- --------------------------------------------------------------- -->
+    <!-- API explained/ Explicación de la API -->
+
+    <div class="container mt-4">
+        <h3 id="explained" class="text-info">API explained/ Explicación de la API
+        </h3>
+        <p>Todas las variables de utilidad se añaden a la <span class="text-danger">$utilities </span>variable dentro de
+            nuestra <span class="text-danger">_utilities.scss </span>hoja de estilos. Cada grupo de utilidades tiene un
+            aspecto similar al siguiente:</p>
+        <div class="row border rounded m-3 p-3 bg-">
+            <pre>
+<span class="text-danger">$utilities </span>: (
+    "opacity": (
+    property: <span class="text-danger">opacity,</span>
+    values: (
+      0: 0,
+      25: .25,
+      50: .5,
+      75: .75,
+      100: 1,
+    )
+  )
+);
+</pre>
+        </div>
+        <p>Lo cual produce el siguiente resultado: </p>
+        </h3>
+
+        <div class="row border rounded m-3 p-3 bg-">
+            <pre>
+.opacity-0 { opacity: 0; }
+.opacity-25 { opacity: .25; }
+.opacity-50 { opacity: .5; }
+.opacity-75 { opacity: .75; }
+.opacity-100 { opacity: 1; }
+</pre>
+        </div>
+        <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+        <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+        <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+
+        <!-- Property / Propiedad -->
+        <h3 id="property " class="text-info">Property / Propiedad</h3>
+        <p>La clave requerida <span class="text-danger">property </span>debe estar establecida para cualquier utilidad y
+            debe contener una propiedad CSS válida. Esta propiedad se utiliza en el conjunto de reglas de la utilidad
+            generada. Si<span class="text-danger">class </span> se omite la clave, también sirve como nombre de clase
+            predeterminado. Considere la utilidad <span class="text-danger">text-decoration </span>:</p>
+        <div class="row border rounded m-3 p-3 bg-">
+            <pre>
+<span class="text-danger">$utilities:</span>(
+"text-decoration": (
+    property:<span class="text-danger">text-decoration,</span>
+    values:<span class="text-danger">none underline line-through</span> 
+)
+      );
+</pre>
+        </div>
+        <div class="row border rounded m-3 p-3 bg-">
+            <pre>
+.text-decoration-none { <span class="text-danger">text-decoration: none !important; </span>}
+.text-decoration-underline { <span class="text-danger">text-decoration: underline !important; </span>}
+.text-decoration-line-through { <span class="text-danger">text-decoration: line-through !important; </span>}
+</pre>
+        </div>
+        <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+        <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+        <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+
+
+        <!-- Values/ Valores -->
+        <h3 id="values " class="text-info">Values/ Valores</h3>
+        <p>Utilice la<span class="text-danger">values </span>lave para especificar qué valores de la clase
+            especificada<span class="text-danger">property </span>deben usarse en los nombres y reglas de clase
+            generados. Puede ser una lista o un mapa (configurado en las utilidades o en una variable de Sass). </p>
+        <p>Como lista, al igual que con las utilidades <a
+                href="https://getbootstrap.com/docs/5.3/utilities/text/#text-decoration">text-decoration :</a> </p>
+        <div class="row border rounded m-3 p-3 bg-">
+            <pre>
+<span class="text-danger"> values: none underline line-through</span>
+            </pre>
+        </div>
+        <p>Como mapa, al igual que con las utilidades<a href="https://getbootstrap.com/docs/5.3/utilities/opacity/">
+                opacity:</a></p>
+        <div class="row border rounded m-3 p-3 bg-">
+            <pre>
+values: (
+    0: 0,
+    25: .25,
+    50: .5,
+    75: .75,
+    100: 1,
+)        
+</pre>
+        </div>
+        <p>Como una variable Sass que establece la lista o el mapa, como en nuestras utilidades de <a
+                href="https://getbootstrap.com/docs/5.3/utilities/position/">posición:</a></p>
+        <div class="row border rounded m-3 p-3 bg-">
+            <pre>
+<span class="text-danger">values: $position-values</span>      
+</pre>
+        </div>
+
+        <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+        <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+        <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+
+
+        <!-- Class/ Clase -->
+        <h3 id="class" class="text-info">Class/ Clase</h3>
+        <p>Utilice la opción <span class="text-danger">class </span> para cambiar el prefijo de clase usado en el CSS
+            compilado. Por ejemplo, para cambiar de <span class="text-danger">.opacity-* </span>a <span
+                class="text-danger">.o-* </span>: </p>
+        <div class="row border rounded m-3 p-3 bg-">
+            <pre>
+<span class="text-danger">$utilities:</span>(
+    "opacity": (
+        property: <span class="text-danger">opacity</span>,
+        class: <span class="text-danger">o </span>,
+        values: (
+        0: 0,
+        25: .25,
+        50: .5,
+        75: .75,
+        100: 1,
+        )
+    )
+);
+</pre>
+        </div>
+        <p>Producción:</p>
+        <div class="row border rounded m-3 p-3 bg-">
+            <pre>
+    .o-0 { <span class="text-danger">opacity:  </span>0<span class="text-danger">!important;</span> }
+    .o-25 { <span class="text-danger">opacity: </span> .25<span class="text-danger">!important;</span> }
+    .o-50 { <span class="text-danger">opacity: </span> .5<span class="text-danger">!important;</span> }
+    .o-75 { <span class="text-danger">opacity: </span> .75<span class="text-danger">!important;</span> }
+    .o-100 { <span class="text-danger">opacity:  </span>1<span class="text-danger">!important;</span> }
+</pre>
+        </div>
+        <p>Si <span class="text-danger">class: null,</span> genera clases para cada una de las claves <span
+                class="text-danger">values</span>:</p>
+        <div class="row border rounded m-3 p-3 bg-">
+            <pre>
+<span class="text-danger">$utilities:</span>(
+    "visibility": (
+        property:<span class="text-danger">visibility</span>,
+        class: null,
+        values: (
+        visible: <span class="text-danger">visible</span>,
+        invisible: <span class="text-danger">hidden</span>,
+        )
+    )
+);
+</pre>
+        </div>
+        <p>Producción:
+
+
+        </p>
+        <div class="row border rounded m-3 p-3 bg-">
+            <pre>
+.visible { <span class="text-danger">visibility: visible !important</span>; }
+.invisible { <span class="text-danger">visibility: visible !important</span>; }
+</pre>
+        </div>
+
+
+        <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+        <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+        <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+
+
+        <!-- CSS variable utilities / Utilidades de variables CSS  -->
+        <h3 id="css_variable" class="text-info">CSS variable utilities
+            / Utilidades de variables CSS
+        </h3>
+        <p>Establezca la opción booleana <span class="text-danger">css-var </span>en <span class="text-danger">true
+            </span>y la API generará variables CSS locales para el selector dado, en lugar de las reglas habituales
+            <span class="text-danger">property: value </span>. Agregue una opción <span
+                class="text-danger">css-variable-name </span>para establecer un nombre de variable CSS diferente al
+            nombre de la clase.
+        </p>
+        <p>Considere nuestras utilidades <span class="text-danger">.text-opacity-* </span>. Si añadimos la opción <span
+                class="text-danger">css-variable-name </span>, obtendremos una salida personalizada. </p>
+
+        <div class="row border rounded m-3 p-3 bg-">
+
+            <pre>
+<span class="text-danger">$utilities:</span>(
+    "text-opacity": (
+        css-var:<span class="text-danger">true</span>,
+        css-variable-name: <span class="text-danger">text-alpha</span>,
+        class: <span class="text-danger">text-opacity</span>,
+        values: (
+            25: .25,
+            50: .5,
+            75: .75,
+            100: 1
+        )
+    ),
+);
+</pre>
+        </div>
+        <p>Producción: </p>
+
+        <div class="row border rounded m-3 p-3 bg-">
+
+            <pre>
+    .text-opacity-25 { <span class="text-danger">--bs-text-alpha:</span>.25;}
+    .text-opacity-50 { <span class="text-danger">--bs-text-alpha: </span>.5;}
+    .text-opacity-75 { <span class="text-danger">--bs-text-alpha: </span>.75;}
+    .text-opacity-100 { <span class="text-danger">--bs-text-alpha: </span>1;}
+</pre>
+        </div>
+
+        <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+        <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+        <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+
+
+        <!-- Local CSS variables/ Variables CSS locales -->
+        <h3 id="local_css_variables" class="text-info">Local CSS variables / Variables CSS locales</h3>
+        <p>Utilice la opción <span class="text-danger">local-vars </span>para especificar un mapa Sass que genere
+            variables CSS locales dentro del conjunto de reglas de la clase de utilidad. Tenga en cuenta que consumir
+            dichas variables CSS locales en las reglas CSS generadas puede requerir trabajo adicional. Por ejemplo,
+            considere nuestras utilidades <span class="text-danger">.bg-* </span>:</p>
+
+        <div class="row border rounded m-3 p-3 bg-">
+
+            <pre>
+$utilities: (
+    "background-color": (
+    property: <span class="text-danger">background-color</span>,
+    class: <span class="text-danger">bg</span>,
+    local-vars: (
+        "bg-opacity": 1
+    ),
+    values: map-merge(
+        <span class="text-danger">$utilities-bg-colors</span>,
+        (
+        "transparent": <span class="text-danger">transparent</span>
+        )
+    )
+)
+);</pre>
+        </div>
+        <p>Producción: </p>
+
+        <div class="row border rounded m-3 p-3 bg-">
+
+            <pre>
+        .bg-primary {
+            <span class="text-danger">--bs-bg-opacity</span>: 1;
+            background-color: rgba(var(<span class="text-danger">--bs-primary-rgb</span>), var(<span class="text-danger">--bs-bg-opacity</span>)) <span class="text-danger">!important</span>;
+          }
+        </pre>
+        </div>
+
+        <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+        <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+        <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+
+
+        <!-- States/ Estados -->
+        <h3 id="states" class="text-info">States/ Estados</h3>
+        <p>La clave requerida Utilice la opción <span class="text-danger">state </span>para generar variaciones de
+            pseudoclases. Ejemplos de pseudoclases son <span class="text-danger">state </span>:hovery :<span
+                class="text-danger">state </span>focus. Al proporcionar una lista de estados, se crean nombres de clase
+            para esa pseudoclase. Por ejemplo, para cambiar la opacidad al pasar el cursor, añada <span
+                class="text-danger">state: hover </span>y obtendrá el resultado <span
+                class="text-danger">.opacity-hover:hover </span>en su CSS compilado.</p>
+        <p>¿Necesita varias pseudoclases? Use una lista de estados separados por espacios: <span
+                class="text-danger">state: hover focus. </span></p>
+
+        <div class="row border rounded m-3 p-3 bg-">
+
+            <pre>
+<span class="text-danger">$utilities:</span> (
+    "opacity": (
+      property: <span class="text-danger">opacity,</span>
+      class: <span class="text-danger">opacity</span>,
+      state: <span class="text-danger">hover</span>,
+      values: (
+        0: 0,
+        25: .25,
+        50: .5,
+        75: .75,
+        100: 1,
+      )
+    )
+  );</pre>
+        </div>
+        <p>Producción: </p>
+        <div class="row border rounded m-3 p-3 bg-">
+
+            <pre>
+.opacity-0-hover:hover { <span class="text-danger">opacity</span>: 0 <span class="text-danger">!important</span>; }
+.opacity-25-hover:hover { <span class="text-danger">opacity</span>: .25 <span class="text-danger">!important</span>; }
+.opacity-50-hover:hover { <span class="text-danger">opacity</span>: .5 <span class="text-danger">!important</span>; }
+.opacity-75-hover:hover { <span class="text-danger">opacity</span>: .75 <span class="text-danger">!important</span>; }
+.opacity-100-hover:hover { <span class="text-danger">opacity</span>: 1 <span class="text-danger">!important</span>; }
+</pre>
+        </div>
+        <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+        <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+        <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+
+
+        <!-- Responsive  / Sensible -->
+        <h3 id="responsive" class="text-info">Responsive / Sensible</h3>
+        <p>Agregue el valor booleano <span class="text-danger">responsive </span>para generar utilidades receptivas (por
+            ejemplo, <span class="text-danger">.opacity-md-25</span>) en todos los <a
+                href="https://getbootstrap.com/docs/5.3/layout/breakpoints/">puntos de interrupción</a>.</p>
+
+        <div class="row border rounded m-3 p-3 bg-">
+
+            <pre>
+<span class="text-danger">$utilities</span>: (
+    "opacity": (
+      property: <span class="text-danger">opacity</span>,
+      responsive: <span class="text-danger">true</span>,
+      values: (
+        0: 0,
+        25: .25,
+        50: .5,
+        75: .75,
+        100: 1,
+      )
+    )
+  );
+</pre>
+        </div>
+        <p>Producción: </p>
+        <div class="row border rounded m-3 p-3 bg-">
+
+            <pre>
+
+.opacity-0 { <span class="text-danger">opacity:</span> 0 <span class="text-danger">!important </span>;}
+.opacity-25 { <span class="text-danger">opacity:</span> .25 <span class="text-danger">!important </span>;}
+.opacity-50 { <span class="text-danger">opacity:</span> .5 <span class="text-danger">!important </span>;}
+.opacity-75 { <span class="text-danger">opacity:</span> .75 <span class="text-danger">!important </span>;}
+.opacity-100 { <span class="text-danger">opacity:</span> 1 <span class="text-danger">!important </span>;}
+@ <span class="text-danger">media (min-width:  576px </span>) {
+  .opacity-sm-0 { <span class="text-danger">opacity:</span> 0 <span class="text-danger">!important </span>;}
+  .opacity-sm-25 { <span class="text-danger">opacity:</span> .25 <span class="text-danger">!important </span>;}
+  .opacity-sm-50 { <span class="text-danger">opacity:</span> .5 <span class="text-danger">!important </span>;}
+  .opacity-sm-75 { <span class="text-danger">opacity:</span> .75 <span class="text-danger">!important </span>;}
+  .opacity-sm-100 { <span class="text-danger">opacity:</span> 1 <span class="text-danger">!important </span>;}
+}
+
+@ <span class="text-danger">media (min-width: 768px </span>) {
+  .opacity-md-0 { <span class="text-danger">opacity:</span> 0 <span class="text-danger">!important </span>;}
+  .opacity-md-25 { <span class="text-danger">opacity:</span> .25 <span class="text-danger">!important </span>;}
+  .opacity-md-50 { <span class="text-danger">opacity:</span> .5 <span class="text-danger">!important </span>;}
+  .opacity-md-75 { <span class="text-danger">opacity:</span> .75 <span class="text-danger">!important </span>;}
+  .opacity-md-100 { <span class="text-danger">opacity:</span> 1 <span class="text-danger">!important </span>;}
+}
+
+@ <span class="text-danger">media (min-width: 992px </span>) {
+  .opacity-lg-0 { <span class="text-danger">opacity:</span> 0 <span class="text-danger">!important </span>;}
+  .opacity-lg-25 { <span class="text-danger">opacity:</span> .25 <span class="text-danger">!important </span>;}
+  .opacity-lg-50 { <span class="text-danger">opacity:</span> .5 <span class="text-danger">!important </span>;}
+  .opacity-lg-75 { <span class="text-danger">opacity:</span> .75 <span class="text-danger">!important </span>;}
+  .opacity-lg-100 { <span class="text-danger">opacity:</span> 1 <span class="text-danger">!important </span>;}
+}
+
+@ <span class="text-danger">media (min-width: 1200px </span>) {
+  .opacity-xl-0 { <span class="text-danger">opacity:</span> 0 <span class="text-danger">!important </span>;}
+  .opacity-xl-25 { <span class="text-danger">opacity:</span> .25 <span class="text-danger">!important </span>;}
+  .opacity-xl-50 { <span class="text-danger">opacity:</span> .5 <span class="text-danger">!important </span>;}
+  .opacity-xl-75 { <span class="text-danger">opacity:</span> .75 <span class="text-danger">!important </span>;}
+  .opacity-xl-100 { <span class="text-danger">opacity:</span> 1 <span class="text-danger">!important </span>;}
+}
+
+@ <span class="text-danger">media (min-width: 1400px </span>) {
+  .opacity-xxl-0 { <span class="text-danger">opacity:</span> 0 <span class="text-danger">!important </span>;}
+  .opacity-xxl-25 { <span class="text-danger">opacity:</span> .25 <span class="text-danger">!important </span>;}
+  .opacity-xxl-50 { <span class="text-danger">opacity:</span> .5 <span class="text-danger">!important </span>;}
+  .opacity-xxl-75 { <span class="text-danger">opacity:</span> .75 <span class="text-danger">!important </span>;}
+  .opacity-xxl-100 { <span class="text-danger">opacity:</span> 1 <span class="text-danger">!important </span>;}
+}
+                
+</pre>
+        </div>
+        <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+        <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+        <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+
+        <!-- Print/ Imprimir -->
+        <h3 id="print" class="text-info">Print/ Imprimir</h3>
+        <p>Al habilitar la opción <span class="text-danger">print </span> <strong>también</strong> se generarán clases
+            de utilidad para imprimir, que solo se aplican dentro de la consulta de medios <span
+                class="text-danger">@media print { ... } </span>.</p>
+        <div class="row border rounded m-3 p-3 bg-">
+
+            <pre>
+<span class="text-danger">$utilities</span>: (
+    "opacity": (
+      property: <span class="text-danger">opacity</span>,
+      print: <span class="text-danger">true</span>,
+      values: (
+        0: 0,
+        25: .25,
+        50: .5,
+        75: .75,
+        100: 1,
+      )
+    )
+  );</pre>
+        </div>
+        <p>Producción: </p>
+        <div class="row border rounded m-3 p-3 bg-">
+
+            <pre>
+.opacity-0 { <span class="text-danger">opacity</span>: 0 <span class="text-danger">!important</span>; }
+.opacity-25 { <span class="text-danger">opacity</span>: .25 <span class="text-danger">!important</span>; }
+.opacity-50 { <span class="text-danger">opacity</span>: .5 <span class="text-danger">!important</span>; }
+.opacity-75 { <span class="text-danger">opacity</span>: .75 <span class="text-danger">!important</span>; }
+.opacity-100 { <span class="text-danger">opacity</span>: 1 <span class="text-danger">!important</span>; }
+
+<span class="text-success">.opacity-print-0 </span>{ <span class="text-danger">opacity</span>: 0 <span class="text-danger">!important</span>; }
+<span class="text-success">.opacity-print-25 </span>{ <span class="text-danger">opacity</span>: .25 <span class="text-danger">!important</span>; }
+<span class="text-success">.opacity-print-50 </span>{ <span class="text-danger">opacity</span>: .5 <span class="text-danger">!important</span>; }
+<span class="text-success">.opacity-print-75 </span>{ <span class="text-danger">opacity</span>: .75 <span class="text-danger">!important</span>; }
+<span class="text-success">.opacity-print-100 </span>{ <span class="text-danger">opacity</span>: 1 <span class="text-danger">!important</span>; }
+</pre>
+        </div>
+        <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+        <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+        <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+
+
+        <!-- Important / Importancia -->
+        <h3 i class="text-info">Important / Importancia</h3>
+        <p>Todas las utilidades generadas por la API se incluyen <span class="text-danger">!important </span>para
+            garantizar que anulen los componentes y las clases modificadoras según lo previsto. Puede activar o
+            desactivar esta configuración globalmente con la variable <span
+                class="text-danger">$enable-important-utilities </span> (el valor predeterminado es true). </p>
+        <!-- Using the API / Usando la API -->
+        <h3 class="text-info">Using the API / Usando la API</h3>
+        <p>Ahora que está familiarizado con el funcionamiento de la API de utilidades, aprenda a agregar sus propias
+            clases personalizadas y modificar nuestras utilidades predeterminadas.</p>
+        <!-- Override utilities / Anular utilidades -->
+        <h3 id="override " class="text-info">Override utilities / Anular utilidades</h3>
+        <p>Anule las utilidades existentes usando la misma clave. Por ejemplo, si desea clases de utilidades de
+            desbordamiento con capacidad de respuesta adicionales, puede hacer lo siguiente:</p>
+        <div class="row border rounded m-3 p-3 bg-">
+            <pre>
+<span class="text-danger">$utilities</span>: (
+    "overflow": (
+      responsive: <span class="text-danger">true</span>,
+      property: <span class="text-danger">overflow</span>,
+      values: <span class="text-danger">visible hidden scroll auto</span>,
+    ),
+  );</pre>
+        </div>
+        <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+        <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+        <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+
+
+        <!-- Add utilities/ Agregar utilidades
+ -->
+        <h3 id="add_utilities" class="text-info">Add Utilities/ Agregar utilidades
+        </h3>
+        <p>Se pueden agregar nuevas utilidades <span class="text-danger">$utilities </span>al mapa predeterminado con un
+            <span class="text-danger">map-merge</span>. Asegúrese de <span class="text-danger">utilities
+            </span>_.scssimportar primero los archivos Sass necesarios y luego use el <span
+                class="text-danger">map-merge </span>map-mergepara agregar las utilidades adicionales. Por ejemplo, aquí
+            se explica cómo agregar una utilidad <span class="text-danger">cursor </span>adaptable con tres valores.</p>
+        <div class="row border rounded m-3 p-3 bg-">
+
+            <pre>
+<span class="text-danger">@import</span> "bootstrap/scss/functions";
+<span class="text-danger">@import </span> "bootstrap/scss/variables";
+<span class="text-danger">@import </span> "bootstrap/scss/variables-dark";
+<span class="text-danger">@import </span> "bootstrap/scss/maps";
+<span class="text-danger">@import </span> "bootstrap/scss/mixins";
+<span class="text-danger">@import </span> "bootstrap/scss/utilities";
+
+<span class="text-danger">$utilities</span>: map-merge(
+    <span class="text-danger">$utilities</span>,
+  (
+    "cursor": (
+      property: <span class="text-danger">cursor</span>,
+      class: <span class="text-danger">cursor</span>,
+      responsive: <span class="text-danger">true</span>,
+      values: <span class="text-danger">auto pointer grab</span>,
+    )
+  )
+);
+
+<span class="text-danger">@import </span>"bootstrap/scss/utilities/api";
+</pre>
+        </div>
+
+        <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+        <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+        <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+
+
+        <!-- Modify Utilities / Modificar utilidades -->
+        <h3 id="modify_utilities" class="text-info">Modify Utilities / Modificar utilidades</h3>
+        <p>Modifique las utilidades existentes en el mapa <span class="text-danger">$utilities</span>predeterminado con
+            las funciones <span class="text-danger">map-get </span>y <span class="text-danger">map-merge</span>. En el
+            siguiente ejemplo, añadimos un valor adicional a las utilidades <span class="text-danger">width</span>.
+            Comience con una inicial <span class="text-danger">map-merge </span>y luego especifique la utilidad que
+            desea modificar. A partir de ahí, obtenga el <span class="text-danger">"width"</span>mapa anidado con <span
+                class="text-danger">map-get </span>para acceder y modificar las opciones y valores de la utilidad.</p>
+        <div class="row border rounded m-3 p-3 bg-">
+            <pre>
+<span class="text-danger">@import</span> "bootstrap/scss/functions";
+<span class="text-danger">@import </span> "bootstrap/scss/variables";
+<span class="text-danger">@import </span> "bootstrap/scss/variables-dark";
+<span class="text-danger">@import </span> "bootstrap/scss/maps";
+<span class="text-danger">@import </span> "bootstrap/scss/mixins";
+<span class="text-danger">@import </span> "bootstrap/scss/utilities";
+
+  <span class="text-danger">$utilities</span>: map-merge(
+    <span class="text-danger">$utilities</span>,
+    (
+    "width": map-merge(
+      map-get(<span class="text-danger">$utilities</span>, "width"),
+        (
+        values: map-merge(
+        map-get(map-get(<span class="text-danger">$utilities</span>, "width"), "values"),
+                    (10: 10%),
+                  ),
+                ),
+              ),
+            )
+          );
+              
+<span class="text-danger">@import</span>  "bootstrap/scss/utilities/api";
+</pre>
+
+        </div>
+        <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+        <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+        <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+
+
+
+        <!-- Enable responsive /Habilitar la capacidad de respuesta-->
+        <h3 id="enable_responsive" class="text-info">Enable responsive/ Habilitar la capacidad de respuesta</h3>
+        <p>Puedes habilitar clases responsivas para un conjunto de utilidades que actualmente no responden de forma
+            predeterminada. Por ejemplo, para que las clases <span class="text-danger">border </span>respondan:</p>
+        <div class="row border rounded m-3 p-3 bg-">
+            <pre>
+<span class="text-danger">@import</span> "bootstrap/scss/functions";
+<span class="text-danger">@import </span> "bootstrap/scss/variables";
+<span class="text-danger">@import </span> "bootstrap/scss/variables-dark";
+<span class="text-danger">@import </span> "bootstrap/scss/maps";
+<span class="text-danger">@import </span> "bootstrap/scss/mixins";
+<span class="text-danger">@import </span> "bootstrap/scss/utilities";
+
+<span class="text-danger">$utilities</span>: map-merge(
+    <span class="text-danger">$utilities</span>,(
+    "border": map-merge(
+      map-get(<span class="text-danger">$utilities</span>, "border"),
+       ( responsive: <span class="text-danger">true</span> ), 
+              ),
+            )                           
+          );                             
+<span class="text-danger">@import</span> "bootstrap/scss/utilities/api";
+</pre>
+        </div>
+        <p>Esto generará variaciones adaptables de <span class="text-danger">.border </span>y <span
+                class="text-danger">.border-0 </span>para cada punto de interrupción. <br> El CSS generado se verá así:
+        </p>
+        <div class="row border rounded m-3 p-3 bg-">
+            <pre>
+
+    <span class="text-success">.border </span>{ ... }
+    <span class="text-success">.border-0 </span>{ ... }
+    
+    @<span class="text-danger">media (min-width: 576px) </span>{
+      
+      <span class="text-success">.border-sm </span>{ ... }
+      <span class="text-success">.border-sm-0 </span>{ ... }
+    }
+    
+    @<span class="text-danger">media (min-width: 768px) </span>{
+      
+      <span class="text-success">.border-md </span>{ ... }
+      <span class="text-success">.border-md-0 </span>{ ... }
+    }
+    
+    @<span class="text-danger">media (min-width: 992px) </span>{
+      .border-lg { ... }
+      .border-lg-0 { ... }
+      <span class="text-success">.border-lg </span>{ ... }
+      <span class="text-success">.border-lg-0 </span>{ ... }
+    }
+    
+    @<span class="text-danger">media (min-width: 1200px) </span>{
+      .border-xl { ... }
+      .border-xl-0 { ... }
+      <span class="text-success">.border-xl </span>{ ... }
+      <span class="text-success">.border-xl-0 </span>{ ... }
+
+
+    }
+    
+    @<span class="text-danger">media (min-width: 1400px) </span>{
+        <span class="text-success">.border-xxl </span>{ ... }
+        <span class="text-success">.border-xxl-0 </span>{ ... }
+    }
+</pre>
+        </div>
+
+
+        <!-- Rename utilities/ Cambiar el nombre de las utilidades-->
+        <h3 id="rename_utilities" class="text-info">Rename utilities/ Cambiar el nombre de las utilidades</h3>
+        <p>¿Faltan utilidades de la versión 4 o se han usado otras convenciones de nomenclatura? La API de utilidades
+            permite anular el resultado de una utilidad <span class="text-danger">class</span>determinada; por ejemplo,
+            para renombrar <span class="text-danger">.ms-*</span>las utilidades a oldish(algo viejo) <span
+                class="text-danger">.ml-*</span>:</p>
+        <div class="row border rounded m-3 p-3 bg-">
+
+            <pre>
+<span class="text-danger">@import</span> "bootstrap/scss/functions";
+<span class="text-danger">@import </span> "bootstrap/scss/variables";
+<span class="text-danger">@import </span> "bootstrap/scss/variables-dark";
+<span class="text-danger">@import </span> "bootstrap/scss/maps";
+<span class="text-danger">@import </span> "bootstrap/scss/mixins";
+<span class="text-danger">@import </span> "bootstrap/scss/utilities";
+
+<span class="text-danger">$utilities</span>: map-merge(
+    <span class="text-danger">$utilities</span>,(
+        "margin-start": map-merge(
+            map-get(<span class="text-danger">$utilities</span>, "margin-start"),
+       ( class: <span class="text-danger">ml</span> ), 
+              ),
+            )                           
+          );                             
+<span class="text-danger">@import</span> "bootstrap/scss/utilities/api";
+</pre>
+        </div>
+
+
+
+        <!-- Remove utilities/Eliminar utilidades
+ -->
+        <h3 id="remove_utilities" class="text-info">Remove utilities/Eliminar utilidades</h3>
+        <p>Elimina cualquiera de las utilidades predeterminadas con la <a
+                href="https://sass-lang.com/documentation/modules/map/#remove">map-remove()función Sass</a>.</p>
+        <div class="row border rounded m-3 p-3 bg-">
+            <pre>
+<span class="text-danger">@import</span> "bootstrap/scss/functions";
+<span class="text-danger">@import </span> "bootstrap/scss/variables";
+<span class="text-danger">@import </span> "bootstrap/scss/variables-dark";
+<span class="text-danger">@import </span> "bootstrap/scss/maps";
+<span class="text-danger">@import </span> "bootstrap/scss/mixins";
+<span class="text-danger">@import </span> "bootstrap/scss/utilities";
+
+// Remove multiple utilities with a comma-separated list
+    <span class="text-danger">$utilities</span>: map-remove(<span class="text-danger">$utilities</span>, "width", "float");
+                               
+<span class="text-danger">@import</span> "bootstrap/scss/utilities/api";
+</pre>
+        </div>
+        <p>También puedes utilizar la <a
+                href="https://sass-lang.com/documentation/modules/map/#merge">map-merge()función Sass</a> y establecer
+            la clave de grupo para eliminar la utilidad <span class="text-danger">null</span>.</p>
+        <div class="row border rounded m-3 p-3 bg-">
+
+            <pre>
+<span class="text-danger">@import</span> "bootstrap/scss/functions";
+<span class="text-danger">@import </span> "bootstrap/scss/variables";
+<span class="text-danger">@import </span> "bootstrap/scss/variables-dark";
+<span class="text-danger">@import </span> "bootstrap/scss/maps";
+<span class="text-danger">@import </span> "bootstrap/scss/mixins";
+<span class="text-danger">@import </span> "bootstrap/scss/utilities";
+
+<span class="text-danger">$utilities</span>: map-merge(
+    <span class="text-danger">$utilities</span>,
+    (
+        "width":<span class="text-danger">null</span> 
+    )                           
+);                             
+<span class="text-danger">@import</span> "bootstrap/scss/utilities/api";
+</pre>
+        </div>
+        <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+        <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+        <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+
+        <!-- Add, remove, modify  / Agregar, eliminar, modificar-->
+        <h3 id="addremovemodify" class="text-info">Add, remove, modify / Agregar, eliminar, modificar</h3>
+        <div class="row border rounded m-3 p-3 bg-">
+
+            <pre>
+<span class="text-danger">@import</span> "bootstrap/scss/functions";
+<span class="text-danger">@import </span> "bootstrap/scss/variables";
+<span class="text-danger">@import </span> "bootstrap/scss/variables-dark";
+<span class="text-danger">@import </span> "bootstrap/scss/maps";
+<span class="text-danger">@import </span> "bootstrap/scss/mixins";
+<span class="text-danger">@import </span> "bootstrap/scss/utilities";
+
+<span class="text-danger">$utilities</span>: map-merge(
+    <span class="text-danger">$utilities</span>,
+    (
+    // Remove the `width` utility
+    "width":<span class="text-danger">null</span> 
+
+    // Make an existing utility responsive
+    <span class="text-primary">"border": map-merge</span>(
+        <span class="text-primary">map-get</span>(<span class="text-danger">$utilities</span>, <span class="text-primary">"border"</span>),
+      (<span class="text-primary"> responsive</span>: true ),
+),
+
+    // Add new utilities
+    <span class="text-primary">"cursor"</span>: (
+      property: <span class="text-danger">cursor</span>,
+      class: <span class="text-danger">cursor</span>,
+      responsive: <span class="text-danger">true</span>,
+      values: <span class="text-danger">auto pointer grab</span>,
+    )
+  )
+);
+                         
+<span class="text-danger">@import</span> "bootstrap/scss/utilities/api";
+</pre>
+        </div>
+
+        <span class="text-danger"></span>
+
+        <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+        <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+        <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+
+
+        <!-- Remove utility in RTL  / Eliminar utilidad en RTL-->
+        <h3 id="remove_utility_rtl" class="text-info">Remove utility in RTL / Eliminar utilidad en RTL</h3>
+        <p>Algunos casos extremos dificultan el <a href="https://rtlstyling.com/posts/rtl-styling/#common-things-that-might-not-work-for-rtl">estilo RTL </a>, como los saltos de línea en árabe. Por lo tanto, se pueden omitir las utilidades de la salida RTL configurando la opción <span class="text-danger">rtl </span>en <span class="text-danger">false </span>:</p>
+        <div class="row border rounded m-3 p-3 bg-">
+
+            <pre>
+            <span class="text-danger">$utilities:</span> (
+                <span class="text-primary">"word-wrap"</span>: (
+                  <span class="text-primary">property</span>: <span class="text-danger">word-wrap word-break</span>,
+                  <span class="text-primary">class:</span> <span class="text-danger">text</span>,
+                  <span class="text-primary">values: (break:</span> <span class="text-danger">break-word</span> ),
+                  <span class="text-primary">rtl:</span> <span class="text-danger">false</span>
+                ),
+              );
+            </pre>
+        </div>
+        <p>Producción:
+
+
+        </p>
+        <div class="row border rounded m-3 p-3 bg-">
+
+        <pre>
+        /* rtl:begin:remove */
+        <span class="text-success">.text-break </span> {
+        <span class="text-danger">word-wrap: break-word !important;</span>   
+        <span class="text-danger">word-wrap: break-word !important;</span>   
+        }
+        /* rtl:end:remove */        
+    </pre>
+    <p>Esto no genera nada en RTL, gracias a la <a href="https://rtlcss.com/learn/usage-guide/control-directives/#remove">directiva de control RTLCSSremove</a> .
+
+    </p>
+    </div>
+
+        <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+        <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+        <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+        
+        <!--FOOTER------------------------------------------>
+        <!--FOOTER------------------------------------------>
+        <!--FOOTER------------------------------------------>
+        <!--FOOTER------------------------------------------>
+    </div>
+    <footer class="bd-footer py-4 py-md-5 mt-5 bg-body-tertiary">
+        <div class="container py-4 py-md-5 px-4 px-md-3 text-body-secondary">
+            <div class="row">
+                <div class="col-lg-3 mb-3">
+                    <a class="d-inline-flex align-items-center mb-2 text-body-emphasis text-decoration-none" href="/"
+                        aria-label="Oreja">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="d-block me-2"
+                            viewBox="0 0 118 94" role="img">
+                            <title>Bootstrap</title>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z"
+                                fill="currentColor"></path>
+                        </svg>
+                        <span class="fs-5">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Oreja</font>
+                            </font>
+                        </span>
+                    </a>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Diseñado y construido con todo el amor del mundo
+                                    por el </font>
+                            </font><a href="/docs/5.3/about/team/">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">equipo de Bootstrap</font>
+                                </font>
+                            </a>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;"> con la ayuda de </font>
+                            </font><a href="https://github.com/twbs/bootstrap/graphs/contributors">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">nuestros colaboradores</font>
+                                </font>
+                            </a>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;"> .</font>
+                            </font>
+                        </li>
+                        <li class="mb-2">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Código bajo licencia </font>
+                            </font><a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank"
+                                rel="license noopener">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">MIT</font>
+                                </font>
+                            </a>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;"> , docs </font>
+                            </font><a href="https://creativecommons.org/licenses/by/3.0/" target="_blank"
+                                rel="license noopener">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">CC BY 3.0</font>
+                                </font>
+                            </a>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;"> .</font>
+                            </font>
+                        </li>
+                        <li class="mb-2">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Actualmente v5.3.3.</font>
+                            </font>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2 offset-lg-1 mb-3">
+                    <h5>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Campo de golf</font>
+                        </font>
+                    </h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="https://getbootstrap.com/">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Hogar</font>
+                                </font>
+                            </a></li>
+                        <li class="mb-2"><a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/"
+                                target="_blank">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Documentos</font>
+                                </font>
+                            </a></li>
+                        <li class="mb-2"><a href="https://getbootstrap.com/docs/5.3/examples/" target="_blank">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Ejemplos</font>
+                                </font>
+                            </a></li>
+                        <li class="mb-2"><a href="https://icons.getbootstrap.com/" target="_blank">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Iconos</font>
+                                </font>
+                            </a></li>
+                        <li class="mb-2"><a href="https://themes.getbootstrap.com/" target="_blank">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Temas</font>
+                                </font>
+                            </a></li>
+                        <li class="mb-2"><a href="https://blog.getbootstrap.com/" target="_blank">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Blog</font>
+                                </font>
+                            </a></li>
+                        <li class="mb-2"><a href="https://cottonbureau.com/people/bootstrap" target="_blank"
+                                rel="noopener">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Tienda de artículos promocionales</font>
+                                </font>
+                            </a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Guías</font>
+                        </font>
+                    </h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/"
+                                target="_blank">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Empezando</font>
+                                </font>
+                            </a></li>
+                        <li class="mb-2"><a href="https://getbootstrap.com/docs/5.3/examples/starter-template/"
+                                target="_blank">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Plantilla de inicio</font>
+                                </font>
+                            </a></li>
+                        <li class="mb-2"><a href="https://getbootstrap.com//docs/5.3/getting-started/webpack/"
+                                target="_blank">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Paquete web</font>
+                                </font>
+                            </a></li>
+                        <li class="mb-2"><a href="https://getbootstrap.com//docs/5.3/getting-started/parcel/"
+                                target="_blank">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Parcela</font>
+                                </font>
+                            </a></li>
+                        <li class="mb-2"><a href="https://getbootstrap.com//docs/5.3/getting-started/vite/"
+                                target="_blank">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Vite</font>
+                                </font>
+                            </a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Proyectos</font>
+                        </font>
+                    </h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="https://github.com/twbs/bootstrap" target="_blank" rel="noopener">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Bootstrap 5</font>
+                                </font>
+                            </a></li>
+                        <li class="mb-2"><a href="https://github.com/twbs/bootstrap/tree/v4-dev" target="_blank"
+                                rel="noopener">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Bootstrap 4</font>
+                                </font>
+                            </a></li>
+                        <li class="mb-2"><a href="https://github.com/twbs/icons" target="_blank" rel="noopener">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Iconos</font>
+                                </font>
+                            </a></li>
+                        <li class="mb-2"><a href="https://github.com/twbs/rfs" target="_blank" rel="noopener">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">RFS</font>
+                                </font>
+                            </a></li>
+                        <li class="mb-2"><a href="https://github.com/twbs/examples/" target="_blank" rel="noopener">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Ejemplos de repositorio</font>
+                                </font>
+                            </a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Comunidad</font>
+                        </font>
+                    </h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="https://github.com/twbs/bootstrap/issues" target="_blank"
+                                rel="noopener">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Asuntos</font>
+                                </font>
+                            </a></li>
+                        <li class="mb-2"><a href="https://github.com/twbs/bootstrap/discussions" target="_blank"
+                                rel="noopener">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Discusiones</font>
+                                </font>
+                            </a></li>
+                        <li class="mb-2"><a href="https://github.com/sponsors/twbs" target="_blank" rel="noopener">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">patrocinadores corporativos</font>
+                                </font>
+                            </a></li>
+                        <li class="mb-2"><a href="https://opencollective.com/bootstrap" target="_blank" rel="noopener">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Colectivo Abierto</font>
+                                </font>
+                            </a></li>
+                        <li class="mb-2"><a href="https://stackoverflow.com/questions/tagged/bootstrap-5"
+                                target="_blank" rel="noopener">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Desbordamiento de pila</font>
+                                </font>
+                            </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
