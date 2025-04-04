@@ -11,13 +11,18 @@
 
 </head>
 <!-- white  / blanco-->
+
 <!-- <h3 id="example" class="text-info">white / blanco</h3>
+     <div class="container mt-4">
+
         <div class="row border rounded m-3 p-3 bg-">
 
             <pre>
             white / blanco
             </pre>
         </div>
+    </div>
+
 
 
         <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
@@ -27,7 +32,7 @@
 <body>
     <h1 class="colores bg-info text-center display-1  py-3">06 Flex-Utilities</h1>
     <!-- primary secondary success danger warning info light dark -->
-    <h2 class="text-warning text-center"> <a href="https://getbootstrap.com/docs/5.3/utilities/colors/" target="_blank"
+    <h2 class="text-warning text-center"> <a href="https://getbootstrap.com/docs/5.3/utilities/flex/" target="_blank"
             class="link-danger">FLEX</a></h2>
 
 
@@ -81,9 +86,7 @@
             </li>
         </ul>
 
-
     </div>
-
 
     <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
     <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
@@ -196,9 +199,11 @@
                     <div class="p-2" style="background-color: #f0a4f0;border: 1px solid #b513b5;">Flex item 3</div>
                 </div>
             </div>
-            <HR></HR>
+            <HR>
+            </HR>
             <p>HTML</p>
-            <HR></HR>
+            <HR>
+            </HR>
             <pre>
 &lt;div class="d-flex flex-column mb-3"&gt;
     &lt;div class="d-flex flex-column mb-3 border border border-dark" style="background-color: #f0a4f0;"&gt;
@@ -215,16 +220,85 @@
 
             </pre>
         </div>
+        <p>También existen variaciones responsivas para .flex-direction</p>
+        <ul>
+            <li><span class="text-danger">.flex-row</span></li>
+            <li><span class="text-danger">.flex-row-reverse</span></li>
+            <li><span class="text-danger">.flex-column</span></li>
+            <li><span class="text-danger">.flex-column-reverse</span></li>
+            <li><span class="text-danger">.flex-sm-row</span></li>
+            <li><span class="text-danger">.flex-sm-row-reverse</span></li>
+            <li><span class="text-danger">.flex-sm-column</span></li>
+            <li><span class="text-danger">.flex-sm-column-reverse</span></li>
+            <li><span class="text-danger">.flex-md-row</span></li>
+            <li><span class="text-danger">.flex-md-row-reverse</span></li>
+            <li><span class="text-danger">.flex-md-column</span></li>
+            <li><span class="text-danger">.flex-md-column-reverse</span></li>
+            <li><span class="text-danger">.flex-lg-row</span></li>
+            <li><span class="text-danger">.flex-lg-row-reverse</span></li>
+            <li><span class="text-danger">.flex-lg-column</span></li>
+            <li><span class="text-danger">.flex-lg-column-reverse</span></li>
+            <li><span class="text-danger">.flex-xl-row</span></li>
+            <li><span class="text-danger">.flex-xl-row-reverse</span></li>
+            <li><span class="text-danger">.flex-xl-column</span></li>
+            <li><span class="text-danger">.flex-xl-column-reverse</span></li>
+            <li><span class="text-danger">.flex-xxl-row</span></li>
+            <li><span class="text-danger">.flex-xxl-row-reverse</span></li>
+            <li><span class="text-danger">.flex-xxl-column</span></li>
+            <li><span class="text-danger">.flex-xxl-column-reverse</span></li>
+        </ul>
     </div>
     <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
     <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
     <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+    <div class="container mt-4">
 
+        <!-- Justify content   / Justificar el contenido-->
+
+        <h3 id="justify_content" class="text-info">Justify content/ Justificar el contenido</h3>
+        <p>Utilice las utilidades en los contenedores flexbox para cambiar la alineación de los elementos flexibles en
+            el eje principal (el eje x para comenzar, el eje y si ). Elija entre (predeterminado del navegador), , , , o
+            <span class="text-danger"> .justify-contentflex-direction: column start end center between around
+                evenly</span>
+        </p>
+        <div class=" border rounded m-3 p-3 bg-">
+            <div class="d-flex justify-content-start" style="background-color: #f0a4f0;border: 1px solid #b513b5;">START</div>
+            <div class="d-flex justify-content-end" style="background-color: #f0a4f0;border: 1px solid #b513b5;">END</div>
+            <div class="d-flex justify-content-center" style="background-color: #f0a4f0;border: 1px solid #b513b5;">CENTER</div>
+            <div class="d-flex justify-content-between" style="background-color: #f0a4f0;border: 1px solid #b513b5;">BETWEEN</div>
+            <div class="d-flex justify-content-around" style="background-color: #f0a4f0;border: 1px solid #b513b5;">AROUND</div>
+            <div class="d-flex justify-content-evenly" style="background-color: #f0a4f0;border: 1px solid #b513b5;">EVENLY</div>
+            <hr>
+            <p>HTML</p>
+            <pre>
+ &lt;div class="d-flex justify-content-start"&gt;...&lt;/div&gt;
+ &lt;div class="d-flex justify-content-end"&gt;...&lt;/div&gt;
+ &lt;div class="d-flex justify-content-center"&gt;...&lt;/div&gt;
+ &lt;div class="d-flex justify-content-between"&gt;...&lt;/div&gt;
+ &lt;div class="d-flex justify-content-around"&gt;...&lt;/div&gt;
+ &lt;div class="d-flex justify-content-evenly"&gt;...&lt;/div&gt;
+    </pre>
+        </div>
+    </div>
+    </div>
+    <!-- <div class="d-flex flex-column mb-3 border border border-dark" style="background-color: #f0a4f0;">
+            <div class="p-2 " style="background-color: #f0a4f0;border: 1px solid #b513b5;">Flex item 1</div>
+            <div class="p-2 " style="background-color: #f0a4f0; border: 1px solid #b513b5;">Flex item 2</div>
+            <div class="p-2 " style="background-color: #f0a4f0;border: 1px solid #b513b5;">Flex item 3</div>
+        </div> -->
+
+
+
+    <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+    <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+    <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
 
     <!-- ---------------------------------------------------------- -->
     <!-- --------------------------------------------------------------- -->
     <!-- white  / blanco-->
-    <!-- <h3 id="example" class="text-info">white / blanco</h3>
+    <!--             <div class="container mt-4">
+
+    <h3 id="example" class="text-info">white / blanco</h3>
             <div class="container mt-4">
 <div class="row border rounded m-3 p-3 bg-">
 
