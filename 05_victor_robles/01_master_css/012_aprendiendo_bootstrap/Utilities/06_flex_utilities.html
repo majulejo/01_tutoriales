@@ -256,38 +256,116 @@
         <!-- Justify content   / Justificar el contenido-->
 
         <h3 id="justify_content" class="text-info">Justify content/ Justificar el contenido</h3>
-        <p>Utilice las utilidades en los contenedores flexbox para cambiar la alineación de los elementos flexibles en
-            el eje principal (el eje x para comenzar, el eje y si ). Elija entre (predeterminado del navegador), , , , o
-            <span class="text-danger"> .justify-contentflex-direction: column start end center between around
-                evenly</span>
-        </p>
+        <p>Utilice las utilidades <span class="text-danger">justify-content</span> en los contenedores flexbox para
+            cambiar la alineación de los elementos flexibles en el eje principal (el eje(axis)X para comenzar, el
+            eje(axis)Y para<span class="text-danger">flex-direction: column</span> ). Elija <span
+                class="text-danger">start </span>( valor predeterminado del navegador) o elija<span
+                class="text-danger">center </span>, <span class="text-danger">end </span>, <span
+                class="text-danger">between </span>, <span class="text-danger">around </span> o <span
+                class="text-danger">evenly </span>.</p>
         <div class=" border rounded m-3 p-3 bg-">
-            <div class="d-flex justify-content-start" style="background-color: #f0a4f0;border: 1px solid #b513b5;">START</div>
-            <div class="d-flex justify-content-end" style="background-color: #f0a4f0;border: 1px solid #b513b5;">END</div>
-            <div class="d-flex justify-content-center" style="background-color: #f0a4f0;border: 1px solid #b513b5;">CENTER</div>
-            <div class="d-flex justify-content-between" style="background-color: #f0a4f0;border: 1px solid #b513b5;">BETWEEN</div>
-            <div class="d-flex justify-content-around" style="background-color: #f0a4f0;border: 1px solid #b513b5;">AROUND</div>
-            <div class="d-flex justify-content-evenly" style="background-color: #f0a4f0;border: 1px solid #b513b5;">EVENLY</div>
+            <h5> &lt;div class="d-flex justify-content-start"&gt;...&lt;/div&gt;
+            </h5>
+            <div class="d-flex justify-content-start mb-3 border border border-dark" style="background-color: #f0a4f0;">
+                <div class="p-2 " style="background-color: #f0a4f0;border: 1px solid #b513b5;">Flex item 1</div>
+                <div class="p-2 " style="background-color: #f0a4f0; border: 1px solid #b513b5;">Flex item 2</div>
+                <div class="p-2 " style="background-color: #f0a4f0;border: 1px solid #b513b5;">Flex item 3</div>
+            </div>
             <hr>
-            <p>HTML</p>
-            <pre>
- &lt;div class="d-flex justify-content-start"&gt;...&lt;/div&gt;
- &lt;div class="d-flex justify-content-end"&gt;...&lt;/div&gt;
- &lt;div class="d-flex justify-content-center"&gt;...&lt;/div&gt;
- &lt;div class="d-flex justify-content-between"&gt;...&lt;/div&gt;
- &lt;div class="d-flex justify-content-around"&gt;...&lt;/div&gt;
- &lt;div class="d-flex justify-content-evenly"&gt;...&lt;/div&gt;
-    </pre>
+            <h5>&lt;div class="d-flex justify-content-end"&gt;...&lt;/div&gt;
+            </h5>
+
+            <div class="d-flex justify-content-end mb-3 border border border-dark" style="background-color: #f0a4f0;">
+                <div class="p-2 " style="background-color: #f0a4f0;border: 1px solid #b513b5;">Flex item 1</div>
+                <div class="p-2 " style="background-color: #f0a4f0; border: 1px solid #b513b5;">Flex item 2</div>
+                <div class="p-2 " style="background-color: #f0a4f0;border: 1px solid #b513b5;">Flex item 3</div>
+            </div>
+            <h5>&lt;div class="d-flex justify-content-center"&gt;...&lt;/div&gt;
+            </h5>
+            <hr>
+            <div class="d-flex justify-content-center mb-3 border border border-dark"
+                style="background-color: #f0a4f0;">
+                <div class="p-2 " style="background-color: #f0a4f0;border: 1px solid #b513b5;">Flex item 1</div>
+                <div class="p-2 " style="background-color: #f0a4f0; border: 1px solid #b513b5;">Flex item 2</div>
+                <div class="p-2 " style="background-color: #f0a4f0;border: 1px solid #b513b5;">Flex item 3</div>
+            </div>
+            <hr>
+            <h5>&lt;div class="d-flex justify-content-between"&gt;...&lt;/div&gt;
+            </h5>
+            <hr>
+            <div class="d-flex justify-content-between mb-3 border border border-dark"
+                style="background-color: #f0a4f0;">
+                <div class="p-2 " style="background-color: #f0a4f0;border: 1px solid #b513b5;">Flex item 1</div>
+                <div class="p-2 " style="background-color: #f0a4f0; border: 1px solid #b513b5;">Flex item 2</div>
+                <div class="p-2 " style="background-color: #f0a4f0;border: 1px solid #b513b5;">Flex item 3</div>
+            </div>
+            <hr>
+            <h5>&lt;div class="d-flex justify-content-around"&gt;...&lt;/div&gt;
+            </h5>
+            <hr>
+            <div class="d-flex justify-content-around mb-3 border border border-dark"
+                style="background-color: #f0a4f0;">
+                <div class="p-2 " style="background-color: #f0a4f0;border: 1px solid #b513b5;">Flex item 1</div>
+                <div class="p-2 " style="background-color: #f0a4f0; border: 1px solid #b513b5;">Flex item 2</div>
+                <div class="p-2 " style="background-color: #f0a4f0;border: 1px solid #b513b5;">Flex item 3</div>
+            </div>
+            <hr>
+            <h5>&lt;div class="d-flex justify-content-evenly"&gt;...&lt;/div&gt;</h5>
+            <hr>
+            <div class="d-flex justify-content-evenly mb-3 border border border-dark"
+                style="background-color: #f0a4f0;">
+                <div class="p-2 " style="background-color: #f0a4f0;border: 1px solid #b513b5;">Flex item 1</div>
+                <div class="p-2 " style="background-color: #f0a4f0; border: 1px solid #b513b5;">Flex item 2</div>
+                <div class="p-2 " style="background-color: #f0a4f0;border: 1px solid #b513b5;">Flex item 3</div>
+            </div>
         </div>
-    </div>
-    </div>
-    <!-- <div class="d-flex flex-column mb-3 border border border-dark" style="background-color: #f0a4f0;">
-            <div class="p-2 " style="background-color: #f0a4f0;border: 1px solid #b513b5;">Flex item 1</div>
-            <div class="p-2 " style="background-color: #f0a4f0; border: 1px solid #b513b5;">Flex item 2</div>
-            <div class="p-2 " style="background-color: #f0a4f0;border: 1px solid #b513b5;">Flex item 3</div>
-        </div> -->
+        <p>También existen variaciones de respuesta para <span class="text-danger">justify-content</span> .</p>
 
 
+
+
+        <ul>
+            <li><span class="text-danger">.justify-content-start</span></li>
+            <li><span class="text-danger">.justify-content-end</span></li>
+            <li><span class="text-danger">.justify-content-center</span></li>
+            <li><span class="text-danger">.justify-content-between</span></li>
+            <li><span class="text-danger">.justify-content-around</span></li>
+            <li><span class="text-danger">.justify-content-evenly</span></li>
+            <li><span class="text-danger">.justify-content-sm-start</span></li>
+            <li><span class="text-danger">.justify-content-sm-end</span></li>
+            <li><span class="text-danger">.justify-content-sm-center</span></li>
+            <li><span class="text-danger">.justify-content-sm-between</span></li>
+            <li><span class="text-danger">.justify-content-sm-around</span></li>
+            <li><span class="text-danger">.justify-content-sm-evenly</span></li>
+            <li><span class="text-danger">.justify-content-md-start</span></li>
+            <li><span class="text-danger">.justify-content-md-end</span></li>
+            <li><span class="text-danger">.justify-content-md-center</span></li>
+            <li><span class="text-danger">.justify-content-md-between</span></li>
+            <li><span class="text-danger">.justify-content-md-around</span></li>
+            <li><span class="text-danger">.justify-content-md-evenly</span></li>
+            <li><span class="text-danger">.justify-content-lg-start</span></li>
+            <li><span class="text-danger">.justify-content-lg-end</span></li>
+            <li><span class="text-danger">.justify-content-lg-center</span></li>
+            <li><span class="text-danger">.justify-content-lg-between</span></li>
+            <li><span class="text-danger">.justify-content-lg-around</span></li>
+            <li><span class="text-danger">.justify-content-lg-evenly</span></li>
+            <li><span class="text-danger">.justify-content-xl-start</span></li>
+            <li><span class="text-danger">.justify-content-xl-end</span></li>
+            <li><span class="text-danger">.justify-content-xl-center</span></li>
+            <li><span class="text-danger">.justify-content-xl-between</span></li>
+            <li><span class="text-danger">.justify-content-xl-around</span></li>
+            <li><span class="text-danger">.justify-content-xl-evenly</span></li>
+            <li><span class="text-danger">.justify-content-xxl-start</span></li>
+            <li><span class="text-danger">.justify-content-xxl-end</span></li>
+            <li><span class="text-danger">.justify-content-xxl-center</span></li>
+            <li><span class="text-danger">.justify-content-xxl-between</span></li>
+            <li><span class="text-danger">.justify-content-xxl-around</span></li>
+            <li><span class="text-danger">.justify-content-xxl-evenly</span></li>
+        </ul>
+    </div>
+    </div>
+
+    </div>
 
     <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
     <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
@@ -295,8 +373,35 @@
 
     <!-- ---------------------------------------------------------- -->
     <!-- --------------------------------------------------------------- -->
-    <!-- white  / blanco-->
-    <!--             <div class="container mt-4">
+    <!-- Align Items   / Alinear elementos-->
+    <div class="container mt-4">
+
+        <h3 id="align_items" class="text-info">Align Items/ Alinear elementos</h3>
+        <p>Utilice las utilidades <span class="text-danger">align-items</span> de alineación de elementos en los
+            contenedores de flexbox para cambiar la alineación de los elementos flexibles en el eje cross axis(eje
+            Y-axis para empezar, el eje X-axis si se necesita <span class="text-danger fw-bold">flex-direction:
+                column</span>"). Elija entre<span class="text-danger fw-bold">"start" </span>,<span
+                class="text-danger fw-bold"> "center" </span>,<span class="text-danger fw-bold">"end" </span>,<span
+                class="text-danger fw-bold"> "baseline" </span>, o <span class="text-danger fw-bold"> "stretch" </span>.
+
+                <div class="container mt-4">
+                    <div class="row border rounded m-3 p-3 bg-">
+                    
+                                
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                        <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+                        <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+                        <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+
+            <!-- ---------------------------------------------------------- -->
+            <!-- --------------------------------------------------------------- -->
+            <!-- white  / blanco-->
+            <!--             <div class="container mt-4">
 
     <h3 id="example" class="text-info">white / blanco</h3>
             <div class="container mt-4">
@@ -312,12 +417,12 @@
         <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
         <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;"> -->
 
-    <!-- ---------------------------------------------------------- -->
-    <!-- ---------------------------------------------------------- -->
-    <!-- ---------------------------------------------------------- -->
-    <!-- --------------------------------------------------------------- -->
-    <!-- white  / blanco-->
-    <!-- <h3 id="example" class="text-info">white / blanco</h3>
+            <!-- ---------------------------------------------------------- -->
+            <!-- ---------------------------------------------------------- -->
+            <!-- ---------------------------------------------------------- -->
+            <!-- --------------------------------------------------------------- -->
+            <!-- white  / blanco-->
+            <!-- <h3 id="example" class="text-info">white / blanco</h3>
             <div class="container mt-4">
 <div class="row border rounded m-3 p-3 bg-">
 
@@ -331,12 +436,12 @@
         <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
         <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;"> -->
 
-    <!-- ---------------------------------------------------------- -->
-    <!-- ---------------------------------------------------------- -->
-    <!-- ---------------------------------------------------------- -->
-    <!-- --------------------------------------------------------------- -->
-    <!-- white  / blanco-->
-    <!-- <h3 id="example" class="text-info">white / blanco</h3>
+            <!-- ---------------------------------------------------------- -->
+            <!-- ---------------------------------------------------------- -->
+            <!-- ---------------------------------------------------------- -->
+            <!-- --------------------------------------------------------------- -->
+            <!-- white  / blanco-->
+            <!-- <h3 id="example" class="text-info">white / blanco</h3>
             <div class="container mt-4">
 <div class="row border rounded m-3 p-3 bg-">
 
@@ -350,12 +455,12 @@
         <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
         <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;"> -->
 
-    <!-- ---------------------------------------------------------- -->
-    <!-- ---------------------------------------------------------- -->
-    <!-- ---------------------------------------------------------- -->
-    <!-- --------------------------------------------------------------- -->
-    <!-- white  / blanco-->
-    <!-- <h3 id="example" class="text-info">white / blanco</h3>
+            <!-- ---------------------------------------------------------- -->
+            <!-- ---------------------------------------------------------- -->
+            <!-- ---------------------------------------------------------- -->
+            <!-- --------------------------------------------------------------- -->
+            <!-- white  / blanco-->
+            <!-- <h3 id="example" class="text-info">white / blanco</h3>
             <div class="container mt-4">
 <div class="row border rounded m-3 p-3 bg-">
 
@@ -369,12 +474,12 @@
         <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
         <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;"> -->
 
-    <!-- ---------------------------------------------------------- -->
-    <!-- ---------------------------------------------------------- -->
-    <!-- ---------------------------------------------------------- -->
-    <!-- --------------------------------------------------------------- -->
-    <!-- white  / blanco-->
-    <!-- <h3 id="example" class="text-info">white / blanco</h3>
+            <!-- ---------------------------------------------------------- -->
+            <!-- ---------------------------------------------------------- -->
+            <!-- ---------------------------------------------------------- -->
+            <!-- --------------------------------------------------------------- -->
+            <!-- white  / blanco-->
+            <!-- <h3 id="example" class="text-info">white / blanco</h3>
             <div class="container mt-4">
 <div class="row border rounded m-3 p-3 bg-">
 
@@ -388,12 +493,12 @@
         <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
         <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;"> -->
 
-    <!-- ---------------------------------------------------------- -->
-    <!-- ---------------------------------------------------------- -->
-    <!-- ---------------------------------------------------------- -->
-    <!-- --------------------------------------------------------------- -->
-    <!-- white  / blanco-->
-    <!-- <h3 id="example" class="text-info">white / blanco</h3>
+            <!-- ---------------------------------------------------------- -->
+            <!-- ---------------------------------------------------------- -->
+            <!-- ---------------------------------------------------------- -->
+            <!-- --------------------------------------------------------------- -->
+            <!-- white  / blanco-->
+            <!-- <h3 id="example" class="text-info">white / blanco</h3>
             <div class="container mt-4">
 <div class="row border rounded m-3 p-3 bg-">
 
@@ -407,9 +512,9 @@
         <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
         <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;"> -->
 
-    <!-- ---------------------------------------------------------- -->
-    <!-- ---------------------------------------------------------- --><!-- white  / blanco-->
-    <!-- <h3 id="example" class="text-info">white / blanco</h3>
+            <!-- ---------------------------------------------------------- -->
+            <!-- ---------------------------------------------------------- --><!-- white  / blanco-->
+            <!-- <h3 id="example" class="text-info">white / blanco</h3>
             <div class="container mt-4">
 <div class="row border rounded m-3 p-3 bg-">
 
@@ -423,12 +528,12 @@
         <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
         <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;"> -->
 
-    <!-- ---------------------------------------------------------- -->
-    <!-- ---------------------------------------------------------- -->
-    <!-- ---------------------------------------------------------- -->
+            <!-- ---------------------------------------------------------- -->
+            <!-- ---------------------------------------------------------- -->
+            <!-- ---------------------------------------------------------- -->
 
-    <!-- ---------------------------------------------------------- -->
-    <!-- ---------FOOTER    FOOTER------------------ -->
+            <!-- ---------------------------------------------------------- -->
+            <!-- ---------FOOTER    FOOTER------------------ -->
 
 
     </div>
