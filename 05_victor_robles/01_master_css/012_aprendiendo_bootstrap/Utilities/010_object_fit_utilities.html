@@ -6,25 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/020_imgenes_master/ccc.png" type="image/x-icon">
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
-    <title>09_link_utilities</title>
+    <title>010_object_fit_utilities</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-DQvkBjpPgn7RC31MCQoOeC9TI2kdqa4+BSgNMNj8v77fdC77Kj5zpWFTJaaAoMbC" crossorigin="anonymous">
     <link rel="stylesheet" href="../bootstrap/css/bootstrap-grid.min.css">
 
 </head>
 <body>
-    <h1 class="colores bg-primary-subtle text-center display-1  py-3">09_link_utilities</h1>
+    <h1 class="colores bg-secondary-subtle text-center display-1  py-3">010_object_fit_utilities</h1>
     <!-- primary secondary success danger warning info light dark -->
     <!-- primary-subtle secondary-subtle success-subtle danger-subtle warning-subtle info-subtle light-subtle dark-subtle -->
 
     <h2 class="text-warning text-center"> <a href="https://getbootstrap.com/docs/5.3/utilities/float/" target="_blank"
-            class="link-warning fw-bold text-uppercase link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">LINK/ENLACE</a></h2>
+            class="link-success link-opacity-25 link-opacity-50-hover fw-bold text-uppercase link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">LINK/ENLACE</a></h2>
 
 
     <div class="container mt-4">
 
-        <p class="display-6">Las utilidades de enlace se utilizan para estilizar sus anclas para ajustar su color,
-            opacidad, desplazamiento del subrayado, color del subrayado y más.</p>
+        <p class="display-6">Utilice las utilidades de ajuste de objetos para modificar la forma en que se debe redimensionar el contenido de un <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_images/Replaced_element_properties">elemento reemplazado </a> , como un <span class="text-danger fw-bold">&lt;img&gt;</span> o , para que se ajuste a su contenedor <span class="text-danger fw-bold">&lt;video&gt;</span>. </p>
         <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
 
 
@@ -33,20 +32,17 @@
         <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
 
         <ul>
-            <li><a href="#link_opacity" class="link-success fw-bold">Link opacity/Opacidad del enlace</a>
+            <li><a href="#how_it_works" class="link-success fw-bold">How it works/Cómo funciona</a>
             </li>
 
-            <li><a href="#link_underlines" class="link-success fw-bold">Link underline/ Enlace subrayado</a>
+            <li><a href="#examples" class="link-success fw-bold">Examples/ Ejemplos</a>
             </li>
-            <li><a href="#underline_color" class="link-success fw-bold">Underline color/ Color de subrayado</a>
+            <li><a href="#responsive" class="link-success fw-bold">Responsive/ Sensible</a>
             </li>
-            <li><a href="#underline_offset" class="link-success fw-bold">Underline offset/ Desplazamiento del subrayado
-                </a></li>
+            <li><a href="#video" class="link-success fw-bold">Video/ Video</a></li>
             <li><a href="#underline_opacity" class="link-success fw-bold">Underline opacity/ Opacidad del subrayado</a>
             </li>
-            <li><a href="#hover_variants" class="link-success fw-bold">Hover variants/ Variantes al pasar el mouse</a>
-            </li>
-            <li><a href="#colored_links" class="link-success fw-bold">Colored links/Enlaces de colores</a></li>
+            
             <li class="list-unstyled">
                 <h4>Css</h4>
                 <ul>
@@ -63,92 +59,155 @@
     <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
     <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
     <!-- --------------------------------------------------------------- -->
-    <!-- Link opacity/Opacidad del enlace-->
+    <!-- How it works/Cómo funciona-->
     <div class="container mt-4">
 
-        <h3 id="link_opacity" class="text-info">Link opacity/Opacidad del enlace</h3>
-        <p>Cambie la opacidad alfa del valor <code>rgba() </code> del color del enlace con las utilidades. Tenga en
-            cuenta que los cambios en la opacidad de un color pueden generar enlaces con <a
-                href="https://getbootstrap.com/docs/5.3/getting-started/accessibility/#color-contrast">un contraste
-                insuficiente</a> .</p>
+        <h3 id="how_it_works" class="text-info">How it works/Cómo funciona</h3>
+        <p>Cambie el valor de la propiedad <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit">object-fit </a> con nuestras clases de utilidad adaptables <code>object-fit </code>. Esta propiedad indica al contenido que llene el contenedor principal de diversas maneras, como conservando la relación de aspecto o expandiéndolo para ocupar el máximo espacio posible.  .</p>
+            <p>Las clases para el valor de <code>object-fit </code>se nombran con el formato <code>.object-fit-{value}</code>. Elija entre los siguientes valores:</p>
+            <ul>
+                <li><span class="text-danger">contain</span></li>
+                <li><span class="text-danger">cover</span></li>
+                <li><span class="text-danger">fill</span></li>
+                <li><span class="text-danger">scale </span>(para reducir la escala)</li>
+                <li><span class="text-danger">none</span></li>
+            </ul>
+            <hr style="border-bottom: 1px solid rgb(200, 238, 13); border-top: none;">
+    <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+    <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+
+
+    <!-- --------------------------------------------------- -->
+        
+<!-- ------------------------Examples/ Ejemplos---------------------------- -->
+
+            <h3 id="examples" class="text-info">Examples/ Ejemplos</h3>
+<p>Añade la clase <code>.object-fit-{value} </code>al <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_images/Replaced_element_properties">elemento reemplazado </a> :</p>
         <div class=" border rounded m-3 p-3 ">
-            <p><a class="link-opacity-10" href="#">Link opacity 10</a></p>
-            <p><a class="link-opacity-25" href="#">Link opacity 25</a></p>
-            <p><a class="link-opacity-50" href="#">Link opacity 50</a></p>
-            <p><a class="link-opacity-75" href="#">Link opacity 75</a></p>
-            <p><a class="link-opacity-100" href="#">Link opacity 100</a></p>
-            <hr>HTML
-            <hr>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="img-container"style="width:200px;height:150px;border: 2px solid #ccc;margin-bottom: 20px;overflow: hidden; ">
+                    <img src="https://picsum.photos/200?text=Contain" class="object-fit-contain border rounded" style="display: block; width: 100%; height: 100%;" alt="Contain">
+                  </div>
+                  <p><code>object-fit: contain;</code></p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="image-container">
+                  <img src="https://picsum.photos/200?text=Cover" class="object-fit-cover border rounded" style="display: block; width: 100%; height: 100%;" alt="Cover">
+                </div>
+                <p><code>object-fit: cover;</code></p>
+              </div>
+        
+              <div class="col-md-4 mb-4">
+                <div class="image-container">
+                  <img src="https://picsum.photos/200?text=Fill" class="object-fit-fill border rounded" style="display: block; width: 100%; height: 100%;" alt="Fill">
+                </div>
+                <p><code>object-fit: fill;</code></p>
+              </div>
+        
+              <div class="col-md-4 mb-4">
+                <div class="image-container">
+                  <img src="https://picsum.photos/200?text=Scale Down" class="object-fit-scale border rounded" style="display: block; width: 100%; height: 100%;" alt="Scale Down">
+                </div>
+                <p><code>object-fit: scale-down;</code></p>
+              </div>
+        
+              <div class="col-md-4 mb-4">
+                <div class="image-container">
+                  <img src="https://picsum.photos/200?text=None" class="object-fit-none border rounded"  style="display: block; width: 100%; height: 100%;"alt="None">
+                </div>
+                <p><code>object-fit: none;</code></p>
+              </div>            
+            <hr>HTML<hr>
             <pre>
-&LT;p&gt;&LT;a class="link-opacity-10" href="#"&gt;Link opacity 10&LT;/a&gt;&LT;/p&gt;
-&LT;p&gt;&LT;a class="link-opacity-25" href="#"&gt;Link opacity 25&LT;/a&gt;&LT;/p&gt;
-&LT;p&gt;&LT;a class="link-opacity-50" href="#"&gt;Link opacity 50&LT;/a&gt;&LT;/p&gt;
-&LT;p&gt;&LT;a class="link-opacity-75" href="#"&gt;Link opacity 75&LT;/a&gt;&LT;/p&gt;
-&LT;p&gt;&LT;a class="link-opacity-100" href="#"&gt;Link opacity 100&LT;/a&gt;&LT;/p&gt;
-    </pre>
+&lt;img src="..." class="object-fit-contain border rounded" alt="..."&gt;
+&lt;img src="..." class="object-fit-cover border rounded" alt="..."&gt;
+&lt;img src="..." class="object-fit-fill border rounded" alt="..."&gt;
+&lt;img src="..." class="object-fit-scale border rounded" alt="..."&gt;
+&lt;img src="..." class="object-fit-none border rounded" alt="..."&gt;
+   </pre>
         </div>
-        <p>Cambie la opacidad alfa del valor <code>rgba() </code> del color del enlace con las utilidades. Tenga en
-            cuenta
-            que los cambios en la opacidad de un color pueden generar enlaces con <a
-                href="https://getbootstrap.com/docs/5.3/getting-started/accessibility/#color-contrast">un contraste
-                insuficiente</a> .</p>
+    </div>
+
+    <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+    <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+    <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+
+    <!-- --------------------------------------------------------------- -->
+    
+
+    <!-- --------------------------------------------------------------- -->
+    <!-- Responsive/ Sensible-->
+    <div class="container mt-4">
+
+        <h3 id="responsive" class="text-info">Responsive/ Sensible</h3>
+        <p>También existen variaciones de respuesta para cada object-fitvalor que utilice el formato .object-fit-{breakpoint}-{value}, para las siguientes abreviaturas de puntos de interrupción: sm, md, lg, xly xxl. Las clases se pueden combinar para obtener diversos efectos según sea necesario.</p>
         <div class=" border rounded m-3 p-3 ">
-            <p><a class="link-opacity-10-hover" href="#">Link hover opacity 10</a></p>
-            <p><a class="link-opacity-25-hover" href="#">Link hover opacity 25</a></p>
-            <p><a class="link-opacity-50-hover" href="#">Link hover opacity 50</a></p>
-            <p><a class="link-opacity-75-hover" href="#">Link hover opacity 75</a></p>
-            <p><a class="link-opacity-100-hover" href="#">Link hover opacity 100</a></p>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="img-container"style="width:200px;height:150px;border: 2px solid #ccc;margin-bottom: 20px;overflow: hidden; ">
+                    <img src="https://picsum.photos/200?text=Contain" class="object-fit-sm-contain border rounded" style="display: block; width: 100%; height: 100%;" alt="Contain">
+                  </div>
+                  <p><code>object-fit-sm-contain</code></p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="image-container">
+                  <img src="https://picsum.photos/200?text=Cover" class="object-fit-md-contain border rounded" style="display: block; width: 100%; height: 100%;" alt="Cover">
+                </div>
+                <p><code>object-fit-md-contain</code></p>
+              </div>
+        
+              <div class="col-md-4 mb-4">
+                <div class="image-container">
+                  <img src="https://picsum.photos/200?text=Fill" class="object-fit-lg-contain border rounded" style="display: block; width: 100%; height: 100%;" alt="Fill">
+                </div>
+                <p><code>object-fit-lg-contain</code></p>
+              </div>
+        
+              <div class="col-md-4 mb-4">
+                <div class="image-container">
+                  <img src="https://picsum.photos/200?text=Scale Down" class="object-fit-xl-contain border rounded" style="display: block; width: 100%; height: 100%;" alt="Scale Down">
+                </div>
+                <p><code>object-fit-xl-contain</code></p>
+              </div>
+        
+              <div class="col-md-4 mb-4">
+                <div class="image-container">
+                  <img src="https://picsum.photos/200?text=None" class="object-fit-xxl-contain border rounded"  style="display: block; width: 100%; height: 100%;"alt="None">
+                </div>
+                <p><code>object-fit-xxl-contain</code></p>
+              </div> 
+            
+            <hr>HTML<hr>
+            <pre>
+&lt;img src="..." class="object-fit-sm-contain border rounded" alt="..."&gt;
+&lt;img src="..." class="object-fit-md-contain border rounded" alt="..."&gt;
+&lt;img src="..." class="object-fit-lg-contain border rounded" alt="..."&gt;
+&lt;img src="..." class="object-fit-xl-contain border rounded" alt="..."&gt;
+&lt;img src="..." class="object-fit-xxl-contain border rounded" alt="..."&gt;                
+</pre>
+        </div>
+    </div>
+    <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+    <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+    <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+    <!-- --------------------------------------------------------------- -->
+    <!-- Video/ Video-->
+    <div class="container mt-4">
+
+        <h3 id="video" class="text-info">Video/ Video</h3>
+        <p>Las utilidades responsivas <span
+            class="text-danger fw-bold">.object-fit-{value} </span> y <span
+            class="text-danger fw-bold">.object-fit-{breakpoint}-{value} </span> también funcionan con elementos <span
+            class="text-danger fw-bold">&lt;video &gt; </span>. para ajustarse automáticamente al valor actual del elemento .</p>
+        <div class=" border rounded m-3 p-3 bg-">
+            
             <hr>HTML
             <hr>
             <pre>
-&lt;p&gt;&lt;a class="link-opacity-10-hover" href="#"&gt;Link hover opacity 10&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a class="link-opacity-25-hover" href="#"&gt;Link hover opacity 25&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a class="link-opacity-50-hover" href="#"&gt;Link hover opacity 50&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a class="link-opacity-75-hover" href="#"&gt;Link hover opacity 75&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a class="link-opacity-100-hover" href="#"&gt;Link hover opacity 100&lt;/a&gt;&lt;/p&gt;           
-</pre>
-        </div>
-    </div>
 
-    <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
-    <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
-    <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
-
-    <!-- --------------------------------------------------------------- -->
-    <!-- Link underlines/ Enlace subrayado-->
-    <div class="container mt-4">
-
-        <h3 id="link_underlines" class="text-info">Link underline/ Enlace subrayado</h3>
-    </div>
-
-    <!-- --------------------------------------------------------------- -->
-    <!-- Underline color/ Color de subrayado-->
-    <div class="container mt-4">
-
-        <h3 id="underline_color" class="text-info">Underline color/ Color de subrayado</h3>
-        <p>Cambia el color del subrayado independientemente del color del texto del enlace.
-
-        </p>
-        <div class=" border rounded m-3 p-3 bg-">
-            <p><a href="#" class="link-underline-primary">Primary underline</a></p>
-            <p><a href="#" class="link-underline-secondary">Secondary underline</a></p>
-            <p><a href="#" class="link-underline-success">Success underline</a></p>
-            <p><a href="#" class="link-underline-danger">Danger underline</a></p>
-            <p><a href="#" class="link-underline-warning">Warning underline</a></p>
-            <p><a href="#" class="link-underline-info">Info underline</a></p>
-            <p><a href="#" class="link-underline-light">Light underline</a></p>
-            <p><a href="#" class="link-underline-dark">Dark underline</a></p>
-            <hr>HTML
-            <hr>
-            <pre>
-&lt;p&gt;&lt;a href="#" class="link-underline-primary"&gt;Primary underline&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="#" class="link-underline-secondary"&gt;Secondary underline&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="#" class="link-underline-success"&gt;Success underline&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="#" class="link-underline-danger"&gt;Danger underline&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="#" class="link-underline-warning"&gt;Warning underline&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="#" class="link-underline-info"&gt;Info underline&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="#" class="link-underline-light"&gt;Light underline&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="#" class="link-underline-dark"&gt;Dark underline&lt;/a&gt;&lt;/p&gt;
 </pre>
         </div>
     </div>
@@ -156,147 +215,8 @@
     <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
     <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
     <!-- --------------------------------------------------------------- -->
-    <!-- Underline offset/ Desplazamiento del subrayado-->
-    <div class="container mt-4">
-
-        <h3 id="underline_offset" class="text-info">Underline offset/ Desplazamiento del subrayado</h3>
-        <p>Cambia la distancia entre el subrayado y el texto. El desplazamiento se establece en unidades <span
-                class="text-danger fw-bold">em </span>para ajustarse automáticamente al valor actual del elemento <span
-                class="text-danger fw-bold">font-size </span>.</p>
-        <div class=" border rounded m-3 p-3 bg-">
-            <p><a href="#">Enlace predeterminado</a></p>
-            <p><a class="link-offset-1" href="#">Desplazamiento 1 enlace</a></p>
-            <p><a class="link-offset-2" href="#">Enlace de desplazamiento 2</a></p>
-            <p><a class="link-offset-3" href="#">Enlace de desplazamiento 3</a></p>
-            <hr>HTML
-            <hr>
-            <pre>
-&lt;p&gt;&lt;a href="#"&gt;Enlace predeterminado&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a class="link-offset-1" href="#"&gt;Desplazamiento 1 enlace&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a class="link-offset-2" href="#"&gt;Enlace de desplazamiento 2&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a class="link-offset-3" href="#"&gt;Enlace de desplazamiento 3&lt;/a&gt;&lt;/p&gt;
-</pre>
-        </div>
-    </div>
-    <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
-    <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
-    <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
-    <!-- --------------------------------------------------------------- -->
-    <!-- Underline opacity/ Opacidad del subrayado-->
-    <div class="container mt-4">
-
-        <h3 id="underline_opacity" class="text-info">Underline opacity/ Opacidad del subrayado</h3>
-        <p>Cambiar la opacidad del subrayado. Requiere agregar <span class="text-danger fw-bold">.link-underline
-            </span>primero en un color <span class="text-danger fw-bold">.rgba() </span> que usamos para luego modificar
-            la opacidad alfa.</p>
-        <div class=" border rounded m-3 p-3 bg-">
-            <p><a class="link-offset-2 link-underline link-underline-opacity-0" href="#">Underline opacity 0</a></p>
-            <p><a class="link-offset-2 link-underline link-underline-opacity-10" href="#">Underline opacity 10</a></p>
-            <p><a class="link-offset-2 link-underline link-underline-opacity-25" href="#">Underline opacity 25</a></p>
-            <p><a class="link-offset-2 link-underline link-underline-opacity-50" href="#">Underline opacity 50</a></p>
-            <p><a class="link-offset-2 link-underline link-underline-opacity-75" href="#">Underline opacity 75</a></p>
-            <p><a class="link-offset-2 link-underline link-underline-opacity-100" href="#">Underline opacity 100</a></p>
-            <hr>HTML
-            <hr>
-            <pre>
-&lt;p&gt;&lt;a class="link-offset-2 link-underline link-underline-opacity-0" href="#"&gt;Underline opacity 0&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a class="link-offset-2 link-underline link-underline-opacity-10" href="#"&gt;Underline opacity 10&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a class="link-offset-2 link-underline link-underline-opacity-25" href="#"&gt;Underline opacity 25&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a class="link-offset-2 link-underline link-underline-opacity-50" href="#"&gt;Underline opacity 50&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a class="link-offset-2 link-underline link-underline-opacity-75" href="#"&gt;Underline opacity 75&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a class="link-offset-2 link-underline link-underline-opacity-100" href="#"&gt;Underline opacity 100&lt;/a&gt;&lt;/p&gt;                                             
-</pre>
-        </div>
-
-    </div>
-    <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
-    <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
-    <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
-    <!-- --------------------------------------------------------------- -->
-    <!-- Hover variants/ Variantes al pasar el mouse-->
-    <div class="container mt-4">
-
-        <h3 id="hover_variants" class="text-info">Hover variants/ Variantes al pasar el mouse</h3>
-        <p>Al igual que las las utilidades <span class="text-danger fw-bold">.link-opacity-*-hover </span>, <span
-                class="text-danger fw-bold">.link-offset </span> y <span
-                class="text-danger fw-bold">.link-underline-opacity </span>incluyen variantes <span
-                class="text-danger fw-bold">:hover </span>por defecto. Combínalas para crear estilos de enlace únicos.
-        </p>
-        <div class=" border rounded m-3 p-3 bg-">
-            <a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
-                href="#">
-                Underline opacity 0
-            </a>
-            <hr>HTML
-            <hr>
-            <pre>
-&lt;p&gt;&lt;a href="#" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="#">
-Underline opacity 0&lt;/a&gt;                               
-</pre>
-        </div>
-    </div>
-    <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
-    <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
-    <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
-    <!-- --------------------------------------------------------------- -->
-    <!-- Colored links/Enlaces de colores-->
-    <div class="container mt-4">
-
-        <h3 id="colored_links" class="text-info">Colored links/Enlaces de colores</h3>
-        <p><a href="https://getbootstrap.com/docs/5.3/helpers/colored-links/" target="_blank">Se han actualizado los
-                asistentes de enlaces de colores </a> para que se integren con nuestras utilidades de enlaces. Utilice
-            las nuevas utilidades para modificar la opacidad del enlace, la opacidad del subrayado y el desplazamiento
-            del subrayado.</p>
-        <div class=" border rounded m-3 p-3 bg-">
-            <p><a href="#"
-                    class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Primary
-                    link</a></p>
-            <p><a href="#"
-                    class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Secondary
-                    link</a></p>
-            <p><a href="#"
-                    class="link-success link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Success
-                    link</a></p>
-            <p><a href="#"
-                    class="link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Danger
-                    link</a></p>
-            <p><a href="#"
-                    class="link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Warning
-                    link</a></p>
-            <p><a href="#"
-                    class="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Info
-                    link</a></p>
-            <p><a href="#"
-                    class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Light
-                    link</a></p>
-            <p><a href="#"
-                    class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Dark
-                    link</a></p>
-            <p><a href="#"
-                    class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover">Emphasis
-                    link</a></p>
-            <hr>HTML
-            <hr>
-<pre>
-&lt;p&gt;&lt;a href="#" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"&gt;Primary link&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="#" class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"&gt;Secondary link&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="#" class="link-success link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"&gt;Success link&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="#" class="link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"&gt;Danger link&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="#" class="link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"&gt;Warning link&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="#" class="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"&gt;Info link&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="#" class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"&gt;Light link&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="#" class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"&gt;Dark link&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="#" class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover"&gt;Emphasis link&lt;/a&gt;&lt;/p&gt;                                             
-</pre>
-        </div>
-<div class="bg-info-subtle border rounded m-2 p-2">
-   <p><span class="fw-bold">Consejo de accesibilidad: </span> Usar color para añadir significado solo proporciona una indicación visual, que no se transmitirá a los usuarios de tecnologías de asistencia como los lectores de pantalla. Asegúrese de que el significado sea evidente en el propio contenido (por ejemplo, texto visible con <a href="https://getbootstrap.com/docs/5.3/getting-started/accessibility/#color-contrast" target="_blank">suficiente contraste de color</a>  ) o que se incluya mediante medios alternativos, como texto adicional oculto en la clase <span class="text-danger fw-bold">.visually-hidden</span>.</p> 
-</div>
-    </div>
-    <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
-    <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
-    <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
-
+    
+    
     <!-- --------------------------------------------------------------- -->
     <!--------------------- CSS ------------------------------->
     <div class="container mt-4">

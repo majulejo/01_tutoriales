@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo de link-offset en Bootstrap 5</title>
+
+  <!-- Incluye Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-DQvkBjpPgn7RC31MCQoOeC9TI2kdqa4+BSgNMNj8v77fdC77Kj5zpWFTJaaAoMbC" crossorigin="anonymous">
+
+  <!-- Estilos personalizados para valores mayores -->
+  <style>
+    /* Clase personalizada para un offset mayor */
+    .custom-link-offset {
+      text-decoration: underline;
+      text-underline-offset: 0.625em; /* Desplazamiento personalizado */
+      text-decoration-thickness: 2px; /* Grosor del subrayado */
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <h1>Ejemplo de <code>link-offset-*</code> en Bootstrap 5</h1>
+
+    <!-- Enlaces con clases link-offset-* de Bootstrap -->
+    <p><a class="link-offset-1" href="#">Offset 1 link (Bootstrap)</a></p>
+    <p><a class="link-offset-2" href="#">Offset 2 link (Bootstrap)</a></p>
+    <p><a class="link-offset-3" href="#">Offset 3 link (Bootstrap)</a></p>
+    <p><a class="link-offset-4" href="#">Offset 4 link (No funciona en Bootstrap)</a></p>
+
+    <!-- Enlace con estilo personalizado -->
+    <p><a class="custom-link-offset" href="#">Offset personalizado (CSS)</a></p>
+
+    <hr>
+    <div class="container mt-5 text-center">
+      <h1>Ejemplo de grosor de línea</h1>
+  
+      <!-- Enlaces con diferentes grosores de línea -->
+      <p><a href="#" class="text-decoration-underline text-decoration-thickness-1">Línea fina (1px) text-decoration-underline text-decoration-thickness-1</a></p>
+      <p><a href="#" class="text-decoration-underline text-decoration-thickness-2">Línea mediana (2px) text-decoration-underline text-decoration-thickness-2</a></p>
+      <p><a href="#" class="text-decoration-underline text-decoration-thickness-3">Línea gruesa (3px) text-decoration-underline text-decoration-thickness-3</a></p>
+    </div>
+    <hr>
+    <h2>Tabla de referencia para <code>link-offset-*</code></h2>
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>Clase</th>
+          <th>Descripción</th>
+          <th>Valor aproximado de <code>text-underline-offset</code></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>link-offset-1</code></td>
+          <td>Desplazamiento mínimo del subrayado.</td>
+          <td><code>0.125em</code></td>
+        </tr>
+        <tr>
+          <td><code>link-offset-2</code></td>
+          <td>Desplazamiento mediano del subrayado.</td>
+          <td><code>0.25em</code></td>
+        </tr>
+        <tr>
+          <td><code>link-offset-3</code></td>
+          <td>Desplazamiento mayor del subrayado.</td>
+          <td><code>0.375em</code></td>
+        </tr>
+        <tr>
+          <td><code>link-offset-4</code></td>
+          <td>No existe en Bootstrap 5.</td>
+          <td>No aplicable</td>
+        </tr>
+        <tr>
+          <td><code>Custom CSS</code></td>
+          <td>Desplazamiento personalizado usando CSS.</td>
+          <td>Depende del valor definido (ejemplo: <code>0.625em</code>)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Explicación:</h2>
+    <ul>
+      <li>Las clases <code>link-offset-1</code>, <code>link-offset-2</code>, y <code>link-offset-3</code> son parte de Bootstrap 5.</li>
+      <li>No hay soporte para <code>link-offset-4</code> o valores mayores en Bootstrap 5.</li>
+      <li>Para valores mayores, puedes usar CSS personalizado con la propiedad <code>text-underline-offset</code>.</li>
+    </ul>
+  </div>
+</body>
+</html>
