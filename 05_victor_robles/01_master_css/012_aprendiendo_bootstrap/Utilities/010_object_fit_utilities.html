@@ -202,12 +202,68 @@
             class="text-danger fw-bold">.object-fit-{value} </span> y <span
             class="text-danger fw-bold">.object-fit-{breakpoint}-{value} </span> también funcionan con elementos <span
             class="text-danger fw-bold">&lt;video &gt; </span>. para ajustarse automáticamente al valor actual del elemento .</p>
-        <div class=" border rounded m-3 p-3 bg-">
-            
+            <div class=" border rounded m-3 p-3 ">
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="video-container">
+                        <video src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4"class="object-fit-contain border rounded"  autoplay muted loop style="width: 300px;
+                        height: 200px;
+                        border: 2px solid #ccc;
+                        margin-bottom: 20px;
+                        overflow: hidden;"></video> 
+                      <p><code>object-fit: contain;</code></p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="video-container">
+                        <video src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4" class="object-fit-cover border rounded"  autoplay muted loop style="width: 300px;
+                        height: 200px;
+                        border: 2px solid #ccc;
+                        margin-bottom: 20px;
+                        overflow: hidden;"></video> 
+                    <p><code>object-fit: cover;</code></p>
+                  </div>
+            </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="video-container">
+                        <video src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4" class="object-fit-fill border rounded"  autoplay muted loop style="width: 300px;
+                        height: 200px;
+                        border: 2px solid #ccc;
+                        margin-bottom: 20px;
+                        overflow: hidden;"></video> 
+                    <p><code>object-fit: fill;</code></p>
+                  </div>
+            </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="video-container">
+                        <video src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4" 
+                        class="object-fit-scale-down border rounded" autoplay muted loop style="width: 300px;
+                        height: 200px;
+                        border: 2px solid #ccc;
+                        margin-bottom: 20px;
+                        overflow: hidden;"></video> 
+                    <p><code>object-fit: scale-down;</code></p>
+                  </div>
+            </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="video-container">
+                        <video src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4" 
+                        class="object-fit-none border rounded" autoplay muted loop style="width: 300px;
+                        height: 200px;
+                        border: 2px solid #ccc;
+                        margin-bottom: 20px;
+                        overflow: hidden;"></video>                    
+                        </div>
+                    <p><code>object-fit: none;</code></p>
+                  </div>              
             <hr>HTML
             <hr>
-            <pre>
-
+<pre>
+&lt;video src="..." class="object-fit-contain" autoplay&gt;&lt;/video&gt;
+&lt;video src="..." class="object-fit-cover" autoplay&gt;&lt;/video&gt;
+&lt;video src="..." class="object-fit-fill" autoplay&gt;&lt;/video&gt;
+&lt;video src="..." class="object-fit-scale" autoplay&gt;&lt;/video&gt;
+&lt;video src="..." class="object-fit-none" autoplay&gt;&lt;/video&gt;
 </pre>
         </div>
     </div>
