@@ -6,40 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/020_imgenes_master/ccc.png" type="image/x-icon">
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
-    <title>010_object_fit_utilities</title>
+    <title>011_opacity_utilities</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-DQvkBjpPgn7RC31MCQoOeC9TI2kdqa4+BSgNMNj8v77fdC77Kj5zpWFTJaaAoMbC" crossorigin="anonymous">
     <link rel="stylesheet" href="../bootstrap/css/bootstrap-grid.min.css">
 
 </head>
 <body>
-    <h1 class="colores bg-secondary-subtle text-center display-1  py-3">010_object_fit_utilities</h1>
+    <h1 class="colores bg-success-subtle text-center display-1  py-3">011_opacity_utilities</h1>
     <!-- primary secondary success danger warning info light dark -->
     <!-- primary-subtle secondary-subtle success-subtle danger-subtle warning-subtle info-subtle light-subtle dark-subtle -->
 
-    <h2 class="text-warning text-center"> <a href="https://getbootstrap.com/docs/5.3/utilities/float/" target="_blank"
-            class="link-success link-opacity-25 link-opacity-50-hover fw-bold text-uppercase link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">LINK/ENLACE</a></h2>
+    <h2 class="text-info text-center"> <a href="https://getbootstrap.com/docs/5.3/utilities/opacity/" target="_blank"
+            class="link-danger link-opacity-25 link-opacity-50-hover fw-bold text-uppercase link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">LINK/ENLACE</a></h2>
 
 
     <div class="container mt-4">
 
-        <p class="display-6">Utilice las utilidades de ajuste de objetos para modificar la forma en que se debe redimensionar el contenido de un <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_images/Replaced_element_properties">elemento reemplazado </a> , como un <span class="text-danger fw-bold">&lt;img&gt;</span> o , para que se ajuste a su contenedor <span class="text-danger fw-bold">&lt;video&gt;</span>. </p>
-        <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+        <p class="display-6">Controlar la opacidad de los elementos.</p>
+                <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
 
         <h4 class="mt-2">En esta página:</h4>
 
         <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
 
         <ul>
-            <li><a href="#how_it_works" class="link-success fw-bold">How it works/Cómo funciona</a>
-            </li>
-
-            <li><a href="#examples" class="link-success fw-bold">Examples/ Ejemplos</a>
-            </li>
-            <li><a href="#responsive" class="link-success fw-bold">Responsive/ Sensible</a>
-            </li>
-            <li><a href="#video" class="link-success fw-bold">Video/ Video</a></li>
-            <li><a href="#underline_opacity" class="link-success fw-bold">Underline opacity/ Opacidad del subrayado</a>
+            <li><a href="#opacity" class="link-success fw-bold">Opacity/Opacidad</a>
             </li>
             
             <li class="list-unstyled">
@@ -58,246 +50,61 @@
     <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
     <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
     <!-- --------------------------------------------------------------- -->
-    <!-- How it works/Cómo funciona-->
+    <!-- Opacity/Opacidad-->
     <div class="container mt-4">
 
-        <h3 id="how_it_works" class="text-info">How it works/Cómo funciona</h3>
-        <p>Cambie el valor de la propiedad <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit">object-fit </a> con nuestras clases de utilidad adaptables <code>object-fit </code>. Esta propiedad indica al contenido que llene el contenedor principal de diversas maneras, como conservando la relación de aspecto o expandiéndolo para ocupar el máximo espacio posible.  .</p>
-            <p>Las clases para el valor de <code>object-fit </code>se nombran con el formato <code>.object-fit-{value}</code>. Elija entre los siguientes valores:</p>
-            <ul>
-                <li><span class="text-danger">contain</span></li>
-                <li><span class="text-danger">cover</span></li>
-                <li><span class="text-danger">fill</span></li>
-                <li><span class="text-danger">scale </span>(para reducir la escala)</li>
-                <li><span class="text-danger">none</span></li>
-            </ul>
-            <hr style="border-bottom: 1px solid rgb(200, 238, 13); border-top: none;">
-    <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
-    <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
-
-
-    <!-- --------------------------------------------------- -->
-        
-<!-- ------------------------Examples/ Ejemplos---------------------------- -->
-
-            <h3 id="examples" class="text-info">Examples/ Ejemplos</h3>
-<p>Añade la clase <code>.object-fit-{value} </code>al <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_images/Replaced_element_properties">elemento reemplazado </a> :</p>
-        <div class=" border rounded m-3 p-3 ">
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="img-container"style="width:200px;height:150px;border: 2px solid #ccc;margin-bottom: 20px;overflow: hidden; ">
-                    <img src="https://picsum.photos/200?text=Contain" class="object-fit-contain border rounded" style="display: block; width: 100%; height: 100%;" alt="Contain">
-                  </div>
-                  <p><code>object-fit: contain;</code></p>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="image-container">
-                  <img src="https://picsum.photos/200?text=Cover" class="object-fit-cover border rounded" style="display: block; width: 100%; height: 100%;" alt="Cover">
-                </div>
-                <p><code>object-fit: cover;</code></p>
-              </div>
-        
-              <div class="col-md-4 mb-4">
-                <div class="image-container">
-                  <img src="https://picsum.photos/200?text=Fill" class="object-fit-fill border rounded" style="display: block; width: 100%; height: 100%;" alt="Fill">
-                </div>
-                <p><code>object-fit: fill;</code></p>
-              </div>
-        
-              <div class="col-md-4 mb-4">
-                <div class="image-container">
-                  <img src="https://picsum.photos/200?text=Scale Down" class="object-fit-scale border rounded" style="display: block; width: 100%; height: 100%;" alt="Scale Down">
-                </div>
-                <p><code>object-fit: scale-down;</code></p>
-              </div>
-        
-              <div class="col-md-4 mb-4">
-                <div class="image-container">
-                  <img src="https://picsum.photos/200?text=None" class="object-fit-none border rounded"  style="display: block; width: 100%; height: 100%;"alt="None">
-                </div>
-                <p><code>object-fit: none;</code></p>
-              </div>            
-            <hr>HTML<hr>
-            <pre>
-&lt;img src="..." class="object-fit-contain border rounded" alt="..."&gt;
-&lt;img src="..." class="object-fit-cover border rounded" alt="..."&gt;
-&lt;img src="..." class="object-fit-fill border rounded" alt="..."&gt;
-&lt;img src="..." class="object-fit-scale border rounded" alt="..."&gt;
-&lt;img src="..." class="object-fit-none border rounded" alt="..."&gt;
-   </pre>
-        </div>
-    </div>
-
-    <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
-    <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
-    <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
-
-    <!-- --------------------------------------------------------------- -->
-    
-
-    <!-- --------------------------------------------------------------- -->
-    <!-- Responsive/ Sensible-->
-    <div class="container mt-4">
-
-        <h3 id="responsive" class="text-info">Responsive/ Sensible</h3>
-        <p>También existen variaciones de respuesta para cada valor <span class="text-danger">object-fit </span> que utilice el formato <span class="text-danger">.object-fit-{breakpoint}-{value} </span>, para las siguientes abreviaturas de puntos de interrupción: <code> sm, md, lg, xly xxl.</code> Las clases se pueden combinar para obtener diversos efectos según sea necesario.</p>
-        <div class=" border rounded m-3 p-3 ">
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="img-container"style="width:200px;height:150px;border: 2px solid #ccc;margin-bottom: 20px;overflow: hidden; ">
-                    <img src="https://picsum.photos/200?text=Contain" class="object-fit-sm-contain border rounded" style="display: block; width: 100%; height: 100%;" alt="Contain">
-                  </div>
-                  <p><code>object-fit-sm-contain</code></p>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="image-container">
-                  <img src="https://picsum.photos/200?text=Cover" class="object-fit-md-contain border rounded" style="display: block; width: 100%; height: 100%;" alt="Cover">
-                </div>
-                <p><code>object-fit-md-contain</code></p>
-              </div>
-        
-              <div class="col-md-4 mb-4">
-                <div class="image-container">
-                  <img src="https://picsum.photos/200?text=Fill" class="object-fit-lg-contain border rounded" style="display: block; width: 100%; height: 100%;" alt="Fill">
-                </div>
-                <p><code>object-fit-lg-contain</code></p>
-              </div>
-        
-              <div class="col-md-4 mb-4">
-                <div class="image-container">
-                  <img src="https://picsum.photos/200?text=Scale Down" class="object-fit-xl-contain border rounded" style="display: block; width: 100%; height: 100%;" alt="Scale Down">
-                </div>
-                <p><code>object-fit-xl-contain</code></p>
-              </div>
-        
-              <div class="col-md-4 mb-4">
-                <div class="image-container">
-                  <img src="https://picsum.photos/200?text=None" class="object-fit-xxl-contain border rounded"  style="display: block; width: 100%; height: 100%;"alt="None">
-                </div>
-                <p><code>object-fit-xxl-contain</code></p>
-              </div> 
-            
-            <hr>HTML<hr>
-            <pre>
-&lt;img src="..." class="object-fit-sm-contain border rounded" alt="..."&gt;
-&lt;img src="..." class="object-fit-md-contain border rounded" alt="..."&gt;
-&lt;img src="..." class="object-fit-lg-contain border rounded" alt="..."&gt;
-&lt;img src="..." class="object-fit-xl-contain border rounded" alt="..."&gt;
-&lt;img src="..." class="object-fit-xxl-contain border rounded" alt="..."&gt;                
-</pre>
-        </div>
-    </div>
-    <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
-    <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
-    <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
-    <!-- --------------------------------------------------------------- -->
-    <!-- Video/ Video-->
-    <div class="container mt-4">
-
-        <h3 id="video" class="text-info">Video/ Video</h3>
-        <p>Las utilidades responsivas <span
-            class="text-danger fw-bold">.object-fit-{value} </span> y <span
-            class="text-danger fw-bold">.object-fit-{breakpoint}-{value} </span> también funcionan con elementos <span
-            class="text-danger fw-bold">&lt;video &gt; </span>. para ajustarse automáticamente al valor actual del elemento .</p>
+        <h3 id="opacity" class="text-info">Opacity/Opacidad</h3>
+        <p>La propiedad <span class="text-danger">opacity </span>establece el nivel de opacidad de un elemento. El nivel de opacidad describe el nivel de transparencia:<span class="text-danger"> 1 </span>no es transparente en absoluto,<span class="text-danger">.5 </span> es visible al 50 % y <span class="text-danger">0 </span> es completamente transparente.</p>
+            <p>Establezca el <span class="text-danger">opacity </span>de un elemento mediante las utilidades <span class="text-danger">.opacity-{value}</span>.</p>
             <div class=" border rounded m-3 p-3 ">
-                <div class="row">
-                    <div class="col-md-4 mb-4">
-                        <div class="video-container">
-                        <video src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4"class="object-fit-contain border rounded"  autoplay muted loop style="width: 300px;
-                        height: 200px;
-                        border: 2px solid #ccc;
-                        margin-bottom: 20px;
-                        overflow: hidden;"></video> 
-                      <p><code>object-fit: contain;</code></p>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="video-container">
-                        <video src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4" class="object-fit-cover border rounded"  autoplay muted loop style="width: 300px;
-                        height: 200px;
-                        border: 2px solid #ccc;
-                        margin-bottom: 20px;
-                        overflow: hidden;"></video> 
-                    <p><code>object-fit: cover;</code></p>
-                  </div>
-            </div>
-                  <div class="col-md-4 mb-4">
-                    <div class="video-container">
-                        <video src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4" class="object-fit-fill border rounded"  autoplay muted loop style="width: 300px;
-                        height: 200px;
-                        border: 2px solid #ccc;
-                        margin-bottom: 20px;
-                        overflow: hidden;"></video> 
-                    <p><code>object-fit: fill;</code></p>
-                  </div>
-            </div>
-                  <div class="col-md-4 mb-4">
-                    <div class="video-container">
-                        <video src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4" 
-                        class="object-fit-scale-down border rounded" autoplay muted loop style="width: 300px;
-                        height: 200px;
-                        border: 2px solid #ccc;
-                        margin-bottom: 20px;
-                        overflow: hidden;"></video> 
-                    <p><code>object-fit: scale-down;</code></p>
-                  </div>
-            </div>
-                  <div class="col-md-4 mb-4">
-                    <div class="video-container">
-                        <video src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4" 
-                        class="object-fit-none border rounded" autoplay muted loop style="width: 300px;
-                        height: 200px;
-                        border: 2px solid #ccc;
-                        margin-bottom: 20px;
-                        overflow: hidden;"></video>                    
-                        </div>
-                    <p><code>object-fit: none;</code></p>
-                  </div>              
-            <hr>HTML
-            <hr>
-<pre>
-&lt;video src="..." class="object-fit-contain" autoplay autoplay muted loop&gt;&lt;/video&gt;
-&lt;video src="..." class="object-fit-cover" autopla autoplay muted loopy&gt;&lt;/video&gt;
-&lt;video src="..." class="object-fit-fill" autopla autoplay muted loopy&gt;&lt;/video&gt;
-&lt;video src="..." class="object-fit-scale" autoplay autoplay muted loop&gt;&lt;/video&gt;
-&lt;video src="..." class="object-fit-none" autoplay autoplay muted loop&gt;&lt;/video&gt;
+                <p>&lt;div class="opacity-100 bg-warning border border-danger-subtle rounded m-2 d-flex justify-content-center align-items-center" style="width:100px; height: 100px;"&gt;100%&lt;/div&gt;</p>
+                <div class="opacity-100 bg-warning border border-danger-subtle rounded m-2 d-flex justify-content-center align-items-center" style="width:100px; height: 100px;">100%</div>
+                <p> &lt;div class="opacity-75 bg-warning border border-danger-subtle rounded m-2 d-flex justify-content-center align-items-center" style="width:100px; height: 100px;"&gt;75%&lt;/div&gt;
+                </p>
+                <div class="opacity-75 bg-warning border border-danger-subtle rounded m-2 d-flex justify-content-center align-items-center" style="width:100px; height: 100px;">75%</div>
+                <p>&lt;div class="opacity-50 bg-warning border border-danger-subtle rounded m-2 d-flex justify-content-center align-items-center" style="width:100px; height: 100px;"&gt;50%&lt;/div&gt;</p>
+    <div class="opacity-50 bg-warning border border-danger-subtle rounded m-2 d-flex justify-content-center align-items-center" style="width:100px; height: 100px;">50%</div>
+    <p>&lt;div class="opacity-25 bg-warning border border-danger-subtle rounded m-2 d-flex justify-content-center align-items-center" style="width:100px; height: 100px;"&gt;25%&lt;/div&gt;</p>
+    <div class="opacity-25 bg-warning border border-danger-subtle rounded m-2 d-flex justify-content-center align-items-center" style="width:100px; height: 100px;">25%</div>
+    <p>&lt;div class="opacity-0 bg-warning border border-danger-subtle rounded m-2 d-flex justify-content-center align-items-center" style="width:100px; height: 100px;"&gt;0%&lt;/div&gt;</p>
+    <div class="opacity-0 bg-warning border border-danger-subtle rounded m-2 d-flex justify-content-center align-items-center" style="width:100px; height: 100px;">0%</div>           
+                <hr>HTML<hr>
+                <pre>
+&lt;div class="opacity-100 bg-warning border border-danger-subtle rounded m-2 d-flex justify-content-center align-items-center" style="width:100px; height: 100px;"&gt;100%&lt;/div&gt;
+&lt;div class="opacity-75  bg-warning border border-danger-subtle rounded m-2 d-flex justify-content-center align-items-center" style="width:100px; height: 100px;"&gt;75%&lt;/div&gt;
+&lt;div class="opacity-50  bg-warning border border-danger-subtle rounded m-2 d-flex justify-content-center align-items-center" style="width:100px; height: 100px;"&gt;50%&lt;/div&gt;
+&lt;div class="opacity-25  bg-warning border border-danger-subtle rounded m-2 d-flex justify-content-center align-items-center" style="width:100px; height: 100px;"&gt;25%&lt;/div&gt;
+&lt;div class="opacity-0   bg-warning border border-danger-subtle rounded m-2 d-flex justify-content-center align-items-center" style="width:100px; height: 100px;"&gt;0%&lt;/div&gt; 
 </pre>
+            </div>
         </div>
-    </div>
-    <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
-    <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
-    <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
-    <!-- --------------------------------------------------------------- -->
     
+        <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+        <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+        <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
     
-    <!-- --------------------------------------------------------------- -->
+         <!-- --------------------------------------------------------------- -->
     <!--------------------- CSS ------------------------------->
     <div class="container mt-4">
 
         <h3 class="text-primary ms-2 my-2">CSS</h3>
-        <p>Además de la siguiente funcionalidad de Sass, considere leer acerca de nuestras <a href="https://getbootstrap.com/docs/5.3/customize/css-variables/" target="_blank">propiedades personalizadas CSS</a> incluidas (también conocidas como variables CSS) para colores y más.</p>
-        <h5 id="sass_utilities_api" class="text-primary ms-2 my-2 text-decoration-underline">Sass utilities API/API de
-            utilidades de Sass
+        
+        <h5 id="sass_utilities_api" class="text-primary ms-2 my-2 text-decoration-underline">Sass utilities API/API de utilidades de Sass
         </h5>
-        <p>Las utilidades de interacción se declaran en nuestra API de utilidades en [nombre del archivo] <span
-                class="text-danger">scss/_utilities.scss.</span> <a
+        <p>Las utilidades de opacidad se declaran en nuestra API de utilidades en [nombre del archivo] <span class="text-danger">scss/_utilities.scss.</span> <a
                 href="https://getbootstrap.com/docs/5.3/utilities/api/#using-the-api">Aprenda a usar la API de
-                utilidades.</a> incluidas (también conocidas como variables CSS) para colores y más.</p>
+                utilidades.</a></p>
 
         <div class=" border rounded m-3 p-3 bg-">
             <a href="https://github.com/twbs/bootstrap/blob/v5.3.4/scss/_utilities.scss">scss/_utilities.scss</a>
             <hr>
             <pre>
-"link-opacity": (
+"opacity": (
     <span
-class="text-danger">css-var: true,
-    class: link-opacity,
-    state: hover,
+class="text-danger">property: opacity,
     values: </span>(
       <span
-class="text-danger">10:</span> .1,
+class="text-danger">0:</span> 0,
       <span
 class="text-danger">25:</span> .25,
       <span
@@ -307,45 +114,6 @@ class="text-danger">75:</span> .75,
       <span
 class="text-danger">100:</span> 1
     )
-  ),
-  "link-offset": (
-    <span
-class="text-danger">property: text-underline-offset,
-    class: link-offset,
-    state: hover,
-    values:</span> (
-      <span
-class="text-danger">1:</span> .125em,
-      <span
-class="text-danger">2:</span> .25em,
-      <span
-class="text-danger">3:</span> .375em,
-    )
-  ),
-  "link-underline": (
-    <span class="text-danger">property: text-decoration-color,
-    class: link-underline,
-    local-vars: </span>(
-      "link-underline-opacity": 1
-    ),
-    <span class="text-danger">values: map-merge(
-      $utilities-links-underline,</span>(
-        <span class="text-danger">null: rgba(var(--#{$prefix}link-color-rgb), var(--#{$prefix}link-underline-opacity,</span> 1)),
-      )
-    )
-  ),
-  "link-underline-opacity": (
-    <span class="text-danger">css-var: true,
-    class: link-underline-opacity,
-    state: hover,
-    values: (
-      0: 0,
-      10:</span> .1,
-      <span class="text-danger">25:</span> .25,
-      <span class="text-danger">50:</span> .5,
-      <span class="text-danger">75:</span> .75,
-      <span class="text-danger">100:</span> 1
-    ),
   ),
 </pre>
 
