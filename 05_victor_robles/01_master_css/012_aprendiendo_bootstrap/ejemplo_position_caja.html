@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplos de Posición en Bootstrap 5</title>
+  <!-- Incluye Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container mt-5">
+    <h1 class="text-center mb-4">Ejemplos de Utilidades de Posición en Bootstrap 5</h1>
+
+    <!-- Contenedor Principal -->
+    <div class="contenedor-principal" style="border: 4px solid #000; padding: 20px; margin: 20px auto; max-width: 90%; height: auto; position: relative; overflow: hidden; background-color: #f8f9fa;">
+
+      <!-- Ejemplo 1: Position Static -->
+      <div class="caja" style="height: auto; border: 2px solid #333; padding: 15px; margin-bottom: 20px; background-color: #fff; position: relative; word-break: break-word; overflow-wrap: break-word;">
+        <h3>Position Static</h3>
+        <div class="position-static" style="background-color: lightblue; padding: 10px; border: 1px solid #333; word-break: break-word; overflow-wrap: break-word;">
+          Este es un elemento con <code>position-static</code>. No tiene efecto especial.
+        </div>
+      </div>
+
+      <!-- Ejemplo 2: Position Relative -->
+      <div class="caja" style="height: 200px; border: 2px solid #333; padding: 15px; margin-bottom: 20px; background-color: #fff; position: relative; word-break: break-word; overflow-wrap: break-word;">
+        <h3>Position Relative</h3>
+        <div class="position-relative" style="background-color: lightblue; padding: 10px; border: 1px solid #333; word-break: break-word; overflow-wrap: break-word;">
+          Este es un elemento con <code>position-relative</code>. Permite posicionar elementos absolutos dentro de él.
+        </div>
+        <div class="position-absolute top-0 start-0 bg-warning p-2" style="background-color: yellow; padding: 10px; border: 1px solid #333; word-break: break-word; overflow-wrap: break-word;">
+          Elemento absoluto dentro del contenedor relativo
+        </div>
+      </div>
+
+      <!-- Ejemplo 3: Position Absolute -->
+      <div class="caja" style="height: 200px; border: 2px solid #333; padding: 15px; margin-bottom: 20px; background-color: #fff; position: relative; word-break: break-word; overflow-wrap: break-word;">
+        <h3>Position Absolute</h3>
+        <div class="position-relative" style="background-color: lightblue; padding: 10px; border: 1px solid #333; word-break: break-word; overflow-wrap: break-word;">
+          Este es un elemento con <code>position-relative</code> como contenedor.
+        </div>
+        <div class="position-absolute top-50 start-50 translate-middle bg-success text-white p-2" style="background-color: green; color: white; padding: 10px; border: 1px solid #333; word-break: break-word; overflow-wrap: break-word;">
+          Este es un elemento con <code>position-absolute</code>. Está centrado usando <code>top-50 start-50 translate-middle</code>.
+        </div>
+      </div>
+
+      <!-- Ejemplo 4: Position Fixed -->
+      <div class="caja" style="height: 200px; border: 2px solid #333; padding: 15px; margin-bottom: 20px; background-color: #fff; position: relative; word-break: break-word; overflow-wrap: break-word;">
+        <h3 class="text-info">Position Fixed</h3>
+        <p>Este ejemplo muestra un elemento fijo dentro de la caja contenedora.</p>
+        <div class="position-fixed bottom-0 end-0 bg-danger text-white p-3" style="background-color: red; color: white; padding: 10px; border: 1px solid #333; word-break: break-word; overflow-wrap: break-word;">
+          Este es un elemento con <code>position-fixed</code>. Siempre está visible en la esquina inferior derecha.
+        </div>
+      </div>
+
+      <!-- Ejemplo 5: Position Sticky -->
+      <div class="caja" style="height: 400px; border: 2px solid #333; padding: 15px; margin-bottom: 20px; background-color: #fff; position: relative; word-break: break-word; overflow-wrap: break-word;">
+        <h3>Position Sticky</h3>
+        <p>Desplázate hacia abajo para ver el comportamiento sticky.</p>
+        <div class="position-sticky top-0 bg-info text-white p-2" style="background-color: blue; color: white; padding: 10px; border: 1px solid #333; word-break: break-word; overflow-wrap: break-word;">
+          Este es un elemento con <code>position-sticky</code>. Se queda "pegado" cuando alcanza la parte superior de la caja.
+        </div>
+        <div style="height: 600px;">
+          <p>Contenido adicional para permitir el desplazamiento...</p>
+        </div>
+      </div>
+
+    </div>
+    <!-- Fin del Contenedor Principal -->
+  </div>
+
+  <!-- Incluye Bootstrap 5 JS (opcional) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

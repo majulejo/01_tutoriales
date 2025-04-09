@@ -1,0 +1,686 @@
+Position values 
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/020_imgenes_master/ccc.png" type="image/x-icon">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <title>013_position_utilities</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-DQvkBjpPgn7RC31MCQoOeC9TI2kdqa4+BSgNMNj8v77fdC77Kj5zpWFTJaaAoMbC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap-grid.min.css">
+
+</head>
+
+<body>
+    <h1 class="colores bg-warning-subtle text-center text-success display-1  py-3">013_position_utilities</h1>
+    <!-- primary secondary success danger warning info light dark -->
+    <!-- primary-subtle secondary-subtle success-subtle danger-subtle warning-subtle info-subtle light-subtle dark-subtle -->
+
+    <h2 class="text-info text-center"> <a href="https://getbootstrap.com/docs/5.3/utilities/opacity/" target="_blank"
+            class="link-success link-opacity-25 link-opacity-50-hover fw-bold text-uppercase link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">position/posición</a>
+    </h2>
+
+
+    <div class="container mt-4">
+
+        <p class="display-6">Utilice estas utilidades abreviadas para configurar rápidamente la posición de un elemento.</p>
+        <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+
+        <h4 class="mt-2">En esta página:</h4>
+
+        <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+
+        <ul>
+            <li><a href="#position_values" class="link-success fw-bold">Position values/       Valores de posición</a>
+            </li>
+            <li><a href="#arrange_elements" class="link-success fw-bold">Arrange elements/Organizar elementos
+            </a>
+            <li><a href="#center_elements" class="link-success fw-bold">Center elements/ Elementos centrales
+            </a>
+            </li>
+            <li><a href="#examples" class="link-success fw-bold">Examples/Ejemplos</a>
+            </li>
+            <li class="list-unstyled">
+                <h4>Css</h4>
+                <ul>
+                    <li><a href="#sass_maps" class="text-danger text-opacity-50">Sass maps/Mapas de Sass</a>
+                </li>
+                    <li><a href="#sass_utilities_api" class="text-danger text-opacity-50">Sass utilities API/API de
+                            utilidades de Sass</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+    </div>
+
+    <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+    <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+    <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+    <!-- --------------------------------------------------------------- -->
+    <!-- Position values/Valores de posición -->
+    <div class="container mt-4">
+        <h3 id="position_values" class="text-info">Valores de posición</h3>
+        <p>Existen clases de posicionamiento rápido, aunque no son receptivas.</p>
+        <div class=" row border rounded m-1 p-1 ">
+           <!-- Contenedor con Scroll -->
+    <div class="contenedor-con-scroll" style="border: 4px solid #000; padding: 20px; margin: 20px auto; max-width: 90%; height: 400px; overflow-y: auto; position: relative; background-color: #f8f9fa;">
+
+        <!-- Ejemplo 1: Position Static -->
+        <div class="caja" style="border: 2px solid #333; padding: 15px; margin-bottom: 20px; background-color: #fff; position: relative; word-break: break-word; overflow-wrap: break-word;">
+          <h3>Position Static</h3>
+          <div class="position-static" style="background-color: lightblue; padding: 10px; border: 1px solid #333; word-break: break-word; overflow-wrap: break-word;">
+            Este es un elemento con <code>position-static</code>. No tiene efecto especial.
+          </div>
+        </div>
+  
+        <!-- Ejemplo 2: Position Relative -->
+        <div class="caja" style="border: 2px solid #333; padding: 15px; margin-bottom: 20px; background-color: #fff; position: relative; word-break: break-word; overflow-wrap: break-word;">
+          <h3>Position Relative</h3>
+          <div class="position-relative" style="background-color: lightblue; padding: 10px; border: 1px solid #333; word-break: break-word; overflow-wrap: break-word;">
+            Este es un elemento con <code>position-relative</code>. Permite posicionar elementos absolutos dentro de él.
+          </div>
+          <div class="position-absolute top-0 start-0 bg-warning p-2" style="background-color: yellow; padding: 10px; border: 1px solid #333; word-break: break-word; overflow-wrap: break-word;">
+            Elemento absoluto dentro del contenedor relativo
+          </div>
+        </div>
+  
+        <!-- Ejemplo 3: Position Absolute -->
+        <div class="caja" style="border: 2px solid #333; padding: 15px; margin-bottom: 20px; background-color: #fff; position: relative; word-break: break-word; overflow-wrap: break-word;">
+          <h3>Position Absolute</h3>
+          <div class="position-relative" style="background-color: lightblue; padding: 10px; border: 1px solid #333; word-break: break-word; overflow-wrap: break-word;">
+            Este es un elemento con <code>position-relative</code> como contenedor.
+          </div>
+          <div class="position-absolute top-50 start-50 translate-middle bg-success text-white p-2" style="background-color: green; color: white; padding: 10px; border: 1px solid #333; word-break: break-word; overflow-wrap: break-word;">
+            Este es un elemento con <code>position-absolute</code>. Está centrado usando <code>top-50 start-50 translate-middle</code>.
+          </div>
+        </div>
+  
+        <!-- Ejemplo 4: Position Fixed -->
+        <div class="caja" style="border: 2px solid #333; padding: 15px; margin-bottom: 20px; background-color: #fff; position: relative; word-break: break-word; overflow-wrap: break-word;">
+          <h3>Position Fixed</h3>
+          <p>Este ejemplo muestra un elemento fijo dentro de la caja contenedora.</p>
+          <div class="position-fixed bottom-0 end-0 bg-danger text-white p-3" style="position: fixed; bottom: 0; right: 0; background-color: red; color: white; padding: 10px; border: 1px solid #333; word-break: break-word; overflow-wrap: break-word;">
+            Este es un elemento con <code>position-fixed</code>. Siempre está visible en la esquina inferior derecha. <br>Esta caja es del apartado de los valores de posición.
+          </div>
+        </div>
+  
+        <!-- Ejemplo 5: Position Sticky -->
+        <div class="caja" style="border: 2px solid #333; padding: 15px; margin-bottom: 20px; background-color: #fff; position: relative; word-break: break-word; overflow-wrap: break-word;">
+          <h3>Position Sticky</h3>
+          <p>Desplázate hacia abajo para ver el comportamiento sticky.</p>
+          <div class="position-sticky top-0 bg-info text-white p-2" style="position: sticky; top: 0; background-color: blue; color: white; padding: 10px; border: 1px solid #333; word-break: break-word; overflow-wrap: break-word;">
+            Este es un elemento con <code>position-sticky</code>. Se queda "pegado" cuando alcanza la parte superior de la caja.
+          </div>
+          <div style="height: auto;">
+            <p>Contenido adicional para permitir el desplazamiento...</p>
+            <p>1</p>
+            <p>2</p>
+            <p>3</p>
+            <p>4</p>
+            <p>5</p>
+            <p>6</p>
+            <p>7</p>
+            <p>8</p>
+            <p>9</p>
+            <p>10</p>
+            <p>11</p>
+            <p>12</p>
+            <p>13</p>
+            <p>14</p>
+            <p>15</p>
+            <p>16</p>
+            <p>17</p>
+            <p>18</p>
+            <p>19</p>
+            <p>20</p>
+            
+          </div>
+        </div>
+  
+      </div>
+      <!-- Fin del Contenedor con Scroll -->
+        </div>
+        
+
+    <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+    <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+    <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+
+    <!-- --------------------------------------------------------------- -->
+      <!-- Arrange elements/Organizar elementos-->
+    <div class="container mt-4">
+        <h3 id="arrange_elements" class="text-info">Arrange elements/Organizar elementos</h3>
+        <p>Organiza elementos fácilmente con las utilidades de posicionamiento de bordes. El formato es <span class="text-danger">{property}-{position} </span>.</p>
+        <p>Cuando la <span class="fst-italic fs-5">propiedad</span> es una de las siguientes:</p>
+            <ul>
+                <li><span class="text-danger">top- </span> para la posición vertical <span class="text-danger">top </span></li>
+                <li><span class="text-danger">start- </span> para la posición horizontal (en LTR) <span class="text-danger">left </span></li>
+                <li><span class="text-danger">bottom-</span> para la posición vertical <span class="text-danger">bottom </span></li>
+                <li><span class="text-danger">end- </span> para la posición horizontal (en LTR) <span class="text-danger">right </span></li>
+            </ul>
+            <p>Donde <span class="fst-italic fs-5">posición</span> es una de:</p>
+            <ul>
+                <li><span class="text-danger">0- </span> para la posición del borde <span class="text-danger">0 </span></li>
+                <li><span class="text-danger">50- </span> para la posición del borde <span class="text-danger">50% </span></li>
+                <li><span class="text-danger">100-</span> para la posición del borde <span class="text-danger">100% </span></li>
+            </ul>
+            <p>(Puede agregar más valores de posición agregando entradas a la variable del mapa Sass <span class="text-danger">$position-values</span>).  </p>
+
+            <div class=" border rounded m-3 p-3 ">
+                <div class="position-relative">
+                    <div class="bg-warning-subtle  border rounded  "style="height: 250px;">
+                        <div class="position-absolute top-0 start-0 rounded" style="width:50px;height:50px;background-color:rgb(119, 128, 130);"></div>
+                        <div class="position-absolute top-0 end-0 rounded" style="width:50px;height:50px;background-color:lightblue;"></div>
+                        <div class="position-absolute top-50 start-50 rounded" style="width:50px;height:50px;background-color:lightblue;"></div>
+                        <div class="position-absolute bottom-50 end-50 rounded" style="width:50px;height:50px;background-color:lightblue;"></div>
+                        <div class="position-absolute bottom-0 start-0 rounded" style="width:50px;height:50px;background-color:lightblue;"></div>
+                        <div class="position-absolute bottom-0 end-0 rounded" style="width:50px;height:50px;background-color:lightblue;"></div>
+                    </div>
+                </div>
+            <hr>HTML
+            <hr>
+            <pre>
+&lt;div class="position-relative"&gt;
+    &lt;div class="bg-warning-subtle  border rounded  "style="height: 250px;"&gt;
+        &lt;div class="position-absolute top-0 start-0 rounded" style="width:50px;height:50px;background-color:rgb(119, 128, 130);"&gt;&lt;/div&gt;
+        &lt;div class="position-absolute top-0 end-0 rounded" style="width:50px;height:50px;background-color:lightblue;"&gt;&lt;/div&gt;
+        &lt;div class="position-absolute top-50 start-50 rounded" style="width:50px;height:50px;background-color:lightblue;"&gt;&lt;/div&gt;
+        &lt;div class="position-absolute bottom-50 end-50 rounded" style="width:50px;height:50px;background-color:lightblue;"&gt;&lt;/div&gt;
+        &lt;div class="position-absolute bottom-0 start-0 rounded" style="width:50px;height:50px;background-color:lightblue;"&gt;&lt;/div&gt;
+        &lt;div class="position-absolute bottom-0 end-0 rounded" style="width:50px;height:50px;background-color:lightblue;"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+</pre>
+</div>
+        </div>
+    </div>
+
+    <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+    <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+    <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+
+    <!-- --------------------------------------------------------------- -->
+    <!-- --------------------------------------------------------------- -->
+    <!-- Center elements/Elementos centrales-->
+    <div class="container mt-4">
+
+        <h3 id="center_elements" class="text-info">Center elements/Elementos centrales</h3>
+        <p>Además, también puedes centrar los elementos con la clase de utilidad de transformación <span class="text-danger">.translate-middle</span>.</p>
+        <p>Esta clase aplica las transformaciones <span class="text-danger">translateX(-50%) </span>y <span class="text-danger">translateY(-50%) </span>al elemento que, en combinación con las utilidades de posicionamiento de bordes, permite centrar absolutamente un elemento.<span class="text-danger">overflow-X</span> para afectar el desbordamiento de contenido
+                verticalmente. </p>
+
+        <div class=" border rounded m-3 p-3 ">
+            <div class="position-relative">
+                <div class="bg-warning-subtle  border rounded  "style="height: 150px;">
+                    <div class="position-absolute top-0 start-0 translate-middle rounded" style="width:25px;height:25px;background-color:#07bbdf;"></div>
+                    <div class="position-absolute top-0 start-50 translate-middle rounded" style="width:25px;height:25px;background-color:#07bbdf;"></div>
+                    <div class="position-absolute top-0 start-100 translate-middle rounded" style="width:25px;height:25px;background-color:#07bbdf;"></div>
+                    <div class="position-absolute top-50 start-0 translate-middle rounded" style="width:25px;height:25px;background-color:#07bbdf;"></div>
+                    <div class="position-absolute top-50 start-50 translate-middle rounded" style="width:25px;height:25px;background-color:#07bbdf;"></div>
+                    <div class="position-absolute top-50 start-100 translate-middle rounded" style="width:25px;height:25px;background-color:#07bbdf;"></div>
+                    <div class="position-absolute top-100 start-0 translate-middle rounded" style="width:25px;height:25px;background-color:#07bbdf;"></div>
+                    <div class="position-absolute top-100 start-50 translate-middle rounded" style="width:25px;height:25px;background-color:#07bbdf;"></div>
+                    <div class="position-absolute top-100 start-100 translate-middle rounded" style="width:25px;height:25px;background-color:#07bbdf;"></div>
+                </div>
+            </div>
+            <hr>HTML
+            <hr>
+                <pre>
+&lt;div class="position-relative"&gt;
+    &lt;div class="bg-warning-subtle  border rounded  "style="height: 150px;"&gt;
+        &lt;div class="position-absolute top-0 start-0 translate-middle rounded" style="width:25px;height:25px;background-color:#07bbdf;"&gt;&lt;/div&gt;
+        &lt;div class="position-absolute top-0 start-50 translate-middle rounded" style="width:25px;height:25px;background-color:#07bbdf;"&gt;&lt;/div&gt;
+        &lt;div class="position-absolute top-0 start-100 translate-middle rounded" style="width:25px;height:25px;background-color:#07bbdf;"&gt;&lt;/div&gt;
+        &lt;div class="position-absolute top-50 start-0 translate-middle rounded" style="width:25px;height:25px;background-color:#07bbdf;"&gt;&lt;/div&gt;
+        &lt;div class="position-absolute top-50 start-50 translate-middle rounded" style="width:25px;height:25px;background-color:#07bbdf;"&gt;&lt;/div&gt;
+        &lt;div class="position-absolute top-50 start-100 translate-middle rounded" style="width:25px;height:25px;background-color:#07bbdf;"&gt;&lt;/div&gt;
+        &lt;div class="position-absolute top-100 start-0 translate-middle rounded" style="width:25px;height:25px;background-color:#07bbdf;"&gt;&lt;/div&gt;
+        &lt;div class="position-absolute top-100 start-50 translate-middle rounded" style="width:25px;height:25px;background-color:#07bbdf;"&gt;&lt;/div&gt;
+        &lt;div class="position-absolute top-100 start-100 translate-middle rounded" style="width:25px;height:25px;background-color:#07bbdf;"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+    </pre>
+        </div>
+<p>Al agregar clases <span class="text-danger">.translate-middle-x (-50%) </span> o <span class="text-danger">.translate-middle-y </span>, los elementos se pueden posicionar solo en dirección horizontal o vertical.</p>
+    <div class=" border rounded m-3 p-3 ">
+        <div class="position-relative">
+            <div class="bg-warning-subtle  border rounded  "style="height: 250px;">
+                <div class="position-absolute top-0 start-0 rounded" style="width:50px;height:50px;background-color:#07bbdf;"></div>
+                <div class="position-absolute top-0 start-50 translate-middle-x rounded" style="width:50px;height:50px;background-color:#07bbdf;"></div>
+                <div class="position-absolute top-0 end-0 rounded" style="width:50px;height:50px;background-color:#085450;"></div>
+                <div class="position-absolute top-50 start-0 translate-middle-y rounded" style="width:50px;height:50px;background-color:#085450;"></div>
+                <div class="position-absolute top-50 start-50 translate-middle rounded" style="width:50px;height:50px;background-color:#73d914;"></div>
+                <div class="position-absolute top-50 end-0 translate-middle-y rounded" style="width:50px;height:50px;background-color:#73d914;"></div>
+                <div class="position-absolute bottom-0 start-0 rounded" style="width:50px;height:50px;background-color:#119d8c;"></div>
+                <div class="position-absolute bottom-0 start-50 translate-middle-x rounded" style="width:50px;height:50px;background-color:#119d8c;"></div>
+                <div class="position-absolute bottom-0 end-0 rounded" style="width:50px;height:50px;background-color:#07bbdf;"></div>
+                <div class="position-absolute bottom-0 start-25 translate-middle-x rounded" style="width:50px;height:50px;background-color:#f75205;"></div>
+            </div>
+        </div>
+    </div>
+
+        <hr>HTML
+        <hr>
+            <pre>
+&lt;div class="position-relative"&gt;
+    &lt;div class="bg-warning-subtle  border rounded  "style="height: 150px;"&gt;
+        &lt;div class="position-absolute top-0 start-0 rounded" style="width:25px;height:25px;background-color:#07bbdf;"&gt;&lt;/div&gt;
+        &lt;div class="position-absolute top-0 start-50 translate-middle-x rounded" style="width:25px;height:25px;background-color:#07bbdf;"&gt;&lt;/div&gt;
+        &lt;div class="position-absolute top-0 end-0 rounded" style="width:25px;height:25px;background-color:#085425;"&gt;&lt;/div&gt;
+        &lt;div class="position-absolute top-50 start-0 translate-middle-y rounded" style="width:25px;height:25px;background-color:#085425;"&gt;&lt;/div&gt;
+        &lt;div class="position-absolute top-50 start-50 translate-middle rounded" style="width:25px;height:25px;background-color:#73d914;"&gt;&lt;/div&gt;
+        &lt;div class="position-absolute top-50 end-0 translate-middle-y rounded" style="width:25px;height:25px;background-color:#73d914;"&gt;&lt;/div&gt;
+        &lt;div class="position-absolute bottom-0 start-0 rounded" style="width:25px;height:25px;background-color:#119d8c;"&gt;&lt;/div&gt;
+        &lt;div class="position-absolute bottom-0 start-50 translate-middle-x rounded" style="width:25px;height:25px;background-color:#119d8c;"&gt;&lt;/div&gt;
+        &lt;div class="position-absolute bottom-0 end-0 rounded" style="width:25px;height:25px;background-color:#07bbdf;"&gt;&lt;/div&gt;
+        &lt;div class="position-absolute bottom-0 start-25 translate-middle-x rounded" style="width:25px;height:25px;background-color:#f75205;"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;    
+</pre>
+    </div>
+        <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+        <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+        <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+
+        <!-- --------------------------------------------------------------- -->
+        <!-- --------------------------------------------------------------- -->
+        <!-- Examples/Ejemplos-->
+        <div class="container mt-4">
+            <h3 id="examples" class="text-info">Examples/Ejemplos</h3>
+            <p>A continuación se muestran algunos ejemplos reales de estas clases:</p>               
+                <div class=" border rounded m-3 p-3 ">
+                    <div class=" d-flex ms-5">
+                        <button type="button" class="btn btn-primary position-relative ms-5 me-5">
+                            Correos <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill text-bg-secondary">+99 <span class="visually-hidden">mensajes no leidos</span></span>
+                        </button>                    
+                        <div class="position-relative py-2 px-4 text-bg-secondary border border-secondary rounded-pill ms-5 me-5"> Marcador <svg width="1em" height="1em" viewBox="0 0 16 16" class="position-absolute top-100 start-50 translate-middle mt-1" fill="var(--bs-secondary)" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/></svg>
+                        </div>                    
+                        <button type="button" class="btn btn-primary position-relative ms-5 me-5"> Alertas <span class="position-absolute top-0 start-100 translate-middle badge border border-light rounded-circle bg-danger p-2"><span class="visually-hidden">mensajes no leidos</span></span>
+                        </button>
+                    </div>
+                    <hr>HTML<hr>
+                    <pre>
+&lt;div class=" d-flex ms-5"&gt;
+    &lt;button type="button" class="btn btn-primary position-relative ms-5 me-5"&gt;
+        Correos &lt;span class="position-absolute top-0 start-100 translate-middle badge rounded-pill text-bg-secondary"&gt;+99 &lt;span class="visually-hidden"&gt;mensajes no leidos&lt;/span&gt;&lt;/span&gt;
+    &lt;/button&gt;                    
+    &lt;div class="position-relative py-2 px-4 text-bg-secondary border border-secondary rounded-pill ms-5 me-5"&gt; Marcador &lt;svg width="1em" height="1em" viewBox="0 0 16 16" class="position-absolute top-100 start-50 translate-middle mt-1" fill="var(--bs-secondary)" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"&gt;&lt;path d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/&gt;&lt;/svg&gt;
+    &lt;/div&gt;                    
+    &lt;button type="button" class="btn btn-primary position-relative ms-5 me-5"&gt; Alertas &lt;span class="position-absolute top-0 start-100 translate-middle badge border border-light rounded-circle bg-danger p-2"&gt;&lt;span class="visually-hidden"&gt;mensajes no leidos&lt;/span&gt;&lt;/span&gt;
+    &lt;/button&gt;
+&lt;/div&gt;
+</pre>
+            </div>
+            <p>Puedes usar estas clases con componentes existentes para crear nuevos. Recuerda que puedes ampliar su funcionalidad añadiendo entradas a la variable <span class="text-danger">$position-values </span>.</p>
+            <div class=" border rounded m-3 p-3 ">
+                    <div class="position-relative m-4">
+                        <div class="progress" role="progressbar" aria-label="Progress" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="height: 1px;">
+                        <div class="progress-bar" style="width: 50%"></div>
+                        </div>
+                        <button type="button" class="position-absolute top-0 start-0 translate-middle btn btn-sm btn-primary rounded-pill" style="width: 2rem; height:2rem;">1</button>
+                        <button type="button" class="position-absolute top-0 start-50 translate-middle btn btn-sm btn-primary rounded-pill" style="width: 2rem; height:2rem;">2</button>
+                        <button type="button" class="position-absolute top-0 start-100 translate-middle btn btn-sm btn-secondary rounded-pill" style="width: 2rem; height:2rem;">3</button>
+                </div>
+                <hr>HTML<hr>
+                <pre>
+&lt;div class="position-relative m-4"&gt;
+    &lt;div class="progress" role="progressbar" aria-label="Progress" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="height: 1px;"&gt;
+      &lt;div class="progress-bar" style="width: 50%"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;button type="button" class="position-absolute top-0 start-0 translate-middle btn btn-sm btn-primary rounded-pill" style="width: 2rem; height:2rem;"&gt;1&lt;/button&gt;
+    &lt;button type="button" class="position-absolute top-0 start-50 translate-middle btn btn-sm btn-primary rounded-pill" style="width: 2rem; height:2rem;"&gt;2&lt;/button&gt;
+    &lt;button type="button" class="position-absolute top-0 start-100 translate-middle btn btn-sm btn-secondary rounded-pill" style="width: 2rem; height:2rem;"&gt;3&lt;/button&gt;
+&lt;/div&gt;                            
+</pre>
+                </div>
+            <div class=" border rounded m-3 p-3 ">
+                <p>Aquí tienes un ejemplo completo con un progreso del 75%, un color verde, una altura de 10px y una animación:
+
+                </p>
+                <div class="position-relative m-4">
+                    <div class="progress" role="progressbar" aria-label="Progress" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="height: 10px;">
+                      <div class="progress-bar bg-success progress-bar-animated" style="width: 75%"></div>
+                    </div>
+                    <button type="button" class="position-absolute top-0 start-0 translate-middle btn btn-sm btn-danger rounded-pill" style="width: 2rem; height:2rem;">1</button>
+                    <button type="button" class="position-absolute top-0 start-50 translate-middle btn btn-sm btn-warning rounded-pill" style="width: 2rem; height:2rem;">2</button>
+                    <button type="button" class="position-absolute top-0 start-100 translate-middle btn btn-sm btn-info rounded-pill" style="width: 2rem; height:2rem;">3</button>
+                </div>
+                </div>
+            </div>
+        </div>
+
+            <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+            <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+            <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+
+            <!-- --------------------------------------------------------------- -->
+            <!--------------------- CSS ------------------------------->
+            <div class="container mt-4">
+
+                <h3 class="text-primary ms-2 my-2">CSS</h3>
+                <h5 id="sass_maps" class="text-primary ms-2 my-2 text-decoration-underline">Sass maps/Mapas de  Sass
+                </h5>
+
+                <p>Las utilidades de desbordamiento se declaran en nuestra API de utilidades en [nombre del archivo] <span
+                        class="text-danger">scss/_utilities.scss.</span> <a
+                        href="https://getbootstrap.com/docs/5.3/utilities/api/#using-the-api">Aprenda a usar la API de
+                        utilidades.</a></p>
+
+                <div class=" border rounded m-3 p-3 bg-">
+                    <a
+                        href="https://github.com/twbs/bootstrap/blob/v5.3.4/scss/_utilities.scss">scss/_utilities.scss</a>
+                    <hr>
+                    <pre>
+"overflow": (
+  <span class="text-danger">property: overflow,
+  values: auto hidden visible scroll,</span>
+),
+"overflow-x": (
+  <span class="text-danger">property: overflow-x,
+  values: auto hidden visible scroll,</span>
+),
+"overflow-y": (
+  <span class="text-danger">property: overflow-y,
+  values: auto hidden visible scroll,</span>
+),
+                    </pre>
+
+                </div>
+            </div>
+
+            <!-- ---------------------------------------------------------- -->
+            <!-- ---------------------------------------------------------- -->
+            <!-- ---------------------------------------------------------- -->
+        </div>
+        <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+        <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+        <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+        <!--------------------- CSS ------------------------------->
+        <div class="container mt-4">
+
+
+                
+            <h5 id="sass_utilities_api" class="text-primary ms-2 my-2 text-decoration-underline">Sass utilities
+                API/API de utilidades de Sass
+            </h5>
+            <p>Las utilidades de desbordamiento se declaran en nuestra API de utilidades en [nombre del archivo] <span
+                    class="text-danger">scss/_utilities.scss.</span> <a
+                    href="https://getbootstrap.com/docs/5.3/utilities/api/#using-the-api">Aprenda a usar la API de
+                    utilidades.</a></p>
+
+            <div class=" border rounded m-3 p-3 bg-">
+                <a
+                    href="https://github.com/twbs/bootstrap/blob/v5.3.4/scss/_utilities.scss">scss/_utilities.scss</a>
+                <hr>
+                <pre>
+"overflow": (
+<span class="text-danger">property: overflow,
+values: auto hidden visible scroll,</span>
+),
+"overflow-x": (
+<span class="text-danger">property: overflow-x,
+values: auto hidden visible scroll,</span>
+),
+"overflow-y": (
+<span class="text-danger">property: overflow-y,
+values: auto hidden visible scroll,</span>
+),
+                </pre>
+
+            </div>
+        </div>
+
+        <!-- ---------------------------------------------------------- -->
+        <!-- ---------------------------------------------------------- -->
+        <!-- ---------------------------------------------------------- -->
+    </div>
+    <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+    <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+    <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+        <!-- ---------------------------------------------------------- -->
+        <!-- ---------FOOTER    FOOTER------------------ -->
+
+
+
+        <footer class="bd-footer py-4 py-md-5 mt-5 bg-body-tertiary">
+            <div class="container py-4 py-md-5 px-4 px-md-3 text-body-secondary">
+                <div class="row">
+                    <div class="col-lg-3 mb-3">
+                        <a class="d-inline-flex align-items-center mb-2 text-body-emphasis text-decoration-none"
+                            href="/" aria-label="Oreja">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="d-block me-2"
+                                viewBox="0 0 118 94" role="img">
+                                <title>Bootstrap</title>
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z"
+                                    fill="currentColor"></path>
+                            </svg>
+                            <span class="fs-5">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Oreja</font>
+                                </font>
+                            </span>
+                        </a>
+                        <ul class="list-unstyled small">
+                            <li class="mb-2">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Diseñado y construido con todo el amor
+                                        del mundo
+                                        por el </font>
+                                </font><a href="/docs/5.3/about/team/">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">equipo de Bootstrap</font>
+                                    </font>
+                                </a>
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;"> con la ayuda de </font>
+                                </font><a href="https://github.com/twbs/bootstrap/graphs/contributors">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">nuestros colaboradores</font>
+                                    </font>
+                                </a>
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;"> .</font>
+                                </font>
+                            </li>
+                            <li class="mb-2">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Código bajo licencia </font>
+                                </font><a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank"
+                                    rel="license noopener">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">MIT</font>
+                                    </font>
+                                </a>
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;"> , docs </font>
+                                </font><a href="https://creativecommons.org/licenses/by/3.0/" target="_blank"
+                                    rel="license noopener">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">CC BY 3.0</font>
+                                    </font>
+                                </a>
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;"> .</font>
+                                </font>
+                            </li>
+                            <li class="mb-2">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Actualmente v5.3.3.</font>
+                                </font>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-lg-2 offset-lg-1 mb-3">
+                        <h5>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Campo de golf</font>
+                            </font>
+                        </h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a href="https://getbootstrap.com/">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Hogar</font>
+                                    </font>
+                                </a></li>
+                            <li class="mb-2"><a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/"
+                                    target="_blank">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Documentos</font>
+                                    </font>
+                                </a></li>
+                            <li class="mb-2"><a href="https://getbootstrap.com/docs/5.3/examples/" target="_blank">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Ejemplos</font>
+                                    </font>
+                                </a></li>
+                            <li class="mb-2"><a href="https://icons.getbootstrap.com/" target="_blank">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Iconos</font>
+                                    </font>
+                                </a></li>
+                            <li class="mb-2"><a href="https://themes.getbootstrap.com/" target="_blank">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Temas</font>
+                                    </font>
+                                </a></li>
+                            <li class="mb-2"><a href="https://blog.getbootstrap.com/" target="_blank">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Blog</font>
+                                    </font>
+                                </a></li>
+                            <li class="mb-2"><a href="https://cottonbureau.com/people/bootstrap" target="_blank"
+                                    rel="noopener">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Tienda de artículos promocionales
+                                        </font>
+                                    </font>
+                                </a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-lg-2 mb-3">
+                        <h5>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Guías</font>
+                            </font>
+                        </h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/"
+                                    target="_blank">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Empezando</font>
+                                    </font>
+                                </a></li>
+                            <li class="mb-2"><a href="https://getbootstrap.com/docs/5.3/examples/starter-template/"
+                                    target="_blank">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Plantilla de inicio</font>
+                                    </font>
+                                </a></li>
+                            <li class="mb-2"><a href="https://getbootstrap.com//docs/5.3/getting-started/webpack/"
+                                    target="_blank">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Paquete web</font>
+                                    </font>
+                                </a></li>
+                            <li class="mb-2"><a href="https://getbootstrap.com//docs/5.3/getting-started/parcel/"
+                                    target="_blank">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Parcela</font>
+                                    </font>
+                                </a></li>
+                            <li class="mb-2"><a href="https://getbootstrap.com//docs/5.3/getting-started/vite/"
+                                    target="_blank">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Vite</font>
+                                    </font>
+                                </a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-lg-2 mb-3">
+                        <h5>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Proyectos</font>
+                            </font>
+                        </h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a href="https://github.com/twbs/bootstrap" target="_blank" rel="noopener">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Bootstrap 5</font>
+                                    </font>
+                                </a></li>
+                            <li class="mb-2"><a href="https://github.com/twbs/bootstrap/tree/v4-dev" target="_blank"
+                                    rel="noopener">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Bootstrap 4</font>
+                                    </font>
+                                </a></li>
+                            <li class="mb-2"><a href="https://github.com/twbs/icons" target="_blank" rel="noopener">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Iconos</font>
+                                    </font>
+                                </a></li>
+                            <li class="mb-2"><a href="https://github.com/twbs/rfs" target="_blank" rel="noopener">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">RFS</font>
+                                    </font>
+                                </a></li>
+                            <li class="mb-2"><a href="https://github.com/twbs/examples/" target="_blank" rel="noopener">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Ejemplos de repositorio</font>
+                                    </font>
+                                </a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-lg-2 mb-3">
+                        <h5>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Comunidad</font>
+                            </font>
+                        </h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a href="https://github.com/twbs/bootstrap/issues" target="_blank"
+                                    rel="noopener">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Asuntos</font>
+                                    </font>
+                                </a></li>
+                            <li class="mb-2"><a href="https://github.com/twbs/bootstrap/discussions" target="_blank"
+                                    rel="noopener">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Discusiones</font>
+                                    </font>
+                                </a></li>
+                            <li class="mb-2"><a href="https://github.com/sponsors/twbs" target="_blank" rel="noopener">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">patrocinadores corporativos</font>
+                                    </font>
+                                </a></li>
+                            <li class="mb-2"><a href="https://opencollective.com/bootstrap" target="_blank"
+                                    rel="noopener">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Colectivo Abierto</font>
+                                    </font>
+                                </a></li>
+                            <li class="mb-2"><a href="https://stackoverflow.com/questions/tagged/bootstrap-5"
+                                    target="_blank" rel="noopener">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Desbordamiento de pila</font>
+                                    </font>
+                                </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YUe2LzesAfftltw+PEaao2tjU/QATaW/rOitAq67e0CT0Zi2VVRL0oC4+gAaeBKu"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>

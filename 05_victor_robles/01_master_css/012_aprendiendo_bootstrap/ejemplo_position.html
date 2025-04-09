@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplos de Posición en Bootstrap 5</title>
+  <!-- Incluye Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .caja {
+      border: 2px solid #000;
+      padding: 20px;
+      margin-bottom: 20px;
+      height: 150px; /* Altura fija para las cajas */
+      overflow: auto; /* Para manejar el desbordamiento */
+    }
+    .caja > div {
+      background-color: lightblue;
+      padding: 10px;
+      border: 1px solid #333;
+    }
+    .caja-relative {
+      position: relative;
+      height: 200px; /* Altura adicional para mostrar el posicionamiento absoluto */
+    }
+  </style>
+</head>
+<body>
+    <div class="container mt-5 border rounded">
+        <h4 class="fw-bold fs-4">Explicación de cada ejemplo:</h4>
+        <ol>
+            <li><span class="fw-bold text-danger">position-static </span>: Es el valor predeterminado de position. No tiene ningún efecto especial sobre el flujo del documento.</li>
+            <li><span class="fw-bold text-danger">position-relative</span> : Permite posicionar elementos relativamente dentro de su contenedor. También sirve como punto de referencia para elementos con position-absolute.</li>
+            <li><span class="fw-bold text-danger">position-absolute</span> : Coloca el elemento en una posición específica dentro de su contenedor relativo. En este caso, se centra usando top-50, start-50 y translate-middle.</li>
+            <li><span class="fw-bold text-danger">position-fixed </span>: Fija el elemento en una posición específica de la ventana, independientemente del desplazamiento.</li>
+            <li><span class="fw-bold text-danger">position-sticky</span> : Hace que el elemento se comporte como relative hasta que alcanza una posición específica (en este caso, top-0), momento en el que se "pega" a esa posición mientras se desplaza.</li>
+        </ol>
+        <h4 class="fw-bold fs-4">Notas:</h4>
+        <ul>
+            <li>Las cajas tienen un tamaño fijo para que puedas ver claramente cómo funcionan las utilidades de posición.</li>
+            <li>El ejemplo de <span class="fw-bold text-danger">position-fixed </span> muestra un elemento siempre visible en la esquina inferior derecha.</li>
+            <li>El ejemplo de <span class="fw-bold text-danger">position-sticky </span> requiere que desplaces la página para observar su comportamiento.</li>
+        </ul>
+    </div>
+  <div class="container mt-5">
+    <h1 class="text-center mb-4">Ejemplos de Utilidades de Posición en Bootstrap 5</h1>
+
+    <!-- Ejemplo 1: Position Static -->
+    <div class="caja">
+      <h3>Position Static</h3>
+      <div class="position-static">Este es un elemento con <code>position-static</code>. No tiene efecto especial.</div>
+    </div>
+
+    <!-- Ejemplo 2: Position Relative -->
+    <div class="caja caja-relative">
+      <h3>Position Relative</h3>
+      <div class="position-relative">Este es un elemento con <code>position-relative</code>. Permite posicionar elementos absolutos dentro de él.</div>
+      <div class="position-absolute top-0 start-0 bg-warning p-2">Elemento absoluto dentro del contenedor relativo</div>
+    </div>
+
+    <!-- Ejemplo 3: Position Absolute -->
+    <div class="caja caja-relative">
+      <h3>Position Absolute</h3>
+      <div class="position-absolute top-50 start-50 translate-middle bg-success text-white p-2">
+        Este es un elemento con <code>position-absolute</code>. Está centrado usando <code>top-50 start-50 translate-middle</code>.
+      </div>
+    </div>
+
+    <!-- Ejemplo 4: Position Fixed -->
+    <div class="caja" style="height: 300px;">
+      <h3>Position Fixed</h3>
+      <p>Desplázate hacia abajo para ver el elemento fijo.</p>
+      <div class="position-fixed bottom-0 end-0 bg-danger text-white p-3">
+        Este es un elemento con <code>position-fixed</code>. Siempre está visible en la esquina inferior derecha.
+      </div>
+    </div>
+
+    <!-- Ejemplo 5: Position Sticky -->
+    <div class="caja" style="height: 400px;">
+      <h3>Position Sticky</h3>
+      <p>Desplázate hacia abajo para ver el comportamiento sticky.</p>
+      <div class="position-sticky top-0 bg-info text-white p-2">
+        Este es un elemento con <code>position-sticky</code>. Se queda "pegado" cuando alcanza la parte superior de la ventana.
+      </div>
+      <div style="height: 600px;">
+        <p>Contenido adicional para permitir el desplazamiento...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Incluye Bootstrap 5 JS (opcional) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
