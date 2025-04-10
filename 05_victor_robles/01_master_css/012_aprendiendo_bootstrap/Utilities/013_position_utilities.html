@@ -259,7 +259,7 @@ Position values
                 <div class="position-absolute bottom-0 start-0 rounded" style="width:50px;height:50px;background-color:#119d8c;"></div>
                 <div class="position-absolute bottom-0 start-50 translate-middle-x rounded" style="width:50px;height:50px;background-color:#119d8c;"></div>
                 <div class="position-absolute bottom-0 end-0 rounded" style="width:50px;height:50px;background-color:#07bbdf;"></div>
-                <div class="position-absolute bottom-0 start-25 translate-middle-x rounded" style="width:50px;height:50px;background-color:#f75205;"></div>
+                <div class="position-absolute bottom-0 start-25 translate-middle-y rounded" style="width:50px;height:50px;background-color:#07bbdf;"></div>
             </div>
         </div>
     </div>
@@ -366,29 +366,19 @@ Position values
                 <h5 id="sass_maps" class="text-primary ms-2 my-2 text-decoration-underline">Sass maps/Mapas de  Sass
                 </h5>
 
-                <p>Las utilidades de desbordamiento se declaran en nuestra API de utilidades en [nombre del archivo] <span
-                        class="text-danger">scss/_utilities.scss.</span> <a
-                        href="https://getbootstrap.com/docs/5.3/utilities/api/#using-the-api">Aprenda a usar la API de
-                        utilidades.</a></p>
+                <p>Los valores de utilidad de posición predeterminados se declaran en un mapa Sass y luego se utilizan para generar nuestras utilidades.</p>
 
                 <div class=" border rounded m-3 p-3 bg-">
                     <a
-                        href="https://github.com/twbs/bootstrap/blob/v5.3.4/scss/_utilities.scss">scss/_utilities.scss</a>
+                        href="https://github.com/twbs/bootstrap/blob/v5.3.5/scss/_variables.scss">scss/_variables.scss</a>
                     <hr>
                     <pre>
-"overflow": (
-  <span class="text-danger">property: overflow,
-  values: auto hidden visible scroll,</span>
-),
-"overflow-x": (
-  <span class="text-danger">property: overflow-x,
-  values: auto hidden visible scroll,</span>
-),
-"overflow-y": (
-  <span class="text-danger">property: overflow-y,
-  values: auto hidden visible scroll,</span>
-),
-                    </pre>
+  <span class="text-danger">$position-values:</span>(
+    0: 0,
+    50: 50%,
+    100: 100%
+  );
+</pre>
 
                 </div>
             </div>
@@ -400,35 +390,51 @@ Position values
         <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
         <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
         <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
-        <!--------------------- CSS ------------------------------->
+        <!-------------Sass utilitiesAPI/API de utilidades de Sass-------------------------->
         <div class="container mt-4">
 
 
                 
-            <h5 id="sass_utilities_api" class="text-primary ms-2 my-2 text-decoration-underline">Sass utilities
-                API/API de utilidades de Sass
+            <h5 id="sass_utilities_api" class="text-primary ms-2 my-2 text-decoration-underline">Sass utilities API/API de utilidades de Sass
             </h5>
-            <p>Las utilidades de desbordamiento se declaran en nuestra API de utilidades en [nombre del archivo] <span
-                    class="text-danger">scss/_utilities.scss.</span> <a
-                    href="https://getbootstrap.com/docs/5.3/utilities/api/#using-the-api">Aprenda a usar la API de
-                    utilidades.</a></p>
+            <p>Las utilidades de posición  se declaran en nuestra API de utilidades en [nombre del archivo] <span  class="text-danger">scss/_utilities.scss.</span> <a
+                    href="https://getbootstrap.com/docs/5.3/utilities/api/#using-the-api">Aprenda a usar la API de  utilidades.</a></p>
 
             <div class=" border rounded m-3 p-3 bg-">
                 <a
                     href="https://github.com/twbs/bootstrap/blob/v5.3.4/scss/_utilities.scss">scss/_utilities.scss</a>
                 <hr>
                 <pre>
-"overflow": (
-<span class="text-danger">property: overflow,
-values: auto hidden visible scroll,</span>
+"position": (
+<span class="text-danger">property: position,
+values: static relative absolute fixed sticky</span>
 ),
-"overflow-x": (
-<span class="text-danger">property: overflow-x,
-values: auto hidden visible scroll,</span>
+"top": (
+<span class="text-danger">property: top,
+values: $position-values</span>
 ),
-"overflow-y": (
-<span class="text-danger">property: overflow-y,
-values: auto hidden visible scroll,</span>
+"bottom": (
+<span class="text-danger">property: bottom,
+values: $position-values</span>
+),
+"start": (
+<span class="text-danger">property: left,
+class: start,
+values: $position-values</span>
+),
+"end": (
+<span class="text-danger">property: right,
+class: end,
+values: $position-values</span>
+),
+"translate-middle": (
+<span class="text-danger">property: transform,
+class: translate-middle,
+values: (
+   null: translate(-50%, -50%),
+   x: translateX(-50%),
+   y: translateY(-50%),</span>
+  )
 ),
                 </pre>
 
