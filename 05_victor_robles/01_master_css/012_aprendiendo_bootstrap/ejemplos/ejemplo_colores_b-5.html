@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Colores de Bootstrap 5</title>
+    <!-- Enlazar Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Estilos personalizados -->
+    <style>
+        /* Clases para texto */
+        .text-indigo {
+            color: #6610f2;
+        }
+
+        .text-purple {
+            color: #6f42c1;
+        }
+
+        .text-pink {
+            color: #d63384;
+        }
+
+        .text-red {
+            color: #dc3545;
+        }
+
+        .text-orange {
+            color: #fd7e14;
+        }
+
+        /* Clases para fondo */
+        .bg-indigo {
+            background-color: #6610f2;
+        }
+
+        .bg-purple {
+            background-color: #6f42c1;
+        }
+
+        .bg-pink {
+            background-color: #d63384;
+        }
+
+        .bg-red {
+            background-color: #dc3545;
+        }
+
+        .bg-orange {
+            background-color: #fd7e14;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Encabezado con color de texto primario -->
+    <div class="row m-3 p-3 border rounded">
+        <h1 class="text-primary">Título Principal</h1>
+
+        <!-- Botón con fondo secundario y texto claro -->
+        <button class="btn btn-secondary text-light">Botón Secundario</button>
+
+        <!-- Tarjeta con fondo azul y texto claro -->
+        <div class="card bg-info text-white mb-3" style="max-width: 20rem;">
+            <div class="card-header">Encabezado de la Tarjeta</div>
+            <div class="card-body">
+                <p class="card-text">Este es un ejemplo de tarjeta con fondo azul y texto blanco.</p>
+            </div>
+        </div>
+
+        <!-- Sección con encabezados de diferentes colores -->
+        <div class="container mt-5">
+            <h1 class="text-primary">Texto en Azul (#0d6efd)</h1>
+            <h2 class="text-indigo">Texto en Indigo (#6610f2)</h2>
+            <h3 class="text-purple">Texto en Púrpura (#6f42c1)</h3>
+            <h4 class="text-pink">Texto en Rosa (#d63384)</h4>
+            <h5 class="text-red">Texto en Rojo (#dc3545)</h5>
+            <h6 class="text-orange">Texto en Naranja (#fd7e14)</h6>
+        </div>
+
+        <!-- Sección con tarjetas de diferentes fondos -->
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <div class="card bg-primary text-white">
+                        <div class="card-body">
+                            <h5 class="card-title">Tarjeta con Fondo Azul</h5>
+                            <p class="card-text">Este es un ejemplo de tarjeta con fondo azul.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card bg-indigo text-white">
+                        <div class="card-body">
+                            <h5 class="card-title">Tarjeta con Fondo Indigo</h5>
+                            <p class="card-text">Este es un ejemplo de tarjeta con fondo indigo.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card bg-purple text-white">
+                        <div class="card-body">
+                            <h5 class="card-title">Tarjeta con Fondo Púrpura</h5>
+                            <p class="card-text">Este es un ejemplo de tarjeta con fondo púrpura.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card bg-pink text-white">
+                        <div class="card-body">
+                            <h5 class="card-title">Tarjeta con Fondo Rosa</h5>
+                            <p class="card-text">Este es un ejemplo de tarjeta con fondo rosa.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card bg-red text-white">
+                        <div class="card-body">
+                            <h5 class="card-title">Tarjeta con Fondo Rojo</h5>
+                            <p class="card-text">Este es un ejemplo de tarjeta con fondo rojo.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card bg-orange text-white">
+                        <div class="card-body">
+                            <h5 class="card-title">Tarjeta con Fondo Naranja</h5>
+                            <p class="card-text">Este es un ejemplo de tarjeta con fondo naranja.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row border rounded m-3 p-3 border-success">
+        <h4>Explicación del código</h4>
+        <ol>
+            <li class="fs-5">Estilos personalizados en <code>&lt;style&gt;</code> :
+                <ul>
+                    <li>Se definen clases CSS personalizadas para colores como indigo, púrpura, rosa, rojo y naranja.
+                    </li>
+                    <li>Las clases para el texto siguen el patrón <code>text-{color}.</code>
+                    </li>
+                    <li>Las clases para el fondo siguen el patrón <code>bg-{color}.
+                </code> </li>
+<pre class="border rounded m-3 p-3">/* Clases para texto */
+    .text-indigo {
+        color: #6610f2;
+    }
+    .text-purple {
+        color: #6f42c1;
+    }
+    .text-pink {
+        color: #d63384;
+    }
+    .text-red {
+        color: #dc3545;
+    }
+    .text-orange {
+        color: #fd7e14;
+    }
+    
+    /* Clases para fondo */
+    .bg-indigo {
+        background-color: #6610f2;
+    }
+    .bg-purple {
+        background-color: #6f42c1;
+    }
+    .bg-pink {
+        background-color: #d63384;
+    }
+    .bg-red {
+        background-color: #dc3545;
+    }
+    .bg-orange {
+        background-color: #fd7e14;
+    }</pre>
+                </ul>
+            </li>
+            <li class="fs-5">Uso de las clases personalizadas :
+                <ul>
+                    <li>Para el texto: Se utilizan clases como <code>text-indigo</code>, <code>text-purple</code>, etc.
+                    </li>
+                    <li>Para el fondo: Se utilizan clases como <code>bg-indigo</code>, <code>bg-purple</code>, etc.
+                    </li>
+                </ul>
+            </li>
+            <div class="card bg-indigo text-white m-3">
+                <!-- Encabezado de la tarjeta -->
+                <div class="card-header bg-light">
+                    <h5 class="card-title text-secondary">html</h5>
+                </div>
+            
+                <!-- Cuerpo de la tarjeta -->
+                <div class="card-body">
+                    <h2 class="text-indigo">Texto en Indigo (#6610f2)</h2>
+                <div class="card bg-indigo text-white">
+                    <div class="card-body">
+                        <h5 class="card-title">Tarjeta con Fondo Indigo</h5>
+                        <p class="card-text">Este es un ejemplo de tarjeta con fondo indigo.</p>
+                    </div>
+                </div>
+                </div>
+            </div>
+            
+        </ol>
+        <h4>Resultados esperados</h4>
+<ul>
+    <li>Los encabezados tendrán colores de texto correspondientes a los nombres de las clases (<code>text-indigo</code>, <code>text-purple</code>, etc.).
+    </li>
+    <li>Las tarjetas tendrán fondos de colores correspondientes a las clases (<code>bg-indigo</code>, <code>bg-purple</code>, etc.), y el texto será blanco para garantizar legibilidad.
+    </li>
+</ul>
+<h4>Conclusión</h4>
+<p>Bootstrap 5 no proporciona clases predefinidas para todos los colores de la paleta completa. Sin embargo, puedes extender fácilmente sus funcionalidades agregando tus propias clases CSS personalizadas. Al definir estas clases, podrás aprovechar al máximo la flexibilidad de Bootstrap para aplicar cualquier color de la paleta que desees.</p>
+
+    </div>
+    <!-- Pie de página con fondo gris claro -->
+    <footer class="bg-light text-center py-3">
+        <p>© 2023 Mi Sitio Web</p>
+    </footer>
+
+    <!-- Enlazar Bootstrap JS y Popper.js (opcional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

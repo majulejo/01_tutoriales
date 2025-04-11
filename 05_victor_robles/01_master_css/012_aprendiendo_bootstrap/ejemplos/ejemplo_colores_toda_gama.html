@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Tonos de Colores de Bootstrap 5</title>
+    <!-- Enlazar Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Estilos personalizados -->
+    <style>
+        /* Clases para texto */
+        .text-indigo-100 { color: #e8d0ff; }
+        .text-indigo-200 { color: #c5b3fc; }
+        .text-indigo-300 { color: #a18cf8; }
+        .text-indigo-400 { color: #7e6bf1; }
+        .text-indigo-500 { color: #6610f2; }
+        .text-indigo-600 { color: #5a0cd6; }
+        .text-indigo-700 { color: #4c0ab3; }
+        .text-indigo-800 { color: #430888; }
+        .text-indigo-900 { color: #37066b; }
+
+        .text-purple-100 { color: #f3eaf9; }
+        .text-purple-200 { color: #e9d5ee; }
+        .text-purple-300 { color: #d8b4f0; }
+        .text-purple-400 { color: #c084d3; }
+        .text-purple-500 { color: #6f42c1; }
+        .text-purple-600 { color: #5c35a6; }
+        .text-purple-700 { color: #4a238c; }
+        .text-purple-800 { color: #3b1870; }
+        .text-purple-900 { color: #2a1051; }
+
+        .text-pink-100 { color: #ffe6f9; }
+        .text-pink-200 { color: #ffd1f2; }
+        .text-pink-300 { color: #ffafb8; }
+        .text-pink-400 { color: #fa709a; }
+        .text-pink-500 { color: #d63384; }
+        .text-pink-600 { color: #b52370; }
+        .text-pink-700 { color: #93185e; }
+        .text-pink-800 { color: #72114b; }
+        .text-pink-900 { color: #510c38; }
+
+        .text-red-100 { color: #fff1f2; }
+        .text-red-200 { color: #ffebef; }
+        .text-red-300 { color: #ffdddb; }
+        .text-red-400 { color: #ffbcbb; }
+        .text-red-500 { color: #dc3545; }
+        .text-red-600 { color: #b02a37; }
+        .text-red-700 { color: #8c232c; }
+        .text-red-800 { color: #6e1e23; }
+        .text-red-900 { color: #52151a; }
+
+        .text-orange-100 { color: #fffbe6; }
+        .text-orange-200 { color: #fef3c7; }
+        .text-orange-300 { color: #fde68a; }
+        .text-orange-400 { color: #fbd866; }
+        .text-orange-500 { color: #fd7e14; }
+        .text-orange-600 { color: #e6680c; }
+        .text-orange-700 { color: #cc5200; }
+        .text-orange-800 { color: #a84100; }
+        .text-orange-900 { color: #853200; }
+
+        /* Clases para fondo */
+        .bg-indigo-100 { background-color: #e8d0ff; }
+        .bg-indigo-200 { background-color: #c5b3fc; }
+        .bg-indigo-300 { background-color: #a18cf8; }
+        .bg-indigo-400 { background-color: #7e6bf1; }
+        .bg-indigo-500 { background-color: #6610f2; }
+        .bg-indigo-600 { background-color: #5a0cd6; }
+        .bg-indigo-700 { background-color: #4c0ab3; }
+        .bg-indigo-800 { background-color: #430888; }
+        .bg-indigo-900 { background-color: #37066b; }
+
+        .bg-purple-100 { background-color: #f3eaf9; }
+        .bg-purple-200 { background-color: #e9d5ee; }
+        .bg-purple-300 { background-color: #d8b4f0; }
+        .bg-purple-400 { background-color: #c084d3; }
+        .bg-purple-500 { background-color: #6f42c1; }
+        .bg-purple-600 { background-color: #5c35a6; }
+        .bg-purple-700 { background-color: #4a238c; }
+        .bg-purple-800 { background-color: #3b1870; }
+        .bg-purple-900 { background-color: #2a1051; }
+
+        .bg-pink-100 { background-color: #ffe6f9; }
+        .bg-pink-200 { background-color: #ffd1f2; }
+        .bg-pink-300 { background-color: #ffafb8; }
+        .bg-pink-400 { background-color: #fa709a; }
+        .bg-pink-500 { background-color: #d63384; }
+        .bg-pink-600 { background-color: #b52370; }
+        .bg-pink-700 { background-color: #93185e; }
+        .bg-pink-800 { background-color: #72114b; }
+        .bg-pink-900 { background-color: #510c38; }
+
+        .bg-red-100 { background-color: #fff1f2; }
+        .bg-red-200 { background-color: #ffebef; }
+        .bg-red-300 { background-color: #ffdddb; }
+        .bg-red-400 { background-color: #ffbcbb; }
+        .bg-red-500 { background-color: #dc3545; }
+        .bg-red-600 { background-color: #b02a37; }
+        .bg-red-700 { background-color: #8c232c; }
+        .bg-red-800 { background-color: #6e1e23; }
+        .bg-red-900 { background-color: #52151a; }
+
+        .bg-orange-100 { background-color: #fffbe6; }
+        .bg-orange-200 { background-color: #fef3c7; }
+        .bg-orange-300 { background-color: #fde68a; }
+        .bg-orange-400 { background-color: #fbd866; }
+        .bg-orange-500 { background-color: #fd7e14; }
+        .bg-orange-600 { background-color: #e6680c; }
+        .bg-orange-700 { background-color: #cc5200; }
+        .bg-orange-800 { background-color: #a84100; }
+        .bg-orange-900 { background-color: #853200; }
+
+        /* Estilo para contenedores de colores */
+        .color-container {
+            padding: 20px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container mt-5">
+
+        <!-- Título principal -->
+        <h1 class="text-primary">Gama Completa de Tonos de Colores de Bootstrap 5</h1>
+
+        <!-- Sección de colores -->
+        <div class="row">
+
+            <!-- Indigo -->
+            <div class="col-md-4">
+                <div class="color-container bg-indigo-500 text-white">
+                    <h2>Indigo</h2>
+                    <p>Todos los tonos:</p>
+                    <div class="row">
+                        <div class="col-4 bg-indigo-100 text-dark">100</div>
+                        <div class="col-4 bg-indigo-500 text-white">500</div>
+                        <div class="col-4 bg-indigo-900 text-white">900</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Púrpura -->
+            <div class="col-md-4">
+                <div class="color-container bg-purple-500 text-white">
+                    <h2>Púrpura</h2>
+                    <p>Todos los tonos:</p>
+                    <div class="row">
+                        <div class="col-4 bg-purple-100 text-dark">100</div>
+                        <div class="col-4 bg-purple-500 text-white">500</div>
+                        <div class="col-4 bg-purple-900 text-white">900</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rosa -->
+            <div class="col-md-4">
+                <div class="color-container bg-pink-500 text-white">
+                    <h2>Rosa</h2>
+                    <p>Todos los tonos:</p>
+                    <div class="row">
+                        <div class="col-4 bg-pink-100 text-dark">100</div>
+                        <div class="col-4 bg-pink-500 text-white">500</div>
+                        <div class="col-4 bg-pink-900 text-white">900</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rojo -->
+            <div class="col-md-4">
+                <div class="color-container bg-red-500 text-white">
+                    <h2>Rojo</h2>
+                    <p>Todos los tonos:</p>
+                    <div class="row">
+                        <div class="col-4 bg-red-100 text-dark">100</div>
+                        <div class="col-4 bg-red-500 text-white">500</div>
+                        <div class="col-4 bg-red-900 text-white">900</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Naranja -->
+            <div class="col-md-4">
+                <div class="color-container bg-orange-500 text-white">
+                    <h2>Naranja</h2>
+                    <p>Todos los tonos:</p>
+                    <div class="row">
+                        <div class="col-4 bg-orange-100 text-dark">100</div>
+                        <div class="col-4 bg-orange-500 text-white">500</div>
+                        <div class="col-4 bg-orange-900 text-white">900</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Pie de página -->
+    <footer class="bg-light text-center py-3">
+        <p>© 2023 Mi Sitio Web</p>
+    </footer>
+
+    <!-- Enlazar Bootstrap JS y Popper.js (opcional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
