@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo .mt-n1</title>
+    <!-- Enlace al CSS de Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Estilo adicional para visualizar mejor el ejemplo */
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h4>Ejemplo de uso de .mt-n1</h4>
+
+        <!-- Primera caja sin margen negativo -->
+        <div class="box mb-3" style="width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            border: 1px solid #000;"></div>
+
+        <!-- Segunda caja con margen negativo (usando .mt-n1) -->
+        <div class="box mt-n1" style="width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            border: 1px solid #000;"></div>
+    </div>
+    <div class="container mt-5 border rounded-3 p-3">
+        <span class="fw-bold fs-4">Explicación del código:</span>
+        <ol>
+            <li><span class="fw-bold">Clase .mt-n1:</span>
+                <ul>
+                    <li>La clase <code>.mt-n1 </code>aplica un margen negativo en la parte superior ( <code>margin-top</code> ) de <code>-0.25rem</code>. Esto
+                        "tira" el elemento hacia arriba, superponiéndolo ligeramente sobre el elemento anterior.</li>
+                    <li>Es útil cuando quieres ajustar el espaciado entre elementos sin tener que modificar manualmente
+                        los estilos CSS.</li>
+                </ul>
+            <li><span class="fw-bold">Estructura del ejemplo:
+                </span>
+                <ul>
+                    <li>Se crean dos cuadros (<code>div </code>) con la clase <code>.box </code>, que tienen un tamaño fijo y un fondo azul claro  para visualizarlos fácilmente.</li>
+                    <li>El primer cuadro tiene un margen inferior (<code>mb-3 </code>) para separarlo del segundo cuadro.</li>
+                    <li>El segundo cuadro usa la clase <code>.mt-n1</code> para reducir el espacio entre ambos cuadros.</li>
+                </ul>
+            </li>
+            <li><span class="fw-bold">Explicación del código:</span>
+                <ul>
+                    <li>Sin <code>.mt-n1 </code>, habría un espacio considerable entre los dos cuadros debido al margen inferior del
+                        primer cuadro.</li>
+                    <li>Al aplicar <code>.mt-n1 </code> al segundo cuadro, este se mueve hacia arriba, reduciendo el espacio entre
+                        ambos.
+                    </li>
+                </ul>
+            </li>
+        </ol>
+        <h4>Captura de pantalla mental:</h4>
+        <p>Imagina dos cuadrados azules uno encima del otro. Normalmente, habría un espacio entre ellos, pero al aplicar
+            <code>.mt-n1 </code>al segundo cuadro, este sube ligeramente, solapándose o acercándose más al primero.</p>
+    </div>
+
+    <!-- Enlace al JS de Bootstrap (opcional, no es necesario para este ejemplo) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

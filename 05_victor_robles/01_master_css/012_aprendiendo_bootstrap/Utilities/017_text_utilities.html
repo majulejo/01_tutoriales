@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/020_imgenes_master/ccc.png" type="image/x-icon">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <title>017_text_utilities</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-DQvkBjpPgn7RC31MCQoOeC9TI2kdqa4+BSgNMNj8v77fdC77Kj5zpWFTJaaAoMbC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap-grid.min.css">
+
+</head>
+
+<body>
+    <h1 class="colores bg-primary-subtle text-center text-warning display-1  py-3">017_text_utilities</h1>
+    <!-- primary secondary success danger warning info light dark -->
+    <!-- primary-subtle secondary-subtle success-subtle danger-subtle warning-subtle info-subtle light-subtle dark-subtle -->
+
+    <h2 class="text-secondary text-center"> <a href="https://getbootstrap.com/docs/5.3/utilities/opacity/"
+            target="_blank"
+            class="link-dark link-opacity-25 link-opacity-50-hover fw-bold text-uppercase link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">text/texto</a>
+    </h2>
+
+
+    <div class="container mt-4">
+        <p class="display-6">Documentación y ejemplos de utilidades de texto comunes para controlar la alineación, el
+            ajuste, el peso y más.</p>
+        <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+        <h4 class="mt-2">En esta página:</h4>
+        <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+        <ul>
+            <li><a href="#text_alignment" class="link-success fw-bold">Text alignment/Alineación del texto</a>
+            </li>
+            <li><a href="#text_wrapping_and_overflow" class="link-success fw-bold">Text wrapping and overflow /Ajuste y
+                    desbordamiento de texto</a>
+            </li>
+            <li><a href="#word_break" class="link-success fw-bold">Word break/Salto de palabra</a>
+            </li>
+            <li><a href="#text_transform" class="link-success fw-bold">Text transform/Transformación de texto</a>
+            </li>
+            <li><a href="#font_size" class="link-success fw-bold">Font size/Tamaño de fuente</a>
+            </li>
+            <li><a href="#font_weight_and_italics" class="link-success fw-bold">Font weight and italics/Peso de fuente y
+                    cursiva</a>
+            </li>
+            <li><a href="#line_height" class="link-success fw-bold">Line height/Altura de línea</a>
+            </li>
+            <li><a href="#monospace " class="link-success fw-bold">Monospace /Monoespaciado</a>
+            </li>
+            <li><a href="#reset_color" class="link-success fw-bold">Reset color /Restablecer color</a>
+            </li>
+            <li><a href="#text_decoration" class="link-success fw-bold">Text decoration /Decoración de texto</a>
+            </li>
+            <li class="list-unstyled">
+                <h4>Css</h4>
+                <ul>
+                    <li><a href="#sass_variables" class="text-danger text-opacity-50">Sass variables/Variables de
+                            Sass</a>
+                    </li>
+                    <li><a href="#sass_maps" class="text-danger text-opacity-50">Sass Maps/Mapas de Sass</a>
+                    </li>
+                    <li><a href="#sass_utilities_api" class="text-danger text-opacity-50">Sass utilities API/API de
+                            utilidades de Sass</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+    <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+    <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+    <!-- --------------------------------------------------------------- -->
+
+
+    <!-- --------------------------------------------------------------- -->
+    <!-- --------------------------------------------------------------- -->
+    <!-- Text alignment/Alineación del texto-->
+    <div class="container mt-4">
+        <h3 id="text_alignment" class="text-info">Text alignment/Alineación del texto</h3>
+        <p>Realinee fácilmente el texto con los componentes mediante clases de alineación de texto. Para la alineación
+            inicial, final y central, existen clases adaptables que utilizan los mismos puntos de corte de ancho de
+            ventana gráfica que el sistema de cuadrícula.</p>
+        <div class=" border rounded m-3 p-3 ">
+            <p class="text-start">Comience a alinear el texto en todos los tamaños de ventana gráfica.</p>
+            <p class="text-center">Texto alineado al centro en todos los tamaños de ventana gráfica.</p>
+            <p class="text-end">Finalizar el texto alineado en todos los tamaños de ventana gráfica.</p>
+
+            <p class="text-sm-end">Finalizar el texto alineado en ventanas gráficas de tamaño SM (pequeño) o más ancho.
+            </p>
+            <p class="text-md-end">Finalizar el texto alineado en ventanas gráficas de tamaño MD (mediano) o más anchas.
+            </p>
+            <p class="text-lg-end">Finalizar el texto alineado en ventanas gráficas de tamaño LG (grande) o más anchas.
+            </p>
+            <p class="text-xl-end">Finalizar el texto alineado en ventanas gráficas de tamaño XL (extra grande) o más
+                anchas.</p>
+            <p class="text-xxl-end">Finalizar el texto alineado en ventanas gráficas de tamaño XXL (extra extra grande)
+                o más anchas.</p>
+            <hr>HTML
+            <hr>
+            <pre>
+&lt;p class="text-start"&gt;Comience a alinear el texto en todos los tamaños de ventana gráfica.&lt;/p&gt;
+&lt;p class="text-center"&gt;Texto alineado al centro en todos los tamaños de ventana gráfica.&lt;/p&gt;
+&lt;p class="text-end"&gt;Finalizar el texto alineado en todos los tamaños de ventana gráfica.&lt;/p&gt;                
+&lt;p class="text-sm-end"&gt;Finalizar el texto alineado en ventanas gráficas de tamaño SM (pequeño) o más ancho.
+&lt;/p&gt;
+&lt;p class="text-md-end"&gt;Finalizar el texto alineado en ventanas gráficas de tamaño MD (mediano) o más anchas.
+&lt;/p&gt;
+&lt;p class="text-lg-end"&gt;Finalizar el texto alineado en ventanas gráficas de tamaño LG (grande) o más anchas.
+&lt;/p&gt;
+&lt;p class="text-xl-end"&gt;Finalizar el texto alineado en ventanas gráficas de tamaño XL (extra grande) o más anchas.
+&lt;/p&gt;
+&lt;p class="text-xxl-end"&gt;Finalizar el texto alineado en ventanas gráficas de tamaño XXL (extra extra grande) o más anchas.
+
+&lt;/p&gt;
+</pre>
+        </div>
+        <div class=" bg-primary-subtle   m-3 p-3 border-start border-5 border-info">
+            <p>Tenga en cuenta que no ofrecemos clases de utilidad para texto justificado. Si bien el texto justificado
+                puede ser más atractivo estéticamente, hace que el espaciado entre palabras sea más aleatorio y, por lo
+                tanto, más difícil de leer.</p>
+        </div>
+    </div>
+
+    <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+    <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+    <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+
+    <!-- --------------------------------------------------------------- -->
+    <!-- Text wrapping and overflow /Ajuste y desbordamiento de texto-->
+    <div class="container mt-4">
+        <h3 id="text_wrapping_and_overflow" class="text-info">Text wrapping and overflow /Ajuste y desbordamiento de
+            texto</h3>
+        <p>Envuelva el texto con una clase <span class="text-danger">.text-wrap </span>.</p>
+        <div class=" border rounded m-3 p-3 ">
+            <div class="badge text-bg-primary text-wrap" style="width: 6rem;">
+                Este texto debe ajustarse..
+            </div>
+            <hr>HTML
+            <hr>
+            <PRE>
+&lt;div class="badge text-bg-primary text-wrap" style="width: 6rem;"&gt;
+    Este texto debe ajustarse..
+&lt;/div&gt;
+</PRE>
+        </div>
+        <p>Evitar que el texto se ajuste a una clase <span class="text-danger">.text-nowrap </span>.</p>
+        <div class=" border rounded m-3 p-3 ">
+            <div class="text-nowrap bg-body-secondary border" style="width: 8rem;">
+                Este texto debe desbordar al padre.
+            </div>
+            <hr>HTML
+            <hr>
+            <pre>
+&lt;div class="text-nowrap bg-body-secondary border" style="width: 8rem;"&gt;
+    Este texto debe desbordar al padre.
+&lt;/div&gt;
+</pre>
+        </div>
+    </div>
+    <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+    <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+    <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+
+    <!-- --------------------------------------------------------------- -->
+    <!-- Word break/Ejemplos-->
+    <div class="container mt-4">
+        <h3 id="word_break" class="text-info">Word break/Ejemplos</h3>
+        <p>Evita que las cadenas de texto largas alteren el diseño de tus componentes usando <span
+                class="text-danger">.text-break </span>"to set" <span class="text-danger">word-wrap: break-word </span>y
+            <span class="text-danger">word-break: break-word</span>". Usamos " <span class="text-danger">word-wrap
+            </span>en lugar del más común" <span class="text-danger">overflow-wrap</span>para una mayor compatibilidad
+            con navegadores y añadimos "obsoleto" <span class="text-danger">word-break: break-word </span>para evitar
+            problemas con los contenedores flexibles.
+        </p>
+        <div class=" border rounded m-3 p-3 ">
+            <p class="text-break">
+                mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm</p>
+            <hr>HTML
+            <hr>
+            <pre>
+&lt;p class="text-break"&gt;mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+&lt;/p&gt;
+            </pre>
+
+        </div>
+    </div>
+    <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+    <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+    <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+    <!-- --------------------------------------------------------------- -->
+    <!-- Text transform/Transformación de texto-->
+    <div class="container mt-4">
+        <h3 id="text_transform" class="text-info">Text transform/Transformación de texto</h3>
+        <p>Transforme texto en componentes con nuestras clases de capitalización de texto: <span
+                class="text-danger">text-lowercase </span>, <span class="text-danger">text-uppercase </span>o <span
+                class="text-danger">text-capitalize</span>.</p>
+        <div class=" border rounded m-3 p-3 ">
+            <p class="text-lowercase">Texto en minúsculas.</p>
+            <p class="text-uppercase">Texto en mayúsculas.</p>
+            <p class="text-capitalize">Texto en mayúsculas/capitalizado.</p>
+            <hr>HTML
+            <hr>
+            <pre>
+&lt;p class="text-lowercase">Texto en minúsculas.&lt;/p&gt;
+&lt;p class="text-uppercase">Texto en mayúsculas.&lt;/p&gt;
+&lt;p class="text-capitalize">Texto en mayúsculas/capitalizado.&lt;/p&gt;
+</pre>
+        </div>
+        <p>Tenga en cuenta que <span class="text-danger">.text-capitalize </span>solo cambia la primera letra de
+            cada palabra, sin afectar el caso de las demás letras.</p>
+    </div>
+    </div>
+    <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+    <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+    <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+    <!-- --------------------------------------------------------------- -->
+    <!-- Font size/Tamaño de fuente-->
+    <div class="container mt-4">
+        <h3 id="font_size" class="text-info">Font size/Tamaño de fuente</h3>
+        <p>Cambie rápidamente el <code>font-size</code> texto. Si bien nuestras clases de encabezado (p. ej.,
+            <code>.h1</code> – <code>.h6</code> ) aplican <code>font-size</code>, <code>font-weight</code> y
+            <code>line-height </code>, estas utilidades solo aplican <code>font-size</code>. El tamaño de estas
+            utilidades coincide con el de los elementos de encabezado HTML, por lo que, a medida que aumenta el
+            número, su tamaño disminuye.
+        </p>
+        <div class=" border rounded m-3 p-3 ">
+            <p class="fs-1">.fs-1 text</p>
+            <p class="fs-2">.fs-2 text</p>
+            <p class="fs-3">.fs-3 text</p>
+            <p class="fs-4">.fs-4 text</p>
+            <p class="fs-5">.fs-5 text</p>
+            <p class="fs-6">.fs-6 text</p>
+            <hr>HTML
+            <hr>
+            <pre>
+&lt;p class="fs-1"&gt;.fs-1 text&lt;/p&gt;
+&lt;p class="fs-2"&gt;.fs-2 text&lt;/p&gt;
+&lt;p class="fs-3"&gt;.fs-3 text&lt;/p&gt;
+&lt;p class="fs-4"&gt;.fs-4 text&lt;/p&gt;
+&lt;p class="fs-5"&gt;.fs-5 text&lt;/p&gt;
+&lt;p class="fs-6"&gt;.fs-6 text&lt;/p&gt;
+</pre>
+        </div>
+    </div>
+    </div>
+    <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+    <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+    <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+    <!-- --------------------------------------------------------------- -->
+    <!-- Font weight and italics/Peso de fuente y cursiva-->
+    <div class="container mt-4">
+        <h3 id="font_weight_and_italics" class="text-info">Font weight and italics/Peso de fuente y cursiva</h3>
+
+        <p>Cambie rápidamente el <span class="text-danger">font-weight </span>o <span class="text-danger">font-style
+            </span>del texto con estas utilidades. Las utilidades <span class="text-danger">font-style </span>se
+            abrevian como <span class="text-danger">.fst-* </span>y las utilidades <span class="text-danger">font-weight
+            </span>se abrevian como <span class="text-danger">.fw-*</span>.</p>
+        <div class=" border rounded m-3 p-3 ">
+            <p class="fw-bold">Texto en negrita.</p>
+            <p class="fw-bolder">Texto con mayor peso en negrita (en relación al elemento principal).</p>
+            <p class="fw-semibold">Texto en seminegrita.</p>
+            <p class="fw-medium">Texto de peso medio.</p>
+            <p class="fw-normal">Texto de peso normal.</p>
+            <p class="fw-light">Texto ligero.</p>
+            <p class="fw-lighter">Texto más ligero (en relación con el elemento principal).</p>
+            <p class="fst-italic">Texto en cursiva.</p>
+            <p class="fst-normal">Texto con estilo de fuente normal</p>
+            <hr>HTML
+            <hr>
+            <pre>
+&lt;p class="fw-bold"&gt;Texto en negrita..&lt;/p&gt;
+&lt;p class="fw-bolder"&gt;Texto con mayor peso en negrita (en relación al elemento principal).&lt;/p&gt;
+&lt;p class="fw-semibold"&gt;Texto en seminegrita.&lt;/p&gt;
+&lt;p class="fw-medium"&gt;Texto de peso medio.&lt;/p&gt;
+&lt;p class="fw-normal"&gt;Texto de peso normal.&lt;/p&gt;
+&lt;p class="fw-light"&gt;Texto ligero.&lt;/p&gt;
+&lt;p class="fw-lighter"&gt;Texto más ligero (en relación con el elemento principal).&lt;/p&gt;
+&lt;p class="fst-italic"&gt;Texto en cursiva.&lt;/p&gt;
+&lt;p class="fst-normal"&gt;Texto con estilo de fuente normal&lt;/p&gt;               
+</pre>
+        </div>
+    </div>
+    <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+    <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+    <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+    <!-- --------------------------------------------------------------- -->
+    <!-- Line height/Altura de línea-->
+    <div class="container mt-4">
+        <h3 id="line_height" class="text-info">Line height/Altura de línea</h3>
+        <p>Cambiar la altura de la línea con utilidades <span class="text-danger">.lh-* </span>.</p>
+        <div class=" border rounded m-3 p-3 ">
+            <p class="lh-1">Este párrafo extenso explica cómo nuestras utilidades afectan la altura de línea de un
+                elemento. Las clases se aplican al propio elemento o, en ocasiones, al elemento padre. Estas clases se
+                pueden personalizar según sea necesario con nuestra API de utilidades.</p>
+            <p class="lh-sm">Este párrafo extenso explica cómo nuestras utilidades afectan la altura de línea de un
+                elemento. Las clases se aplican al propio elemento o, en ocasiones, al elemento padre. Estas clases se
+                pueden personalizar según sea necesario con nuestra API de utilidades.</p>
+            <p class="lh-base">Este párrafo extenso explica cómo nuestras utilidades afectan la altura de línea de un
+                elemento. Las clases se aplican al propio elemento o, en ocasiones, al elemento padre. Estas clases se
+                pueden personalizar según sea necesario con nuestra API de utilidades.</p>
+            <p class="lh-lg">Este párrafo extenso explica cómo nuestras utilidades afectan la altura de línea de un
+                elemento. Las clases se aplican al propio elemento o, en ocasiones, al elemento padre. Estas clases se
+                pueden personalizar según sea necesario con nuestra API de utilidades.</p>
+            <hr>HTML
+            <hr>
+            <pre>
+&lt;p class="lh-1"&gt;Este párrafo extenso explica cómo nuestras utilidades afectan la altura de línea de un elemento. Las clases se aplican al propio elemento o, en ocasiones, al elemento padre. Estas clases se pueden personalizar según sea necesario con nuestra API de utilidades.&lt;/p&gt;
+&lt;p class="lh-sm"&gt;Este párrafo extenso explica cómo nuestras utilidades afectan la altura de línea de un elemento. Las clases se aplican al propio elemento o, en ocasiones, al elemento padre. Estas clases se pueden personalizar según sea necesario con nuestra API de utilidades.&lt;/p&gt;
+&lt;p class="lh-base"&gt;Este párrafo extenso explica cómo nuestras utilidades afectan la altura de línea de un elemento. Las clases se aplican al propio elemento o, en ocasiones, al elemento padre. Estas clases se pueden personalizar según sea necesario con nuestra API de utilidades.&lt;/p&gt;
+&lt;p class="lh-lg"&gt;Este párrafo extenso explica cómo nuestras utilidades afectan la altura de línea de un elemento. Las clases se aplican al propio elemento o, en ocasiones, al elemento padre. Estas clases se pueden personalizar según sea necesario con nuestra API de utilidades.&lt;/p&gt;
+</pre>
+        </div>
+    </div>
+    <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+    <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+    <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+    <!-- --------------------------------------------------------------- -->
+    <!-- Monospace /Monoespaciado-->
+    <div class="container mt-4">
+        <h3 id="monospace" class="text-info">Monospace /Monoespaciado</h3>
+        <p>Cambie una selección a nuestra pila de fuentes monoespaciadas con <span class="text-danger">.font-monospace
+            </span>.</p>
+        <div class=" border rounded m-3 p-3 ">
+            <p class="font-monospace">Esto está en monoespaciado.</p>
+            <hr>HTML
+            <hr>
+            <pre>
+&lt;p class="font-monospace"&gt;Esto está en monoespaciado.&lt;/p&gt;
+            </pre>
+        </div>
+    </div>
+    <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+    <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+    <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+
+    <!-- ----------------------- -->
+    <!--Reset color  /Restablecer color-->
+    <div class="container mt-4">
+        <h3 id="reset_color" class="text-info">Reset color /Restablecer color</h3>
+        <p>Restablezca el color de un texto o enlace con <span class="text-danger">.text-reset </span>, para que herede
+            el color de su elemento principal.</p>
+        <div class=" border rounded m-3 p-3 ">
+            <p class="text-body-secondary">
+                Texto del cuerpo secundario con un <a href="#" class="text-reset">enlace de restablecimiento</a>.
+            </p>
+            <hr>HTML
+            <hr>
+            <pre>
+&lt;p class="text-body-secondary"&gt;Secondary body text with a &lt;a href="#" class="text-reset">reset link&lt;/a&gt;.&lt;/p&gt;
+</pre>
+        </div>
+
+
+    </div>
+    <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+    <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+    <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+
+    <!-- ----------------------- -->
+    <!-- ----------------------- -->
+
+    <!-- Text decoration /Decoración de texto-->
+    <div class="container mt-4">
+        <h3 id="text_decoration" class="text-info">Text decoration /Decoración de texto</h3>
+        <p>Decore el texto en los componentes con clases de decoración de texto.</p>
+        <div class=" border rounded m-3 p-3 ">
+                <p class="text-decoration-underline">Este texto tiene una línea debajo.</p>
+                <p class="text-decoration-line-through">Este texto tiene una línea que lo atraviesa.</p>
+                <a href="#" class="text-decoration-none">A este enlace se le ha eliminado la decoración del texto.</a>
+                <hr>HTML
+                <hr>
+                <pre>
+&lt;p class="text-decoration-underline"&gt;Este texto tiene una línea debajo.&lt;/p&gt;
+&lt;p class="text-decoration-line-through"&gt;Este texto tiene una línea que lo atraviesa.&lt;/p&gt;
+&lt;a href="#" class="text-decoration-none"&gt;A este enlace se le ha eliminado la decoración del texto.&lt;/a&gt;
+</pre>
+            </div>
+        </div>
+        <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+        <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+        <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+        <!-- --------------------------------------------------------------- -->
+        <!--------------------- CSS ------------------------------->
+        <div class="container mt-4">
+            <h3 class="text-primary ms-2 my-2">CSS</h3>
+            <!-- Sass variables/Variables de Sass -->
+            <h5 id="sass_variables" class="text-primary ms-5 my-4 text-decoration-underline">Sass variables/Variables de
+                Sass</h5>
+            <p>Variables Sass relacionadas con el tipo y la fuente predeterminados:
+
+            </p>
+            <div class="border bg-light mx-3 rounded">
+                <a href="https://github.com/twbs/bootstrap/blob/v5.3.5/scss/_variables.scss"
+                    class=" text-success mx-3 m-5" target="_blank">scss/_variables.scss</a>
+                <hr>
+                <pre class=" mb-2 pb-2"><span class="text-danger"></span>
+        // stylelint-disable value-keyword-case
+        <span class="text-danger">$font-family-sans-serif:      system-ui, -apple-system,</span> "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        <span class="text-danger">$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas,</span> "Liberation Mono", "Courier New", monospace;
+        // stylelint-enable value-keyword-case
+        <span class="text-danger">$font-family-base:</span>            var(--#{<span class="text-danger">$prefix}font-sans-serif</span>);
+        <span class="text-danger">$font-family-code:  </span>          var(--#{<span class="text-danger">$prefix}font-monospace)</span>;
+        
+        // $font-size-root affects the value of `rem`, which is used for as well font sizes, paddings, and margins
+        // $font-size-base affects the font size of the body text
+        <span class="text-danger">$font-size-root:                     null;</span>
+        <span class="text-danger">$font-size-base: </span>             1rem; // Assumes the browser default, typically `16px`
+        <span class="text-danger">$font-size-sm:  </span>              <span class="text-danger">$font-size-base </span>* .875;
+        <span class="text-danger">$font-size-lg:  </span>              <span class="text-danger">$font-size-base </span>* 1.25;
+        
+        <span class="text-danger">$font-weight-lighter:        lighter;</span> 
+        <span class="text-danger">$font-weight-light:  </span>         300;
+        <span class="text-danger">$font-weight-normal:  </span>        400;
+        <span class="text-danger">$font-weight-medium:  </span>        500;
+        <span class="text-danger">$font-weight-semibold: </span>       600;
+        <span class="text-danger">$font-weight-bold:   </span>         700;
+        <span class="text-danger">$font-weight-bolder:          bolder;</span>
+        
+        <span class="text-danger">$font-weight-base:  </span>          <span class="text-danger">$font-weight-normal</span>;
+
+        <span class="text-danger">$line-height-base: </span>           1.5;
+        <span class="text-danger">$line-height-sm:   </span>           1.25;
+        <span class="text-danger">$line-height-lg:  </span>            2;
+        
+        <span class="text-danger">$h1-font-size:  </span>              <span class="text-danger">$font-size-base </span>* 2.5;
+        <span class="text-danger">$h2-font-size:  </span>              <span class="text-danger">$font-size-base </span>* 2;
+        <span class="text-danger">$h3-font-size:  </span>              <span class="text-danger">$font-size-base </span>* 1.75;
+        <span class="text-danger">$h4-font-size:  </span>              <span class="text-danger">$font-size-base </span>* 1.5;
+        <span class="text-danger">$h5-font-size:  </span>              <span class="text-danger">$font-size-base </span>* 1.25;
+        <span class="text-danger">$h6-font-size:  </span>              <span class="text-danger">$font-size-base;</span>
+</pre>
+            </div>
+        </div>
+        <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+        <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+        <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+        <!-- --------------------------------------------------------------- -->
+            <!-- Sass maps/Mapas de Sass -->
+            <div class="container m-4">
+
+            <h5 id="sass_maps" class="text-primary ms-5 my-4 text-decoration-underline">Sass maps/Mapas de Sass </h5>
+            <p>Las utilidades de tamaño de fuente se generan a partir de este mapa, en combinación con nuestra API de utilidades.</p>
+            <div class="border bg-light m-3 rounded">
+                <a href="https://github.com/twbs/bootstrap/blob/v5.3.5/scss/_variables.scss"
+                    class=" text-success mx-3 m-5" target="_blank">scss/_variables.scss</a>
+                <hr>
+                <pre>
+    <span class="text-danger">$font-sizes: </span>:(
+      1:<span class="text-danger">$h1-font-size</span>,
+      2:<span class="text-danger">$h2-font-size</span>,      
+      3:<span class="text-danger">$h3-font-size</span>,   
+      4:<span class="text-danger">$h4-font-size</span>,
+      5:<span class="text-danger">$h5-font-size</span>,
+      6:<span class="text-danger">$h6-font-size</span>  
+    );
+</pre>
+            </div>
+            <div class="border bg-light m-3 rounded">
+                <a href="https://github.com/twbs/bootstrap/blob/v5.3.5/scss/_maps.scss"
+                    class=" text-success mx-3 m-5" target="_blank">scss/_maps.scss</a>
+                <hr>
+                <pre class=" mb-2 pb-2">
+    <span class="text-danger">$theme-colors-text:</span>:(
+        "primary":1:<span class="text-danger">$primary-text-emphasis</span>,
+        "secondary":<span class="text-danger">$secondary-text-emphasis</span>,
+        "success":<span class="text-danger">$success-text-emphasis</span>,
+        "info":<span class="text-danger">$info-text-emphasis</span>,
+        "warning":<span class="text-danger">$warning-text-emphasis</span>,
+        "danger":<span class="text-danger">$danger-text-emphasis</span>,  
+        "light":<span class="text-danger">$light-text-emphasis</span>,    
+        "dark":<span class="text-danger">$dark-text-emphasis</span>,    
+    );
+</pre>
+            </div>
+        </div>
+        <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+        <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+        <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+        <!-- --------------------------------------------------------------- -->
+
+            <!-------------Sass utilitiesAPI/API de utilidades de Sass-------------------------->
+            <div class="container mt-4">
+                <h5 id="sass_utilities_api" class="text-primary ms-2 my-2 text-decoration-underline">Sass utilities
+                    API/API
+                    de utilidades de Sass
+                </h5>
+                <p>Las utilidades de fuentes y texto se declaran en nuestra API de utilidades en [Nombre del archivo] <span class="text-danger">scss/_utilities.scss.</span> <a
+                        href="https://getbootstrap.com/docs/5.3/utilities/api/#using-the-api">Aprenda a usar la API de
+                        utilidades.</a></p>
+
+                <div class=" border rounded m-3 p-3 bg-"><a
+                        href="https://github.com/twbs/bootstrap/blob/v5.3.5/scss/_utilities.scss">scss/_utilities.scss</a>
+                    <hr>
+                    <pre>
+"font-family": (
+<span class="text-danger">property: font-family,
+    class: font,
+    values: (monospace: var(--#{$prefix}font-monospace))</span>
+  ),
+  "font-size": (
+    <span class="text-danger">rfs: true,
+        property: font-size,
+        class: fs,
+        values: $font-sizes</span>
+  ),
+  "font-style": (
+    <span class="text-danger">property: font-style,
+        class: fst,
+        values: italic normal</span>
+  ),
+  "font-weight": (
+    <span class="text-danger">property: font-weight,
+        class: fw,
+        values: (
+          lighter: $font-weight-lighter,
+          light: $font-weight-light,
+          normal: $font-weight-normal,
+          medium: $font-weight-medium,
+          semibold: $font-weight-semibold,
+          bold: $font-weight-bold,
+          bolder: $font-weight-bolder</span>
+    )
+  ),
+  "line-height": (
+    <span class="text-danger">responsive: true,
+        property: text-align,
+        class: text,
+        values: (
+          start: left,
+          end: right,
+          center: center,</span>
+        )
+  ),
+  "text-decoration": (
+    <span class="text-danger">property: text-decoration,
+        values: none underline line-through</span>
+  ),
+  "text-transform": (
+    <span class="text-danger">property: text-transform,
+        class: text,
+        values: lowercase uppercase capitalize</span>
+  ),
+  "white-space": (
+    <span class="text-danger">property: white-space,
+        class: text,
+        values: (
+          wrap: normal,
+          nowrap: nowrap,</span>
+        )
+  ),
+  "word-wrap": (
+    <span class="text-danger">property: word-wrap word-break,
+        class: text,
+        values: (break: break-word),
+        rtl: false</span>
+  ),           </pre>
+
+                </div>
+            </div>
+
+            <!-- ---------------------------------------------------------- -->
+            <!-- ---------------------------------------------------------- -->
+            <!-- ---------------------------------------------------------- -->
+        </div>
+        <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+        <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+        <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+        <!-- ---------------------------------------------------------- -->
+        <!-- ---------FOOTER    FOOTER------------------ -->
+
+
+
+        <footer class="bd-footer py-4 py-md-5 mt-5 bg-body-tertiary">
+            <div class="container py-4 py-md-5 px-4 px-md-3 text-body-secondary">
+                <div class="row">
+                    <div class="col-lg-3 mb-3">
+                        <a class="d-inline-flex align-items-center mb-2 text-body-emphasis text-decoration-none"
+                            href="/" aria-label="Oreja">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="d-block me-2"
+                                viewBox="0 0 118 94" role="img">
+                                <title>Bootstrap</title>
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z"
+                                    fill="currentColor"></path>
+                            </svg>
+                            <span class="fs-5">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Oreja</font>
+                                </font>
+                            </span>
+                        </a>
+                        <ul class="list-unstyled small">
+                            <li class="mb-2">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Diseñado y construido con todo el amor
+                                        del mundo
+                                        por el </font>
+                                </font><a href="/docs/5.3/about/team/">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">equipo de Bootstrap</font>
+                                    </font>
+                                </a>
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;"> con la ayuda de </font>
+                                </font><a href="https://github.com/twbs/bootstrap/graphs/contributors">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">nuestros colaboradores</font>
+                                    </font>
+                                </a>
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;"> .</font>
+                                </font>
+                            </li>
+                            <li class="mb-2">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Código bajo licencia </font>
+                                </font><a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank"
+                                    rel="license noopener">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">MIT</font>
+                                    </font>
+                                </a>
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;"> , docs </font>
+                                </font><a href="https://creativecommons.org/licenses/by/3.0/" target="_blank"
+                                    rel="license noopener">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">CC BY 3.0</font>
+                                    </font>
+                                </a>
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;"> .</font>
+                                </font>
+                            </li>
+                            <li class="mb-2">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Actualmente v5.3.3.</font>
+                                </font>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-lg-2 offset-lg-1 mb-3">
+                        <h5>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Campo de golf</font>
+                            </font>
+                        </h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a href="https://getbootstrap.com/">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Hogar</font>
+                                    </font>
+                                </a></li>
+                            <li class="mb-2"><a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/"
+                                    target="_blank">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Documentos</font>
+                                    </font>
+                                </a></li>
+                            <li class="mb-2"><a href="https://getbootstrap.com/docs/5.3/examples/" target="_blank">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Ejemplos</font>
+                                    </font>
+                                </a></li>
+                            <li class="mb-2"><a href="https://icons.getbootstrap.com/" target="_blank">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Iconos</font>
+                                    </font>
+                                </a></li>
+                            <li class="mb-2"><a href="https://themes.getbootstrap.com/" target="_blank">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Temas</font>
+                                    </font>
+                                </a></li>
+                            <li class="mb-2"><a href="https://blog.getbootstrap.com/" target="_blank">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Blog</font>
+                                    </font>
+                                </a></li>
+                            <li class="mb-2"><a href="https://cottonbureau.com/people/bootstrap" target="_blank"
+                                    rel="noopener">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Tienda de artículos promocionales
+                                        </font>
+                                    </font>
+                                </a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-lg-2 mb-3">
+                        <h5>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Guías</font>
+                            </font>
+                        </h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/"
+                                    target="_blank">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Empezando</font>
+                                    </font>
+                                </a></li>
+                            <li class="mb-2"><a href="https://getbootstrap.com/docs/5.3/examples/starter-template/"
+                                    target="_blank">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Plantilla de inicio</font>
+                                    </font>
+                                </a></li>
+                            <li class="mb-2"><a href="https://getbootstrap.com//docs/5.3/getting-started/webpack/"
+                                    target="_blank">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Paquete web</font>
+                                    </font>
+                                </a></li>
+                            <li class="mb-2"><a href="https://getbootstrap.com//docs/5.3/getting-started/parcel/"
+                                    target="_blank">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Parcela</font>
+                                    </font>
+                                </a></li>
+                            <li class="mb-2"><a href="https://getbootstrap.com//docs/5.3/getting-started/vite/"
+                                    target="_blank">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Vite</font>
+                                    </font>
+                                </a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-lg-2 mb-3">
+                        <h5>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Proyectos</font>
+                            </font>
+                        </h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a href="https://github.com/twbs/bootstrap" target="_blank" rel="noopener">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Bootstrap 5</font>
+                                    </font>
+                                </a></li>
+                            <li class="mb-2"><a href="https://github.com/twbs/bootstrap/tree/v4-dev" target="_blank"
+                                    rel="noopener">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Bootstrap 4</font>
+                                    </font>
+                                </a></li>
+                            <li class="mb-2"><a href="https://github.com/twbs/icons" target="_blank" rel="noopener">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Iconos</font>
+                                    </font>
+                                </a></li>
+                            <li class="mb-2"><a href="https://github.com/twbs/rfs" target="_blank" rel="noopener">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">RFS</font>
+                                    </font>
+                                </a></li>
+                            <li class="mb-2"><a href="https://github.com/twbs/examples/" target="_blank" rel="noopener">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Ejemplos de repositorio</font>
+                                    </font>
+                                </a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-lg-2 mb-3">
+                        <h5>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Comunidad</font>
+                            </font>
+                        </h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a href="https://github.com/twbs/bootstrap/issues" target="_blank"
+                                    rel="noopener">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Asuntos</font>
+                                    </font>
+                                </a></li>
+                            <li class="mb-2"><a href="https://github.com/twbs/bootstrap/discussions" target="_blank"
+                                    rel="noopener">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Discusiones</font>
+                                    </font>
+                                </a></li>
+                            <li class="mb-2"><a href="https://github.com/sponsors/twbs" target="_blank" rel="noopener">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">patrocinadores corporativos</font>
+                                    </font>
+                                </a></li>
+                            <li class="mb-2"><a href="https://opencollective.com/bootstrap" target="_blank"
+                                    rel="noopener">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Colectivo Abierto</font>
+                                    </font>
+                                </a></li>
+                            <li class="mb-2"><a href="https://stackoverflow.com/questions/tagged/bootstrap-5"
+                                    target="_blank" rel="noopener">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Desbordamiento de pila</font>
+                                    </font>
+                                </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YUe2LzesAfftltw+PEaao2tjU/QATaW/rOitAq67e0CT0Zi2VVRL0oC4+gAaeBKu"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>

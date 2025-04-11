@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/020_imgenes_master/ccc.png" type="image/x-icon">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <title>019_visibility_utilities</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-DQvkBjpPgn7RC31MCQoOeC9TI2kdqa4+BSgNMNj8v77fdC77Kj5zpWFTJaaAoMbC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap-grid.min.css">
+
+</head>
+
+<body>
+    <h1 class="colores bg-secondary-subtle text-center text-light display-1  py-3">019_visibility_utilities</h1>
+    <!-- primary secondary success danger warning info light dark -->
+    <!-- primary-subtle secondary-subtle success-subtle danger-subtle warning-subtle info-subtle light-subtle dark-subtle -->
+
+    <h2 class="text-center"> <a href="https://getbootstrap.com/docs/5.3/utilities/opacity/" target="_blank"
+            class="link-danger link-opacity-25 link-opacity-50-hover fw-bold text-uppercase link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Visibility/visibilidad</a>
+    </h2>
+
+
+    <div class="container mt-4">
+        <p class="display-6">Controle la visibilidad de los elementos, sin modificar su visualización, con utilidades de
+            visibilidad.</p>
+        <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+        <h4 class="mt-2">En esta página:</h4>
+        <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+        <ul>
+            <li><a href="#visibility" class="link-warning fw-bold">Visibility/visibilidad</a>
+            </li>
+            <li class="list-unstyled">
+                <h4>Css</h4>
+                <ul>
+                    <li><a href="#sass_utilities_api" class="text-danger text-opacity-50">Sass utilities API/API de
+                            utilidades de Sass</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+    <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+    <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+    <!-- --------------------------------------------------------------- -->
+
+
+    <!-- --------------------------------------------------------------- -->
+    <!-- --------------------------------------------------------------- -->
+    <!-- Visibility/visibilidad-->
+    <div class="container mt-4">
+        <h3 id="visibility" class="text-info">Visibility/visibilidad</h3>
+
+        <p>Establezca el valor <span class="text-danger">visibility </span>de los elementos con nuestras utilidades de
+            visibilidad. Estas clases de utilidad no modifican el <span class="text-danger">display </span>valor en
+            absoluto ni afectan el diseño; <span class="text-danger">.invisible </span>,los elementos siguen ocupando
+            espacio en la página.</p>
+        <div class="bg-warning-subtle  border-start border-warning border-5 m-3 p-3 ">
+            <p>Los elementos con la clase <span class="text-danger">.invisible</span> estarán ocultos <span
+                    class="fst-italic">tanto </span> visualmente como para los usuarios de tecnología de
+                asistencia/lectores de pantalla.</p>
+        </div>
+        <p>Aplicar <span class="text-danger">.visible</span> o <span class="text-danger">.invisible </span>según sea
+            necesario.</p>
+        <div class=" border rounded m-3 p-3 ">
+            <!-- Elemento visible (por defecto) -->
+            <h5>Elemento Visible</h5>
+            <div class="alert alert-success">
+                Este es un elemento visible (por defecto).
+            </div>
+            <hr style="border-bottom: 2px solid #ff0000; border-top: none;">
+            <!-- Elemento invisible -->
+            <h5>Elemento Invisible</h5>
+
+            <div class="alert alert-warning invisible">
+                Este es un elemento invisible, pero aún ocupa espacio en el diseño.
+            </div>
+            <hr style="border-bottom: 2px solid #ff0000; border-top: none;">
+
+            <hr>HTML
+            <hr>
+            <pre>
+    &lt;!-- Elemento visible (por defecto) --&gt;
+    &lt;h5&gt;Elemento Visible&lt;/h5&gt;
+        &lt;div class="alert alert-success"&gt;
+            Este es un elemento visible (por defecto).
+        &lt;/div&gt;
+    &lt;hr style="border-bottom: 2px solid #ff0000; border-top: none;"&gt;
+    &lt;!-- Elemento invisible --&gt;
+    &lt;h5&gt;Elemento Invisible&lt;/h5&gt;
+        &lt;div class="alert alert-warning invisible"&gt;
+            Este es un elemento invisible, pero aún ocupa espacio en el diseño.
+        &lt;/div&gt;
+    &lt;hr style="border-bottom: 2px solid #ff0000; border-top: none;"&gt;
+</pre>
+        </div>
+        <div class=" border rounded m-3 p-3 ">
+            <pre>
+                // Class
+                <span class="text-success">.visible </span> {
+                  <span class="text-primary">visibility:</span> <span class="text-danger-emphasis">visible</span> <span class="text-danger">!important;</span>
+                }
+                <span class="text-success">.invisible </span> {
+                  <span class="text-primary">visibility:</span> <span class="text-danger-emphasis">hidden</span> <span class="text-danger">!important;</span>
+                }         
+</pre>
+        </div>
+    </div>
+    <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+    <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+    <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+    <!-- --------------------------------------------------------------- -->
+    <!--------------------- CSS ------------------------------->
+    <div class="container mt-4">
+        <h3 class="text-primary ms-2 my-2">CSS</h3>
+
+
+        <!-------------Sass utilitiesAPI/API de utilidades de Sass-------------------------->
+        <div class="container mt-4">
+            <h5 id="sass_utilities_api" class="text-primary ms-2 my-2 text-decoration-underline">Sass utilities
+                API/API de utilidades de Sass
+            </h5>
+            <p>Las utilidades de fuentes y texto se declaran en nuestra API de utilidades en [Nombre del archivo] <span
+                    class="text-danger">scss/_utilities.scss.</span> <a
+                    href="https://getbootstrap.com/docs/5.3/utilities/api/#using-the-api">Aprenda a usar la API de
+                    utilidades.</a></p>
+
+            <div class=" border rounded m-3 p-3 bg-"><a
+                    href="https://github.com/twbs/bootstrap/blob/v5.3.5/scss/_utilities.scss">scss/_utilities.scss</a>
+                <hr>
+                <pre>
+    "visibility": (
+        <span class="text-danger">property: visibility,
+            class: null,
+            values: (
+              visible: visible,
+              invisible: hidden,</span>
+              )
+            ),</pre>
+
+            </div>
+        </div>
+
+        <!-- ---------------------------------------------------------- -->
+        <!-- ---------------------------------------------------------- -->
+        <!-- ---------------------------------------------------------- -->
+    </div>
+    <hr style="border-bottom: 2px solid rgb(200, 238, 13); border-top: none;">
+    <div style="border-bottom: 2px solid rgb(11, 219, 74); width: 100%;"></div>
+    <hr style="background-color: rgb(233, 13, 115); height: 3px; border: none;">
+    <!-- ---------------------------------------------------------- -->
+    <!-- ---------FOOTER    FOOTER------------------ -->
+
+
+
+    <footer class="bd-footer py-4 py-md-5 mt-5 bg-body-tertiary">
+        <div class="container py-4 py-md-5 px-4 px-md-3 text-body-secondary">
+            <div class="row">
+                <div class="col-lg-3 mb-3">
+                    <a class="d-inline-flex align-items-center mb-2 text-body-emphasis text-decoration-none" href="/"
+                        aria-label="Oreja">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="d-block me-2"
+                            viewBox="0 0 118 94" role="img">
+                            <title>Bootstrap</title>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z"
+                                fill="currentColor"></path>
+                        </svg>
+                        <span class="fs-5">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Oreja</font>
+                            </font>
+                        </span>
+                    </a>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Diseñado y construido con todo el amor
+                                    del mundo
+                                    por el </font>
+                            </font><a href="/docs/5.3/about/team/">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">equipo de Bootstrap</font>
+                                </font>
+                            </a>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;"> con la ayuda de </font>
+                            </font><a href="https://github.com/twbs/bootstrap/graphs/contributors">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">nuestros colaboradores</font>
+                                </font>
+                            </a>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;"> .</font>
+                            </font>
+                        </li>
+                        <li class="mb-2">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Código bajo licencia </font>
+                            </font><a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank"
+                                rel="license noopener">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">MIT</font>
+                                </font>
+                            </a>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;"> , docs </font>
+                            </font><a href="https://creativecommons.org/licenses/by/3.0/" target="_blank"
+                                rel="license noopener">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">CC BY 3.0</font>
+                                </font>
+                            </a>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;"> .</font>
+                            </font>
+                        </li>
+                        <li class="mb-2">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Actualmente v5.3.3.</font>
+                            </font>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2 offset-lg-1 mb-3">
+                    <h5>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Campo de golf</font>
+                        </font>
+                    </h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="https://getbootstrap.com/">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Hogar</font>
+                                </font>
+                            </a></li>
+                        <li class="mb-2"><a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/"
+                                target="_blank">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Documentos</font>
+                                </font>
+                            </a></li>
+                        <li class="mb-2"><a href="https://getbootstrap.com/docs/5.3/examples/" target="_blank">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Ejemplos</font>
+                                </font>
+                            </a></li>
+                        <li class="mb-2"><a href="https://icons.getbootstrap.com/" target="_blank">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Iconos</font>
+                                </font>
+                            </a></li>
+                        <li class="mb-2"><a href="https://themes.getbootstrap.com/" target="_blank">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Temas</font>
+                                </font>
+                            </a></li>
+                        <li class="mb-2"><a href="https://blog.getbootstrap.com/" target="_blank">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Blog</font>
+                                </font>
+                            </a></li>
+                        <li class="mb-2"><a href="https://cottonbureau.com/people/bootstrap" target="_blank"
+                                rel="noopener">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Tienda de artículos promocionales
+                                    </font>
+                                </font>
+                            </a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Guías</font>
+                        </font>
+                    </h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/"
+                                target="_blank">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Empezando</font>
+                                </font>
+                            </a></li>
+                        <li class="mb-2"><a href="https://getbootstrap.com/docs/5.3/examples/starter-template/"
+                                target="_blank">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Plantilla de inicio</font>
+                                </font>
+                            </a></li>
+                        <li class="mb-2"><a href="https://getbootstrap.com//docs/5.3/getting-started/webpack/"
+                                target="_blank">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Paquete web</font>
+                                </font>
+                            </a></li>
+                        <li class="mb-2"><a href="https://getbootstrap.com//docs/5.3/getting-started/parcel/"
+                                target="_blank">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Parcela</font>
+                                </font>
+                            </a></li>
+                        <li class="mb-2"><a href="https://getbootstrap.com//docs/5.3/getting-started/vite/"
+                                target="_blank">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Vite</font>
+                                </font>
+                            </a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Proyectos</font>
+                        </font>
+                    </h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="https://github.com/twbs/bootstrap" target="_blank" rel="noopener">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Bootstrap 5</font>
+                                </font>
+                            </a></li>
+                        <li class="mb-2"><a href="https://github.com/twbs/bootstrap/tree/v4-dev" target="_blank"
+                                rel="noopener">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Bootstrap 4</font>
+                                </font>
+                            </a></li>
+                        <li class="mb-2"><a href="https://github.com/twbs/icons" target="_blank" rel="noopener">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Iconos</font>
+                                </font>
+                            </a></li>
+                        <li class="mb-2"><a href="https://github.com/twbs/rfs" target="_blank" rel="noopener">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">RFS</font>
+                                </font>
+                            </a></li>
+                        <li class="mb-2"><a href="https://github.com/twbs/examples/" target="_blank" rel="noopener">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Ejemplos de repositorio</font>
+                                </font>
+                            </a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Comunidad</font>
+                        </font>
+                    </h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="https://github.com/twbs/bootstrap/issues" target="_blank"
+                                rel="noopener">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Asuntos</font>
+                                </font>
+                            </a></li>
+                        <li class="mb-2"><a href="https://github.com/twbs/bootstrap/discussions" target="_blank"
+                                rel="noopener">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Discusiones</font>
+                                </font>
+                            </a></li>
+                        <li class="mb-2"><a href="https://github.com/sponsors/twbs" target="_blank" rel="noopener">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">patrocinadores corporativos</font>
+                                </font>
+                            </a></li>
+                        <li class="mb-2"><a href="https://opencollective.com/bootstrap" target="_blank" rel="noopener">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Colectivo Abierto</font>
+                                </font>
+                            </a></li>
+                        <li class="mb-2"><a href="https://stackoverflow.com/questions/tagged/bootstrap-5"
+                                target="_blank" rel="noopener">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Desbordamiento de pila</font>
+                                </font>
+                            </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YUe2LzesAfftltw+PEaao2tjU/QATaW/rOitAq67e0CT0Zi2VVRL0oC4+gAaeBKu"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo Visible e Invisible en Bootstrap 5</title>
+    <!-- Importar Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container border rounder border-success mt-5">
+
+        <div class="container mt-5">
+            <h2>Ejemplo de Visibilidad en Bootstrap 5</h2>
+
+            <!-- Elemento visible (por defecto) -->
+            <div class="alert alert-success">
+                Este es un elemento visible (por defecto).
+            </div>
+
+            <!-- Elemento invisible -->
+            <div class="alert alert-warning invisible">
+                Este es un elemento invisible, pero aún ocupa espacio en el diseño.
+            </div>
+
+            <!-- Elemento visible con clase d-block -->
+            <div class="alert alert-info d-block">
+                Este es un elemento visible usando la clase <code>d-block</code>.
+            </div>
+
+            <!-- Elemento oculto con clase d-none -->
+            <div class="alert alert-danger d-none">
+                Este es un elemento completamente oculto usando la clase <code>d-none</code>.
+            </div>
+        </div>
+    </div>
+    <div class="container border rounder border-success mt-5">
+        <h4>Explicación del código: </h4>
+        <ol>
+            <li>
+                <h5>Elemento visible (por defecto):</h5>
+                <ul>
+                    <li>El primer <span class="text-danger">&lt;div&gt;</span> con la clase <span class="text-danger">alert alert-success</span> es visible porque no tiene ninguna clase que lo oculte. Todos los elementos son visibles por defecto en HTML.</li>
+                </ul>
+            </li>
+            <li>
+                <h5>Elemento invisible:</h5>
+                <ul>
+                    <li>El segundo <span class="text-danger">&lt;div&gt;</span> con la clase <span class="text-danger">alert alert-warning invisible</span> está oculto visualmente, pero sigue ocupando espacio en el diseño debido a la clase <span class="text-danger">invisible</span>. Esta clase simplemente aplica <span class="text-danger">visibility: hidden </span>; en CSS.</li>
+                </ul>
+            </li>
+            <li>
+                <h5>Elemento visible con <span class="text-danger">d-block</span>:</h5>
+                <ul>
+                    <li>El tercer <span class="text-danger">&lt;div&gt;</span> con la clase <span class="text-danger">alert alert-info d-block </span>es visible y usa la clase d-block para asegurarse de que el elemento tenga un <span class="text-danger">display: block </span>;.</li>
+                </ul>
+            </li>
+            <li>
+                <h5>Elemento oculto con d-none:</h5>
+                <ul>
+                    <li>El cuarto <span class="text-danger">&lt;div&gt;</span> con la clase <span class="text-danger">alert alert-danger d-none </span>está completamente oculto y no ocupa espacio en el diseño. La clase <span class="text-danger">d-none </span>aplica <span class="text-danger">display: none </span>; en CSS.</li>
+                </ul>
+            </li>
+        </ol>
+        <h4>Diferencias clave entre <span class="text-danger">invisible </span>y <span class="text-danger">d-none: </span></h4>
+        <ul>
+            <li><span class="text-danger">invisible </span>: Oculta el elemento visualmente, pero mantiene su espacio en el diseño (<span class="text-danger">visibility: hidden</span>;).
+            </li>
+            <li><span class="text-danger">d-none </span>: Elimina completamente el elemento del diseño (<span class="text-danger">display: none</span>;).
+            </li>
+        </ul>
+<p>Este ejemplo demuestra cómo manejar la visibilidad de los elementos en Bootstrap 5 de manera efectiva.</p>
+
+
+    </div>
+    <!-- Importar Bootstrap 5 JS (opcional, si necesitas funcionalidades interactivas) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
