@@ -1,0 +1,98 @@
+/* Variables globales para el modo claro */
+:root {
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --container-background: #ffffff;
+    --button-color: #00b1ff;
+    --border: black;
+}
+
+/* Variables para el modo oscuro */
+html.dark-mode {
+    --background-color: #121212; /* Fondo oscuro */
+    --text-color: #ffffff; /* Texto claro */
+    --container-background: #1e1e1e; /* Fondo del contenedor oscuro */
+    --button-color: #0056b3; /* Botón ajustado para modo oscuro */
+    --border: #ffffff;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin-bottom: 100px;
+}
+
+.container-all {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    padding: 40px;
+    background-color: var(--container-background);
+    margin-top: 100px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    color: var(--text-color);
+}
+
+.container-all h1 {
+    text-align: center;
+    font-size: 40px;
+}
+
+.content-article {
+    margin-top: 40px;
+
+}
+
+.content-article img {
+    width: 300px;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.content-article p {
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.content-article input {
+    padding: 20px 60px;
+    margin-top: 20px;
+    background-color: var(--button-color);
+    border: none;
+    font-size: 16px;
+    border-radius: 10px;
+    outline: none;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.dark-mode-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 20px;
+    background-color: var(--container-background);
+    color: var(--text-color);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#dark-mode {
+    display: none;
+}
+
+.dark-mode-button:hover {
+    font-size: 1.2rem;
+    transition: all .7s ease
+}
