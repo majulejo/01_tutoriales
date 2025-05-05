@@ -13,9 +13,464 @@
   </head>
   <body>
     <header>
-      <h1>hola</h1>
-    </header>
+      <div class="menu container">
+        <img class="logo-1" src="images/logo.svg" alt />
+        <input type="checkbox" id="menu" />
+        <label for="menu">
+          <img src="images/menu.png" class="menu-icono" alt />
+        </label>
 
+        <nav class="navbar">
+          <div class="menu-1">
+            <ul>
+              <li><a href="#">Inicio</a></li>
+              <li><a href="#">Servicios</a></li>
+              <li><a href="#">Productos</a></li>
+            </ul>
+          </div>
+
+          <img class="logo-2" src="images/logo.svg" alt />
+
+          <div class="menu-2">
+            <ul>
+              <li><a href="#">Horario</a></li>
+            </ul>
+
+            <div class="socials">
+              <a href="#">
+                <div class="social">
+                  <img src="images/s1.svg" alt />
+                </div>
+              </a>
+              <a href="#">
+                <div class="social">
+                  <img src="images/s2.svg" alt />
+                </div>
+              </a>
+              <a href="#">
+                <div class="social">
+                  <img src="images/s3.svg" alt />
+                </div>
+              </a>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <!-- slider -->
+      <div class="header-content container">
+        <div class="swiper mySwiper-1">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="slider">
+                <div class="slider-txt">
+                  <h1>Hamburguesa</h1>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quas sunt corrupti architecto doloribus? Eum iusto facilis
+                    commodi, dicta quasi asperiores exercitationem consequuntur
+                    eaque itaque eligendi, assumenda, dolorum necessitatibus aut
+                    nobis!
+                  </p>
+                  <div class="botones">
+                    <a href="#" class="btn-1">Comprar</a>
+                    <a href="#" class="btn-1">Menú</a>
+                  </div>
+                </div>
+
+                <div class="slider-img">
+                  <img src="images/slider1.png" alt />
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slider">
+                <div class="slider-txt">
+                  <h1>Torta</h1>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quas sunt corrupti architecto doloribus? Eum iusto facilis
+                    commodi, dicta quasi asperiores exercitationem consequuntur
+                    eaque itaque eligendi, assumenda, dolorum necessitatibus aut
+                    nobis!
+                  </p>
+                  <div class="botones">
+                    <a href="#" class="btn-1">Comprar</a>
+                    <a href="#" class="btn-1">Menú</a>
+                  </div>
+                </div>
+                <div class="slider-img">
+                  <img src="images/slider2.png" alt srcset />
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slider">
+                <div class="slider-txt">
+                  <h1>Hamburguesa-2</h1>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quas sunt corrupti architecto doloribus? Eum iusto facilis
+                    commodi, dicta quasi asperiores exercitationem consequuntur
+                    eaque itaque eligendi, assumenda, dolorum necessitatibus aut
+                    nobis!
+                  </p>
+                  <div class="botones">
+                    <a href="#" class="btn-1">Comprar</a>
+                    <a href="#" class="btn-1">Menú</a>
+                  </div>
+                </div>
+                <div class="slider-img">
+                  <img src="images/slider3.png" alt srcset />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </header>
+    <!-- productos -->
+    <main class="products">
+      <div class="tabs container">
+        <!-- ------------------------------------------------- -->
+        <!-- tab-1 -->
+        <!-- ------------------------------------------------- -->
+
+        <input
+          type="radio"
+          name="tabs"
+          id="tab1"
+          checked="checked"
+          class="tabInput"
+          value="1"
+        />
+        <label for="tab1">Hamburguesa</label>
+
+        <div class="tab">
+          <div class="swiper mySwiper-1" id="swiper1">
+            <!-- slider de productos -->
+            <div class="swiper-wrapper">
+              <!-- producto 1 -->
+              <div class="swiper-slide">
+                <div class="product">
+                  <div class="product-img">
+                    <h4>Nuevo</h4>
+                    <img src="images/food1.png" alt="" />
+                  </div>
+                  <div class="product-txt">
+                    <h4>Producto</h4>
+                    <p>Calidad Premium</p>
+                    <span class="price">$80.00</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- producto 2 -->
+              <div class="swiper-slide">
+                <div class="product">
+                  <div class="product-img">
+                    <h4>Nuevo</h4>
+                    <img src="images/food1.png" alt="" />
+                  </div>
+                  <div class="product-txt">
+                    <h4>Producto</h4>
+                    <p>Calidad Premium</p>
+                    <span class="price">$80.00</span>
+                  </div>
+                </div>
+              </div>
+              <!-- producto 3 -->
+              <div class="swiper-slide">
+                <div class="product">
+                  <div class="product-img">
+                    <h4>Nuevo</h4>
+                    <img src="images/food4.png" alt="" />
+                  </div>
+                  <div class="product-txt">
+                    <h4>Producto</h4>
+                    <p>Calidad Premium</p>
+                    <span class="price">$80.00</span>
+                  </div>
+                </div>
+              </div>
+              <!-- fin producto 3 -->
+            </div>
+            <!-- botones de movimiento del slider productos -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+        <!-- ------------------------------------------------- -->
+        <!-- tab-2 -->
+        <!-- ------------------------------------------------- -->
+
+        <input
+          type="radio"
+          name="tabs"
+          id="tab2"
+          checked="checked"
+          class="tabInput"
+          value="2"
+        />
+        <label for="tab2">Burritos</label>
+
+        <div class="tab">
+          <div class="swiper mySwiper-2" id="swiper2">
+            <!-- slider de productos -->
+            <div class="swiper-wrapper">
+              <!-- producto 1 -->
+              <div class="swiper-slide">
+                <div class="product">
+                  <div class="product-img">
+                    <h4>Nuevo</h4>
+                    <img src="images/food5.png" alt="" />
+                  </div>
+                  <div class="product-txt">
+                    <h4>Producto</h4>
+                    <p>Calidad Premium</p>
+                    <span class="price">$80.00</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- producto 2 -->
+              <div class="swiper-slide">
+                <div class="product">
+                  <div class="product-img">
+                    <h4>Nuevo</h4>
+                    <img src="images/food6.png" alt="" />
+                  </div>
+                  <div class="product-txt">
+                    <h4>Producto</h4>
+                    <p>Calidad Premium</p>
+                    <span class="price">$80.00</span>
+                  </div>
+                </div>
+              </div>
+              <!-- producto 3 -->
+              <div class="swiper-slide">
+                <div class="product">
+                  <div class="product-img">
+                    <h4>Nuevo</h4>
+                    <img src="images/food7.png" alt="" />
+                  </div>
+                  <div class="product-txt">
+                    <h4>Producto</h4>
+                    <p>Calidad Premium</p>
+                    <span class="price">$80.00</span>
+                  </div>
+                </div>
+              </div>
+              <!-- fin producto 3 -->
+            </div>
+            <!-- botones de movimiento del slider productos -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+        <!-- ------------------------------------------------- -->
+
+        <!-- tab-3 -->
+        <!-- ------------------------------------------------- -->
+
+        <input
+          type="radio"
+          name="tabs"
+          id="tab1"
+          checked="checked"
+          class="tabInput"
+          value="3"
+        />
+        <label for="tab3">Bocadillos</label>
+
+        <div class="tab">
+          <div class="swiper mySwiper-3" id="swiper3">
+            <!-- slider de productos -->
+            <div class="swiper-wrapper">
+              <!-- producto 1 -->
+              <div class="swiper-slide">
+                <div class="product">
+                  <div class="product-img">
+                    <h4>Nuevo</h4>
+                    <img src="images/food8.png" alt="" />
+                  </div>
+                  <div class="product-txt">
+                    <h4>Producto</h4>
+                    <p>Calidad Premium</p>
+                    <span class="price">$80.00</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- producto 2 -->
+              <div class="swiper-slide">
+                <div class="product">
+                  <div class="product-img">
+                    <h4>Nuevo</h4>
+                    <img src="images/food9.png" alt="" />
+                  </div>
+                  <div class="product-txt">
+                    <h4>Producto</h4>
+                    <p>Calidad Premium</p>
+                    <span class="price">$80.00</span>
+                  </div>
+                </div>
+              </div>
+              <!-- producto 3 -->
+              <div class="swiper-slide">
+                <div class="product">
+                  <div class="product-img">
+                    <h4>Nuevo</h4>
+                    <img src="images/food10.png" alt="" />
+                  </div>
+                  <div class="product-txt">
+                    <h4>Producto</h4>
+                    <p>Calidad Premium</p>
+                    <span class="price">$80.00</span>
+                  </div>
+                </div>
+              </div>
+              <!-- fin producto 3 -->
+            </div>
+            <!-- botones de movimiento del slider productos -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+        <!-- fin tab-3 -->
+      </div>
+    </main>
+
+    <!-- info -->
+    <section class="info container">
+      <div class="info-img">
+        <img src="images/info.png" alt="" />
+      </div>
+
+      <div class="info-txt">
+        <h2>Información</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat et
+          necessitatibus pariatur sed architecto consectetur voluptas, vero
+          porro nam ipsa nesciunt quo deserunt quae dicta deleniti molestias
+          modi, dolore perspiciatis.
+        </p>
+        <a href="#" class="btn-2">Más Información</a>
+      </div>
+    </section>
+
+    <!-- horario -->
+    <section class="horario">
+      <div class="horario-info container">
+        <h2>Horario</h2>
+        <div class="horario-txt">
+          <div class="txt">
+            <h4>Dirección</h4>
+            <p>Calle del Zorrillo</p>
+            <p>Avenida del Jabalí</p>
+          </div>
+          <div class="txt">
+            <h4>Horario</h4>
+            <p>De Domingo a Jueves: de 20 horas a 24 horas</p>
+            <p>De Viernes a Sábado: de 20 horas a 2 horas</p>
+          </div>
+          <div class="txt">
+            <h4>Teléfono</h4>
+            <p>606456191</p>
+            <p>630723495</p>
+          </div>
+          <div class="txt">
+            <h4>Redes SOCIALES</h4>
+            <div class="socials">
+              <a href="#">
+                <div class="social">
+                  <img src="images/s1.svg" alt />
+                </div>
+              </a>
+              <a href="#">
+                <div class="social">
+                  <img src="images/s2.svg" alt />
+                </div>
+              </a>
+              <a href="#">
+                <div class="social">
+                  <img src="images/s3.svg" alt />
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAPA -->
+    <section>
+      <iframe
+        class="map"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3166.672788388992!2d-4.432894919181425!3d37.46844696601743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6d767897e865cd%3A0x5e13bb6ce528ebc3!2sIES%20Felipe%20Sol%C3%ADs%20Villechenous!5e0!3m2!1ses!2ses!4v1746486941457!5m2!1ses!2ses"
+        width="600"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </section>
+
+    <!-- footer -->
+    <footer class="footer container">
+      <img class="logo-2" src="images/logo.svg" alt="" />
+      <div class="links">
+        <h4>Lorem</h4>
+        <ul>
+          <li><a href="#">lorem</a></li>
+          <li><a href="#">lorem</a></li>
+          <li><a href="#">lorem</a></li>
+          <li><a href="#">lorem</a></li>
+        </ul>
+      </div>
+      <div class="links">
+        <h4>Lorem</h4>
+        <ul>
+          <li><a href="#">lorem</a></li>
+          <li><a href="#">lorem</a></li>
+          <li><a href="#">lorem</a></li>
+          <li><a href="#">lorem</a></li>
+        </ul>
+      </div>
+      <div class="links">
+        <h4>Lorem</h4>
+        <ul>
+          <li><a href="#">lorem</a></li>
+          <li><a href="#">lorem</a></li>
+          <li><a href="#">lorem</a></li>
+          <li><a href="#">lorem</a></li>
+        </ul>
+      </div>
+      <div class="links">
+        <h4>Redes Lorem</h4>
+        <div class="socials">
+          <a href="#">
+            <div class="social">
+              <img src="images/s1.svg" alt />
+            </div>
+          </a>
+          <a href="#">
+            <div class="social">
+              <img src="images/s2.svg" alt />
+            </div>
+          </a>
+          <a href="#">
+            <div class="social">
+              <img src="images/s3.svg" alt />
+            </div>
+          </a>
+        </div>
+      </div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
   </body>
