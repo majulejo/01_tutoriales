@@ -36,6 +36,17 @@ body {
 .swiper-pagination-bullet-active {  
     background-color: #db241b;
 }
+.swiper-button-prev,
+.swiper-button-next {
+  color: #db241b;
+  font-size: 25px;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
 .menu {
     position: absolute;
     top: 20px;
@@ -186,6 +197,8 @@ body {
     cursor: pointer;
     color: #a7a7a7;
     font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
     transition: background ease 0.2s;
 }
 .tabs .tab {
@@ -204,6 +217,9 @@ body {
     border-bottom:2px solid #db241b;
 }
 
+.tabs input[type="radio"]:checked + label + .tab {
+    display: block;
+}
 .product {
     display: flex;
     align-items: center;
