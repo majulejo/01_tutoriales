@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráfica-Hoja 1</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        td {
+            border-bottom: 1px solid #ccc;
+            padding: 8px;
+            display: flex;
+            align-items: center;
+        }
+        input {
+            padding: 4px;
+            height: 0.5cm;
+        }
+        .grupo1 input {
+            height: 0.6cm;
+        }
+        label {
+            margin-right: 10px;
+            display: inline-block;
+        }
+        @media print {
+            label, button {
+                display: none;
+            }
+        }
+        #nombre {
+            width: 3cm;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Gráfica-Hoja 1</h1>
+    </header>
+
+    <section>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre">
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha">
+    </section>
+
+    <button onclick="window.print()">Imprimir</button>
+
+    <table>
+        <tr><td colspan="6"><strong>Grupo 1</strong></td></tr>
+        <tr class="grupo1">
+            <td><label for="campo1">Hueco 1</label><input type="text" id="campo1"></td>
+            <td><label for="campo2">Hueco 2</label><input type="text" id="campo2"></td>
+            <td><label for="campo3">Hueco 3</label><input type="text" id="campo3"></td>
+            <td><label for="campo4">Hueco 4</label><input type="text" id="campo4"></td>
+            <td><label for="campo5">Hueco 5</label><input type="text" id="campo5"></td>
+            <td><label for="campo6">Hueco 6</label><input type="text" id="campo6"></td>
+        </tr>
+
+        <tr><td colspan="7"><strong>Grupo 2</strong></td></tr>
+        <tr>
+            <td><label for="campo8">Hueco 8</label><input type="text" id="campo8"></td>
+            <td><label for="campo9">Hueco 9</label><input type="text" id="campo9"></td>
+            <td><label for="campo10">Hueco 10</label><input type="text" id="campo10"></td>
+            <td><label for="campo11">Hueco 11</label><input type="text" id="campo11"></td>
+            <td><label for="campo12">Hueco 12</label><input type="text" id="campo12"></td>
+            <td><label for="campo13">Hueco 13</label><input type="text" id="campo13"></td>
+            <td><label for="campo14">Hueco 14</label><input type="text" id="campo14"></td>
+        </tr>
+
+        <tr><td colspan="7"><strong>Grupo 3</strong></td></tr>
+        <tr>
+            <td><label for="campo16">Hueco 16</label><input type="text" id="campo16"></td>
+            <td><label for="campo17">Hueco 17</label><input type="text" id="campo17"></td>
+            <td><label for="campo18">Hueco 18</label><input type="text" id="campo18"></td>
+            <td><label for="campo19">Hueco 19</label><input type="text" id="campo19"></td>
+            <td><label for="campo20">Hueco 20</label><input type="text" id="campo20"></td>
+            <td><label for="campo21">Hueco 21</label><input type="text" id="campo21"></td>
+            <td><label for="campo22">Hueco 22</label><input type="text" id="campo22"></td>
+        </tr>
+
+        <tr><td colspan="3"><strong>Grupo 4</strong></td></tr>
+        <tr>
+            <td><label for="campo23">Hueco 23</label><input type="text" id="campo23"></td>
+            <td><label for="campo24">Hueco 24</label><input type="text" id="campo24"></td>
+            <td><label for="campo25">Hueco 25</label><input type="text" id="campo25"></td>
+        </tr>
+
+        <tr><td colspan="3"><strong>Grupo 5</strong></td></tr>
+        <tr>
+            <td><label for="campo26">Hueco 26</label><input type="text" id="campo26"></td>
+            <td><label for="campo27">Hueco 27</label><input type="text" id="campo27"></td>
+            <td><label for="campo28">Hueco 28</label><input type="text" id="campo28"></td>
+        </tr>
+
+        <tr><td colspan="12"><strong>Grupo 6</strong></td></tr>
+        <tr>
+            <td><label for="campo30">Hueco 30</label><input type="text" id="campo30"></td>
+            <td><label for="campo31">Hueco 31</label><input type="text" id="campo31"></td>
+            <td><label for="campo32">Hueco 32</label><input type="text" id="campo32"></td>
+            <td><label for="campo33">Hueco 33</label><input type="text" id="campo33"></td>
+            <td><label for="campo34">Hueco 34</label><input type="text" id="campo34"></td>
+            <td><label for="campo35">Hueco 35</label><input type="text" id="campo35"></td>
+            <td><label for="campo36">Hueco 36</label><input type="text" id="campo36"></td>
+            <td><label for="campo37">Hueco 37</label><input type="text" id="campo37"></td>
+            <td><label for="campo38">Hueco 38</label><input type="text" id="campo38"></td>
+            <td><label for="campo39">Hueco 39</label><input type="text" id="campo39"></td>
+            <td><label for="campo40">Hueco 40</label><input type="text" id="campo40"></td>
+            <td><label for="campo41">Hueco 41</label><input type="text" id="campo41"></td>
+        </tr>
+    </table>
+</body>
+</html>
