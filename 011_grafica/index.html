@@ -18,17 +18,31 @@
         input {
             padding: 4px;
             height: 0.5cm;
+            border: none;
+            outline: none;
         }
         .grupo1 input {
             height: 0.6cm;
         }
-        label {
+        label, strong {
             margin-right: 10px;
             display: inline-block;
         }
         @media print {
-            label, button {
+            @page {
+                size: A4;
+                margin: 1cm;
+            }
+            body {
+                width: 21cm;
+                height: 29.7cm;
+            }
+            button, label, strong {
                 display: none;
+            }
+            input {
+                border: none;
+                outline: none;
             }
         }
         #nombre {
@@ -48,7 +62,7 @@
         <input type="date" id="fecha">
     </section>
 
-    <button onclick="window.print()">Imprimir</button>
+    <button onclick="preparePrint()">Imprimir</button>
 
     <table>
         <tr><td colspan="6"><strong>Grupo 1</strong></td></tr>
@@ -82,36 +96,19 @@
             <td><label for="campo21">Hueco 21</label><input type="text" id="campo21"></td>
             <td><label for="campo22">Hueco 22</label><input type="text" id="campo22"></td>
         </tr>
-
-        <tr><td colspan="3"><strong>Grupo 4</strong></td></tr>
-        <tr>
-            <td><label for="campo23">Hueco 23</label><input type="text" id="campo23"></td>
-            <td><label for="campo24">Hueco 24</label><input type="text" id="campo24"></td>
-            <td><label for="campo25">Hueco 25</label><input type="text" id="campo25"></td>
-        </tr>
-
-        <tr><td colspan="3"><strong>Grupo 5</strong></td></tr>
-        <tr>
-            <td><label for="campo26">Hueco 26</label><input type="text" id="campo26"></td>
-            <td><label for="campo27">Hueco 27</label><input type="text" id="campo27"></td>
-            <td><label for="campo28">Hueco 28</label><input type="text" id="campo28"></td>
-        </tr>
-
-        <tr><td colspan="12"><strong>Grupo 6</strong></td></tr>
-        <tr>
-            <td><label for="campo30">Hueco 30</label><input type="text" id="campo30"></td>
-            <td><label for="campo31">Hueco 31</label><input type="text" id="campo31"></td>
-            <td><label for="campo32">Hueco 32</label><input type="text" id="campo32"></td>
-            <td><label for="campo33">Hueco 33</label><input type="text" id="campo33"></td>
-            <td><label for="campo34">Hueco 34</label><input type="text" id="campo34"></td>
-            <td><label for="campo35">Hueco 35</label><input type="text" id="campo35"></td>
-            <td><label for="campo36">Hueco 36</label><input type="text" id="campo36"></td>
-            <td><label for="campo37">Hueco 37</label><input type="text" id="campo37"></td>
-            <td><label for="campo38">Hueco 38</label><input type="text" id="campo38"></td>
-            <td><label for="campo39">Hueco 39</label><input type="text" id="campo39"></td>
-            <td><label for="campo40">Hueco 40</label><input type="text" id="campo40"></td>
-            <td><label for="campo41">Hueco 41</label><input type="text" id="campo41"></td>
-        </tr>
     </table>
+
+    <script>
+        function preparePrint() {
+            document.querySelectorAll("input").forEach(input => {
+                if (input.value.trim() === "") {
+                    input.style.display = "none"; // Oculta los inputs vacíos
+                } else {
+                    input.style.display = "inline-block"; // Muestra los inputs con contenido
+                }
+            });
+            window.print();
+        }
+    </script>
 </body>
 </html>
