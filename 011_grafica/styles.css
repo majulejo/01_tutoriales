@@ -1,0 +1,168 @@
+/* Reset básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+
+
+/* Estilos generales del cuerpo */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    font-weight: 600;
+}
+
+label {
+    font-weight: 500;
+}
+
+input {
+    font-weight: 400;
+}
+
+/* Estilo del encabezado */
+header {
+    background-color: #333;
+    color: white;
+    padding: 1em;
+    text-align: center;
+}
+
+/* Sección de datos (Nombre y Fecha en pantalla) */
+.datos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+}
+
+.datos label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.datos input[type="text"],
+.datos input[type="date"] {
+    padding: 6px;
+    font-size: 20px;
+    width: 40%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Contenido principal */
+main {
+    padding: 20px;
+}
+
+/* Botón de imprimir */
+.acciones {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.acciones button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Distribución en columnas */
+.contenedor-columnas {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.columna {
+    flex: 1;
+    min-width: 250px;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.columna h2 {
+    margin-top: 0;
+}
+
+.columna label {
+    display: block;
+    margin-top: 10px;
+}
+
+.columna input[type="text"] {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+/* Estilos solo para impresión */
+@media print {
+    body * {
+        visibility: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .print-only {
+        visibility: visible;
+    }
+
+    input[type="text"],
+    input[type="date"] {
+        visibility: visible;
+        position: absolute;
+        font-size: 14pt;
+        font-weight: 500;
+        border: none;
+        background: transparent;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    #print_nombre {
+        left: 3.5cm;
+        top: 1.2cm;
+    }
+
+    #print_fecha {
+        left: 15cm;
+        top: 1.2cm;
+    }
+
+    #print_campo1 {
+        left: 2cm;
+        top: 4cm;
+    }
+
+    #print_campo2 {
+        left: 2cm;
+        top: 5cm;
+    }
+
+    /* Agrega más reglas de posición según sea necesario */
+}
