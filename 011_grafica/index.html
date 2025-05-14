@@ -96,6 +96,7 @@
       .columna label {
         display: block;
         margin-top: 10px;
+        text-transform: uppercase;
       }
 
       .columna input[type="text"] {
@@ -135,9 +136,9 @@
 
         #print_nombre {
           left: 3.5cm;
-            top: 0.9cm;
-            width: 15cm;
-            white-space: nowrap;
+          top: 0.9cm;
+          width: 15cm;
+          white-space: nowrap;
         }
 
         #print_fecha {
@@ -149,7 +150,7 @@
           left: 5cm;
           top: 9.2cm;
         }
-        
+
         #print_campo2 {
           left: 5cm;
           top: 9.8cm;
@@ -166,12 +167,12 @@
           left: 5cm;
           top: 11.5cm;
         }
-        
+
         #print_campo6 {
           left: 5cm;
           top: 12cm;
         }
-                /* el 7 no está */
+        /* el 7 no está */
 
         #print_campo8 {
           left: 4cm;
@@ -181,7 +182,7 @@
           left: 4cm;
           top: 13.5cm;
         }
-       #print_campo10 {
+        #print_campo10 {
           left: 7.5cm;
           top: 14cm;
         }
@@ -201,7 +202,7 @@
           left: 4cm;
           top: 16cm;
         }
-                /* el 15 no está */
+        /* el 15 no está */
 
         #print_campo16 {
           left: 2.5cm;
@@ -305,8 +306,6 @@
           top: 30cm;
         }
       }
-
-
     </style>
   </head>
 
@@ -339,14 +338,15 @@
             <label for="campo1">PVC</label
             ><input type="text" id="campo1" placeholder="Valor 1" />
             <label for="campo2">OXIGENACIÓN</label
-            ><input type="text" id="campo2" placeholder="Valor 1"/>
+            ><input type="text" id="campo2" placeholder="Valor 1" />
             <label for="campo3">SATURACIÓN</label
-            ><input type="text" id="campo3" placeholder="Valor 1"/>
+            ><input type="text" id="campo3" placeholder="Valor 1" />
             <label for="campo4">EVA/ESCID</label
-            ><input type="text" id="campo4"placeholder="Valor 1" />
+            ><input type="text" id="campo4" placeholder="Valor 1" />
             <label for="campo5">GLUCEMIA</label
             ><input type="text" id="campo5" />
-            <label for="campo6">INSULINA</label><input type="text" id="campo6"placeholder="Valor 1" />
+            <label for="campo6">INSULINA</label
+            ><input type="text" id="campo6" placeholder="Valor 1" />
           </div>
         </div>
 
@@ -355,18 +355,15 @@
           <div class="grupo2">
             <h2>Perdidas</h2>
             <label for="campo8">DIURESIS</label
-            ><input type="text" id="campo8" />
-            <label for="campo9">HECES</label
+            ><input type="text" id="campo8" /> <label for="campo9">HECES</label
             ><input type="text" id="campo9" />
-            <label for="campo10">Hueco 10</label>
-<input type="text" id="campo10" value="TQN" readonly />
-            <label for="campo11">Hueco 11</label
-            ><input type="text" id="campo11" />
-            <label for="campo12">Hueco 12</label
+            <label for="campo10">VOMITOS, SUDOR,FIEBRE</label>
+            <input type="text" id="campo10" value="TQN" readonly />
+            <label for="campo11">S.N.G.</label
+            ><input type="text" id="campo11" /> <label for="campo12"></label
             ><input type="text" id="campo12" />
-            <label for="campo13">Hueco 13</label
-            ><input type="text" id="campo13" />
-            <label for="campo14">Hueco 14</label
+            <label for="campo13">CONTROL DE RESIDUOS</label
+            ><input type="text" id="campo13" /> <label for="campo14">P.I.</label
             ><input type="text" id="campo14" />
           </div>
         </div>
@@ -375,19 +372,19 @@
         <div class="columna">
           <div class="grupo3">
             <h2>Ingresos/Fluidoterapia</h2>
-            <label for="campo16">Hueco 16</label
+            <label for="campo16">Fluidoterapia 1</label
             ><input type="text" id="campo16" />
-            <label for="campo17">Hueco 17</label
+            <label for="campo17">Fluidoterapia 2</label
             ><input type="text" id="campo17" />
-            <label for="campo18">Hueco 18</label
+            <label for="campo18">Fluidoterapia 3</label
             ><input type="text" id="campo18" />
-            <label for="campo19">Hueco 19</label
+            <label for="campo19">Fluidoterapia 4</label
             ><input type="text" id="campo19" />
-            <label for="campo20">Hueco 20</label
+            <label for="campo20">Fluidoterapia 5</label
             ><input type="text" id="campo20" />
-            <label for="campo21">Hueco 21</label
+            <label for="campo21">Fluidoterapia 6</label
             ><input type="text" id="campo21" />
-            <label for="campo22">Hueco 22</label
+            <label for="campo22">Fluidoterapia 7</label
             ><input type="text" id="campo22" />
           </div>
         </div>
@@ -396,12 +393,12 @@
         <div class="columna">
           <div class="grupo4">
             <h2>Ingresos/Medicación, sangre y plasma, Agua Endógena</h2>
-            <label for="campo23">Hueco 23</label
+            <label for="campo23">SF+MEDICACIÓN</label
             ><input type="text" id="campo23" />
-            <label for="campo24">Hueco 24</label
+            <label for="campo24">SANGRE/PLASMA</label
             ><input type="text" id="campo24" />
-            <label for="campo25">Hueco 25</label
-            ><input type="text" id="campo25" />
+            <label for="campo25">AGUA ENDÓGENA</label
+            ><input type="text" id="campo25" value="" readonly />
           </div>
         </div>
 
@@ -421,29 +418,29 @@
         <div class="columna">
           <div class="grupo6">
             <h2>Medicación</h2>
-            <label for="campo30">Hueco 30</label
+            <label for="campo30">MEDICACIÓN 1</label
             ><input type="text" id="campo30" />
-            <label for="campo31">Hueco 31</label
+            <label for="campo31">MEDICACIÓN 2</label
             ><input type="text" id="campo31" />
-            <label for="campo32">Hueco 32</label
+            <label for="campo32">MEDICACIÓN 3</label
             ><input type="text" id="campo32" />
-            <label for="campo33">Hueco 33</label
+            <label for="campo33">MEDICACIÓN 4</label
             ><input type="text" id="campo33" />
-            <label for="campo34">Hueco 34</label
+            <label for="campo34">MEDICACIÓN 5</label
             ><input type="text" id="campo34" />
-            <label for="campo35">Hueco 35</label
+            <label for="campo35">MEDICACIÓN 6</label
             ><input type="text" id="campo35" />
-            <label for="campo36">Hueco 36</label
+            <label for="campo36">MEDICACIÓN 7</label
             ><input type="text" id="campo36" />
-            <label for="campo37">Hueco 37</label
+            <label for="campo37">MEDICACIÓN 8</label
             ><input type="text" id="campo37" />
-            <label for="campo38">Hueco 38</label
+            <label for="campo38">MEDICACIÓN 9</label
             ><input type="text" id="campo38" />
-            <label for="campo39">Hueco 39</label
+            <label for="campo39">MEDICACIÓN 10</label
             ><input type="text" id="campo39" />
-            <label for="campo40">Hueco 40</label
+            <label for="campo40">MEDICACIÓN 11</label
             ><input type="text" id="campo40" />
-            <label for="campo41">Hueco 41</label
+            <label for="campo41">MEDICACIÓN 12</label
             ><input type="text" id="campo41" />
           </div>
         </div>
@@ -542,7 +539,6 @@
           campo39: "print_campo39",
           campo40: "print_campo40",
           campo41: "print_campo41",
-          
 
           // Añade más pares {idOriginal: idPrint} si hay más campos
         };
@@ -562,4 +558,3 @@
     </script>
   </body>
 </html>
-
