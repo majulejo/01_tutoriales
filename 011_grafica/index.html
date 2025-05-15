@@ -18,6 +18,7 @@
         box-sizing: border-box;
         margin: 0;
         padding: 0;
+        outline: none;
       }
 
       body {
@@ -56,7 +57,7 @@
         width: 60%;
         box-sizing: border-box;
         border: 1px solid #ccc;
-        border-radius: 4px;
+        border-radius: 6px;
       }
 
       .acciones {
@@ -104,6 +105,16 @@
         padding: 5px;
         margin-top: 5px;
         box-sizing: border-box;
+        border-radius: 6px;
+      }
+      /* agua endógena */
+      .solo-visual {
+        background-color: #ebe9e99c; /* Gris claro */
+        color: #555; /* Texto más tenue */
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        pointer-events: none;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
       }
 
       /* Estilo solo para impresión */
@@ -136,174 +147,232 @@
 
         #print_nombre {
           left: 3.5cm;
-          top: 0.9cm;
+          top: 0.5cm;
           width: 15cm;
           white-space: nowrap;
         }
 
         #print_fecha {
           left: 15cm;
-          top: 0.9cm;
+          top: 0.5cm;
         }
-
+        /* pvc */
         #print_campo1 {
           left: 5cm;
-          top: 9.2cm;
+          top: 9.4cm;
         }
-
+        /* oxigenación */
         #print_campo2 {
           left: 5cm;
-          top: 9.8cm;
+          top: 10cm;
         }
+        /* saturacion */
         #print_campo3 {
           left: 5cm;
-          top: 10.4cm;
+          top: 10.6cm;
         }
+        /* vaciuo */
         #print_campo4 {
           left: 5cm;
-          top: 11cm;
+          top: 11.2cm;
         }
+        /* glucemia */
         #print_campo5 {
           left: 5cm;
-          top: 11.5cm;
+          top: 11.7cm;
         }
-
+        /* insulina  */
         #print_campo6 {
           left: 5cm;
-          top: 12cm;
+          top: 12.2cm;
         }
         /* el 7 no está */
-
+        /* diuresis  la linea superior está a 12.6 pero la pongo a 12.8*/
         #print_campo8 {
           left: 4cm;
-          top: 13cm;
+          top: 12.8cm;
         }
         #print_campo9 {
           left: 4cm;
-          top: 13.5cm;
+          top: 13.6cm;
         }
+        /* vomitos sudor */
         #print_campo10 {
           left: 7.5cm;
-          top: 14cm;
+          top: 14.1cm;
         }
+        /* sng */
         #print_campo11 {
           left: 4cm;
-          top: 14.5cm;
+          top: 14.6cm;
         }
+        /* otros */
         #print_campo12 {
           left: 4cm;
-          top: 15cm;
+          top: 15.2cm;
         }
+        /* control de residuos */
         #print_campo13 {
-          left: 4cm;
-          top: 15.5cm;
+          left: 7cm;
+          top: 15.7cm;
         }
+        /* p.i. */
         #print_campo14 {
           left: 4cm;
-          top: 16cm;
+          top: 16.3cm;
         }
         /* el 15 no está */
-
+        /* fluidoterapia 1*/
         #print_campo16 {
           left: 2.5cm;
-          top: 17cm;
+          top: 17.2cm;
         }
+        /*fluidoterapia 2*/
+
         #print_campo17 {
           left: 2.5cm;
-          top: 17.5cm;
+          top: 17.7cm;
         }
+        /*fluidoterapia 3*/
+
         #print_campo18 {
           left: 2.5cm;
-          top: 18cm;
+          top: 18.2cm;
         }
+        /*fluidoterapia4 */
+
         #print_campo19 {
           left: 2.5cm;
-          top: 18.5cm;
+          top: 18.7cm;
         }
+        /*fluidoterapia5 */
+
         #print_campo20 {
           left: 2.5cm;
-          top: 19cm;
+          top: 19.3cm;
         }
+        /*fluidoterapia6 */
+
         #print_campo21 {
           left: 2.5cm;
-          top: 19.5cm;
+          top: 19.8cm;
         }
+        /*fluidoterapia7 */
+
         #print_campo22 {
           left: 2.5cm;
-          top: 20cm;
+          top: 20.3cm;
         }
+
+        /*------------------------------------------------*/
+        /*MEDICAION SANGRE AGUA ENDOGENA*/
+        /* medicación */
         #print_campo23 {
           left: 6cm;
-          top: 20.5cm;
+          top: 20.9cm;
         }
+        /* sangre */
         #print_campo24 {
           left: 6cm;
-          top: 21cm;
+          top: 21.4cm;
         }
+        /* agua endógena */
         #print_campo25 {
           left: 6cm;
-          top: 21.5cm;
+          top: 21.8cm;
         }
+
+        /*-----------------------------------------------*/
+        /*NUTRICION*/
+        /* oral */
         #print_campo26 {
-          left: 5cm;
-          top: 22cm;
-        }
-        #print_campo27 {
           left: 5cm;
           top: 22.5cm;
         }
+        /* enteral */
+        #print_campo27 {
+          left: 5cm;
+          top: 23.1cm;
+        }
+        /* parenteral */
         #print_campo28 {
           left: 5cm;
-          top: 23cm;
+          top: 23.6cm;
         }
         /* el 29 no está */
+
+        /*------------------------------------------------*/
+        /* MEDICACION */
+        /* medicación 1 */
         #print_campo30 {
           left: 2.5cm;
-          top: 24cm;
+          top: 24.7cm;
         }
+        /* medicación 1 */
+
         #print_campo31 {
           left: 2.5cm;
-          top: 25cm;
+          top: 25.2cm;
         }
+        /* medicación  2*/
+
         #print_campo32 {
           left: 2.5cm;
-          top: 25.5cm;
+          top: 25.7cm;
         }
+        /* medicación 3*/
+
         #print_campo33 {
           left: 2.5cm;
-          top: 26cm;
+          top: 26.2cm;
         }
+        /* medicación 4 */
+
         #print_campo34 {
           left: 2.5cm;
-          top: 26.5cm;
+          top: 26.7cm;
         }
+        /* medicación 5 */
+
         #print_campo35 {
           left: 2.5cm;
-          top: 27cm;
+          top: 27.2cm;
         }
+        /* medicación 6 */
+
         #print_campo36 {
           left: 2.5cm;
-          top: 27.5cm;
+          top: 27.7cm;
         }
+        /* medicación 7 */
+
         #print_campo37 {
           left: 2.5cm;
-          top: 28cm;
+          top: 28.2cm;
         }
+        /* medicación 8 */
+
         #print_campo38 {
           left: 2.5cm;
-          top: 28.5cm;
+          top: 28.7cm;
         }
+        /* medicación 9 */
+
         #print_campo39 {
           left: 2.5cm;
-          top: 29cm;
+          top: 29.2cm;
         }
+        /* medicación 10 */
+
         #print_campo40 {
           left: 2.5cm;
-          top: 29.5cm;
+          top: 29.7cm;
         }
+        /* medicación 11 */
+
         #print_campo41 {
           left: 2.5cm;
-          top: 30cm;
+          top: 30.2cm;
         }
       }
     </style>
@@ -358,9 +427,10 @@
             ><input type="text" id="campo8" /> <label for="campo9">HECES</label
             ><input type="text" id="campo9" />
             <label for="campo10">VOMITOS, SUDOR,FIEBRE</label>
-            <input type="text" id="campo10" value="TQN" readonly />
+            <input type="text" id="campo10" placeholder="TQN" />
             <label for="campo11">S.N.G.</label
-            ><input type="text" id="campo11" /> <label for="campo12"></label
+            ><input type="text" id="campo11" />
+            <label for="campo12">Otros</label
             ><input type="text" id="campo12" />
             <label for="campo13">CONTROL DE RESIDUOS</label
             ><input type="text" id="campo13" /> <label for="campo14">P.I.</label
@@ -398,7 +468,7 @@
             <label for="campo24">SANGRE/PLASMA</label
             ><input type="text" id="campo24" />
             <label for="campo25">AGUA ENDÓGENA</label
-            ><input type="text" id="campo25" value="" readonly />
+            ><input type="text" id="campo25" class="solo-visual" readonly />
           </div>
         </div>
 
@@ -475,7 +545,7 @@
         <input type="text" id="print_campo22" readonly />
         <input type="text" id="print_campo23" readonly />
         <input type="text" id="print_campo24" readonly />
-        <input type="text" id="print_campo25" readonly />
+        <!-- <input type="text" id="print_campo25" readonly /> <--agua endogena -->
         <input type="text" id="print_campo26" readonly />
         <input type="text" id="print_campo27" readonly />
         <input type="text" id="print_campo28" readonly />
@@ -523,7 +593,7 @@
           campo22: "print_campo22",
           campo23: "print_campo23",
           campo24: "print_campo24",
-          campo25: "print_campo25",
+          //campo25: "print_campo25",
           campo26: "print_campo26",
           campo27: "print_campo27",
           campo28: "print_campo28",
