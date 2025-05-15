@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tríptico Final - Información por Box</title>
+  </head>
+  <body>
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        padding: 20px;
+        background-color: #f8f9fa;
+      }
+
+      .pagina {
+        display: none;
+      }
+
+      .pagina.active {
+        display: block;
+      }
+
+      .columna {
+        margin-bottom: 1.5rem;
+        padding: 1rem;
+        background: #ffffff;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+      }
+
+      label {
+        font-weight: 600;
+        display: block;
+        margin-top: 10px;
+      }
+
+      input[type="text"],
+      input[type="date"],
+      textarea {
+        width: 100%;
+        padding: 6px;
+        margin-top: 4px;
+        margin-bottom: 10px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+      }
+
+      textarea {
+        resize: vertical;
+      }
+
+      button {
+        margin-top: 10px;
+        margin-right: 10px;
+        padding: 8px 16px;
+        background-color: #007bff;
+        border: none;
+        border-radius: 4px;
+        color: white;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+
+      #info-box {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+      }
+    </style>
+    <div id="box-selector" style="margin-bottom: 1em">
+      <div style="display: flex; flex-wrap: wrap; gap: 0.5em; margin: 0.5em 0">
+        <button onclick="seleccionarBox(1)">Box 1</button>
+        <button onclick="seleccionarBox(2)">Box 2</button>
+        <button onclick="seleccionarBox(3)">Box 3</button>
+        <button onclick="seleccionarBox(4)">Box 4</button>
+        <button onclick="seleccionarBox(5)">Box 5</button>
+        <button onclick="seleccionarBox(6)">Box 6</button>
+        <button onclick="seleccionarBox(7)">Box 7</button>
+        <button onclick="seleccionarBox(8)">Box 8</button>
+        <button onclick="seleccionarBox(9)">Box 9</button>
+        <button onclick="seleccionarBox(10)">Box 10</button>
+        <button onclick="seleccionarBox(11)">Box 11</button>
+        <button onclick="seleccionarBox(12)">Box 12</button>
+      </div>
+    </div>
+    <div style="margin-top: 1em">
+      <button onclick="mostrarPagina(1)">Mostrar Hoja 1</button>
+      <button onclick="mostrarPagina(2)">Mostrar Hoja 2</button>
+      <button onclick="mostrarPagina(3)">Mostrar Hoja 3</button>
+    </div>
+
+    <div
+      id="info-box"
+      style="margin: 1em 0; font-weight: bold; font-size: 1.2em"
+    >
+      Rellenando información del Box 1
+      <button
+        onclick="borrarDatos()"
+        style="
+          margin-left: 1em;
+          padding: 0.4em 1em;
+          background: #d9534f;
+          color: white;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+        "
+      >
+        🗑️ Borrar Datos
+      </button>
+    </div>
+    
+      <button
+        onclick="borrarDatos()"
+        style="
+          margin-left: 1em;
+          padding: 0.4em 1em;
+          background: #d9534f;
+          color: white;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+        "
+      >
+        🗑️ Borrar Datos
+      </button>
+    </div>
+    <div id="pagina1" class="pagina active">
+      <h2>Hoja 1 - Datos Clínicos</h2>
+            <button onclick="window.print()">Imprimir Hoja 1</button>
+
+      <div class="print-only" style="position:absolute; visibility:hidden;">
+    <input type="text" id="print_campo1" style="left:5cm; top:9.4cm; position:absolute;">
+    <input type="text" id="print_campo2" style="left:5cm; top:10cm; position:absolute;">
+    <input type="text" id="print_campo3" style="left:5cm; top:10.6cm; position:absolute;">
+    <input type="text" id="print_campo4" style="left:5cm; top:11.2cm; position:absolute;">
+    <input type="text" id="print_campo5" style="left:5cm; top:11.7cm; position:absolute;">
+    <input type="text" id="print_campo6" style="left:5cm; top:12.2cm; position:absolute;">
+    <input type="text" id="print_campo8" style="left:4cm; top:12.8cm; position:absolute;">
+    <input type="text" id="print_campo9" style="left:4cm; top:13.6cm; position:absolute;">
+    <input type="text" id="print_campo10" style="left:7.5cm; top:14.1cm; position:absolute;">
+    <input type="text" id="print_campo11" style="left:4cm; top:14.6cm; position:absolute;">
+    <input type="text" id="print_campo12" style="left:4cm; top:15.2cm; position:absolute;">
+    <input type="text" id="print_campo13" style="left:7cm; top:15.7cm; position:absolute;">
+    <input type="text" id="print_campo14" style="left:4cm; top:16.3cm; position:absolute;">
+    <input type="text" id="print_campo16" style="left:2.5cm; top:17.2cm; position:absolute;">
+    <input type="text" id="print_campo17" style="left:2.5cm; top:17.7cm; position:absolute;">
+    <input type="text" id="print_campo18" style="left:2.5cm; top:18.2cm; position:absolute;">
+    <input type="text" id="print_campo19" style="left:2.5cm; top:18.7cm; position:absolute;">
+    <input type="text" id="print_campo20" style="left:2.5cm; top:19.3cm; position:absolute;">
+    <input type="text" id="print_campo21" style="left:2.5cm; top:19.8cm; position:absolute;">
+    <input type="text" id="print_campo22" style="left:2.5cm; top:20.3cm; position:absolute;">
+    <input type="text" id="print_campo23" style="left:6cm; top:20.9cm; position:absolute;">
+    <input type="text" id="print_campo24" style="left:6cm; top:21.4cm; position:absolute;">
+    <input type="text" id="print_campo25" style="left:6cm; top:21.8cm; position:absolute;">
+    <input type="text" id="print_campo26" style="left:5cm; top:22.5cm; position:absolute;">
+    <input type="text" id="print_campo27" style="left:5cm; top:23.1cm; position:absolute;">
+    <input type="text" id="print_campo28" style="left:5cm; top:23.6cm; position:absolute;">
+    <input type="text" id="print_campo30" style="left:2.5cm; top:24.7cm; position:absolute;">
+    <input type="text" id="print_campo31" style="left:2.5cm; top:25.2cm; position:absolute;">
+    <input type="text" id="print_campo32" style="left:2.5cm; top:25.7cm; position:absolute;">
+    <input type="text" id="print_campo33" style="left:2.5cm; top:26.2cm; position:absolute;">
+    <input type="text" id="print_campo34" style="left:2.5cm; top:26.7cm; position:absolute;">
+    <input type="text" id="print_campo35" style="left:2.5cm; top:27.2cm; position:absolute;">
+    <input type="text" id="print_campo36" style="left:2.5cm; top:27.7cm; position:absolute;">
+    <input type="text" id="print_campo37" style="left:2.5cm; top:28.2cm; position:absolute;">
+    <input type="text" id="print_campo38" style="left:2.5cm; top:28.7cm; position:absolute;">
+    <input type="text" id="print_campo39" style="left:2.5cm; top:29.2cm; position:absolute;">
+    <input type="text" id="print_campo40" style="left:2.5cm; top:29.7cm; position:absolute;">
+    <input type="text" id="print_campo41" style="left:2.5cm; top:30.2cm; position:absolute;">
+  </div>
+      <div class="columna">
+        <h3>Oxigenación y Control de Glucemias</h3>
+        <label for="campo1">PVC</label>
+        <input type="text" id="campo1" placeholder="Valor" />
+        <label for="campo2">OXIGENACIÓN</label>
+        <input type="text" id="campo2" placeholder="Valor" />
+        <label for="campo3">SATURACIÓN</label>
+        <input type="text" id="campo3" placeholder="Valor" />
+        <label for="campo4">EVA/ESCID</label>
+        <input type="text" id="campo4" placeholder="Valor" />
+        <label for="campo5">GLUCEMIA</label>
+        <input type="text" id="campo5" placeholder="Valor" />
+        <label for="campo6">INSULINA</label>
+        <input type="text" id="campo6" placeholder="Valor" />
+      </div>
+      <div class="columna">
+        <h3>Pérdidas</h3>
+        <label for="campo8">DIURESIS</label>
+        <input type="text" id="campo8" />
+        <label for="campo9">HECES</label>
+        <input type="text" id="campo9" />
+        <label for="campo10">VÓMITOS, SUDOR, FIEBRE</label>
+        <input type="text" id="campo10" placeholder="TQN" />
+        <label for="campo11">S.N.G.</label>
+        <input type="text" id="campo11" />
+        <label for="campo12">Otros</label>
+        <input type="text" id="campo12" />
+        <label for="campo13">CONTROL DE RESIDUOS</label>
+        <input type="text" id="campo13" />
+        <label for="campo14">P.I.</label>
+        <input type="text" id="campo14" />
+      </div>
+      <div class="columna">
+        <h3>Fluidoterapia</h3>
+        <label for="campo16">Fluidoterapia 1</label>
+        <input type="text" id="campo16" />
+        <label for="campo17">Fluidoterapia 2</label>
+        <input type="text" id="campo17" />
+        <label for="campo18">Fluidoterapia 3</label>
+        <input type="text" id="campo18" />
+        <label for="campo19">Fluidoterapia 4</label>
+        <input type="text" id="campo19" />
+        <label for="campo20">Fluidoterapia 5</label>
+        <input type="text" id="campo20" />
+        <label for="campo21">Fluidoterapia 6</label>
+        <input type="text" id="campo21" />
+        <label for="campo22">Fluidoterapia 7</label>
+        <input type="text" id="campo22" />
+      </div>
+      <div class="columna">
+        <h3>Ingresos y Medicación</h3>
+        <label for="campo23">SF+MEDICACIÓN</label>
+        <input type="text" id="campo23" />
+        <label for="campo24">SANGRE/PLASMA</label>
+        <input type="text" id="campo24" />
+        <label for="campo25">AGUA ENDÓGENA</label>
+        <input
+          type="text"
+          id="campo25"
+          readonly
+          style="background-color: #ebe9e9; color: #555"
+        />
+      </div>
+      <div class="columna">
+        <h3>Nutrición</h3>
+        <label for="campo26">Oral</label>
+        <input type="text" id="campo26" />
+        <label for="campo27">Enteral</label>
+        <input type="text" id="campo27" />
+        <label for="campo28">Parenteral</label>
+        <input type="text" id="campo28" />
+      </div>
+      <div class="columna">
+        <h3>Medicación</h3>
+        <label for="campo30">MEDICACIÓN 1</label>
+        <input type="text" id="campo30" />
+        <label for="campo31">MEDICACIÓN 2</label>
+        <input type="text" id="campo31" />
+        <label for="campo32">MEDICACIÓN 3</label>
+        <input type="text" id="campo32" />
+        <label for="campo33">MEDICACIÓN 4</label>
+        <input type="text" id="campo33" />
+        <label for="campo34">MEDICACIÓN 5</label>
+        <input type="text" id="campo34" />
+        <label for="campo35">MEDICACIÓN 6</label>
+        <input type="text" id="campo35" />
+        <label for="campo36">MEDICACIÓN 7</label>
+        <input type="text" id="campo36" />
+        <label for="campo37">MEDICACIÓN 8</label>
+        <input type="text" id="campo37" />
+        <label for="campo38">MEDICACIÓN 9</label>
+        <input type="text" id="campo38" />
+        <label for="campo39">MEDICACIÓN 10</label>
+        <input type="text" id="campo39" />
+        <label for="campo40">MEDICACIÓN 11</label>
+        <input type="text" id="campo40" />
+        <label for="campo41">MEDICACIÓN 12</label>
+        <input type="text" id="campo41" />
+      </div>
+    </div>
+
+    <!-- Hoja 2 -->
+    <div id="pagina2" class="pagina">
+      <h2>Hoja 2 - Edad, Historia Clínica y Cama</h2>
+            <button onclick="window.print()">Imprimir Hoja 2</button>
+
+      <div class="columna">
+        <label for="campo42">Edad</label>
+        <input type="text" id="campo42" placeholder="Edad" />
+        <label for="campo43">Nº Hª Clínica</label>
+        <input type="text" id="campo43" placeholder="Nº Hª Clínica" />
+        <label for="campo44">Cama</label>
+        <input type="text" id="campo44" placeholder="Cama" />
+        <label for="campo45">Hoja Nº</label>
+        <input type="text" id="campo45" placeholder="Hoja Nº" />
+      </div>
+      <div class="print-only" style="position:absolute; visibility:hidden;">
+    <input type="text" id="print_campo42" style="left:0.5cm; top:0.9cm; position:absolute;">
+    <input type="text" id="print_campo43" style="left:5.5cm; top:0.9cm; position:absolute;">
+    <input type="text" id="print_campo44" style="left:10cm; top:0.9cm; position:absolute;">
+    <input type="text" id="print_campo45" style="left:15.5cm; top:0.9cm; position:absolute;">
+  </div>
+    </div>
+
+    <!-- Hoja 3 -->
+    <div id="pagina3" class="pagina">
+      <h2>Hoja 3 - Teléfonos, Alergias y Catéteres</h2>
+      <button onclick="window.print()">Imprimir Hoja 3</button>
+      <div class="columna">
+        <label for="telefono1_nombre">Teléfono 1 - Nombre</label>
+        <input
+          type="text"
+          id="telefono1_nombre"
+          placeholder="Nombre del contacto"
+        />
+        <label for="telefono1_numero">Teléfono 1 - Número</label>
+        <input type="text" id="telefono1_numero" placeholder="Número" />
+        <label for="telefono2_nombre">Teléfono 2 - Nombre</label>
+        <input
+          type="text"
+          id="telefono2_nombre"
+          placeholder="Nombre del contacto"
+        />
+        <label for="telefono2_numero">Teléfono 2 - Número</label>
+        <input type="text" id="telefono2_numero" placeholder="Número" />
+        <label for="alergias">Alergias</label>
+        <textarea id="alergias" rows="3" placeholder="NAMC"></textarea>
+      </div>
+
+      <div class="columna">
+        <h3>VGMR</h3>
+        <label for="campo57_fecha">Fecha última</label>
+        <input type="date" id="campo57_fecha" />
+        <label for="campo57_proximo">Próxima</label>
+        <input type="date" id="campo57_proximo" readonly />
+      </div>
+
+      <div class="columna">
+        <h3>Catéteres</h3>
+        <label for="campo58_nombre">Catéter 1</label>
+        <input type="text" id="campo58_nombre" placeholder="Nombre" />
+        <input type="date" id="campo58_fecha" />
+        <label for="campo59_nombre">Catéter 2</label>
+        <input type="text" id="campo59_nombre" placeholder="Nombre" />
+        <input type="date" id="campo59_fecha" />
+        <label for="campo60_nombre">Catéter 3</label>
+        <input type="text" id="campo60_nombre" placeholder="Nombre" />
+        <input type="date" id="campo60_fecha" />
+        <label for="campo61_nombre">Catéter 4</label>
+        <input type="text" id="campo61_nombre" placeholder="Nombre" />
+        <input type="date" id="campo61_fecha" />
+        <label for="campo62_nombre">Catéter 5</label>
+        <input type="text" id="campo62_nombre" placeholder="Nombre" />
+        <input type="date" id="campo62_fecha" />
+      </div>
+            <<div class="print-only" style="position:absolute; visibility:hidden;">
+    <!-- campos de impresión ya definidos -->
+    <input type="text" id="print_telefono1_nombre" style="left:2.5cm; top:3cm; position:absolute;">
+    <!-- ...resto omitido por brevedad... -->
+    <input type="date" id="print_campo68_fecha" style="left:8cm; top:29.4cm; position:absolute;">
+  </div>
+      
+    </div>
+
+    <script>
+      let boxActual = 1;
+
+      function guardarDatos() {
+        const inputs = document.querySelectorAll("input, textarea");
+        const datos = {};
+        inputs.forEach((input) => {
+          datos[input.id] = input.value;
+        });
+        localStorage.setItem(`box${boxActual}_datos`, JSON.stringify(datos));
+        alert("Datos guardados para el Box " + boxActual);
+      }
+
+      function cargarDatos() {
+        const datos =
+          JSON.parse(localStorage.getItem(`box${boxActual}_datos`)) || {};
+        Object.entries(datos).forEach(([id, valor]) => {
+          const campo = document.getElementById(id);
+          if (campo) campo.value = valor;
+        });
+      }
+
+      function seleccionarBox(num) {
+  boxActual = num;
+  document.getElementById("info-box").textContent = `Rellenando información del Box ${num}`;
+  
+  // Cargar datos de ese Box
+  const datos = JSON.parse(localStorage.getItem(`box${boxActual}_datos`)) || {};
+  document.querySelectorAll("input, textarea").forEach((campo) => {
+    campo.value = datos[campo.id] || "";
+  });
+}
+
+
+      function borrarDatos() {
+        if (
+          confirm(
+            "¿Seguro que deseas borrar los datos del Box " + boxActual + "?"
+          )
+        ) {
+          localStorage.removeItem(`box${boxActual}_datos`);
+          alert("Datos borrados para el Box " + boxActual);
+          location.reload();
+        }
+      }
+function mostrarPagina(num) {
+  document.querySelectorAll('.pagina').forEach(p => p.classList.remove('active'));
+  const pagina = document.getElementById(`pagina${num}`);
+  if (pagina) pagina.classList.add('active');
+}
+
+//guardado automático
+document.querySelectorAll("input, textarea").forEach((campo) => {
+  campo.addEventListener("input", () => {
+    const datos = {};
+    document.querySelectorAll("input, textarea").forEach((el) => {
+      datos[el.id] = el.value;
+    });
+    localStorage.setItem(`box${boxActual}_datos`, JSON.stringify(datos));
+  });
+});
+
+
+      // Inicia con el Box 1 cargado
+      seleccionarBox(1);
+    </script>
+
+    <!-- AQUÍ PEGAS TODO EL CÓDIGO QUE TE MOSTRÉ ANTERIORMENTE, desde <div id="pagina1"... hasta el cierre del script -->
+  </body>
+</html>
