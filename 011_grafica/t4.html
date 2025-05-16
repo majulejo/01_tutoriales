@@ -1085,155 +1085,140 @@
     <!--  ↓ pega desde aquí  –––––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <!-- ─────────── SCRIPTS ─────────── -->
     <script>
-      /* ─────────────────  utilidades de fecha ─────────────────── */
+      /*******************  utilidades de fecha  ************************/
+      const MILIS_DIA = 86_400_000;
       const isoLocal = (d) => {
-        const z = new Date().getTimezoneOffset() * 6e4;
-        return new Date(+new Date(d) - z).toISOString().slice(0, 10);
+        const z = d.getTimezoneOffset() * 60_000;
+        return new Date(d - z).toISOString().slice(0, 10); // yyyy‑mm‑dd
       };
-      const hoy00 = () => {
-        const d = new Date();
-        d.setHours(0, 0, 0, 0);
-        return d;
-      };
-      const diasDeIngreso = (iso) =>
-        Math.floor((hoy00() - new Date(iso)) / 864e5);
-      function fechaParaGrafica(isoIngreso) {
-        if (!isoIngreso) return "";
-        const f = new Date(isoIngreso);
-        f.setHours(0, 0, 0, 0);
-        const ahora = new Date();
-        return isoLocal(ahora.getHours() < 8 ? f : new Date(+f + 864e5));
+      // → fecha que debe imprimirse en la gráfica
+      function fechaParaGrafica(fIng) {
+        const h = new Date();
+        const ingresoHoy = new Date(fIng + "T00:00");
+        let base = new Date(h.getHours() < 8 ? h : new Date(+h + MILIS_DIA));
+        if (+base < +ingresoHoy) base = ingresoHoy; // nunca antes del ingreso
+        return isoLocal(base);
       }
+      /*****************************************************************/
 
-      /* ───────────────── bloquea / desbloquea ─────────────────── */
-      function bloquear(b = true) {
-        document.querySelectorAll("input,textarea").forEach((el) => {
-          if (el.id !== "fecha_ingreso") el.disabled = b;
+      let boxActual = null;
+      const $boxes = document.getElementById("boxes");
+      const $boxNum = document.getElementById("box-num");
+      const $paginas = document.querySelectorAll(".pagina");
+      const $btnBorrar = document.getElementById("btn-borrar");
+      const $fechaIng = document.getElementById("fecha_ingreso");
+      const $fechaGraf = document.getElementById("fecha");
+      const $hojaNum = document.getElementById("campo72");
+
+      /*******************  construcción de botones de Box  ************/
+      for (let i = 1; i <= 12; i++) {
+        const b = document.createElement("button");
+        b.className = "btn-box";
+        b.dataset.box = i;
+        b.textContent = "Box " + i;
+        $boxes.appendChild(b);
+      }
+      /*******************  helpers  ***********************************/
+      const allInputs = () => [...document.querySelectorAll("input,textarea")];
+      const disableAll = (flg) =>
+        allInputs().forEach((el) => {
+          if (el.id !== "fecha_ingreso") el.disabled = flg;
         });
-      }
-
-      /* ─────────────────   variables globales  ─────────────────── */
-      let boxActual = 0;
-
-      /* ─────────────────   seleccionar Box   ───────────────────── */
-      function seleccionarBox(n, primeraVez = false) {
+      const loadDatos = () => {
+        const d = JSON.parse(
+          localStorage.getItem(`box${boxActual}_datos`) || "{}"
+        );
+        allInputs().forEach((el) => (el.value = d[el.id] || ""));
+      };
+      const saveDatos = () => {
+        const d = {};
+        allInputs().forEach((el) => (d[el.id] = el.value));
+        localStorage.setItem(`box${boxActual}_datos`, JSON.stringify(d));
+      };
+      const diasDesdeIngreso = (fIng) =>
+        Math.floor((Date.now() - Date.parse(fIng)) / MILIS_DIA) + 1;
+      /*******************  selección de página ***********************/
+      document.addEventListener("click", (e) => {
+        const pagBtn = e.target.closest("[data-pag]");
+        if (pagBtn) {
+          const n = pagBtn.dataset.pag;
+          $paginas.forEach((p, i) => p.classList.toggle("active", i + 1 == n));
+          localStorage.setItem("pagina_activa", n);
+        }
+        const boxBtn = e.target.closest(".btn-box");
+        if (boxBtn) seleccionarBox(+boxBtn.dataset.box);
+      });
+      /*******************  selección de Box ***************************/
+      function seleccionarBox(n) {
         boxActual = n;
-        /* resalta */
+        // highlight
         document
           .querySelectorAll(".btn-box")
-          .forEach((b, i) =>
-            b.classList.toggle("btn-box--active", i === n - 1)
+          .forEach((b) =>
+            b.classList.toggle("btn-box--active", +b.dataset.box === n)
           );
-
-        const infoBox = document.getElementById("info-box");
-        const inpFI = document.getElementById("fecha_ingreso");
-        const claveFI = `box${n}_ingreso`;
-        const fiGuardada = localStorage.getItem(claveFI);
-
-        /* carga o espera fecha_ingreso */
-        if (fiGuardada) {
-          inpFI.value = fiGuardada;
-          inpFI.readOnly = true;
+        $boxNum.textContent = n;
+        // fecha ingreso localStorage
+        const clave = `box${n}_fechaIng`;
+        const fIng = localStorage.getItem(clave);
+        if (!fIng) {
+          // 1ª vez → pedir fecha y bloquear resto
+          disableAll(true);
+          $fechaIng.disabled = false;
+          $fechaIng.value = "";
+          $fechaIng.focus();
         } else {
-          inpFI.value = "";
-          inpFI.readOnly = false;
+          $fechaIng.value = fIng;
+          postFechaIngreso(fIng);
         }
-
-        /* carga resto de campos */
-        const datos = JSON.parse(localStorage.getItem(`box${n}_datos`)) || {};
-        document.querySelectorAll("input,textarea").forEach((el) => {
-          if (el.id !== "fecha_ingreso") el.value = datos[el.id] || "";
-        });
-        document.getElementById("campo71").value = n; // nº de Box
-        actualizarDerivados();
-
-        /* bloqueo / mensaje */
-        if (primeraVez || !fiGuardada) {
-          bloquear(true);
-          infoBox.childNodes[0].nodeValue = `Pulsa de nuevo en el Box ${n} para editar. `;
-        } else {
-          bloquear(false);
-          infoBox.childNodes[0].nodeValue = `Rellenando información del Box ${n}. `;
-        }
-
-        /* si aún no había fecha_ingreso, la pedimos y guardamos */
-        inpFI.onchange = () => {
-          if (!inpFI.value) return;
-          localStorage.setItem(claveFI, inpFI.value);
-          inpFI.readOnly = true;
-          bloquear(false);
-          actualizarDerivados();
-          infoBox.childNodes[0].nodeValue = `Rellenando información del Box ${n}. `;
-        };
-
-        localStorage.setItem("box_actual", n);
+        loadDatos();
       }
-
-      /* ─────────────────   derivados: fecha + hoja ─────────────── */
-      function actualizarDerivados() {
-        const fi = localStorage.getItem(`box${boxActual}_ingreso`);
-        if (!fi) return;
-        document.getElementById("fecha").value = fechaParaGrafica(fi);
-        document.getElementById("campo72").value = diasDeIngreso(fi) + 1;
+      /*******************  tras fijar fecha de ingreso ***************/
+      function postFechaIngreso(fIng) {
+        // bloqueamos fecha_ingreso para no editarla
+        $fechaIng.disabled = true;
+        // habilitamos todo lo demás
+        disableAll(false);
+        // relleno automáticos
+        $fechaGraf.value = fechaParaGrafica(fIng);
+        $hojaNum.value = diasDesdeIngreso(fIng);
+        saveDatos();
       }
-
-      /* ─────────────────   mostrar página   ────────────────────── */
-      function mostrarPagina(p) {
-        document
-          .querySelectorAll(".pagina")
-          .forEach((pg) => pg.classList.remove("active"));
-        document.getElementById("pagina" + p).classList.add("active");
-        localStorage.setItem("pagina_activa", p);
-      }
-
-      /* ───────────────────  auto-guardado  ─────────────────────── */
+      /*******************  change en fecha ingreso *******************/
+      $fechaIng.addEventListener("change", () => {
+        const v = $fechaIng.value.trim();
+        if (!/\d{4}-\d{2}-\d{2}/.test(v)) return alert("Formato yyyy-mm-dd");
+        localStorage.setItem(`box${boxActual}_fechaIng`, v);
+        postFechaIngreso(v);
+      });
+      /*******************  auto‑save *************************/
       document.addEventListener("input", (e) => {
-        if (!boxActual || !e.target.id || e.target.id === "fecha_ingreso")
-          return;
-        const key = `box${boxActual}_datos`;
-        const datos = JSON.parse(localStorage.getItem(key)) || {};
-        datos[e.target.id] = e.target.value;
-        localStorage.setItem(key, JSON.stringify(datos));
-      });
-
-      /* ───────────────────  impresión  ─────────────────────────── */
-      function prepararImpresion() {
-        actualizarDerivados(); /* clonado… */
-      }
-      function imprimirHoja() {
-        prepararImpresion();
-        setTimeout(() => window.print(), 0);
-      }
-      window.onbeforeprint = prepararImpresion;
-
-      /* ───────────────────  borrar datos  ───────────────────────── */
-      function borrarDatos() {
         if (!boxActual) return;
-        if (confirm(`¿Borrar todos los datos del Box ${boxActual}?`)) {
-          localStorage.removeItem(`box${boxActual}_datos`);
-          localStorage.removeItem(`box${boxActual}_ingreso`);
-          location.reload();
-        }
-      }
-
-      /* ───────────────────  arranque  ───────────────────────────── */
-      document.addEventListener("DOMContentLoaded", () => {
-        bloquear(true); // todo inactivo al inicio
-        const ultimo = +localStorage.getItem("box_actual") || 0;
-        if (ultimo) seleccionarBox(ultimo, true); // ← primeraVez=true
-        mostrarPagina(localStorage.getItem("pagina_activa") || 1);
+        saveDatos();
       });
-
-      /* ───────────────── VGMR + 5 días (sin cambios) ────────────── */
-      document
-        .getElementById("campo57_fecha")
-        ?.addEventListener("change", (e) => {
-          const f = new Date(e.target.value);
-          if (isNaN(f))
-            return (document.getElementById("campo57_proximo").value = "");
-          f.setDate(f.getDate() + 5);
-          document.getElementById("campo57_proximo").value = isoLocal(f);
-        });
+      /*******************  botón borrar *************************/
+      $btnBorrar.addEventListener("click", () => {
+        if (!boxActual) return;
+        if (!confirm(`Borrar el Box ${boxActual}?`)) return;
+        localStorage.removeItem(`box${boxActual}_datos`);
+        localStorage.removeItem(`box${boxActual}_fechaIng`);
+        allInputs().forEach((el) => (el.value = ""));
+        disableAll(true);
+        $fechaIng.disabled = true;
+        $boxNum.textContent = "";
+        document
+          .querySelectorAll(".btn-box")
+          .forEach((b) => b.classList.remove("btn-box--active"));
+        boxActual = null;
+      });
+      /*******************  arranque *************************/
+      window.addEventListener("DOMContentLoaded", () => {
+        // última página
+        const p = localStorage.getItem("pagina_activa") || "1";
+        document.querySelector(`[data-pag="${p}"]`)?.click();
+        // nada habilitado hasta elegir Box
+        disableAll(true);
+      });
     </script>
   </body>
 </html>

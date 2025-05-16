@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tríptico – Información por Box</title>
+    <style>
+      /*  ───────  estilos mínimos de demo  ─────── */
+      * {
+        box-sizing: border-box;
+        font-family: Poppins, Arial, sans-serif;
+      }
+      body {
+        margin: 0;
+        padding: 20px;
+        background: #f8f9fa;
+      }
+      button {
+        cursor: pointer;
+        border: none;
+        border-radius: 4px;
+        padding: 0.4em 1em;
+        background: #007bff;
+        color: #fff;
+        font-size: 0.9rem;
+      }
+      button:hover {
+        background: #0056b3;
+      }
+      .btn-box {
+        margin: 0.25em 0.35em;
+      }
+      .btn-box--active {
+        background: #28a745 !important;
+      }
+      .pagina {
+        display: none;
+        margin-top: 1.2rem;
+      }
+      .pagina.active {
+        display: block;
+      }
+      fieldset {
+        margin: 0 0 1rem 0;
+        padding: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        background: #fff;
+        min-width: 250px;
+      }
+      input,
+      textarea {
+        width: 100%;
+        padding: 0.4em;
+        margin-top: 0.25em;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      input[disabled],
+      textarea[disabled] {
+        background: #eee;
+      }
+      #control {
+        margin-top: 1rem;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ①  selector de Box -->
+    <div id="boxes"></div>
+
+    <!-- ②  botones hoja -->
+    <div>
+      <button data-pag="1">Mostrar Hoja 1</button>
+      <button data-pag="2">Mostrar Hoja 2</button>
+      <button data-pag="3">Mostrar Hoja 3</button>
+    </div>
+
+    <!-- ③  Info + botón borrar -->
+    <div id="control">
+      Rellenando información del Box <span id="box-num"></span>
+      <button id="btn-borrar" style="background: #dc3545; margin-left: 1rem">
+        🗑️ Borrar Datos
+      </button>
+    </div>
+
+    <!-- ④  HOJA 1 (demo → sólo unos campos) -->
+    <div id="pagina1" class="pagina">
+      <fieldset>
+        <legend>Datos de ingreso</legend>
+        <label
+          >Fecha ingreso
+          <input type="date" id="fecha_ingreso" disabled />
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>Gráfica diaria</legend>
+        <label
+          >Fecha (automática)
+          <input type="date" id="fecha" disabled />
+        </label>
+      </fieldset>
+    </div>
+
+    <!-- ⑤  HOJA 2  -->
+    <div id="pagina2" class="pagina">
+      <fieldset>
+        <legend>Cabecera</legend>
+        <label
+          >Hoja Nº
+          <input type="number" id="campo72" disabled />
+        </label>
+      </fieldset>
+    </div>
+
+    <!-- ⑥  HOJA 3  (vacía para la demo) -->
+    <div id="pagina3" class="pagina">
+      <p>Contenido Hoja 3…</p>
+    </div>
+
+    <script>
+      /*******************  utilidades de fecha  ************************/
+      const MILIS_DIA = 86_400_000;
+      const isoLocal = (d) => {
+        const z = d.getTimezoneOffset() * 60_000;
+        return new Date(d - z).toISOString().slice(0, 10); // yyyy‑mm‑dd
+      };
+      // → fecha que debe imprimirse en la gráfica
+      function fechaParaGrafica(fIng) {
+        const h = new Date();
+        const ingresoHoy = new Date(fIng + "T00:00");
+        let base = new Date(h.getHours() < 8 ? h : new Date(+h + MILIS_DIA));
+        if (+base < +ingresoHoy) base = ingresoHoy; // nunca antes del ingreso
+        return isoLocal(base);
+      }
+      /*****************************************************************/
+
+      let boxActual = null;
+      const $boxes = document.getElementById("boxes");
+      const $boxNum = document.getElementById("box-num");
+      const $paginas = document.querySelectorAll(".pagina");
+      const $btnBorrar = document.getElementById("btn-borrar");
+      const $fechaIng = document.getElementById("fecha_ingreso");
+      const $fechaGraf = document.getElementById("fecha");
+      const $hojaNum = document.getElementById("campo72");
+
+      /*******************  construcción de botones de Box  ************/
+      for (let i = 1; i <= 12; i++) {
+        const b = document.createElement("button");
+        b.className = "btn-box";
+        b.dataset.box = i;
+        b.textContent = "Box " + i;
+        $boxes.appendChild(b);
+      }
+      /*******************  helpers  ***********************************/
+      const allInputs = () => [...document.querySelectorAll("input,textarea")];
+      const disableAll = (flg) =>
+        allInputs().forEach((el) => {
+          if (el.id !== "fecha_ingreso") el.disabled = flg;
+        });
+      const loadDatos = () => {
+        const d = JSON.parse(
+          localStorage.getItem(`box${boxActual}_datos`) || "{}"
+        );
+        allInputs().forEach((el) => (el.value = d[el.id] || ""));
+      };
+      const saveDatos = () => {
+        const d = {};
+        allInputs().forEach((el) => (d[el.id] = el.value));
+        localStorage.setItem(`box${boxActual}_datos`, JSON.stringify(d));
+      };
+      const diasDesdeIngreso = (fIng) =>
+        Math.floor((Date.now() - Date.parse(fIng)) / MILIS_DIA) + 1;
+      /*******************  selección de página ***********************/
+      document.addEventListener("click", (e) => {
+        const pagBtn = e.target.closest("[data-pag]");
+        if (pagBtn) {
+          const n = pagBtn.dataset.pag;
+          $paginas.forEach((p, i) => p.classList.toggle("active", i + 1 == n));
+          localStorage.setItem("pagina_activa", n);
+        }
+        const boxBtn = e.target.closest(".btn-box");
+        if (boxBtn) seleccionarBox(+boxBtn.dataset.box);
+      });
+      /*******************  selección de Box ***************************/
+      function seleccionarBox(n) {
+        boxActual = n;
+        // highlight
+        document
+          .querySelectorAll(".btn-box")
+          .forEach((b) =>
+            b.classList.toggle("btn-box--active", +b.dataset.box === n)
+          );
+        $boxNum.textContent = n;
+        // fecha ingreso localStorage
+        const clave = `box${n}_fechaIng`;
+        const fIng = localStorage.getItem(clave);
+        if (!fIng) {
+          // 1ª vez → pedir fecha y bloquear resto
+          disableAll(true);
+          $fechaIng.disabled = false;
+          $fechaIng.value = "";
+          $fechaIng.focus();
+        } else {
+          $fechaIng.value = fIng;
+          postFechaIngreso(fIng);
+        }
+        loadDatos();
+      }
+      /*******************  tras fijar fecha de ingreso ***************/
+      function postFechaIngreso(fIng) {
+        // bloqueamos fecha_ingreso para no editarla
+        $fechaIng.disabled = true;
+        // habilitamos todo lo demás
+        disableAll(false);
+        // relleno automáticos
+        $fechaGraf.value = fechaParaGrafica(fIng);
+        $hojaNum.value = diasDesdeIngreso(fIng);
+        saveDatos();
+      }
+      /*******************  change en fecha ingreso *******************/
+      $fechaIng.addEventListener("change", () => {
+        const v = $fechaIng.value.trim();
+        if (!/\d{4}-\d{2}-\d{2}/.test(v)) return alert("Formato yyyy-mm-dd");
+        localStorage.setItem(`box${boxActual}_fechaIng`, v);
+        postFechaIngreso(v);
+      });
+      /*******************  auto‑save *************************/
+      document.addEventListener("input", (e) => {
+        if (!boxActual) return;
+        saveDatos();
+      });
+      /*******************  botón borrar *************************/
+      $btnBorrar.addEventListener("click", () => {
+        if (!boxActual) return;
+        if (!confirm(`Borrar el Box ${boxActual}?`)) return;
+        localStorage.removeItem(`box${boxActual}_datos`);
+        localStorage.removeItem(`box${boxActual}_fechaIng`);
+        allInputs().forEach((el) => (el.value = ""));
+        disableAll(true);
+        $fechaIng.disabled = true;
+        $boxNum.textContent = "";
+        document
+          .querySelectorAll(".btn-box")
+          .forEach((b) => b.classList.remove("btn-box--active"));
+        boxActual = null;
+      });
+      /*******************  arranque *************************/
+      window.addEventListener("DOMContentLoaded", () => {
+        // última página
+        const p = localStorage.getItem("pagina_activa") || "1";
+        document.querySelector(`[data-pag="${p}"]`)?.click();
+        // nada habilitado hasta elegir Box
+        disableAll(true);
+      });
+    </script>
+  </body>
+</html>
