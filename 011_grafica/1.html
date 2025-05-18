@@ -1,558 +1,1154 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nombre y apellidos</title>
-    <!-- Fuente Poppins -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins :wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
 
-    <style>
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tríptico - Información por Box</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+       * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background: #f0f2f5;
+      padding: 20px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    #box-titulo {
+      text-align: center;
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      font-weight: 500;
+    }
+    .btn-boxes {
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .btn-boxes button {
+      margin: 0 4px;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 5px;
+      background: #007bff;
+      color: white;
+      cursor: pointer;
+    }
+    .btn-boxes button.active {
+      background: #28a745;
+    }
+    .pagina {
+      display: none;
+    }
+    .pagina.active {
+      display: block;
+      border: 2px solid #007bff;
+      border-radius: 8px;
+      padding: 10px;
+      background: #ffffff;
+    }
+    .acciones {
+      text-align: center;
+      margin: 1rem 0;
+      display: none;
+    }
+    .acciones.visible {
+      display: block;
+    }
+    .acciones button {
+      margin: 0 6px;
+      padding: 8px 16px;
+    }
+    .field-group {
+      padding: 1rem;
+      background: white;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    .field-group label {
+      display: block;
+      margin: 0.5rem 0 0.25rem;
+      font-weight: 500;
+    }
+    .field-group input[type="text"],
+    .field-group input[type="date"],
+    .field-group input[type="tel"],
+    .field-group textarea {
+      width: 100%;
+      padding: 6px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .print-only {
+      display: none;
+    }
+    @media print {
       body {
-        font-family: "Poppins", sans-serif;
+        background: none;
       }
-      header {
-        background-color: #333;
-        color: white;
-        padding: 1em;
-        text-align: center;
+      * {
+        visibility: hidden;
       }
-
-      main {
-        padding: 20px;
-      }
-
-      .box-selector {
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-        margin-bottom: 20px;
-        flex-wrap: wrap;
-      }
-      .box-selector button {
-        padding: 10px 15px;
-        font-size: 14px;
-        font-weight: bold;
-        cursor: pointer;
-        border: none;
-        border-radius: 5px;
-        background-color: #368f3f;
-        color: white;
-      }
-      .box-selector button:hover,
-      .box-selector button.active {
-        background-color: #2d7a34;
-      }
-
-      #mensaje-box-seleccionado {
-        margin-top: 15px;
-        margin-bottom: 20px;
-        text-align: center;
-        font-weight: bold;
-        color: #333;
-        font-size: 18px;
-        display: none;
-      }
-
-      .datos {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 20px;
-        padding: 10px;
-        background-color: #f0f0f0;
-        border-radius: 8px;
-      }
-      .datos label {
-        font-weight: bold;
-        margin-right: 10px;
-      }
-      .datos input[type="text"],
-      .datos input[type="date"] {
-        padding: 6px;
-        width: 60%;
-        box-sizing: border-box;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-      }
-
-      .acciones {
-        text-align: center;
-        margin-bottom: 20px;
-      }
-      .acciones button {
-        padding: 10px 20px;
-        font-size: 16px;
-        cursor: pointer;
-        background-color: #007bff;
-        color: white;
-        border: none;
-        border-radius: 5px;
-      }
-
-      .seleccionador-informes {
-        margin-top: 20px;
-        text-align: center;
-      }
-      .seleccionador-informes select {
-        width: 300px;
-        padding: 8px;
-        font-size: 14px;
-      }
-      .seleccionador-informes button {
-        padding: 8px 12px;
-        font-size: 14px;
-        margin-left: 10px;
-        cursor: pointer;
-      }
-
-      .contenedor-columnas {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-      }
-      .columna {
-        flex: 1;
-        min-width: 250px;
-        background-color: #f9f9f9;
-        padding: 15px;
-        border-radius: 8px;
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-      }
-      .columna h2 {
-        margin-top: 0;
-      }
-      .columna label {
+      .print-only {
         display: block;
-        margin-top: 10px;
-        text-transform: uppercase;
+        visibility: visible;
+        position: absolute;
+        top: 0;
+        left: 0;
       }
-      .columna input[type="text"] {
-        width: 100%;
-        padding: 5px;
-        margin-top: 5px;
-        box-sizing: border-box;
+      .print-span {
+        position: absolute;
+        font-size: 12pt;
+        font-family: 'Poppins', sans-serif;
+        white-space: nowrap;
+        font-weight: 500;
       }
+    }
 
-      @media print {
-        /* Estilos de impresión */
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <h1>Página 1 - Nombre y Apellidos</h1>
-    </header>
+    /* #print_campo para hoja 1 */
 
-    <!-- Selector de Box -->
-    <div class="box-selector" id="boxSelector"></div>
+    #print_nombre {
+      left: 3.5cm;
+      top: 0.5cm;
+      width: 15cm;
+      white-space: nowrap;
+    }
 
-    <!-- Mensaje de Box seleccionado -->
-    <div id="mensaje-box-seleccionado">
-      Ha seleccionado el
-      <strong>Box <span id="numero-box-seleccionado"></span></strong>
+    #print_fecha {
+      left: 15cm;
+      top: 0.5cm;
+    }
+
+    /* pvc */
+    #print_campo1 {
+      left: 5cm;
+      top: 9.4cm;
+    }
+
+    /* oxigenación */
+    #print_campo2 {
+      left: 5cm;
+      top: 10cm;
+    }
+
+    /* saturacion */
+    #print_campo3 {
+      left: 5cm;
+      top: 10.6cm;
+    }
+
+    /* vaciuo */
+    #print_campo4 {
+      left: 5cm;
+      top: 11.2cm;
+    }
+
+    /* glucemia */
+    #print_campo5 {
+      left: 5cm;
+      top: 11.7cm;
+    }
+
+    /* insulina  */
+    #print_campo6 {
+      left: 5cm;
+      top: 12.2cm;
+    }
+
+    /* el 7 no está */
+    /* diuresis  la linea superior está a 12.6 pero la pongo a 12.8*/
+    #print_campo8 {
+      left: 4cm;
+      top: 12.8cm;
+    }
+
+    #print_campo9 {
+      left: 4cm;
+      top: 13.6cm;
+    }
+
+    /* vomitos sudor */
+    #print_campo10 {
+      left: 7.5cm;
+      top: 14.1cm;
+    }
+
+    /* sng */
+    #print_campo11 {
+      left: 4cm;
+      top: 14.6cm;
+    }
+
+    /* otros */
+    #print_campo12 {
+      left: 4cm;
+      top: 15.2cm;
+    }
+
+    /* control de residuos */
+    #print_campo13 {
+      left: 7cm;
+      top: 15.7cm;
+    }
+
+    /* p.i. */
+    #print_campo14 {
+      left: 4cm;
+      top: 16.3cm;
+    }
+
+    /* el 15 no está */
+    /* fluidoterapia 1*/
+    #print_campo16 {
+      left: 2.5cm;
+      top: 17.2cm;
+    }
+
+    /*fluidoterapia 2*/
+
+    #print_campo17 {
+      left: 2.5cm;
+      top: 17.7cm;
+    }
+
+    /*fluidoterapia 3*/
+
+    #print_campo18 {
+      left: 2.5cm;
+      top: 18.2cm;
+    }
+
+    /*fluidoterapia4 */
+
+    #print_campo19 {
+      left: 2.5cm;
+      top: 18.7cm;
+    }
+
+    /*fluidoterapia5 */
+
+    #print_campo20 {
+      left: 2.5cm;
+      top: 19.3cm;
+    }
+
+    /*fluidoterapia6 */
+
+    #print_campo21 {
+      left: 2.5cm;
+      top: 19.8cm;
+    }
+
+    /*fluidoterapia7 */
+
+    #print_campo22 {
+      left: 2.5cm;
+      top: 20.3cm;
+    }
+
+    /*------------------------------------------------*/
+    /*MEDICAION SANGRE AGUA ENDOGENA*/
+    /* medicación */
+    #print_campo23 {
+      left: 6cm;
+      top: 20.9cm;
+    }
+
+    /* sangre */
+    #print_campo24 {
+      left: 6cm;
+      top: 21.4cm;
+    }
+
+    /* agua endógena */
+    #print_campo25 {
+      left: 6cm;
+      top: 21.8cm;
+    }
+
+    /*-----------------------------------------------*/
+    /*NUTRICION*/
+    /* oral */
+    #print_campo26 {
+      left: 5cm;
+      top: 22.5cm;
+    }
+
+    /* enteral */
+    #print_campo27 {
+      left: 5cm;
+      top: 23.1cm;
+    }
+
+    /* parenteral */
+    #print_campo28 {
+      left: 5cm;
+      top: 23.6cm;
+    }
+
+    /* el 29 no está */
+
+    /*------------------------------------------------*/
+    /* MEDICACION */
+    /* medicación 1 */
+    #print_campo30 {
+      left: 2.5cm;
+      top: 24.7cm;
+    }
+
+    /* medicación 1 */
+
+    #print_campo31 {
+      left: 2.5cm;
+      top: 25.2cm;
+    }
+
+    /* medicación  2*/
+
+    #print_campo32 {
+      left: 2.5cm;
+      top: 25.7cm;
+    }
+
+    /* medicación 3*/
+
+    #print_campo33 {
+      left: 2.5cm;
+      top: 26.2cm;
+    }
+
+    /* medicación 4 */
+
+    #print_campo34 {
+      left: 2.5cm;
+      top: 26.7cm;
+    }
+
+    /* medicación 5 */
+
+    #print_campo35 {
+      left: 2.5cm;
+      top: 27.2cm;
+    }
+
+    /* medicación 6 */
+
+    #print_campo36 {
+      left: 2.5cm;
+      top: 27.7cm;
+    }
+
+    /* medicación 7 */
+
+    #print_campo37 {
+      left: 2.5cm;
+      top: 28.2cm;
+    }
+
+    /* medicación 8 */
+
+    #print_campo38 {
+      left: 2.5cm;
+      top: 28.7cm;
+    }
+
+    /* medicación 9 */
+
+    #print_campo39 {
+      left: 2.5cm;
+      top: 29.2cm;
+    }
+
+    /* medicación 10 */
+
+    #print_campo40 {
+      left: 2.5cm;
+      top: 29.7cm;
+    }
+
+    /* medicación 11 */
+
+    #print_campo41 {
+      left: 2.5cm;
+      top: 30.2cm;
+    }
+
+    /* #print_campo hoja 2 */
+    #print_campo69 {
+      left: 0.5cm;
+      top: 0.5cm;
+    }
+
+    #print_campo70 {
+      left: 5.5cm;
+      top: 0.5cm;
+    }
+
+    #print_campo71 {
+      left: 10cm;
+      top: 0.5cm;
+    }
+
+    #print_campo72 {
+      left: 15.5cm;
+      top: 0.5cm;
+    }
+
+    /* #print_campo hoja 3 */
+    /* Teléfonos y alergias */
+    #print_telefono1_nombre {
+      left: 2.5cm;
+      top: 3cm;
+      width: 7cm;
+      white-space: nowrap;
+    }
+
+    #print_telefono1_numero {
+      left: 6.5cm;
+      top: 3cm;
+      width: 7cm;
+    }
+
+    #print_telefono2_nombre {
+      left: 2.5cm;
+      top: 3.5cm;
+      width: 7cm;
+    }
+
+    #print_telefono2_numero {
+      left: 6.5cm;
+      top: 3.5cm;
+      width: 7cm;
+    }
+
+    /* Niveles */
+    #print_campo42_nombre {
+      left: 4.2cm;
+      top: 14.8cm;
+    }
+
+    #print_campo42_fecha {
+      left: 7.2cm;
+      top: 14.8cm;
+    }
+
+    #print_campo43_nombre {
+      left: 4.2cm;
+      top: 15.3cm;
+    }
+
+    #print_campo43_fecha {
+      left: 7.2cm;
+      top: 15.3cm;
+    }
+
+    #print_campo44_nombre {
+      left: 4.2cm;
+      top: 15.8cm;
+    }
+
+    #print_campo44_fecha {
+      left: 7.2cm;
+      top: 15.8cm;
+    }
+
+    #print_campo45_nombre {
+      left: 4.2cm;
+      top: 16.3cm;
+    }
+
+    #print_campo45_fecha {
+      left: 7.2cm;
+      top: 16.3cm;
+    }
+
+    #print_campo46_nombre {
+      left: 4.2cm;
+      top: 16.8cm;
+    }
+
+    #print_campo46_fecha {
+      left: 7.2cm;
+      top: 16.8cm;
+    }
+
+    /* Pruebas analíticas/serologias */
+    /* inmunologia */
+    #print_campo47_fecha {
+      left: 6cm;
+      top: 17.3cm;
+    }
+
+    /* serologia */
+    #print_campo48_fecha {
+      left: 6cm;
+      top: 17.8cm;
+    }
+
+    /* virologia */
+    #print_campo49_fecha {
+      left: 6cm;
+      top: 18.3cm;
+    }
+
+    /* f.hepatica */
+    #print_campo50_fecha {
+      left: 6cm;
+      top: 18.8cm;
+    }
+
+    /* serologia 1 */
+
+    #print_campo51_nombre {
+      left: 3.5cm;
+      top: 19.3cm;
+    }
+
+    #print_campo51_fecha {
+      left: 7.5cm;
+      top: 19.3cm;
+    }
+
+    /* serologia 2 */
+
+    #print_campo52_nombre {
+      left: 3.5cm;
+      top: 19.8cm;
+    }
+
+    #print_campo52_fecha {
+      left: 7.5cm;
+      top: 19.8cm;
+    }
+
+    /* CULTIVOS */
+    #print_campo53_fecha {
+      left: 6cm;
+      top: 20.3cm;
+    }
+
+    #print_campo54_fecha {
+      left: 6cm;
+      top: 20.8cm;
+    }
+
+    #print_campo55_fecha {
+      left: 6cm;
+      top: 21.3cm;
+    }
+
+    #print_campo56_nombre {
+      left: 4cm;
+      top: 21.8cm;
+    }
+
+    #print_campo56_fecha {
+      left: 7.5cm;
+      top: 21.8cm;
+    }
+
+    /* VGMR */
+    #print_campo57_nombre {
+      left: 4cm;
+      top: 22.3cm;
+    }
+
+    #print_campo57_fecha {
+      left: 6cm;
+      top: 22.3cm;
+    }
+
+    #print_campo57_proximo {
+      left: 9.5cm;
+      top: 22.3cm;
+    }
+
+    /* Catéteres y Tipo */
+    /* cateter1 */
+    #print_campo58_nombre {
+      left: 3.6cm;
+      top: 24.4cm;
+    }
+
+    #print_campo58_fecha {
+      left: 8cm;
+      top: 24.4cm;
+    }
+
+    /* cateter2 */
+
+    #print_campo59_nombre {
+      left: 3.6cm;
+      top: 24.9cm;
+    }
+
+    #print_campo59_fecha {
+      left: 8cm;
+      top: 24.9cm;
+    }
+
+    /* cateter3 */
+    /* Cada bloque separado por 0.5cm más */
+    #print_campo60_nombre {
+      left: 3.6cm;
+      top: 25.4cm;
+    }
+
+    #print_campo60_fecha {
+      left: 8cm;
+      top: 25.4cm;
+    }
+
+    #print_campo61_nombre {
+      left: 3.6cm;
+      top: 25.9cm;
+    }
+
+    #print_campo61_fecha {
+      left: 8cm;
+      top: 25.9cm;
+    }
+
+    #print_campo62_nombre {
+      left: 3.6cm;
+      top: 26.4cm;
+    }
+
+    #print_campo62_fecha {
+      left: 8cm;
+      top: 26.4cm;
+    }
+
+    #print_campo63_nombre {
+      left: 3.6cm;
+      top: 26.9cm;
+    }
+
+    #print_campo63_fecha {
+      left: 8cm;
+      top: 26.9cm;
+    }
+
+    #print_campo64_nombre {
+      left: 3.6cm;
+      top: 27.4cm;
+    }
+
+    #print_campo64_fecha {
+      left: 8cm;
+      top: 27.4cm;
+    }
+
+    #print_campo65_nombre {
+      left: 3.6cm;
+      top: 27.9cm;
+    }
+
+    #print_campo65_fecha {
+      left: 8cm;
+      top: 27.9cm;
+    }
+
+    #print_campo66_nombre {
+      left: 3.6cm;
+      top: 28.4cm;
+    }
+
+    #print_campo66_fecha {
+      left: 8cm;
+      top: 28.4cm;
+    }
+
+    #print_campo67_nombre {
+      left: 3.6cm;
+      top: 28.9cm;
+    }
+
+    #print_campo67_fecha {
+      left: 8cm;
+      top: 28.9cm;
+    }
+
+    #print_campo68_nombre {
+      left: 3.6cm;
+      top: 29.4cm;
+    }
+
+    #print_campo68_fecha {
+      left: 8cm;
+      top: 29.4cm;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Tríptico - Información por Box</h1>
+  </header>
+
+  <div class="btn-boxes" id="box-selector"></div>
+
+  <div class="acciones">
+    <button onclick="mostrarPagina(1)">Hoja 1</button>
+    <button onclick="mostrarPagina(2)">Hoja 2</button>
+    <button onclick="mostrarPagina(3)">Hoja 3</button>
+    <button onclick="borrarDatos()">🗑️ Borrar Datos</button>
+    <button onclick="window.print()">🖨️ Imprimir</button>
+  </div>
+
+  <div id="pagina1" class="pagina">
+    <div class="field-group">
+      <label for="nombre">Nombre y Apellidos</label>
+      <input type="text" id="nombre" />
+      <label for="fecha_ingreso">Fecha de Ingreso</label>
+      <input type="date" id="fecha_ingreso" />
+    </div>
+    <!-- Columna 1 -->
+    <div class="field-group">
+      <h2>Oxigenación y Control de Glucemias</h2>
+      <label for="campo1">PVC</label><input type="text" id="campo1" placeholder="Valor 1" />
+      <label for="campo2">OXIGENACIÓN</label><input type="text" id="campo2" placeholder="Valor 1" />
+      <label for="campo3">SATURACIÓN</label><input type="text" id="campo3" placeholder="Valor 1" />
+      <label for="campo4">EVA/ESCID</label><input type="text" id="campo4" placeholder="Valor 1" />
+      <label for="campo5">GLUCEMIA</label><input type="text" id="campo5" />
+      <label for="campo6">INSULINA</label><input type="text" id="campo6" placeholder="Valor 1" />
     </div>
 
-    <!-- Desplegable de informes guardados -->
-    <div class="seleccionador-informes">
-      <label for="selectorBox"><strong>Cargar Informe Guardado:</strong></label>
-      <select id="selectorBox">
-        <option value="">-- Selecciona un informe --</option>
-      </select>
-      <button onclick="cargarInformeGuardado()">Cargar</button>
-      <button onclick="eliminarInforme()">Eliminar</button>
+    <!-- Columna 2 -->
+    <div class="field-group">
+      <h2>Perdidas</h2>
+      <label for="campo8">DIURESIS</label><input type="text" id="campo8" />
+      <label for="campo9">HECES</label><input type="text" id="campo9" />
+      <label for="campo10">VOMITOS, SUDOR,FIEBRE</label>
+      <input type="text" id="campo10" placeholder="TQN" />
+      <label for="campo11">S.N.G.</label><input type="text" id="campo11" />
+      <label for="campo12">Otros</label><input type="text" id="campo12" />
+      <label for="campo13">CONTROL DE RESIDUOS</label><input type="text" id="campo13" /> <label
+        for="campo14">P.I.</label><input type="text" id="campo14" />
     </div>
 
-    <!-- Datos: Nombre y Fecha -->
-    <div class="datos">
-      <label for="nombre">Nombre y Apellidos:</label>
-      <input type="text" id="nombre" placeholder="Juan Pérez" disabled />
-
-      <label for="fecha">Fecha:</label>
-      <input type="text" id="fecha" readonly disabled />
+    <!-- Columna 3 -->
+    <div class="field-group">
+      <h2>Ingresos/Fluidoterapia</h2>
+      <label for="campo16">Fluidoterapia 1</label><input type="text" id="campo16" />
+      <label for="campo17">Fluidoterapia 2</label><input type="text" id="campo17" />
+      <label for="campo18">Fluidoterapia 3</label><input type="text" id="campo18" />
+      <label for="campo19">Fluidoterapia 4</label><input type="text" id="campo19" />
+      <label for="campo20">Fluidoterapia 5</label><input type="text" id="campo20" />
+      <label for="campo21">Fluidoterapia 6</label><input type="text" id="campo21" />
+      <label for="campo22">Fluidoterapia 7</label><input type="text" id="campo22" />
     </div>
 
-    <!-- Botón Imprimir -->
-    <div class="acciones">
-      <button onclick="window.print()" disabled id="botonImprimir">
-        Imprimir
-      </button>
+    <!-- Columna 4 -->
+    <div class="field-group">
+      <h2>Ingresos/Medicación, sangre y plasma, Agua Endógena</h2>
+      <label for="campo23">SF+MEDICACIÓN</label><input type="text" id="campo23" />
+      <label for="campo24">SANGRE/PLASMA</label><input type="text" id="campo24" />
+      <label for="campo25">AGUA ENDÓGENA</label><input type="text" id="campo25" class="solo-visual" readonly />
     </div>
 
-    <!-- Formulario principal -->
-    <div class="contenedor-columnas" id="formularioCampos">
-      <!-- Columna 1 -->
-      <div class="columna">
-        <div class="grupo1">
-          <h2>Oxigenación y Control de Glucemias</h2>
-          <label for="campo1">PVC</label
-          ><input type="text" id="campo1" disabled />
-          <label for="campo2">OXIGENACIÓN</label
-          ><input type="text" id="campo2" disabled />
-          <label for="campo3">SATURACIÓN</label
-          ><input type="text" id="campo3" disabled />
-          <label for="campo4">EVA/ESCID</label
-          ><input type="text" id="campo4" disabled />
-          <label for="campo5">GLUCEMIA</label
-          ><input type="text" id="campo5" disabled />
-          <label for="campo6">INSULINA</label
-          ><input type="text" id="campo6" disabled />
+    <!-- Columna 5 -->
+    <div class="field-group">
+      <h2>Nutrición</h2>
+      <label for="campo26">Oral</label><input type="text" id="campo26" />
+      <label for="campo27">Enteral</label><input type="text" id="campo27" />
+      <label for="campo28">Parenteral</label><input type="text" id="campo28" />
+    </div>
+
+    <!-- Columna 6 -->
+    <div class="field-group">
+      <h2>Medicación</h2>
+      <label for="campo30">MEDICACIÓN 1</label><input type="text" id="campo30" />
+      <label for="campo31">MEDICACIÓN 2</label><input type="text" id="campo31" />
+      <label for="campo32">MEDICACIÓN 3</label><input type="text" id="campo32" />
+      <label for="campo33">MEDICACIÓN 4</label><input type="text" id="campo33" />
+      <label for="campo34">MEDICACIÓN 5</label><input type="text" id="campo34" />
+      <label for="campo35">MEDICACIÓN 6</label><input type="text" id="campo35" />
+      <label for="campo36">MEDICACIÓN 7</label><input type="text" id="campo36" />
+      <label for="campo37">MEDICACIÓN 8</label><input type="text" id="campo37" />
+      <label for="campo38">MEDICACIÓN 9</label><input type="text" id="campo38" />
+      <label for="campo39">MEDICACIÓN 10</label><input type="text" id="campo39" />
+      <label for="campo40">MEDICACIÓN 11</label><input type="text" id="campo40" />
+      <label for="campo41">MEDICACIÓN 12</label><input type="text" id="campo41" />
+    </div>
+  </div>
+  <div class="print-only">
+    <input type="text" id="print_nombre" readonly />
+    <input type="text" id="print_fecha" readonly />
+    <input type="text" id="print_campo1" readonly />
+    <input type="text" id="print_campo2" readonly />
+    <input type="text" id="print_campo3" readonly />
+    <input type="text" id="print_campo4" readonly />
+    <input type="text" id="print_campo5" readonly />
+    <input type="text" id="print_campo6" readonly />
+    <input type="text" id="print_campo8" readonly />
+    <input type="text" id="print_campo9" readonly />
+    <input type="text" id="print_campo10" readonly />
+    <input type="text" id="print_campo11" readonly />
+    <input type="text" id="print_campo12" readonly />
+    <input type="text" id="print_campo13" readonly />
+    <input type="text" id="print_campo14" readonly />
+    <input type="text" id="print_campo16" readonly />
+    <input type="text" id="print_campo17" readonly />
+    <input type="text" id="print_campo18" readonly />
+    <input type="text" id="print_campo19" readonly />
+    <input type="text" id="print_campo20" readonly />
+    <input type="text" id="print_campo21" readonly />
+    <input type="text" id="print_campo22" readonly />
+    <input type="text" id="print_campo23" readonly />
+    <input type="text" id="print_campo24" readonly />
+    <!-- <input type="text" id="print_campo25" readonly /> <--agua endogena -->
+    <input type="text" id="print_campo26" readonly />
+    <input type="text" id="print_campo27" readonly />
+    <input type="text" id="print_campo28" readonly />
+    <input type="text" id="print_campo30" readonly />
+    <input type="text" id="print_campo31" readonly />
+    <input type="text" id="print_campo32" readonly />
+    <input type="text" id="print_campo33" readonly />
+    <input type="text" id="print_campo34" readonly />
+    <input type="text" id="print_campo35" readonly />
+    <input type="text" id="print_campo36" readonly />
+    <input type="text" id="print_campo37" readonly />
+    <input type="text" id="print_campo38" readonly />
+    <input type="text" id="print_campo39" readonly />
+    <input type="text" id="print_campo40" readonly />
+    <input type="text" id="print_campo41" readonly />
+    <!-- Agrega más campos ocultos si los usas -->
+  </div>
+
+  <div id="pagina2" class="pagina">
+    <div class="field-group">
+      <h2>Edad/H. Clinica/Cama/Hoja Nª</h2>
+      <label for="campo42">Edad</label><input type="text" id="campo69" placeholder="Edad" />
+      <label for="campo43">Nº Hª Clínica</label><input type="text" id="campo70" placeholder="Nº Hª Clínica" />
+      <label for="campo44">Cama</label><input type="text" id="campo71" placeholder="Cama" />
+      <label for="campo45">Hoja Nº</label><input type="text" id="campo72" placeholder="Hoja Nº" />
+    </div>
+  </div>
+  <!-- Campos ocultos para impresión -->
+  <div class="print-only">
+    <input type="text" id="print_campo69" readonly />
+    <input type="text" id="print_campo70" readonly />
+    <input type="text" id="print_campo71" readonly />
+    <input type="text" id="print_campo72" readonly />
+
+    <!-- Agrega más campos ocultos si los usas -->
+  </div>
+  </div>
+
+  <div id="pagina3" class="pagina">
+    <div class="field-group">
+      <div class="grupo-contacto">
+        <label for="telefono1_nombre">Teléfono 1:</label><br />
+        <input type="text" id="telefono1_nombre" placeholder="Nombre del contacto" />
+        <input type="tel" id="telefono1_numero" placeholder="611123456" oninput="validarTelefono(this)" />
+      </div>
+
+      <div class="grupo-contacto">
+        <label for="telefono2_nombre">Teléfono 2:</label><br />
+        <input type="text" id="telefono2_nombre" placeholder="Nombre del contacto" />
+        <input type="tel" id="telefono2_numero" placeholder="611123456" oninput="validarTelefono(this)" />
+      </div>
+      <div class="field-group">
+        <div class="grupo-contacto grupo-alergias">
+          <label for="alergias">Alergias:</label><br />
+          <textarea id="alergias" placeholder="NAMC" rows="3"></textarea>
         </div>
       </div>
 
+      <div class="field-group">
+        <div class="grupo-contacto">
+
+        <h2>Niveles</h2>
+        <label for="#print_campo42_nombre">Niveles 1</label><input type="text" id="campo42_nombre"
+          placeholder="Niveles 1" />
+        <input type="date" id="campo42_fecha" />
+
+        <label for="campo43_nombre">Niveles 2</label><input type="text" id="campo43_nombre" placeholder="Niveles 2" />
+        <input type="date" id="campo43_fecha" />
+
+        <label for="campo44_nombre">Niveles 3</label><input type="text" id="campo44_nombre" placeholder="Niveles 3" />
+        <input type="date" id="campo44" />
+
+        <label for="campo45_nombre">Niveles 4</label><input type="text" id="campo45_nombre" placeholder="Niveles 4" />
+        <input type="date" id="campo45_fecha" />
+
+        <label for="campo46_nombre">Niveles 5</label><input type="text" id="campo46_nombre" placeholder="Niveles 5" />
+        <input type="date" id="campo46_fecha" />
+      </div>
+</div>
       <!-- Columna 2 -->
-      <div class="columna">
-        <div class="grupo2">
-          <h2>Perdidas</h2>
-          <label for="campo8">DIURESIS</label
-          ><input type="text" id="campo8" disabled />
-          <label for="campo9">HECES</label
-          ><input type="text" id="campo9" disabled />
-          <label for="campo10">VOMITOS, SUDOR,FIEBRE</label>
-          <input type="text" id="campo10" value="TQN" readonly disabled />
-          <label for="campo11">S.N.G.</label
-          ><input type="text" id="campo11" disabled />
-          <label for="campo12">P.I.</label
-          ><input type="text" id="campo12" disabled />
-          <label for="campo13">CONTROL DE RESIDUOS</label
-          ><input type="text" id="campo13" disabled />
-          <label for="campo14">P.I.</label
-          ><input type="text" id="campo14" disabled />
-        </div>
-      </div>
+      <div class="field-group">
 
+        <h2>Pruebas Analíticas</h2>
+        <label for="campo47">Inmunologia</label><input type="date" id="campo47_fecha" />
+        <label for="campo48">Serología</label><input type="date" id="campo48_fecha" />
+        <label for="campo49">Virología</label><input type="date" id="campo49_fecha" />
+        <label for="campo50">F. Hepática</label>
+        <input type="date" id="campo50_fecha" />
+        <label for="campo51">Otras Pruebas 1</label>
+        <input type="text" id="campo51_nombre" placeholder="Otras Pruebas 1" /><input type="date" id="campo51_fecha" />
+        <label for="#print_campo52_nombre">Otras Pruebas 2</label><input type="text" id="campo52_nombre"
+          placeholder="Otras Pruebas 2" />
+        <input type="date" id="campo52_fecha" />
+      </div>
       <!-- Columna 3 -->
-      <div class="columna">
-        <div class="grupo3">
-          <h2>Ingresos/Fluidoterapia</h2>
-          <label for="campo16">Fluidoterapia 1</label
-          ><input type="text" id="campo16" disabled />
-          <label for="campo17">Fluidoterapia 2</label
-          ><input type="text" id="campo17" disabled />
-          <label for="campo18">Fluidoterapia 3</label
-          ><input type="text" id="campo18" disabled />
-          <label for="campo19">Fluidoterapia 4</label
-          ><input type="text" id="campo19" disabled />
-          <label for="campo20">Fluidoterapia 5</label
-          ><input type="text" id="campo20" disabled />
-          <label for="campo21">Fluidoterapia 6</label
-          ><input type="text" id="campo21" disabled />
-          <label for="campo22">Fluidoterapia 7</label
-          ><input type="text" id="campo22" disabled />
+      <div class="field-group">
+
+        <h2>Cultivos</h2>
+        <label for="campo53">Hemocultivos</label><input type="date" id="campo53_fecha" placeholder="Hemocultivos" />
+        <label for="campo54">Esputos/BAS</label><input type="date" id="campo54_fecha" placeholder="Esputos/BAS" />
+        <label for="campo55">Urocultivos</label><input type="date" id="campo55_fecha" placeholder="Urocultivos" />
+        <label for="campo56">Otros</label><input type="text" id="campo56_nombre" placeholder="Cultivos" /><input
+          type="date" id="campo56_fecha" />
+        <div class="grupo-contacto">
+          <label for="campo57">VGMR</label>
+          <input type="date" id="campo57_fecha" />
+          <input type="date" id="campo57_proximo" readonly />
+        </div>
+</div>
+        <!-- Columna 4 -->
+        <div class="field-group">
+
+          <h2>Catéteres y tipo</h2>
+          <!-- cateter1 -->
+          <label for="campo58_nombre">Catéter y tipo 1</label>
+          <input type="text" id="campo58_nombre" placeholder="Nombre del catéter" />
+
+          <label for="campo58_fecha">Fecha de inserción</label>
+          <input type="date" id="campo58_fecha" />
+          <!-- cateter2 -->
+
+          <label for="campo59_nombre">Catéter y tipo 2</label>
+          <input type="text" id="campo59_nombre" placeholder="Nombre del catéter" />
+
+          <label for="campo59_fecha">Fecha de inserción</label>
+          <input type="date" id="campo59_fecha" />
+          <!-- cateter3 -->
+
+          <label for="campo60_nombre">Catéter y tipo 3</label>
+          <input type="text" id="campo60_nombre" placeholder="Nombre del catéter" />
+
+          <label for="campo60_fecha">Fecha de inserción</label>
+          <input type="date" id="campo60_fecha" />
+          <!-- cateter4 -->
+          <label for="campo61_nombre">Catéter y tipo 4</label>
+          <input type="text" id="campo61_nombre" placeholder="Nombre del catéter" />
+
+          <label for="campo61_fecha">Fecha de inserción</label>
+          <input type="date" id="campo61_fecha" />
+          <!-- cateter5 -->
+
+          <label for="campo62_nombre">Catéter y tipo 5</label>
+          <input type="text" id="campo62_nombre" placeholder="Nombre del catéter" />
+          <label for="campo62_fecha">Fecha de inserción</label>
+          <input type="date" id="campo62_fecha" />
+
+          <!-- cateter6 -->
+          <label for="campo63_nombre">Catéter y tipo 6</label>
+          <input type="text" id="campo63_nombre" placeholder="Nombre del catéter" />
+          <label for="campo63_fecha">Fecha de inserción</label>
+          <input type="date" id="campo63_fecha" />
+
+          <!-- cateter7 -->
+          <label for="campo64_nombre">Catéter y tipo 7</label>
+          <input type="text" id="campo64_nombre" placeholder="Nombre del catéter" />
+          <label for="campo64_fecha">Fecha de inserción</label>
+          <input type="date" id="campo64_fecha" />
+
+          <!-- cateter8 -->
+          <label for="campo65_nombre">Catéter y tipo 8</label>
+          <input type="text" id="campo65_nombre" placeholder="Nombre del catéter" />
+          <label for="campo65_fecha">Fecha de inserción</label>
+          <input type="date" id="campo65_fecha" />
+
+          <!-- cateter9 -->
+          <label for="campo66_nombre">Catéter y tipo 9</label>
+          <input type="text" id="campo66_nombre" placeholder="Nombre del catéter" />
+          <label for="campo66_fecha">Fecha de inserción</label>
+          <input type="date" id="campo66_fecha" />
+
+          <!-- cateter10 -->
+          <label for="campo67_nombre">Catéter y tipo 10</label>
+          <input type="text" id="campo67_nombre" placeholder="Nombre del catéter" />
+          <label for="campo67_fecha">Fecha de inserción</label>
+          <input type="date" id="campo67_fecha" />
+
+          <!-- cateter11 -->
+          <label for="campo68_nombre">Catéter y tipo 11</label>
+          <input type="text" id="campo68_nombre" placeholder="Nombre del catéter" />
+          <label for="campo68_fecha">Fecha de inserción</label>
+          <input type="date" id="campo68_fecha" />
         </div>
       </div>
+      <div class="print-only">
+        <input type="text" id="print_telefono1_nombre" readonly />
+        <input type="text" id="print_telefono1_numero" readonly />
+        <input type="text" id="print_telefono2_nombre" readonly />
+        <input type="text" id="print_telefono2_numero" readonly />
+        <!-- <input type="text" id="print_alergias" readonly /> -->
+        <textarea id="print_alergias" readonly class="print-only"></textarea>
+        <input type="text" id="print_campo42_nombre" readonly />
+        <input type="date" id="print_campo42_fecha" readonly />
+        <input type="text" id="print_campo43_nombre" readonly />
+        <input type="date" id="print_campo43_fecha" readonly />
+        <input type="text" id="print_campo44_nombre" readonly />
+        <input type="date" id="print_campo44_fecha" readonly />
+        <input type="text" id="print_campo45_nombre" readonly />
+        <input type="date" id="print_campo45_fecha" readonly />
+        <input type="text" id="print_campo46_nombre" readonly />
+        <input type="date" id="print_campo46_fecha" readonly />
+        <input type="date" id="print_campo47_fecha" readonly />
+        <input type="date" id="print_campo48_fecha" readonly />
+        <input type="date" id="print_campo49_fecha" readonly />
+        <input type="date" id="print_campo50_fecha" readonly />
+        <input type="text" id="print_campo51_nombre" readonly />
+        <input type="date" id="print_campo51_fecha" readonly />
+        <input type="text" id="print_campo52_nombre" readonly />
+        <input type="date" id="print_campo52_fecha" readonly />
+        <input type="date" id="print_campo53_fecha" readonly />
+        <input type="date" id="print_campo54_fecha" readonly />
+        <input type="date" id="print_campo55_fecha" readonly />
+        <input type="text" id="print_campo56_nombre" readonly />
+        <input type="date" id="print_campo56_fecha" readonly />
+        <input type="text" id="print_campo57_nombre" readonly />
+        <input type="date" id="print_campo57_fecha" readonly />
+        <input type="text" id="print_campo57_proximo" readonly />
+        <input type="text" id="print_campo58_nombre" readonly />
+        <input type="date" id="print_campo58_fecha" readonly />
+        <input type="text" id="print_campo59_nombre" readonly />
+        <input type="date" id="print_campo59_fecha" readonly />
+        <input type="text" id="print_campo60_nombre" readonly />
+        <input type="date" id="print_campo60_fecha" readonly />
+        <input type="text" id="print_campo61_nombre" readonly />
+        <input type="date" id="print_campo61_fecha" readonly />
+        <input type="text" id="print_campo62_nombre" readonly />
+        <input type="date" id="print_campo62_fecha" readonly />
+        <input type="text" id="print_campo63_nombre" readonly />
+        <input type="date" id="print_campo63_fecha" readonly />
+        <input type="text" id="print_campo64_nombre" readonly />
+        <input type="date" id="print_campo64_fecha" readonly />
+        <input type="text" id="print_campo65_nombre" readonly />
+        <input type="date" id="print_campo65_fecha" readonly />
+        <input type="text" id="print_campo66_nombre" readonly />
+        <input type="date" id="print_campo66_fecha" readonly />
+        <input type="text" id="print_campo67_nombre" readonly />
+        <input type="date" id="print_campo67_fecha" readonly />
+        <input type="text" id="print_campo68_nombre" readonly />
+        <input type="date" id="print_campo68_fecha" readonly />
 
-      <!-- Columna 4 -->
-      <div class="columna">
-        <div class="grupo4">
-          <h2>Ingresos/Medicación, sangre y plasma, Agua Endógena</h2>
-          <label for="campo23">SF+MEDICACIÓN</label
-          ><input type="text" id="campo23" disabled />
-          <label for="campo24">SANGRE/PLASMA</label
-          ><input type="text" id="campo24" disabled />
-          <label for="campo25">AGUA ENDÓGENA</label
-          ><input type="text" id="campo25" value="" readonly disabled />
-        </div>
-      </div>
-
-      <!-- Columna 5 -->
-      <div class="columna">
-        <div class="grupo5">
-          <h2>Nutrición</h2>
-          <label for="campo26">Oral</label
-          ><input type="text" id="campo26" disabled />
-          <label for="campo27">Enteral</label
-          ><input type="text" id="campo27" disabled />
-          <label for="campo28">Parenteral</label
-          ><input type="text" id="campo28" disabled />
-        </div>
-      </div>
-
-      <!-- Columna 6 -->
-      <div class="columna">
-        <div class="grupo6">
-          <h2>Medicación</h2>
-          <label for="campo30">MEDICACIÓN 1</label
-          ><input type="text" id="campo30" disabled />
-          <label for="campo31">MEDICACIÓN 2</label
-          ><input type="text" id="campo31" disabled />
-          <label for="campo32">MEDICACIÓN 3</label
-          ><input type="text" id="campo32" disabled />
-          <label for="campo33">MEDICACIÓN 4</label
-          ><input type="text" id="campo33" disabled />
-          <label for="campo34">MEDICACIÓN 5</label
-          ><input type="text" id="campo34" disabled />
-          <label for="campo35">MEDICACIÓN 6</label
-          ><input type="text" id="campo35" disabled />
-          <label for="campo36">MEDICACIÓN 7</label
-          ><input type="text" id="campo36" disabled />
-          <label for="campo37">MEDICACIÓN 8</label
-          ><input type="text" id="campo37" disabled />
-          <label for="campo38">MEDICACIÓN 9</label
-          ><input type="text" id="campo38" disabled />
-          <label for="campo39">MEDICACIÓN 10</label
-          ><input type="text" id="campo39" disabled />
-          <label for="campo40">MEDICACIÓN 11</label
-          ><input type="text" id="campo40" disabled />
-          <label for="campo41">MEDICACIÓN 12</label
-          ><input type="text" id="campo41" disabled />
-        </div>
+        <!-- Agrega más campos ocultos si los usas -->
       </div>
     </div>
+  </div>
 
-    <!-- Campos ocultos para impresión -->
-    <div
-      class="print-only"
-      style="position: absolute; left: 0; top: 0; visibility: hidden"
-    >
-      <!-- Inputs de impresión -->
-    </div>
+   <script>
+    let boxSeleccionado = null;
+    const selector = document.getElementById("box-selector");
+    const acciones = document.getElementById("acciones");
+    const boxTitulo = document.getElementById("box-titulo");
 
-    <script>
-      const totalBoxes = 12;
-      let currentBox = null;
+    // Recoger todos los campos dinámicamente
+    function recogerTodosLosCampos() {
+      return Array.from(document.querySelectorAll("input[id], textarea[id]"))
+        .filter(el => !el.id.startsWith("print_"))
+        .map(el => el.id);
+    }
 
-      // Generar botones de Box 1 a Box 12
-      const selector = document.getElementById("boxSelector");
-      for (let i = 1; i <= totalBoxes; i++) {
-        const btn = document.createElement("button");
-        btn.textContent = `Box ${i}`;
-        btn.onclick = () => seleccionarBox(i);
-        selector.appendChild(btn);
-      }
+    function seleccionarBox(num) {
+      boxSeleccionado = num;
+      localStorage.setItem("box_seleccionado", num);
+      document.querySelectorAll(".btn-boxes button").forEach((btn) => {
+        btn.classList.toggle("active", +btn.dataset.box === num);
+      });
+      boxTitulo.textContent = `Información para el Box ${num}`;
+      document.getElementById("print_box")?.textContent = `Box ${num}`;
+      cargarDatos();
+      acciones.classList.add("visible");
+      mostrarPagina(Number(localStorage.getItem("pagina_activa") || 1));
+    }
 
-      function getPrintKey(box) {
-        return `box${box}_current`;
-      }
+    function mostrarPagina(n) {
+      if (!boxSeleccionado) return;
+      document.querySelectorAll(".pagina").forEach((p, i) => {
+        p.classList.toggle("active", i + 1 === n);
+      });
+      localStorage.setItem("pagina_activa", n);
+    }
 
-      function seleccionarBox(boxNumber) {
-        if (currentBox !== null) guardarDatos(currentBox);
+    function cargarDatos() {
+      if (!boxSeleccionado) return;
+      const data = JSON.parse(localStorage.getItem(`box_${boxSeleccionado}`) || "{}");
+      const campos = recogerTodosLosCampos();
+      campos.forEach((id) => {
+        const el = document.getElementById(id);
+        if (el) el.value = data[id] || "";
+      });
+    }
 
-        currentBox = boxNumber;
-        cargarDatos(currentBox);
-        actualizarBotonActivo();
+    function guardarDatos() {
+      if (!boxSeleccionado) return;
+      const data = {};
+      const campos = recogerTodosLosCampos();
+      campos.forEach((id) => {
+        const el = document.getElementById(id);
+        if (el) data[id] = el.value;
+      });
+      localStorage.setItem(`box_${boxSeleccionado}`, JSON.stringify(data));
+    }
 
-        // Habilitar todos los campos
-        document
-          .querySelectorAll("#formularioCampos input")
-          .forEach((input) => (input.disabled = false));
-        document.getElementById("nombre").disabled = false;
-        document.getElementById("fecha").disabled = false;
-        document.getElementById("botonImprimir").disabled = false;
-        document.getElementById("selectorBox").disabled = false;
-        document
-          .querySelector(".seleccionador-informes button")
-          ?.removeAttribute("disabled");
+    function borrarDatos() {
+      if (!boxSeleccionado) return;
+      if (!confirm("¿Deseas borrar los datos del box seleccionado?")) return;
+      localStorage.removeItem(`box_${boxSeleccionado}`);
+      const campos = recogerTodosLosCampos();
+      campos.forEach((id) => {
+        const el = document.getElementById(id);
+        if (el) el.value = "";
+      });
+    }
 
-        // Mostrar mensaje
-        document.getElementById("numero-box-seleccionado").textContent =
-          boxNumber;
-        document.getElementById("mensaje-box-seleccionado").style.display =
-          "block";
-      }
+    document.addEventListener("input", guardarDatos);
 
-      function actualizarBotonActivo() {
-        document
-          .querySelectorAll(".box-selector button")
-          .forEach((btn, idx) => {
-            btn.classList.remove("active");
-            if (idx + 1 === currentBox) btn.classList.add("active");
-          });
-      }
-
-      function guardarDatos(box) {
-        const data = {};
-        const inputs = document.querySelectorAll("#formularioCampos input");
-        inputs.forEach((input) => {
-          data[input.id] = input.value.trim();
-        });
-
-        localStorage.setItem(getPrintKey(box), JSON.stringify(data));
-      }
-
-      function cargarDatos(box) {
-        const key = getPrintKey(box);
-        const saved = localStorage.getItem(key);
-        if (saved) {
-          const data = JSON.parse(saved);
-          Object.entries(data).forEach(([id, valor]) => {
-            const input = document.getElementById(id);
-            if (input) input.value = valor;
-          });
-        } else {
-          document
-            .querySelectorAll("#formularioCampos input")
-            .forEach((input) => (input.value = ""));
-        }
-      }
-
-      function prepararImpresion() {
-        const mapeo = {
-          nombre: "print_nombre",
-          fecha: "print_fecha",
-          campo1: "print_campo1",
-          campo2: "print_campo2",
-          campo3: "print_campo3",
-          campo4: "print_campo4",
-          campo5: "print_campo5",
-          campo6: "print_campo6",
-          campo8: "print_campo8",
-          campo9: "print_campo9",
-          campo10: "print_campo10",
-          campo11: "print_campo11",
-          campo12: "print_campo12",
-          campo13: "print_campo13",
-          campo14: "print_campo14",
-          campo16: "print_campo16",
-          campo17: "print_campo17",
-          campo18: "print_campo18",
-          campo19: "print_campo19",
-          campo20: "print_campo20",
-          campo21: "print_campo21",
-          campo22: "print_campo22",
-          campo23: "print_campo23",
-          campo24: "print_campo24",
-          campo25: "print_campo25",
-          campo26: "print_campo26",
-          campo27: "print_campo27",
-          campo28: "print_campo28",
-          campo30: "print_campo30",
-          campo31: "print_campo31",
-          campo32: "print_campo32",
-          campo33: "print_campo33",
-          campo34: "print_campo34",
-          campo35: "print_campo35",
-          campo36: "print_campo36",
-          campo37: "print_campo37",
-          campo38: "print_campo38",
-          campo39: "print_campo39",
-          campo40: "print_campo40",
-          campo41: "print_campo41",
-        };
-
-        Object.entries(mapeo).forEach(([idOriginal, idPrint]) => {
-          const original = document.getElementById(idOriginal);
-          const printField = document.getElementById(idPrint);
-          if (original && printField) {
-            printField.value = original?.value.trim() || "";
-          }
-        });
-      }
-
-      window.onbeforeprint = prepararImpresion;
-
-      // Cargar listado de informes en el desplegable
-      function cargarListadoInformes() {
-        const select = document.getElementById("selectorBox");
-        select.innerHTML =
-          '<option value="">-- Selecciona un informe --</option>';
-
-        const keys = [];
-        for (let i = 0; i < localStorage.length; i++) {
-          const key = localStorage.key(i);
-          if (key.startsWith("box") && key.includes("_")) {
-            keys.push(key);
+    window.onbeforeprint = () => {
+      if (!boxSeleccionado) return;
+      const data = JSON.parse(localStorage.getItem(`box_${boxSeleccionado}`) || "{}");
+      Object.entries(data).forEach(([id, val]) => {
+        const el = document.getElementById(`print_${id}`);
+        if (el) {
+          if (el.tagName === 'TEXTAREA' || el.tagName === 'INPUT') {
+            el.value = val;
+          } else {
+            el.textContent = val;
           }
         }
+      });
+    };
 
-        keys.sort().reverse(); // Más recientes primero
-
-        keys.forEach((key) => {
-          const parts = key.split("_");
-          const box = parts[0].replace("box", "");
-          const date = parts[1];
-          const time = parts[2];
-
-          const option = document.createElement("option");
-          option.value = key;
-          option.textContent = `[Box ${box}] - ${date} ${time}`;
-          select.appendChild(option);
-        });
+    window.addEventListener("DOMContentLoaded", () => {
+      const pagina = Number(localStorage.getItem("pagina_activa") || 1);
+      const box = localStorage.getItem("box_seleccionado");
+      if (box) {
+        seleccionarBox(Number(box));
+      } else {
+        mostrarPagina(pagina);
       }
+    });
 
-      function cargarInformeGuardado() {
-        const select = document.getElementById("selectorBox");
-        const key = select.value;
-        if (!key) return;
-
-        const data = localStorage.getItem(key);
-        if (!data) return;
-
-        const parsed = JSON.parse(data);
-        Object.entries(parsed).forEach(([id, valor]) => {
-          const input = document.getElementById(id);
-          if (input) input.value = valor;
-        });
-
-        // Activar edición
-        document
-          .querySelectorAll("#formularioCampos input")
-          .forEach((input) => (input.disabled = false));
-        document.getElementById("nombre").disabled = false;
-        document.getElementById("fecha").disabled = false;
-        document.getElementById("botonImprimir").disabled = false;
-      }
-
-      function eliminarInforme() {
-        const select = document.getElementById("selectorBox");
-        const key = select.value;
-        if (!key) {
-          alert("Por favor, selecciona un informe para eliminar.");
-          return;
-        }
-
-        if (!confirm("¿Estás seguro de que quieres eliminar este informe?"))
-          return;
-
-        localStorage.removeItem(key);
-        alert("Informe eliminado.");
-        cargarListadoInformes();
-      }
-
-      function deshabilitarFormulario() {
-        document
-          .querySelectorAll("#formularioCampos input")
-          .forEach((input) => (input.disabled = true));
-        document.getElementById("nombre").disabled = true;
-        document.getElementById("fecha").disabled = true;
-        document.getElementById("botonImprimir").disabled = true;
-        document.getElementById("selectorBox").disabled = false;
-        document
-          .querySelector(".seleccionador-informes button")
-          ?.removeAttribute("disabled");
-      }
-
-      function habilitarFormulario() {
-        document
-          .querySelectorAll("#formularioCampos input")
-          .forEach((input) => (input.disabled = false));
-        document.getElementById("nombre").disabled = false;
-        document.getElementById("fecha").disabled = false;
-        document.getElementById("botonImprimir").disabled = false;
-      }
-
-      window.onload = () => {
-        cargarListadoInformes();
-        // Inicializar deshabilitado
-        deshabilitarFormulario();
-
-        // Establecer fecha automática
-        const hoy = new Date();
-        const manana = new Date(hoy);
-        manana.setDate(manana.getDate() + 1);
-        const dia = String(manana.getDate()).padStart(2, "0");
-        const mes = String(manana.getMonth() + 1).padStart(2, "0"); // Enero es 0
-        const año = manana.getFullYear();
-        document.getElementById("fecha").value = `${dia}/${mes}/${año}`;
-      };
-    </script>
-  </body>
+    for (let i = 1; i <= 12; i++) {
+      const btn = document.createElement("button");
+      btn.textContent = `Box ${i}`;
+      btn.onclick = () => seleccionarBox(i);
+      btn.dataset.box = i;
+      selector.appendChild(btn);
+    }
+  </script>
+</body>
 </html>

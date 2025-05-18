@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tríptico - Información por Box</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", sans-serif;
+      }
+      body {
+        background: #f0f2f5;
+        padding: 20px;
+      }
+      header {
+        text-align: center;
+        margin-bottom: 10px;
+      }
+      #box-titulo {
+        text-align: center;
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+        font-weight: 500;
+      }
+      .btn-boxes {
+        margin-bottom: 1rem;
+        text-align: center;
+      }
+      .btn-boxes button {
+        margin: 0 4px;
+        padding: 8px 12px;
+        border: none;
+        border-radius: 5px;
+        background: #007bff;
+        color: white;
+        cursor: pointer;
+      }
+      .btn-boxes button.active {
+        background: #28a745;
+      }
+      .pagina {
+        display: none;
+      }
+      .pagina.active {
+        display: block;
+        border: 2px solid #007bff;
+        border-radius: 8px;
+        padding: 10px;
+        background: #ffffff;
+      }
+      .acciones {
+        text-align: center;
+        margin: 1rem 0;
+        display: none;
+      }
+      .acciones.visible {
+        display: block;
+      }
+      .acciones button {
+        margin: 0 6px;
+        padding: 8px 16px;
+      }
+      .field-group {
+        padding: 1rem;
+        background: white;
+        margin-bottom: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      }
+      .field-group label {
+        display: block;
+        margin: 0.5rem 0 0.25rem;
+        font-weight: 500;
+      }
+      .field-group input[type="text"],
+      .field-group input[type="date"],
+      .field-group input[type="tel"],
+      .field-group textarea {
+        width: 100%;
+        padding: 6px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+      @media print {
+        body * {
+          visibility: hidden !important;
+        }
+        #print-section,
+        #print-section * {
+          visibility: visible !important;
+        }
+        #print-section input,
+        #print-section textarea {
+          position: absolute;
+          font-family: "Poppins", sans-serif;
+          font-size: 12pt;
+          font-weight: 500;
+          border: none;
+          outline: none;
+          background: transparent;
+          padding: 0;
+          margin: 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Tríptico - Información por Box</h1>
+    </header>
+
+    <div id="box-titulo">Seleccione un Box</div>
+
+    <div class="btn-boxes" id="box-selector"></div>
+
+    <div class="acciones" id="acciones">
+      <button onclick="mostrarPagina(1)">Hoja 1</button>
+      <button onclick="mostrarPagina(2)">Hoja 2</button>
+      <button onclick="mostrarPagina(3)">Hoja 3</button>
+      <button onclick="borrarDatos()">🗑️ Borrar Datos</button>
+      <button onclick="window.print()">🖨️ Imprimir</button>
+    </div>
+
+    <div id="pagina1" class="pagina">
+      <div class="field-group">
+        <label for="nombre">Nombre y Apellidos</label>
+        <input type="text" id="nombre" />
+        <label for="fecha_ingreso">Fecha de Ingreso</label>
+        <input type="date" id="fecha_ingreso" />
+      </div>
+      <div class="field-group">
+        <h2>Oxigenación y Glucemias</h2>
+        <label for="campo1">PVC</label><input type="text" id="campo1" />
+        <label for="campo2">OXIGENACIÓN</label
+        ><input type="text" id="campo2" /> <label for="campo3">SATURACIÓN</label
+        ><input type="text" id="campo3" /> <label for="campo4">EVA/ESCID</label
+        ><input type="text" id="campo4" /> <label for="campo5">GLUCEMIA</label
+        ><input type="text" id="campo5" /> <label for="campo6">INSULINA</label
+        ><input type="text" id="campo6" />
+      </div>
+      <div class="field-group">
+        <h2>Pérdidas</h2>
+        <label for="campo8">DIURESIS</label><input type="text" id="campo8" />
+        <label for="campo9">HECES</label><input type="text" id="campo9" />
+        <label for="campo10">VÓMITOS/SUDOR/FIEBRE</label
+        ><input type="text" id="campo10" /> <label for="campo11">S.N.G.</label
+        ><input type="text" id="campo11" /> <label for="campo12">OTROS</label
+        ><input type="text" id="campo12" />
+        <label for="campo13">CONTROL DE RESIDUOS</label
+        ><input type="text" id="campo13" /> <label for="campo14">P.I.</label
+        ><input type="text" id="campo14" />
+      </div>
+      <div class="field-group">
+        <h2>Fluidoterapia</h2>
+        <label for="campo16">Fluidoterapia 1</label
+        ><input type="text" id="campo16" />
+        <label for="campo17">Fluidoterapia 2</label
+        ><input type="text" id="campo17" />
+        <label for="campo18">Fluidoterapia 3</label
+        ><input type="text" id="campo18" />
+        <label for="campo19">Fluidoterapia 4</label
+        ><input type="text" id="campo19" />
+        <label for="campo20">Fluidoterapia 5</label
+        ><input type="text" id="campo20" />
+        <label for="campo21">Fluidoterapia 6</label
+        ><input type="text" id="campo21" />
+        <label for="campo22">Fluidoterapia 7</label
+        ><input type="text" id="campo22" />
+      </div>
+      <div class="field-group">
+        <h2>Ingresos y Medicación</h2>
+        <label for="campo23">SF + MEDICACIÓN</label
+        ><input type="text" id="campo23" />
+        <label for="campo24">SANGRE/PLASMA</label
+        ><input type="text" id="campo24" />
+        <label for="campo25">AGUA ENDÓGENA</label
+        ><input type="text" id="campo25" />
+      </div>
+      <div class="field-group">
+        <h2>Nutrición</h2>
+        <label for="campo26">Oral</label><input type="text" id="campo26" />
+        <label for="campo27">Enteral</label><input type="text" id="campo27" />
+        <label for="campo28">Parenteral</label
+        ><input type="text" id="campo28" />
+      </div>
+      <div class="field-group">
+        <h2>Medicación</h2>
+        <label for="campo30">Medicación 1</label
+        ><input type="text" id="campo30" />
+        <label for="campo31">Medicación 2</label
+        ><input type="text" id="campo31" />
+        <label for="campo32">Medicación 3</label
+        ><input type="text" id="campo32" />
+        <label for="campo33">Medicación 4</label
+        ><input type="text" id="campo33" />
+        <label for="campo34">Medicación 5</label
+        ><input type="text" id="campo34" />
+        <label for="campo35">Medicación 6</label
+        ><input type="text" id="campo35" />
+        <label for="campo36">Medicación 7</label
+        ><input type="text" id="campo36" />
+        <label for="campo37">Medicación 8</label
+        ><input type="text" id="campo37" />
+        <label for="campo38">Medicación 9</label
+        ><input type="text" id="campo38" />
+        <label for="campo39">Medicación 10</label
+        ><input type="text" id="campo39" />
+        <label for="campo40">Medicación 11</label
+        ><input type="text" id="campo40" />
+        <label for="campo41">Medicación 12</label
+        ><input type="text" id="campo41" />
+      </div>
+    </div>
+
+    <div id="pagina2" class="pagina">
+      <div class="field-group">
+        <label for="campo69">Edad</label><input type="text" id="campo69" />
+        <label for="campo70">Nº Historia Clínica</label
+        ><input type="text" id="campo70" /> <label for="campo71">Cama</label
+        ><input type="text" id="campo71" /> <label for="campo72">Hoja Nº</label
+        ><input type="text" id="campo72" />
+      </div>
+    </div>
+
+    <div id="pagina3" class="pagina">
+      <div class="field-group">
+        <label for="telefono1_nombre">Teléfono 1 - Nombre</label
+        ><input type="text" id="telefono1_nombre" />
+        <label for="telefono1_numero">Teléfono 1 - Número</label
+        ><input type="tel" id="telefono1_numero" />
+
+        <label for="telefono2_nombre">Teléfono 2 - Nombre</label
+        ><input type="text" id="telefono2_nombre" />
+        <label for="telefono2_numero">Teléfono 2 - Número</label
+        ><input type="tel" id="telefono2_numero" />
+
+        <label for="alergias">Alergias</label
+        ><textarea id="alergias" rows="3"></textarea>
+      </div>
+      <div class="field-group">
+        <h2>Niveles</h2>
+        <label for="campo42_nombre">Niveles 1</label
+        ><input type="text" id="campo42_nombre" />
+        <label for="campo42_fecha">Fecha</label
+        ><input type="date" id="campo42_fecha" />
+
+        <label for="campo43_nombre">Niveles 2</label
+        ><input type="text" id="campo43_nombre" />
+        <label for="campo43_fecha">Fecha</label
+        ><input type="date" id="campo43_fecha" />
+
+        <label for="campo44_nombre">Niveles 3</label
+        ><input type="text" id="campo44_nombre" />
+        <label for="campo44_fecha">Fecha</label
+        ><input type="date" id="campo44_fecha" />
+
+        <label for="campo45_nombre">Niveles 4</label
+        ><input type="text" id="campo45_nombre" />
+        <label for="campo45_fecha">Fecha</label
+        ><input type="date" id="campo45_fecha" />
+
+        <label for="campo46_nombre">Niveles 5</label
+        ><input type="text" id="campo46_nombre" />
+        <label for="campo46_fecha">Fecha</label
+        ><input type="date" id="campo46_fecha" />
+      </div>
+      <!-- Columna 2 -->
+      <div class="field-group">
+        <h2>Pruebas Analíticas</h2>
+        <label for="campo47">Inmunologia</label
+        ><input type="date" id="campo47_fecha" />
+        <label for="campo48">Serología</label
+        ><input type="date" id="campo48_fecha" />
+        <label for="campo49">Virología</label
+        ><input type="date" id="campo49_fecha" />
+        <label for="campo50">F. Hepática</label>
+        <input type="date" id="campo50_fecha" />
+        <label for="campo51">Otras Pruebas 1</label>
+        <input
+          type="text"
+          id="campo51_nombre"
+          placeholder="Otras Pruebas 1"
+        /><input type="date" id="campo51_fecha" />
+        <label for="#print_campo52_nombre">Otras Pruebas 2</label
+        ><input type="text" id="campo52_nombre" placeholder="Otras Pruebas 2" />
+        <input type="date" id="campo52_fecha" />
+      </div>
+      <!-- Columna 3 -->
+      <div class="field-group">
+        <h2>Cultivos</h2>
+        <label for="campo53">Hemocultivos</label
+        ><input type="date" id="campo53_fecha" placeholder="Hemocultivos" />
+        <label for="campo54">Esputos/BAS</label
+        ><input type="date" id="campo54_fecha" placeholder="Esputos/BAS" />
+        <label for="campo55">Urocultivos</label
+        ><input type="date" id="campo55_fecha" placeholder="Urocultivos" />
+        <label for="campo56">Otros</label
+        ><input type="text" id="campo56_nombre" placeholder="Cultivos" /><input
+          type="date"
+          id="campo56_fecha"
+        />
+        <div class="grupo-contacto">
+          <label for="campo57">VGMR</label>
+          <input type="date" id="campo57_fecha" />
+          <input type="date" id="campo57_proximo" readonly />
+        </div>
+      </div>
+      <!-- Columna 4 -->
+      <div class="field-group">
+        <h2>Catéteres y tipo</h2>
+        <!-- cateter1 -->
+        <label for="campo58_nombre">Catéter y tipo 1</label>
+        <input
+          type="text"
+          id="campo58_nombre"
+          placeholder="Nombre del catéter"
+        />
+
+        <label for="campo58_fecha">Fecha de inserción</label>
+        <input type="date" id="campo58_fecha" />
+        <!-- cateter2 -->
+
+        <label for="campo59_nombre">Catéter y tipo 2</label>
+        <input
+          type="text"
+          id="campo59_nombre"
+          placeholder="Nombre del catéter"
+        />
+
+        <label for="campo59_fecha">Fecha de inserción</label>
+        <input type="date" id="campo59_fecha" />
+        <!-- cateter3 -->
+
+        <label for="campo60_nombre">Catéter y tipo 3</label>
+        <input
+          type="text"
+          id="campo60_nombre"
+          placeholder="Nombre del catéter"
+        />
+
+        <label for="campo60_fecha">Fecha de inserción</label>
+        <input type="date" id="campo60_fecha" />
+        <!-- cateter4 -->
+        <label for="campo61_nombre">Catéter y tipo 4</label>
+        <input
+          type="text"
+          id="campo61_nombre"
+          placeholder="Nombre del catéter"
+        />
+
+        <label for="campo61_fecha">Fecha de inserción</label>
+        <input type="date" id="campo61_fecha" />
+        <!-- cateter5 -->
+
+        <label for="campo62_nombre">Catéter y tipo 5</label>
+        <input
+          type="text"
+          id="campo62_nombre"
+          placeholder="Nombre del catéter"
+        />
+        <label for="campo62_fecha">Fecha de inserción</label>
+        <input type="date" id="campo62_fecha" />
+
+        <!-- cateter6 -->
+        <label for="campo63_nombre">Catéter y tipo 6</label>
+        <input
+          type="text"
+          id="campo63_nombre"
+          placeholder="Nombre del catéter"
+        />
+        <label for="campo63_fecha">Fecha de inserción</label>
+        <input type="date" id="campo63_fecha" />
+
+        <!-- cateter7 -->
+        <label for="campo64_nombre">Catéter y tipo 7</label>
+        <input
+          type="text"
+          id="campo64_nombre"
+          placeholder="Nombre del catéter"
+        />
+        <label for="campo64_fecha">Fecha de inserción</label>
+        <input type="date" id="campo64_fecha" />
+
+        <!-- cateter8 -->
+        <label for="campo65_nombre">Catéter y tipo 8</label>
+        <input
+          type="text"
+          id="campo65_nombre"
+          placeholder="Nombre del catéter"
+        />
+        <label for="campo65_fecha">Fecha de inserción</label>
+        <input type="date" id="campo65_fecha" />
+
+        <!-- cateter9 -->
+        <label for="campo66_nombre">Catéter y tipo 9</label>
+        <input
+          type="text"
+          id="campo66_nombre"
+          placeholder="Nombre del catéter"
+        />
+        <label for="campo66_fecha">Fecha de inserción</label>
+        <input type="date" id="campo66_fecha" />
+
+        <!-- cateter10 -->
+        <label for="campo67_nombre">Catéter y tipo 10</label>
+        <input
+          type="text"
+          id="campo67_nombre"
+          placeholder="Nombre del catéter"
+        />
+        <label for="campo67_fecha">Fecha de inserción</label>
+        <input type="date" id="campo67_fecha" />
+
+        <!-- cateter11 -->
+        <label for="campo68_nombre">Catéter y tipo 11</label>
+        <input
+          type="text"
+          id="campo68_nombre"
+          placeholder="Nombre del catéter"
+        />
+        <label for="campo68_fecha">Fecha de inserción</label>
+        <input type="date" id="campo68_fecha" />
+      </div>
+    </div>
+    <!-- código anterior intacto -->
+    <div class="print-only" id="print-section">
+      <!-- Página 1 -->
+      <input
+        id="print_nombre"
+        readonly
+        style="top: 0.5cm; left: 3.5cm; width: 11cm"
+      />
+      <input
+        id="print_fecha_ingreso"
+        readonly
+        style="top: 0.5cm; left: 15cm; width: 4cm"
+      />
+
+      <input
+        id="print_campo1"
+        readonly
+        style="top: 9.4cm; left: 5cm; width: 4cm"
+      />
+      <input
+        id="print_campo2"
+        readonly
+        style="top: 10cm; left: 5cm; width: 4cm"
+      />
+      <input
+        id="print_campo3"
+        readonly
+        style="top: 10.6cm; left: 5cm; width: 4cm"
+      />
+      <input
+        id="print_campo4"
+        readonly
+        style="top: 11.2cm; left: 5cm; width: 4cm"
+      />
+      <input
+        id="print_campo5"
+        readonly
+        style="top: 11.7cm; left: 5cm; width: 4cm"
+      />
+      <input
+        id="print_campo6"
+        readonly
+        style="top: 12.2cm; left: 5cm; width: 4cm"
+      />
+
+      <input
+        id="print_campo8"
+        readonly
+        style="top: 12.8cm; left: 4cm; width: 4cm"
+      />
+      <input
+        id="print_campo9"
+        readonly
+        style="top: 13.6cm; left: 4cm; width: 4cm"
+      />
+      <input
+        id="print_campo10"
+        readonly
+        style="top: 14.1cm; left: 7.5cm; width: 4cm"
+      />
+      <input
+        id="print_campo11"
+        readonly
+        style="top: 14.6cm; left: 4cm; width: 4cm"
+      />
+      <input
+        id="print_campo12"
+        readonly
+        style="top: 15.2cm; left: 4cm; width: 4cm"
+      />
+      <input
+        id="print_campo13"
+        readonly
+        style="top: 15.7cm; left: 7cm; width: 4cm"
+      />
+      <input
+        id="print_campo14"
+        readonly
+        style="top: 16.3cm; left: 4cm; width: 4cm"
+      />
+
+      <input
+        id="print_campo16"
+        readonly
+        style="top: 17.2cm; left: 2.5cm; width: 4cm"
+      />
+      <input
+        id="print_campo17"
+        readonly
+        style="top: 17.7cm; left: 2.5cm; width: 4cm"
+      />
+      <input
+        id="print_campo18"
+        readonly
+        style="top: 18.2cm; left: 2.5cm; width: 4cm"
+      />
+      <input
+        id="print_campo19"
+        readonly
+        style="top: 18.7cm; left: 2.5cm; width: 4cm"
+      />
+      <input
+        id="print_campo20"
+        readonly
+        style="top: 19.3cm; left: 2.5cm; width: 4cm"
+      />
+      <input
+        id="print_campo21"
+        readonly
+        style="top: 19.8cm; left: 2.5cm; width: 4cm"
+      />
+      <input
+        id="print_campo22"
+        readonly
+        style="top: 20.3cm; left: 2.5cm; width: 4cm"
+      />
+
+      <input
+        id="print_campo23"
+        readonly
+        style="top: 20.9cm; left: 6cm; width: 4cm"
+      />
+      <input
+        id="print_campo24"
+        readonly
+        style="top: 21.4cm; left: 6cm; width: 4cm"
+      />
+      <input
+        id="print_campo25"
+        readonly
+        style="top: 21.8cm; left: 6cm; width: 4cm"
+      />
+
+      <input
+        id="print_campo26"
+        readonly
+        style="top: 22.5cm; left: 5cm; width: 4cm"
+      />
+      <input
+        id="print_campo27"
+        readonly
+        style="top: 23.1cm; left: 5cm; width: 4cm"
+      />
+      <input
+        id="print_campo28"
+        readonly
+        style="top: 23.6cm; left: 5cm; width: 4cm"
+      />
+
+      <input
+        id="print_campo30"
+        readonly
+        style="top: 24.7cm; left: 2.5cm; width: 4cm"
+      />
+      <input
+        id="print_campo31"
+        readonly
+        style="top: 25.2cm; left: 2.5cm; width: 4cm"
+      />
+      <input
+        id="print_campo32"
+        readonly
+        style="top: 25.7cm; left: 2.5cm; width: 4cm"
+      />
+      <input
+        id="print_campo33"
+        readonly
+        style="top: 26.2cm; left: 2.5cm; width: 4cm"
+      />
+      <input
+        id="print_campo34"
+        readonly
+        style="top: 26.7cm; left: 2.5cm; width: 4cm"
+      />
+      <input
+        id="print_campo35"
+        readonly
+        style="top: 27.2cm; left: 2.5cm; width: 4cm"
+      />
+      <input
+        id="print_campo36"
+        readonly
+        style="top: 27.7cm; left: 2.5cm; width: 4cm"
+      />
+      <input
+        id="print_campo37"
+        readonly
+        style="top: 28.2cm; left: 2.5cm; width: 4cm"
+      />
+      <input
+        id="print_campo38"
+        readonly
+        style="top: 28.7cm; left: 2.5cm; width: 4cm"
+      />
+      <input
+        id="print_campo39"
+        readonly
+        style="top: 29.2cm; left: 2.5cm; width: 4cm"
+      />
+      <input
+        id="print_campo40"
+        readonly
+        style="top: 29.7cm; left: 2.5cm; width: 4cm"
+      />
+      <input
+        id="print_campo41"
+        readonly
+        style="top: 30.2cm; left: 2.5cm; width: 4cm"
+      />
+
+      <!-- Página 2 -->
+      <input
+        id="print_campo69"
+        readonly
+        style="top: 1cm; left: 10cm; width: 4cm"
+      />
+      <input
+        id="print_campo70"
+        readonly
+        style="top: 1.5cm; left: 10cm; width: 6cm"
+      />
+      <input
+        id="print_campo71"
+        readonly
+        style="top: 2cm; left: 10cm; width: 4cm"
+      />
+      <input
+        id="print_campo72"
+        readonly
+        style="top: 2.5cm; left: 10cm; width: 4cm"
+      />
+
+      <!-- Página 3 -->
+      <input
+        id="print_telefono1_nombre"
+        readonly
+        style="top: 3.5cm; left: 2cm; width: 6cm"
+      />
+      <input
+        id="print_telefono1_numero"
+        readonly
+        style="top: 3.5cm; left: 9cm; width: 6cm"
+      />
+      <input
+        id="print_telefono2_nombre"
+        readonly
+        style="top: 4cm; left: 2cm; width: 6cm"
+      />
+      <input
+        id="print_telefono2_numero"
+        readonly
+        style="top: 4cm; left: 9cm; width: 6cm"
+      />
+      <textarea
+        id="print_alergias"
+        readonly
+        style="top: 4.5cm; left: 2cm; width: 13cm; height: 2cm"
+      ></textarea>
+
+      <input
+        id="print_campo42_nombre"
+        readonly
+        style="top: 7cm; left: 2cm; width: 6cm"
+      />
+      <input
+        id="print_campo42_fecha"
+        readonly
+        style="top: 7cm; left: 9cm; width: 4cm"
+      />
+      <input
+        id="print_campo43_nombre"
+        readonly
+        style="top: 7.5cm; left: 2cm; width: 6cm"
+      />
+      <input
+        id="print_campo43_fecha"
+        readonly
+        style="top: 7.5cm; left: 9cm; width: 4cm"
+      />
+      <input
+        id="print_campo44_nombre"
+        readonly
+        style="top: 8cm; left: 2cm; width: 6cm"
+      />
+      <input
+        id="print_campo44_fecha"
+        readonly
+        style="top: 8cm; left: 9cm; width: 4cm"
+      />
+      <input
+        id="print_campo45_nombre"
+        readonly
+        style="top: 8.5cm; left: 2cm; width: 6cm"
+      />
+      <input
+        id="print_campo45_fecha"
+        readonly
+        style="top: 8.5cm; left: 9cm; width: 4cm"
+      />
+      <input
+        id="print_campo46_nombre"
+        readonly
+        style="top: 9cm; left: 2cm; width: 6cm"
+      />
+      <input
+        id="print_campo46_fecha"
+        readonly
+        style="top: 9cm; left: 9cm; width: 4cm"
+      />
+
+      <input
+        id="print_campo47_fecha"
+        readonly
+        style="top: 10cm; left: 2cm; width: 6cm"
+      />
+      <input
+        id="print_campo48_fecha"
+        readonly
+        style="top: 10.5cm; left: 2cm; width: 6cm"
+      />
+      <input
+        id="print_campo49_fecha"
+        readonly
+        style="top: 11cm; left: 2cm; width: 6cm"
+      />
+      <input
+        id="print_campo50_fecha"
+        readonly
+        style="top: 11.5cm; left: 2cm; width: 6cm"
+      />
+      <input
+        id="print_campo51_nombre"
+        readonly
+        style="top: 12cm; left: 2cm; width: 6cm"
+      />
+      <input
+        id="print_campo51_fecha"
+        readonly
+        style="top: 12cm; left: 9cm; width: 4cm"
+      />
+      <input
+        id="print_campo52_nombre"
+        readonly
+        style="top: 12.5cm; left: 2cm; width: 6cm"
+      />
+      <input
+        id="print_campo52_fecha"
+        readonly
+        style="top: 12.5cm; left: 9cm; width: 4cm"
+      />
+
+      <input
+        id="print_campo53_fecha"
+        readonly
+        style="top: 13.5cm; left: 2cm; width: 6cm"
+      />
+      <input
+        id="print_campo54_fecha"
+        readonly
+        style="top: 14cm; left: 2cm; width: 6cm"
+      />
+      <input
+        id="print_campo55_fecha"
+        readonly
+        style="top: 14.5cm; left: 2cm; width: 6cm"
+      />
+      <input
+        id="print_campo56_nombre"
+        readonly
+        style="top: 15cm; left: 2cm; width: 6cm"
+      />
+      <input
+        id="print_campo56_fecha"
+        readonly
+        style="top: 15cm; left: 9cm; width: 4cm"
+      />
+
+      <input
+        id="print_campo57_nombre"
+        readonly
+        style="top: 15.5cm; left: 2cm; width: 6cm"
+      />
+      <input
+        id="print_campo57_fecha"
+        readonly
+        style="top: 15.5cm; left: 9cm; width: 4cm"
+      />
+      <input
+        id="print_campo57_proximo"
+        readonly
+        style="top: 15.5cm; left: 14cm; width: 4cm"
+      />
+
+      <input
+        id="print_campo58_nombre"
+        readonly
+        style="top: 16.5cm; left: 2cm; width: 6cm"
+      />
+      <input
+        id="print_campo58_fecha"
+        readonly
+        style="top: 16.5cm; left: 9cm; width: 4cm"
+      />
+      <input
+        id="print_campo59_nombre"
+        readonly
+        style="top: 17cm; left: 2cm; width: 6cm"
+      />
+      <input
+        id="print_campo59_fecha"
+        readonly
+        style="top: 17cm; left: 9cm; width: 4cm"
+      />
+      <input
+        id="print_campo60_nombre"
+        readonly
+        style="top: 17.5cm; left: 2cm; width: 6cm"
+      />
+      <input
+        id="print_campo60_fecha"
+        readonly
+        style="top: 17.5cm; left: 9cm; width: 4cm"
+      />
+      <input
+        id="print_campo61_nombre"
+        readonly
+        style="top: 18cm; left: 2cm; width: 6cm"
+      />
+      <input
+        id="print_campo61_fecha"
+        readonly
+        style="top: 18cm; left: 9cm; width: 4cm"
+      />
+      <input
+        id="print_campo62_nombre"
+        readonly
+        style="top: 18.5cm; left: 2cm; width: 6cm"
+      />
+      <input
+        id="print_campo62_fecha"
+        readonly
+        style="top: 18.5cm; left: 9cm; width: 4cm"
+      />
+      <input
+        id="print_campo63_nombre"
+        readonly
+        style="top: 19cm; left: 2cm; width: 6cm"
+      />
+      <input
+        id="print_campo63_fecha"
+        readonly
+        style="top: 19cm; left: 9cm; width: 4cm"
+      />
+      <input
+        id="print_campo64_nombre"
+        readonly
+        style="top: 19.5cm; left: 2cm; width: 6cm"
+      />
+      <input
+        id="print_campo64_fecha"
+        readonly
+        style="top: 19.5cm; left: 9cm; width: 4cm"
+      />
+      <input
+        id="print_campo65_nombre"
+        readonly
+        style="top: 20cm; left: 2cm; width: 6cm"
+      />
+      <input
+        id="print_campo65_fecha"
+        readonly
+        style="top: 20cm; left: 9cm; width: 4cm"
+      />
+      <input
+        id="print_campo66_nombre"
+        readonly
+        style="top: 20.5cm; left: 2cm; width: 6cm"
+      />
+      <input
+        id="print_campo66_fecha"
+        readonly
+        style="top: 20.5cm; left: 9cm; width: 4cm"
+      />
+      <input
+        id="print_campo67_nombre"
+        readonly
+        style="top: 21cm; left: 2cm; width: 6cm"
+      />
+      <input
+        id="print_campo67_fecha"
+        readonly
+        style="top: 21cm; left: 9cm; width: 4cm"
+      />
+      <input
+        id="print_campo68_nombre"
+        readonly
+        style="top: 21.5cm; left: 2cm; width: 6cm"
+      />
+      <input
+        id="print_campo68_fecha"
+        readonly
+        style="top: 21.5cm; left: 9cm; width: 4cm"
+      />
+    </div>
+    <!-- código posterior intacto -->
+
+    <!-- código posterior intacto -->
+    <script>
+      let boxSeleccionado = null;
+      const selector = document.getElementById("box-selector");
+      const acciones = document.getElementById("acciones");
+      const boxTitulo = document.getElementById("box-titulo");
+
+      function recogerTodosLosCampos() {
+        return Array.from(document.querySelectorAll("input[id], textarea[id]"))
+          .filter((el) => !el.id.startsWith("print_"))
+          .map((el) => el.id);
+      }
+
+      function seleccionarBox(num) {
+        boxSeleccionado = num;
+        localStorage.setItem("box_seleccionado", num);
+        document.querySelectorAll(".btn-boxes button").forEach((btn) => {
+          btn.classList.toggle("active", +btn.dataset.box === num);
+        });
+        boxTitulo.textContent = `Información para el Box ${num}`;
+        cargarDatos();
+        acciones.classList.add("visible");
+        mostrarPagina(Number(localStorage.getItem("pagina_activa") || 1));
+      }
+
+      function mostrarPagina(n) {
+        if (!boxSeleccionado) return;
+        document.querySelectorAll(".pagina").forEach((p, i) => {
+          p.classList.toggle("active", i + 1 === n);
+        });
+        localStorage.setItem("pagina_activa", n);
+      }
+
+      function cargarDatos() {
+        if (!boxSeleccionado) return;
+        const data = JSON.parse(
+          localStorage.getItem(`box_${boxSeleccionado}`) || "{}"
+        );
+        const campos = recogerTodosLosCampos();
+        campos.forEach((id) => {
+          const el = document.getElementById(id);
+          if (el) el.value = data[id] || "";
+        });
+      }
+
+      function guardarDatos() {
+        if (!boxSeleccionado) return;
+        const data = {};
+        const campos = recogerTodosLosCampos();
+        campos.forEach((id) => {
+          const el = document.getElementById(id);
+          if (el) data[id] = el.value;
+        });
+        localStorage.setItem(`box_${boxSeleccionado}`, JSON.stringify(data));
+      }
+
+      function borrarDatos() {
+        if (!boxSeleccionado) return;
+        if (!confirm("¿Deseas borrar los datos del box seleccionado?")) return;
+        localStorage.removeItem(`box_${boxSeleccionado}`);
+        const campos = recogerTodosLosCampos();
+        campos.forEach((id) => {
+          const el = document.getElementById(id);
+          if (el) el.value = "";
+        });
+      }
+
+      document.addEventListener("input", guardarDatos);
+
+      window.addEventListener("DOMContentLoaded", () => {
+        const pagina = Number(localStorage.getItem("pagina_activa") || 1);
+        const box = localStorage.getItem("box_seleccionado");
+        for (let i = 1; i <= 12; i++) {
+          const btn = document.createElement("button");
+          btn.textContent = `Box ${i}`;
+          btn.onclick = () => seleccionarBox(i);
+          btn.dataset.box = i;
+          selector.appendChild(btn);
+        }
+        if (box) seleccionarBox(Number(box));
+        else mostrarPagina(pagina);
+      });
+    </script>
+  </body>
+</html>
