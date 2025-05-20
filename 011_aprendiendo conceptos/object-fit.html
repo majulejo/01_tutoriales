@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object-Fit Ejemplos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0; /* Eliminar márgenes predeterminados */
+            padding: 20px; /* Agregar un poco de espacio */
+        }
+
+        
+
+        h1, h3 {
+            text-align: left; /* Asegurarse de que los títulos no estén centrados */
+        }
+
+        .image-container {
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+            border: 1px solid #ccc;
+            margin: 10px;
+            display: inline-block;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .fill img { object-fit: fill; }
+        .contain img { object-fit: contain; }
+        .cover img { object-fit: cover; }
+        .none img { object-fit: none; }
+        .scale-down img { object-fit: scale-down; }
+    </style>
+</head>
+<body>
+    <h1>Ejemplos de object-fit</h1>
+
+    <h3>object-fit: fill</h3>
+    <div class="image-container fill">
+        <img src="https://picsum.photos/id/237/300/150" alt="Fill">
+        <p>fill</p>
+    </div>
+
+    <h3>object-fit: contain</h3>
+    <div class="image-container contain">
+        <img src="https://picsum.photos/id/237/300/150" alt="Contain">
+        <p>contain</p>
+    </div>
+
+    <h3>object-fit: cover</h3>
+    <div class="image-container cover">
+        <img src="https://picsum.photos/id/237/300/150" alt="Cover">
+        <p>cover</p>
+    </div>
+
+    <h3>object-fit: none</h3>
+    <div class="image-container none">
+        <img src="https://picsum.photos/id/237/300/150" alt="None">
+        <p>none</p>
+    </div>
+
+    <h3>object-fit: scale-down</h3>
+    <div class="image-container scale-down">
+        <img src="https://picsum.photos/id/237/300/150" alt="Scale-down">
+        <p>scale-down</p>
+    </div>
+</body>
+</html>

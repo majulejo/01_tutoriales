@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista ordenada</title>
+    <style>
+        body{
+            background-color: lightblue;
+            color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lista ordenada</h1>
+        <ol>
+            <li>Elemento 1</li>
+        </ol>
+        <h3>ol[type="A"]>li*{Elemento $}</h3>
+        <ol type="A">
+            <li>Elemento 1</li>
+        </ol>
+        <h3>ol[type="A"]>li*5{Elemento $}</h3>
+        <ol type="A">
+            <li>Elemento 1</li>
+            <li>Elemento 2</li>
+            <li>Elemento 3</li>
+            <li>Elemento 4</li>
+            <li>Elemento 5</li>
+        </ol>
+    <h3>ol[type="a"]>li*5{Elemento $}</h3>   
+        <ol type="a">
+            <li>Elemento 1</li>
+            <li>Elemento 2</li>
+            <li>Elemento 3</li>
+            <li>Elemento 4</li>
+            <li>Elemento 5</li>
+        </ol>
+        <p>Para crear una lista ordenada en HTML con elementos numerados mediante letras utilizando Emmet , puedes seguir estos pasos:
+
+            1. Sintaxis de Emmet para una lista ordenada
+            La sintaxis básica de Emmet para generar una lista ordenada es la siguiente:
+            
+            emmet
+            Copiar
+            1
+            ol>li*{Elemento $}
+            Esto generará una lista ordenada (<ol>) con elementos (<li>) numerados con números arábigos (1, 2, 3, etc.).
+            
+            Sin embargo, si deseas que los elementos se numeren con letras (A, B, C, etc.), necesitas agregar el atributo type="A" al elemento <ol>.
+            
+            2. Sintaxis de Emmet para letras
+            Para generar una lista ordenada con letras, puedes usar la siguiente sintaxis de Emmet:
+            
+            emmet
+            Copiar
+            1
+            ol[type="A"]>li*{Elemento $}
+            3. Explicación de la sintaxis
+            ol[type="A"]: Esto crea un elemento <ol> con el atributo type="A", lo que indica que los elementos deben numerarse con letras mayúsculas (A, B, C, etc.).
+            li*{Elemento $}: Esto genera varios elementos <li> con contenido dinámico. El símbolo $ se reemplaza automáticamente por un número incremental.
+            4. Ejemplo práctico
+            Si quieres crear una lista con 5 elementos numerados con letras, puedes escribir lo siguiente en Emmet:
+            
+            emmet
+            Copiar
+            1
+            ol[type="A"]>li*5{Elemento $}
+            Al expandir esta sintaxis (generalmente presionando la tecla Tab o Enter), obtendrás el siguiente código HTML:
+            
+            html
+            Copiar
+            1
+            2
+            3
+            4
+            5
+            6
+            7
+            ⌄
+            <ol type="A">
+              <li>Elemento 1</li>
+              <li>Elemento 2</li>
+              <li>Elemento 3</li>
+              <li>Elemento 4</li>
+              <li>Elemento 5</li>
+            </ol>
+            5. Resultado visual
+            Cuando renderices este código en un navegador, verás una lista ordenada numerada con letras mayúsculas:
+            
+            A. Elemento 1
+            B. Elemento 2
+            C. Elemento 3
+            D. Elemento 4
+            E. Elemento 5
+            Nota adicional
+            Si deseas usar letras minúsculas (a, b, c, etc.), simplemente cambia el valor del atributo type a "a":
+            
+            emmet
+            Copiar
+            1
+            ol[type="a"]>li*5{Elemento $}
+            Esto generará una lista numerada con letras minúsculas:
+            
+            a. Elemento 1
+            b. Elemento 2
+            c. Elemento 3
+            d. Elemento 4
+            e. Elemento 5
+            Conclusión
+            Con Emmet, puedes generar rápidamente listas ordenadas personalizadas utilizando el atributo type en el elemento <ol>. Para letras mayúsculas, usa type="A", y para letras minúsculas, usa type="a".</p>
+</body>
+</html>
