@@ -380,6 +380,9 @@ html {
 /* ---------------- */
 /* TOP PRODUCTS */
 /* ---------------- */
+
+      /* Mejores Productos */
+
 .top-products {
     display: flex;
     flex-direction: column;
@@ -622,7 +625,7 @@ html {
 }
 
 .card-blog .container-img {
-    border: 2rem;
+    border-radius: 2rem;
     cursor: pointer;
     position: relative;
     overflow: hidden;
@@ -656,6 +659,10 @@ html {
     justify-content: center;
 }
 
+.button-group-blog span i {
+    font-size: 1.3rem;
+}
+
 .button-group-blog i {
     font-size: 1.3rem;
 }
@@ -681,18 +688,16 @@ html {
 
 }
 
-.content-blog span {
-    color: var(--primary-color);
-    font-size: 1.3rem;
-}
-
 .content-blog p {
     margin-top: 1rem;
     font-size: 1.4rem;
     color: #777;
 }
 
-
+.content-blog span {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+}
 
 .btn-read-more {
     padding: 1rem 3rem;
@@ -709,6 +714,7 @@ html {
 .btn-read-more:hover {
     background-color: var(--dark-color);
 }
+
 /* ---------- */
 /* FOOTER */
 /* ---------- */
@@ -919,6 +925,9 @@ background: linear-gradient(
         padding: 25rem 0;
     }
 
+    /* Información de la Cafetería */
+
+
     .container-features {
         grid-template-columns: repeat(2, 1fr);
         padding: 3rem 2rem;
@@ -946,6 +955,8 @@ background: linear-gradient(
         font-size: 1.4rem;
     }
 
+      /* Mejores Productos */
+
     .container-options {
         align-items: center;
     }
@@ -959,15 +970,22 @@ background: linear-gradient(
         grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
     }
 
+
+          /* Galería de Imágenes y blogs */
+
     .gallery {
         grid-template-rows: repeat(2, 15rem);
     }
+/* Últimos blogs */
 
     .container-blogs {
         overflow: hidden;
         grid-template-columns: 1fr 1fr;
         height: 52rem;
     }
+
+
+    /* Footer y copyright*/
 
     .menu-footer {
         grid-template-columns: repeat(2, 1fr);
@@ -1000,6 +1018,8 @@ background: linear-gradient(
         font-size: 2.8rem;
     }
 
+    /* Información de la Cafetería */
+
     .card-feature {
         flex-direction: column;
         border-radius: 2rem;
@@ -1019,9 +1039,12 @@ background: linear-gradient(
         text-align: center;
     }
 
+          /* Mejores Productos */
+
     .container-options span {
         font-size: 1.8rem;
-        padding: 1rem 2rem; 
+        padding: 1rem 1.5rem; 
+        font-weight: 500px;
     }
 
     .container-products {
@@ -1032,9 +1055,12 @@ background: linear-gradient(
     .container-img .discount {
         font-size: 2rem;    
     }
+
     .content-card-product h3 {
         font-size: 2.2rem;
     }
+
+    /* Galería de Imágenes  Y Blogs*/
 
     .gallery {
         grid-template-rows: repeat(2, 20rem);
@@ -1065,6 +1091,8 @@ background: linear-gradient(
         font-size: 1.8rem;
     }
 
+    /* Footer y copyright*/
+    
     .contact-info ul,
     .information ul,
     .my-account ul {
