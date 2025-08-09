@@ -1,4 +1,6 @@
-// HEADER
+//***********************************
+// // HEADER
+//*************************************
 
 const btnToggleResponsive = document.querySelector(".btn-toggle");
 const menuResponsive = document.querySelector(".menu-responsive");
@@ -13,7 +15,7 @@ btnToggleResponsive.addEventListener("click", () => {
     iconBars.classList.remove("active");
     iconClose.classList.add("active");
     menuResponsive.classList.add("show");
-    menuResponsive.style.top = "${header.cientHeight}px";
+    menuResponsive.style.top = `${header.clientHeight}px`;
   }
   // cerrar menú responsive
   else {

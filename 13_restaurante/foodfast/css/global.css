@@ -24,15 +24,15 @@
 }
 
 body {
-    font-family: var(--default-font);
-    color: var(var(--text-color));
+    font-family: var(--default-font);   
+    color: var(--text-color);
 }
 
 input,
 button,
-textarea, 
+textarea,
 select {
-        font-family: var(--default-font)
+    font-family: var(--default-font) ;
 }
 
 input {
@@ -40,84 +40,85 @@ input {
     outline: none;
 }
 
-/* =========================== */
-/*        utils                */
-/* =========================== */
+/* ************************* */
+/* UTILS */
+/* ************************* */
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+.background-dark-1 {
+	background-color: var(--dark-color-divider);
 }
 
-.background-dark-1{
-    background-color: var(--dark-color-divider);
-}
-
-.background-dark-2 {
-    background-color: var(--color-secondary);
+.background-dark-2{
+	background-color: var(--color-secondary);
 }
 
 .container-logo {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    gap: 20px;
-    text-decoration: none;
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	text-decoration: none;
 
-    img {
-        width: 50px;
-        height: 50px;
-        object-fit: cover;      
-    }
-    span {
-        color: var(--color-light);
-        font-size: 26px;
-        font-weight: 600;
-    }
+	img {
+		width: 50px;
+		height: 50px;
+		object-fit: cover;
+	}
+
+	span {
+		color: var(--color-light);
+		font-size: 26px;
+		font-weight: 600;
+	}
 }
 
-
 .btn {
-    text-decoration: none;
-    padding: 17px 25px;
-    text-transform: capitalize;
-    border-radius: 9999px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-weight: 700;
-    font-size: 16px;
-    transition: background .3s ;
-    cursor: pointer;
-    border: none;
+	text-decoration: none;
+	padding: 17px 25px;
+	text-transform: capitalize;
+	border-radius: 9999px;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	font-weight: 700;
+	font-size: 16px;
+	transition: background-color 0.3s;
+	cursor: pointer;
+	border: none;
 
-    &.btn-primary {
-        background-color: var(--color-primary);
-        color: var(--color-light);
-        position: relative;
+	&.btn-primary {
+		background-color: var(--color-primary);
+		color: var(--color-light);
+		position: relative;
 
-        &:hover {
-            background-color: var(--color-light);
-            color: var(--dark-color-divider);
-        }
-    }
+		&:hover {
+			background-color: var(--color-light);
+			color: var(--dark-color-divider);
+		}
+	}
 
-    &.btn-secondary {
-        background-color: var(--color-light);
-        color: var(--dark-color-divider);
-        position: relative;
+	&.btn-secondary {
+		background-color: var(--color-light);
+		color: var(--dark-color-divider);
+		position: relative;
 
-        &:hover {
-            background-color: var(--color-primary);
-            color: var(--color-light);
-        }
-    }
+		&:hover {
+			background-color: var(--color-primary);
+			color: var(--color-light);
+		}
+	}
+
+
+
 }
 
 section {
-    padding: 100px 0;
-    
-    @media (max-width: 992px) {
-        padding: 50px 15px;
-    }
+	padding: 100px 0;
+
+	@media (max-width: 992px) {
+		padding: 50px 15px;
+	}
 }
