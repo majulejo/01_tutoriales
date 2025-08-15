@@ -25,7 +25,7 @@
         z-index: -1;
 
     }
-
+/* .container  es igual a & > div por ser el primer div después de .hero-banner */
     & > div {
         display: flex;
         align-items: center;
