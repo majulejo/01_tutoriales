@@ -29,7 +29,7 @@
       <nav class="nav-links">
         <ul>
           <li>
-            <a href="#">Tours</a>
+            <a href="#" class="active">Tours</a>
           </li>
           <li>
             <a href="#">Destinos</a>
@@ -144,20 +144,24 @@
     <!-- MAIN -->
     <main class="container">
       <section class="main-tours">
+
         <!-- RESPONSIVE: SELECT PARA ESCOGER FILTROS -->
-<div class="container-select">
-	<!-- ICONO DE BUSQUEDA -->
-	<i class="fa-solid fa-search"></i>
-	<select name="filter" id="filter-select" >
-		<option value="" disabled selected>Escoge un filtro</option>
-		<option value="all">Todos</option>
-		<option value="location">Ubicación</option>
-		<option value="type">Tipo</option>
-		<option value="price">Precio</option>
-		<option value="rating">Calificación</option>
-		<option value="duration">Duración</option>
-	</select>
-</div>
+        <div class="container-select">
+          <!-- ICONO DE BUSQUEDA -->
+          <i class="fa-solid fa-search"></i>
+
+          <select name="filter" id="filter-select">
+            <option value="" disabled selected>Escoge un filtro</option>
+            <option value="all">Todos</option>
+            <option value="location">Ubicación</option>
+            <option value="type">Tipo</option>
+            <option value="price">Precio</option>
+            <option value="duration">Duración</option>
+            <option value="rating">Calificación</option>
+
+          </select>
+        </div>
+
         <!-- CONTENEDOR DE FILTROS -->
         <div class="container-filters">
           <!-- UBICACION -->
@@ -239,7 +243,7 @@
             <div class="decoration"></div>
           </div>
 
-          <!-- TIPO DE TOUR -->
+          <!-- TIPO -->
           <div class="container-filter" data-filter="type">
             <h3>
               <span class="icon">🔶</span>
@@ -396,7 +400,7 @@
         </div>
 
         <!-- LISTA DE TOURS -->
-        <div class="container-tours" >
+        <div class="container-tours">
           <!-- CARD-TOUR 1 -->
           <div class="card-tour">
             <div class="container-img">
@@ -472,9 +476,7 @@
                   Francia
                 </span>
 
-                <span class="price">
-					$520
-				</span>
+                <span class="price"> $520 </span>
               </div>
 
               <div class="container-title">
@@ -756,15 +758,14 @@
         </div>
       </section>
 
-	  <!-- SECTION PAGINATION -->
-	<section class="container-pagination">
-		<a href="#" class="active">1</a>
-		<a href="#" >2</a>
-		<a href="#" >3</a>
-		<a href="#" >4</a>
-		<a href="#" class="next"><i class="fa-solid fa-chevron-right"></i></a>
-	</section>
-
+      <!-- SECTION PAGINATION -->
+      <section class="container-pagination">
+        <a href="#" class="active">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#" class="next"><i class="fa-solid fa-chevron-right"></i></a>
+      </section>
     </main>
 
     <!-- FOOTER -->
@@ -858,6 +859,6 @@
     </footer>
 
     <script src="js/global.js"></script>
-	<script src="js/tours.js"></script>
+    <script src="js/tours.js"></script>
   </body>
 </html>
