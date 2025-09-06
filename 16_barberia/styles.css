@@ -193,6 +193,7 @@ hr {
 
 .services-txt p {
     padding: 50px 150px;
+    color: #858585;
 }
 
 .services-group {
@@ -225,4 +226,37 @@ hr {
 .services-1 a {
     color: #cf2d3a;
     font-size: 16px;
+}
+
+.prices {
+    display: flex;
+}
+
+.prices-1 {
+    width: 50%;
+    padding: 150px 250px 150px 100px;
+    background-color: #191919;
+}
+
+table {
+    margin: 50px 0;
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+tr {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #afafaf;
+    margin-bottom: 20px;
+}
+
+th {
+    color: #fff;
+    padding-bottom: 15px;
+}
+
+td {
+    color: #cf2d3a;
 }
