@@ -174,7 +174,7 @@ h2 {
 p {
     font-size: 16px;
     color: #afafaf;
-    m25-0
+    margin: 25px 0;
 }
 
 .b1 {
@@ -199,7 +199,6 @@ hr {
 
 .services-txt p {
     padding: 50px 150px;
-    color: #858585;
 }
 
 .services-group {
@@ -345,6 +344,10 @@ form {
     border-radius: 10px;
     color: #fff;
     font-size: 14px;
+}
+
+.campo:hover {
+    border: 1px solid  #afafaf;
 }
 
 textarea {
