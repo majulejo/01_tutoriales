@@ -3,4 +3,63 @@
   @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
   /* font-family: "Lobster", sans-serif; */
 
-  
+  ;root {
+
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;    
+  }
+
+  body {
+    font-family: "Poppins", sans-serif; 
+  }
+
+  /* Globales */
+  .btn  {
+
+  }
+
+  .logo {
+    a {
+        font-family: "Lobster", sans-serif;
+        text-decoration: none;color: #000;
+        font-size: 30px;
+    }
+  }
+
+  /* utilidades */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  /* header */
+  header {
+    border-bottom: 1px solid #f3f2f4;
+    padding: 30px 50px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    button {
+        border: none;
+        background: none;
+        outline: none;
+
+        i {
+            font-size: 22px;
+        }
+
+        @media (min-width:768px) {
+            display: none;
+        }
+    }
+     @media (max-width:768px) {
+            padding: 30px;;
+        }
+
+  }
