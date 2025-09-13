@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarjeta de Chocolate</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #f5e3d8 0%, #e6ccb8 100%);
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .chocolate-card {
+            width: 350px;
+            background: radial-gradient(circle, #9a5d46 0%, #7d4c38 100%);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(90, 50, 35, 0.4);
+            overflow: hidden;
+            color: #fff;
+            transition: transform 0.3s ease;
+        }
+        
+        .chocolate-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card-header {
+            padding: 25px;
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .card-title {
+            margin: 0;
+            font-size: 28px;
+            font-weight: 600;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+        
+        .card-subtitle {
+            margin-top: 8px;
+            font-size: 16px;
+            opacity: 0.8;
+        }
+        
+        .card-content {
+            padding: 25px;
+            line-height: 1.6;
+        }
+        
+        .card-footer {
+            padding: 20px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.15);
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #5d3925;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 500;
+            transition: background 0.3s;
+        }
+        
+        .btn:hover {
+            background: #4a2d1d;
+        }
+        
+        .chocolate-details {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        
+        .detail-item {
+            text-align: center;
+        }
+        
+        .detail-value {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .detail-label {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="chocolate-card">
+        <div class="card-header">
+            <h2 class="card-title">Chocolate Premium</h2>
+            <p class="card-subtitle">70% Cacao - Origen Ecuador</p>
+        </div>
+        
+        <div class="card-content">
+            <p>Disfruta del auténtico sabor del chocolate artesanal con nuestro blend premium de granos de cacao seleccionados cuidadosamente.</p>
+            
+            <div class="chocolate-details">
+                <div class="detail-item">
+                    <div class="detail-value">70%</div>
+                    <div class="detail-label">Cacao</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-value">250g</div>
+                    <div class="detail-label">Peso</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-value">★ 4.9</div>
+                    <div class="detail-label">Rating</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card-footer">
+            <a href="#" class="btn">Comprar ahora</a>
+        </div>
+    </div>
+</body>
+</html>
