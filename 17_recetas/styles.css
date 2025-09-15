@@ -698,3 +698,71 @@ main {
 
 /* POST INSTAGRAM */
 
+.section-posts-instagram {
+  background: linear-gradient(to bottom, #fff 25%, #ecfafe);
+  padding: 20px 0 40px 0;
+  margin-bottom: 60px;
+
+  .section-instagram {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+
+    h2 {
+      width: 80%;
+      text-align: center;
+      line-height: 55px;
+
+      span {
+        color: var(--color-terciary);
+      }
+    }
+
+    p {
+      width: 60%;
+      text-align: center;
+    }
+    .list-posts-instagram {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+
+      margin-top: 30px;
+
+      .card-img {
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .section-instagram {
+      margin-bottom: 0;
+
+      p {
+        width: 100%;
+        font-size: 14px;
+      }
+
+      .list-posts-instagram {
+        padding: 0 10px;
+        display: flex;
+        overflow-x: auto;
+
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+
+      }
+    }
+  }
+}
