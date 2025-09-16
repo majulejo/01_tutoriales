@@ -1,0 +1,70 @@
+/*  INFORMACIÓN DE PLANTAS  */
+Nombre: Monstera Deliciosa
+Descripción: La Monstera Deliciosa, también conocida como la planta del queso suizo, es perfecta para interiores. Sus hojas grandes y perforadas añaden un toque tropical a cualquier espacio.
+Precio: $35
+
+-------------
+Nombre: Fiddle Leaf Fig
+Descripción: La Fiddle Leaf Fig es una planta popular por sus hojas grandes y brillantes. Es ideal para añadir un elemento verde y sofisticado a tu hogar.
+Precio: $45
+
+--------------
+Nombre: Pothos
+Descripción: El Pothos es una planta resistente y fácil de cuidar. Es perfecta para principiantes y se adapta bien a diferentes condiciones de luz.
+Precio $20
+
+--------------
+Nombre: Snake Plant
+La Snake Plant, también conocida como Sansevieria, es una planta muy resistente que requiere poco mantenimiento. Sus hojas verticales con bordes amarillos son un gran complemento decorativo.
+Precio: $30.00
+
+--------------
+Nombre: Aloe Vera
+Descripción: El Aloe Vera es una planta suculenta conocida por sus propiedades medicinales. Sus hojas carnosas y puntiagudas son ideales para interiores y exteriores.
+Precio: $25.00
+
+--------------
+Nombre: Peace Lily
+Descripción: La Peace Lily es una planta elegante con hojas verdes brillantes y flores blancas. Es excelente para purificar el aire y añade un toque de paz a cualquier espacio.
+Precio: $40.00
+
+--------------
+Nombre: Helecho
+Descripción: El helecho es una planta exuberante con frondas verdes y delicadas. Es ideal para crear un ambiente fresco y natural en tu hogar.
+Precio: $18.00
+
+--------------
+Nombre: ZZ Plant
+Descripción: La ZZ Plant es conocida por sus hojas gruesas y brillantes. Es una planta muy resistente que requiere poco mantenimiento, perfecta para cualquier espacio.
+Precio: $28.00 
+
+
+ICONOS UTILIZADOS EN EL HTML
+TELEFONO = <i class="fa-solid fa-phone-volume"></i>
+CORREO = <i class="fa-regular fa-envelope"></i>
+FACEBOOK = <i class="fa-brands fa-facebook"></i>
+INSTAGRAM = <i class="fa-brands fa-instagram"></i>
+TWITTER X = <i class="fa-brands fa-x-twitter"></i>
+BUSQUEDA = <i class="fa-solid fa-magnifying-glass"></i>
+CAMPANA/NOTIFICACION = <i class="fa-regular fa-bell"></i>
+USUARIO = <i class="fa-regular fa-user"></i>
+CIRCULO-DERECHA = <i class="fa-solid fa-circle-chevron-right"></i>
+CIRCULO-PLAY = <i class="fa-regular fa-circle-play"></i>
+REGALO = <i class="fa-solid fa-gift"></i>
+CORAZON RELLENO = <i class="fa-solid fa-heart"></i>
+ESTRELLA RELLENA = <i class="fa-solid fa-star"></i>
+LIBRO ABIERTO = <i class="fa-solid fa-book-open"></i>
+ESTRELLA SIN RELLENAR = <i class="fa-regular fa-star"></i>
+FLECHA IZQUIERDA = <i class="fa-solid fa-chevron-left"></i>
+FLECHA DERECHA = <i class="fa-solid fa-chevron-right"></i>
+FLECHA DERECHA BUSCAR = <i class="fas fa-arrow-right"></i>
+
+
+:root {
+  --green-light: #e7f7ec;
+  --green-medium:#3a7e55;
+  --green-dark: #255d3c;
+  --gray-txt: #8491a9;
+  --gray-lighy: #f6f6f7;
+  --background-card-product: #f8fcf9;
+}
