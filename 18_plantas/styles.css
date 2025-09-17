@@ -190,5 +190,60 @@ header {
 }
 
 .container-img-hero {
-    flex: 1;
+    flex: 1.5;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+
+    .img-hero {
+        background-color: #f3faf5;
+        border-radius: 50%;
+        margin: 50px;
+        width: 450px;
+        height: 450px;
+        position: relative;
+
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    .message-float-header {
+        position: absolute;
+        top: 45%;
+        left: 10%;
+        padding: 15px 25px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        border-radius: 10px;
+
+        /* *Efecto Glassmorfism */
+        background-color: #f8f9f810;
+        box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+
+        i {
+            color: #fff;
+            font-size: 16px;
+            background-color: var(--green-medium);
+            padding: 10px;
+            border-radius: 50%;
+        }
+
+        span {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            p {
+                font-size: 14px;
+                color: var(--gray-txt);
+            }
+        }
+    }
 }
