@@ -1,0 +1,66 @@
+[
+    {
+      "id": 1,
+      "nombre": "Café Espresso",
+      "precio": 2.50,
+      "categoria": "Café",
+      "imagen": "assets/images/1.jpg"
+    },
+    {
+      "id": 2,
+      "nombre": "Latte Vainilla",
+      "precio": 3.75,
+      "categoria": "Café",
+      "imagen": "assets/images/2.jpg"
+    },
+    {
+      "id": 3,
+      "nombre": "Té Verde Matcha",
+      "precio": 4.00,
+      "categoria": "Té",
+      "imagen": "assets/images/3.jpg"
+    },
+    {
+      "id": 4,
+      "nombre": "Smoothie de Fresas",
+      "precio": 5.00,
+      "categoria": "Smoothie",
+      "imagen": "assets/images/4.jpg"
+    },
+    {
+      "id": 5,
+      "nombre": "Frappuccino",
+      "precio": 4.50,
+      "categoria": "Café",
+      "imagen": "assets/images/5.jpg"
+    },
+    {
+      "id": 6,
+      "nombre": "Té Chai Latte",
+      "precio": 3.25,
+      "categoria": "Té",
+      "imagen": "assets/images/6.jpg"
+    },
+    {
+      "id": 7,
+      "nombre": "Smoothie de Mango",
+      "precio": 5.25,
+      "categoria": "Smoothie",
+      "imagen": "assets/images/7.jpg"
+    },
+    {
+      "id": 8,
+      "nombre": "Café Mocha",
+      "precio": 4.75,
+      "categoria": "Café",
+      "imagen": "assets/images/8.jpg"
+    },
+    {
+      "id": 9,
+      "nombre": "Limonada con Hierbabuena",
+      "precio": 3.00,
+      "categoria": "Bebida",
+      "imagen": "assets/images/9.jpg"
+    }
+  ]
+  
