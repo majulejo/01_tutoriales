@@ -54,7 +54,7 @@ function addToCart(productId, buttonElement) {
     const cantidadElement = document.getElementById(`cantidad-${productId}`);
     const quantity = parseInt(cantidadElement.textContent, 10);
 
-    const existingProduct = cart.find(item => item.id === productoId);
+    const existingProduct = cart.find(item => item.id === productId);
 
     if (existingProduct) {
         existingProduct.quantity += quantity;
@@ -64,7 +64,7 @@ function addToCart(productId, buttonElement) {
         .then(productos => {
             const product = productos.find(p => p.id === productId);
             if (product) {
-                cart,push({...product, quantity: quantity});
+                cart.push({...product, quantity: quantity});
                 displayCart();
             }
         })
@@ -112,7 +112,7 @@ function decrementarProducto(productId) {
         cart = cart.filter(item => item.id !== productId);
 
         const cantidadContainer = cantidadElemento.parentElement;
-        const buttonElement = cantidadContainer.previusElementSibling;
+        const buttonElement = cantidadContainer.previousElementSibling;
         cantidadContainer.style.display = 'none';
         buttonElement.style.display = 'inline-block';
 
@@ -132,14 +132,14 @@ function removeFromCart(productId) {
     cart = cart.filter(item => item.id !== productId);
 
     const cantidadContainer = document.getElementById(`cantidad-${productId}`).parentElement;
-    const buttonElement = cantidadContainer.previusElementSibling;
+    const buttonElement = cantidadContainer.previousElementSibling;
     cantidadContainer.style.display ='none';
     buttonElement.style.display = 'inline-block';
 
     const cantidadElemento = document.getElementById(`cantidad-${productId}`);
     cantidadElemento.textContent = 1;
 
-    const cardImgElement = buttonElement.closest('cards__card').querySelector('.card__img');
+    const cardImgElement = buttonElement.closest(',cards__card').querySelector('.card__img');
     cardImgElement.classList.remove('active');
 
     displayCart();
@@ -154,7 +154,7 @@ function displayCart() {
 
     let total = 0;
 
-    if (cart.lenght === 0) {
+    if (cart.length === 0) {
         cartList.innerHTML = `
         <div class="items_img">
             <img src="assets/images/coffee.png" alt="Coffee">
@@ -166,17 +166,37 @@ function displayCart() {
             total+= item.precio * item.quantity;
             cartList.innerHTML += `
             <div class="items__item">
-                <h4>&{item.nombre}</h4>
-            <div class="item__detalles">
-                <p>${item.quantity}x <span>$${item.precio.toFixed(2)}</span></p>
-                <p>$$${(item.precio.toFixed(2) * item.quantity).toFixed(2)}</p>
-                <button onclick="removeFromCart(${item.id})">
-                    <i class="ri-close-circle-line"></i>
-                </button>
+                <h4>${item.nombre}</h4>
+                <div class="item__detalles">
+                    <p>${item.quantity}x <span>$${item.precio.toFixed(2)}</span></p>
+                    <p>$$${(item.precio.toFixed(2) * item.quantity).toFixed(2)}</p>
+                    <button onclick="removeFromCart(${item.id})">
+                        <i class="ri-close-circle-line"></i>
+                    </button>
+                </div>
             </div>
-            </div>`
-        })
+            `;
+        });
+
+        const totalContainer = document.createElement('div');
+        totalContainer.classList.add('item__total');
+        totalContainer.innerHTML = `
+            <div>
+                <span>Total a cancelar: </span>
+                <span class="total__monto">$${total.toFixed(2)}/span>
+            </div>
+            
+            <button class="btn" id="btn-checkout">Realizar Pedido</button>
+            `;
+            cartList.appendChild(totalContainer);
     }
+    const checkoutButton = document.getElementById('btn-checkout');
+    if (checkoutButton) {
+        //checkoutButton.addEventListener('click', mostrarModalPedido);
+    }
+
+    const totalItems = cart.reduce((acc,item) => acc + item.quantity, 0);
+    cartHeader.textContent =`Tu carrito (${totalItems})`;
 }
 
 /*Función para mostrar el modal del pedido*/
