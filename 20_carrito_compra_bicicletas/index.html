@@ -4,11 +4,107 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Carrito Bicicletas</title>
 </head>
 <body>
+<header class="header">
+    <a href="#" id="cart-icon">
+        <i class="fa-solid fa-cart-shopping"></i>
+        Ver Carrito(<span id="cart-count">0</span>)
+    </a>
+</header>
 
+<section class="products container">
+ <!-- ?Prpducto 1 -->
+    <div class="card-product">
+        <img src="images/product1.png" alt="product1">
+        <div class="product-title">
+            <h3>
+                Scooter Electrónico
+            </h3>
+            <p class="price">
+                $1500
+            </p>
+        </div>
+
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptatibus beatae ex aliquid rerum delectus velit eos illo soluta molestiae ullam tenetur, sapiente in tempora, voluptatem eius qui.
+        </p>
+
+        <div class="product-button">
+            <i class="fa-solid fa-heart"></i>
+            <a href="#" class="add-to-cart">Agregar al carrito</a>
+        </div>
+    </div>
+
+     <!-- ?Prpducto 2 -->
+    <div class="card-product">
+        <img src="images/product2.png" alt="product2">
+        <div class="product-title">
+            <h3>
+                Patinete Electrónico
+            </h3>
+            <p class="price">
+                $1200
+            </p>
+        </div>
+
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptatibus beatae ex aliquid rerum delectus velit eos illo soluta molestiae ullam tenetur, sapiente in tempora, voluptatem eius qui.
+        </p>
+
+        <div class="product-button">
+            <i class="fa-solid fa-heart"></i>
+            <a href="#" class="add-to-cart">Agregar al carrito</a>
+        </div>
+    </div>
+
+     <!-- ?Prpducto 3 -->
+    <div class="card-product">
+        <img src="images/product3.png" alt="product3">
+        <div class="product-title">
+            <h3>
+                Bicileta Electrónica
+            </h3>
+            <p class="price">
+                $12500
+            </p>
+        </div>
+
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptatibus beatae ex aliquid rerum delectus velit eos illo soluta molestiae ullam tenetur, sapiente in tempora, voluptatem eius qui.
+        </p>
+
+        <div class="product-button">
+            <i class="fa-solid fa-heart"></i>
+            <a href="#" class="add-to-cart">Agregar al carrito</a>
+        </div>
+    </div>
+</section>
+
+<div id="cart-modal" class="cart-modal" >
+    <div class="cart-content">
+        <span class="close-cart">&times;</span>
+        <h2>Carrito de Compras</h2>
+        <ul id="cart-items">
+            <li id="total">Total: $0</li>
+        </ul>        
+        <button id="checkout">Finalizar compra</button>
+    </div>
+</div>
+
+<div id="purchase-modal" class="purchase-modal">
     
+    <div class="purchase-content">
+        <h2>
+            ¡Compra Finalizada!
+        </h2>
+        <p>Gracias por tu compra.</p>
+        <button id="close-purchase">Cerrar</button>
+    </div>
+</div>
+
     
     <script src="script.js"></script>
 </body>
