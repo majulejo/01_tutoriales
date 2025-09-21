@@ -33,13 +33,6 @@ function saveCart() {
     localStorage.setItem("cart", JSON.stringify(cart));
 }
 
-function removeFromCart(index) {
-    cart.splice(index, 1);
-    updateCartCount();
-    displayCart();
-    updateTotal();
-    saveCart(); // Solo si usas localStorage
-}
 
 function displayCart() {
     cartItems.innerHTML = '';
@@ -107,6 +100,20 @@ function displayCart() {
 //         });
 //     }
 // }
+
+// Opcional: Agregar confirmación antes de eliminar:
+// Si quieres que pregunte antes de eliminar:
+
+
+function removeFromCart(index) {
+    if (confirm("¿Estás seguro de que quieres eliminar este producto?")) {
+        cart.splice(index, 1);
+        updateCartCount();
+        displayCart();
+        updateTotal();
+        saveCart(); // Solo si usas localStorage
+    }
+}
 
 function updateTotal() {
     const total = cart.reduce((acc, item) => acc + item.price, 0);
