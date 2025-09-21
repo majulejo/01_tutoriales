@@ -3,7 +3,7 @@ let cart = [];
 const cartCount = document.getElementById("cart-count");
 const cartItems = document.getElementById("cart-items");
 const cartModal = document.getElementById("cart-modal");
-const closeModal = document.getElementById("close-cart");
+const closeCart = document.getElementById("close-cart");
 const checkoutButton = document.getElementById("checkout");
 const totalElement = document.getElementById("total");
 const purchaseModal = document.getElementById("purchase-modal");
@@ -33,14 +33,80 @@ function saveCart() {
     localStorage.setItem("cart", JSON.stringify(cart));
 }
 
+function removeFromCart(index) {
+    cart.splice(index, 1);
+    updateCartCount();
+    displayCart();
+    updateTotal();
+    saveCart(); // Solo si usas localStorage
+}
+
 function displayCart() {
     cartItems.innerHTML = '';
-    cart.forEach((item) => {
+    if (cart.length === 0) {
         const li = document.createElement("li");
-        li.textContent = `${item.name} - $${item.price}`;
+        li.textContent = "El carrito está vacío";
+        li.style.fontStyle = "italic";
+        li.style.color = "#999";
         cartItems.appendChild(li);
-    });
+    } else {
+        cart.forEach((item, index) => {
+            const li = document.createElement("li");
+            li.innerHTML = `
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span>${item.name} - $${item.price}</span>
+                    <button onclick="removeFromCart(${index})" 
+                            style="background: #e74c3c; 
+                                   color: white; 
+                                   border: none; 
+                                   padding: 5px 10px; 
+                                   border-radius: 5px; 
+                                   cursor: pointer; 
+                                   font-size: 12px;">
+                        Eliminar
+                    </button>
+                </div>
+            `;
+            cartItems.appendChild(li);
+        });
+    }
 }
+
+// Alternativa: Botón con ícono X:
+// Si prefieres un botón más pequeño con solo una "X":
+
+// function displayCart() {
+//     cartItems.innerHTML = '';
+//     if (cart.length === 0) {
+//         const li = document.createElement("li");
+//         li.textContent = "El carrito está vacío";
+//         li.style.fontStyle = "italic";
+//         li.style.color = "#999";
+//         cartItems.appendChild(li);
+//     } else {
+//         cart.forEach((item, index) => {
+//             const li = document.createElement("li");
+//             li.innerHTML = `
+//                 <div style="display: flex; justify-content: space-between; align-items: center;">
+//                     <span>${item.name} - $${item.price}</span>
+//                     <button onclick="removeFromCart(${index})" 
+//                             style="background: #f69858; 
+//                                    color: white; 
+//                                    border: none; 
+//                                    padding: 3px 8px; 
+//                                    border-radius: 50%; 
+//                                    cursor: pointer; 
+//                                    font-size: 12px;
+//                                    width: 25px;
+//                                    height: 25px;">
+//                         ×
+//                     </button>
+//                 </div>
+//             `;
+//             cartItems.appendChild(li);
+//         });
+//     }
+// }
 
 function updateTotal() {
     const total = cart.reduce((acc, item) => acc + item.price, 0);

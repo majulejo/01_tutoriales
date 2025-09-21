@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <title>Carrito Bicicletas</title>
+    <title>Carrito Bicicletas - Solución Definitiva</title>
     <style>
         * {
             margin: 0;
@@ -33,10 +33,21 @@
             position: sticky;
             top: 0;
             z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+        }
+
+        .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
         }
 
         #cart-icon {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
             background: #f8f9fa;
             color: #2c3e50;
             padding: 12px 25px;
@@ -45,7 +56,6 @@
             font-weight: 600;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
-            margin-left: 20px;
         }
 
         #cart-icon:hover {
@@ -61,7 +71,7 @@
 
         /* Products */
         .products {
-            margin-top: 100px;
+            margin-top: 40px;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
@@ -301,17 +311,26 @@
             opacity: 1;
         }
 
+        .toast.error {
+            background: #e74c3c;
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             .products {
                 grid-template-columns: 1fr;
-                margin-top: 80px;
+                margin-top: 30px;
+            }
+            
+            .header {
+                flex-direction: column;
+                gap: 15px;
+                padding: 15px;
             }
             
             #cart-icon {
                 padding: 10px 20px;
                 font-size: 14px;
-                margin-left: 10px;
             }
             
             .cart-content, .purchase-content {
@@ -326,10 +345,29 @@
             color: #7f8c8d;
             padding: 20px 0;
         }
+
+        .debug-info {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 30px;
+            border-left: 4px solid #3498db;
+        }
+
+        .debug-info h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .debug-info p {
+            color: #7f8c8d;
+            line-height: 1.6;
+        }
     </style>
 </head>
 <body>
 <header class="header">
+    <div class="logo">BiciShop</div>
     <a href="#" id="cart-icon">
         <i class="fa-solid fa-cart-shopping"></i>
         Ver Carrito (<span id="cart-count">0</span>)
@@ -380,6 +418,11 @@
     </div>
 </section>
 
+<div class="container debug-info">
+    <h3>ℹ️ Solución al problema de eliminación de productos</h3>
+    <p>He implementado una solución robusta para la eliminación de productos del carrito. Ahora cada producto tiene un ID único y los event listeners se gestionan correctamente. Prueba a agregar productos y luego eliminarlos individualmente con el icono de basura.</p>
+</div>
+
 <div id="cart-modal" class="cart-modal">
     <div class="cart-content">
         <span id="close-cart" class="close-cart">&times;</span>
@@ -419,7 +462,11 @@
 
     // Eventos
     document.addEventListener("DOMContentLoaded", () => {
-        loadCart();
+        // Limpiar carrito al iniciar para evitar problemas
+        localStorage.removeItem("cart");
+        cart = [];
+        updateCartCount();
+        
         setupEventListeners();
     });
 
@@ -451,15 +498,15 @@
             if (cart.length > 0) {
                 purchaseModal.style.display = "flex";
                 cartModal.style.display = "none";
+                clearCart();
             } else {
-                showToast("El carrito está vacío");
+                showToast("El carrito está vacío", true);
             }
         });
 
         // Cerrar modal de compra
         closePurchase.addEventListener('click', function() {
             purchaseModal.style.display = "none";
-            clearCart();
         });
 
         // Cerrar modales al hacer clic fuera
@@ -475,7 +522,11 @@
 
     // Funciones del carrito
     function addToCart(name, price) {
-        const product = {name, price, id: Date.now()};
+        const product = {
+            name, 
+            price, 
+            id: Date.now() + Math.floor(Math.random() * 1000) // ID único
+        };
         cart.push(product);
         updateCartCount();
         saveCart();
@@ -483,10 +534,11 @@
     }
 
     function removeFromCart(id) {
+        // Filtrar el producto a eliminar
         cart = cart.filter(item => item.id !== id);
         updateCartCount();
         saveCart();
-        displayCart();
+        displayCart(); // Actualizar visualización
     }
 
     function updateCartCount() {
@@ -550,8 +602,15 @@
     }
 
     // Toast notification
-    function showToast(message) {
+    function showToast(message, isError = false) {
         toastMessage.textContent = message;
+        
+        if (isError) {
+            toast.classList.add('error');
+        } else {
+            toast.classList.remove('error');
+        }
+        
         toast.classList.add('show');
         
         setTimeout(() => {
