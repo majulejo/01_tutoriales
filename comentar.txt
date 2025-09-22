@@ -1,0 +1,7 @@
+/* BETTER COMMENT */
+/* ! COMENTARIOS */
+/* ? COMENTARIOS */
+/* // COMENTARIOS */
+/* TODO COMENTARIOS */
+/* * COMENTARIOS */
+/* ! ?  // todo * */
