@@ -15,6 +15,11 @@ a {
     text-decoration: none;
 }
 
+.wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 .column-4 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -37,3 +42,49 @@ a {
     border-radius: 6px;
     background: linear-gradient(to top, rgba(0 0 0 /.5), rgba(0 0 0  /.5))
 }
+
+.wrap-text_tarjeta-rest p {
+    color: #f2f2f2;
+}
+
+.cta-wrap_tarjeta-rest {
+    display: flex;
+    justify-content: space-between;
+}
+
+.precio-_tarjeta-rest span{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.cta_tarjeta-rest {
+    background-color: #ffc300;
+    padding: .25rem 1rem;
+    border-radius: 4px;
+}
+
+.cta_tarjeta-rest a {
+    color: #fff;
+    font-weight: bold;
+}
+
+@media (max-width: 1024px) {
+    .column-4 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .column-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .column-4 {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
