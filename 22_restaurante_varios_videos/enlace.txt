@@ -1,1 +1,20 @@
+1- Cómo hacer tarjetas de comida para Restaurante en HTML y CSS:
 Video 1: https://www.youtube.com/watch?v=s0xKM6FqJY8
+
+2- Cómo hacer la Carta de un Restaurante en HTML y CSS:
+Video 2: https://www.youtube.com/watch?v=oKTx6NaqjQc
+
+3- Cómo Hacer un Menú de Restaurante en HTML y CSS:
+Video 3: https://www.youtube.com/watch?v=RlysFtDb4iE
+
+4- Cómo hacer Encabezado (Header) de la página de un Restaurante:
+Video 4: https://www.youtube.com/watch?v=0nMZ0rGJ5a8
+
+5- Footer de página web de Restaurante:
+Video 5: https://www.youtube.com/watch?v=sODO32SFVgQ
+
+6- Página de contacto de Restaurante:
+Video 6: https://www.youtube.com/watch?v=8e0GX_USNsA 
+
+7- Página Web de Restaurante (Responsive):
+Video 7: https://www.youtube.com/watch?v=PmiWYoU0vmQ

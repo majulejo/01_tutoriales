@@ -1,0 +1,305 @@
+/*? Estilos Generales*/
+html {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/* BETTER COMMENT */
+/* ! COMENTARIOS */
+/* ? COMENTARIOS */
+/* // COMENTARIOS */
+/* TODO COMENTARIOS */
+/* * COMENTARIOS */
+/* ! ?  // todo * */
+
+/*  ! HERO */
+.hero {
+  background: url(img/elaborando.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100dvh;
+}
+
+/* Todo Menu Header Restaurante */
+
+header.main-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+.header-wrap {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: #fff;
+  z-index: 999;
+}
+
+.wrap-logo-header {
+  display: flex;
+  align-items: center;
+  flex-basis: 15%;
+}
+
+.logo-header {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #222;
+}
+
+.nav-wrap-header {
+  display: flex;
+  flex-basis: 50%;
+}
+
+.nav-header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+ul.main-menu {
+  display: flex;
+  width: 100%;
+  z-index: 99;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+  font-size: 1.1rem;
+}
+
+ul.main-menu #nav-main-contact {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: #ffc300;
+  color: #fff;
+}
+
+li.menu-item {
+  margin: 0.75rem;
+  display: flex;
+}
+
+li.menu-item a {
+  padding: 0.5rem 1rem;
+  color: #222;
+}
+
+li.menu-item a:hover {
+  color: #ffc300;
+}
+
+i.toggle-menu {
+  display: none;
+  background-color: transparent;
+  border: none;
+  z-index: 9999;
+}
+
+i.toggle-menu img {
+  width: 27px;
+  z-index: 99;
+}
+
+input#check {
+  display: none;
+}
+
+@media (min-width: 880px) {
+  .header {
+    padding: 0.5rem 5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    margin-bottom: 4rem;
+  }
+
+  .header-wrap {
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    padding: 0;
+    top: 0;
+    z-index: 9999;
+  }
+
+  .wrap-logo-header {
+    position: fixed;
+    z-index: 999;
+    top: 3%;
+    left: 3%;
+  }
+
+  i.toggle-menu {
+    display: flex;
+  }
+
+  ul.main-menu,
+  #nav-main-contact {
+    display: none;
+    left: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  ul.main-menu {
+    position: fixed;
+    background-color: #fff;
+  }
+
+  label.checkbtn {
+    position: fixed;
+    right: 3%;
+    top: 3%;
+    z-index: 9999;
+  }
+
+  #check:checked ~ ul {
+    display: flex;
+    z-index: 9;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    height: 100dvh;
+    top: 0;
+    font-size: 2rem;
+  }
+}
+
+/* * ***************** */
+/* * FOOTER */
+/* * ***************** */
+
+footer {
+  background-color: #fff;
+  color: #222;
+}
+
+footer ul {
+  padding: 0;
+}
+
+footer li {
+  list-style: none;
+}
+
+.wrap-footer {
+  display: grid;
+  grid-template-columns: 30% 15% 15% 20%;
+  column-gap: 5%;
+  padding: 1rem;
+  margin: 2rem auto;
+  max-width: 1200px;
+}
+
+.logo-element-footer img {
+  max-height: 75px;
+}
+
+.element-footer h5 {
+  margin: 1rem 0;
+}
+
+.text-element-footer li {
+  line-height: 2;
+}
+
+.text-element-footer li a {
+  color: #ffc300;
+}
+
+.rrss-element-footer ul {
+  display: flex;
+  flex-flow: wrap;
+}
+
+.rrss-element-footer img {
+  width: 35px;
+}
+
+.rrss-element-footer li {
+  margin-right: 1rem;
+}
+
+.footer-creds {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+  color: #576171;
+  font-size: 0.9rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.legal-creds ul {
+  display: flex;
+  flex-flow: row;
+}
+
+.legal-creds ul li {
+  padding-right: 1rem;
+}
+
+.legal-creds ul li a {
+  color: #576171;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .wrap-footer {
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+  }
+  .rrss-element-footer ul {
+    justify-content: center;
+    gap: 1rem; /* Reemplaza los márgenes individuales */
+    margin-right: 0;
+  }
+  
+  .rrss-element-footer ul li {
+    margin: 0; /* Elimina márgenes individuales */
+  }
+}
+
+@media (max-width: 480px) {
+  .wrap-footer {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 320px) {
+  .footer-creds {
+    flex-flow: column;
+    align-items: center; /* ← Esta es la clave que falta */
+    text-align: center; /* Centra el texto */
+    margin: 0 auto;
+  }
+  
+  .legal-creds ul {
+    justify-content: center; /* Centra los elementos de la lista legal */
+    flex-wrap: wrap; /* Permite que se ajusten en varias líneas */
+  }
+  
+  .legal-creds ul li {
+    padding: 0.5rem; /* Espaciado uniforme */
+  }
+}
