@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poller+One&display=swap"
+      rel="stylesheet" />
+
+    <link rel="stylesheet" href="styles.css">
+    <title>Restaurante/Página Web</title>
+</head>
+
+<body>
+    <div class="wrap-header-hero">
+        <header class="main-header">
+            <div class="header-wrap">
+                <div class="wrap-logo-header">
+                    <a class="logo-header" href="/">Web de Restaurante</a>
+                </div>
+
+                <div class="wrap-nav-header">
+                    <nav class="nav-header">
+                        <input type="checkbox" name="" id="check">
+                        <label for="check" class="checkbtn">
+                            <i class="toggle-menu">
+                                <img
+                                  src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDM4NCAzODQiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTIiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxnPjxwYXRoIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZD0ibTM2OCAxNTQuNjY3OTY5aC0zNTJjLTguODMyMDMxIDAtMTYtNy4xNjc5NjktMTYtMTZzNy4xNjc5NjktMTYgMTYtMTZoMzUyYzguODMyMDMxIDAgMTYgNy4xNjc5NjkgMTYgMTZzLTcuMTY3OTY5IDE2LTE2IDE2em0wIDAiIGZpbGw9IiMwMDAwMDAiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiPjwvcGF0aD48cGF0aCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGQ9Im0zNjggMzJoLTM1MmMtOC44MzIwMzEgMC0xNi03LjE2Nzk2OS0xNi0xNnM3LjE2Nzk2OS0xNiAxNi0xNmgzNTJjOC44MzIwMzEgMCAxNiA3LjE2Nzk2OSAxNiAxNnMtNy4xNjc5NjkgMTYtMTYgMTZ6bTAgMCIgZmlsbD0iIzAwMDAwMCIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCI+PC9wYXRoPjxwYXRoIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZD0ibTM2OCAyNzcuMzMyMDMxaC0zNTJjLTguODMyMDMxIDAtMTYtNy4xNjc5NjktMTYtMTZzNy4xNjc5NjktMTYgMTYtMTZoMzUyYzguODMyMDMxIDAgMTYgNy4xNjc5NjkgMTYgMTZzLTcuMTY3OTY5IDE2LTE2IDE2em0wIDAiIGZpbGw9IiMwMDAwMDAiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiPjwvcGF0aD48L2c+PC9zdmc+" />
+                            </i>
+
+                        </label>
+                        <ul class="main-menu">
+                            <li class="menu-item"><a href="#">Inicio</a></li>
+                            <li class="menu-item"><a href="#">Nosotros</a></li>
+                            <li class="menu-item"><a href="#">Carta</a></li>
+                            <li class="menu-item"><a href="#">Blog</a></li>
+                            <li id="nav-main-contact" class="menu-item"><a href="#">Contacto</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+    </header>
+
+    <main class="main-section">
+
+      <!-- ?  Hero Section -->
+      <section class="hero-home-page">
+        <div class="wrap-hero-home-page">
+        <h1>Diseño Web de restaurante</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus temporibus, minus debitis fuga consectetur cum?</p>
+
+        <a href="#" class="cta-main">Hacer un pedido</a>
+        </div>
+      </section>
+    </div>
+
+<!-- ! Tarjetas de Comida -->
+<section class="wrap section">
+  <div class="wrap-title-section">
+    <h2>Tarjetas de comida</h2>
+  </div>
+
+  <div class="column-4 columns">
+    <!-- ? Tarjeta Pizza-->
+    <div style="background: url(img/pizza.jpg)center; background-size: cover;" class="tarjeta-rest">
+      <div class="wrap-text_tarjeta-rest">
+        <h3>Pizza Especial</h3>
+        <p>Prueba nuestra deliciosa Pizza Especial</p>
+        <div class="cta-wrap_tarjeta-rest">
+          <div class="precio_tarjeta-rest">
+            <span>12€</span>
+          </div>
+          <div class="cta_tarjeta-rest">
+            <a href="#">Pedir Ahora</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ? Tarjeta Alitas-->
+    <div style="background: url(img/alitas_pollo.webp)center; background-size: cover;" class="tarjeta-rest">
+      <div class="wrap-text_tarjeta-rest">
+        <h3>Alitas Especial</h3>
+        <p>Estas alitas te harán descubrir auténticas sensaciones</p>
+        <div class="cta-wrap_tarjeta-rest">
+          <div class="precio_tarjeta-rest">
+            <span>12€</span>
+          </div>
+          <div class="cta_tarjeta-rest">
+            <a href="#">Pedir Ahora</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ? Tarjeta Hamburguesa-->
+    <div style="background: url(img/hamburguesas.avif)center; background-size: cover;" class="tarjeta-rest">
+      <div class="wrap-text_tarjeta-rest">
+        <h3>Hamburguesa Especial</h3>
+        <p>Las hamburguesas de éxito del momento</p>
+        <div class="cta-wrap_tarjeta-rest">
+          <div class="precio_tarjeta-rest">
+            <span>18€</span>
+          </div>
+          <div class="cta_tarjeta-rest">
+            <a href="#">Pedir Ahora</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ? Tarjeta Sushi-->
+    <div style="background: url(img/sushi.jpeg)center; background-size: cover;" class="tarjeta-rest">
+      <div class="wrap-text_tarjeta-rest">
+        <h3>Sushi Especial</h3>
+        <p>Un pescado al autentico sentido japonés</p>
+        <div class="cta-wrap_tarjeta-rest">
+          <div class="precio_tarjeta-rest">
+            <span>22€</span>
+          </div>
+          <div class="cta_tarjeta-rest">
+            <a href="#">Pedir Ahora</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+  </div>
+</section>
+
+<!-- * Menú del Restaurante -->
+
+<section class="wrap section">
+  <div class="wrap-title-section">
+    <h2>Menús de Restaurante</h2>
+  </div>
+
+  <div class="column-3 columns">
+            <!-- Menú 1 -->
+            <div class="menu-restaurante" style="background: url(img/fondo-menu-restaurante.jpg) center; background-size: cover;">
+                <h3>Menú Mediodía</h3>
+                <hr>
+                <h4>Primeros Platos</h4>
+                <p>Lorem, ipsum dolor.</p>
+                <p>Lorem ipsum dolor sit.</p>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                <br>
+                <h4>Segundos Platos</h4>
+                <p>Lorem, ipsum dolor.</p>
+                <p>Lorem ipsum dolor sit.</p>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                <br>
+                <p class="precio-menu">
+                    Precio:
+                    <span>13€</span>
+                </p>
+            </div>
+
+            <!-- Menú 2 -->
+            <div class="menu-restaurante" style="background: url(img/fondo-menu-restaurante.jpg) center; background-size: cover;">
+                <h3>Menú noche</h3>
+                <hr>
+                <h4>Primeros Platos</h4>
+                <p>Tortilla de Patatas</p>
+                <p>Gaspacho Andaluz</p>
+                <p>Ensalada Mediterranea</p>
+                <p>Sopa de Picadillo</p>
+                <br>
+                <h4>Segundos Platos</h4>
+                <p>Lasaña de verduras</p>
+                <p>Pollo a la brasa</p>
+                <p>Secreto con verduras</p>
+                <p>Calamares a la plancha</p>
+                <br>
+                <p class="precio-menu">
+                    Precio:
+                    <span>21€</span>
+                </p>
+            </div>
+
+            <!-- Menú 3 -->
+            <div class="menu-restaurante" style="background: url(img/fondo-menu-restaurante.jpg) center; background-size: cover;">
+                <h3>Menú Fin de semana</h3>
+                <hr>
+                <h4>Primeros Platos</h4>
+                <p>Lorem, ipsum dolor.</p>
+                <p>Lorem ipsum dolor sit.</p>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                <br>
+                <h4>Segundos Platos</h4>
+                <p>Lorem, ipsum dolor.</p>
+                <p>Lorem ipsum dolor sit.</p>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                <br>
+                <p class="precio-menu">
+                    Precio:
+                    <span>19€</span>
+                </p>
+            </div>
+        </div>
+</section>
+
+<!-- ? Galería de Imágenes -->
+<section class="section">
+  <div class="wrap-title-section">
+    <h2>Galería de Imágenes del Restaurante</h2>
+  </div>
+  <div class="column-4 galeria-platos">
+    <div class="imagen-galeria">
+      <img src="img/restaurante.jpg" alt="restaurante">
+    </div>
+    <div class="imagen-galeria">
+      <img src="img/alitas_pollo.webp" alt="restaurante">
+    </div>
+    <div class="imagen-galeria">
+      <img src="img/gambas.jpg" alt="restaurante">
+    </div>
+    <div class="imagen-galeria">
+      <img src="img/hamburguesas.avif" alt="restaurante">
+    </div>
+
+    <div class="imagen-galeria">
+      <img src="img/ingredientes.jpeg" alt="restaurante">
+    </div>
+    <div class="imagen-galeria">
+      <img src="img/pizza.jpg" alt="restaurante">
+    </div>
+    <div class="imagen-galeria">
+      <img src="img/bocadillos-VP.jpg" alt="restaurante">
+    </div>
+    <div class="imagen-galeria">
+      <img src="img/sushi.jpeg" alt="restaurante">
+    </div>
+
+    <div class="imagen-galeria">
+      <img src="img/alubias.jpg" alt="restaurante">
+    </div>
+    <div class="imagen-galeria">
+      <img src="img/pasta_verano.jpeg" alt="restaurante">
+    </div>
+    <div class="imagen-galeria">
+      <img src="img/palitos.jpg" alt="restaurante">
+    </div>
+    <div class="imagen-galeria">
+      <img src="img/arroz.jpg" alt="restaurante">
+    </div>
+  </div>
+</section>
+
+<!-- ! Artículos de Blog -->
+
+<section class="section">
+  <div class="wrap-title-section">
+    <h2> Artículos del Blog</h2>
+  </div>
+
+  <div class="card-wrap">
+    <!-- Artículo 1 -->
+    <article class="card">
+      <header class="header-card">
+        <img src="img/alubias.jpg" alt="alubias" srcset="">
+      </header>
+      <footer class="footer-card">
+        <div class="categoria-card">
+          <span>Categoría</span>
+        </div>
+        <div class="texto-card">
+          <h3>Aprende a cocinar</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, cumque?</p>
+        </div>
+        <div class="perfil-card">
+          <div class="img-perfil-card">
+            <img src="img/perfil_1.jpg" alt="Basilio" srcset="">
+          </div>
+
+          <div class="text-perfil-card">
+            <span>Nombre</span>
+            <span>Fecha</span>
+          </div>
+        </div>
+      </footer>
+    </article>
+    <!-- Artículo 2 -->
+    <article class="card">
+      <header class="header-card">
+        <img src="img/gambas.jpg" alt="alubias" srcset="">
+      </header>
+      <footer class="footer-card">
+        <div class="categoria-card">
+          <span>Categoría</span>
+        </div>
+        <div class="texto-card">
+          <h3>Aprende a cocinar</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, cumque?</p>
+        </div>
+        <div class="perfil-card">
+          <div class="img-perfil-card">
+            <img src="img/perfil_2.webp" alt="Basilio" srcset="">
+          </div>
+
+          <div class="text-perfil-card">
+            <span>Nombre</span>
+            <span>Fecha</span>
+          </div>
+        </div>
+      </footer>
+    </article>
+    <!-- Artículo 3 -->
+    <article class="card">
+      <header class="header-card">
+        <img src="img/ingredientes.jpeg" alt="alubias" srcset="">
+      </header>
+      <footer class="footer-card">
+        <div class="categoria-card">
+          <span>Categoría</span>
+        </div>
+        <div class="texto-card">
+          <h3>Aprende a cocinar</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, cumque?</p>
+        </div>
+        <div class="perfil-card">
+          <div class="img-perfil-card">
+            <img src="img/perfil_3.jpg" alt="Basilio" srcset="">
+          </div>
+
+          <div class="text-perfil-card">
+            <span>Nombre</span>
+            <span>Fecha</span>
+          </div>
+        </div>
+      </footer>
+    </article>
+    <!-- Artículo 4 -->
+    <article class="card">
+      <header class="header-card">
+        <img src="img/alubias.jpg" alt="alubias" srcset="">
+      </header>
+      <footer class="footer-card">
+        <div class="categoria-card">
+          <span>Categoría</span>
+        </div>
+        <div class="texto-card">
+          <h3>Aprende a cocinar</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, cumque?</p>
+        </div>
+        <div class="perfil-card">
+          <div class="img-perfil-card">
+            <img src="img/perfil_4.jpeg" alt="Basilio" srcset="">
+          </div>
+
+          <div class="text-perfil-card">
+            <span>Nombre</span>
+            <span>Fecha</span>
+          </div>
+        </div>
+      </footer>
+    </article>
+    <!-- Artículo 5 -->
+    <article class="card">
+      <header class="header-card">
+        <img src="img/bocadillos-VP.jpg" alt="alubias" srcset="">
+      </header>
+      <footer class="footer-card">
+        <div class="categoria-card">
+          <span>Categoría</span>
+        </div>
+        <div class="texto-card">
+          <h3>Aprende a cocinar</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, cumque?</p>
+        </div>
+        <div class="perfil-card">
+          <div class="img-perfil-card">
+            <img src="img/perfil_5.jpg" alt="Basilio" srcset="">
+          </div>
+
+          <div class="text-perfil-card">
+            <span>Nombre</span>
+            <span>Fecha</span>
+          </div>
+        </div>
+      </footer>
+    </article>
+    <!-- Artículo 6 -->
+    <article class="card">
+      <header class="header-card">
+        <img src="img/arroz.jpg" alt="alubias" srcset="">
+      </header>
+      <footer class="footer-card">
+        <div class="categoria-card">
+          <span>Categoría</span>
+        </div>
+        <div class="texto-card">
+          <h3>Aprende a cocinar</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, cumque?</p>
+        </div>
+        <div class="perfil-card">
+          <div class="img-perfil-card">
+            <img src="img/perfil_6.webp" alt="Basilio" srcset="">
+          </div>
+
+          <div class="text-perfil-card">
+            <span>Nombre</span>
+            <span>Fecha</span>
+          </div>
+        </div>
+      </footer>
+    </article>
+    <!-- Artículo 7 -->
+    <article class="card">
+      <header class="header-card">
+        <img src="img/alitas_pollo.webp" alt="alubias" srcset="">
+      </header>
+      <footer class="footer-card">
+        <div class="categoria-card">
+          <span>Categoría</span>
+        </div>
+        <div class="texto-card">
+          <h3>Aprende a cocinar</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, cumque?</p>
+        </div>
+        <div class="perfil-card">
+          <div class="img-perfil-card">
+            <img src="img/perfil_7.jpg" alt="Basilio" srcset="">
+          </div>
+
+          <div class="text-perfil-card">
+            <span>Nombre</span>
+            <span>Fecha</span>
+          </div>
+        </div>
+      </footer>
+    </article>
+  </div>
+</section>
+
+    </main>
+
+    <!-- *Footer -->
+
+    <footer class="footer">
+      <div class="wrap-footer">
+        <div class="text-element-footer element-footer">
+          <h3 class="main-c">Web de Restaurante</h3>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic, vel.
+            Voluptate, praesentium, tempora corporis excepturi accusamus culpa
+            sed a numquam temporibus recusandae quam fugit incidunt.
+          </p>
+        </div>
+
+        <div class="text-element-footer element-footer">
+          <h5>Dirección</h5>
+          <ul>
+            <li>Calle de los Tutoriales</li>
+            <li>La Comarca-0987</li>
+            <li>Movil: (+34)0159263548</li>
+            <li>Fijo: (+34)957456123</li>
+          </ul>
+        </div>
+
+        <div class="text-element-footer element-footer">
+          <h5>Más Información</h5>
+          <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Nosotros</a></li>
+            <li><a href="#">Carta</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contactar</a></li>
+          </ul>
+        </div>
+
+        <div class="rrss-element-footer element-footer">
+          <h5>Redes Sociales</h5>
+          <ul>
+            <li>
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                rel="nofollow noopener noreferer"
+                ><img
+                  src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJtNTEyIDc1djM2MmMwIDQxLjM5ODQzOC0zMy42MDE1NjIgNzUtNzUgNzVoLTEyMWwtMzAtMzBoLTMwbC0zMCAzMGgtMTUxYy00MS4zOTg0MzggMC03NS0zMy42MDE1NjItNzUtNzV2LTM2MmMwLTQxLjM5ODQzOCAzMy42MDE1NjItNzUgNzUtNzVoMzYyYzQxLjM5ODQzOCAwIDc1IDMzLjYwMTU2MiA3NSA3NXptMCAwIiBmaWxsPSIjNzk4NGViIi8+PHBhdGggZD0ibTUxMiA3NXYzNjJjMCA0MS4zOTg0MzgtMzMuNjAxNTYyIDc1LTc1IDc1aC0xMjFsLTMwLTMwaC0xNXYtNDgyaDE2NmM0MS4zOTg0MzggMCA3NSAzMy42MDE1NjIgNzUgNzV6bTAgMCIgZmlsbD0iIzQ2NjFkMSIvPjxwYXRoIGQ9Im0zMTYgMTgwdjYwaDkwbC0xNSA5MGgtNzV2MTgyaC05MHYtMTgyaC02MHYtOTBoNjB2LTYwYzAtMzMuMzAwNzgxIDE4LjMwMDc4MS02Mi40MDIzNDQgNDUtNzggMTMuMTk5MjE5LTcuNSAyOC44MDA3ODEtMTIgNDUtMTJoOTB2OTB6bTAgMCIgZmlsbD0iI2VjZWNmMSIvPjxwYXRoIGQ9Im0zMTYgMTgwdjYwaDkwbC0xNSA5MGgtNzV2MTgyaC00NXYtNDEwYzEzLjE5OTIxOS03LjUgMjguODAwNzgxLTEyIDQ1LTEyaDkwdjkwem0wIDAiIGZpbGw9IiNlMmUyZTciLz48L3N2Zz4="
+                  alt="icono redes sociales"
+              /></a>
+            </li>
+            <li>
+              <a href="mailto:info@dropcoding.com"
+                ><img
+                  src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIC0zMSA1MTIgNTEyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Im0yMTEgMjcwLTQwLjkxNzk2OSA0My42NzU3ODEgMTAuOTE3OTY5IDc2LjMyNDIxOSAxMjAtOTB6bTAgMCIgZmlsbD0iIzAwYzBmMSIvPjxwYXRoIGQ9Im0wIDE4MCAxMjEgNjAgOTAgMzAgMjEwIDE4MCA5MS00NTB6bTAgMCIgZmlsbD0iIzc2ZTJmOCIvPjxwYXRoIGQ9Im0xMjEgMjQwIDYwIDE1MCAzMC0xMjAgMjEwLTE4MHptMCAwIiBmaWxsPSIjMjVkOWY4Ii8+PC9zdmc+"
+                  alt="icono redes sociales"
+              /></a>
+            </li>
+            <li>
+              <a href="https://wa.me/600112233"
+                ><img
+                  src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJtMjU2IDBjLTE0MC42OTkyMTkgMC0yNTYgMTE1LjMwMDc4MS0yNTYgMjU2IDAgNDYuNSAxMi41OTc2NTYgOTEuNSAzNi4zMDA3ODEgMTMxLjEwMTU2MmwtMzYuMzAwNzgxIDEyNC44OTg0MzggMTI0Ljg5ODQzOC0zNi4zMDA3ODFjMzkuNjAxNTYyIDIzLjY5OTIxOSA4NC42MDE1NjIgMzYuMzAwNzgxIDEzMS4xMDE1NjIgMzYuMzAwNzgxIDE0MC42OTkyMTkgMCAyNTYtMTE1LjMwMDc4MSAyNTYtMjU2cy0xMTUuMzAwNzgxLTI1Ni0yNTYtMjU2em0wIDAiIGZpbGw9IiMwMGRkN2IiLz48cGF0aCBkPSJtNTEyIDI1NmMwIDE0MC42OTkyMTktMTE1LjMwMDc4MSAyNTYtMjU2IDI1NnYtNTEyYzE0MC42OTkyMTkgMCAyNTYgMTE1LjMwMDc4MSAyNTYgMjU2em0wIDAiIGZpbGw9IiMwMGNjNzEiLz48cGF0aCBkPSJtNDE3LjE5OTIxOSAzNjQuMzAwNzgxLTEyIDExLjY5OTIxOWMtMTYuODAwNzgxIDE2LjgwMDc4MS01NS44MDA3ODEgMTUuNTk3NjU2LTgwLjY5OTIxOSAxMC44MDA3ODEtMjIuMTk5MjE5LTQuMTk5MjE5LTQ2LTE0LjEwMTU2Mi02OC41LTI3LjkwMjM0My02MS4xOTkyMTktMzcuMTk5MjE5LTExNi42OTkyMTktMTAzLjE5OTIxOS0xMzAuMTk5MjE5LTE2Mi41OTc2NTctOS4zMDA3ODEtNDAuMjAzMTI1LTQuMTk5MjE5LTc1IDktODguNWwxMi0xMmM2LjYwMTU2My02LjMwMDc4MSAxNy4wOTc2NTctNi4zMDA3ODEgMjMuNjk5MjE5IDBsNDcuNjk5MjE5IDQ3LjY5OTIxOWMzLjMwMDc4MSAzLjMwMDc4MSA1LjEwMTU2MiA3LjUgNS4xMDE1NjIgMTJzLTEuODAwNzgxIDguNjk5MjE5LTUuMTAxNTYyIDEybC0xMiAxMS42OTkyMTljLTEyLjg5ODQzOCAxMy4xOTkyMTktMTIuODk4NDM4IDM0LjUgMCA0Ny42OTkyMTlsNDkuODAwNzgxIDQ4LjkwMjM0MyAyOS4wOTc2NTYgMjguODAwNzgxYzEzLjIwMzEyNSAxMy4xOTkyMTkgMzUuNTAzOTA2IDEzLjE5OTIxOSA0OC43MDMxMjUgMGwxMS42OTkyMTktMTIuMDAzOTA2YzYuMzAwNzgxLTYgMTcuNjk5MjE5LTYgMjQgMGw0Ny42OTkyMTkgNDcuNzAzMTI1YzYuMzAwNzgxIDYuNTk3NjU3IDYuNjAxNTYyIDE3LjA5NzY1NyAwIDI0em0wIDAiIGZpbGw9IiNlY2VjZjEiLz48cGF0aCBkPSJtNDE3LjE5OTIxOSAzNjQuMzAwNzgxLTEyIDExLjY5OTIxOWMtMTYuODAwNzgxIDE2LjgwMDc4MS01NS44MDA3ODEgMTUuNTk3NjU2LTgwLjY5OTIxOSAxMC44MDA3ODEtMjIuMTk5MjE5LTQuMTk5MjE5LTQ2LTE0LjEwMTU2Mi02OC41LTI3LjkwMjM0M3YtODMuMDk3NjU3bDI5LjA5NzY1NiAyOC44MDA3ODFjMTMuMjAzMTI1IDEzLjE5OTIxOSAzNS41MDM5MDYgMTMuMTk5MjE5IDQ4LjcwMzEyNSAwbDExLjY5OTIxOS0xMi4wMDM5MDZjNi4zMDA3ODEtNiAxNy42OTkyMTktNiAyNCAwbDQ3LjY5OTIxOSA0Ny43MDMxMjVjNi4zMDA3ODEgNi41OTc2NTcgNi42MDE1NjIgMTcuMDk3NjU3IDAgMjR6bTAgMCIgZmlsbD0iI2UyZTJlNyIvPjwvc3ZnPg=="
+                  alt="icono redes sociales"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-creds">
+        <div class="copy-creds">
+          <p>@2022. Todos los derechos están reservados</p>
+        </div>
+        <div class="legal-creds">
+          <ul>
+            <li><a href="#">Política de Privacidad</a></li>
+            <li><a href="#">Política de Cookies</a></li>
+            <li><a href="#">Aviso Legal</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+</body>
+
+</html>

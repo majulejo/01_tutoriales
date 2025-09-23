@@ -28,7 +28,7 @@ li {
 
 /*  ! HERO */
 .hero {
-  background: url(img/elaborando.webp);
+  background: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -196,7 +196,7 @@ input#check {
 /* Página de Contacto */
 
 .hero-page {
-  background: linear-gradient(to bottom, rgb(0 0 0 / .5), rgb(0 0 0 / .5)), url(img/ingredientes.jpeg) center;
+  background: linear-gradient(to bottom, rgb(0 0 0 / .5), rgb(0 0 0 / .5)), url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') center;
   background-size: cover;
   height: 200px;
   margin-top: 80px;
@@ -232,6 +232,7 @@ input#check {
 .formulario textarea {
   margin: 0.5rem 0;
   padding: 0.5rem 0.2rem;
+  border-radius: 6px;
 }
 
 .formulario button {
@@ -241,6 +242,7 @@ input#check {
   background-color: #ffc300;
   color: #fff;
   font-size: 1.1rem;
+  border-radius: 6px;
 }
 
 @media (max-width: 640px) {
