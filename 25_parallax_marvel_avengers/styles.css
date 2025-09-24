@@ -4,10 +4,10 @@ body {
     overflow-x: hidden;
     height: 7000px;
 
-    background-image: url(img/clouds2.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 0 100vh;
+    background-image: url(img/clouds2.png) , url(img/capifondo.png);
+    background-repeat: repeat-x, repeat-x;
+    background-size: contain, contain;
+    background-position: 0 100vh , 0 350vh;
 }
 
 .logo {
