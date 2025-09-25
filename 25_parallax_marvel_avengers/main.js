@@ -138,5 +138,81 @@ window.onload = function () {
         },
     });
 
+    lax.addElements(".shield", {
+        scrollY: {
+            
+            translateX: [
+                [3200, 3400, 3600, 3800],
+                [-800, 'screenWidth -200', 0 , 'screenWidth -+ 200'],
+            ],
+
+            translateY: [
+                [3200, 3400, 3600, 3800],
+                [800, 1200, 1600 , 1600],
+            ],
+        },
+    });
+
+    lax.addElements(".captain-title", {
+        scrollY: {
+            filter: [
+                [3000, 3100, 3200, 3300, 3400, 3500, 3600, 3700],
+                [0, 50, 0, 50, 0, 50, 0, 50],
+                {
+                    cssFn: function (value) {
+                        return `drop-shadow(0 0 ${value}px blue)`;
+                    },
+                },
+            ],
+            translateY: [
+                [3000, 3500],
+                [400, 900],
+            ],
+        },
+    });
+
+    lax.addElements(".capi", {
+        scrollY: {
+            translateX: [
+                [3900, 4400],
+                [400, -800],                
+            ],
+            translateY: [
+                [3900, 4400],
+                [600, 600],
+            ],
+            scale: [
+                [3900, 4400],
+                [1, 0.5],
+            ],
+            opacity: [
+                [3900, 4000],
+                [0, 1],
+            ],
+        },
+    });
+
+    lax.addElements(".shield02", {
+        scrollY: {
+            translateX: [
+                [3900, 4400],
+                [0, 'screenWidth + 900'],                
+            ],
+            translateY: [
+                [3900, 4400],
+                [600, 600],
+            ],
+            scale: [
+                [3900, 4400],
+                [1, .10],
+            ],
+            opacity: [
+                [3900, 4000],
+                [0, 1],
+            ],
+        },
+    });
+
+
 
 };

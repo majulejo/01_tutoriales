@@ -45,3 +45,17 @@ body {
     position: absolute;
     top: 2500px;
 }
+
+.captain-title {
+    text-align: center;
+    padding: 100px 0;
+    font-size: 15em;
+}
+
+.shield02 {
+    position: absolute;
+    margin-top: -750px;
+    margin-left: 360px;
+}
+
+.
