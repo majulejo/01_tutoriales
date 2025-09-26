@@ -104,14 +104,13 @@ window.onload = function () {
             ],
             translateY: [
                 [1200, 1700],
-                [200, 'elCenterY-150'],
+                [200, "elCenterY-150"],
             ],
         },
     });
 
     lax.addElements(".ironman-01", {
         scrollY: {
-
             translateY: [
                 [1200, 2000],
                 [600, -1500],
@@ -140,15 +139,14 @@ window.onload = function () {
 
     lax.addElements(".shield", {
         scrollY: {
-            
             translateX: [
                 [3200, 3400, 3600, 3800],
-                [-800, 'screenWidth -200', 0 , 'screenWidth -+ 200'],
+                [-800, "screenWidth -200", 0, "screenWidth -+ 200"],
             ],
 
             translateY: [
                 [3200, 3400, 3600, 3800],
-                [800, 1200, 1600 , 1600],
+                [800, 1200, 1600, 1600],
             ],
         },
     });
@@ -175,7 +173,7 @@ window.onload = function () {
         scrollY: {
             translateX: [
                 [3900, 4400],
-                [400, -1200],                
+                [400, -1200],
             ],
             translateY: [
                 [3900, 4400],
@@ -196,7 +194,7 @@ window.onload = function () {
         scrollY: {
             translateX: [
                 [3900, 4400],
-                [0, 'screenWidth + 900'],                
+                [0, "screenWidth + 900"],
             ],
             translateY: [
                 [3900, 4400],
@@ -204,7 +202,7 @@ window.onload = function () {
             ],
             scale: [
                 [3900, 4400],
-                [1, .10],
+                [1, 0.1],
             ],
             opacity: [
                 [3900, 4000],
@@ -216,14 +214,14 @@ window.onload = function () {
     lax.addElements(".rayo", {
         scrollY: {
             scaleX: [
-                [4500, 4600],
-                [0, 1],                
+                [4500, 500],
+                [0, 1],
             ],
             translateY: [
                 [4700, 5000, 5150],
                 [-200, -200, 0],
             ],
-            
+
             opacity: [
                 [4500, 4800, 4850],
                 [1, 1, 0],
@@ -231,8 +229,92 @@ window.onload = function () {
         },
     });
 
-    
+    lax.addElements(".thor-title-01 img", {
+        scrollY: {
+            scale: [
+                [4720, 5000],
+                [3, 1],
+            ],
+            opacity: [
+                [4700, 5000],
+                [0, 1],
+            ],
+        },
+    });
+
+    lax.addElements(".thor-title-02 img", {
+        scrollY: {
+            scale: [
+                [4740, 5000],
+                [3, 1],
+            ],
+            opacity: [
+                [4700, 5000],
+                [0, 1],
+            ],
+        },
+    });
+
+    lax.addElements(".thor-title-03 img", {
+        scrollY: {
+            scale: [
+                [4760, 5000],
+                [3, 1],
+            ],
+            opacity: [
+                [4700, 5000],
+                [0, 1],
+            ],
+        },
+    });
+
+    lax.addElements(".thor-title-04 img", {
+        scrollY: {
+            scale: [
+                [4780, 5000],
+                [3, 1],
+            ],
+            opacity: [
+                [4700, 5000],
+                [0, 1],
+            ],
+        },
+    });
+
+    lax.addElements(".thor", {
+        scrollY: {
+            translateX: [
+                [4600, 4800],
+                [-800, "screenWidth +500"],
+            ],
+            translateY: [
+                [4600, 4800],
+                [0, -3000],
+            ],
+        },
+    });
+
+    lax.addElements(".thor02", {
+        scrollY: {
+            opacity: [
+                [4600, 5000],
+                [0, 1],
+            ],
+            translateY: [
+                [4600, 5000],
+                [-5000, -300],
+            ],
+            filter: [
+                [4600, 5000],
+                [100, 0],
+                {
+                    cssFn: (value) => {
+                        return `blur(${value}px)`;
+                    }
+                }
+            ],
+        },
+    });
 
 
-
-};
+}
