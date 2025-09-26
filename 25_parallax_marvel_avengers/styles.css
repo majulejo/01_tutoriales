@@ -58,4 +58,14 @@ body {
     margin-left: 360px;
 }
 
-.
+.rayo-container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.rayo {
+    background-color: rgb(144, 233, 255);
+    width: 100%;
+    height: 150vh;
+}

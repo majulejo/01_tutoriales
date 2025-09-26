@@ -175,11 +175,11 @@ window.onload = function () {
         scrollY: {
             translateX: [
                 [3900, 4400],
-                [400, -800],                
+                [400, -1200],                
             ],
             translateY: [
                 [3900, 4400],
-                [600, 600],
+                [100, 100],
             ],
             scale: [
                 [3900, 4400],
@@ -200,7 +200,7 @@ window.onload = function () {
             ],
             translateY: [
                 [3900, 4400],
-                [600, 600],
+                [100, 100],
             ],
             scale: [
                 [3900, 4400],
@@ -212,6 +212,26 @@ window.onload = function () {
             ],
         },
     });
+
+    lax.addElements(".rayo", {
+        scrollY: {
+            scaleX: [
+                [4500, 4600],
+                [0, 1],                
+            ],
+            translateY: [
+                [4700, 5000, 5150],
+                [-200, -200, 0],
+            ],
+            
+            opacity: [
+                [4500, 4800, 4850],
+                [1, 1, 0],
+            ],
+        },
+    });
+
+    
 
 
 
