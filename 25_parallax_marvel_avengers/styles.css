@@ -4,10 +4,12 @@ body {
     overflow-x: hidden;
     height: 7000px;
 
-    background-image: url(img/clouds2.png) , url(img/capifondo.png), url(img/asgard.png);
+    background-image: url(img/clouds2.png) , 
+    url(img/capifondo.png), 
+    url(img/asgard.png);
     background-repeat: repeat-x, repeat-x;
-    background-size: contain, contain;
-    background-position: 0 100vh , 0 350vh;
+    background-size: contain, contain, contain;
+    background-position: 0 100vh , 0 300vh, 0 460vh;
 }
 
 .logo {
