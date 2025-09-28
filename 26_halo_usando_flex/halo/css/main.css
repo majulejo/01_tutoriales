@@ -144,7 +144,7 @@ nav .mobile .links a:hover {
 header {
   background-image: url(/halo/img/halo-infinite-cover-darkmode.jpg);
   background-size: cover;
-  background-position: center center;
+  background-position: center top;
   height: 100vh;
 }
 
@@ -152,7 +152,33 @@ header {
 /**               BANNER        */
 /**=========================== */
 
-#banner {
+h2 {
+  font-size: 1.9em;
+  position: relative;
+  display: inline-block;
+  padding: 0;
+margin: 0;
+padding-bottom: 10px;
+}
+
+h2::before {
+  content: "";
+  position: absolute;
+  display: block;
+  
+  width: 100%;
+  height: 35px;
+  left: -50px;
+  bottom: -60px;
+  margin: 50px;
+
+  transform: scale(0.4) skewy(-20deg) rotate(20deg);
+
+  background-color: rgb(148, 214, 48);
+}
+
+
+  #banner {
     font-size: 1.8em;
     text-align: center;
     padding: 40px;
@@ -170,7 +196,7 @@ header {
     border: 0;
     display: inline-flex;
     font-size: 16px;
-    padding: 10px 40px;
+    padding: 10px 15px;
     background-color: greenyellow;
     color: #000;
     font-weight: bold;
@@ -208,14 +234,14 @@ header {
 }
 
 .green-link:hover::before {
-  transform: scaleX(1);
+  transform: scaleX(0.8);
 }
 
 /* * ==========================*/
 /**       MEDIA QUERIES        */
 /**=========================== */
 
-@media screen and (max-width: 1132px) {
+@media screen and (max-width: 1173px) {
   nav .link-hide {
     display: none;
   }
@@ -226,6 +252,12 @@ header {
 
   header {
     height: 70vh;
+  }
+
+  #banner {
+    position: initial;
+    z-index: 100;
+    width: 100%;
   }
 }
 
@@ -245,4 +277,6 @@ header {
     background-position: center 40px;
     height: 30vh;
   }
+
+  
 }
