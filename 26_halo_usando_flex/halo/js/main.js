@@ -26,10 +26,10 @@ const videos = [
         id:"Fmdb-KmlzD8",
     },
      {
-        id:"l0thvD1rMbQ",
+        id:"lOthvD1rMbQ",
     },
      {
-        id:"nXDK86lQhto",
+        id:"Fmdb-KmlzD8",
     },  
 ];
 const sliderContainer = document.querySelector('#slider');
@@ -41,19 +41,27 @@ const bPrev = document.querySelector('#prev');
 let current = 0;
 
 bNext.addEventListener('click', (e) => {
-    current = current + 1 <= videos.length ? current + 1: current;
+    let changed = current;
+    current = current + 1 < videos.length ? current + 1: current;
+    if (current !== changed) {
 
     renderCurrentVideo(videos[current].id);
+    }
 
 });
 
 bPrev.addEventListener('click', (e) => {
+    let changed = current;
     current = current - 1 >= 0 ? current - 1: current;
-        renderCurrentVideo(videos[current].id);
+        if (current !== changed) {
+
+    renderCurrentVideo(videos[current].id);
+    }
 
 });
 
 renderCurrentVideo(videos[current].id);
+renderVideos();
 
 function renderCurrentVideo(id){
     currentContainer.innerHTML = `<iframe width="100%" height="720" src="https://www.youtube.com/embed/${id}" title="🔥  Sitio Web con HTML y CSS de Halo usando Flex, dark mode y responsive design" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`; 
@@ -61,3 +69,24 @@ function renderCurrentVideo(id){
 
 
 
+function renderVideos() {
+    const html = videos.map((video, index) => {
+        return `
+        <div class="item">
+            <a href="#" data-id="${index}"> 
+                <img src="https://i3.ytimg.com/vi/${video.id}/mqdefault.jpg"/>
+            </a>
+            </div>`;
+    });
+    videosContainer.innerHTML = html.join("");
+
+    document.querySelectorAll('.item a').forEach((item) => {
+        item.addEventListener("click", (e) => {
+            e.preventDefault();
+
+                const id = +item.getAttribute("data-id");
+                current = id;
+            renderCurrentVideo(videos[current].id);
+        });
+    });
+};
