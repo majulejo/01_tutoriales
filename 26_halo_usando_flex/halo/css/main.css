@@ -34,7 +34,7 @@ nav ul {
   margin: 0;
 }
 
-nav ul li>a {
+nav ul li > a {
   display: block;
   position: relative;
   padding: 20px 15px 10px 15px;
@@ -381,7 +381,7 @@ h3 {
   width: 600px;
   margin-right: 50px;
 
-  transition: background-color .3s ease
+  transition: background-color 0.3s ease;
 }
 
 .info p {
@@ -398,7 +398,6 @@ h3 {
 
   color: #fff;
 }
-
 
 #get-the-game h2 {
   color: #fff;
@@ -470,6 +469,16 @@ h3 {
   margin-top: 30px;
 }
 
+/* * ==========================*/
+/**       FOOTER        */
+/**=========================== */
+
+footer {
+  height: 800px;
+  background-image: url(../img/master-chief-darkmode.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 /* * ==========================*/
 /**       MEDIA QUERIES        */
@@ -518,22 +527,22 @@ h3 {
   }
 
   #get-the-game .item-store {
-    
     width: 100%;
     padding: 20px;
   }
 
-    #get-the-game .item-store .left img {
-      width: 300px;
-    }
+  #get-the-game .item-store .left img {
+    width: 300px;
+  }
 
-    #get-the-game .item-store .right {
-      width: 100%;      
-    }
+  #get-the-game .item-store .right {
+    width: 100%;
+  }
 
-
-
-
+  footer {
+    height: 400px;
+    background-position: center;
+  }
 }
 
 @media screen and (max-width: 680px) {
@@ -583,13 +592,15 @@ h3 {
     width: 100%;
     padding: 20px;
   }
-  
-    #get-the-game .item-store .left img {
-      width: 300px;
-    }
 
-    #get-the-game .item-store .right {
-      text-align: center;
-      width: 100%;      
-    }
+  #get-the-game .item-store .left img {
+    width: 300px;
+  }
+
+  #get-the-game .item-store .right {
+    text-align: center;
+    width: 100%;
+  }
+
+  
 }
