@@ -142,7 +142,7 @@ nav .mobile .links a:hover {
 /**=========================== */
 
 header {
-  background-image: url(/halo/img/halo-infinite-cover-darkmode.jpg);
+  background-image: url(img/halo-infinite-cover-darkmode.jpg);
   background-size: cover;
   background-position: center top;
   height: 100vh;
@@ -258,7 +258,7 @@ h3 {
   text-align: center;
   padding: 50px 0;
 
-  background-image: url(/halo/img/bg-videos.png);
+  background-image: url(img/bg-videos.png);
   background-position: bottom center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -366,7 +366,7 @@ h3 {
 
 #multi-player {
   height: 100vh;
-  background-image: url(../img/bg-multiplayer.jpeg);
+  background-image: url(img/bg-multiplayer.jpeg);
   display: flex;
   align-items: center;
   justify-content: end;
@@ -475,7 +475,7 @@ h3 {
 
 footer {
   height: 800px;
-  background-image: url(../img/master-chief-darkmode.jpg);
+  background-image: url(img/master-chief-darkmode.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
