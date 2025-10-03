@@ -48,6 +48,8 @@ h1,h2,h3,h4,h5, button, .amiibo-name{
     margin-top: -30px;
 }
 
+
+
 #games{
     background: rgb(255,255,255);
     background: url(../img/bg-02.png),  linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(99,196,255,1) 57%);
