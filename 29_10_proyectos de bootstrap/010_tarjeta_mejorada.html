@@ -17,25 +17,39 @@
   crossorigin="anonymous"
 />
 
-<style>
-    @media(min-width: 768px) {
-        .container {
-            max-width: 500px;
-        }
-    }
-</style>
-
+        <style>
+            body {
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #f8f9fa;
+                padding: 20px;
+            }
+            
+            .card-form {
+                width: 100%;
+                max-width: 500px;
+                background-color: white;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            }
+            
+            .card {
+                margin-top: -60px;
+                width: 80%;
+            }
+        </style>
 
         <title>10 Input Tarjeta</title>
     </head>
 
     <body>
 
-        <div class="card-form mx-auto container container-md border rounded" style="margin: 100px;">
-            <div class="card position-relative mx-auto bg-dark text-white p-3 fs-6" style="width: 80%; margin-top: -60px;">
+        <div class="card-form container border rounded">
+            <div class="card position-relative mx-auto bg-dark text-white p-3 fs-6">
                 <div class="fw-bold fs-4">Visa</div>
                 <div class="py-3 fs-4">**** **** **** *567</div>
-                <div>
+                <div class="d-flex justify-content-between">
                     <div>MARCOS RIVAS</div>
                     <div>12/21</div>
                 </div>
@@ -60,17 +74,17 @@
                         </div>
                         <div class="col">
                             <label for="" class="form-label">Security Code</label>
-                            <input type="pasword" placeholder="000" class="form-control" maxlength="3">
+                            <input type="password" placeholder="000" class="form-control" maxlength="3">
                         </div>
                     </div>                    
                 </div>
 
                 <div class="mb-3">                    
                     <input type="checkbox" placeholder="0000-0000-0000-0000" class="form-check-input" value="Check out">
-                    <label for="" class="form-check-label">Remenber my card info</label>
+                    <label for="" class="form-check-label">Remember my card info</label>
                 </div>
 
-                <div class="mb-3 d-grid" >                    
+                <div class="mb-3 d-grid">                    
                     <input type="submit"  class="btn btn-primary btn-lg" value="Check out" >
                 </div>
 
