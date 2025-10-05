@@ -23,7 +23,8 @@ body {
     flex-direction: column;
 
     transition: all 0.3s ease;
-    box-shadow: -3px 0 10px rgba(0, 0, 0, 0.3), -4px 0 10px rgba(0, 0, 0, 0.2);
+
+    box-shadow: -3px 0 10px rgba(0, 0, 0, 0.3), -4px 0 10px rgba(0, 0, 0, 0.2), -5px 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .cards .card a {
@@ -40,18 +41,9 @@ body {
     flex: 1;
 }
 
-.cards .card .footer {
-    display: flex;
-    justify-content: center; /* CENTRA EL AUTOR HORIZONTALMENTE */
-    width: 100%;
-}
-
-
-
 .cards .card:hover{
     margin-right: 80px;
     transform: rotate(3deg) translateY(-15px);
-    box-shadow: -10px 0 20px rgba(0, 0, 0, 0.4), -15px 0 30px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada al hacer hover */
 }
 
 .cards .card .header  .date{
@@ -62,26 +54,26 @@ body {
     font-size: 28px;
 }
 
+.cards .card .footer .autor a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.cards .card .footer img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+
 .cards .card .autor {
     display: block;
     justify-content: space-between;
     text-align: center;
 }
 
-/* ESTILOS PARA LA IMAGEN DEL AUTOR */
-.cards .card .autor img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid yellow;
-    margin-bottom: 12px;
-}
 
-.cards .card .autor span {
-    display: block;
-    line-height: 1.2;
-}
 
 .cards .card[class*="element"] {
     margin-left: -100px;
