@@ -1,7 +1,22 @@
+
 body {
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     margin: 0;
     padding: 0;
+}
+
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
 }
 
 nav {
@@ -11,6 +26,20 @@ nav {
 }
 nav .mobile {
     display: none;
+}
+
+nav .mobile .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+}
+
+nav .mobile .header .more button {
+    border: none;
+    background-color: red;
+    padding: 15px;
+    cursor: pointer;
 }
 
 nav .logo {
@@ -56,7 +85,22 @@ nav .desktop .secondary.mini {
         display: block !important;
     }
     nav .secondary.mini .submenu {
+        background-color: #000;
         position: absolute;
         display: none;
+        width: 200px;
+        right: 0;
+    }
+    nav .secondary.mini:hover .submenu {
+        display: block;
+    }
+}
+
+@media screen and (max-width:500px) {
+    nav .desktop {
+        display: none;
+    }
+    nav .mobile {
+        display: block;
     }
 }
