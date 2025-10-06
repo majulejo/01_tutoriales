@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla de Empleados</title>
+    <style>
+         body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;            
+        }
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        table {
+            border-spacing: 0;
+            border-collapse: collapse;width: 800px;
+            margin: 50px auto;
+                        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+        }
+
+        td, 
+        th {
+            border: 1px solid #ccc;
+            padding: 5px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #eee;
+        }
+
+        td:nth-child(n + 4),
+        th:nth-child(n + 4) {
+            text-align: center;
+        }
+
+        tbody tr:hover {
+            background-color: rgb(160, 222, 225);
+        }
+
+        thead {
+            background-color: #000;
+            color: #fff;
+            position: sticky;
+            top: 0;
+        }
+
+        tfoot th {
+            background-color: #64eb6b;
+        }
+        
+    </style>
+</head>
+<body>
+    <table>
+        <caption>Información de Empleados</caption>
+        <thead>
+            <tr>
+                <th>Apellido</th>
+                <th>Nombre</th>
+                <th>País</th>
+                <th>Salario</th>
+                <th>Ventas (€)</th>
+                <th>Porcentaje (%)</th>
+                <th>Proyectos</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>García</td>
+                <td>María</td>
+                <td>España</td>
+                <td>2800€</td>
+                <td>5200€</td>
+                <td>85.5</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>Müller</td>
+                <td>Hans</td>
+                <td>Alemania</td>
+                <td>3200€</td>
+                <td>6800€</td>
+                <td>92.3</td>
+                <td>15</td>
+            </tr>
+            <tr>
+                <td>Dubois</td>
+                <td>Sophie</td>
+                <td>Francia</td>
+                <td>2950€</td>
+                <td>6100€</td>
+                <td>88.7</td>
+                <td>14</td>
+            </tr>
+            <tr>
+                <td>Rossi</td>
+                <td>Giuseppe</td>
+                <td>Italia</td>
+                <td>2700€</td>
+                <td>5400€</td>
+                <td>82.1</td>
+                <td>11</td>
+            </tr>
+            <tr>
+                <td>Smith</td>
+                <td>John</td>
+                <td>Reino Unido</td>
+                <td>3100€</td>
+                <td>6500€</td>
+                <td>90.8</td>
+                <td>16</td>
+            </tr>
+            <tr>
+                <td>Jansen</td>
+                <td>Anna</td>
+                <td>Países Bajos</td>
+                <td>2900€</td>
+                <td>5900€</td>
+                <td>86.4</td>
+                <td>13</td>
+            </tr>
+            <tr>
+                <td>Andersson</td>
+                <td>Erik</td>
+                <td>Suecia</td>
+                <td>3300€</td>
+                <td>7100€</td>
+                <td>94.2</td>
+                <td>17</td>
+            </tr>
+            <tr>
+                <td>Silva</td>
+                <td>Ana</td>
+                <td>Portugal</td>
+                <td>2600€</td>
+                <td>5100€</td>
+                <td>80.9</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>Nowak</td>
+                <td>Piotr</td>
+                <td>Polonia</td>
+                <td>2400€</td>
+                <td>4800€</td>
+                <td>78.5</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td>Papadopoulos</td>
+                <td>Dimitris</td>
+                <td>Grecia</td>
+                <td>2300€</td>
+                <td>4700€</td>
+                <td>76.3</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>García</td>
+                <td>María</td>
+                <td>España</td>
+                <td>2800€</td>
+                <td>5200€</td>
+                <td>85.5</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>Müller</td>
+                <td>Hans</td>
+                <td>Alemania</td>
+                <td>3200€</td>
+                <td>6800€</td>
+                <td>92.3</td>
+                <td>15</td>
+            </tr>
+            <tr>
+                <td>Dubois</td>
+                <td>Sophie</td>
+                <td>Francia</td>
+                <td>2950€</td>
+                <td>6100€</td>
+                <td>88.7</td>
+                <td>14</td>
+            </tr>
+            <tr>
+                <td>Rossi</td>
+                <td>Giuseppe</td>
+                <td>Italia</td>
+                <td>2700€</td>
+                <td>5400€</td>
+                <td>82.1</td>
+                <td>11</td>
+            </tr>
+            <tr>
+                <td>Smith</td>
+                <td>John</td>
+                <td>Reino Unido</td>
+                <td>3100€</td>
+                <td>6500€</td>
+                <td>90.8</td>
+                <td>16</td>
+            </tr>
+            <tr>
+                <td>Jansen</td>
+                <td>Anna</td>
+                <td>Países Bajos</td>
+                <td>2900€</td>
+                <td>5900€</td>
+                <td>86.4</td>
+                <td>13</td>
+            </tr>
+            <tr>
+                <td>Andersson</td>
+                <td>Erik</td>
+                <td>Suecia</td>
+                <td>3300€</td>
+                <td>7100€</td>
+                <td>94.2</td>
+                <td>17</td>
+            </tr>
+            <tr>
+                <td>Silva</td>
+                <td>Ana</td>
+                <td>Portugal</td>
+                <td>2600€</td>
+                <td>5100€</td>
+                <td>80.9</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>Nowak</td>
+                <td>Piotr</td>
+                <td>Polonia</td>
+                <td>2400€</td>
+                <td>4800€</td>
+                <td>78.5</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td>Papadopoulos</td>
+                <td>Dimitris</td>
+                <td>Grecia</td>
+                <td>2300€</td>
+                <td>4700€</td>
+                <td>76.3</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>García</td>
+                <td>María</td>
+                <td>España</td>
+                <td>2800€</td>
+                <td>5200€</td>
+                <td>85.5</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>Müller</td>
+                <td>Hans</td>
+                <td>Alemania</td>
+                <td>3200€</td>
+                <td>6800€</td>
+                <td>92.3</td>
+                <td>15</td>
+            </tr>
+            <tr>
+                <td>Dubois</td>
+                <td>Sophie</td>
+                <td>Francia</td>
+                <td>2950€</td>
+                <td>6100€</td>
+                <td>88.7</td>
+                <td>14</td>
+            </tr>
+            <tr>
+                <td>Rossi</td>
+                <td>Giuseppe</td>
+                <td>Italia</td>
+                <td>2700€</td>
+                <td>5400€</td>
+                <td>82.1</td>
+                <td>11</td>
+            </tr>
+            <tr>
+                <td>Smith</td>
+                <td>John</td>
+                <td>Reino Unido</td>
+                <td>3100€</td>
+                <td>6500€</td>
+                <td>90.8</td>
+                <td>16</td>
+            </tr>
+            <tr>
+                <td>Jansen</td>
+                <td>Anna</td>
+                <td>Países Bajos</td>
+                <td>2900€</td>
+                <td>5900€</td>
+                <td>86.4</td>
+                <td>13</td>
+            </tr>
+            <tr>
+                <td>Andersson</td>
+                <td>Erik</td>
+                <td>Suecia</td>
+                <td>3300€</td>
+                <td>7100€</td>
+                <td>94.2</td>
+                <td>17</td>
+            </tr>
+            <tr>
+                <td>Silva</td>
+                <td>Ana</td>
+                <td>Portugal</td>
+                <td>2600€</td>
+                <td>5100€</td>
+                <td>80.9</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>Nowak</td>
+                <td>Piotr</td>
+                <td>Polonia</td>
+                <td>2400€</td>
+                <td>4800€</td>
+                <td>78.5</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td>Papadopoulos</td>
+                <td>Dimitris</td>
+                <td>Grecia</td>
+                <td>2300€</td>
+                <td>4700€</td>
+                <td>76.3</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>García</td>
+                <td>María</td>
+                <td>España</td>
+                <td>2800€</td>
+                <td>5200€</td>
+                <td>85.5</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>Müller</td>
+                <td>Hans</td>
+                <td>Alemania</td>
+                <td>3200€</td>
+                <td>6800€</td>
+                <td>92.3</td>
+                <td>15</td>
+            </tr>
+            <tr>
+                <td>Dubois</td>
+                <td>Sophie</td>
+                <td>Francia</td>
+                <td>2950€</td>
+                <td>6100€</td>
+                <td>88.7</td>
+                <td>14</td>
+            </tr>
+            <tr>
+                <td>Rossi</td>
+                <td>Giuseppe</td>
+                <td>Italia</td>
+                <td>2700€</td>
+                <td>5400€</td>
+                <td>82.1</td>
+                <td>11</td>
+            </tr>
+            <tr>
+                <td>Smith</td>
+                <td>John</td>
+                <td>Reino Unido</td>
+                <td>3100€</td>
+                <td>6500€</td>
+                <td>90.8</td>
+                <td>16</td>
+            </tr>
+            <tr>
+                <td>Jansen</td>
+                <td>Anna</td>
+                <td>Países Bajos</td>
+                <td>2900€</td>
+                <td>5900€</td>
+                <td>86.4</td>
+                <td>13</td>
+            </tr>
+            <tr>
+                <td>Andersson</td>
+                <td>Erik</td>
+                <td>Suecia</td>
+                <td>3300€</td>
+                <td>7100€</td>
+                <td>94.2</td>
+                <td>17</td>
+            </tr>
+            <tr>
+                <td>Silva</td>
+                <td>Ana</td>
+                <td>Portugal</td>
+                <td>2600€</td>
+                <td>5100€</td>
+                <td>80.9</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>Nowak</td>
+                <td>Piotr</td>
+                <td>Polonia</td>
+                <td>2400€</td>
+                <td>4800€</td>
+                <td>78.5</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td>Papadopoulos</td>
+                <td>Dimitris</td>
+                <td>Grecia</td>
+                <td>2300€</td>
+                <td>4700€</td>
+                <td>76.3</td>
+                <td>8</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th colspan="3">Totales</th>
+                <th>28,150€</th>
+                <th>57,600€</th>
+                <th>855.7%</th>
+                <th>125</th>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
