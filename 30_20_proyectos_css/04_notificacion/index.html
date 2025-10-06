@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>04 Notificación</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
+
+        <style>
+      .material-symbols-outlined {
+        font-family: "Material Symbols Outlined";
+        font-weight: normal;
+        font-style: normal;
+        font-size: 48px; /* Preferred icon size */
+        display: inline-block;
+        line-height: 1;
+        text-transform: none;
+        letter-spacing: normal;
+        word-wrap: normal;
+        white-space: nowrap;
+        direction: ltr;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      .notification {
+        width: 48px;
+        margin: 100px auto;
+        animation: ring 4s 0.7s ease-in-out infinite;
+      }
+
+      .notification .count {
+        --size: 30px;
+        font-size: 12px;
+        font-weight: bold;
+        background-color: red;
+        color: #fff;
+        border: 2px solid #fff;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: var(--size);
+        height: var(--size);
+        max-width: var(--size);
+        max-height: var(--size);
+        box-sizing: border-box;
+        position: relative;
+        border-radius: 50%;
+        top: 20px;
+        left: 20px;
+      } 
+      @keyframes ring {
+        0% {
+            transform: ;
+        }
+      }
+    </style>
+    </head>
+    <body>
+        <div class="notification">
+            <div class="count">29 </div>
+            <div><span class="material-symbols-outlined">
+notifications
+</span></div>
+        </div>
+    </body>
+</html>
