@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>06Barra Progreso Circular</title>
+    <title>06 Barra Progreso Circular</title>
 
     <link rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
@@ -12,12 +12,7 @@
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
+            
             background-color: #747474;
         }
 
@@ -26,7 +21,6 @@
             font-weight: normal;
             font-style: normal;
             font-size: 48px;
-            /* Preferred icon size */
             display: inline-block;
             line-height: 1;
             text-transform: none;
@@ -36,12 +30,71 @@
             direction: ltr;
         }
 
-        
+        .progressbar-container {
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+        }
+
+        .progressbar-container  .outer-box {
+            border-radius: 50%;
+            background-color: #fff;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .progressbar-container .outer-box .inner-box {
+            /* background-color: red; */
+            font-size: 24px;
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .progressbar-container svg {
+            position: absolute;
+        }
+
+        .progressbar-container circle {
+            fill: none;
+            stroke: url(#gradientColor);
+            stroke-width: 20px;
+            stroke-dasharray: 550;
+            stroke-dashoffset: 550;
+
+            animation: loading 10s linear forwards;
+        }
+
+            @keyframes loading {
+                100% {
+                    stroke-dashoffset: 0;
+                }
+            }
+
     </style>
 </head>
 
 <body>
-    
+    <div class="progressbar-container">
+        <div class="outer-box">
+            <div class="inner-box">50%</div>
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="200">
+                <defs>
+                    <linearGradient id="gradientColor">
+                        <stop offset="0%" stop-color="#e91e63" />
+                        <stop offset="100%" stop-color="#673ab7" />
+                    </linearGradient>
+                </defs>
+                <circle cx="100" cy="100" r="80" stroke-linecap="round"/>
+            </svg>
+        </div>
+    </div>
 </body>
 
 </html>
