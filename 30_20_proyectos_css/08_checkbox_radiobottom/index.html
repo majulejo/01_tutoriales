@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>08 Checkbox y Radiobottom</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    
+
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 100px;
+
+
+        background-color: #daf157;
+      }
+
+      .material-symbols-outlined {
+        font-family: "Material Symbols Outlined";
+        font-weight: normal;
+        font-style: normal;
+        font-size: 24px;
+        /* Preferred icon size */
+        display: inline-block;
+        line-height: 1;
+        text-transform: none;
+        letter-spacing: normal;
+        word-wrap: normal;
+        white-space: nowrap;
+        direction: ltr;
+      }
+
+      .checkbox-container {
+        display: block;
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        font-size: 22px;
+        user-select: none;        
+      }
+
+      .checkbox-container input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+      }
+
+      .checkbox-container .checkmark {
+        position: absolute;
+        border-radius: 3px;
+        top: 0;
+        left: 0;
+        height: 24px;
+        width: 24px;
+        background-color:  red;
+        transition: all 0.3s ease-in-out;
+      }
+
+    .checkbox-container .checkmark  .material-symbols-outlined {
+        color: #fff;
+        transform: scale(0);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .checkbox-container input:checked ~ .checkmark {
+        background-color: #2196f3;
+    }
+
+    .checkbox-container input:checked ~ .checkmark .material-symbols-outlined {
+        transform: scale(1);
+    }
+
+    .checkbox-container input:checked ~ .checkmark.radio .circle {
+        position: absolute;
+        border-radius: 50%;
+        top: 6px;
+        left: 6px;
+        height: 12px;
+        width: 12px;
+        background-color: #fff;
+        transition: all .3s ease-in-out;
+    }
+
+    .checkbox-container .checkmark.radio {
+        position: absolute;
+        border-radius: 50%;
+        top: 0;
+        left: 0;
+        height: 24px;
+        width: 24px;
+        background-color:  red;
+        transition: all 0.3s ease-in-out;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <label class="checkbox-container">
+      Soy un Checkbox
+      <input type="checkbox" name="" id="" />
+      <span class="checkmark">
+        <span class="material-symbols-outlined">check</span>
+      </span>
+    </label>
+
+<!-- RADIOBOTTOM 1-->
+    <label class="checkbox-container">
+      Soy un Radio Botón 1
+      <input type="radio" name="boton" id="" />
+      <span class="checkmark radio">
+        <div class="circle"></div>
+      </span>
+    </label>
+
+<!-- RADIOBOTTOM 2-->
+
+    <label class="checkbox-container">
+      Soy un Radio Botón 2
+      <input type="radio" name="boton" id="" />
+      <span class="checkmark radio">
+        <div class="circle"></div>
+      </span>
+    </label>
+  </body>
+</html>

@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barra de Progreso Circular Funcional</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #4a4a4a, #2c2c2c);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(90deg, #e91e63, #673ab7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+            opacity: 0.8;
+        }
+
+        .progressbar-container {
+            width: 220px;
+            height: 220px;
+            margin: 0 auto 40px;
+            position: relative;
+        }
+
+        .progressbar-container .outer-box {
+            border-radius: 50%;
+            background: linear-gradient(145deg, #3a3a3a, #2e2e2e);
+            width: 220px;
+            height: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 8px 8px 16px #252525, -8px -8px 16px #4d4d4d;
+        }
+
+        .progressbar-container .outer-box .inner-box {
+            font-size: 28px;
+            font-weight: bold;
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(145deg, #3a3a3a, #2e2e2e);
+            box-shadow: inset 5px 5px 10px #252525, inset -5px -5px 10px #4d4d4d;
+            transition: all 0.3s ease;
+            color: #fff;
+        }
+
+        .progressbar-container svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: rotate(-90deg);
+        }
+
+        .progressbar-container circle {
+            fill: none;
+            stroke: url(#gradientColor);
+            stroke-width: 12px;
+            stroke-dasharray: 565;
+            stroke-dashoffset: 565;
+            stroke-linecap: round;
+            transition: stroke-dashoffset 0.5s ease;
+            filter: drop-shadow(0 0 8px rgba(103, 58, 183, 0.7));
+        }
+
+        .controls {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 25px;
+            margin-top: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .slider-container {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 12px;
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+
+        input[type="range"] {
+            width: 100%;
+            height: 12px;
+            border-radius: 10px;
+            background: linear-gradient(90deg, #e91e63, #673ab7);
+            outline: none;
+            -webkit-appearance: none;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: #fff;
+            cursor: pointer;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+            border: 2px solid #673ab7;
+            transition: all 0.2s ease;
+        }
+
+        input[type="range"]::-webkit-slider-thumb:hover {
+            transform: scale(1.1);
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 25px;
+        }
+
+        button {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            background: linear-gradient(90deg, #e91e63, #673ab7);
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        .progress-info {
+            margin-top: 25px;
+            font-size: 1.1rem;
+            line-height: 1.5;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .material-symbols-outlined {
+            font-family: "Material Symbols Outlined";
+            font-weight: normal;
+            font-style: normal;
+            font-size: 20px;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+
+        .features {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .feature {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 10px;
+            width: 150px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #e91e63, #673ab7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .progressbar-container {
+                width: 200px;
+                height: 200px;
+            }
+            
+            .progressbar-container .outer-box {
+                width: 200px;
+                height: 200px;
+            }
+            
+            .progressbar-container .outer-box .inner-box {
+                width: 160px;
+                height: 160px;
+                font-size: 24px;
+            }
+            
+            .progressbar-container svg {
+                width: 200px;
+                height: 200px;
+            }
+            
+            .buttons {
+                flex-direction: column;
+            }
+            
+            button {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Barra de Progreso Circular</h1>
+        <p class="subtitle">Una implementación mejorada con controles interactivos</p>
+        
+        <div class="progressbar-container">
+            <div class="outer-box">
+                <div class="inner-box" id="progress-text">0%</div>
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="220" height="220">
+                    <defs>
+                        <linearGradient id="gradientColor">
+                            <stop offset="0%" stop-color="#e91e63" />
+                            <stop offset="100%" stop-color="#673ab7" />
+                        </linearGradient>
+                    </defs>
+                    <circle cx="110" cy="110" r="90" stroke-linecap="round" id="progress-circle"/>
+                </svg>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <div class="slider-container">
+                <label for="progress-slider">Progreso: <span id="progress-value">0</span>%</label>
+                <input type="range" id="progress-slider" min="0" max="100" value="0">
+            </div>
+            
+            <div class="buttons">
+                <button id="start-btn">
+                    <span class="material-symbols-outlined">play_arrow</span>
+                    Iniciar
+                </button>
+                <button id="reset-btn">
+                    <span class="material-symbols-outlined">refresh</span>
+                    Reiniciar
+                </button>
+            </div>
+            
+            <div class="progress-info">
+                <p>Esta barra de progreso circular muestra visualmente el avance de una tarea o proceso. Utiliza un diseño moderno con efectos de neumorfismo y gradientes atractivos.</p>
+            </div>
+        </div>
+        
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon material-symbols-outlined">touch_app</div>
+                <h3>Interactiva</h3>
+                <p>Controla el progreso con el deslizador</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon material-symbols-outlined">animation</div>
+                <h3>Animada</h3>
+                <p>Transiciones suaves y fluidas</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon material-symbols-outlined">devices</div>
+                <h3>Responsive</h3>
+                <p>Se adapta a cualquier dispositivo</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const progressCircle = document.getElementById('progress-circle');
+            const progressText = document.getElementById('progress-text');
+            const progressSlider = document.getElementById('progress-slider');
+            const progressValue = document.getElementById('progress-value');
+            const startBtn = document.getElementById('start-btn');
+            const resetBtn = document.getElementById('reset-btn');
+            
+            // Calcular la circunferencia correctamente
+            const radius = 90;
+            const circumference = 2 * Math.PI * radius;
+            
+            // Configurar el círculo de progreso
+            progressCircle.style.strokeDasharray = circumference;
+            progressCircle.style.strokeDashoffset = circumference;
+            
+            // Variable para controlar si hay una animación en curso
+            let isAnimating = false;
+            
+            // Actualizar progreso según el slider
+            progressSlider.addEventListener('input', function() {
+                if (!isAnimating) {
+                    const value = parseInt(this.value);
+                    updateProgress(value);
+                }
+            });
+            
+            // Iniciar animación
+            startBtn.addEventListener('click', function() {
+                if (isAnimating) return;
+                
+                const targetValue = 100;
+                progressSlider.value = targetValue;
+                animateProgress(0, targetValue);
+            });
+            
+            // Reiniciar
+            resetBtn.addEventListener('click', function() {
+                if (isAnimating) return;
+                
+                progressSlider.value = 0;
+                updateProgress(0);
+            });
+            
+            // Función para actualizar el progreso
+            function updateProgress(value) {
+                // Asegurarse de que el valor esté entre 0 y 100
+                const clampedValue = Math.max(0, Math.min(100, value));
+                
+                // Calcular el offset correcto
+                const offset = circumference - (clampedValue / 100) * circumference;
+                progressCircle.style.strokeDashoffset = offset;
+                
+                // Actualizar textos
+                progressText.textContent = `${clampedValue}%`;
+                progressValue.textContent = clampedValue;
+                
+                // Cambiar color del texto según el progreso
+                if (clampedValue < 30) {
+                    progressText.style.color = "#e91e63";
+                } else if (clampedValue < 70) {
+                    progressText.style.color = "#9c27b0";
+                } else {
+                    progressText.style.color = "#4caf50";
+                }
+            }
+            
+            // Función para animar el progreso
+            function animateProgress(startValue, targetValue) {
+                isAnimating = true;
+                let currentValue = startValue;
+                
+                const interval = setInterval(() => {
+                    currentValue += 1;
+                    
+                    // Actualizar el slider y el progreso
+                    progressSlider.value = currentValue;
+                    updateProgress(currentValue);
+                    
+                    // Detener si alcanzamos el valor objetivo
+                    if (currentValue >= targetValue) {
+                        clearInterval(interval);
+                        isAnimating = false;
+                    }
+                }, 30);
+            }
+            
+            // Inicializar
+            updateProgress(0);
+        });
+    </script>
+</body>
+</html>

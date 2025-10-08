@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Barra de Búsqueda Mejorada</title>
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0"
+    />
+
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 100px;
+        background: linear-gradient(135deg, #eef8d2, #dfffd8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      .search-bar {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 600px;
+        max-width: 90%;
+        background-color: #fff;
+        border-radius: 50px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        overflow: hidden;
+      }
+
+      .search-bar:hover {
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+      }
+
+      .search-bar:focus-within {
+        transform: scale(1.02);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+      }
+
+      .search-icon {
+        color: #888;
+        padding: 0 15px;
+        transition: color 0.3s;
+      }
+
+      .search-bar:focus-within .search-icon {
+        color: #2979e2;
+      }
+
+      .search-bar input {
+        flex: 1;
+        border: none;
+        outline: none;
+        font-size: 18px;
+        padding: 12px;
+        background: none;
+      }
+
+      .actions {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        padding-right: 10px;
+      }
+
+      .actions button {
+        border: none;
+        background: none;
+        cursor: pointer;
+        color: #999;
+        transition: color 0.3s, transform 0.2s;
+        padding: 8px;
+        border-radius: 50%;
+      }
+
+      .actions button:hover {
+        color: #2979e2;
+        background-color: #eaf2ff;
+        transform: scale(1.1);
+      }
+
+      .material-symbols-outlined {
+        font-family: "Material Symbols Outlined";
+        font-size: 26px;
+        vertical-align: middle;
+      }
+
+      @media (max-width: 600px) {
+        body {
+          padding: 50px 20px;
+        }
+        .search-bar {
+          width: 100%;
+        }
+        .search-bar input {
+          font-size: 16px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="search-bar">
+      <span class="material-symbols-outlined search-icon">search</span>
+      <input type="text" placeholder="Buscar..." />
+      <div class="actions">
+        <button title="Micrófono">
+          <span class="material-symbols-outlined">mic</span>
+        </button>
+        <button title="Escanear documento">
+          <span class="material-symbols-outlined">document_scanner</span>
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

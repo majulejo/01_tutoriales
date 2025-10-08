@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla de Precios Responsive</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,1,0" rel="stylesheet" />
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0325bb;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+
+        .price-table-container {
+            max-width: 900px;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 50px 20px;
+            gap: 0;
+        }
+
+        .price-table-container .table {
+            width: 300px;
+            min-height: 442px;
+            padding: 30px;
+            position: relative;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            flex: 1 1 300px;
+        }
+
+        .price-table-container .table:first-child {
+            border-radius: 10px 0 0 10px;
+        }
+
+        .price-table-container .table:last-child {
+            border-radius: 0 10px 10px 0;
+        }
+
+        .price-table-container .table.recommended {
+            min-height: 500px;
+            border-radius: 10px;
+            padding: 50px 30px 60px 30px;
+            z-index: 200;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            transform: scale(1.05);
+        }
+
+        .price-table-container .table .title {
+            font-weight: bold;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .price-table-container .table .price {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2px;
+        }
+
+        .price-table-container .table .price .currency {
+            font-size: 25px;
+        }
+
+        .price-table-container .table .price .number {
+            font-size: 60px;
+            font-weight: bold;
+        }
+
+        .price-table-container .table .price .frecuency {
+            color: #999;
+        }
+
+        .price-table-container .table .features {
+            flex: 1;
+        }
+
+        .price-table-container .table .features ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .price-table-container .table .features ul li {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .price-table-container .table .features ul li span {
+            color: rgb(39,196,143);
+        }
+
+        .actions .btn {
+            display: block;
+            text-align: center;
+            padding: 20px 0;
+            border: 1px solid #999;
+            text-decoration: none;
+            border-radius: 3px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #333;
+            transition: all 0.3s ease;
+        }
+
+        .actions .btn:hover {
+            background-color: #eee;
+            color: #222;
+        }
+
+        .actions .btn.recommended {
+            background-color: #2579e7;
+            color: #fff;            
+            border: 1px solid #2579e7;
+        }
+
+        .actions .btn.recommended:hover {
+            background-color: #1961be;
+            border: 1px solid #1961be;
+        }
+
+        /* Media Queries para Responsividad */
+        @media (max-width: 900px) {
+            .price-table-container {
+                max-width: 700px;
+            }
+            
+            .price-table-container .table {
+                flex: 1 1 250px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .price-table-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+            
+            .price-table-container .table {
+                width: 100%;
+                max-width: 400px;
+                border-radius: 10px !important;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            }
+            
+            .price-table-container .table.recommended {
+                transform: none;
+                order: -1; /* Coloca el plan recomendado primero */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .price-table-container .table {
+                padding: 20px;
+            }
+            
+            .price-table-container .table.recommended {
+                padding: 30px 20px 40px 20px;
+            }
+            
+            .price-table-container .table .price .number {
+                font-size: 50px;
+            }
+            
+            .actions .btn {
+                padding: 15px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="price-table-container">
+        <!-- TABLE-1 -->
+        <div class="table">
+            <div class="title">Startup Plan</div>
+            <div class="price">
+                <span class="currency">$</span>
+                <span class="number">69</span>
+                <div class="frecuency">mo</div>
+            </div>
+            <div class="features">
+                <ul>
+                    <li><span class="material-symbols-outlined">check_circle</span>Ease Access</li>
+                    <li><span class="material-symbols-outlined">check_circle</span>All features</li>
+                    <li><span class="material-symbols-outlined">check_circle</span>Email support</li>
+                    <li><span class="material-symbols-outlined">check_circle</span>Basic analytics</li>
+                    <li><span class="material-symbols-outlined">check_circle</span>5GB Storage</li>
+                </ul>
+            </div>
+            <div class="actions">
+                <a href="#" class="btn">Try for free</a>
+            </div>
+        </div>
+
+        <!-- TABLE-2 -->
+        <div class="table recommended">
+            <div class="title">Business Plan</div>
+            <div class="price">
+                <span class="currency">$</span>
+                <span class="number">99</span>
+                <div class="frecuency">mo</div>
+            </div>
+            <div class="features">
+                <ul>
+                    <li><span class="material-symbols-outlined">check_circle</span>Ease Access</li>
+                    <li><span class="material-symbols-outlined">check_circle</span>All features</li>
+                    <li><span class="material-symbols-outlined">check_circle</span>Priority support</li>
+                    <li><span class="material-symbols-outlined">check_circle</span>Advanced analytics</li>
+                    <li><span class="material-symbols-outlined">check_circle</span>50GB Storage</li>
+                </ul>
+            </div>
+            <div class="actions">
+                <a href="#" class="btn recommended">Try for free</a>
+            </div>
+        </div>
+
+        <!-- TABLE-3 -->
+        <div class="table">
+            <div class="title">Enterprise Plan</div>
+            <div class="price">
+                <span class="currency">$</span>
+                <span class="number">149</span>
+                <div class="frecuency">mo</div>
+            </div>
+            <div class="features">
+                <ul>
+                    <li><span class="material-symbols-outlined">check_circle</span>Ease Access</li>
+                    <li><span class="material-symbols-outlined">check_circle</span>All features</li>
+                    <li><span class="material-symbols-outlined">check_circle</span>24/7 support</li>
+                    <li><span class="material-symbols-outlined">check_circle</span>Custom analytics</li>
+                    <li><span class="material-symbols-outlined">check_circle</span>Unlimited Storage</li>
+                </ul>
+            </div>
+            <div class="actions">
+                <a href="#" class="btn">Try for free</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
