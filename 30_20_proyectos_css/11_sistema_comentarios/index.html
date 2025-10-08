@@ -1,46 +1,249 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>11_sistema_comentarios</title>
-
+    <title>Thread</title>
     <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0"
     />
-
     <style>
+      :root {
+        --border-color: #558bff;
+      }
       body {
-        font-family: Arial, Helvetica, sans-serif;
-        margin: 0;
-        padding: 0;
-      }
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(30, 30, 52);
+}
 
-      .material-symbols-outlined {
-        font-family: "Material Symbols Outlined";
-        font-weight: normal;
-        font-style: normal;
-        font-size: 24px;
-        display: inline-block;
-        line-height: 1;
-        text-transform: none;
-        letter-spacing: normal;
-        word-wrap: normal;
-        white-space: nowrap;
-        direction: ltr;
-      }
-      .material-symbols-outlined {
-        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
-      }
+.comments-container {
+  width: 800px;
+  margin: 0 auto;
+  color: #fff;
+}
+.comments-container > .comment {
+  margin-bottom: 10px;
+}
+.comment {
+  display: flex;
+  width: 100%;
+  color: white;
+}
 
-      
+.comment .line {
+  position: relative;
+  width: 10px;
+  height: 50%;
+  border-left: solid 1px var(--border-color);
+  border-bottom: solid 1px var(--border-color);
+  border-radius: 0 0 0 8px;
+}
 
+.comment-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.comment-wrapper .content {
+  width: 100%;
+  display: flex;
+  border: 1px solid var(--border-color);
+  padding: 10px;
+  border-radius: 3px;
+  background-color: rgb(24, 43, 80);
+}
+
+.comment-wrapper .content img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  padding-right: 10px;
+}
+
+.comment-wrapper .content .comment-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.comment-info .header .username {
+  font-weight: bold;
+}
+
+.comment .replies {
+  padding-top: 10px;
+  position: relative;
+  padding-left: 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.comment .replies::before {
+  content: '';
+  position: absolute;
+  background-color: var(--border-color);
+  width: 1px;
+  top: 0;
+  height: calc(100% - 53px);
+}
 
     </style>
   </head>
-
   <body>
-    
+    <div class="comments-container">
+      <div class="comment">
+        <div class="comment-wrapper">
+          <div class="content">
+            <div class="user-photo">
+              <img src="/img/bean.jpg" alt=""  />
+            </div>
+            <div class="comment-info">
+              <div class="header">
+                <span class="username">@vidamrr</span>
+                <span class="date">5hrs ago</span>
+              </div>
+              <div class="text">Este es un comentario</div>
+              <div class="actions">
+                <button>Like</button>
+                <button>Reply</button>
+                <button>Share</button>
+                <button>Follow</button>
+                <button>Report</button>
+              </div>
+            </div>
+          </div>
+          <div class="replies">
+            <div class="comment">
+              <div class="line"></div>
+              <div class="comment-wrapper">
+                <div class="content">
+                  <div class="user-photo">
+                    <img src="/img/colombo.jpg" alt=""  />
+                  </div>
+                  <div class="comment-info">
+                    <div class="header">
+                      <span class="username">@vidamrr</span>
+                      <span class="date">5hrs ago</span>
+                    </div>
+                    <div class="text">Este es un comentario</div>
+                    <div class="actions">
+                      <button>Like</button>
+                      <button>Reply</button>
+                      <button>Share</button>
+                      <button>Follow</button>
+                      <button>Report</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="comment">
+              <div class="line"></div>
+              <div class="comment-wrapper">
+                <div class="content">
+                  <div class="user-photo">
+                    <img src="/img/de_vito.jpg" alt=""  />
+                  </div>
+                  <div class="comment-info">
+                    <div class="header">
+                      <span class="username">@vidamrr</span>
+                      <span class="date">5hrs ago</span>
+                    </div>
+                    <div class="text">Este es un comentario</div>
+                    <div class="actions">
+                      <button>Like</button>
+                      <button>Reply</button>
+                      <button>Share</button>
+                      <button>Follow</button>
+                      <button>Report</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="comment">
+        <div class="comment-wrapper">
+          <div class="content">
+            <div class="user-photo">
+              <img src="/img/colombo.jpg" alt=""  />
+            </div>
+            <div class="comment-info">
+              <div class="header">
+                <span class="username">@vidamrr</span>
+                <span class="date">5hrs ago</span>
+              </div>
+              <div class="text">Este es un comentario</div>
+              <div class="actions">
+                <button>Like</button>
+                <button>Reply</button>
+                <button>Share</button>
+                <button>Follow</button>
+                <button>Report</button>
+              </div>
+            </div>
+          </div>
+          <div class="replies">
+            <div class="comment">
+              <div class="line"></div>
+              <div class="comment-wrapper">
+                <div class="content">
+                  <div class="user-photo">
+                    <img src="/img/de_vito.jpg" alt=""  />
+                  </div>
+                  <div class="comment-info">
+                    <div class="header">
+                      <span class="username">@vidamrr</span>
+                      <span class="date">5hrs ago</span>
+                    </div>
+                    <div class="text">Este es un comentario</div>
+                    <div class="actions">
+                      <button>Like</button>
+                      <button>Reply</button>
+                      <button>Share</button>
+                      <button>Follow</button>
+                      <button>Report</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="comment">
+              <div class="line"></div>
+              <div class="comment-wrapper">
+                <div class="content">
+                  <div class="user-photo">
+                    <img src="/img/bean.jpg" alt=""  />
+                  </div>
+                  <div class="comment-info">
+                    <div class="header">
+                      <span class="username">@vidamrr</span>
+                      <span class="date">5hrs ago</span>
+                    </div>
+                    <div class="text">Este es un comentario</div>
+                    <div class="actions">
+                      <button>Like</button>
+                      <button>Reply</button>
+                      <button>Share</button>
+                      <button>Follow</button>
+                      <button>Report</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

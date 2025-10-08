@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>10 Tarjetas Volteables</title>
+
+    <!-- Iconos de Google -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+
+    <!-- Fuente moderna -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* ===== ESTILO GENERAL ===== */
+      body {
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(135deg, #e0f7fa, #fff);
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      /* ===== CONTENEDOR ===== */
+      .cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+
+      /* ===== TARJETA ===== */
+      .flip-card {
+        background-color: transparent;
+        width: 280px;
+        height: 320px;
+        perspective: 1000px;
+      }
+
+      .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1);
+        transform-style: preserve-3d;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        border-radius: 20px;
+      }
+
+      .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+      }
+
+      .flip-card-front,
+      .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        backface-visibility: hidden;
+        overflow: hidden;
+      }
+
+      /* ===== FRENTE ===== */
+      .flip-card-front {
+        background-color: #f0f0f0;
+      }
+
+      .flip-card-front img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      /* ===== REVERSO ===== */
+      .flip-card-back {
+        background: linear-gradient(135deg, #0097a7, #00bcd4);
+        color: #fff;
+        transform: rotateY(180deg);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .flip-card-back h3 {
+        margin: 10px 0 5px;
+        font-size: 1.4rem;
+      }
+
+      .flip-card-back p {
+        margin: 5px 0;
+        font-size: 1rem;
+        opacity: 0.9;
+      }
+
+      /* ===== ANIMACIÓN SUAVE ===== */
+      .flip-card-back h3,
+      .flip-card-back p {
+        transition: transform 0.3s ease, opacity 0.3s ease;
+      }
+
+      .flip-card:hover .flip-card-back h3 {
+        transform: translateY(-5px);
+      }
+
+      /* ===== RESPONSIVE ===== */
+      @media (max-width: 900px) {
+        .flip-card {
+          width: 240px;
+          height: 280px;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .flip-card {
+          width: 200px;
+          height: 240px;
+        }
+        .flip-card-back h3 {
+          font-size: 1.1rem;
+        }
+        .flip-card-back p {
+          font-size: 0.9rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="cards">
+      <!-- TARJETA 1 -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="img/bean.jpg" alt="Basilio Perfecto" />
+          </div>
+          <div class="flip-card-back">
+            <h3>Basilio Perfecto</h3>
+            <p>Teleexperto</p>
+            <p>Máster en Ventas Online</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- TARJETA 2 -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="img/colombo.jpg" alt="Vilorio Tantalio" />
+          </div>
+          <div class="flip-card-back">
+            <h3>Vilorio Tantalio</h3>
+            <p>Teleexperto</p>
+            <p>Máster en Ventas Online</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- TARJETA 3 -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="img/de_vito.jpg" alt="Godofredo Americio" />
+          </div>
+          <div class="flip-card-back">
+            <h3>Godofredo Americio</h3>
+            <p>Teleexperto</p>
+            <p>Máster en Ventas Online</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
