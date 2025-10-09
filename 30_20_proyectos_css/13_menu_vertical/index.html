@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>13_menu_vertical</title>
+
+    
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --width: 250px
+      }
+      body {
+        font-family: Arial, Helvetica, sans-serif;   
+        padding: 0;
+        padding-left: 52px;     
+      }
+      nav {
+        position: absolute;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        width: 52px;
+        background-color: #222;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+
+        transition: width 0.3s ease-in-out;
+      }
+
+      nav:hover {
+        width: var(--width);
+      }
+
+      nav.bar {
+        background-color: #000;
+        color: #fff;
+        display: flex;
+        justify-content: end;
+      }
+
+      nav .user {
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+        font-size: 30px;
+        height: 180px;
+        transform: translateX(-300px);
+        opacity: 0;
+        width: var(--width);
+        transition: transform 0.3s ease, opacity 0.3s ease;
+      }
+
+      nav .user img {
+        width: 100px;
+        margin: 0 auto;
+        border-radius: 50%;
+      }
+
+      nav:hover .user {
+        transform: translateX(0px);
+        opacity: 1;
+      }
+
+      nav .links a {
+        color: #fff;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        width: var(--width);
+        overflow: hidden;
+      }
+
+      nav .links a .icon {
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      nav .links a:hover {
+        background-color: rgb(31, 135, 205);
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>hola</h1>
+    <nav>
+      <header>
+        <div class="bar"></div>
+        <div class="user">
+          <img src="/img/abuela.webp" width="40" alt="" />
+          <div class="name">Susana Bundi</div>
+        </div>
+      </header>
+
+      <div class="links">
+        <a href="#">
+          <div class="icon">
+            <span
+              class="iconify"
+              data-icon="flat-color-icons:assistant"
+              data-width="32"
+              data-height="32"
+            ></span>
+          </div>
+          <div class="title">Remote Assistance</div>
+        </a>
+        <a href="#">
+          <div class="icon">
+            <span
+              class="iconify"
+              data-icon="flat-color-icons:calendar"
+              data-width="32"
+              data-height="32"
+            ></span>
+          </div>
+          <div class="title">Calendar</div>
+        </a>
+        <a href="#">
+          <div class="icon">
+            <span
+              class="iconify"
+              data-icon="flat-color-icons:automatic"
+              data-width="32"
+              data-height="32"
+            ></span>
+          </div>
+          <div class="title">Settings</div>
+        </a>
+        <a href="#">
+          <div class="icon">
+            <span
+              class="iconify"
+              data-icon="flat-color-icons:bearish"
+              data-width="32"
+              data-height="32"
+            ></span>
+          </div>
+          <div class="title">Analytics</div>
+        </a>
+        <a href="#">
+          <div class="icon">
+            <span
+              class="iconify"
+              data-icon="flat-color-icons:compact-camera"
+              data-width="32"
+              data-height="32"
+            ></span>
+          </div>
+          <div class="title">Photos</div>
+        </a>
+      </div>
+    </nav>
+    <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
+  </body>
+</html>

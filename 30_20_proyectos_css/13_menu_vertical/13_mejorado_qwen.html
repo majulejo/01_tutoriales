@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menú Vertical Interactivo</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <script src="https://code.iconify.design/2/2.1.2/iconify.min.js" defer></script>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --menu-width: 250px;
+        --menu-collapsed: 52px;
+        --transition-speed: 0.3s;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #f5f5f5;
+        padding-left: var(--menu-collapsed);
+        transition: padding-left var(--transition-speed) ease-in-out;
+      }
+
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: var(--menu-collapsed);
+        background-color: #222;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        z-index: 1000;
+        transition: width var(--transition-speed) ease-in-out;
+      }
+
+      nav:hover {
+        width: var(--menu-width);
+      }
+
+      nav:hover + main {
+        padding-left: var(--menu-width);
+      }
+
+      /* Header del menú */
+      nav header {
+        height: 180px;
+        position: relative;
+        background-color: #000;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .user {
+        position: absolute;
+        width: var(--menu-width);
+        text-align: center;
+        opacity: 0;
+        transform: translateX(-20px);
+        transition:
+          opacity var(--transition-speed) ease,
+          transform var(--transition-speed) ease;
+      }
+
+      nav:hover .user {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      .user img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 8px;
+      }
+
+      .user .name {
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      /* Enlaces del menú */
+      .links {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .links a {
+        color: #fff;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        height: 56px;
+        padding-left: var(--menu-collapsed);
+        overflow: hidden;
+        white-space: nowrap;
+        transition: background-color 0.2s;
+      }
+
+      .links a .icon {
+        width: var(--menu-collapsed);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+      }
+
+      .links a .title {
+        margin-left: 12px;
+        opacity: 0;
+        transform: translateX(-10px);
+        transition:
+          opacity var(--transition-speed) ease,
+          transform var(--transition-speed) ease;
+      }
+
+      nav:hover .links a .title {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      .links a:hover {
+        background-color: #1f87cd;
+      }
+
+      /* Contenido principal */
+      main {
+        padding: 20px;
+        transition: padding-left var(--transition-speed) ease-in-out;
+      }
+
+      h1 {
+        margin-bottom: 20px;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <nav aria-label="Navegación principal">
+      <header>
+        <div class="user">
+          <img src="/img/abuela.webp" alt="Foto de perfil de Susana Bundi" />
+          <div class="name">Susana Bundi</div>
+        </div>
+      </header>
+
+      <div class="links">
+        <a href="#" aria-label="Asistencia remota">
+          <div class="icon">
+            <span class="iconify" data-icon="flat-color-icons:assistant" data-width="24" data-height="24"></span>
+          </div>
+          <div class="title">Remote Assistance</div>
+        </a>
+        <a href="#" aria-label="Calendario">
+          <div class="icon">
+            <span class="iconify" data-icon="flat-color-icons:calendar" data-width="24" data-height="24"></span>
+          </div>
+          <div class="title">Calendar</div>
+        </a>
+        <a href="#" aria-label="Configuración">
+          <div class="icon">
+            <span class="iconify" data-icon="flat-color-icons:automatic" data-width="24" data-height="24"></span>
+          </div>
+          <div class="title">Settings</div>
+        </a>
+        <a href="#" aria-label="Analítica">
+          <div class="icon">
+            <span class="iconify" data-icon="flat-color-icons:bearish" data-width="24" data-height="24"></span>
+          </div>
+          <div class="title">Analytics</div>
+        </a>
+        <a href="#" aria-label="Fotos">
+          <div class="icon">
+            <span class="iconify" data-icon="flat-color-icons:compact-camera" data-width="24" data-height="24"></span>
+          </div>
+          <div class="title">Photos</div>
+        </a>
+      </div>
+    </nav>
+
+    <main>
+      <h1>¡Hola!</h1>
+      <p>Este es el contenido principal de la página. El menú lateral se expande al pasar el cursor.</p>
+    </main>
+  </body>
+</html>

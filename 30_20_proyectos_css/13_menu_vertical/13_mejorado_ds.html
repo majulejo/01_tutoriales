@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menú Vertical Mejorado</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <style>
+        :root {
+            --menu-width: 250px;
+            --menu-collapsed-width: 52px;
+            --primary-color: #222;
+            --secondary-color: #000;
+            --accent-color: rgb(31, 135, 205);
+            --text-color: #fff;
+            --transition-speed: 0.3s;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 0;
+            padding-left: var(--menu-collapsed-width);
+            transition: padding-left var(--transition-speed) ease-in-out;
+            min-height: 100vh;
+            background-color: #f5f5f5;
+        }
+        
+        /* Menú principal */
+        nav {
+            position: fixed;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            width: var(--menu-collapsed-width);
+            background-color: var(--primary-color);
+            overflow: hidden;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            transition: width var(--transition-speed) ease-in-out;
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        nav.expanded {
+            width: var(--menu-width);
+        }
+        
+        body.menu-expanded {
+            padding-left: var(--menu-width);
+        }
+        
+        /* Botón de toggle para móviles */
+        .menu-toggle {
+            display: none;
+            position: fixed;
+            top: 15px;
+            left: 15px;
+            z-index: 1001;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 8px 12px;
+            cursor: pointer;
+            font-size: 16px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Cabecera del menú */
+        nav header {
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            padding: 10px 0;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            min-height: 60px;
+            position: relative;
+        }
+        
+        .menu-title {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            font-weight: bold;
+            opacity: 0;
+            transition: opacity var(--transition-speed) ease;
+        }
+        
+        nav.expanded .menu-title {
+            opacity: 1;
+        }
+        
+        /* Información del usuario */
+        .user {
+            color: var(--text-color);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 18px;
+            height: 180px;
+            transform: translateX(-300px);
+            opacity: 0;
+            width: var(--menu-width);
+            transition: transform var(--transition-speed) ease, opacity var(--transition-speed) ease;
+        }
+        
+        nav.expanded .user {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        
+        .user img {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 15px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent-color);
+        }
+        
+        .user .name {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .user .role {
+            font-size: 14px;
+            color: #aaa;
+        }
+        
+        /* Enlaces del menú */
+        .links {
+            flex: 1;
+            overflow-y: auto;
+            padding-bottom: 20px;
+        }
+        
+        .links a {
+            color: var(--text-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            width: var(--menu-width);
+            overflow: hidden;
+            transition: background-color 0.2s ease;
+            padding: 5px 0;
+        }
+        
+        .links a .icon {
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: var(--menu-collapsed-width);
+        }
+        
+        .links a .title {
+            white-space: nowrap;
+            opacity: 0;
+            transition: opacity var(--transition-speed) ease;
+        }
+        
+        nav.expanded .links a .title {
+            opacity: 1;
+        }
+        
+        .links a:hover {
+            background-color: var(--accent-color);
+            color: var(--text-color);
+        }
+        
+        .links a.active {
+            background-color: rgba(31, 135, 205, 0.7);
+        }
+        
+        /* Indicador de página actual */
+        .links a::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            width: 3px;
+            height: 100%;
+            background-color: var(--accent-color);
+            opacity: 0;
+            transition: opacity 0.2s ease;
+        }
+        
+        .links a.active::after {
+            opacity: 1;
+        }
+        
+        /* Contenido principal */
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            body {
+                padding-left: 0;
+            }
+            
+            nav {
+                width: var(--menu-width);
+                left: -100%;
+                transition: left var(--transition-speed) ease-in-out;
+            }
+            
+            nav.expanded {
+                left: 0;
+            }
+            
+            .menu-toggle {
+                display: block;
+            }
+            
+            body.menu-expanded {
+                padding-left: 0;
+            }
+            
+            body.menu-expanded::after {
+                content: '';
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.5);
+                z-index: 999;
+            }
+        }
+        
+        /* Scrollbar personalizado */
+        .links::-webkit-scrollbar {
+            width: 5px;
+        }
+        
+        .links::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .links::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 5px;
+        }
+        
+        .links::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+        <span class="material-icons">menu</span>
+    </button>
+    
+    <nav id="mainNav">
+        <header>
+            <div class="menu-title">Panel de Control</div>
+            <button class="close-menu" id="closeMenu" aria-label="Cerrar menú">
+                <span class="material-icons">close</span>
+            </button>
+        </header>
+        
+        <div class="user">
+            <img src="/img/abuela.webp" alt="Foto de perfil de Susana Bundi" />
+            <div class="name">Susana Bundi</div>
+            <div class="role">Administradora</div>
+        </div>
+        
+        <div class="links">
+            <a href="#" class="active">
+                <div class="icon">
+                    <span class="material-icons">support_agent</span>
+                </div>
+                <div class="title">Asistencia Remota</div>
+            </a>
+            <a href="#">
+                <div class="icon">
+                    <span class="material-icons">calendar_today</span>
+                </div>
+                <div class="title">Calendario</div>
+            </a>
+            <a href="#">
+                <div class="icon">
+                    <span class="material-icons">settings</span>
+                </div>
+                <div class="title">Configuración</div>
+            </a>
+            <a href="#">
+                <div class="icon">
+                    <span class="material-icons">analytics</span>
+                </div>
+                <div class="title">Analíticas</div>
+            </a>
+            <a href="#">
+                <div class="icon">
+                    <span class="material-icons">photo_library</span>
+                </div>
+                <div class="title">Fotos</div>
+            </a>
+            <a href="#">
+                <div class="icon">
+                    <span class="material-icons">notifications</span>
+                </div>
+                <div class="title">Notificaciones</div>
+            </a>
+            <a href="#">
+                <div class="icon">
+                    <span class="material-icons">people</span>
+                </div>
+                <div class="title">Usuarios</div>
+            </a>
+            <a href="#">
+                <div class="icon">
+                    <span class="material-icons">security</span>
+                </div>
+                <div class="title">Seguridad</div>
+            </a>
+            <a href="#">
+                <div class="icon">
+                    <span class="material-icons">help</span>
+                </div>
+                <div class="title">Ayuda</div>
+            </a>
+            <a href="#">
+                <div class="icon">
+                    <span class="material-icons">logout</span>
+                </div>
+                <div class="title">Cerrar Sesión</div>
+            </a>
+        </div>
+    </nav>
+    
+    <main>
+        <h1>Bienvenido al Panel de Control</h1>
+        <p>Este es un ejemplo de un menú vertical mejorado con funcionalidades adicionales y mejor diseño.</p>
+        <p>El menú ahora es completamente responsive y funciona correctamente en dispositivos móviles.</p>
+        <p>Puedes navegar por las diferentes secciones utilizando el menú lateral.</p>
+        
+        <h2>Características implementadas:</h2>
+        <ul>
+            <li>Diseño responsive para móviles y tablets</li>
+            <li>Funcionalidad de toggle para abrir/cerrar el menú</li>
+            <li>Mejor accesibilidad con etiquetas ARIA</li>
+            <li>Indicador visual de la página activa</li>
+            <li>Scrollbar personalizada</li>
+            <li>Transiciones suaves</li>
+            <li>Estructura semántica mejorada</li>
+        </ul>
+    </main>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const nav = document.getElementById('mainNav');
+            const menuToggle = document.getElementById('menuToggle');
+            const closeMenu = document.getElementById('closeMenu');
+            const body = document.body;
+            
+            // Función para expandir/contraer el menú
+            function toggleMenu() {
+                nav.classList.toggle('expanded');
+                body.classList.toggle('menu-expanded');
+            }
+            
+            // Event listeners
+            menuToggle.addEventListener('click', toggleMenu);
+            closeMenu.addEventListener('click', toggleMenu);
+            
+            // Cerrar menú al hacer clic fuera en móviles
+            document.addEventListener('click', function(event) {
+                if (window.innerWidth <= 768 && 
+                    body.classList.contains('menu-expanded') && 
+                    !nav.contains(event.target) && 
+                    event.target !== menuToggle) {
+                    toggleMenu();
+                }
+            });
+            
+            // Manejar enlaces activos
+            const links = document.querySelectorAll('.links a');
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    // En una aplicación real, esto se manejaría según la página actual
+                    // Por ahora, solo para demostración
+                    links.forEach(l => l.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // En móviles, cerrar el menú después de hacer clic en un enlace
+                    if (window.innerWidth <= 768) {
+                        toggleMenu();
+                    }
+                });
+            });
+            
+            // Manejar el hover solo en desktop
+            if (window.innerWidth > 768) {
+                nav.addEventListener('mouseenter', function() {
+                    nav.classList.add('expanded');
+                    body.classList.add('menu-expanded');
+                });
+                
+                nav.addEventListener('mouseleave', function() {
+                    nav.classList.remove('expanded');
+                    body.classList.remove('menu-expanded');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
