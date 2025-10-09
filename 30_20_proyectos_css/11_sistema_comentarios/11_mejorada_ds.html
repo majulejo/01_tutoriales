@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thread - Mejorado</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --border-color: #558bff;
+        --bg-primary: rgb(30, 30, 52);
+        --bg-comment: rgb(24, 43, 80);
+        --text-secondary: #999;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: var(--bg-primary);
+        margin: 0;
+        padding: 20px;
+        color: #fff;
+      }
+
+      .comments-container {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      
+      .comments-container > .comment {
+        margin-bottom: 20px;
+      }
+
+      .comment {
+        display: flex;
+      }
+
+      .comment .line {
+        position: relative;
+        width: 20px;
+        min-width: 20px;
+        height: 40px;
+        border-left: solid 1px var(--border-color);
+        border-bottom: solid 1px var(--border-color);
+        border-radius: 0 0 0 8px;
+        margin-right: 15px;
+      }
+
+      .comment-wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .comment-wrapper .content {
+        width: 100%;
+        display: flex;
+        border: 1px solid var(--border-color);
+        padding: 15px;
+        border-radius: 8px;
+        background-color: var(--bg-comment);
+        transition: all 0.2s ease;
+      }
+
+      .comment-wrapper .content:hover {
+        box-shadow: 0 0 10px rgba(85, 139, 255, 0.3);
+      }
+
+      .comment-wrapper .content img {
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        margin-right: 15px;
+        object-fit: cover;
+      }
+
+      .comment-wrapper .content .comment-info {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        width: 100%;
+      }
+
+      .comment-info .header {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .comment-info .header .username {
+        font-weight: bold;
+        color: #fff;
+      }
+
+      .comment-info .header .date {
+        color: var(--text-secondary);
+        font-size: 0.85rem;
+      }
+
+      .comment-info .text {
+        line-height: 1.5;
+        margin: 5px 0;
+      }
+
+      .comment-info .actions {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      .comment-info .actions button {
+        border: none;
+        background-color: transparent;
+        color: var(--border-color);
+        cursor: pointer;
+        padding: 6px 12px;
+        border-radius: 4px;
+        font-size: 0.9rem;
+        transition: all 0.2s ease;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+
+      .comment-info .actions button:hover {
+        color: #fff;
+        background-color: var(--border-color);
+        transform: translateY(-2px);
+      }
+
+      .comment-info .actions button .material-icons {
+        font-size: 16px;
+      }
+
+      /* Sistema mejorado de respuestas */
+      .replies {
+        position: relative;
+        padding-left: 35px;
+        margin-top: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .replies::before {
+        content: "";
+        position: absolute;
+        background-color: var(--border-color);
+        width: 1px;
+        top: 0;
+        left: 15px;
+        height: 100%;
+      }
+
+      /* Para respuestas de respuestas */
+      .comment.reply .replies {
+        padding-left: 35px;
+      }
+
+      .comment.reply .replies::before {
+        left: 15px;
+      }
+
+      /* Responsive */
+      @media (max-width: 850px) {
+        .comments-container {
+          width: 95%;
+        }
+        
+        .comment-wrapper .content {
+          flex-direction: column;
+        }
+        
+        .comment-wrapper .content img {
+          margin-right: 0;
+          margin-bottom: 10px;
+        }
+        
+        .replies {
+          padding-left: 20px;
+        }
+        
+        .comment .line {
+          width: 15px;
+          min-width: 15px;
+          margin-right: 10px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .comment-info .actions {
+          gap: 5px;
+        }
+        
+        .comment-info .actions button {
+          padding: 5px 8px;
+          font-size: 0.8rem;
+        }
+        
+        .replies {
+          padding-left: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="comments-container">
+      <!-- Primer comentario con respuestas -->
+      <div class="comment">
+        <div class="comment-wrapper">
+          <div class="content">
+            <div class="user-photo">
+              <img src="https://i.pravatar.cc/50?img=1" alt="Avatar de usuario" />
+            </div>
+            <div class="comment-info">
+              <div class="header">
+                <span class="username">@vBEAN-CC-1</span>
+                <span class="date">Hace 1 hora</span>
+              </div>
+              <div class="text">Este es un comentario principal sobre el tema que estamos discutiendo. Me parece muy interesante la perspectiva que se está tomando.</div>
+              <div class="actions">
+                <button><span class="material-icons">thumb_up</span> Like</button>
+                <button><span class="material-icons">reply</span> Reply</button>
+                <button><span class="material-icons">share</span> Share</button>
+                <button><span class="material-icons">person_add</span> Follow</button>
+                <button><span class="material-icons">flag</span> Report</button>
+              </div>
+            </div>
+          </div>
+          <div class="replies">
+            <!-- Primera respuesta -->
+            <div class="comment reply">
+              <div class="line"></div>
+              <div class="comment-wrapper">
+                <div class="content">
+                  <div class="user-photo">
+                    <img src="https://i.pravatar.cc/50?img=2" alt="Avatar de usuario" />
+                  </div>
+                  <div class="comment-info">
+                    <div class="header">
+                      <span class="username">@colombo-RR</span>
+                      <span class="date">Hace 1 hora</span>
+                    </div>
+                    <div class="text">
+                      Estoy de acuerdo con tu punto de vista. Creo que hay varios aspectos que debemos considerar para mejorar esta situación.
+                    </div>
+                    <div class="actions">
+                      <button><span class="material-icons">thumb_up</span> Like</button>
+                      <button><span class="material-icons">reply</span> Reply</button>
+                      <button><span class="material-icons">share</span> Share</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Segunda respuesta -->
+            <div class="comment reply">
+              <div class="line"></div>
+              <div class="comment-wrapper">
+                <div class="content">
+                  <div class="user-photo">
+                    <img src="https://i.pravatar.cc/50?img=3" alt="Avatar de usuario" />
+                  </div>
+                  <div class="comment-info">
+                    <div class="header">
+                      <span class="username">@vito-RR-1</span>
+                      <span class="date">Hace 1 hora</span>
+                    </div>
+                    <div class="text">
+                      Tengo una perspectiva diferente. Creo que el enfoque debería ser más práctico y menos teórico.
+                    </div>
+                    <div class="actions">
+                      <button><span class="material-icons">thumb_up</span> Like</button>
+                      <button><span class="material-icons">reply</span> Reply</button>
+                      <button><span class="material-icons">share</span> Share</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Segundo comentario con respuestas -->
+      <div class="comment">
+        <div class="comment-wrapper">
+          <div class="content">
+            <div class="user-photo">
+              <img src="https://i.pravatar.cc/50?img=4" alt="Avatar de usuario" />
+            </div>
+            <div class="comment-info">
+              <div class="header">
+                <span class="username">@vidamCC</span>
+                <span class="date">Hace 2 horas</span>
+              </div>
+              <div class="text">Este es otro comentario principal con un enfoque diferente al anterior. Me gustaría conocer sus opiniones al respecto.</div>
+              <div class="actions">
+                <button><span class="material-icons">thumb_up</span> Like</button>
+                <button><span class="material-icons">reply</span> Reply</button>
+                <button><span class="material-icons">share</span> Share</button>
+                <button><span class="material-icons">person_add</span> Follow</button>
+                <button><span class="material-icons">flag</span> Report</button>
+              </div>
+            </div>
+          </div>
+          <div class="replies">
+            <!-- Primera respuesta -->
+            <div class="comment reply">
+              <div class="line"></div>
+              <div class="comment-wrapper">
+                <div class="content">
+                  <div class="user-photo">
+                    <img src="https://i.pravatar.cc/50?img=5" alt="Avatar de usuario" />
+                  </div>
+                  <div class="comment-info">
+                    <div class="header">
+                      <span class="username">@VITORR-2</span>
+                      <span class="date">Hace 2 horas</span>
+                    </div>
+                    <div class="text">
+                      Tu perspectiva es interesante, pero creo que hay algunos puntos que no has considerado completamente.
+                    </div>
+                    <div class="actions">
+                      <button><span class="material-icons">thumb_up</span> Like</button>
+                      <button><span class="material-icons">reply</span> Reply</button>
+                      <button><span class="material-icons">share</span> Share</button>
+                    </div>
+                  </div>
+                </div>
+                <!-- Respuestas anidadas -->
+                <div class="replies">
+                  <div class="comment reply">
+                    <div class="line"></div>
+                    <div class="comment-wrapper">
+                      <div class="content">
+                        <div class="user-photo">
+                          <img src="https://i.pravatar.cc/50?img=6" alt="Avatar de usuario" />
+                        </div>
+                        <div class="comment-info">
+                          <div class="header">
+                            <span class="username">@niña-RR</span>
+                            <span class="date">Hace 2 horas</span>
+                          </div>
+                          <div class="text">
+                            Estoy de acuerdo con tu análisis. Los puntos que mencionas son fundamentales para entender la situación completa.
+                          </div>
+                          <div class="actions">
+                            <button><span class="material-icons">thumb_up</span> Like</button>
+                            <button><span class="material-icons">reply</span> Reply</button>
+                            <button><span class="material-icons">share</span> Share</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="comment reply">
+                    <div class="line"></div>
+                    <div class="comment-wrapper">
+                      <div class="content">
+                        <div class="user-photo">
+                          <img src="https://i.pravatar.cc/50?img=7" alt="Avatar de usuario" />
+                        </div>
+                        <div class="comment-info">
+                          <div class="header">
+                            <span class="username">@muñeca-RR</span>
+                            <span class="date">Hace 2 horas</span>
+                          </div>
+                          <div class="text">
+                            Tengo una pregunta sobre el tercer punto que mencionaste. ¿Podrías explicarlo con más detalle?
+                          </div>
+                          <div class="actions">
+                            <button><span class="material-icons">thumb_up</span> Like</button>
+                            <button><span class="material-icons">reply</span> Reply</button>
+                            <button><span class="material-icons">share</span> Share</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Segunda respuesta -->
+            <div class="comment reply">
+              <div class="line"></div>
+              <div class="comment-wrapper">
+                <div class="content">
+                  <div class="user-photo">
+                    <img src="https://i.pravatar.cc/50?img=8" alt="Avatar de usuario" />
+                  </div>
+                  <div class="comment-info">
+                    <div class="header">
+                      <span class="username">@BEANRRRRRR-2</span>
+                      <span class="date">Hace 2 horas</span>
+                    </div>
+                    <div class="text">
+                      Basándome en mi experiencia, puedo confirmar que tu enfoque es el correcto. He implementado algo similar con excelentes resultados.
+                    </div>
+                    <div class="actions">
+                      <button><span class="material-icons">thumb_up</span> Like</button>
+                      <button><span class="material-icons">reply</span> Reply</button>
+                      <button><span class="material-icons">share</span> Share</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

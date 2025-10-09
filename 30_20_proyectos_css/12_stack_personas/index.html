@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>12_stack_personas</title>
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0"
+    />
+
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      .material-symbols-outlined {
+        font-family: "Material Symbols Outlined";
+        font-weight: normal;
+        font-style: normal;
+        font-size: 24px;
+        display: inline-block;
+        line-height: 1;
+        text-transform: none;
+        letter-spacing: normal;
+        word-wrap: normal;
+        white-space: nowrap;
+        direction: ltr;
+      }
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: antiquewhite;
+      }
+
+      .personas-container {
+        margin: 100px auto;
+        width: 500px;
+        display: flex;
+      }
+
+      .persona {
+        position: relative;
+        margin-right: -20px;
+        display: inline-flex;
+        flex-direction: column;
+      }
+      .persona img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: 2px solid #fff;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .persona:hover img {
+        transform: translateY(-2px);
+      }
+
+      .persona .name {
+        position: absolute;
+        background-color: #000;
+        color: #fff;
+        display: none;
+
+        border-radius: 5px;
+        border: 1px solid #fff;
+
+        min-width: 100px;
+        width: 150px;
+        top: -60px;
+        left: calc((100% + 10px) * -1);
+        padding: 10px 15px;
+      }
+
+      .persona:hover .name {
+        display: inline-block;
+      }
+
+      .persona .name .text {
+        display: inline-block;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        margin: 0 auto;
+        text-align: center;
+        box-sizing: border-box;
+        width: 150px;
+      }
+
+      .persona .name::before {
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        border-top: 10px solid #000;
+        border-bottom: 10px solid transparent;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        left: calc(50% - 10px);
+        bottom: -20px;
+      }
+
+      /* //------------------- */
+    </style>
+  </head>
+
+  <body>
+    <div class="personas-container">
+      <!-- PERSONA 1 -->
+      <div class="persona">
+        <img src="/img/abuela.webp" alt="abuela" srcset="" />
+        <span class="name">
+          <span class="text">Martina Su Rivas</span>
+        </span>
+      </div>
+
+      <!-- PERSONA 2 -->
+      <div class="persona">
+        <img src="/img/bean.jpg" alt="abuela" srcset="" />
+        <span class="name">
+          <span class="text">Basilio Perfecto</span>
+        </span>
+      </div>
+
+      <!-- PERSONA 3 -->
+      <div class="persona">
+        <img src="/img/muñeca.jpg" alt="abuela" srcset="" />
+        <span class="name">
+          <span class="text">Criterio Averiado</span>
+        </span>
+      </div>
+
+      <!-- PERSONA 4 -->
+      <div class="persona">
+        <img src="/img/de_vito.jpg" alt="abuela" srcset="" />
+        <span class="name">
+          <span class="text">Ondalecio Ameritado Paulario</span>
+        </span>
+      </div>
+
+      <!-- PERSONA 5 -->
+      <div class="persona">
+        <img src="/img/niña.jpg" alt="abuela" srcset="" />
+        <span class="name">
+          <span class="text">Raclitio Pietrio</span>
+        </span>
+      </div>
+    </div>
+  </body>
+</html>

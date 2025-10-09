@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thread Comentarios Anidados</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --border-color: #558bff;
+        --bg-color: #1e1e34;
+        --card-color: #24345a;
+        --text-color: #fff;
+        --text-muted: #999;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        margin: 0;
+        padding: 2rem;
+      }
+
+      .comments-container {
+        max-width: 800px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      article.comment {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      /* TARJETA DE COMENTARIO */
+      .comment-content {
+        display: flex;
+        align-items: flex-start;
+        background-color: var(--card-color);
+        border: 1px solid var(--border-color);
+        border-radius: 6px;
+        padding: 10px;
+        position: relative;
+      }
+
+      .comment-content img {
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+        flex-shrink: 0;
+      }
+
+      .comment-info {
+        flex: 1;
+      }
+
+      .comment-header {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        font-size: 0.9rem;
+      }
+
+      .username {
+        font-weight: bold;
+        color: var(--border-color);
+      }
+
+      .date {
+        color: var(--text-muted);
+      }
+
+      .text {
+        margin: 8px 0;
+        line-height: 1.5;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+      }
+
+      .actions button {
+        background: transparent;
+        border: 1px solid transparent;
+        color: var(--border-color);
+        cursor: pointer;
+        padding: 4px 8px;
+        border-radius: 4px;
+        font-size: 0.85rem;
+        transition: 0.2s ease;
+      }
+
+      .actions button:hover {
+        background-color: var(--border-color);
+        color: #fff;
+      }
+
+      /* REPLIES (anidadas) */
+      .replies {
+        margin-left: 40px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding-left: 20px;
+      }
+
+      .replies::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 25px;
+        bottom: 0;
+        width: 1px;
+        background-color: var(--border-color);
+      }
+
+      /* LÍNEA HORIZONTAL ENTRE NIVELES */
+      .replies > .comment::before {
+        content: "";
+        position: absolute;
+        left: -20px;
+        top: 35px;
+        width: 20px;
+        height: 1px;
+        background-color: var(--border-color);
+      }
+
+      /* Ajuste para anidar infinitamente */
+      .comment {
+        position: relative;
+      }
+
+      @media (max-width: 600px) {
+        body {
+          padding: 1rem;
+        }
+
+        .comment-content img {
+          width: 40px;
+          height: 40px;
+        }
+
+        .replies {
+          margin-left: 25px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="comments-container">
+      <!-- COMENTARIO PRINCIPAL -->
+      <article class="comment">
+        <div class="comment-content">
+          <img src="/img/bean.jpg" alt="Usuario" />
+          <div class="comment-info">
+            <header class="comment-header">
+              <span class="username">@vBEAN-CC-1</span>
+              <span class="date">Hace 1 hora</span>
+            </header>
+            <p class="text">Este es un comentario principal.</p>
+            <div class="actions">
+              <button>Like</button>
+              <button>Reply</button>
+              <button>Share</button>
+              <button>Follow</button>
+              <button>Report</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- RESPUESTAS DE PRIMER NIVEL -->
+        <section class="replies">
+          <article class="comment">
+            <div class="comment-content">
+              <img src="/img/colombo.jpg" alt="Usuario" />
+              <div class="comment-info">
+                <header class="comment-header">
+                  <span class="username">@colombo-RR</span>
+                  <span class="date">Hace 1 hora</span>
+                </header>
+                <p class="text">
+                  Esta es una respuesta al comentario principal.
+                </p>
+                <div class="actions">
+                  <button>Like</button>
+                  <button>Reply</button>
+                  <button>Share</button>
+                  <button>Follow</button>
+                  <button>Report</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- RESPUESTA A RESPUESTA -->
+            <section class="replies">
+              <article class="comment">
+                <div class="comment-content">
+                  <img src="/img/niña.jpg" alt="Usuario" />
+                  <div class="comment-info">
+                    <header class="comment-header">
+                      <span class="username">@Nina-22</span>
+                      <span class="date">Hace 58 min</span>
+                    </header>
+                    <p class="text">
+                      Esta es una respuesta a la respuesta anterior.
+                    </p>
+                    <div class="actions">
+                      <button>Like</button>
+                      <button>Reply</button>
+                      <button>Share</button>
+                      <button>Follow</button>
+                      <button>Report</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- TERCER NIVEL DE RESPUESTA -->
+                <section class="replies">
+                  <article class="comment">
+                    <div class="comment-content">
+                      <img src="/img/muñeca.jpg" alt="Usuario" />
+                      <div class="comment-info">
+                        <header class="comment-header">
+                          <span class="username">@muñeca</span>
+                          <span class="date">Hace 40 min</span>
+                        </header>
+                        <p class="text">
+                          Esta es una respuesta al tercer nivel del hilo.
+                        </p>
+                        <div class="actions">
+                          <button>Like</button>
+                          <button>Reply</button>
+                          <button>Share</button>
+                          <button>Follow</button>
+                          <button>Report</button>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </section>
+              </article>
+            </section>
+          </article>
+
+          <!-- SEGUNDA RESPUESTA AL PRINCIPAL -->
+          <article class="comment">
+            <div class="comment-content">
+              <img src="/img/de_vito.jpg" alt="Usuario" />
+              <div class="comment-info">
+                <header class="comment-header">
+                  <span class="username">@vito-RR-1</span>
+                  <span class="date">Hace 1 hora</span>
+                </header>
+                <p class="text">Otra respuesta al mismo comentario principal.</p>
+                <div class="actions">
+                  <button>Like</button>
+                  <button>Reply</button>
+                  <button>Share</button>
+                  <button>Follow</button>
+                  <button>Report</button>
+                </div>
+              </div>
+            </div>
+          </article>
+        </section>
+      </article>
+    </div>
+  </body>
+</html>
