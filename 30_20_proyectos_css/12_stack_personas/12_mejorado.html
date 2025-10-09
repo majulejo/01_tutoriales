@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stack de Personas - Mejorado</title>
+    
+    <!-- Material Symbols -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0"
+    />
+
+    <style>
+      /* Variables y reset */
+      :root {
+        --primary-color: #4a6fa5;
+        --text-color: #333;
+        --bg-color: #f9f5f0;
+        --border-radius: 8px;
+        --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        --transition: all 0.3s ease;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        line-height: 1.6;
+      }
+
+      /* Estilos para Material Symbols */
+      .material-symbols-outlined {
+        font-family: "Material Symbols Outlined";
+        font-weight: normal;
+        font-style: normal;
+        font-size: 24px;
+        display: inline-block;
+        line-height: 1;
+        text-transform: none;
+        letter-spacing: normal;
+        word-wrap: normal;
+        white-space: nowrap;
+        direction: ltr;
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+
+      /* Contenedor principal */
+      .personas-container {
+        max-width: 1200px;
+        margin: 80px auto;
+        padding: 0 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .personas-container h2 {
+        margin-bottom: 30px;
+        text-align: center;
+        color: var(--primary-color);
+      }
+
+      /* Stack de personas */
+      .personas-stack {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 40px;
+      }
+
+      .persona {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .persona-img {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        border: 3px solid #fff;
+        box-shadow: var(--shadow);
+        transition: var(--transition);
+        object-fit: cover;
+        cursor: pointer;
+      }
+
+      .persona:hover .persona-img,
+      .persona:focus-within .persona-img {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      /* Tooltip mejorado */
+      .persona-tooltip {
+        position: absolute;
+        background-color: #333;
+        color: #fff;
+        border-radius: var(--border-radius);
+        padding: 10px 15px;
+        top: -70px;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+        visibility: hidden;
+        transition: var(--transition);
+        min-width: 150px;
+        text-align: center;
+        z-index: 10;
+        box-shadow: var(--shadow);
+      }
+
+      .persona-tooltip::after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        border: 8px solid transparent;
+        border-top-color: #333;
+      }
+
+      .persona:hover .persona-tooltip,
+      .persona:focus-within .persona-tooltip {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .persona-name {
+        font-weight: 600;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 140px;
+      }
+
+      /* Detalles expandidos */
+      .persona-details {
+        display: none;
+        position: absolute;
+        top: 90px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: white;
+        border-radius: var(--border-radius);
+        padding: 20px;
+        width: 250px;
+        box-shadow: var(--shadow);
+        z-index: 20;
+        text-align: center;
+      }
+
+      .persona-details.active {
+        display: block;
+        animation: fadeIn 0.3s ease;
+      }
+
+      .persona-details-img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 15px;
+      }
+
+      .persona-details-name {
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: var(--primary-color);
+      }
+
+      .persona-details-role {
+        font-size: 0.9rem;
+        color: #666;
+        margin-bottom: 15px;
+      }
+
+      .persona-details-bio {
+        font-size: 0.85rem;
+        line-height: 1.5;
+        margin-bottom: 15px;
+      }
+
+      .close-details {
+        background-color: var(--primary-color);
+        color: white;
+        border: none;
+        border-radius: 4px;
+        padding: 8px 15px;
+        cursor: pointer;
+        transition: var(--transition);
+      }
+
+      .close-details:hover {
+        background-color: #3a5a8a;
+      }
+
+      /* Animaciones */
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateX(-50%) translateY(-10px); }
+        to { opacity: 1; transform: translateX(-50%) translateY(0); }
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .personas-stack {
+          justify-content: flex-start;
+          overflow-x: auto;
+          padding-bottom: 10px;
+          width: 100%;
+        }
+        
+        .persona-img {
+          width: 60px;
+          height: 60px;
+        }
+        
+        .persona-details {
+          width: 90%;
+          max-width: 300px;
+        }
+      }
+
+      /* Indicador de más personas */
+      .more-indicator {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background-color: #e0e0e0;
+        color: #666;
+        font-weight: bold;
+        cursor: pointer;
+        transition: var(--transition);
+        border: 3px solid #fff;
+        box-shadow: var(--shadow);
+      }
+
+      .more-indicator:hover {
+        background-color: #d0d0d0;
+      }
+
+      /* Información adicional */
+      .additional-info {
+        text-align: center;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: white;
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="personas-container">
+      <h2>Nuestro Equipo</h2>
+      
+      <div class="personas-stack">
+        <!-- PERSONA 1 -->
+        <div class="persona" tabindex="0">
+          <img src="/img/abuela.webp" alt="Retrato de Martina Su Rivas" class="persona-img" />
+          <div class="persona-tooltip">
+            <span class="persona-name">Martina Su Rivas</span>
+          </div>
+          <div class="persona-details">
+            <img src="/img/abuela.webp" alt="Retrato de Martina Su Rivas" class="persona-details-img" />
+            <h3 class="persona-details-name">Martina Su Rivas</h3>
+            <p class="persona-details-role">Directora de Proyectos</p>
+            <p class="persona-details-bio">Con más de 15 años de experiencia en gestión de proyectos tecnológicos. Especializada en metodologías ágiles y transformación digital.</p>
+            <button class="close-details">Cerrar</button>
+          </div>
+        </div>
+
+        <!-- PERSONA 2 -->
+        <div class="persona" tabindex="0">
+          <img src="/img/bean.jpg" alt="Retrato de Basilio Perfecto" class="persona-img" />
+          <div class="persona-tooltip">
+            <span class="persona-name">Basilio Perfecto</span>
+          </div>
+          <div class="persona-details">
+            <img src="/img/bean.jpg" alt="Retrato de Basilio Perfecto" class="persona-details-img" />
+            <h3 class="persona-details-name">Basilio Perfecto</h3>
+            <p class="persona-details-role">Desarrollador Senior</p>
+            <p class="persona-details-bio">Especialista en desarrollo frontend con amplia experiencia en React, Vue y tecnologías modernas de JavaScript.</p>
+            <button class="close-details">Cerrar</button>
+          </div>
+        </div>
+
+        <!-- PERSONA 3 -->
+        <div class="persona" tabindex="0">
+          <img src="/img/muñeca.jpg" alt="Retrato de Criterio Averiado" class="persona-img" />
+          <div class="persona-tooltip">
+            <span class="persona-name">Criterio Averiado</span>
+          </div>
+          <div class="persona-details">
+            <img src="/img/muñeca.jpg" alt="Retrato de Criterio Averiado" class="persona-details-img" />
+            <h3 class="persona-details-name">Criterio Averiado</h3>
+            <p class="persona-details-role">Diseñadora UX/UI</p>
+            <p class="persona-details-bio">Creativa apasionada por el diseño centrado en el usuario. Experta en investigación de usuarios y diseño de interfaces intuitivas.</p>
+            <button class="close-details">Cerrar</button>
+          </div>
+        </div>
+
+        <!-- PERSONA 4 -->
+        <div class="persona" tabindex="0">
+          <img src="/img/de_vito.jpg" alt="Retrato de Ondalecio Ameritado Paulario" class="persona-img" />
+          <div class="persona-tooltip">
+            <span class="persona-name">Ondalecio Ameritado Paulario</span>
+          </div>
+          <div class="persona-details">
+            <img src="/img/de_vito.jpg" alt="Retrato de Ondalecio Ameritado Paulario" class="persona-details-img" />
+            <h3 class="persona-details-name">Ondalecio Ameritado Paulario</h3>
+            <p class="persona-details-role">Arquitecto de Software</p>
+            <p class="persona-details-bio">Experto en diseño de sistemas escalables y arquitecturas cloud. Certificado en AWS y Azure.</p>
+            <button class="close-details">Cerrar</button>
+          </div>
+        </div>
+
+        <!-- PERSONA 5 -->
+        <div class="persona" tabindex="0">
+          <img src="/img/niña.jpg" alt="Retrato de Raclitio Pietrio" class="persona-img" />
+          <div class="persona-tooltip">
+            <span class="persona-name">Raclitio Pietrio</span>
+          </div>
+          <div class="persona-details">
+            <img src="/img/niña.jpg" alt="Retrato de Raclitio Pietrio" class="persona-details-img" />
+            <h3 class="persona-details-name">Raclitio Pietrio</h3>
+            <p class="persona-details-role">Analista de Datos</p>
+            <p class="persona-details-bio">Especialista en análisis de datos y visualización. Experto en Python, SQL y herramientas de BI como Tableau y Power BI.</p>
+            <button class="close-details">Cerrar</button>
+          </div>
+        </div>
+
+        <!-- Indicador de más personas -->
+        <div class="more-indicator" tabindex="0">
+          +3
+        </div>
+      </div>
+
+      <div class="additional-info">
+        <h3>Conoce a nuestro equipo</h3>
+        <p>Nuestro equipo está formado por profesionales altamente cualificados con amplia experiencia en sus respectivas áreas. Haz clic en cada miembro para conocer más sobre ellos.</p>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Abrir detalles al hacer clic
+        const personas = document.querySelectorAll('.persona');
+        
+        personas.forEach(persona => {
+          const img = persona.querySelector('.persona-img');
+          const details = persona.querySelector('.persona-details');
+          const closeBtn = persona.querySelector('.close-details');
+          
+          img.addEventListener('click', function(e) {
+            e.stopPropagation();
+            closeAllDetails();
+            details.classList.add('active');
+          });
+          
+          closeBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            details.classList.remove('active');
+          });
+          
+          // Cerrar detalles al hacer clic fuera
+          document.addEventListener('click', function() {
+            closeAllDetails();
+          });
+          
+          // Cerrar detalles con tecla Escape
+          document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+              closeAllDetails();
+            }
+          });
+        });
+        
+        function closeAllDetails() {
+          document.querySelectorAll('.persona-details').forEach(detail => {
+            detail.classList.remove('active');
+          });
+        }
+        
+        // Navegación con teclado
+        personas.forEach(persona => {
+          persona.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              const details = this.querySelector('.persona-details');
+              closeAllDetails();
+              details.classList.add('active');
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
