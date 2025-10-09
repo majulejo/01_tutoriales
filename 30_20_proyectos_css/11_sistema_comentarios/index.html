@@ -13,84 +13,115 @@
       :root {
         --border-color: #558bff;
       }
+
       body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: rgb(30, 30, 52);
-}
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: rgb(30, 30, 52);
+      }
 
-.comments-container {
-  width: 800px;
-  margin: 0 auto;
-  color: #fff;
-}
-.comments-container > .comment {
-  margin-bottom: 10px;
-}
-.comment {
-  display: flex;
-  width: 100%;
-  color: white;
-}
+      .comments-container {
+        width: 800px;
+        margin: 0 auto;
+        color: #fff;
+      }
+      .comments-container > .comment {
+        margin-bottom: 10px;
+      }
 
-.comment .line {
-  position: relative;
-  width: 10px;
-  height: 50%;
-  border-left: solid 1px var(--border-color);
-  border-bottom: solid 1px var(--border-color);
-  border-radius: 0 0 0 8px;
-}
+      .comment {
+        display: flex;
+      }
 
-.comment-wrapper {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
+      .comment .line {
+        position: relative;
+        width: 10px;
+        height: 50%;
+        border-left: solid 1px var(--border-color);
+        border-bottom: solid 1px var(--border-color);
+        border-radius: 0 0 0 8px;
+      }
 
-.comment-wrapper .content {
-  width: 100%;
-  display: flex;
-  border: 1px solid var(--border-color);
-  padding: 10px;
-  border-radius: 3px;
-  background-color: rgb(24, 43, 80);
-}
+       .comment .replies {
+        padding-top: 10px;
+        position: relative;
+        padding-left: 35px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
 
-.comment-wrapper .content img {
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  padding-right: 10px;
-}
+      .comment .replies::before {
+        content: "";
+        position: absolute;
+        background-color: var(--border-color);
+        width: 1px;
+        top: 0px;
+        height: calc(100% - 53px); 
+      } 
 
-.comment-wrapper .content .comment-info {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
+      .comment .replies.answer::before {
+        content: "";
+        position: absolute;
+        background-color: var(--border-color);
+        width: 1px;
+        top: -10px;
+        height: calc(100% - 53px); 
+      } 
 
-.comment-info .header .username {
-  font-weight: bold;
-}
+      .comment-wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+      }
 
-.comment .replies {
-  padding-top: 10px;
-  position: relative;
-  padding-left: 35px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
+      .comment-wrapper .content {
+        width: 100%;
+        display: flex;
+        border: 1px solid var(--border-color);
+        padding: 10px;
+        border-radius: 3px;
+        background-color: rgb(24, 43, 80);
+      }
 
-.comment .replies::before {
-  content: '';
-  position: absolute;
-  background-color: var(--border-color);
-  width: 1px;
-  top: 0;
-  height: calc(100% - 53px);
-}
+      .comment-wrapper .content img {
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        padding-right: 10px;
+      }
 
+      .comment-wrapper .content .comment-info {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      .comment-info .header .username {
+        font-weight: bold;
+      }
+
+      .comment-info .header .date {
+        color: #999;
+      }
+
+      .comment-info .actions {
+        display: flex;
+        gap: 5px;
+      }
+
+      .comment-info .actions button {
+        border: none;
+        background-color: transparent;
+        color: var(--border-color);
+        cursor: pointer;
+        padding: 5px;
+        border-radius: 3px;
+      }
+
+      .comment-info .actions button:hover {
+        color: #fff;
+        background-color: var(--border-color);
+      }
     </style>
   </head>
   <body>
@@ -99,12 +130,12 @@
         <div class="comment-wrapper">
           <div class="content">
             <div class="user-photo">
-              <img src="/img/bean.jpg" alt=""  />
+              <img src="/img/bean.jpg" alt="" />
             </div>
             <div class="comment-info">
               <div class="header">
-                <span class="username">@vidamrr</span>
-                <span class="date">5hrs ago</span>
+                <span class="username">@vBEAN-CC-1</span>
+                <span class="date">Hace 1 horas </span>
               </div>
               <div class="text">Este es un comentario</div>
               <div class="actions">
@@ -122,14 +153,16 @@
               <div class="comment-wrapper">
                 <div class="content">
                   <div class="user-photo">
-                    <img src="/img/colombo.jpg" alt=""  />
+                    <img src="/img/colombo.jpg" alt="" />
                   </div>
                   <div class="comment-info">
                     <div class="header">
-                      <span class="username">@vidamrr</span>
-                      <span class="date">5hrs ago</span>
+                      <span class="username">@colombo-RR</span>
+                      <span class="date">Generado hace 1 hora</span>
                     </div>
-                    <div class="text">Este es un comentario</div>
+                    <div class="text">
+                      Este es una respuesta a un comentario
+                    </div>
                     <div class="actions">
                       <button>Like</button>
                       <button>Reply</button>
@@ -147,14 +180,95 @@
               <div class="comment-wrapper">
                 <div class="content">
                   <div class="user-photo">
-                    <img src="/img/de_vito.jpg" alt=""  />
+                    <img src="/img/de_vito.jpg" alt="" />
                   </div>
                   <div class="comment-info">
                     <div class="header">
-                      <span class="username">@vidamrr</span>
-                      <span class="date">5hrs ago</span>
+                      <span class="username">@vito-RR-1</span>
+                      <span class="date">Generado hace 1 hora</span>
                     </div>
-                    <div class="text">Este es un comentario</div>
+                    <div class="text">
+                      Este es una respuesta a un comentario
+                    </div>
+                    <div class="actions">
+                      <button>Like</button>
+                      <button>Reply</button>
+                      <button>Share</button>
+                      <button>Follow</button>
+                      <button>Report</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- SEGUNDO COMENTARIO CON RESPUESTAS -->
+      <div class="comment">
+        <div class="comment-wrapper">
+          <div class="content">
+            <div class="user-photo">
+              <img src="/img/colombo.jpg" alt="" />
+            </div>
+            <div class="comment-info">
+              <div class="header">
+                <span class="username">@vidamCC</span>
+                <span class="date">Generado hace 2 horas</span>
+              </div>
+              <div class="text">Este es un comentario</div>
+              <div class="actions">
+                <button>Like</button>
+                <button>Reply</button>
+                <button>Share</button>
+                <button>Follow</button>
+                <button>Report</button>
+              </div>
+            </div>
+          </div>
+          <div class="replies">
+            <div class="comment">
+              <div class="line"></div>
+              <div class="comment-wrapper">
+                <div class="content">
+                  <div class="user-photo">
+                    <img src="/img/de_vito.jpg" alt="" />
+                  </div>
+                  <div class="comment-info">
+                    <div class="header">
+                      <span class="username">@VITORR-2</span>
+                      <span class="date">Hace dos horas</span>
+                    </div>
+                    <div class="text">
+                      Este es una respuesta a un comentario
+                    </div>
+                    <div class="actions">
+                      <button>Like</button>
+                      <button>Reply</button>
+                      <button>Share</button>
+                      <button>Follow</button>
+                      <button>Report</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="comment">
+              <div class="line"></div>
+              <div class="comment-wrapper">
+                <div class="content">
+                  <div class="user-photo">
+                    <img src="/img/bean.jpg" alt="" />
+                  </div>
+                  <div class="comment-info">
+                    <div class="header">
+                      <span class="username">@BEANRRRRRR-2</span>
+                      <span class="date">Hace dos horas</span>
+                    </div>
+                    <div class="text">
+                      Este es una respuesta a un comentario
+                    </div>
                     <div class="actions">
                       <button>Like</button>
                       <button>Reply</button>
@@ -170,18 +284,19 @@
         </div>
       </div>
 
+      <!-- TERCER COMENTARIO CON RESPUESTAS -->
       <div class="comment">
         <div class="comment-wrapper">
           <div class="content">
             <div class="user-photo">
-              <img src="/img/colombo.jpg" alt=""  />
+              <img src="/img/colombo.jpg" alt="" />
             </div>
             <div class="comment-info">
               <div class="header">
-                <span class="username">@vidamrr</span>
-                <span class="date">5hrs ago</span>
+                <span class="username">@vidamCC</span>
+                <span class="date">Generado hace 3 horas</span>
               </div>
-              <div class="text">Este es un comentario</div>
+              <div class="text">Este es un tercer  comentario</div>
               <div class="actions">
                 <button>Like</button>
                 <button>Reply</button>
@@ -192,19 +307,23 @@
             </div>
           </div>
           <div class="replies">
+            <!-- respuesta a comentario -->
+
             <div class="comment">
               <div class="line"></div>
               <div class="comment-wrapper">
                 <div class="content">
                   <div class="user-photo">
-                    <img src="/img/de_vito.jpg" alt=""  />
+                    <img src="/img/de_vito.jpg" alt="" />
                   </div>
                   <div class="comment-info">
                     <div class="header">
-                      <span class="username">@vidamrr</span>
-                      <span class="date">5hrs ago</span>
+                      <span class="username">@VITORR-3</span>
+                      <span class="date">Hace tres horas</span>
                     </div>
-                    <div class="text">Este es un comentario</div>
+                    <div class="text">
+                      Este es una respuesta a un comentario-3
+                    </div>
                     <div class="actions">
                       <button>Like</button>
                       <button>Reply</button>
@@ -216,20 +335,108 @@
                 </div>
               </div>
             </div>
+            <!-- replies con respuesta -->
+             <div class="replies answer">
+            
 
             <div class="comment">
               <div class="line"></div>
               <div class="comment-wrapper">
                 <div class="content">
                   <div class="user-photo">
-                    <img src="/img/bean.jpg" alt=""  />
+                    <img src="/img/niña.jpg" alt="" />
                   </div>
                   <div class="comment-info">
                     <div class="header">
-                      <span class="username">@vidamrr</span>
-                      <span class="date">5hrs ago</span>
+                      <span class="username">@VITORR-3</span>
+                      <span class="date">Hace tres horas</span>
                     </div>
-                    <div class="text">Este es un comentario</div>
+                    <div class="text">
+                      Este es una respuesta  a una respuesta a un comentario-3
+                    </div>
+                    <div class="actions">
+                      <button>Like</button>
+                      <button>Reply</button>
+                      <button>Share</button>
+                      <button>Follow</button>
+                      <button>Report</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- segunda replie a la respuesta -->
+             <div class="comment">
+              <div class="line"></div>
+              <div class="comment-wrapper">
+                <div class="content">
+                  <div class="user-photo">
+                    <img src="/img/muñeca.jpg" alt="" />
+                  </div>
+                  <div class="comment-info">
+                    <div class="header">
+                      <span class="username">@VITORR-3</span>
+                      <span class="date">Hace tres horas</span>
+                    </div>
+                    <div class="text">
+                      Este es una respuesta  a una respuesta a un comentario-3
+                    </div>
+                    <div class="actions">
+                      <button>Like</button>
+                      <button>Reply</button>
+                      <button>Share</button>
+                      <button>Follow</button>
+                      <button>Report</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+            <!-- respuesta a comentario -->
+            <div class="comment">
+              <div class="line"></div>
+              <div class="comment-wrapper">
+                <div class="content">
+                  <div class="user-photo">
+                    <img src="/img/de_vito.jpg" alt="" />
+                  </div>
+                  <div class="comment-info">
+                    <div class="header">
+                      <span class="username">@VITORR-3</span>
+                      <span class="date">Hace tres horas</span>
+                    </div>
+                    <div class="text">
+                      Este es una respuesta a un comentario-3
+                    </div>
+                    <div class="actions">
+                      <button>Like</button>
+                      <button>Reply</button>
+                      <button>Share</button>
+                      <button>Follow</button>
+                      <button>Report</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- respuesta a comentario -->
+
+            <div class="comment">
+              <div class="line"></div>
+              <div class="comment-wrapper">
+                <div class="content">
+                  <div class="user-photo">
+                    <img src="/img/bean.jpg" alt="" />
+                  </div>
+                  <div class="comment-info">
+                    <div class="header">
+                      <span class="username">@BEANRRRRRR-3</span>
+                      <span class="date">Hace tres horas</span>
+                    </div>
+                    <div class="text">
+                      Este es una respuesta a un comentario-3
+                    </div>
                     <div class="actions">
                       <button>Like</button>
                       <button>Reply</button>
