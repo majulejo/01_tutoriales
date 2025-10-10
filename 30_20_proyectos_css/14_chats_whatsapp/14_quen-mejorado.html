@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat WhatsApp</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+    />
+    <style>
+      :root {
+        --bg-chat: #111b21;
+        --bg-left: #202c33;
+        --bg-right: #005c4b;
+        --text-primary: #e9edef;
+        --text-secondary: #8696a0;
+        --bubble-radius: 7.5px;
+        --spacing: 8px;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Roboto', Arial, sans-serif;
+        background-color: var(--bg-chat);
+        color: var(--text-primary);
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .chat-container {
+        flex: 1;
+        width: 100%;
+        max-width: 700px;
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing);
+        padding: 20px;
+        overflow-y: auto;
+      }
+
+      .message-group {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing);
+      }
+
+      .message-group.left {
+        align-items: flex-start;
+      }
+
+      .message-group.right {
+        align-items: flex-end;
+      }
+
+      .message-bubble {
+        position: relative;
+        max-width: 70%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .message-content {
+        padding: 8px 12px;
+        border-radius: var(--bubble-radius);
+        word-wrap: break-word;
+        white-space: pre-wrap;
+        font-size: 14px;
+        line-height: 1.4;
+      }
+
+      .message-group.left .message-content {
+        background-color: var(--bg-left);
+        border-bottom-left-radius: 2px;
+      }
+
+      .message-group.right .message-content {
+        background-color: var(--bg-right);
+        color: white;
+        border-bottom-right-radius: 2px;
+      }
+
+      /* Flechas */
+      .message-bubble::before {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+      }
+
+      .message-group.left .message-bubble::before {
+        border-top: 6px solid var(--bg-left);
+        border-right: 6px solid var(--bg-left);
+        border-bottom: 6px solid transparent;
+        border-left: 6px solid transparent;
+        left: -6px;
+        top: 0;
+      }
+
+      .message-group.right .message-bubble::before {
+        border-top: 6px solid var(--bg-right);
+        border-left: 6px solid var(--bg-right);
+        border-bottom: 6px solid transparent;
+        border-right: 6px solid transparent;
+        right: -6px;
+        top: 0;
+      }
+
+      .message-time {
+        font-size: 11px;
+        color: var(--text-secondary);
+        text-align: right;
+        margin-top: 2px;
+        padding-right: 4px;
+      }
+
+      /* Barra de entrada */
+      .input-area {
+        width: 100%;
+        max-width: 700px;
+        padding: 12px 16px;
+        background-color: #202c33;
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        border-top: 1px solid #2a3942;
+      }
+
+      .input-area input {
+        flex: 1;
+        background-color: #2a3942;
+        border: none;
+        border-radius: 8px;
+        padding: 10px 16px;
+        color: white;
+        font-family: inherit;
+        font-size: 15px;
+        outline: none;
+      }
+
+      .input-area input::placeholder {
+        color: #8696a0;
+      }
+
+      .send-btn {
+        background: none;
+        border: none;
+        color: #00a884;
+        cursor: pointer;
+        font-size: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+      }
+
+      .send-btn:hover {
+        background-color: rgba(0, 168, 132, 0.1);
+      }
+
+      .send-btn:disabled {
+        color: #3a4a52;
+        cursor: not-allowed;
+      }
+
+      @media (max-width: 768px) {
+        .message-bubble {
+          max-width: 85%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="chat-container" id="chatContainer">
+      <!-- Mensajes iniciales -->
+      <div class="message-group left">
+        <div class="message-bubble">
+          <div class="message-content">Hola, ¿cómo estás?</div>
+          <div class="message-time">10:05</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="input-area">
+      <input
+        type="text"
+        id="messageInput"
+        placeholder="Escribe un mensaje"
+        maxlength="500"
+      />
+      <button class="send-btn" id="sendButton" aria-label="Enviar mensaje">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M1.101 21.757L23.8 12.028 1.101 2.3l.011 7.913s6.402 1.226 11.17 3.638L1.112 17.845z"
+          />
+        </svg>
+      </button>
+    </div>
+
+    <script>
+      const chatContainer = document.getElementById('chatContainer');
+      const messageInput = document.getElementById('messageInput');
+      const sendButton = document.getElementById('sendButton');
+
+      // Función para formatear la hora actual (HH:MM)
+      function getCurrentTime() {
+        const now = new Date();
+        return now.getHours().toString().padStart(2, '0') + ':' + now.getMinutes().toString().padStart(2, '0');
+      }
+
+      // Función para agregar un mensaje al chat
+      function addMessage(text, isOwn = false) {
+        if (!text.trim()) return;
+
+        const groupClass = isOwn ? 'right' : 'left';
+        const time = getCurrentTime();
+
+        const messageBubble = document.createElement('div');
+        messageBubble.className = 'message-bubble';
+        messageBubble.innerHTML = `
+          <div class="message-content">${escapeHtml(text)}</div>
+          <div class="message-time">${time}</div>
+        `;
+
+        // Buscar último grupo del mismo tipo
+        const lastGroup = chatContainer.lastElementChild;
+        if (lastGroup && lastGroup.classList.contains(`message-group`) && lastGroup.classList.contains(groupClass)) {
+          lastGroup.appendChild(messageBubble);
+        } else {
+          const newGroup = document.createElement('div');
+          newGroup.className = `message-group ${groupClass}`;
+          newGroup.appendChild(messageBubble);
+          chatContainer.appendChild(newGroup);
+        }
+
+        // Scroll automático al final
+        chatContainer.scrollTop = chatContainer.scrollHeight;
+      }
+
+      // Función para escapar HTML (seguridad básica)
+      function escapeHtml(unsafe) {
+        return unsafe
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '<')
+          .replace(/>/g, '>')
+          .replace(/"/g, '&quot;')
+          .replace(/'/g, '&#039;');
+      }
+
+      // Simular respuesta automática del otro usuario (opcional)
+      function simulateReply() {
+        const replies = [
+          '¡Hola! ¿En qué puedo ayudarte?',
+          'Gracias por tu mensaje.',
+          'Estoy un poco ocupado, pero te respondo pronto.',
+          '¿Te refieres a eso?',
+          'Perfecto, lo tendré en cuenta.',
+          '¿Necesitas algo más?'
+        ];
+        const randomReply = replies[Math.floor(Math.random() * replies.length)];
+        setTimeout(() => {
+          addMessage(randomReply, false);
+        }, 1000 + Math.random() * 2000); // Entre 1 y 3 segundos
+      }
+
+      // Enviar mensaje
+      function sendMessage() {
+        const text = messageInput.value.trim();
+        if (text) {
+          addMessage(text, true); // true = mensaje propio
+          messageInput.value = '';
+          simulateReply(); // Opcional: descomenta si quieres respuestas automáticas
+        }
+      }
+
+      // Eventos
+      sendButton.addEventListener('click', sendMessage);
+
+      messageInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+          sendMessage();
+        }
+      });
+
+      // Habilitar/deshabilitar botón según contenido
+      messageInput.addEventListener('input', () => {
+        sendButton.disabled = !messageInput.value.trim();
+      });
+
+      // Scroll inicial al final
+      window.addEventListener('load', () => {
+        chatContainer.scrollTop = chatContainer.scrollHeight;
+      });
+    </script>
+  </body>
+</html>

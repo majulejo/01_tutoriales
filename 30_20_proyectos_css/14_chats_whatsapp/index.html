@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>14_chats_whatsapp</title>
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0"
+    />
+
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      .material-symbols-outlined {
+        font-family: "Material Symbols Outlined";
+        font-weight: normal;
+        font-style: normal;
+        font-size: 24px;
+        display: inline-block;
+        line-height: 1;
+        text-transform: none;
+        letter-spacing: normal;
+        word-wrap: normal;
+        white-space: nowrap;
+        direction: ltr;
+      }
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .chat-container {
+        color: #fff;
+        width: 700px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        height: 100vh;
+        background-color: #233f52;
+        box-sizing: border-box;
+        gap: 10px;
+        padding: 30px;
+      }
+
+      .bubble-container {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      .left {
+        width: 50%;
+        margin-right: auto;
+      }
+
+      .right {
+        width: 50%;
+        margin-left: auto;
+        align-items: flex-end;
+      }
+
+      .bubble-text {
+        color: #fff;
+      }
+
+      .right .bubble-text > div {
+        position: relative;
+        background-color: #005c4b;
+      }
+
+      .left .bubble-text > div {
+        position: relative;
+        background-color: #202c33;
+        display: inline-flex;
+      }
+
+      .bubble-text > div {
+        padding: 8px;
+        border-radius: 5px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+      }
+
+      .bubble-info {
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.7);
+        padding: 0px 10px;
+        text-align: right;
+        width: 80px;
+        min-width: 80px;
+        max-width: 80px;
+        box-sizing: border-box;
+      }
+
+      .left .bubble:nth-child(1) .bubble-text > div::before {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-right: 5px solid #202c33;        
+        border-top: 5px solid #202c33;
+        border-left: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        left: -8px;
+        top: 0;        
+      }
+
+      .right .bubble:nth-child(1) .bubble-text > div::before {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-left: 5px solid #005c4b;        
+        border-top: 5px solid #005c4b;
+        border-right: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        right: -8px;
+        top: 0;        
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="chat-container">
+      <!-- derecha -->
+      <div class="bubble-container right">
+        <div class="bubble">
+          <div class="bubble-text">
+            <div>
+              <span> Hola soy una burbuja. De un primer ejemplo </span>
+              <div class="bubble-info">hace 5 minutos</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bubble">
+          <div class="bubble-text">
+            <div>
+              <span> Hola soy una burbuja </span>
+              <div class="bubble-info">hace 3 minutos</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bubble">
+          <div class="bubble-text">
+            <div>
+              <span> Hola soy una burbuja </span>
+              <div class="bubble-info">hace 3 minutos</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- izquierda -->
+      <div class="bubble-container left">
+        <div class="bubble">
+          <div class="bubble-text">
+            <div>
+              <span> Hola soy una burbuja </span>
+              <div class="bubble-info">hace 3 minutos</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bubble">
+          <div class="bubble-text">
+            <div>
+              <span> Hola soy una burbuja </span>
+              <div class="bubble-info">hace 3 minutos</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bubble">
+          <div class="bubble-text">
+            <div>
+              <span> Hola soy una burbuja , desde entonces no hay nada que hacer en el tutorial</span>
+              <div class="bubble-info">hace 3 minutos</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bubble">
+          <div class="bubble-text">
+            <div>
+              <span> Hola  </span>
+              <div class="bubble-info">hace 3 minutos</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat tipo WhatsApp</title>
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0"
+    />
+
+    <style>
+      /* ===== BASE ===== */
+      :root {
+        --bg-left: #202c33;
+        --bg-right: #005c4b;
+        --text-color: #fff;
+        --chat-bg: #233f52;
+        --info-color: rgba(255, 255, 255, 0.7);
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+        background-color: var(--chat-bg);
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        height: 100vh;
+        color: var(--text-color);
+      }
+
+      /* ===== CONTENEDOR PRINCIPAL ===== */
+      .chat-container {
+        width: 100%;
+        max-width: 700px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        gap: 10px;
+        padding: 20px;
+      }
+
+      /* ===== BURBUJAS ===== */
+      .bubble-container {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        animation: fadeIn 0.3s ease;
+      }
+
+      .bubble {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .bubble-text > div {
+        padding: 10px 12px;
+        border-radius: 8px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        min-width: 80px;
+        max-width: 90%;
+        word-wrap: break-word;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+        animation: pop 0.2s ease;
+      }
+
+      .bubble-info {
+        font-size: 11px;
+        color: var(--info-color);
+        padding-left: 10px;
+        white-space: nowrap;
+      }
+
+      /* ===== LADO IZQUIERDO ===== */
+      .left {
+        align-items: flex-start;
+      }
+
+      .left .bubble-text > div {
+        background-color: var(--bg-left);
+        border-top-left-radius: 0;
+      }
+
+      .left .bubble-text > div::before {
+        content: "";
+        position: absolute;
+        left: -7px;
+        top: 0;
+        border-right: 6px solid var(--bg-left);
+        border-top: 6px solid var(--bg-left);
+        border-left: 6px solid transparent;
+        border-bottom: 6px solid transparent;
+      }
+
+      /* ===== LADO DERECHO ===== */
+      .right {
+        align-items: flex-end;
+      }
+
+      .right .bubble-text > div {
+        background-color: var(--bg-right);
+        border-top-right-radius: 0;
+      }
+
+      .right .bubble-text > div::before {
+        content: "";
+        position: absolute;
+        right: -7px;
+        top: 0;
+        border-left: 6px solid var(--bg-right);
+        border-top: 6px solid var(--bg-right);
+        border-right: 6px solid transparent;
+        border-bottom: 6px solid transparent;
+      }
+
+      /* ===== ANIMACIONES ===== */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes pop {
+        from {
+          transform: scale(0.95);
+        }
+        to {
+          transform: scale(1);
+        }
+      }
+
+      /* ===== RESPONSIVE ===== */
+      @media (max-width: 600px) {
+        .chat-container {
+          padding: 10px;
+        }
+
+        .bubble-text > div {
+          font-size: 15px;
+          max-width: 100%;
+        }
+
+        .bubble-info {
+          font-size: 10px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="chat-container">
+      <!-- derecha -->
+      <div class="bubble-container right">
+        <div class="bubble">
+          <div class="bubble-text">
+            <div>
+              <span>Hola, soy una burbuja del primer ejemplo.</span>
+              <div class="bubble-info">hace 5 minutos</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bubble">
+          <div class="bubble-text">
+            <div>
+              <span>¿Probando animaciones suaves?</span>
+              <div class="bubble-info">hace 3 minutos</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- izquierda -->
+      <div class="bubble-container left">
+        <div class="bubble">
+          <div class="bubble-text">
+            <div>
+              <span>¡Sí! Se ven muy naturales 😄</span>
+              <div class="bubble-info">hace 2 minutos</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bubble">
+          <div class="bubble-text">
+            <div>
+              <span>Además, el diseño ya se adapta al móvil.</span>
+              <div class="bubble-info">hace 1 minuto</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
