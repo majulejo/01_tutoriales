@@ -14,7 +14,7 @@
         --bg-left: #202c33;
         --bg-right: #005c4b;
         --text-primary: #e9edef;
-        --text-secondary: #8696a0;
+        --text-secondary: #737475;
         --bubble-radius: 7.5px;
         --min-radius: 2px;
         --spacing: 8px;
@@ -27,10 +27,10 @@
       }
 
       body {
-        font-family: 'Roboto', Arial, sans-serif;
+        font-family: "Roboto", Arial, sans-serif;
         background-color: var(--bg-chat);
         color: var(--text-primary);
-        height: 100vh;
+        /* height: 100vh; */
         display: flex;
         justify-content: center;
         align-items: flex-end;
@@ -38,11 +38,19 @@
       }
 
       .chat-container {
+        margin-top: 50px;
         width: 100%;
-        max-width: 700px;
+        max-width: 600px;
         display: flex;
         flex-direction: column;
         gap: var(--spacing);
+        border: 2px solid grey;
+        padding: 30px 25px;
+        border-radius: var(--bubble-radius);
+        background-image: url(/img/colombo.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
       }
 
       .message-group {
@@ -64,7 +72,6 @@
         max-width: 70%;
         display: flex;
         flex-direction: column;
-        
       }
 
       .message-content {
@@ -87,9 +94,16 @@
         border-bottom-right-radius: var(--min-radius);
       }
 
+      .message-group.left {
+  margin-right: 20px;
+}
+.message-group.right {
+  margin-left: 20px;
+}
+
       /* Flechas de las burbujas */
       .message-bubble::before {
-        content: '';
+        content: "";
         position: absolute;
         width: 0;
         height: 0;
@@ -131,41 +145,95 @@
   </head>
   <body>
     <div class="chat-container">
-      <!-- Mensajes del otro usuario (izquierda) -->
-      <div class="message-group left">
-        <div class="message-bubble">
-          <div class="message-content">Hola soy una burbuja</div>
-          <div class="message-time">hace 1 min</div>
-        </div>
-        <div class="message-bubble">
-          <div class="message-content">Hola soy una burbuja</div>
-          <div class="message-time">hace 2 min</div>
-        </div>
-        <div class="message-bubble">
-          <div class="message-content">Hola soy una burbuja, desde entonces no hay nada que hacer en el tutorial</div>
-          <div class="message-time">hace 3 min</div>
-        </div>
-        <div class="message-bubble">
-          <div class="message-content">Hola</div>
-          <div class="message-time">hace 4 min</div>
-        </div>
-      </div>
-
+      
+      <!-- --------------- -->
+      
       <!-- Tus mensajes (derecha) -->
       <div class="message-group right">
         <div class="message-bubble">
-          <div class="message-content">Hola soy una burbuja. De un primer ejemplo</div>
-          <div class="message-time">hace 5 min</div>
-        </div>
-        <div class="message-bubble">
-          <div class="message-content">Hola soy una burbuja</div>
-          <div class="message-time">hace 6 min</div>
-        </div>
-        <div class="message-bubble">
-          <div class="message-content">Hola soy una burbuja</div>
-          <div class="message-time">hace 7 min</div>
+          <div class="message-content">Uno de los responsables de comunicación del ayuntamiento</div>
+          <div class="message-time">hace 2 min</div>
         </div>
       </div>
+      <!-- --------------- -->
+      <!-- Mensajes del otro usuario (izquierda) -->
+      <div class="message-group left">
+        <div class="message-bubble">
+          <div class="message-content">Quién nos lo puede facilitar?</div>
+          <div class="message-time">hace 1 min</div>
+        </div>
+      </div>
+      <!-- --------------- -->
+       <!-- Tus mensajes (derecha) -->
+      <div class="message-group right">
+        <div class="message-bubble">
+          <div class="message-content">No, nos van a dar el informe del pleno.</div>
+          <div class="message-time">hace 2 min</div>
+        </div>
+      </div>
+      
+      <!-- --------------- -->
+      <!-- Mensajes del otro usuario (izquierda) -->
+      <div class="message-group left">
+        <div class="message-bubble">
+          <div class="message-content">Desde la oficina de información del ayuntamiento.</div>
+          <div class="message-time">hace 2 min</div>
+        </div>
+      </div>
+      <!-- --------------- -->
+      <!-- Tus mensajes (derecha) -->
+      <div class="message-group right">
+        <div class="message-bubble">
+          <div class="message-content">Desde la oficina de información del ayuntamiento.</div>
+          <div class="message-time">hace 2 min</div>
+        </div>
+      </div>
+      <!-- --------------- -->
+      <!-- Mensajes del otro usuario (izquierda) -->
+      <div class="message-group left">
+        <div class="message-bubble">
+          <div class="message-content">Desde la oficina de información del ayuntamiento.Quién y cuando?</div>
+          <div class="message-time">hace 2 min</div>
+        </div>
+      </div>
+      <!-- --------------- -->
+      
+
+      <!-- Tus mensajes (derecha) -->
+      
+      <div class="message-group right">
+        <div class="message-bubble">
+          <div class="message-content">No te preocupes, nos la van a facilitar.</div>
+          <div class="message-time">hace 5 min</div>
+        </div>
+      </div>
+      <!-- --------------- -->
+       <!-- Mensajes del otro usuario (izquierda) -->
+      <div class="message-group left">
+        <div class="message-bubble">
+          <div class="message-content">Pero nos falta información</div>
+          <div class="message-time">hace 4 min</div>
+        </div>
+      </div>
+      
+      <!-- --------------- -->
+      <!-- Tus mensajes (derecha) -->
+      
+      <div class="message-group right">
+        <div class="message-bubble">
+          <div class="message-content">Bien. Hoy tenemos que ir a hacer el trabajo</div>
+          <div class="message-time">hace 5 min</div>
+        </div>
+      </div>
+
+      <!-- Mensajes del otro usuario (izquierda) -->
+      <div class="message-group left">
+        <div class="message-bubble">
+          <div class="message-content">Buenos días. Como estás?</div>
+          <div class="message-time">hace 5 min</div>
+        </div>
+      </div>
+      <!-- --------------- -->
     </div>
   </body>
-</html>
+</html> 
