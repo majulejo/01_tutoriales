@@ -11,36 +11,119 @@
     />
 
     <style>
+
+      :root {
+        --size: 150px
+      }
+
       body {
         font-family: Arial, Helvetica, sans-serif;
-        margin: 0;
-        padding: 0;
+        
       }
-
-      .material-symbols-outlined {
-        font-family: "Material Symbols Outlined";
-        font-weight: normal;
-        font-style: normal;
-        font-size: 24px;
-        display: inline-block;
-        line-height: 1;
-        text-transform: none;
-        letter-spacing: normal;
-        word-wrap: normal;
-        white-space: nowrap;
-        direction: ltr;
-      }
-      .material-symbols-outlined {
-        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
-      }
-
       
+      .stories-container {
+        display: flex;
+        gap: 10px;
+        width: 700px;
+        margin: 100px auto;
+      }
+
+      .story .outer-border {
+        background-color: black;
+        width: var(--size);
+        height: var(--size);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        box-sizing: border-box;
+      }
+
+      .border {
+        background-color: #fff;
+        border-radius: 50%;
+      }
+
+      .border img {
+        width: calc(var(--size) - 20px);
+        height: var(--size);
+        border-radius: 50%;
+      }
+
+
+
+      /* *********************** */
 
 
     </style>
   </head>
 
   <body>
-    
+    <div class="stories-container">
+      <!-- HISTORIA - 1 -->
+      <div class="story">
+        <div class="outer-border">
+          <div class="border">
+            <a href="#">
+              <img src="/img/abuela.webp" alt="">              
+            </a>
+          </div>
+          
+        </div>
+        <div class="name">Abuelita Dime Tu</div>
+      </div>
+
+      <!-- HISTORIA -  2-->
+      <div class="story">
+        <div class="outer-border">
+          <div class="border">
+            <a href="#">
+              <img src="/img/de_vito.jpg" alt="">              
+            </a>
+          </div>
+          
+        </div>
+        <div class="name">De vito Gonzalez</div>
+      </div>
+
+      <!-- HISTORIA - 3 -->
+      <div class="story">
+        <div class="outer-border">
+          <div class="border">
+            <a href="#">
+              <img src="/img/colombo.jpg" alt="">              
+            </a>
+          </div>
+          
+        </div>
+        <div class="name">cOLOMBO Gonzalez</div>
+      </div>
+
+      <!-- HISTORIA - 4 -->
+      <div class="story">
+        <div class="outer-border">
+          <div class="border">
+            <a href="#">
+              <img src="/img/niña.jpg" alt="">              
+            </a>
+          </div>
+          
+        </div>
+        <div class="name">aMANECER Gonzalez</div>
+      </div>
+
+      <!-- HISTORIA - 5 -->
+      <div class="story">
+        <div class="outer-border">
+          <div class="border">
+            <a href="#">
+              <img src="/img/bean.jpg" alt="">              
+            </a>
+          </div>
+          
+        </div>
+        <div class="name">BONIFACIOO Gonzalez</div>
+      </div>
+    </div>
   </body>
 </html>
