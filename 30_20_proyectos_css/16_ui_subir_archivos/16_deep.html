@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Subir Archivos - Interfaz Mejorada</title>
+    
+    <!-- Font Awesome para iconos -->
+    <script src="https://kit.fontawesome.com/221b91d368.js" crossorigin="anonymous"></script>
+    
+    <style>
+        :root {
+            --primary-color: #4d86f0;
+            --primary-hover: #3c6dc0;
+            --background-color: rgb(44, 103, 179);
+            --text-color: #333;
+            --text-light: #999;
+            --border-color: #ddd;
+            --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            --success-color: #28a745;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        .upload-container {
+            margin: 50px auto;
+            width: 90%;
+            max-width: 600px;
+            text-align: center;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 40px 30px;
+            box-shadow: var(--shadow);
+        }
+        
+        .upload-container > .title {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+        
+        .description {
+            color: var(--text-light);
+            margin-bottom: 25px;
+            font-size: 16px;
+        }
+        
+        .drag-drop {
+            border: 3px dashed var(--border-color);
+            border-radius: 10px;
+            padding: 50px 20px;
+            margin: 25px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            color: var(--text-light);
+            transition: all 0.3s ease;
+            background-color: #f9f9f9;
+        }
+        
+        .drag-drop.active {
+            border-color: var(--primary-color);
+            background-color: rgba(77, 134, 240, 0.05);
+        }
+        
+        .drag-drop .icon svg {
+            width: 80px;
+            height: 80px;
+            fill: rgba(77, 134, 240, 0.5);
+            transition: all 0.3s ease;
+        }
+        
+        .drag-drop.active .icon svg {
+            fill: var(--primary-color);
+        }
+        
+        .drag-drop .btn {
+            padding: 12px 25px;
+            font-size: 16px;
+            font-weight: 600;
+            background-color: var(--primary-color);
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .title-section {
+            text-align: left;
+            color: var(--text-light);
+            font-weight: bold;
+            padding: 20px 0 15px;
+            border-top: 1px solid var(--border-color);
+            margin-top: 20px;
+        }
+        
+        .uploaded-files {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .file {
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            text-align: left;
+            display: flex;
+            gap: 15px;
+            padding: 15px;
+            align-items: center;
+            transition: all 0.3s ease;
+            background-color: #fff;
+        }
+        
+        .file:hover {
+            box-shadow: var(--shadow);
+            transform: translateY(-2px);
+        }
+        
+        .file.completed {
+            border-left: 4px solid var(--success-color);
+        }
+        
+        .file .icon {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            background-color: #f0f4ff;
+        }
+        
+        .file .icon img {
+            width: 30px;
+            height: 30px;
+            object-fit: contain;
+        }
+        
+        .title {
+            flex: 1;
+            min-width: 0; /* Para que el texto se trunque correctamente */
+        }
+        
+        .name {
+            display: block;
+            font-weight: 500;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .size {
+            color: var(--text-light);
+            font-size: 14px;
+            margin-top: 5px;
+        }
+        
+        .progress-container {
+            width: 100%;
+            margin-top: 8px;
+        }
+        
+        .progress {
+            height: 6px;
+            width: 100%;
+            background-color: #e9ecef;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .progress-bar {
+            height: 100%;
+            background-color: var(--primary-color);
+            border-radius: 4px;
+            transition: width 0.3s ease;
+        }
+        
+        .progress-bar.completed {
+            background-color: var(--success-color);
+        }
+        
+        .actions {
+            display: flex;
+            gap: 5px;
+        }
+        
+        .actions button {
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent;
+            transition: all 0.2s ease;
+        }
+        
+        .actions button:hover {
+            background-color: #f0f0f0;
+        }
+        
+        .actions button svg {
+            width: 18px;
+            height: 18px;
+            fill: #555;
+        }
+        
+        .actions button.delete:hover svg {
+            fill: #dc3545;
+        }
+        
+        .file-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+        
+        .file-details {
+            flex: 1;
+            min-width: 0;
+        }
+        
+        .file-status {
+            font-size: 12px;
+            padding: 3px 8px;
+            border-radius: 12px;
+            background-color: #f0f0f0;
+            color: var(--text-light);
+        }
+        
+        .file-status.uploading {
+            background-color: #e7f1ff;
+            color: var(--primary-color);
+        }
+        
+        .file-status.completed {
+            background-color: #e8f5e8;
+            color: var(--success-color);
+        }
+        
+        /* Responsive */
+        @media (max-width: 480px) {
+            .upload-container {
+                padding: 30px 20px;
+                margin: 20px auto;
+            }
+            
+            .drag-drop {
+                padding: 30px 15px;
+            }
+            
+            .file {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+            
+            .file-info {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .actions {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+        
+        /* Animaciones */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .file {
+            animation: fadeIn 0.3s ease;
+        }
+        
+        /* Mensajes de estado */
+        .message {
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+            text-align: center;
+            font-weight: 500;
+            display: none;
+        }
+        
+        .message.success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .message.error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="upload-container">
+        <div class="title">SUBIR ARCHIVOS</div>
+        <div class="description">
+            Sube los archivos que necesites para el trabajo
+        </div>
+        
+        <div class="drag-drop" id="dropZone">
+            <div class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                    <path d="M176 544C96.5 544 32 479.5 32 400C32 336.6 73 282.8 129.9 263.5C128.6 255.8 128 248 128 240C128 160.5 192.5 96 272 96C327.4 96 375.5 127.3 399.6 173.1C413.8 164.8 430.4 160 448 160C501 160 544 203 544 256C544 271.7 540.2 286.6 533.5 299.7C577.5 320 608 364.4 608 416C608 486.7 550.7 544 480 544L176 544zM337 255C327.6 245.6 312.4 245.6 303.1 255L231.1 327C221.7 336.4 221.7 351.6 231.1 360.9C240.5 370.2 255.7 370.3 265 360.9L296 329.9L296 432C296 445.3 306.7 456 320 456C333.3 456 344 445.3 344 432L344 329.9L375 360.9C384.4 370.3 399.6 370.3 408.9 360.9C418.2 351.5 418.3 336.3 408.9 327L336.9 255z"/>
+                </svg>
+            </div>
+            <div>
+                Arrastra y suelta los archivos aquí <br />
+                o
+            </div>
+            <input type="file" id="fileInput" multiple style="display: none;">
+            <button class="btn" id="browseBtn">Seleccionar archivos</button>
+            <div class="message success" id="successMessage">¡Archivo subido correctamente!</div>
+            <div class="message error" id="errorMessage">Error al subir el archivo. Inténtalo de nuevo.</div>
+        </div>
+        
+        <div class="title-section">ARCHIVOS SUBIDOS</div>
+        <div class="uploaded-files" id="filesList">
+            <!-- Los archivos se agregarán dinámicamente aquí -->
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropZone = document.getElementById('dropZone');
+            const fileInput = document.getElementById('fileInput');
+            const browseBtn = document.getElementById('browseBtn');
+            const filesList = document.getElementById('filesList');
+            const successMessage = document.getElementById('successMessage');
+            const errorMessage = document.getElementById('errorMessage');
+            
+            // Abrir el selector de archivos al hacer clic en el botón
+            browseBtn.addEventListener('click', function() {
+                fileInput.click();
+            });
+            
+            // Manejar la selección de archivos
+            fileInput.addEventListener('change', function(e) {
+                handleFiles(e.target.files);
+            });
+            
+            // Funcionalidad de arrastrar y soltar
+            ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+                dropZone.addEventListener(eventName, preventDefaults, false);
+            });
+            
+            function preventDefaults(e) {
+                e.preventDefault();
+                e.stopPropagation();
+            }
+            
+            ['dragenter', 'dragover'].forEach(eventName => {
+                dropZone.addEventListener(eventName, highlight, false);
+            });
+            
+            ['dragleave', 'drop'].forEach(eventName => {
+                dropZone.addEventListener(eventName, unhighlight, false);
+            });
+            
+            function highlight() {
+                dropZone.classList.add('active');
+            }
+            
+            function unhighlight() {
+                dropZone.classList.remove('active');
+            }
+            
+            dropZone.addEventListener('drop', handleDrop, false);
+            
+            function handleDrop(e) {
+                const dt = e.dataTransfer;
+                const files = dt.files;
+                handleFiles(files);
+            }
+            
+            // Procesar archivos
+            function handleFiles(files) {
+                if (files.length === 0) return;
+                
+                for (let i = 0; i < files.length; i++) {
+                    const file = files[i];
+                    addFileToList(file);
+                    simulateUpload(file);
+                }
+            }
+            
+            // Añadir archivo a la lista
+            function addFileToList(file) {
+                const fileId = 'file-' + Date.now() + '-' + Math.random().toString(36).substr(2, 9);
+                const fileElement = document.createElement('div');
+                fileElement.className = 'file';
+                fileElement.id = fileId;
+                
+                const fileExtension = file.name.split('.').pop().toLowerCase();
+                const iconSrc = getFileIcon(fileExtension);
+                
+                fileElement.innerHTML = `
+                    <div class="icon">
+                        <img src="${iconSrc}" alt="${fileExtension} icon">
+                    </div>
+                    <div class="file-info">
+                        <div class="file-details">
+                            <div class="name">${file.name}</div>
+                            <div class="size">${formatFileSize(file.size)}</div>
+                            <div class="progress-container">
+                                <div class="progress">
+                                    <div class="progress-bar" id="progress-${fileId}"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="file-status uploading" id="status-${fileId}">Subiendo...</div>
+                    </div>
+                    <div class="actions">
+                        <button class="delete" onclick="removeFile('${fileId}')">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                                <path d="M183.1 137.4C170.6 124.9 150.3 124.9 137.8 137.4C125.3 149.9 125.3 170.2 137.8 182.7L275.2 320L137.9 457.4C125.4 469.9 125.4 490.2 137.9 502.7C150.4 515.2 170.7 515.2 183.2 502.7L320.5 365.3L457.9 502.6C470.4 515.1 490.7 515.1 503.2 502.6C515.7 490.1 515.7 469.8 503.2 457.3L365.8 320L503.1 182.6C515.6 170.1 515.6 149.8 503.1 137.3C490.6 124.8 470.3 124.8 457.8 137.3L320.5 274.7L183.1 137.4z"/>
+                            </svg>
+                        </button>
+                    </div>
+                `;
+                
+                filesList.prepend(fileElement);
+            }
+            
+            // Simular subida de archivo
+            function simulateUpload(file) {
+                const fileId = filesList.firstChild.id;
+                const progressBar = document.getElementById(`progress-${fileId}`);
+                const statusElement = document.getElementById(`status-${fileId}`);
+                
+                let progress = 0;
+                const interval = setInterval(() => {
+                    progress += Math.random() * 10;
+                    if (progress >= 100) {
+                        progress = 100;
+                        clearInterval(interval);
+                        
+                        // Marcar como completado
+                        setTimeout(() => {
+                            progressBar.classList.add('completed');
+                            statusElement.textContent = 'Completado';
+                            statusElement.classList.remove('uploading');
+                            statusElement.classList.add('completed');
+                            document.getElementById(fileId).classList.add('completed');
+                            
+                            // Mostrar mensaje de éxito
+                            showMessage(successMessage);
+                        }, 500);
+                    }
+                    
+                    progressBar.style.width = `${progress}%`;
+                }, 200);
+            }
+            
+            // Mostrar mensaje
+            function showMessage(messageElement) {
+                messageElement.style.display = 'block';
+                setTimeout(() => {
+                    messageElement.style.display = 'none';
+                }, 3000);
+            }
+            
+            // Eliminar archivo
+            window.removeFile = function(fileId) {
+                const fileElement = document.getElementById(fileId);
+                if (fileElement) {
+                    fileElement.style.opacity = '0';
+                    fileElement.style.transform = 'translateX(100%)';
+                    setTimeout(() => {
+                        fileElement.remove();
+                    }, 300);
+                }
+            };
+            
+            // Obtener icono según extensión
+            function getFileIcon(extension) {
+                const iconMap = {
+                    'pdf': '/img/pdf.png',
+                    'doc': '/img/doc.png',
+                    'docx': '/img/doc.png',
+                    'xls': '/img/xls.png',
+                    'xlsx': '/img/xls.png',
+                    'ppt': '/img/ppt.png',
+                    'pptx': '/img/ppt.png',
+                    'jpg': '/img/jpg.png',
+                    'jpeg': '/img/jpg.png',
+                    'png': '/img/png.png',
+                    'gif': '/img/gif.png',
+                    'zip': '/img/zip.png',
+                    'rar': '/img/zip.png'
+                };
+                
+                return iconMap[extension] || '/img/file.png';
+            }
+            
+            // Formatear tamaño de archivo
+            function formatFileSize(bytes) {
+                if (bytes === 0) return '0 Bytes';
+                
+                const k = 1024;
+                const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+                const i = Math.floor(Math.log(bytes) / Math.log(k));
+                
+                return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+            }
+        });
+    </script>
+</body>
+</html>

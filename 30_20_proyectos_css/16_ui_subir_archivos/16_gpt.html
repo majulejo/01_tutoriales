@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UI — Subir Archivos</title>
+
+    <script
+      src="https://kit.fontawesome.com/221b91d368.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      :root {
+        --primary: #4d86f0;
+        --primary-dark: #3c6dc0;
+        --bg: #f5f6fa;
+        --text: #333;
+        --muted: #888;
+        --radius: 8px;
+        --shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+      }
+
+      body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: var(--primary);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      .upload-container {
+        background: #fff;
+        width: 480px;
+        max-width: 95%;
+        padding: 40px 30px;
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        text-align: center;
+      }
+
+      .title {
+        font-size: 24px;
+        font-weight: 700;
+        color: var(--text);
+        margin-bottom: 10px;
+      }
+
+      .description {
+        color: var(--muted);
+        margin-bottom: 20px;
+      }
+
+      .drag-drop {
+        border: 3px dashed #ccc;
+        border-radius: var(--radius);
+        padding: 50px 30px;
+        margin: 20px 0;
+        transition: border-color 0.3s, background 0.3s;
+      }
+
+      .drag-drop.dragover {
+        border-color: var(--primary);
+        background-color: rgba(77, 134, 240, 0.1);
+      }
+
+      .drag-drop .icon {
+        font-size: 60px;
+        color: var(--primary);
+        margin-bottom: 10px;
+      }
+
+      .drag-drop p {
+        color: var(--muted);
+        margin: 5px 0;
+      }
+
+      .drag-drop button {
+        padding: 12px 20px;
+        background-color: var(--primary);
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+
+      .drag-drop button:hover {
+        background-color: var(--primary-dark);
+      }
+
+      .title-section {
+        text-align: left;
+        color: var(--muted);
+        font-weight: bold;
+        margin-top: 30px;
+        margin-bottom: 10px;
+      }
+
+      .uploaded-files {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .file {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid #eee;
+        border-radius: var(--radius);
+        padding: 10px 15px;
+        box-shadow: var(--shadow);
+        transition: transform 0.2s ease;
+      }
+
+      .file:hover {
+        transform: translateY(-3px);
+      }
+
+      .file .info {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .file .icon {
+        font-size: 32px;
+        color: var(--primary);
+      }
+
+      .file .details {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .file .name {
+        font-weight: 600;
+      }
+
+      .file .size {
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .progress-bar {
+        background-color: #eaeaea;
+        border-radius: 5px;
+        height: 6px;
+        margin-top: 8px;
+        overflow: hidden;
+        width: 100%;
+      }
+
+      .progress {
+        background-color: var(--primary);
+        height: 100%;
+        width: 0%;
+        transition: width 0.4s ease;
+      }
+
+      .actions button {
+        border: none;
+        background: none;
+        cursor: pointer;
+        color: #888;
+        font-size: 18px;
+        transition: color 0.2s;
+      }
+
+      .actions button:hover {
+        color: #000;
+      }
+
+      @media screen and (max-width: 500px) {
+        .upload-container {
+          padding: 25px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="upload-container">
+      <div class="title">Subir Archivos</div>
+      <div class="description">Arrastra tus archivos o selecciónalos manualmente</div>
+
+      <div class="drag-drop" id="dropZone">
+        <div class="icon"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+        <p>Arrastra tus archivos aquí</p>
+        <p>o</p>
+        <button id="fileBtn">Seleccionar archivos</button>
+        <input type="file" id="fileInput" multiple hidden />
+      </div>
+
+      <div class="title-section">Archivos subidos</div>
+      <div class="uploaded-files" id="fileList"></div>
+    </div>
+
+    <script>
+      const fileInput = document.getElementById("fileInput");
+      const fileBtn = document.getElementById("fileBtn");
+      const dropZone = document.getElementById("dropZone");
+      const fileList = document.getElementById("fileList");
+
+      fileBtn.addEventListener("click", () => fileInput.click());
+
+      fileInput.addEventListener("change", (e) => handleFiles(e.target.files));
+
+      dropZone.addEventListener("dragover", (e) => {
+        e.preventDefault();
+        dropZone.classList.add("dragover");
+      });
+
+      dropZone.addEventListener("dragleave", () =>
+        dropZone.classList.remove("dragover")
+      );
+
+      dropZone.addEventListener("drop", (e) => {
+        e.preventDefault();
+        dropZone.classList.remove("dragover");
+        handleFiles(e.dataTransfer.files);
+      });
+
+      function handleFiles(files) {
+        [...files].forEach((file) => uploadFile(file));
+      }
+
+      function uploadFile(file) {
+        const fileElement = document.createElement("div");
+        fileElement.classList.add("file");
+        fileElement.innerHTML = `
+          <div class="info">
+            <div class="icon"><i class="fa-solid fa-file"></i></div>
+            <div class="details">
+              <div class="name">${file.name}</div>
+              <div class="size">${(file.size / 1024).toFixed(1)} KB</div>
+              <div class="progress-bar">
+                <div class="progress"></div>
+              </div>
+            </div>
+          </div>
+          <div class="actions">
+            <button class="delete"><i class="fa-solid fa-xmark"></i></button>
+          </div>
+        `;
+        fileList.appendChild(fileElement);
+
+        // Simula progreso
+        const progress = fileElement.querySelector(".progress");
+        let width = 0;
+        const interval = setInterval(() => {
+          if (width >= 100) {
+            clearInterval(interval);
+          } else {
+            width += 10;
+            progress.style.width = width + "%";
+          }
+        }, 150);
+
+        // Eliminar archivo
+        fileElement.querySelector(".delete").addEventListener("click", () => {
+          fileElement.remove();
+        });
+      }
+    </script>
+  </body>
+</html>
