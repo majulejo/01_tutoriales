@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modal Responsive Mejorado</title>
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css"
+    />
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      
+      body {
+        font-family: 'Inter', Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      .material-symbols-outlined {
+        font-family: "Material Symbols Outlined";
+        font-weight: normal;
+        font-style: normal;
+        font-size: 24px;
+        display: inline-block;
+        line-height: 1;
+        text-transform: none;
+        letter-spacing: normal;
+        word-wrap: normal;
+        white-space: nowrap;
+        direction: ltr;
+      }
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+
+      .modal-container {
+        background-color: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(5px);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        animation: fadeIn 0.3s ease-out forwards;
+        z-index: 1000;
+        padding: 20px;
+      }
+
+      .modal {
+        width: 520px;
+        background-color: #fff;
+        border-radius: 16px;
+        padding: 30px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        transform: translateY(20px);
+        animation: slideUp 0.4s ease-out forwards;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .modal::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(90deg, #0684c4, #46b937);
+      }
+
+      .content {
+        display: flex;
+        gap: 20px;
+        align-items: flex-start;
+        margin-bottom: 30px;
+      }
+
+      .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: rgba(70, 185, 55, 0.1);
+        flex-shrink: 0;
+      }
+
+      i {
+        font-size: 32px;
+        color: #46b937;
+      }
+
+      .message {
+        flex: 1;
+      }
+
+      .message .text {
+        color: #555;
+        font-size: 16px;
+        line-height: 1.5;
+      }
+
+      .title {
+        font-weight: 600;
+        font-size: 24px;
+        margin-bottom: 10px;
+        color: #222;
+      }
+
+      .title h3 {
+        margin: 0;
+      }
+
+      .actions {
+        padding: 10px 0;
+        display: flex;
+        justify-content: flex-end;
+        gap: 12px;
+      }
+
+      button[class*="btn"] {
+        border: none;
+        padding: 14px 24px;
+        min-width: 140px;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 15px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      button[class*="btn"]:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .btn-confirm {
+        background-color: #0684c4;
+        color: #fff;
+        border: 2px solid #0684c4;
+      }
+
+      .btn-confirm:hover {
+        background-color: #056ba3;
+        border-color: #056ba3;
+      }
+
+      .btn-cancel {
+        background-color: #fff;
+        color: #555;
+        border: 2px solid #e0e0e0;
+      }
+
+      .btn-cancel:hover {
+        background-color: #f8f8f8;
+        border-color: #ccc;
+      }
+
+      /* Animaciones */
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+
+      @keyframes slideUp {
+        from { 
+          transform: translateY(20px);
+          opacity: 0;
+        }
+        to { 
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      /* Responsive */
+      @media screen and (max-width: 600px) {
+        .modal-container {
+          align-items: flex-end;
+          padding: 0;
+        }
+        
+        .modal {
+          width: 100%;
+          margin: 0;
+          border-radius: 16px 16px 0 0;
+          padding: 25px 20px;
+          transform: translateY(100%);
+          animation: slideUpMobile 0.4s ease-out forwards;
+        }
+
+        .content {
+          flex-direction: column;
+          text-align: center;
+          gap: 15px;
+        }
+
+        .icon {
+          align-self: center;
+        }
+
+        .actions {
+          flex-direction: column;
+        }
+
+        button[class*="btn"] {
+          width: 100%;
+        }
+      }
+
+      @keyframes slideUpMobile {
+        from { 
+          transform: translateY(100%);
+        }
+        to { 
+          transform: translateY(0);
+        }
+      }
+
+      @media screen and (max-width: 480px) {
+        .modal {
+          padding: 20px 15px;
+        }
+        
+        .title {
+          font-size: 22px;
+        }
+        
+        .message .text {
+          font-size: 15px;
+        }
+        
+        button[class*="btn"] {
+          padding: 12px 20px;
+          min-width: auto;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="modal-container">
+      <div class="modal">
+        <div class="content">
+          <div class="icon">
+            <i class="fi fi-br-badge-check"></i>
+          </div>
+          <div class="message">
+            <div class="title">
+              <h3>Confirmar cambios</h3>
+            </div>
+            <div class="text">¿Estás seguro de que deseas confirmar los cambios realizados? Esta acción no se puede deshacer una vez completada.</div>
+          </div>
+        </div>
+        <div class="actions">
+          <button class="btn-cancel">Cancelar</button>
+          <button class="btn-confirm">Confirmar cambios</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
