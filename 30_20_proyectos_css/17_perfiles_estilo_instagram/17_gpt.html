@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>17_perfiles_estilo_instagram</title>
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0"
+    />
+
+    <style>
+      :root {
+        --size: 120px;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #fafafa;
+        margin: 0;
+        padding: 0;
+      }
+
+      .stories-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        margin: 80px auto;
+        max-width: 1000px;
+      }
+
+      .story {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .outer-border {
+        background: conic-gradient(
+          from 180deg,
+          #feda75,
+          #fa7e1e,
+          #d62976,
+          #962fbf,
+          #4f5bd5,
+          #feda75
+        );
+        width: var(--size);
+        height: var(--size);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.4s ease, box-shadow 0.3s ease;
+      }
+
+      .outer-border:hover {
+        transform: rotate(8deg) scale(1.05);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .border {
+        background-color: #fff;
+        border-radius: 50%;
+        width: calc(var(--size) - 10px);
+        height: calc(var(--size) - 10px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+
+      .border a {
+        display: flex;
+      }
+
+      .border img {
+        width: calc(var(--size) - 20px);
+        height: calc(var(--size) - 20px);
+        border-radius: 50%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+
+      .border img:hover {
+        transform: scale(1.1);
+      }
+
+      .name {
+        text-align: center;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        margin-top: 10px;
+        font-weight: bold;
+        font-size: 14px;
+        width: var(--size);
+      }
+
+      /* Efecto rotatorio del borde activo */
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      .outer-border.active {
+        animation: spin 3s linear infinite;
+      }
+
+      /* Pausar la animación cuando el usuario pasa el ratón */
+.outer-border.active:hover {
+  animation-play-state: paused;
+}
+
+
+      /* Adaptación para móviles */
+      @media (max-width: 600px) {
+        :root {
+          --size: 90px;
+        }
+        .stories-container {
+          gap: 15px;
+          margin-top: 40px;
+        }
+        .name {
+          font-size: 12px;
+          width: var(--size);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="stories-container">
+      <div class="story">
+        <div class="outer-border">
+          <div class="border">
+            <a href="#"><img src="/img/abuela.webp" alt="Abuelita Dime Tu" /></a>
+          </div>
+        </div>
+        <div class="name">Abuelita Dime Tu</div>
+      </div>
+
+      <div class="story">
+        <div class="outer-border">
+          <div class="border">
+            <a href="#"><img src="/img/de_vito.jpg" alt="De vito Gonzalez" /></a>
+          </div>
+        </div>
+        <div class="name">De vito Gonzalez</div>
+      </div>
+
+      <div class="story">
+        <div class="outer-border">
+          <div class="border">
+            <a href="#"><img src="/img/colombo.jpg" alt="Colombo Martínez Gonzalez" /></a>
+          </div>
+        </div>
+        <div class="name">Colombo Martínez Gonzalez</div>
+      </div>
+
+      <div class="story">
+        <div class="outer-border">
+          <div class="border">
+            <a href="#"><img src="/img/niña.jpg" alt="Amparo Gonzalez" /></a>
+          </div>
+        </div>
+        <div class="name">Amparo Gonzalez</div>
+      </div>
+
+      <div class="story">
+        <div class="outer-border">
+          <div class="border">
+            <a href="#"><img src="/img/bean.jpg" alt="Bonifacio Pérez" /></a>
+          </div>
+        </div>
+        <div class="name">Bonifacio Pérez</div>
+      </div>
+    </div>
+
+    <script>
+  const stories = document.querySelectorAll(".outer-border");
+  let index = 0;
+  let interval;
+
+  function rotateActive() {
+    stories.forEach((story) => story.classList.remove("active"));
+    stories[index].classList.add("active");
+    index = (index + 1) % stories.length;
+  }
+
+  // Inicia el ciclo
+  rotateActive();
+  interval = setInterval(rotateActive, 3000);
+
+  // Pausa la rotación al pasar el ratón
+  stories.forEach((story) => {
+    story.addEventListener("mouseenter", () => clearInterval(interval));
+    story.addEventListener("mouseleave", () => {
+      interval = setInterval(rotateActive, 3000);
+    });
+  });
+</script>
+
+
+  </body>
+</html>

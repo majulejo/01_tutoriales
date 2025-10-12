@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfiles de Instagram - Mejorado</title>
+    
+    <!-- Iconos de Google -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
+    
+    <!-- Fuente de Google para mejor tipografía -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --size: 150px;
+            --story-gradient: radial-gradient(
+                circle farthest-corner at 32% 106%,
+                rgb(255, 225, 125) 0%,
+                rgb(255, 205, 105) 10%,
+                rgb(250, 145, 55) 10%,
+                rgb(235, 65, 65) 42%,
+                transparent 82%
+            ), linear-gradient(135deg, rgb(35, 75, 215) 12%, rgb(195, 60, 190) 58%);
+            --primary-color: #262626;
+            --secondary-color: #8e8e8e;
+            --hover-color: #fafafa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', Arial, Helvetica, sans-serif;
+            background-color: #fafafa;
+            color: var(--primary-color);
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .stories-container {
+            display: flex;
+            gap: 20px;
+            max-width: 900px;
+            padding: 30px;
+            background-color: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            overflow-x: auto;
+            scrollbar-width: none; /* Firefox */
+        }
+
+        /* Ocultar scrollbar en Chrome, Safari y Opera */
+        .stories-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        .story {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-shrink: 0;
+            transition: transform 0.2s ease;
+        }
+
+        .story:hover {
+            transform: translateY(-5px);
+        }
+
+        .story .outer-border {
+            background: var(--story-gradient);
+            width: var(--size);
+            height: var(--size);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            padding: 3px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .story .outer-border:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .story .border {
+            background-color: #fff;
+            border-radius: 50%;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4px;
+        }
+
+        .story img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid white;
+        }
+
+        .name {
+            text-align: center;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            padding: 12px 0 5px;
+            font-weight: 500;
+            font-size: 14px;
+            width: var(--size);
+            color: var(--primary-color);
+        }
+
+        .status {
+            font-size: 12px;
+            color: var(--secondary-color);
+            margin-top: -3px;
+        }
+
+        /* Indicador de historia nueva */
+        .new-story::after {
+            content: "";
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            width: 12px;
+            height: 12px;
+            background-color: #0095f6;
+            border-radius: 50%;
+            border: 2px solid white;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            :root {
+                --size: 120px;
+            }
+            
+            .stories-container {
+                padding: 20px;
+                gap: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            :root {
+                --size: 100px;
+            }
+            
+            .stories-container {
+                padding: 15px;
+                gap: 12px;
+            }
+            
+            .name {
+                font-size: 12px;
+            }
+        }
+
+        /* Animación para historias no vistas */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+            100% { transform: scale(1); }
+        }
+
+        .story.unviewed .outer-border {
+            animation: pulse 2s infinite;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="stories-container">
+        <!-- HISTORIA - 1 -->
+        <div class="story unviewed">
+            <div class="outer-border">
+                <div class="border">
+                    <a href="#" aria-label="Ver historia de Abuelita Dime Tú">
+                        <img src="/img/abuela.webp" alt="Foto de perfil de Abuelita Dime Tú" />
+                    </a>
+                </div>
+            </div>
+            <div class="name">Abuelita Dime Tú</div>
+            <div class="status">Hace 2 horas</div>
+        </div>
+
+        <!-- HISTORIA - 2 -->
+        <div class="story">
+            <div class="outer-border">
+                <div class="border">
+                    <a href="#" aria-label="Ver historia de De Vito Gonzalez">
+                        <img src="/img/de_vito.jpg" alt="Foto de perfil de De Vito Gonzalez" />
+                    </a>
+                </div>
+            </div>
+            <div class="name">De Vito Gonzalez</div>
+            <div class="status">Hace 5 horas</div>
+        </div>
+
+        <!-- HISTORIA - 3 -->
+        <div class="story unviewed new-story">
+            <div class="outer-border">
+                <div class="border">
+                    <a href="#" aria-label="Ver historia de Colombo Martínez">
+                        <img src="/img/colombo.jpg" alt="Foto de perfil de Colombo Martínez" />
+                    </a>
+                </div>
+            </div>
+            <div class="name">Colombo Martínez</div>
+            <div class="status">Recién</div>
+        </div>
+
+        <!-- HISTORIA - 4 -->
+        <div class="story">
+            <div class="outer-border">
+                <div class="border">
+                    <a href="#" aria-label="Ver historia de Amparo Gonzalez">
+                        <img src="/img/niña.jpg" alt="Foto de perfil de Amparo Gonzalez" />
+                    </a>
+                </div>
+            </div>
+            <div class="name">Amparo Gonzalez</div>
+            <div class="status">Hace 1 día</div>
+        </div>
+
+        <!-- HISTORIA - 5 -->
+        <div class="story unviewed">
+            <div class="outer-border">
+                <div class="border">
+                    <a href="#" aria-label="Ver historia de Bonifacio Pérez">
+                        <img src="/img/bean.jpg" alt="Foto de perfil de Bonifacio Pérez" />
+                    </a>
+                </div>
+            </div>
+            <div class="name">Bonifacio Pérez</div>
+            <div class="status">Hace 3 horas</div>
+        </div>
+    </div>
+</body>
+</html>

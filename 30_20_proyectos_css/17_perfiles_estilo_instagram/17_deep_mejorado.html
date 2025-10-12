@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfiles de Instagram - Mejorado</title>
+    
+    <!-- Iconos de Google -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
+    
+    <!-- Fuente de Google para mejor tipografía -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --size: 90px;
+            --story-gradient: radial-gradient(
+                circle farthest-corner at 32% 106%,
+                rgb(255, 225, 125) 0%,
+                rgb(255, 205, 105) 10%,
+                rgb(250, 145, 55) 10%,
+                rgb(235, 65, 65) 42%,
+                transparent 82%
+            ), linear-gradient(135deg, rgb(35, 75, 215) 12%, rgb(195, 60, 190) 58%);
+            --primary-color: #262626;
+            --secondary-color: #8e8e8e;
+            --hover-color: #fafafa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', Arial, Helvetica, sans-serif;
+            background-color: #fafafa;
+            color: var(--primary-color);
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .stories-container {
+            display: flex;
+            gap: 25px;
+            max-width: 900px;
+            padding: 30px;
+            background-color: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            overflow-x: auto;
+            scrollbar-width: none; /* Firefox */
+        }
+
+        /* Ocultar scrollbar en Chrome, Safari y Opera */
+        .stories-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        .story {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-shrink: 0;
+            transition: transform 0.2s ease;
+            position: relative;
+        }
+
+        .story:hover {
+            transform: translateY(-5px);
+        }
+
+        .story .outer-border {
+            background: var(--story-gradient);
+            width: var(--size);
+            height: var(--size);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            padding: 2px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .story .outer-border:hover {
+            transform: scale(1.05);
+        }
+
+        .story .border {
+            background-color: #fff;
+            border-radius: 50%;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2px;
+        }
+
+        .story img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .name {
+            text-align: center;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            padding: 10px 0 3px;
+            font-weight: 500;
+            font-size: 13px;
+            width: var(--size);
+            color: var(--primary-color);
+        }
+
+        .status {
+            font-size: 11px;
+            color: var(--secondary-color);
+            margin-top: -2px;
+        }
+
+        /* Indicador de historia nueva - PUNTO AZUL */
+        .story.new-story::after {
+            content: "";
+            position: absolute;
+            top: 2px;
+            right: 2px;
+            width: 14px;
+            height: 14px;
+            background-color: #0095f6;
+            border-radius: 50%;
+            border: 2px solid white;
+            z-index: 10;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            :root {
+                --size: 80px;
+            }
+            
+            .stories-container {
+                padding: 20px;
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            :root {
+                --size: 70px;
+            }
+            
+            .stories-container {
+                padding: 15px;
+                gap: 15px;
+            }
+            
+            .name {
+                font-size: 12px;
+            }
+        }
+
+        /* Animación para historias no vistas */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+            100% { transform: scale(1); }
+        }
+
+        .story.unviewed .outer-border {
+            animation: pulse 2s infinite;
+        }
+
+        /* Mejoras adicionales */
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #262626;
+        }
+
+        .header h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 16px;
+            color: #8e8e8e;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Historias de Instagram</h1>
+            <p>Haz clic en cualquier perfil para ver sus historias. Las historias con punto azul son nuevas.</p>
+        </div>
+        
+        <div class="stories-container">
+            <!-- HISTORIA - 1 -->
+            <div class="story unviewed">
+                <div class="outer-border">
+                    <div class="border">
+                        <a href="#" aria-label="Ver historia de Abuelita Dime Tú">
+                            <img src="/img/abuela.webp" alt="Foto de perfil de Abuelita Dime Tú" />
+                        </a>
+                    </div>
+                </div>
+                <div class="name">Abuelita Dime Tú</div>
+                <div class="status">Hace 2 horas</div>
+            </div>
+
+            <!-- HISTORIA - 2 -->
+            <div class="story">
+                <div class="outer-border">
+                    <div class="border">
+                        <a href="#" aria-label="Ver historia de De Vito Gonzalez">
+                            <img src="/img/de_vito.jpg" alt="Foto de perfil de De Vito Gonzalez" />
+                        </a>
+                    </div>
+                </div>
+                <div class="name">De Vito González</div>
+                <div class="status">Hace 5 horas</div>
+            </div>
+
+            <!-- HISTORIA - 3 - CON PUNTO AZUL -->
+            <div class="story unviewed new-story">
+                <div class="outer-border">
+                    <div class="border">
+                        <a href="#" aria-label="Ver historia de Colombo Martínez">
+                            <img src="/img/colombo.jpg" alt="Foto de perfil de Colombo Martínez" />
+                        </a>
+                    </div>
+                </div>
+                <div class="name">Colombo Martínez</div>
+                <div class="status">Recién</div>
+            </div>
+
+            <!-- HISTORIA - 4 -->
+            <div class="story">
+                <div class="outer-border">
+                    <div class="border">
+                        <a href="#" aria-label="Ver historia de Amparo Gonzalez">
+                            <img src="/img/niña.jpg"alt="Foto de perfil de Amparo Gonzalez" />
+                        </a>
+                    </div>
+                </div>
+                <div class="name">Amparo González</div>
+                <div class="status">Hace 1 día</div>
+            </div>
+
+            <!-- HISTORIA - 5 -->
+            <div class="story unviewed">
+                <div class="outer-border">
+                    <div class="border">
+                        <a href="#" aria-label="Ver historia de Bonifacio Pérez">
+                            <img src="/img/bean.jpg" alt="Foto de perfil de Bonifacio Pérez" />
+                        </a>
+                    </div>
+                </div>
+                <div class="name">Bonifacio Pérez</div>
+                <div class="status">Hace 3 horas</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Añadir interactividad para mostrar/ocultar el punto azul
+        document.addEventListener('DOMContentLoaded', function() {
+            const stories = document.querySelectorAll('.story');
+            
+            stories.forEach(story => {
+                story.addEventListener('click', function() {
+                    // Remover la clase 'unviewed' y 'new-story' al hacer clic
+                    this.classList.remove('unviewed', 'new-story');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
