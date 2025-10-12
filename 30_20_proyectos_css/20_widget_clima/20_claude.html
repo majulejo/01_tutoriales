@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Widget Clima</title>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    rel="stylesheet" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .material-symbols-outlined {
+      font-family: "Material Symbols Outlined";
+      font-weight: normal;
+      font-style: normal;
+      display: inline-block;
+      line-height: 1;
+      text-transform: none;
+      letter-spacing: normal;
+      word-wrap: normal;
+      white-space: nowrap;
+      direction: ltr;
+      font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .weather-container {
+      width: 100%;
+      max-width: 450px;
+      background-color: #2a2a2a;
+      color: #fff;
+      border-radius: 40px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    .current {
+      background: linear-gradient(135deg, #1e6bdd 0%, #0374ff 42%, #03bfff 100%);
+      padding: 40px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .current::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+      animation: pulse 15s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
+
+    .current > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .city {
+      text-align: center;
+      font-weight: 700;
+      font-size: 32px;
+      margin-bottom: 5px;
+      letter-spacing: 0.5px;
+    }
+
+    .day {
+      text-align: center;
+      font-size: 16px;
+      margin-bottom: 30px;
+      color: rgba(255, 255, 255, 0.8);
+      font-weight: 500;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .row .icon img {
+      width: 120px;
+      filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.2));
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .info {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .temperature {
+      display: flex;
+      align-items: baseline;
+      gap: 5px;
+    }
+
+    .temperature-now {
+      font-size: 72px;
+      font-weight: 700;
+      line-height: 1;
+      text-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .temperature-low {
+      font-size: 32px;
+      color: rgba(255, 255, 255, 0.7);
+      font-weight: 500;
+    }
+
+    .status {
+      text-align: center;
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    .more {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 40px;
+      padding-top: 30px;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .item .icon span {
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 32px;
+    }
+
+    .item .value {
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .item .type {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .list {
+      padding: 30px 40px 40px;
+    }
+
+    .list .day {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .list .day:hover {
+      background-color: rgba(255, 255, 255, 0.05);
+      padding-left: 10px;
+      padding-right: 10px;
+      border-radius: 12px;
+      border-bottom: 1px solid transparent;
+    }
+
+    .list .day:last-child {
+      border-bottom: none;
+    }
+
+    .list .name {
+      font-weight: 600;
+      width: 50px;
+      font-size: 16px;
+    }
+
+    .list .weather {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex: 1;
+      justify-content: center;
+    }
+
+    .list .weather .icon span {
+      font-size: 28px;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .list .weather .status {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 14px;
+      min-width: 100px;
+    }
+
+    .list .temperature {
+      display: flex;
+      gap: 8px;
+      justify-content: flex-end;
+      min-width: 70px;
+      font-size: 16px;
+    }
+
+    .list .temperature .hight {
+      font-weight: 600;
+    }
+
+    .list .temperature .low {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    @media (max-width: 480px) {
+      .weather-container {
+        border-radius: 30px;
+      }
+
+      .current {
+        padding: 30px 20px;
+      }
+
+      .city {
+        font-size: 28px;
+      }
+
+      .temperature-now {
+        font-size: 60px;
+      }
+
+      .list {
+        padding: 20px 20px 30px;
+      }
+
+      .list .weather .status {
+        font-size: 13px;
+        min-width: 80px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="weather-container">
+    <div class="current">
+      <div class="city">Mexico City</div>
+      <div class="day">Now</div>
+      <div class="row">
+        <div class="icon">
+          <img src="https://cdn-icons-png.flaticon.com/512/1163/1163661.png" alt="tiempo" width="120">
+        </div>
+        <div class="info">
+          <div class="temperature">
+            <div class="temperature-now">20°</div>
+            <div class="temperature-low">/17°</div>
+          </div>
+          <div class="status">Partly Cloudy</div>
+        </div>
+      </div>
+
+      <div class="more">
+        <div class="item">
+          <div class="icon">
+            <span class="material-symbols-outlined">air</span>
+          </div>
+          <div class="value">9 km/h</div>
+          <div class="type">Wind</div>
+        </div>
+
+        <div class="item">
+          <div class="icon">
+            <span class="material-symbols-outlined">water_drop</span>
+          </div>
+          <div class="value">93%</div>
+          <div class="type">Rain</div>
+        </div>
+
+        <div class="item">
+          <div class="icon">
+            <span class="material-symbols-outlined">humidity_percentage</span>
+          </div>
+          <div class="value">31%</div>
+          <div class="type">Humidity</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="list">
+      <div class="day">
+        <div class="name">Mon</div>
+        <div class="weather">
+          <div class="icon">
+            <span class="material-symbols-outlined">wb_cloudy</span>
+          </div>
+          <div class="status">Cloudy</div>
+        </div>
+        <div class="temperature">
+          <div class="hight">20°</div>
+          <div class="low">/17°</div>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="name">Tue</div>
+        <div class="weather">
+          <div class="icon">
+            <span class="material-symbols-outlined">clear_day</span>
+          </div>
+          <div class="status">Sunny</div>
+        </div>
+        <div class="temperature">
+          <div class="hight">24°</div>
+          <div class="low">/18°</div>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="name">Wed</div>
+        <div class="weather">
+          <div class="icon">
+            <span class="material-symbols-outlined">weather_mix</span>
+          </div>
+          <div class="status">Rainy</div>
+        </div>
+        <div class="temperature">
+          <div class="hight">18°</div>
+          <div class="low">/15°</div>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="name">Thu</div>
+        <div class="weather">
+          <div class="icon">
+            <span class="material-symbols-outlined">ac_unit</span>
+          </div>
+          <div class="status">Snowy</div>
+        </div>
+        <div class="temperature">
+          <div class="hight">12°</div>
+          <div class="low">/8°</div>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="name">Fri</div>
+        <div class="weather">
+          <div class="icon">
+            <span class="material-symbols-outlined">thunderstorm</span>
+          </div>
+          <div class="status">Thunderstorm</div>
+        </div>
+        <div class="temperature">
+          <div class="hight">16°</div>
+          <div class="low">/12°</div>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="name">Sat</div>
+        <div class="weather">
+          <div class="icon">
+            <span class="material-symbols-outlined">wb_twilight</span>
+          </div>
+          <div class="status">Partly Sunny</div>
+        </div>
+        <div class="temperature">
+          <div class="hight">22°</div>
+          <div class="low">/16°</div>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="name">Sun</div>
+        <div class="weather">
+          <div class="icon">
+            <span class="material-symbols-outlined">wb_sunny</span>
+          </div>
+          <div class="status">Sunny</div>
+        </div>
+        <div class="temperature">
+          <div class="hight">26°</div>
+          <div class="low">/19°</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

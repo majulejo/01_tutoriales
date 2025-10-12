@@ -6,8 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>19_tarjeta_twitter</title>
 
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
 
   <style>
     body {
@@ -28,7 +26,7 @@
       border-radius: 50%;
     }
 
-    
+
 
     .profile-container .profile .info {
       position: absolute;
@@ -45,10 +43,10 @@
       flex-direction: column;
     }
 
-    .profile-container .profile:hover .info{
+    .profile-container .profile:hover .info {
       display: flex;
       animation: show 0.3s ease;
-    } 
+    }
 
     .profile-container .profile a {
       color: #fff;
@@ -103,6 +101,7 @@
 
     .profile-container .profile .description a {
       color: #008cff;
+      text-decoration: none;
     }
 
     .profile-container .profile .description a:hover {
@@ -134,20 +133,33 @@
       color: #777;
       display: flex;
     }
-        
-    .profile-container .profile .other a .photos{
+
+    .profile-container .profile .other a .photos {
       display: flex;
+      /* flex-direction: row-reverse; */
       justify-content: start;
-      flex-direction: row-reverse;
-      margin-right: 25px;
+      margin-right: 30px;
     }
 
-    .profile-container .profile .other a .photos img{
+    .profile-container .profile .other a .photos img {
       width: 32px;
       height: 32px;
       border: 4px solid #222;
       margin-right: -20px;
-      
+    }
+
+    /*Para cambiar el orden de las fotos, la de la izquierda esté más adelantada y el resto ordenadas, detás, hay que añadir los z-index en las imágenes y cambiar el orden y en .profile-container .profile .other a .photos hay que quitar el flex-direction: row-reverse;*/
+
+    .profile-container .profile .other a .photos img:nth-child(1) {
+      z-index: 3;
+    }
+
+    .profile-container .profile .other a .photos img:nth-child(2) {
+      z-index: 2;
+    }
+
+    .profile-container .profile .other a .photos img:nth-child(3) {
+      z-index: 1;
     }
 
     @keyframes show {
@@ -155,6 +167,7 @@
         opacity: 0;
         transform: scale(0.5);
       }
+
       to {
         opacity: 1;
         transform: scale(1);
@@ -171,7 +184,7 @@
 
 
 
-      /* ////////////////////////// */
+    /* ////////////////////////// */
   </style>
 </head>
 

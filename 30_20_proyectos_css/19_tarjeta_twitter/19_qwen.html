@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>19_tarjeta_twitter</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #25334D;
+    }
+
+    .profile-container {
+      width: 70px;
+      margin: 100px auto;
+    }
+
+    .profile-container .profile {
+      position: relative;
+      display: inline-block;
+    }
+
+    .profile-container .profile img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .profile-container .profile .info {
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%) scale(0.5);
+  width: 340px;
+  min-height: 300px;
+  max-height: 346px;
+  background-color: #222;
+  border-radius: 20px;
+  color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+}
+
+.profile-container .profile:hover .info {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(-50%) scale(1);
+}
+
+    .profile-container .profile a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .profile-container .profile a:hover {
+      text-decoration: underline;
+    }
+
+    .profile-container .profile .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .profile-container .profile .header img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+    }
+
+    .profile-container .profile .header button {
+      min-width: 100px;
+      padding: 10px;
+      border-radius: 20px;
+      background-color: #fff;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      color: #000;
+    }
+
+    .profile-container .profile .header button:hover {
+      background-color: #eee;
+    }
+
+    .profile-container .profile .user-info {
+      padding: 10px 0;
+    }
+
+    .profile-container .profile .user-info .name {
+      font-weight: bold;
+    }
+
+    .profile-container .profile .user-info .username {
+      color: #aaa;
+    }
+
+    .profile-container .profile .description {
+      padding: 10px 0 20px 0;
+      flex: 1;
+    }
+
+    .profile-container .profile .description a {
+      color: #008cff;
+      text-decoration: none;
+    }
+
+    .profile-container .profile .description a:hover {
+      text-decoration: underline;
+    }
+
+    .profile-container .profile .followers-container {
+      display: flex;
+      gap: 20px;
+      justify-content: space-between;
+      padding: 10px 0;
+    }
+
+    .profile-container .profile .followers-container a {
+      color: #aaa;
+      text-decoration: none;
+    }
+
+    .profile-container .profile .followers-container .number {
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .profile-container .profile .other {
+      padding: 10px 0;
+    }
+
+    .profile-container .profile .other a {
+      color: #777;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      gap: 12px;
+    }
+
+    .profile-container .profile .other a .photos {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+
+    .profile-container .profile .other a .photos img {
+      width: 32px;
+      height: 32px;
+      border: 4px solid #222;
+      border-radius: 50%;
+      margin-right: -16px;
+      position: relative;
+    }
+
+    .profile-container .profile .other a .photos img:nth-child(1) {
+      z-index: 3;
+    }
+
+    .profile-container .profile .other a .photos img:nth-child(2) {
+      z-index: 2;
+    }
+
+    .profile-container .profile .other a .photos img:nth-child(3) {
+      z-index: 1;
+    }
+
+    .profile-container .profile .other .names {
+      line-height: 1.4;
+      color: #aaa;
+    }
+
+    @keyframes show {
+      from {
+        opacity: 0;
+        transform: scale(0.5);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="profile-container">
+    <div class="profile">
+      <img src="/img/muñeca.jpg" alt="Avatar del perfil" />
+
+      <div class="info">
+        <div class="header">
+          <div class="photo">
+            <img src="/img/muñeca.jpg" alt="Avatar del perfil" />
+          </div>
+          <div class="action">
+            <button class="btn">Follow</button>
+          </div>
+        </div>
+
+        <div class="user-info">
+          <div class="name"><a href="#">Nombre de Usuario</a></div>
+          <div class="username">@nombreusuario</div>
+        </div>
+
+        <div class="description">
+          Descripción breve del usuario o contenido. <a href="#">#javascript</a>
+        </div>
+
+        <div class="followers-container">
+          <div class="following">
+            <a href="#"><span class="number">100K</span> Siguiendo</a>
+          </div>
+
+          <div class="followers">
+            <a href="#"><span class="number">1M</span> Seguidores</a>
+          </div>
+        </div>
+
+        <div class="other">
+          <a href="#">
+            <div class="photos">
+              <img src="/img/abuela.webp" alt="abuela" />
+              <img src="/img/bean.jpg" alt="bean" />
+              <img src="/img/colombo.jpg" alt="colombo" />
+            </div>
+            <div class="names">
+              Basilo, Perfecto, Criterio y Rogelio y 80 personas más que
+              sigues siguen esta cuenta
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
