@@ -8,6 +8,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
     <link rel="stylesheet" href="/css/main.css">
 </head>
 
@@ -16,7 +18,7 @@
     <!-- ENCABEZADO -->
     <!-- ********************************* -->
     <header class="container-fluid bg-primary d-flex justify-content-center text-white p-3 >
-        <p class=" text-light mb-0 p-2 fs-6">Contactanos al teléfono (+34) 555-1234</p>
+        <p class=" text-light mb-0 p-2 fs-6">Contáctanos al teléfono (+34) 555-1234</p>
     </header>
 
     <nav class="navbar navbar-expand-lg navbar-light  bg-light p-3" id="menu">
@@ -39,13 +41,11 @@
                         <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Equipo</a>
+                        <a class="nav-link" href="#equipo">Equipo</a>
                     </li>
+                    
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Material</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contacto</a>
+                        <a class="nav-link" href="#section-contacto">Contacto</a>
                     </li>
                 </ul>
 
@@ -92,44 +92,168 @@
     <!-- ********************************* -->
     <!--             * INTRO               -->
     <!-- ********************************* -->
-     <section class="w-50 mx-auto text-center pt-5" id="intro">
-        <h1 class="p-3 fs-2 border-top border-3">Una agencia para todas tus necesidades de 
+    <section class="w-50 mx-auto text-center pt-5" id="intro">
+        <h1 class="p-3 fs-2 border-top border-3">Una agencia para todas tus necesidades de
             <span class="text-primary"> Marketing Digital</span>
         </h1>
-        <p lass p-3 fs-4><span class="text-primary">ExpertoD. </span>Impulsamos tu negocio al siguiente nivel para que no te tengas que preocupar por nada.</p>
-     </section>
+        <p lass p-3 fs-4><span class="text-primary">ExpertoD. </span>Impulsamos tu negocio al siguiente nivel para que
+            no te tengas que preocupar por nada.</p>
+    </section>
 
     <!-- ********************************* -->
     <!-- SERVICIOS -->
     <!-- ********************************* -->
 
     <section class="container-fluid">
-        <div class="row">
-            <div class="col-sm">
+        <div class="row w-75 mx-auto my-5 servicio-fila">
+            <div class="col-lg-6 col-md-12 col-sm-12 d-flex  my-5 icono-wrap">
                 <img src="img/desarrollo.png" alt="desarrollo" width="180" height="160">
-            <div>
-                <h3>Desarrollo</h3>
-            <p>Desarrollo de aplicaciones web y móviles a medida.</p>
-            </div>
+                <div>
+                    <h3 class="fs-5 mt-4 px-4 pb-1">Desarrollo</h3>
+                    <p class="px-4">Desarrollo de aplicaciones web y móviles a medida.</p>
+                </div>
             </div>
 
-            <div class="col-sm">
-                <img src="img/desarrollo.png" alt="desarrollo" width="180" height="160">
-            <div>
-                <h3>Desarrollo</h3>
-            <p>Desarrollo de aplicaciones web y móviles a medida.</p>
+            <div class="col-lg-6 col-md-12 col-sm-12 d-flex  my-5 icono-wrap">
+                <img src="img/concepto.png" alt="concepto" width="180" height="160">
+                <div>
+                    <h3 class="fs-5 mt-4 px-4 pb-1">Concepto</h3>
+                    <p class="px-4">Desarrollo de aplicaciones web y móviles a medida.</p>
+                </div>
             </div>
+        </div>
+
+        <div class="row w-75 mx-auto my-5 servicio-fila">
+            <div class="col-lg-6 col-md-12 col-sm-12 d-flex  my-5 icono-wrap">
+                <img src="img/comunicaciones.png" alt="comunicaciones" width="180" height="160">
+                <div>
+                    <h3 class="fs-5 mt-4 px-4 pb-1">Comunicaciones</h3>
+                    <p class="px-4">Desarrollo de aplicaciones web y móviles a medida.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-12 col-sm-12 d-flex  my-5 icono-wrap">
+                <img src="img/seo.png" alt="seo" width="180" height="160">
+                <div>
+                    <h3 class="fs-5 mt-4 px-4 pb-1">SEO</h3>
+                    <p class="px-4">Desarrollo de aplicaciones web y móviles a medida.</p>
+                </div>
             </div>
         </div>
     </section>
     <!-- ********************************* -->
-    <!-- SERVICIOS -->
+    <!-- ACERCA DE NOSOTROS -->
     <!-- ********************************* -->
+
+    <section>
+        <div class="w-75 m-auto text-center" id="equipo">
+            <h1 class="mb-5 fs-2">Equipo pequeño con <span class="text-primary"> Gran Experiencia</span></h1>
+            <p class="fs-4">Siempre buscamos la excelencia en cada proyecto para conseguir resultados excepcionales.</p>
+        </div>
+        <div class="mt-5 text-center">
+            <img src="img/equipo.jpg" alt="equipo" class="img-fluid ">
+        </div>
+
+        <div id="local" class="border-top border-2">
+            <!-- Parte izquierda de la pantalla -->
+            <div class="mapa"></div>
+            <!-- Parte derecha de la pantalla -->
+            <div class="">
+                <div class="wrapper">
+                    <h2>Ubicado en Miami, Florida</h2>
+                    <h2 class="text-primary mb-4" id="typewriter"></h2>
+                    <p class="fs-5 text body">Elegimos Miami para nuestra oficina con el objetivo de estar cerca de
+                        nuestros clientes. Estamos ubicados en el Brickell, el corazón y el centro financiero de Miami,
+                        cerca de los mejores restaurantes, tiendas y a tan solo 15 minutos de las playas. ¡Visíntennos y
+                        no se arrepentirán.</p>
+                    <section class="d-flex" id="numeros-local">
+                        <div>
+                            <p class="text-primary fs-5">248</p>
+                            <p>Días de sol</p>
+                        </div>
+                        <div>
+                            <p class="text-primary fs-5">100%</p>
+                            <p>Aprobado</p>
+                        </div>
+                        <div>
+                            <p class="text-primary fs-5">24º</p>
+                            <p>Promedio de temperatura</p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ********************************* -->
+    <!-- BG-FORMULARIO -->
+    <!-- ********************************* -->
+
+    <section id="section-contacto" class="border-bottom border-secondary border-2">
+        <div id="bg-contactos">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#1b2a4e" fill-opacity="1"
+                  d="M0,32L120,42.7C240,53,480,75,720,74.7C960,75,1200,53,1320,42.7L1440,32L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z">
+                </path>
+            </svg>
+        </div>
+
+        <!-- Formulario -->
+        <div class="container" id="contenedor-formulario">
+            <div id="titulo-formulario" class="text-center  mb-4">
+                <div class="">
+                    <img src="/img/support.png" alt="support" class="img-fluid">
+                </div>
+                <h2 class="">Contactos</h2>
+                <p class="fs-5">Si tienes alguna pregunta o consulta, no dudes en ponerte en contacto con nosotros a
+                    través del siguiente formulario.</p>
+            </div>
+
+            <form>
+                <div class="mb-3">
+                    <input type="email" class="form-control" id="email" placeholder="basilio@preterito.gol" required>
+                </div>
+
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="nombre" placeholder="Basilio Preterito Perfecto"
+                      required>
+                </div>
+
+                <div class="mb-3">
+                    <textarea class="form-control" id="textarea" rows="3" placeholder="Escribe aqui tu mensaje"
+                      required></textarea>
+                </div>
+
+                <div class="mb-3">
+                    <button type="button" class="btn btn-primary w-100 fs-5">Enviar Mensaje</button>
+                </div>
+            </form>
+            </form>
+        </div>
+    </section>
+
+    <!-- ********************************* -->
+    <!-- FOOTER -->
+    <!-- ********************************* -->
+     <footer class="w-100 d-flex align-items-center justify-content-center flex-wrap">
+        <p class="fs-5 px-3 pt-3">ExpertD. &copy; Todos los derechos reservados 2011</p>
+        <div id="iconos">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-twitter"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+        </div>
+     </footer>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/TypewriterJS/2.21.0/core.min.js"
+      integrity="sha512-fo6X5UXaTRf/mHuTYJBR3Q/rpPa+LB2KUyDMROluMkZnfEEF4DhQyI5AHRoAe/zzu1Ty58MMmZXG4SuVEpXsng=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="/js/main.js"></script>
 
 </body>
 
