@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+}
+
+/* *************************** MENU **************************** */
+
+#menu li > a {
+    font-size: 18px;
+    font-weight: bold;
+    color: #3f3f3f;
+}
+
+#menu form >button {
+    font-size: 18px;
+    font-weight: bold;
+    color: #3f3f3f;
+}
+
+/* **************** SLIDER DE IMAGENES ******************** */
+
+.carousel-inner {
+    max-height: 39rem;
+}
+
+/* *********** SECCION NUESTRO EQUIPO IMAGENES ****************** */
+
+/* *************************** FOOTER **************************** */
+/* *********** MEDIA QUERIES PANTALLA ANCHA ********************** */
+@media (max-width: 768px){
+    #intro {
+        width: 90% !important;
+    }
+}
+
+    /* ***********    MEDIA QUERIES PANTALLA SM ********************** */
+/* ***********   MEDIA QUERIES PANTALLA EXTRA-SM ***************** */
