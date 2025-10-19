@@ -3,9 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
     <title>Cómo poner texto sobre imagen en CSS (y HTML)
 </title>
+<style>
+    .wrap {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to right,rgb(0 0 0 /.5), rgb(0 0 0 /.5)), url(img/paisaje.webp);
+    background-size: cover;
+    background-position: center;
+}
+
+.wrap-texto {
+    color: #fff;
+    text-align: center;
+    width: 50%;
+}
+</style>
 </head>
 <body>
     <div class="wrap">
