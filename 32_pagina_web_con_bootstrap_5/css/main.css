@@ -28,7 +28,7 @@ body {
 /* *********** SECCION NUESTRO EQUIPO IMAGENES ****************** */
 
 .mapa {
-  background-image: url(/img/mapa.png);
+  background-image: url(../img/mapa.png);
   width: 100%;
   height: 500px;
 }
