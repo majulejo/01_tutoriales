@@ -1,0 +1,73 @@
+Referencia: Textos de Relleno
+Usa estos ejemplos en tus diseños o como guía para tus snippets en VS Code.
+pirate5
+samuel10
+faker15
+5,10,15,20 palabras
+"name1",Basilio Perfecto Criterio
+"name2",Criteria Trinia Basilia
+"name3",Rogelio Gámez Tritón
+
+
+"Nombre y Apellidos 1": {
+    "prefix": "name1",
+    "body": ["Basilio Perfecto Criterio"],
+    "description": "nombre completo 1"
+  },
+  "Nombre y Apellidos 2": {
+    "prefix": "name2",
+    "body": ["Criteria Trinia Basilia"],
+    "description": "nombre completo 2"
+  },
+  "Nombre y Apellidos 3": {
+    "prefix": "name3",
+    "body": ["Rogelio Gámez Tritón"],
+    "description": "nombre completo 3"
+  },
+  "Pirate Ipsum 3 palabras": {
+    "prefix": "pirate3",
+    "body": ["Shiver me timbers."],
+    "description": "5 palabras - Pirate Ipsum"
+  },
+
+
+🏴‍☠️ Pirate Ipsum
+pirate5
+
+Shiver me timbers grog swab the deck.
+pirate10
+
+Avast ye scurvy dog! Shiver me timbers, grog swab the deck, yo-ho-ho bilge rat.
+pirate15
+
+Keelhaul deadlights, hang the jib broadside! Marooned splice the main brace, weigh anchor. Shiver me timbers grog swab the deck yo-ho-ho!
+pirate20
+
+Fire in the hole! Avast ye scurvy dog, shiver me timbers. Grog swab the deck, yo-ho-ho bilge rat keelhaul deadlights. Hang the jib broadside, marooned splice the main brace, weigh anchor now!
+🎬 Samuel L. Ipsum
+samuel5
+
+Say 'what' again. I dare you.
+samuel10
+
+I don't know who the hell you think you are, but you in for a world of hurt.
+samuel15
+
+Now, that’s a tasty burger! But you best check yo self before you wreck yo self, fool.
+samuel20
+
+Look, just because I don’t be givin’ no man a foot massage don’t make me no homophobe. And you best check yo self before you wreck yo self, motherf***er!
+🧪 Faker-style (español realista)
+faker5
+
+La tecnología avanza rápidamente cada día.
+faker10
+
+El equipo trabaja en soluciones innovadoras para el futuro digital.
+faker15
+
+Nuestros clientes confían en nosotros para transformar sus ideas en productos reales y escalables.
+faker20
+
+Desarrollamos software moderno con enfoque en usabilidad, rendimiento y seguridad desde el primer día.
+💡 Consejo para VS Code: Escribe el prefijo (ej. samuel10) en un archivo HTML y presiona Tab para expandirlo automáticamente (si tienes los snippets configurados).
