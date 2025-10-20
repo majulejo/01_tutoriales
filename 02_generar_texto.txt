@@ -1,12 +1,14 @@
 Referencia: Textos de Relleno
 Usa estos ejemplos en tus diseños o como guía para tus snippets en VS Code.
-pirate5
-samuel10
-faker15
+pirate 5, 10, 15, 20
+samuel 5, 10, 15, 20
+faker 5, 10, 15, 20
 5,10,15,20 palabras
 "name1",Basilio Perfecto Criterio
 "name2",Criteria Trinia Basilia
 "name3",Rogelio Gámez Tritón
+
+EMPEZANDO A ESCRIBIR DENTRO DE POR EJEMPLO UN <P> LA PALABRA SAMUEL APARECE LA POSIBILIDAD DE SELECCIONAR LAS PALABRA QUE QUIERAS EN MULTIPLOS DE 5 HASTA 20 O name1, name2, name3 PARA PONER 3 NOMBRES CON SUS APELLIDOS</P>
 
 
 "Nombre y Apellidos 1": {
