@@ -1,0 +1,104 @@
+/* font-family: "Plus Jakarta Sans", sans-serif; */
+
+:root {
+    --background: #0f0e0d;
+    --shadow: 0 10px 30px rgba(0,0,0,0.35);
+    --border-color: rgba(255,255,255,0.8);
+    --text-color: #f4efe9;
+    --muted-color: #cfc7bd;
+    --accent: #c18e5b;
+    --accent-2:#825945;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    background: radial-gradient(
+        1200px 800px at 70% -10%,
+        rgba(193,142,91,0.12),
+        transparent 60%
+    ),
+    var(--background);
+}
+
+.container {
+    width: min(1200px, 92%);
+    margin-inline: auto;
+}
+
+/* todo header */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    backdrop-filter: saturate(1.2) blur(8px);
+    background: linear-gradient(
+        180deg,
+        rgba(15,14,15,0.75),
+        rgba(15,14,15,0.35) 60%,
+        transparent
+    );
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 24px;
+
+    .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+        color: var(--text-color);
+
+        .icon {
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,.3))
+        }
+
+        .text {
+            font-weight: 700;
+            letter-spacing: 0.2px;
+        }
+    }
+    .nav {
+        display: flex;
+        gap: 18px;
+        align-items: center;
+
+        .nav-list {
+            display: flex;
+            gap: 18px;
+            list-style: none;
+
+            a {
+                color: var(--muted-color);
+                text-decoration: none;
+                padding: 8px 10px;
+                border-radius: 10px;
+                transition: all 0.25s ease;
+
+                &:hover {
+                    color: var(--text-color);
+                    background: rgba(255,255,255,0.06);
+                }
+            }
+        }
+
+        .burguer {
+            display: none;
+            width: 42px;
+            height: 42px;
+        }
+    }
+}
