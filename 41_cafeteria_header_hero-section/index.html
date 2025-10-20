@@ -1,12 +1,62 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafetería Header y Hero Section</title>
+    <link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon">
+
+
+    <!-- Todo Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet">
+    <!-- // Google Fonts -->
     <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
 </head>
+
 <body>
-    
+    <header class="site-header">
+        <a href="/" class="brand" aria-label="Ir al Inicio">
+            <img src="img/logo.svg" alt="logo" class="icon" width="28" height="28">
+            <span class="text">Café Aurora</span>
+        </a>
+        <nav class="nav">
+            <button class="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-list">
+                <li><a href="/#inicio">Inicio</a></li>
+                <li><a href="/menu.html">Carta Completa</a></li>
+                <li><a href="#">Reservas</a></li>
+                <li><a href="#">Galería</a></li>
+                <li><a href="#">Visítanos</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <div class="menu-overlay menu-overlay--open" aria-hidden="true">
+        <ul class="nav-list">
+                <li><a href="/#inicio">Inicio</a></li>
+                <li><a href="/menu.html">Carta Completa</a></li>
+                <li><a href="#">Reservas</a></li>
+                <li><a href="#">Galería</a></li>
+                <li><a href="#">Visítanos</a></li>
+            </ul>
+    </div>
+
+    <main>
+        <!-- Hero -->
+         <section class="hero">
+            <div class="hero-media" aria-hidden="true">
+                
+            </div>
+         </section>
+    </main>
 </body>
+
 </html>

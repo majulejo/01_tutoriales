@@ -71,6 +71,7 @@ body {
             letter-spacing: 0.2px;
         }
     }
+
     .nav {
         display: flex;
         gap: 18px;
@@ -95,10 +96,43 @@ body {
             }
         }
 
-        .burguer {
+        .burger {
             display: none;
             width: 42px;
             height: 42px;
-        }
+            border: 1px solid var(--border-color);
+            background: transparent;
+            border-radius: 12px;
+            position: relative;
+            cursor: pointer;
+
+            span {
+                position: absolute;
+                left: 10px;
+                right: 10px;
+                height: 2px;
+                background: var(--text-color);
+                transition: transform 0.35s ease, top .35s ease, opacity 0.2s;
+
+                &:nth-child(1) {
+                    top: 14px;
+                }
+
+                &:nth-child(2) {
+                    top: 26px;
+                }
+            }
+        }        
     }
+
+    @media(max-width: 860px) {
+            .nav {
+                .nav-list {
+                    display: none;
+                }
+                .burger {
+                    display: inline-block;
+                }
+            }
+        }
 }
