@@ -138,75 +138,162 @@ body {
   }
 }
 
-
 /* todo menu overlay */
 .menu-overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(15,14,13,0.85);
-    backdrop-filter: blur(12px);
-    transform: translateY(4%);
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.45s cubic-bezier(0.22,1,0.36,1);
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 14, 13, 0.85);
+  backdrop-filter: blur(12px);
+  transform: translateY(4%);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+  display: grid;
+  place-items: center;
+  z-index: 49;
+
+  ul {
+    list-style: none;
     display: grid;
-    place-items: center;
-    z-index: 49;
+    gap: 18px;
+    text-align: center;
 
-    ul {
-        list-style: none;
-        display: grid;
-        gap: 18px;
-        text-align: center;
-
-        a {
-            color: var(--text-color);
-            font-size: clamp(24px, 6vw, 44px);
-            text-decoration: none;
-        }
+    a {
+      color: var(--text-color);
+      font-size: clamp(24px, 6vw, 44px);
+      text-decoration: none;
     }
+  }
 }
 
 .menu-overlay--open {
-    opacity: 1;
-    pointer-events: none;
-    transform: none;
+  opacity: 1;
+  pointer-events: none;
+  transform: none;
 }
 
 /* todo HERO */
 
 .hero {
+  position: relative;
+  padding: clamp(88px, 12vw, 160px) 0 80px;
+  overflow: clip;
+
+  .hero-media {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+
+    .bean {
+      position: absolute;
+      opacity: 0.4;
+      filter: blur(0.2px) drop-shadow(0 10px 30px rgba(0, 0, 0, 0.35));
+    }
+
+    .bean-a {
+      top: 12%;
+      left: 6%;
+      width: 120px;
+    }
+
+    .bean-b {
+      top: 26%;
+      right: 10%;
+      width: 90px;
+    }
+
+    .bean-c {
+      bottom: 12%;
+      left: 16%;
+      width: 70px;
+    }
+  }
+
+  .hero-inner {
     position: relative;
-    padding: clamp(88px, 12vw, 160px) 0 80px;
-    overflow: clip;
+    z-index: 2;
 
-    .hero-media {
-        position: absolute;
-        inset: 0;
-        pointer-events: none;
-        z-index: 0;
+    .eyebrow {
+      color: var(--accent);
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+    }
 
-        .bean {
-            position: absolute;
-            opacity: 0.4;
-            filter: blur(0.2px) drop-shadow(0 10px 30px rgba(0,0,0,0.35));            
+    .hero-title {
+      font-size: clamp(28px, 6vw, 56px);
+      line-height: 1.1;
+      margin: 0.5rem 0.1rem;
+    }
+
+    .underline {
+      background: linear-gradient(transparent 65%, rgba(193, 142, 91, 0.28) 0);
+      padding: 0.05rem 0.15rem;
+      border-radius: 8px;
+    }
+
+    .hero-sub {
+        color: var(--muted-color);
+        max-width: 60ch;
+    }
+
+    .hero-cta {
+        display: flex;
+        gap: 12px;
+        margin-top: 22px;
+    }
+
+    .stats {
+        display: flex;
+        gap: 28px;
+        flex-wrap: wrap;
+        margin-top: 24px;
+
+        strong {
+            display: block;
+            font-size: 1.2rem;
         }
-        .bean-a {
-                top: 12%;
-                left: 6%;
-                width: 120px;
-            }
 
-            .bean-b {
-                top: 26%;
-                left: 10%;
-                width: 90px;
-            }
+        span {
+            color:  var(--muted-color);
+            font-size: 0.9rem;
+        }
+    }
+  }
+}
 
-            .bean-c {
-                bottom: 12%;
-                left: 6%;
-                width: 70px;
-            }
+/* ? BUTTONS */
+
+.button {
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    border: 1px solid transparent;
+    transform: translateZ(0);
+}
+
+.button-primary {
+    background: linear-gradient(180deg, var(--accent), var(--accent-2));
+    color: #160f0a;
+    box-shadow: 0 6px 18px rgba(193, 142, 91, 0.25);
+
+    &:hover {
+        transform: translateY(-1px)
+    }
+}
+
+.button-ghost {
+    color: var(--text-color);
+    border-color: var(--border-color);
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.06);
     }
 }
