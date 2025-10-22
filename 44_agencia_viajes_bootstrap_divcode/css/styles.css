@@ -35,7 +35,7 @@ html {
   clear: both;
 }
 
-.img-responsive {
+.img-fluid {
   max-width: 100%;
   display: block;
 }
@@ -809,10 +809,69 @@ h4.subtitle {
     .tank-header-4 nav ul ul ul {
         border:1px solid #bc4a16;
         box-shadow: 0 0 6px 0 #bc4a16;
+        position: static;
     }
 
     .tank-header-4 nav ul ul li a {
+        padding: 5px 0;
+    }
+
+    .tank-header-4 .angle-dropdown-sub {        
         transform: rotate(0deg);
+        border-top: 0.3em solid #fff;    
+    }
+
+    .tank-header-4 .button span.fa {
+        font-size: 20px;
+    }
+    .tank-header-4 nav ul ul li a:hover {
+        background: transparent;
+        transition: 0.3s ease;
+    }
+    .tank-header-4 nav a {
+        display: block;
+        color: #fff;
+    }
+    .tank-header-4 nav a:hover {
+        color: var(--opposite-color)
+    }
+    .tank-header-4 .angle-dropdown {
         border-top: 0.3em solid #fff;
     }
+    .tank-header-4 #headers4-block {
+        padding: 10px 0;
+    }
+    .tank-header-4 nav a {
+        padding: 4px 0;
+    }
+    .tank-header-4nav ul ul::before {
+        content: "";
+        width: 10px;
+        height: 10px;
+        background: #fff;
+        border-left: 1px solid #fff;
+        border-top: 1px solid #fff;
+        display: block;
+        transform: translateX(-50%) rotateZ(45deg);
+        position: absolute;
+        top: -5px;
+        left: 25px;
+        z-index: 1001;
+    }
+    .tank-header-4
+    .tank-header-4
+    .tank-header-4
+    .tank-header-4
+    .tank-header-4
+    .tank-header-4
+    .tank-header-4
+    .tank-header-4
+    .tank-header-4
+    .tank-header-4
+    .tank-header-4
+    .tank-header-4
+    .tank-header-4
+    .tank-header-4
+    .tank-header-4
+
 }
