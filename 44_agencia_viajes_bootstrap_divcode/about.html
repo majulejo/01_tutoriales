@@ -1,11 +1,237 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Agencia de Viajes/Divcode</title>
+
+  <!-- cdn font awesome -->
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <!-- Font Awesome 4.7 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
-    <h1>About</h1>
+  <section class="tank-bootstrap-header">
+    <nav class="navbar navbar-expand-lg navbar-light py-lg-3 py-2">
+      <div class="container">
+        <a href="index.html" class="navbar-brand">MiDestino</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto"> <!-- Nota: en Bootstrap 5, es "ms-auto", no "ml-auto" -->
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a href="about.html" class="nav-link">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a href="services.html" class="nav-link">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a href="contact.html" class="nav-link">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- todo breadcrum -->
+
+  <section class="tank-about-breadcrum">
+    <div class="breadcrum-bg">
+        <div class="container py-5">
+            <p> <a href="index.html">Inicio</a>&nbsp; / &nbsp; Nosotros </p>
+        </div>
+    </div>
+  </section>
+
+  <div class="tank-content-photo-5 py-5" id="about">
+    <div class="content-main pt-lg-5 pt-md-3 pd-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 content-photo">
+                    <a href="#">
+                        <img src="images/22.jpg" class="img-fluid" >
+                    </a>
+                </div>
+                <div class="col-lg-7 content-left mt-lg-0 mt-5 pl-lg-5">
+                    <h3>Elige tu hotel</h3>
+                    <p class="mb-0">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda fugiat possimus voluptatibus alias ipsa at odit delectus quasi, neque mollitia?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda fugiat possimus voluptatibus alias ipsa at odit delectus quasi, neque mollitia?
+                    </p>
+                    <a href="services.html" class="btn-theme2 btn mt-lg-5">Costos</a>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+
+  <section id="services-1" class="py-5">
+    <div class="container py-lg-3">
+        <div class="heading text-center mx-auto">
+            <h3 class="head">Bienvenidos</h3>
+            <p class="head my-3">Fire in the hole! Avast ye scurvy dog, shiver me timbers. Grog swab the deck, yo-ho-ho bilge rat keelhaul deadlights. Hang the jib broadside, marooned splice the main brace, weigh anchor now!</p>
+        </div>
+
+        <div class="row mt-lg-5">
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="box-wrap">
+                    <div class="icon">
+                        <span class="fa fa-archive"></span>
+                        <h4><a href="services.html">Paquete 1</a></h4>
+                        
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, iure maiores. Perferendis qui ex suscipit saepe exercitationem voluptatum perspiciatis sequi.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="box-wrap">
+                    <div class="icon">
+                        <span class="fa fa-archive"></span>
+                        <h4><a href="services.html">Paquete 2</a></h4>
+                        
+                        <p>Keelhaul deadlights, hang the jib broadside! Marooned splice the main brace, weigh anchor. Shiver me timbers grog swab the deck yo-ho-ho!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="box-wrap">
+                    <div class="icon">
+                        <span class="fa fa-archive"></span>
+                        <h4><a href="services.html">Paquete 3</a></h4>                        
+                        <p>Now, that’s a tasty burger! But you best check yo self before you wreck yo self, fool.</p>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </div>
+  </section>
+
+  <section class="tank-specifications-9">
+    <div class="main-t py-5" id="stats">
+        <div class="container py-md-3">
+            <div class="main-cont-wthree-fea row">
+                <div class="grids-speci1 col-lg-3 col-6">
+                    <div class="spec-2 text-center">
+                        <h3 class="title-spe">40</h3>
+                        <p>Hoteles</p>
+                    </div>
+                </div>
+                <div class="grids-speci1 midd-eff-spe col-lg-3 col-6">
+                    <div class="spec-2 text-center">
+                        <h3 class="title-spe">840</h3>
+                        <p>Cuartos</p>
+                    </div>
+                </div>
+                <div class="grids-speci1 las-but col-lg-3 col-6 mt-lg-0 mt-4">
+                    <div class="spec-2 text-center">
+                        <h3 class="title-spe">53</h3>
+                        <p>Playas</p>
+                    </div>
+                </div>
+                <div class="grids-speci1 las-t col-lg-3 col-6 mt-lg-0 mt-4">
+                    <div class="spec-2 text-center">
+                        <h3 class="title-spe">20</h3>
+                        <p>Rios</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+
+  <section class="tank-subscribe" id="subscribe">
+    <div class="main-host py-5 text-center">
+        <div class="container py-lg-3">
+            <div class="grids-forms">
+                <div class="main-midd">
+                    <h3 class="global-title mx-auto">Pide Informes</h3>
+                </div>
+                <div class="main-midd-2">
+                    <form action="#" class="rightside-form">
+                        <input type="email" placeholder="Enter email">
+                        <button class="btn" type="submit">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- todo footer -->
+
+  <section class="tank-footer-29-main" id="footer">
+    <div class="footer-29 text-center">
+      <div class="container">
+        <div class="main-social-footer-29">
+          <a href="" class="facebook"><span class="fa fa-facebook"></span></a>
+          <a href="#" class="twitter"><span class="fa fa-twitter"></span></a>
+          <a href="#" class="instagram"><span class="fa fa-instagram"></span></a>
+          <a href="#" class="facebook"><span class="fa fa-google-plus"></span></a>
+          <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+        </div>
+
+        <div class="bootom-copies text-center">
+          <p class="copy-footer-29">2020 reservaciones <a href="#">tank</a> a</p>
+        </div>
+      </div>
+    </div>
+
+    <button onclick="topFunction()" id="movetop" title="Go to top">
+      <span class="fa fa-angle-up"></span>
+    </button>
+    <script>
+      window.onscroll = function() {
+        scrollFunction()
+      };
+
+      function scrollFunction() {
+        if(document.body.scrollTop > 20 || document.documentElement. scrollTop > 20) {
+          document.getElementById("movetop").style.display = "block";
+        }else{
+          document.getElementById("movetop").style.display = "blononeck";
+        }
+      }
+
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+  </section>
+
+  <script>
+    $(function() {
+      $('.navbar-toggler').click(function(){
+        $('body').toggleClass('noscroll');
+      })
+    })
+  </script>
+
+
+  <!-- Popper y Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>
