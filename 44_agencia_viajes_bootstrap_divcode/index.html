@@ -7,15 +7,15 @@
   <link rel="stylesheet" href="css/styles.css">
   <title>Agencia de Viajes/Divcode</title>
 
-  <!-- cdn font awesome -->
   <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Font Awesome 4.7 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
+  <!-- todo tank-bootstrap-header -->
   <section class="tank-bootstrap-header">
     <nav class="navbar navbar-expand-lg navbar-light py-lg-3 py-2">
       <div class="container">
@@ -27,7 +27,7 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto"> <!-- Nota: en Bootstrap 5, es "ms-auto", no "ml-auto" -->
+          <ul class="navbar-nav ms-auto">
             <li class="nav-item">
               <a href="index.html" class="nav-link">Inicio</a>
             </li>
@@ -46,15 +46,17 @@
     </nav>
   </section>
 
+  <!-- todo texto dentro del banner -->
   <section class="tank-main-banner">
-    <div class="slider-info banner-view text-center">
-      <div class="banner-info container">
-        <h3 class="banner-text mt-5">Elige tu destino</h3>
-        <p class="my-4 mb-5">Favorito</p>
+    <div class="banner-view">
+      <div class="banner-info container text-center">
+        <h1 class="banner-title">Elige tu destino</h1>
+        <p class="banner-subtitle">Favorito</p>
       </div>
     </div>
   </section>
 
+  <!-- todo Modo viaje -->
   <section class="tank-features-4">
     <div class="feature py-5" id="services">
       <div class="container py-md-3">
@@ -66,11 +68,9 @@
 
         <div class="fea-gd-vv row mt-5 pt-3">
           <!-- Tren -->
-
           <div class="float-lt feature-gd col-lg-4 col-md-6">
             <div class="icon">
-              <span class="fa fa-subway" aria-hidden="true">
-              </span>
+              <span class="fa fa-subway" aria-hidden="true"></span>
             </div>
             <div class="icon-info">
               <h5><a href="#">Tren</a></h5>
@@ -78,22 +78,19 @@
             </div>
           </div>
           <!-- Avión -->
-
           <div class="float-mid feature-gd col-lg-4 col-md-6 mt-md-0 mt-5">
             <div class="icon">
-              <span class="fa fa-plane" aria-hidden="true">
-              </span>
+              <span class="fa fa-plane" aria-hidden="true"></span>
             </div>
             <div class="icon-info">
               <h5><a href="#">Avión</a></h5>
-              <p>Now, that’s a tasty burger! But you best check yo self before you wreck yo self, fool.</p>
+              <p>Now, that's a tasty burger! But you best check yo self before you wreck yo self, fool.</p>
             </div>
           </div>
           <!-- Bus -->
           <div class="float-rt feature-gd col-lg-4 col-md-6 mt-md-0 mt-5">
             <div class="icon">
-              <span class="fa fa-bus" aria-hidden="true">
-              </span>
+              <span class="fa fa-bus" aria-hidden="true"></span>
             </div>
             <div class="icon-info">
               <h5><a href="#">Bus</a></h5>
@@ -106,6 +103,7 @@
     </div>
   </section>
 
+  <!-- todo Elige tu lugar de descanso -->
   <section class="tank-feature-3" id="features">
     <div class="grid top-bottom">
       <div class="container">
@@ -116,7 +114,6 @@
         </div>
 
         <div class="middle-section grid-column text-center mt-5 pt-3">
-
           <div class="three-grids-columns">
             <span class="fa fa-home"></span>
             <h4>Casa</h4>
@@ -157,178 +154,138 @@
     </div>
   </section>
 
-  <div class="products-4" id="portfolio">
+  <!-- todo Mira tu playa favorita -->
+  <section class="products-4" id="portfolio">
     <div id="products4-block" class="text-center">
       <div class="container">
         <div class="heading text-center mx-auto mb-5">
           <h3 class="head">Mira tu playa favorita</h3>
-          <p class="head my-3">Avast ye scurvy dog! Shiver me timbers, grog swab the deck, yo-ho-ho bilge rat.</p>
+          <p class="head my-3">nostrum perferendis quisquam in perspiciatis fugiat reiciendis nostrum perferendis quisquam in perspiciatis fugiat reiciendis</p>
         </div>
-        <input id="tab1" type="radio" name="tabs" checked>
-        <label class="table" for="tab1">Cancún</label>
 
-        <input id="tab2" type="radio" name="tabs">
-        <label class="table" for="tab2">Chiapas</label>
+        <!-- Pestañas -->
+        <div class="tab-buttons d-flex justify-content-center gap-3 mb-4">
+          <input type="radio" name="tabs" id="tab1" checked>
+          <label for="tab1" class="btn-tab active">Cancún</label>
 
-        <input id="tab3" type="radio" name="tabs">
-        <label class="table" for="tab3">Acapulco</label>
+          <input type="radio" name="tabs" id="tab2">
+          <label for="tab2" class="btn-tab">Chiapas</label>
 
-        <input id="tab4" type="radio" name="tabs">
-        <label class="table" for="tab4">Oaxaca</label>
+          <input type="radio" name="tabs" id="tab3">
+          <label for="tab3" class="btn-tab">Acapulco</label>
 
-        <!-- section id="content1" 1-->
+          <input type="radio" name="tabs" id="tab4">
+          <label for="tab4" class="btn-tab">Oaxaca</label>
+        </div>
 
-        <section id="content1" class="tab-content text-left">
-          <div class="d-grid grid-col-3">
+        <!-- Contenido de pestañas -->
+        <div class="tab-content-wrapper">
+          <!-- Cancún -->
+          <section id="content1" class="tab-content grid-col-3">
             <div class="product">
               <a href="images/g1.jpg">
-                <figure>
-                  <img src="images/g1.jpg" class="img-fluid" alt="g1">
-                </figure>
+                <img src="images/g1.jpg" alt="Playa en Cancún" class="img-fluid">
               </a>
             </div>
             <div class="product">
               <a href="images/g2.jpg">
-                <figure>
-                  <img src="images/g2.jpg" class="img-fluid" alt="g2">
-                </figure>
+                <img src="images/g2.jpg" alt="Playa en Cancún" class="img-fluid">
               </a>
             </div>
             <div class="product">
               <a href="images/g3.jpg">
-                <figure>
-                  <img src="images/g3.jpg" class="img-fluid" alt="g3">
-                </figure>
+                <img src="images/g3.jpg" alt="Playa en Cancún" class="img-fluid">
               </a>
             </div>
             <div class="product">
               <a href="images/g4.jpg">
-                <figure>
-                  <img src="images/g4.jpg" class="img-fluid" alt="g4">
-                </figure>
+                <img src="images/g4.jpg" alt="Playa en Cancún" class="img-fluid">
               </a>
             </div>
             <div class="product">
               <a href="images/g5.jpg">
-                <figure>
-                  <img src="images/g5.jpg" class="img-fluid" alt="g5">
-                </figure>
+                <img src="images/g5.jpg" alt="Playa en Cancún" class="img-fluid">
               </a>
             </div>
             <div class="product">
               <a href="images/g6.jpg">
-                <figure>
-                  <img src="images/g6.jpg" class="img-fluid" alt="g6">
-                </figure>
+                <img src="images/g6.jpg" alt="Playa en Cancún" class="img-fluid">
               </a>
             </div>
-          </div>
-        </section>
+          </section>
 
-        <!-- section id="content2" 2 -->
-
-        <section id="content2" class="tab-content text-left">
-          <div class="d-grid grid-col-3">
+          <!-- Chiapas -->
+          <section id="content2" class="tab-content grid-col-3">
             <div class="product">
               <a href="images/g7.jpg">
-                <figure>
-                  <img src="images/g7.jpg" class="img-fluid" alt="g7">
-                </figure>
+                <img src="images/g7.jpg" alt="Playa en Chiapas" class="img-fluid">
               </a>
             </div>
             <div class="product">
               <a href="images/g8.jpg">
-                <figure>
-                  <img src="images/g8.jpg" class="img-fluid" alt="g8">
-                </figure>
+                <img src="images/g8.jpg" alt="Playa en Chiapas" class="img-fluid">
               </a>
             </div>
             <div class="product">
               <a href="images/g1.jpg">
-                <figure>
-                  <img src="images/g1.jpg" class="img-fluid" alt="g1">
-                </figure>
+                <img src="images/g1.jpg" alt="Playa en Chiapas" class="img-fluid">
               </a>
             </div>
             <div class="product">
               <a href="images/g2.jpg">
-                <figure>
-                  <img src="images/g2.jpg" class="img-fluid" alt="g2">
-                </figure>
+                <img src="images/g2.jpg" alt="Playa en Chiapas" class="img-fluid">
               </a>
             </div>
             <div class="product">
               <a href="images/g3.jpg">
-                <figure>
-                  <img src="images/g3.jpg" class="img-fluid" alt="g3">
-                </figure>
+                <img src="images/g3.jpg" alt="Playa en Chiapas" class="img-fluid">
               </a>
             </div>
             <div class="product">
               <a href="images/g4.jpg">
-                <figure>
-                  <img src="images/g4.jpg" class="img-fluid" alt="g4">
-                </figure>
+                <img src="images/g4.jpg" alt="Playa en Chiapas" class="img-fluid">
               </a>
             </div>
-          </div>
-        </section>
+          </section>
 
-        <!-- section id="content3" 3 -->
-
-        <section id="content3" class="tab-content text-left">
-          <div class="d-grid grid-col-3">
+          <!-- Acapulco -->
+          <section id="content3" class="tab-content grid-col-3">
             <div class="product">
               <a href="images/g2.jpg">
-                <figure>
-                  <img src="images/g2.jpg" class="img-fluid" alt="g2">
-                </figure>
+                <img src="images/g2.jpg" alt="Playa en Acapulco" class="img-fluid">
               </a>
             </div>
             <div class="product">
               <a href="images/g3.jpg">
-                <figure>
-                  <img src="images/g3.jpg" class="img-fluid" alt="g3">
-                </figure>
+                <img src="images/g3.jpg" alt="Playa en Acapulco" class="img-fluid">
               </a>
             </div>
             <div class="product">
               <a href="images/g4.jpg">
-                <figure>
-                  <img src="images/g4.jpg" class="img-fluid" alt="g4">
-                </figure>
+                <img src="images/g4.jpg" alt="Playa en Acapulco" class="img-fluid">
               </a>
             </div>
-          </div>
-        </section>
+          </section>
 
-        <!-- section id="content4" 4 -->
-
-        <section id="content4" class="tab-content text-left">
-          <div class="d-grid grid-col-3">
-
+          <!-- Oaxaca -->
+          <section id="content4" class="tab-content grid-col-3">
             <div class="product">
               <a href="images/g2.jpg">
-                <figure>
-                  <img src="images/g2.jpg" class="img-fluid" alt="g2">
-                </figure>
+                <img src="images/g2.jpg" alt="Playa en Oaxaca" class="img-fluid">
               </a>
             </div>
             <div class="product">
               <a href="images/g3.jpg">
-                <figure>
-                  <img src="images/g3.jpg" class="img-fluid" alt="g3">
-                </figure>
+                <img src="images/g3.jpg" alt="Playa en Oaxaca" class="img-fluid">
               </a>
             </div>
-          </div>
-        </section>
-
+          </section>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 
-
+  <!-- todo meses reservas -->
   <section class="services-12" id="experience">
     <div class="form-12-content">
       <div class="container">
@@ -356,8 +313,6 @@
               <p class="my-3 text-white">Keelhaul deadlights, hang the jib broadside! Marooned splice the main brace,
                 weigh anchor. Shiver me timbers grog swab the deck yo-ho-ho!</p>
             </div>
-
-
           </div>
 
           <div class="column2">
@@ -383,128 +338,123 @@
               <p class="my-3 text-white">Keelhaul deadlights, hang the jib broadside! Marooned splice the main brace,
                 weigh anchor. Shiver me timbers grog swab the deck yo-ho-ho!</p>
             </div>
-
-
           </div>
-
         </div>
       </div>
     </div>
   </section>
 
-<!-- todo testimonials -->
+  <!-- todo testimonials -->
   <section class="tank-testimonials" id="testimonials">
     <div class="customers-6 content py-5">
       <div class="container py-lg-3">
         <div class="heading text-center mx-auto">
           <h3 class="head">Hoteles</h3>
-          <p class="head my-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim quod voluptatem incidunt
-            repellendus autem placeat rem! Voluptatum consequuntur cumque saepe!</p>
+          <p class="head my-3">Fire in the hole! Avast ye scurvy dog, shiver me timbers. Grog swab the deck, yo-ho-ho bilge rat keelhaul deadlights. Hang the jib broadside, marooned splice the main brace, weigh anchor now!</p>
         </div>
 
-        <div id="customerhnycarousel" class="carousel slide" ">
+        <div id="customerhnycarousel" class="carousel slide" data-bs-ride="carousel">
           <ol class="carousel-indicators">
-            <li class="active" data-target="#customerhnycarousel" data-slide-to="0"></li>
-            <li data-target="#customerhnycarousel" data-slide-to="1"></li>
+            <li data-bs-target="#customerhnycarousel" data-bs-slide-to="0" class="active"></li>
+            <li data-bs-target="#customerhnycarousel" data-bs-slide-to="1"></li>
           </ol>
 
           <div class="carousel-inner pb-5">
-
-            <!-- carousel-item -->
-            <div class="carousel-item active">
-              <div class="customer row py-5 mt-3">
-                <div class="col-lg-4 col-md-6">
-                  <div class="card">
-                    <div class="card-body"><img   class="card-img-top img-fluid" src="images/c1.jpg"
-                        alt="c1">
-                      <h3 class="card-title">Hotel</h3>
-                      <p class="sub-title mb-3">Oaxaca</p>
-                      <p class="card-text">Shiver me timbers grog swab the deck.</p>
-                    </div>
+<!-- Slide 1 -->
+          <div class="carousel-item active">
+            <div class="customer row justify-content-center">
+              <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                  <div class="card-body text-center">
+                    <img class="card-img-top rounded-circle" src="images/c1.jpg" alt="Hotel Oaxaca" width="80">
+                    <h3 class="card-title mt-3" style="color: var(--secondary-color);">Hotel</h3>
+                    <p class="sub-title mb-3">Oaxaca</p>
+                    <p class="card-text">Shiver me timbers grog swab the deck.</p>
                   </div>
                 </div>
-
-                <div class="col-lg-4 col-md-6 off-testi-2">
-                  <div class="card">
-                    <div class="card-body"><img   class="card-img-top img-fluid" src="images/c2.jpg"
-                        alt="c2">
-                      <h3 class="card-title">Hotel</h3>
-                      <p class="sub-title mb-3">Acapulco</p>
-                      <p class="card-text">Shiver me timbers grog swab the deck.</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0 off-testi-">
-                  <div class="card">
-                    <div class="card-body"><img   class="card-img-top img-fluid" src="images/c3.jpg"
-                        alt="c3">
-                      <h3 class="card-title">Hotel</h3>
-                      <p class="sub-title mb-3">Veracruz</p>
-                      <p class="card-text">Shiver me timbers grog swab the deck.</p>
-                    </div>
-                  </div>
-                </div>
-
-
               </div>
-            </div>
-            <!-- carousel-item -->
-            <div class="carousel-item ">
-              <div class="customer row py-5 mt-3">
-                <div class="col-lg-4 col-md-6 off-testi-2">
-                  <div class="card">
-                    <div class="card-body"><img   class="card-img-top img-fluid" src="images/c2.jpg"
-                        alt="c2">
-                      <h3 class="card-title">Hotel</h3>
-                      <p class="sub-title mb-3">Acapulco</p>
-                      <p class="card-text">Shiver me timbers grog swab the deck.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0 off-testi-">
-                  <div class="card">
-                    <div class="card-body"><img   class="card-img-top img-fluid" src="images/c3.jpg"
-                        alt="c3">
-                      <h3 class="card-title">Hotel</h3>
-                      <p class="sub-title mb-3">Veracruz</p>
-                      <p class="card-text">Shiver me timbers grog swab the deck.</p>
-                    </div>
-                  </div>
-                </div>
 
-                <div class="col-lg-4 col-md-6">
-                  <div class="card">
-                    <div class="card-body"><img   class="card-img-top img-fluid" src="images/c1.jpg"
-                        alt="c1">
-                      <h3 class="card-title">Hotel</h3>
-                      <p class="sub-title mb-3">Oaxaca</p>
-                      <p class="card-text">Shiver me timbers grog swab the deck.</p>
-                    </div>
+              <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                  <div class="card-body text-center">
+                    <img class="card-img-top rounded-circle" src="images/c2.jpg" alt="Hotel Acapulco" width="80">
+                    <h3 class="card-title mt-3" style="color: var(--secondary-color);">Hotel</h3>
+                    <p class="sub-title mb-3">Acapulco</p>
+                    <p class="card-text">Shiver me timbers grog swab the deck.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                  <div class="card-body text-center">
+                    <img class="card-img-top rounded-circle" src="images/c3.jpg" alt="Hotel Veracruz" width="80">
+                    <h3 class="card-title mt-3" style="color: var(--secondary-color);">Hotel</h3>
+                    <p class="sub-title mb-3">Veracruz</p>
+                    <p class="card-text">Shiver me timbers grog swab the deck.</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+
+          <!-- Slide 2 -->
+          <div class="carousel-item">
+            <div class="customer row justify-content-center">
+              <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                  <div class="card-body text-center">
+                    <img class="card-img-top rounded-circle" src="images/c2.jpg" alt="Hotel Acapulco" width="80">
+                    <h3 class="card-title mt-3" style="color: var(--secondary-color);">Hotel</h3>
+                    <p class="sub-title mb-3">Acapulco</p>
+                    <p class="card-text">Shiver me timbers grog swab the deck.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                  <div class="card-body text-center">
+                    <img class="card-img-top rounded-circle" src="images/c3.jpg" alt="Hotel Veracruz" width="80">
+                    <h3 class="card-title mt-3" style="color: var(--secondary-color);">Hotel</h3>
+                    <p class="sub-title mb-3">Veracruz</p>
+                    <p class="card-text">Shiver me timbers grog swab the deck.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                  <div class="card-body text-center">
+                    <img class="card-img-top rounded-circle" src="images/c1.jpg" alt="Hotel Oaxaca" width="80">
+                    <h3 class="card-title mt-3" style="color: var(--secondary-color);">Hotel</h3>
+                    <p class="sub-title mb-3">Oaxaca</p>
+                    <p class="card-text">Shiver me timbers grog swab the deck.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- todo footer -->
-
   <section class="tank-footer-29-main" id="footer">
     <div class="footer-29 text-center">
       <div class="container">
         <div class="main-social-footer-29">
-          <a href="" class="facebook"><span class="fa fa-facebook"></span></a>
+          <a href="#" class="facebook"><span class="fa fa-facebook"></span></a>
           <a href="#" class="twitter"><span class="fa fa-twitter"></span></a>
           <a href="#" class="instagram"><span class="fa fa-instagram"></span></a>
           <a href="#" class="facebook"><span class="fa fa-google-plus"></span></a>
           <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
         </div>
 
-        <div class="bootom-copies text-center">
+        <div class="bottom-copies text-center">
           <p class="copy-footer-29">2020 reservaciones <a href="#">tank</a> a</p>
         </div>
       </div>
@@ -513,42 +463,64 @@
     <button onclick="topFunction()" id="movetop" title="Go to top">
       <span class="fa fa-angle-up"></span>
     </button>
-    <script>
-      window.onscroll = function() {
-        scrollFunction()
-      };
-
-      function scrollFunction() {
-        if(document.body.scrollTop > 20 || document.documentElement. scrollTop > 20) {
-          document.getElementById("movetop").style.display = "block";
-        }else{
-          document.getElementById("movetop").style.display = "none";
-        }
-      }
-
-      function topFunction() {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-      }
-    </script>
   </section>
 
+  <!-- JavaScript corregido -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
   <script>
-    $(function() {
-      $('.navbar-toggler').click(function(){
-        $('body').toggleClass('noscroll');
-      })
-    })
+    // Función para el botón "Ir arriba"
+    window.onscroll = function() {
+      scrollFunction()
+    };
+
+    function scrollFunction() {
+      if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("movetop").style.display = "block";
+      }else{
+        document.getElementById("movetop").style.display = "none";
+      }
+    }
+
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+
+    // Función para las pestañas
+    document.addEventListener('DOMContentLoaded', function() {
+      const tabs = document.querySelectorAll('input[name="tabs"]');
+      const contents = document.querySelectorAll('.tab-content');
+      
+      tabs.forEach(tab => {
+        tab.addEventListener('change', function() {
+          // Ocultar todos los contenidos
+          contents.forEach(content => {
+            content.style.display = 'none';
+          });
+          
+          // Mostrar el contenido correspondiente
+          const contentId = 'content' + this.id.slice(-1);
+          const activeContent = document.getElementById(contentId);
+          if(activeContent) {
+            activeContent.style.display = 'grid';
+          }
+        });
+      });
+      
+      // Mostrar la primera pestaña por defecto
+      document.getElementById('content1').style.display = 'grid';
+    });
+
+    // Función para el toggle del navbar
+    document.addEventListener('DOMContentLoaded', function() {
+      const navbarToggler = document.querySelector('.navbar-toggler');
+      if(navbarToggler) {
+        navbarToggler.addEventListener('click', function() {
+          document.body.classList.toggle('noscroll');
+        });
+      }
+    });
   </script>
-
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <!-- Popper y Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
-    crossorigin="anonymous"></script>
 </body>
-
 </html>
